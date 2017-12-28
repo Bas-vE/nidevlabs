@@ -47,9 +47,9 @@ The following diagram presents a simplified, abstract view that highlights how t
 
 ## Primary Shell API Types
 
-The following classes form the backbone of the Shell API. However, these types represent only a only a small fraction of the full API. For more information about the Shell API, see the NationalInstruments.Shell namespace documentation. For more information about the Shell View Controls, see the [NationalInstruments.ShellControls][ShellControlsRef]	 namespace documentation.
+The following classes form the backbone of the Shell API. However, these types represent only a only a small fraction of the full API. For more information about the Shell API, see the [NationalInstruments.Shell][ShellRef] namespace documentation. For more information about the Shell View Controls, see the [NationalInstruments.ShellControls][ShellControlsRef] namespace documentation.
 
-### ShellApplication]
+### ShellApplication
 
 The [ShellApplication][ShellApplicationRef] is a base type from which you can derive your own application. ShellApplication instantiates a StudioWindow to host the application's graphical user interface.
 
