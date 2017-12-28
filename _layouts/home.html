@@ -20,18 +20,17 @@ layout: default
       </li>
     {% endfor %}
   </ul>
+  <h1 class="page-heading">Pages</h1>
   
-  <h2>Pages</h2>
-  <ul class="page-list">
-    {% for pages in site.pages %}
-      <li>
-	    <h2>
-		  <a href="{{ page.url | relative_url }}">Link</a>
-		</h2>
-	   </li>
-	{% endfor %}
-  </ul>	
+  <ul>
+    {% for page in site.pages %}
+      {% if page.category == "concepts" %}
+        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
 
+  
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
 
 </div>
