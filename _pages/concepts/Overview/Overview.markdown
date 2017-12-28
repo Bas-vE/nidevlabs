@@ -1,6 +1,6 @@
 ---
 template: page
-title: Diagram SDK Overview
+title: "Diagram SDK Overview"
 category: concepts
 order: 1
 ---

@@ -1,6 +1,6 @@
 ---
 template: page
-title: The Shell
+title: "The Shell"
 category: concepts
 order: 2
 ---
