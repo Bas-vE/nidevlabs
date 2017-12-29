@@ -1,5 +1,5 @@
 ---
-template: page
+layout: page
 title: "The Diagram Editing System"
 category: concepts
 order: 5

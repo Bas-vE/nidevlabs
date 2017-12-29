@@ -1,5 +1,5 @@
 ---
-template: page
+layout: page
 title: "The Name Resolution System"
 category: concepts
 order: 9

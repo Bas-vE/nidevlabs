@@ -1,5 +1,5 @@
 ---
-template: page
+layout: page
 title: "The Messaging System"
 category: concepts
 order: 11

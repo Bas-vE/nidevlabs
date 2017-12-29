@@ -1,5 +1,5 @@
 ---
-template: page
+layout: page
 title: "The Document System"
 category: concepts
 order: 4

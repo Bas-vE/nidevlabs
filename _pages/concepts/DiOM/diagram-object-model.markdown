@@ -1,5 +1,5 @@
 ---
-template: page
+layout: page
 title: "The Diagram Object Model"
 category: concepts
 order: 7

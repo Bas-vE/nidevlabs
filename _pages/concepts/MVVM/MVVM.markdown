@@ -1,5 +1,5 @@
 ---
-template: page
+layout: page
 title: "The Model-View-ViewModel Pattern"
 category: concepts
 order: 6

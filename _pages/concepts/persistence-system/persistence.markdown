@@ -1,5 +1,5 @@
 ---
-template: page
+layout: page
 title: "The Persistence System"
 category: concepts
 order: 10

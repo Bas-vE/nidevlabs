@@ -1,5 +1,5 @@
 ---
-template: page
+layout: page
 title: "The Shell"
 category: concepts
 order: 2

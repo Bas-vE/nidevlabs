@@ -1,5 +1,5 @@
 ---
-template: page
+layout: page
 title: "The Transaction System"
 category: concepts
 order: 8

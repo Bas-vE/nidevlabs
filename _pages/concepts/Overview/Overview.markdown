@@ -1,5 +1,5 @@
 ---
-template: page
+layout: page
 title: "Diagram SDK Overview"
 category: concepts
 order: 1

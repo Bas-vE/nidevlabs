@@ -1,5 +1,5 @@
 ---
-template: page
+layout: page
 title: "The Plug-in System"
 category: concepts
 order: 3
