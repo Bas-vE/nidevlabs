@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Enum QuantizationMode
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Enum QuantizationMode
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.DataTypes.QuantizationMode">
+  
+  
+  <h1 id="NationalInstruments_DataTypes_QuantizationMode" data-uid="NationalInstruments.DataTypes.QuantizationMode" class="text-break">Enum QuantizationMode
+  </h1>
+  <div class="markdown level0 summary"><p>Represents the quantization mode that should be used for fixed-point computations.
+Quantization is the way that data should be transformed when the computation actually produced
+precision that is different than what can be represented by the data type itself.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.DataTypes.html">NationalInstruments.DataTypes</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_DataTypes_QuantizationMode_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public enum QuantizationMode : short</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    <thead>
+    <tbody>
+      <tr>
+        <td id="NationalInstruments_DataTypes_QuantizationMode_ConvergentRounding">ConvergentRounding</td>
+        <td><p>Round to nearest, with ties rounded to the even value. Also known as convergent, banker&apos;s, or unbiased rounding.
+This is the IEEE-754 standard mode for floating-point operations.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_DataTypes_QuantizationMode_Default">Default</td>
+        <td><p>The user has not set the value for this operator, use the value otherwise specified </p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_DataTypes_QuantizationMode_RoundToNearest">RoundToNearest</td>
+        <td><p>Round to nearest, with ties rounded toward positive infinity. Also known as grade school rounding. 
+Introduces a slight positive bias.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_DataTypes_QuantizationMode_RoundTowardPositiveInfinity">RoundTowardPositiveInfinity</td>
+        <td><p>Round toward positive infinity. Also known as ceiling. Introduces a positive bias.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_DataTypes_QuantizationMode_ShouldNotQuantize">ShouldNotQuantize</td>
+        <td><p>Don&apos;t do anything. Just keep the original bits of the data.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_DataTypes_QuantizationMode_Truncate">Truncate</td>
+        <td><p>Round toward negative infinity. Also known as floor, or truncate for integer or fixed-point numbers.
+Introduces a negative bias.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_DataTypes_QuantizationMode_TruncateToZero">TruncateToZero</td>
+        <td><p>Round toward zero. Also known as truncate for floating-point or sign magnitude numbers. This is equivalent
+to <see cref="!:Down"></see> for unsigned numbers. Introduces a negative magnitude bias.</p>
+</td>
+      </tr>
+    </tbody>
+  </thead></thead></table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType()</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump()</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

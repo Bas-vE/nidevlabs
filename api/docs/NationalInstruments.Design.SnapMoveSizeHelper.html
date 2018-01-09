@@ -1,0 +1,1109 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SnapMoveSizeHelper
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SnapMoveSizeHelper
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.Design.SnapMoveSizeHelper">
+  
+  
+  <h1 id="NationalInstruments_Design_SnapMoveSizeHelper" data-uid="NationalInstruments.Design.SnapMoveSizeHelper" class="text-break">Class SnapMoveSizeHelper
+  </h1>
+  <div class="markdown level0 summary"><p>Helper class which helps with moving and sizing elements with the following features:</p>
+<ul>
+<li>Snapping to Grid</li>
+<li>Snapping to the edges of sibling elements (while showing snap lines)</li>
+<li>Resizing while staying on the grid</li>
+<li>Resizing while maintaining aspect ratios</li>
+</ul>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">SnapMoveSizeHelper</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.Design.html">NationalInstruments.Design</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_Design_SnapMoveSizeHelper_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SnapMoveSizeHelper</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="NationalInstruments_Design_SnapMoveSizeHelper__ctor_" data-uid="NationalInstruments.Design.SnapMoveSizeHelper.#ctor*"></a>
+  <h4 id="NationalInstruments_Design_SnapMoveSizeHelper__ctor_NationalInstruments_Design_DesignerEditControlViewModel_" data-uid="NationalInstruments.Design.SnapMoveSizeHelper.#ctor(NationalInstruments.Design.DesignerEditControlViewModel)">SnapMoveSizeHelper(DesignerEditControlViewModel)</h4>
+  <div class="markdown level1 summary"><p>Constructor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SnapMoveSizeHelper(DesignerEditControlViewModel editControl)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.DesignerEditControlViewModel.html">DesignerEditControlViewModel</a></td>
+        <td><span class="parametername">editControl</span></td>
+        <td><p>The DesignerEditControl this helper is associated working within</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_Design_SnapMoveSizeHelper_AllowSnapToAxis_" data-uid="NationalInstruments.Design.SnapMoveSizeHelper.AllowSnapToAxis*"></a>
+  <h4 id="NationalInstruments_Design_SnapMoveSizeHelper_AllowSnapToAxis" data-uid="NationalInstruments.Design.SnapMoveSizeHelper.AllowSnapToAxis">AllowSnapToAxis</h4>
+  <div class="markdown level1 summary"><p>Allow snap to axis</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AllowSnapToAxis { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_SnapMoveSizeHelper_EditControl_" data-uid="NationalInstruments.Design.SnapMoveSizeHelper.EditControl*"></a>
+  <h4 id="NationalInstruments_Design_SnapMoveSizeHelper_EditControl" data-uid="NationalInstruments.Design.SnapMoveSizeHelper.EditControl">EditControl</h4>
+  <div class="markdown level1 summary"><p>The DesignerEditControl we are associated working within.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DesignerEditControlViewModel EditControl { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.DesignerEditControlViewModel.html">DesignerEditControlViewModel</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_SnapMoveSizeHelper_GuideLinesPainter_" data-uid="NationalInstruments.Design.SnapMoveSizeHelper.GuideLinesPainter*"></a>
+  <h4 id="NationalInstruments_Design_SnapMoveSizeHelper_GuideLinesPainter" data-uid="NationalInstruments.Design.SnapMoveSizeHelper.GuideLinesPainter">GuideLinesPainter</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GuideLinesPainter GuideLinesPainter { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.GuideLinesPainter.html">GuideLinesPainter</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_SnapMoveSizeHelper_IsInSnappingOperation_" data-uid="NationalInstruments.Design.SnapMoveSizeHelper.IsInSnappingOperation*"></a>
+  <h4 id="NationalInstruments_Design_SnapMoveSizeHelper_IsInSnappingOperation" data-uid="NationalInstruments.Design.SnapMoveSizeHelper.IsInSnappingOperation">IsInSnappingOperation</h4>
+  <div class="markdown level1 summary"><p>Whether or not there is a current snapping operation in progress. This is begun by one of the Snap methods and ended with EndSnapping or Clear.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInSnappingOperation { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_SnapMoveSizeHelper_SnapFieldSize_" data-uid="NationalInstruments.Design.SnapMoveSizeHelper.SnapFieldSize*"></a>
+  <h4 id="NationalInstruments_Design_SnapMoveSizeHelper_SnapFieldSize" data-uid="NationalInstruments.Design.SnapMoveSizeHelper.SnapFieldSize">SnapFieldSize</h4>
+  <div class="markdown level1 summary"><p>Snap Field SMSize is the maximum distance that something can be away from the snap location and
+still have it snap</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SMSize SnapFieldSize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMSize</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_SnapMoveSizeHelper_StartOffset_" data-uid="NationalInstruments.Design.SnapMoveSizeHelper.StartOffset*"></a>
+  <h4 id="NationalInstruments_Design_SnapMoveSizeHelper_StartOffset" data-uid="NationalInstruments.Design.SnapMoveSizeHelper.StartOffset">StartOffset</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;IViewElementViewModel, SMPoint&gt; StartOffset { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<a class="xref" href="NationalInstruments.Design.IViewElementViewModel.html">IViewElementViewModel</a>, <span class="xref">NationalInstruments.Core.SMPoint</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_Design_SnapMoveSizeHelper_BeginMoveSize_" data-uid="NationalInstruments.Design.SnapMoveSizeHelper.BeginMoveSize*"></a>
+  <h4 id="NationalInstruments_Design_SnapMoveSizeHelper_BeginMoveSize_NationalInstruments_Design_IViewElementViewModel_" data-uid="NationalInstruments.Design.SnapMoveSizeHelper.BeginMoveSize(NationalInstruments.Design.IViewElementViewModel)">BeginMoveSize(IViewElementViewModel)</h4>
+  <div class="markdown level1 summary"><p>Begins a sizing of the given item</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BeginMoveSize(IViewElementViewModel item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.IViewElementViewModel.html">IViewElementViewModel</a></td>
+        <td><span class="parametername">item</span></td>
+        <td><p>The item to size</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_SnapMoveSizeHelper_BeginSnapMoveElements_" data-uid="NationalInstruments.Design.SnapMoveSizeHelper.BeginSnapMoveElements*"></a>
+  <h4 id="NationalInstruments_Design_SnapMoveSizeHelper_BeginSnapMoveElements_NationalInstruments_Core_UIPosition_System_Collections_Generic_IEnumerable_NationalInstruments_Design_IViewElementViewModel__System_Nullable_NationalInstruments_Core_SMPoint__" data-uid="NationalInstruments.Design.SnapMoveSizeHelper.BeginSnapMoveElements(NationalInstruments.Core.UIPosition,System.Collections.Generic.IEnumerable{NationalInstruments.Design.IViewElementViewModel},System.Nullable{NationalInstruments.Core.SMPoint})">BeginSnapMoveElements(UIPosition, IEnumerable&lt;IViewElementViewModel&gt;, Nullable&lt;SMPoint&gt;)</h4>
+  <div class="markdown level1 summary"><p>Begin snap move elements</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BeginSnapMoveElements(UIPosition current, IEnumerable&lt;IViewElementViewModel&gt; itemsToMove, SMPoint? forceOffset)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.UIPosition</span></td>
+        <td><span class="parametername">current</span></td>
+        <td><p>current position</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.Design.IViewElementViewModel.html">IViewElementViewModel</a>&gt;</td>
+        <td><span class="parametername">itemsToMove</span></td>
+        <td><p>viewmodels being moved</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">NationalInstruments.Core.SMPoint</span>&gt;</td>
+        <td><span class="parametername">forceOffset</span></td>
+        <td><p>whether we should force offset</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_SnapMoveSizeHelper_BeginSnapSizeElements_" data-uid="NationalInstruments.Design.SnapMoveSizeHelper.BeginSnapSizeElements*"></a>
+  <h4 id="NationalInstruments_Design_SnapMoveSizeHelper_BeginSnapSizeElements_NationalInstruments_Core_UIPosition_System_Collections_Generic_IEnumerable_NationalInstruments_Design_IViewElementViewModel__" data-uid="NationalInstruments.Design.SnapMoveSizeHelper.BeginSnapSizeElements(NationalInstruments.Core.UIPosition,System.Collections.Generic.IEnumerable{NationalInstruments.Design.IViewElementViewModel})">BeginSnapSizeElements(UIPosition, IEnumerable&lt;IViewElementViewModel&gt;)</h4>
+  <div class="markdown level1 summary"><p>Begins snap sizing the given items</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BeginSnapSizeElements(UIPosition current, IEnumerable&lt;IViewElementViewModel&gt; itemsToSize)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.UIPosition</span></td>
+        <td><span class="parametername">current</span></td>
+        <td><p>The current mouse position</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.Design.IViewElementViewModel.html">IViewElementViewModel</a>&gt;</td>
+        <td><span class="parametername">itemsToSize</span></td>
+        <td><p>The items to size</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_SnapMoveSizeHelper_Clear_" data-uid="NationalInstruments.Design.SnapMoveSizeHelper.Clear*"></a>
+  <h4 id="NationalInstruments_Design_SnapMoveSizeHelper_Clear" data-uid="NationalInstruments.Design.SnapMoveSizeHelper.Clear">Clear()</h4>
+  <div class="markdown level1 summary"><p>Clears and resets the current state of the sizer</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Clear()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_SnapMoveSizeHelper_Clear_" data-uid="NationalInstruments.Design.SnapMoveSizeHelper.Clear*"></a>
+  <h4 id="NationalInstruments_Design_SnapMoveSizeHelper_Clear_System_Boolean_System_Boolean_" data-uid="NationalInstruments.Design.SnapMoveSizeHelper.Clear(System.Boolean,System.Boolean)">Clear(Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Clears the resets the sizing state</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Clear(bool removeAdorner, bool removeCaches)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">removeAdorner</span></td>
+        <td><p>true to remove the positioning adorners</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">removeCaches</span></td>
+        <td><p>True to clear our all caches for the current selection</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_SnapMoveSizeHelper_CoerceToGrid_" data-uid="NationalInstruments.Design.SnapMoveSizeHelper.CoerceToGrid*"></a>
+  <h4 id="NationalInstruments_Design_SnapMoveSizeHelper_CoerceToGrid_System_Single_" data-uid="NationalInstruments.Design.SnapMoveSizeHelper.CoerceToGrid(System.Single)">CoerceToGrid(Single)</h4>
+  <div class="markdown level1 summary"><p>adjust number to the closest multiple of the grid size</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float CoerceToGrid(float number)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">number</span></td>
+        <td><p>the value to adjust</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><p>the adjusted value</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_SnapMoveSizeHelper_EndSnapping_" data-uid="NationalInstruments.Design.SnapMoveSizeHelper.EndSnapping*"></a>
+  <h4 id="NationalInstruments_Design_SnapMoveSizeHelper_EndSnapping" data-uid="NationalInstruments.Design.SnapMoveSizeHelper.EndSnapping">EndSnapping()</h4>
+  <div class="markdown level1 summary"><p>End the snapping operation, allowing cleanup of references to visual elements</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void EndSnapping()</code></pre>
+  </div>
+  <h5 id="NationalInstruments_Design_SnapMoveSizeHelper_EndSnapping_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>calls Clear to remove adorners</p>
+</div>
+  
+  
+  <a id="NationalInstruments_Design_SnapMoveSizeHelper_SnapMaintainAspectRatio_" data-uid="NationalInstruments.Design.SnapMoveSizeHelper.SnapMaintainAspectRatio*"></a>
+  <h4 id="NationalInstruments_Design_SnapMoveSizeHelper_SnapMaintainAspectRatio_NationalInstruments_Core_SMRect_NationalInstruments_Core_SMPoint_NationalInstruments_Design_SizeMoveTypes_System_Boolean_NationalInstruments_Core_SMSize_NationalInstruments_Core_SMPoint_" data-uid="NationalInstruments.Design.SnapMoveSizeHelper.SnapMaintainAspectRatio(NationalInstruments.Core.SMRect,NationalInstruments.Core.SMPoint,NationalInstruments.Design.SizeMoveTypes,System.Boolean,NationalInstruments.Core.SMSize,NationalInstruments.Core.SMPoint)">SnapMaintainAspectRatio(SMRect, SMPoint, SizeMoveTypes, Boolean, SMSize, SMPoint)</h4>
+  <div class="markdown level1 summary"><p>Resizes origElementRect to maintain the aspect ratio specified by originalSize</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SMRect SnapMaintainAspectRatio(SMRect origElementRect, SMPoint currentPoint, SizeMoveTypes type, bool allowNegative, SMSize originalSize, SMPoint moveOffset)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMRect</span></td>
+        <td><span class="parametername">origElementRect</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMPoint</span></td>
+        <td><span class="parametername">currentPoint</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.SizeMoveTypes.html">SizeMoveTypes</a></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">allowNegative</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMSize</span></td>
+        <td><span class="parametername">originalSize</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMPoint</span></td>
+        <td><span class="parametername">moveOffset</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMRect</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_SnapMoveSizeHelper_SnapMaintainAspectRatio_" data-uid="NationalInstruments.Design.SnapMoveSizeHelper.SnapMaintainAspectRatio*"></a>
+  <h4 id="NationalInstruments_Design_SnapMoveSizeHelper_SnapMaintainAspectRatio_NationalInstruments_Core_SMRect_NationalInstruments_Core_SMPoint_NationalInstruments_Design_SizeMoveTypes_System_Boolean_NationalInstruments_Core_SMSize_NationalInstruments_Core_SMPoint_System_Boolean_" data-uid="NationalInstruments.Design.SnapMoveSizeHelper.SnapMaintainAspectRatio(NationalInstruments.Core.SMRect,NationalInstruments.Core.SMPoint,NationalInstruments.Design.SizeMoveTypes,System.Boolean,NationalInstruments.Core.SMSize,NationalInstruments.Core.SMPoint,System.Boolean)">SnapMaintainAspectRatio(SMRect, SMPoint, SizeMoveTypes, Boolean, SMSize, SMPoint, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Resizes origElementRect to maintain the aspect ratio specified by originalSize</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SMRect SnapMaintainAspectRatio(SMRect origElementRect, SMPoint currentPoint, SizeMoveTypes type, bool allowNegative, SMSize originalSize, SMPoint moveOffset, bool maintainCenter)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMRect</span></td>
+        <td><span class="parametername">origElementRect</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMPoint</span></td>
+        <td><span class="parametername">currentPoint</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.SizeMoveTypes.html">SizeMoveTypes</a></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">allowNegative</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMSize</span></td>
+        <td><span class="parametername">originalSize</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMPoint</span></td>
+        <td><span class="parametername">moveOffset</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">maintainCenter</span></td>
+        <td><p>Keep center unchanged.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMRect</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_SnapMoveSizeHelper_SnapMoveElements_" data-uid="NationalInstruments.Design.SnapMoveSizeHelper.SnapMoveElements*"></a>
+  <h4 id="NationalInstruments_Design_SnapMoveSizeHelper_SnapMoveElements_NationalInstruments_Core_UIPosition_NationalInstruments_Core_PlatformVisual_System_Collections_ObjectModel_Collection_NationalInstruments_Design_IViewElementViewModel__NationalInstruments_SourceModel_MovementDirection_" data-uid="NationalInstruments.Design.SnapMoveSizeHelper.SnapMoveElements(NationalInstruments.Core.UIPosition,NationalInstruments.Core.PlatformVisual,System.Collections.ObjectModel.Collection{NationalInstruments.Design.IViewElementViewModel},NationalInstruments.SourceModel.MovementDirection)">SnapMoveElements(UIPosition, PlatformVisual, Collection&lt;IViewElementViewModel&gt;, MovementDirection)</h4>
+  <div class="markdown level1 summary"><p>Moves the specified items according to the current layout / positioning rules of the parent</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SnapMoveElements(UIPosition current, PlatformVisual parent, Collection&lt;IViewElementViewModel&gt; itemsToMove, MovementDirection direction)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.UIPosition</span></td>
+        <td><span class="parametername">current</span></td>
+        <td><p>The current cursor position</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.PlatformVisual</span></td>
+        <td><span class="parametername">parent</span></td>
+        <td><p>The parent position</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.ObjectModel.Collection</span>&lt;<a class="xref" href="NationalInstruments.Design.IViewElementViewModel.html">IViewElementViewModel</a>&gt;</td>
+        <td><span class="parametername">itemsToMove</span></td>
+        <td><p>The items to move</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.MovementDirection.html">MovementDirection</a></td>
+        <td><span class="parametername">direction</span></td>
+        <td><p>How to move the elements</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_SnapMoveSizeHelper_SnapMoveSize_" data-uid="NationalInstruments.Design.SnapMoveSizeHelper.SnapMoveSize*"></a>
+  <h4 id="NationalInstruments_Design_SnapMoveSizeHelper_SnapMoveSize_NationalInstruments_Core_UIPosition_NationalInstruments_Design_SizeMoveTypes_NationalInstruments_Core_PlatformVisual_NationalInstruments_Design_IViewElementViewModel_NationalInstruments_Core_SMPoint_System_Collections_ObjectModel_Collection_NationalInstruments_Design_IViewElementViewModel__" data-uid="NationalInstruments.Design.SnapMoveSizeHelper.SnapMoveSize(NationalInstruments.Core.UIPosition,NationalInstruments.Design.SizeMoveTypes,NationalInstruments.Core.PlatformVisual,NationalInstruments.Design.IViewElementViewModel,NationalInstruments.Core.SMPoint,System.Collections.ObjectModel.Collection{NationalInstruments.Design.IViewElementViewModel})">SnapMoveSize(UIPosition, SizeMoveTypes, PlatformVisual, IViewElementViewModel, SMPoint, Collection&lt;IViewElementViewModel&gt;)</h4>
+  <div class="markdown level1 summary"><p>Moves and or sizes elements making sure they stay snapped to the grid.  It also obeys keyboard
+gestures to disable snapping.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SMPoint SnapMoveSize(UIPosition trackingPosition, SizeMoveTypes type, PlatformVisual parent, IViewElementViewModel sizedItem, SMPoint delta, Collection&lt;IViewElementViewModel&gt; selectedItems)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.UIPosition</span></td>
+        <td><span class="parametername">trackingPosition</span></td>
+        <td><p>The current user position (usually the position of the cursor)</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.SizeMoveTypes.html">SizeMoveTypes</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The type of move/size that should be performed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.PlatformVisual</span></td>
+        <td><span class="parametername">parent</span></td>
+        <td><p>The current parent of the elements.  This make be different that the current
+Visual tree parent if the elements were just reparented and bindings have not updated</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.IViewElementViewModel.html">IViewElementViewModel</a></td>
+        <td><span class="parametername">sizedItem</span></td>
+        <td><p>The element to move / size</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMPoint</span></td>
+        <td><span class="parametername">delta</span></td>
+        <td><p>The desired move size amount</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.ObjectModel.Collection</span>&lt;<a class="xref" href="NationalInstruments.Design.IViewElementViewModel.html">IViewElementViewModel</a>&gt;</td>
+        <td><span class="parametername">selectedItems</span></td>
+        <td><p>The items that are also being moved / sized</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMPoint</span></td>
+        <td><p>The amount actually moved / sized</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_SnapMoveSizeHelper_SnapMoveSize_" data-uid="NationalInstruments.Design.SnapMoveSizeHelper.SnapMoveSize*"></a>
+  <h4 id="NationalInstruments_Design_SnapMoveSizeHelper_SnapMoveSize_NationalInstruments_Core_UIPosition_NationalInstruments_Design_SizeMoveTypes_NationalInstruments_Design_IViewElementViewModel_NationalInstruments_Core_SMPoint_System_Collections_ObjectModel_Collection_NationalInstruments_Design_IViewElementViewModel__" data-uid="NationalInstruments.Design.SnapMoveSizeHelper.SnapMoveSize(NationalInstruments.Core.UIPosition,NationalInstruments.Design.SizeMoveTypes,NationalInstruments.Design.IViewElementViewModel,NationalInstruments.Core.SMPoint,System.Collections.ObjectModel.Collection{NationalInstruments.Design.IViewElementViewModel})">SnapMoveSize(UIPosition, SizeMoveTypes, IViewElementViewModel, SMPoint, Collection&lt;IViewElementViewModel&gt;)</h4>
+  <div class="markdown level1 summary"><p>Moves and or sizes elements making sure they stay snapped to the grid.  It also obeys keyboard
+gestures to disable snapping.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SMPoint SnapMoveSize(UIPosition trackingPosition, SizeMoveTypes type, IViewElementViewModel sizedItem, SMPoint delta, Collection&lt;IViewElementViewModel&gt; selectedItems)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.UIPosition</span></td>
+        <td><span class="parametername">trackingPosition</span></td>
+        <td><p>The current user position (usually the position of the cursor)</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.SizeMoveTypes.html">SizeMoveTypes</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The type of move/size that should be performed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.IViewElementViewModel.html">IViewElementViewModel</a></td>
+        <td><span class="parametername">sizedItem</span></td>
+        <td><p>The element to move / size</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMPoint</span></td>
+        <td><span class="parametername">delta</span></td>
+        <td><p>The desired move size amount</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.ObjectModel.Collection</span>&lt;<a class="xref" href="NationalInstruments.Design.IViewElementViewModel.html">IViewElementViewModel</a>&gt;</td>
+        <td><span class="parametername">selectedItems</span></td>
+        <td><p>The items that are also being moved / sized</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMPoint</span></td>
+        <td><p>The amount actually moved / sized</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_SnapMoveSizeHelper_SnapMoveToObjects_" data-uid="NationalInstruments.Design.SnapMoveSizeHelper.SnapMoveToObjects*"></a>
+  <h4 id="NationalInstruments_Design_SnapMoveSizeHelper_SnapMoveToObjects_NationalInstruments_Core_UIPosition_NationalInstruments_Design_SizeMoveTypes_NationalInstruments_Core_PlatformVisual_System_Collections_ObjectModel_Collection_NationalInstruments_Design_IViewElementViewModel__NationalInstruments_Core_SMRect_System_Single_System_Single_" data-uid="NationalInstruments.Design.SnapMoveSizeHelper.SnapMoveToObjects(NationalInstruments.Core.UIPosition,NationalInstruments.Design.SizeMoveTypes,NationalInstruments.Core.PlatformVisual,System.Collections.ObjectModel.Collection{NationalInstruments.Design.IViewElementViewModel},NationalInstruments.Core.SMRect,System.Single,System.Single)">SnapMoveToObjects(UIPosition, SizeMoveTypes, PlatformVisual, Collection&lt;IViewElementViewModel&gt;, SMRect, Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Move the specified elements according to the current positioning rules</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual SMRect SnapMoveToObjects(UIPosition trackingPosition, SizeMoveTypes type, PlatformVisual parent, Collection&lt;IViewElementViewModel&gt; selectedItems, SMRect movedElementRect, float minHeight, float minWidth)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.UIPosition</span></td>
+        <td><span class="parametername">trackingPosition</span></td>
+        <td><p>The current user position (usually the position of the cursor)</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.SizeMoveTypes.html">SizeMoveTypes</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>Way to size the elements</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.PlatformVisual</span></td>
+        <td><span class="parametername">parent</span></td>
+        <td><p>The current parent</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.ObjectModel.Collection</span>&lt;<a class="xref" href="NationalInstruments.Design.IViewElementViewModel.html">IViewElementViewModel</a>&gt;</td>
+        <td><span class="parametername">selectedItems</span></td>
+        <td><p>The items to move</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMRect</span></td>
+        <td><span class="parametername">movedElementRect</span></td>
+        <td><p>The final rect of the anchor element</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">minHeight</span></td>
+        <td><p>min height of the element</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">minWidth</span></td>
+        <td><p>min width of the element</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMRect</span></td>
+        <td><p>The adjusted element to use as the final position</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_SnapMoveSizeHelper_SnapScore_" data-uid="NationalInstruments.Design.SnapMoveSizeHelper.SnapScore*"></a>
+  <h4 id="NationalInstruments_Design_SnapMoveSizeHelper_SnapScore_NationalInstruments_Core_SMPoint_NationalInstruments_Core_SMPoint_" data-uid="NationalInstruments.Design.SnapMoveSizeHelper.SnapScore(NationalInstruments.Core.SMPoint,NationalInstruments.Core.SMPoint)">SnapScore(SMPoint, SMPoint)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double SnapScore(SMPoint point0, SMPoint point1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMPoint</span></td>
+        <td><span class="parametername">point0</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMPoint</span></td>
+        <td><span class="parametername">point1</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_SnapMoveSizeHelper_SnapSizeElements_" data-uid="NationalInstruments.Design.SnapMoveSizeHelper.SnapSizeElements*"></a>
+  <h4 id="NationalInstruments_Design_SnapMoveSizeHelper_SnapSizeElements_NationalInstruments_Core_UIPosition_NationalInstruments_Core_PlatformVisual_System_Collections_ObjectModel_Collection_NationalInstruments_Design_IViewElementViewModel__System_Boolean_" data-uid="NationalInstruments.Design.SnapMoveSizeHelper.SnapSizeElements(NationalInstruments.Core.UIPosition,NationalInstruments.Core.PlatformVisual,System.Collections.ObjectModel.Collection{NationalInstruments.Design.IViewElementViewModel},System.Boolean)">SnapSizeElements(UIPosition, PlatformVisual, Collection&lt;IViewElementViewModel&gt;, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Resizes the element possible snapping the size to other sibling elements.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SnapSizeElements(UIPosition current, PlatformVisual parent, Collection&lt;IViewElementViewModel&gt; itemsToSize, bool allowFlipping)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.UIPosition</span></td>
+        <td><span class="parametername">current</span></td>
+        <td><p>The current mouse position</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.PlatformVisual</span></td>
+        <td><span class="parametername">parent</span></td>
+        <td><p>The parent panel of the element</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.ObjectModel.Collection</span>&lt;<a class="xref" href="NationalInstruments.Design.IViewElementViewModel.html">IViewElementViewModel</a>&gt;</td>
+        <td><span class="parametername">itemsToSize</span></td>
+        <td><p>The list of elements to size.  They will all be sized the same delta.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">allowFlipping</span></td>
+        <td><p>Determines if we are doing a flipping-resizing.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_SnapMoveSizeHelper_TryToggleSnapToGrid_" data-uid="NationalInstruments.Design.SnapMoveSizeHelper.TryToggleSnapToGrid*"></a>
+  <h4 id="NationalInstruments_Design_SnapMoveSizeHelper_TryToggleSnapToGrid" data-uid="NationalInstruments.Design.SnapMoveSizeHelper.TryToggleSnapToGrid">TryToggleSnapToGrid()</h4>
+  <div class="markdown level1 summary"><p>Toggles whether to snap to grid.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryToggleSnapToGrid()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if the operation was successful. <code>false</code> if the operation was not successful beacuse there is no current snapping operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

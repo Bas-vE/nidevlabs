@@ -1,0 +1,982 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class TextToolViewModel
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class TextToolViewModel
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.Design.TextToolViewModel">
+  
+  
+  <h1 id="NationalInstruments_Design_TextToolViewModel" data-uid="NationalInstruments.Design.TextToolViewModel" class="text-break">Class TextToolViewModel
+  </h1>
+  <div class="markdown level0 summary"><p>View model for <span class="xref">NationalInstruments.Restricted.Design.TextTool</span></p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">NationalInstruments.Core.ViewModelBase</span></div>
+    <div class="level2"><a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html">DesignerToolViewModel</a></div>
+    <div class="level3"><span class="xref">TextToolViewModel</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.Windows.IWeakEventListener</span></div>
+    <div><span class="xref">NationalInstruments.Core.IServiceAggregator</span></div>
+    <div><span class="xref">NationalInstruments.Core.IColorResolver</span></div>
+    <div><a class="xref" href="NationalInstruments.Design.IDesignerToolViewModel.html">IDesignerToolViewModel</a></div>
+    <div><span class="xref">NationalInstruments.Core.IViewModel</span></div>
+    <div><span class="xref">NationalInstruments.Core.IQueryService</span></div>
+    <div><span class="xref">System.ComponentModel.INotifyPropertyChanged</span></div>
+    <div><a class="xref" href="NationalInstruments.SourceModel.IInteractiveTransactionOwner.html">IInteractiveTransactionOwner</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_View">DesignerToolViewModel.View</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_Activate_NationalInstruments_Design_DesignerEditControlViewModel_System_Boolean_">DesignerToolViewModel.Activate(DesignerEditControlViewModel, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_Cleanup">DesignerToolViewModel.Cleanup()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_IsAggregate">DesignerToolViewModel.IsAggregate</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_IsActive">DesignerToolViewModel.IsActive</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_Host">DesignerToolViewModel.Host</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_IsEditTool">DesignerToolViewModel.IsEditTool</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_IsModalTool">DesignerToolViewModel.IsModalTool</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_CancelPendingOperations">DesignerToolViewModel.CancelPendingOperations()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_UseCustomEventRouting">DesignerToolViewModel.UseCustomEventRouting</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_Tool">DesignerToolViewModel.Tool</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_Designer">DesignerToolViewModel.Designer</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_EditSite">DesignerToolViewModel.EditSite</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_ClickSelectionThreshold">DesignerToolViewModel.ClickSelectionThreshold</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_AutoScrollHelper">DesignerToolViewModel.AutoScrollHelper</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_InitializeTool">DesignerToolViewModel.InitializeTool()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_OnDesignerInitialized">DesignerToolViewModel.OnDesignerInitialized()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_GetItemAtPosition_NationalInstruments_Core_UIPosition_">DesignerToolViewModel.GetItemAtPosition(UIPosition)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_GetSelectableItemNearPosition_NationalInstruments_Core_UIPosition_">DesignerToolViewModel.GetSelectableItemNearPosition(UIPosition)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_OnAutoScroll_NationalInstruments_Core_SMPoint_">DesignerToolViewModel.OnAutoScroll(SMPoint)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_OnVisualAdded_NationalInstruments_Core_IViewModel_">DesignerToolViewModel.OnVisualAdded(IViewModel)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_OnVisualRemoved_NationalInstruments_Core_IViewModel_">DesignerToolViewModel.OnVisualRemoved(IViewModel)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_GetAsTool__1_NationalInstruments_Design_IDesignerToolViewModel_">DesignerToolViewModel.GetAsTool&lt;T&gt;(IDesignerToolViewModel)</a>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.ViewModelProperty</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.GetNonInheritedViewModel(NationalInstruments.Core.PlatformVisual)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.GetNearestViewModel(NationalInstruments.Core.PlatformVisual)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.SetViewModel(NationalInstruments.Core.PlatformVisual, NationalInstruments.Core.IViewModel)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.Model</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.CreateViewHandler</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.ParentViewModel</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.OnParentViewModelChanged()</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.BindToView(NationalInstruments.Core.PlatformVisual)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.AddCommandBindings(NationalInstruments.Core.PlatformVisual)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.CommandBindings</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.TryFindResource(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.AttachService(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.RemoveService(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.RemoveAll(System.Predicate&lt;System.Object&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.SetService&lt;T&gt;(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.QueryService&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.PropertyChanged</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.NotifyPropertyChanged(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.HandlePropertyChanged(System.Object, System.ComponentModel.PropertyChangedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.ContextHelpServicesCreated</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.CreateContextHelpServices()</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.ResolveBrush(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.Design.html">NationalInstruments.Design</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_Design_TextToolViewModel_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class TextToolViewModel : DesignerToolViewModel, IWeakEventListener, IServiceAggregator, IColorResolver, IDesignerToolViewModel, IViewModel, IQueryService, INotifyPropertyChanged, IInteractiveTransactionOwner</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_Design_TextToolViewModel_CurrentlyEditingElement_" data-uid="NationalInstruments.Design.TextToolViewModel.CurrentlyEditingElement*"></a>
+  <h4 id="NationalInstruments_Design_TextToolViewModel_CurrentlyEditingElement" data-uid="NationalInstruments.Design.TextToolViewModel.CurrentlyEditingElement">CurrentlyEditingElement</h4>
+  <div class="markdown level1 summary"><p>The <span class="xref">NationalInstruments.Core.PlatformVisual</span> currently being edited</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PlatformVisual CurrentlyEditingElement { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.PlatformVisual</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_TextToolViewModel_IsEditing_" data-uid="NationalInstruments.Design.TextToolViewModel.IsEditing*"></a>
+  <h4 id="NationalInstruments_Design_TextToolViewModel_IsEditing" data-uid="NationalInstruments.Design.TextToolViewModel.IsEditing">IsEditing</h4>
+  <div class="markdown level1 summary"><p>If the <span class="xref">NationalInstruments.Design.TextToolViewModel.TextTool</span> is currently editing</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsEditing { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_TextToolViewModel_Text_" data-uid="NationalInstruments.Design.TextToolViewModel.Text*"></a>
+  <h4 id="NationalInstruments_Design_TextToolViewModel_Text" data-uid="NationalInstruments.Design.TextToolViewModel.Text">Text</h4>
+  <div class="markdown level1 summary"><p>The current text of the edit operation, empty if not editing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Text { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_TextToolViewModel_TransactionManager_" data-uid="NationalInstruments.Design.TextToolViewModel.TransactionManager*"></a>
+  <h4 id="NationalInstruments_Design_TextToolViewModel_TransactionManager" data-uid="NationalInstruments.Design.TextToolViewModel.TransactionManager">TransactionManager</h4>
+  <div class="markdown level1 summary"><p>Get a transaction manager that can be used for asynchronous UI transactions</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ITransactionManager TransactionManager { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ITransactionManager.html">ITransactionManager</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_Design_TextToolViewModel_CancelEdit_" data-uid="NationalInstruments.Design.TextToolViewModel.CancelEdit*"></a>
+  <h4 id="NationalInstruments_Design_TextToolViewModel_CancelEdit" data-uid="NationalInstruments.Design.TextToolViewModel.CancelEdit">CancelEdit()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CancelEdit()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_TextToolViewModel_CommitEdit_" data-uid="NationalInstruments.Design.TextToolViewModel.CommitEdit*"></a>
+  <h4 id="NationalInstruments_Design_TextToolViewModel_CommitEdit" data-uid="NationalInstruments.Design.TextToolViewModel.CommitEdit">CommitEdit()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CommitEdit()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_TextToolViewModel_CompleteTransaction_" data-uid="NationalInstruments.Design.TextToolViewModel.CompleteTransaction*"></a>
+  <h4 id="NationalInstruments_Design_TextToolViewModel_CompleteTransaction_System_Boolean_" data-uid="NationalInstruments.Design.TextToolViewModel.CompleteTransaction(System.Boolean)">CompleteTransaction(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Called when an asynchrounous transaction created by this needs to be completed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CompleteTransaction(bool cancel)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">cancel</span></td>
+        <td><p>If the transaction should be cancelled.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_TextToolViewModel_CreateTool_" data-uid="NationalInstruments.Design.TextToolViewModel.CreateTool*"></a>
+  <h4 id="NationalInstruments_Design_TextToolViewModel_CreateTool" data-uid="NationalInstruments.Design.TextToolViewModel.CreateTool">CreateTool()</h4>
+  <div class="markdown level1 summary"><p>override and create your tool</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override IDesignerTool CreateTool()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.IDesignerTool.html">IDesignerTool</a></td>
+        <td><p>tool (visual) as IDesignerTool</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_CreateTool">DesignerToolViewModel.CreateTool()</a></div>
+  
+  
+  <a id="NationalInstruments_Design_TextToolViewModel_Deactivate_" data-uid="NationalInstruments.Design.TextToolViewModel.Deactivate*"></a>
+  <h4 id="NationalInstruments_Design_TextToolViewModel_Deactivate_NationalInstruments_Design_DesignerEditControlViewModel_System_Boolean_NationalInstruments_Design_IDesignerToolViewModel_" data-uid="NationalInstruments.Design.TextToolViewModel.Deactivate(NationalInstruments.Design.DesignerEditControlViewModel,System.Boolean,NationalInstruments.Design.IDesignerToolViewModel)">Deactivate(DesignerEditControlViewModel, Boolean, IDesignerToolViewModel)</h4>
+  <div class="markdown level1 summary"><p>Called by the DesignerEditControl when this tool is deactivated.  Tools are Deactivated
+when they are removed from the DesignerEditControl because a new tool is being activated
+or when the DesignerEditControl itself is no longer available to the user</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Deactivate(DesignerEditControlViewModel designer, bool designerDeactivate, IDesignerToolViewModel replacementTool)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.DesignerEditControlViewModel.html">DesignerEditControlViewModel</a></td>
+        <td><span class="parametername">designer</span></td>
+        <td><p>The DesignerEditoControl that owns the tool</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">designerDeactivate</span></td>
+        <td><p>true if the DesignerEditControl is being deactivated, false
+ if the tool is being removed from the designer.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.IDesignerToolViewModel.html">IDesignerToolViewModel</a></td>
+        <td><span class="parametername">replacementTool</span></td>
+        <td><p>The tool that is replacing this tool if there is a replacement tool</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_Deactivate_NationalInstruments_Design_DesignerEditControlViewModel_System_Boolean_NationalInstruments_Design_IDesignerToolViewModel_">DesignerToolViewModel.Deactivate(DesignerEditControlViewModel, Boolean, IDesignerToolViewModel)</a></div>
+  
+  
+  <a id="NationalInstruments_Design_TextToolViewModel_DisableTool_" data-uid="NationalInstruments.Design.TextToolViewModel.DisableTool*"></a>
+  <h4 id="NationalInstruments_Design_TextToolViewModel_DisableTool" data-uid="NationalInstruments.Design.TextToolViewModel.DisableTool">DisableTool()</h4>
+  <div class="markdown level1 summary"><p>Temporarily disables the TextTool so we don&apos;t do text editing operations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDisposable DisableTool()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IDisposable</span></td>
+        <td><p>A disposable so we can control when the tool should start operating again.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_TextToolViewModel_EditText_" data-uid="NationalInstruments.Design.TextToolViewModel.EditText*"></a>
+  <h4 id="NationalInstruments_Design_TextToolViewModel_EditText_NationalInstruments_Core_PlatformVisual_" data-uid="NationalInstruments.Design.TextToolViewModel.EditText(NationalInstruments.Core.PlatformVisual)">EditText(PlatformVisual)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EditText(PlatformVisual source)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.PlatformVisual</span></td>
+        <td><span class="parametername">source</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_TextToolViewModel_EditText_" data-uid="NationalInstruments.Design.TextToolViewModel.EditText*"></a>
+  <h4 id="NationalInstruments_Design_TextToolViewModel_EditText_NationalInstruments_Core_PlatformVisual_System_String_" data-uid="NationalInstruments.Design.TextToolViewModel.EditText(NationalInstruments.Core.PlatformVisual,System.String)">EditText(PlatformVisual, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void EditText(PlatformVisual source, string initialText)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.PlatformVisual</span></td>
+        <td><span class="parametername">source</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">initialText</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_TextToolViewModel_EditText_" data-uid="NationalInstruments.Design.TextToolViewModel.EditText*"></a>
+  <h4 id="NationalInstruments_Design_TextToolViewModel_EditText_NationalInstruments_SourceModel_Element_" data-uid="NationalInstruments.Design.TextToolViewModel.EditText(NationalInstruments.SourceModel.Element)">EditText(Element)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EditText(Element source)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td><span class="parametername">source</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_TextToolViewModel_EditText_" data-uid="NationalInstruments.Design.TextToolViewModel.EditText*"></a>
+  <h4 id="NationalInstruments_Design_TextToolViewModel_EditText_NationalInstruments_SourceModel_Element_System_Boolean_" data-uid="NationalInstruments.Design.TextToolViewModel.EditText(NationalInstruments.SourceModel.Element,System.Boolean)">EditText(Element, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Start a text edit operation on the given source. Optionally start transaction right away (instead of waiting for edit).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EditText(Element source, bool immediate)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>The model element to start a text edit on</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">immediate</span></td>
+        <td><p>If an interactive transaction should be started immediately (before starting a text edit)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>If operation was successful, false if can not find editable text element. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_TextToolViewModel_GetTextTool_" data-uid="NationalInstruments.Design.TextToolViewModel.GetTextTool*"></a>
+  <h4 id="NationalInstruments_Design_TextToolViewModel_GetTextTool_NationalInstruments_Core_IViewModel_" data-uid="NationalInstruments.Design.TextToolViewModel.GetTextTool(NationalInstruments.Core.IViewModel)">GetTextTool(IViewModel)</h4>
+  <div class="markdown level1 summary"><p>Try to get the <a class="xref" href="NationalInstruments.Design.TextToolViewModel.html">TextToolViewModel</a> for <code data-dev-comment-type="paramref" class="paramref">source</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TextToolViewModel GetTextTool(IViewModel source)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.IViewModel</span></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>A view model source on the designer</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.TextToolViewModel.html">TextToolViewModel</a></td>
+        <td><p>The <a class="xref" href="NationalInstruments.Design.TextToolViewModel.html">TextToolViewModel</a> associated with the view model source, null if the designer doesn&apos;t have a <a class="xref" href="NationalInstruments.Design.TextToolViewModel.html">TextToolViewModel</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_TextToolViewModel_NewTransactionStarting_" data-uid="NationalInstruments.Design.TextToolViewModel.NewTransactionStarting*"></a>
+  <h4 id="NationalInstruments_Design_TextToolViewModel_NewTransactionStarting_NationalInstruments_SourceModel_IInteractiveTransactionOwner_" data-uid="NationalInstruments.Design.TextToolViewModel.NewTransactionStarting(NationalInstruments.SourceModel.IInteractiveTransactionOwner)">NewTransactionStarting(IInteractiveTransactionOwner)</h4>
+  <div class="markdown level1 summary"><p>Another creator has attempted to start a transaction. The framework needs to know whether we should nest
+this transaction, end it, or pass ownership to the new creator.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransactionTransferPolicy NewTransactionStarting(IInteractiveTransactionOwner newTransaction)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.IInteractiveTransactionOwner.html">IInteractiveTransactionOwner</a></td>
+        <td><span class="parametername">newTransaction</span></td>
+        <td><p>The new TransactionCreator</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TransactionTransferPolicy.html">TransactionTransferPolicy</a></td>
+        <td><p>TransactionTransferPolicy to determine transaction ownership.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_TextToolViewModel_ReceiveWeakEvent_" data-uid="NationalInstruments.Design.TextToolViewModel.ReceiveWeakEvent*"></a>
+  <h4 id="NationalInstruments_Design_TextToolViewModel_ReceiveWeakEvent_System_Type_System_Object_System_EventArgs_" data-uid="NationalInstruments.Design.TextToolViewModel.ReceiveWeakEvent(System.Type,System.Object,System.EventArgs)">ReceiveWeakEvent(Type, Object, EventArgs)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool ReceiveWeakEvent(Type managerType, object sender, EventArgs e)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">managerType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">sender</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.EventArgs</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">NationalInstruments.Core.ViewModelBase.ReceiveWeakEvent(System.Type, System.Object, System.EventArgs)</span></div>
+  
+  
+  <a id="NationalInstruments_Design_TextToolViewModel_TranslateKeyToNavigation_" data-uid="NationalInstruments.Design.TextToolViewModel.TranslateKeyToNavigation*"></a>
+  <h4 id="NationalInstruments_Design_TextToolViewModel_TranslateKeyToNavigation_System_Windows_Input_Key_System_Windows_Input_ModifierKeys_" data-uid="NationalInstruments.Design.TextToolViewModel.TranslateKeyToNavigation(System.Windows.Input.Key,System.Windows.Input.ModifierKeys)">TranslateKeyToNavigation(Key, ModifierKeys)</h4>
+  <div class="markdown level1 summary"><p>Translates the given key and modifier keys to a navigation direction.  This navigation
+direction can then be used to edit a new element, or create a new element to edit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TextEditorNavigation TranslateKeyToNavigation(Key key, ModifierKeys modifiers)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Windows.Input.Key</span></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The <span class="xref">System.Windows.Input.Key</span> to be translated.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Windows.Input.ModifierKeys</span></td>
+        <td><span class="parametername">modifiers</span></td>
+        <td><p>The currently active <span class="xref">System.Windows.Input.ModifierKeys</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TextEditorNavigation.html">TextEditorNavigation</a></td>
+        <td><p>The <a class="xref" href="NationalInstruments.SourceModel.TextEditorNavigation.html">TextEditorNavigation</a> for the given key combination.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.Windows.IWeakEventListener</span>
+  </div>
+  <div>
+      <span class="xref">NationalInstruments.Core.IServiceAggregator</span>
+  </div>
+  <div>
+      <span class="xref">NationalInstruments.Core.IColorResolver</span>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.IDesignerToolViewModel.html">IDesignerToolViewModel</a>
+  </div>
+  <div>
+      <span class="xref">NationalInstruments.Core.IViewModel</span>
+  </div>
+  <div>
+      <span class="xref">NationalInstruments.Core.IQueryService</span>
+  </div>
+  <div>
+      <span class="xref">System.ComponentModel.INotifyPropertyChanged</span>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.IInteractiveTransactionOwner.html">IInteractiveTransactionOwner</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.ContextualHelp.HelpCommonHelpers.html#NationalInstruments_ContextualHelp_HelpCommonHelpers_InitializeContextHelpIfNecessary__1_NationalInstruments_Core_ViewModelBase_">HelpCommonHelpers.InitializeContextHelpIfNecessary&lt;T&gt;(ViewModelBase)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.PaletteContextHelpers.html#NationalInstruments_Design_PaletteContextHelpers_GetPaletteContextKeywords_NationalInstruments_Core_IQueryService_">PaletteContextHelpers.GetPaletteContextKeywords(IQueryService)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.ChildDataContextProviderHelpers.html#NationalInstruments_Design_ChildDataContextProviderHelpers_GetDataContextProvider_NationalInstruments_Core_IViewModel_">ChildDataContextProviderHelpers.GetDataContextProvider(IViewModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ElementLocalizationHelpers.html#NationalInstruments_SourceModel_ElementLocalizationHelpers_GetLocalizedValue_NationalInstruments_Core_IViewModel_NationalInstruments_DynamicProperties_PropertySymbol_System_Object_">ElementLocalizationHelpers.GetLocalizedValue(IViewModel, PropertySymbol, Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ElementLocalizationHelpers.html#NationalInstruments_SourceModel_ElementLocalizationHelpers_CreateLocalizedDisplayBinding_NationalInstruments_Core_IViewModel_System_String_NationalInstruments_DynamicProperties_PropertySymbol_">ElementLocalizationHelpers.CreateLocalizedDisplayBinding(IViewModel, String, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ElementLocalizationHelpers.html#NationalInstruments_SourceModel_ElementLocalizationHelpers_CreateLocalizedDisplayBinding_NationalInstruments_Core_IViewModel_System_String_NationalInstruments_DynamicProperties_PropertySymbol_NationalInstruments_Core_PlatformBindingMode_">ElementLocalizationHelpers.CreateLocalizedDisplayBinding(IViewModel, String, PropertySymbol, PlatformBindingMode)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

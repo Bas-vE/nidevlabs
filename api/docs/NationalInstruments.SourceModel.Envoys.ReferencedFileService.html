@@ -1,0 +1,1030 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ReferencedFileService
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ReferencedFileService
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.SourceModel.Envoys.ReferencedFileService">
+  
+  
+  <h1 id="NationalInstruments_SourceModel_Envoys_ReferencedFileService" data-uid="NationalInstruments.SourceModel.Envoys.ReferencedFileService" class="text-break">Class ReferencedFileService
+  </h1>
+  <div class="markdown level0 summary"><p>A base implementation of <a class="xref" href="NationalInstruments.SourceModel.Envoys.IReferencedFileService.html">IReferencedFileService</a> for clients that save files to disk
+that do not match the source model persistence format.  The <a class="xref" href="NationalInstruments.SourceModel.Definition.html">Definition</a> for these files,
+if any, will not be owned by a <a class="xref" href="NationalInstruments.SourceModel.SourceFileBase.html">SourceFileBase</a>, and will not be persisted.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html">EnvoyService</a></div>
+    <div class="level2"><a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultDirtyStateNotificationService.html">DefaultDirtyStateNotificationService</a></div>
+    <div class="level3"><a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultReferencedFileService.html">DefaultReferencedFileService</a></div>
+    <div class="level4"><span class="xref">ReferencedFileService</span></div>
+      <div class="level5"><a class="xref" href="NationalInstruments.SourceModel.Envoys.SourceFileReferencedFileService.html">SourceFileReferencedFileService</a></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="NationalInstruments.SourceModel.IModelObserver.html">IModelObserver</a></div>
+    <div><span class="xref">System.Windows.IWeakEventListener</span></div>
+    <div><a class="xref" href="NationalInstruments.SourceModel.Envoys.IReferencedFileService.html">IReferencedFileService</a></div>
+    <div><a class="xref" href="NationalInstruments.SourceModel.Envoys.IDirtyStateNotificationService.html">IDirtyStateNotificationService</a></div>
+    <div><span class="xref">System.ComponentModel.INotifyPropertyChanged</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultReferencedFileService.html#NationalInstruments_SourceModel_Envoys_DefaultReferencedFileService_StorageManager">DefaultReferencedFileService.StorageManager</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultReferencedFileService.html#NationalInstruments_SourceModel_Envoys_DefaultReferencedFileService_NationalInstruments_SourceModel_Envoys_IReferencedFileService_Envoy">DefaultReferencedFileService.IReferencedFileService.Envoy</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultReferencedFileService.html#NationalInstruments_SourceModel_Envoys_DefaultReferencedFileService_IsDirty">DefaultReferencedFileService.IsDirty</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultReferencedFileService.html#NationalInstruments_SourceModel_Envoys_DefaultReferencedFileService_HasSetLocation">DefaultReferencedFileService.HasSetLocation()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultReferencedFileService.html#NationalInstruments_SourceModel_Envoys_DefaultReferencedFileService_GetPreferredRelativePath_System_String_">DefaultReferencedFileService.GetPreferredRelativePath(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultReferencedFileService.html#NationalInstruments_SourceModel_Envoys_DefaultReferencedFileService_GetPreferredRelativeParentPath_System_String_">DefaultReferencedFileService.GetPreferredRelativeParentPath(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultReferencedFileService.html#NationalInstruments_SourceModel_Envoys_DefaultReferencedFileService_Persistent">DefaultReferencedFileService.Persistent</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultReferencedFileService.html#NationalInstruments_SourceModel_Envoys_DefaultReferencedFileService_UsageCount">DefaultReferencedFileService.UsageCount</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultReferencedFileService.html#NationalInstruments_SourceModel_Envoys_DefaultReferencedFileService_Hidden">DefaultReferencedFileService.Hidden</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultReferencedFileService.html#NationalInstruments_SourceModel_Envoys_DefaultReferencedFileService_SaveReferencedFileToStream">DefaultReferencedFileService.SaveReferencedFileToStream()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultReferencedFileService.html#NationalInstruments_SourceModel_Envoys_DefaultReferencedFileService_OnModelSavedAsync_NationalInstruments_SourceModel_Envoys_Envoy_">DefaultReferencedFileService.OnModelSavedAsync(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultDirtyStateNotificationService.html#NationalInstruments_SourceModel_Envoys_DefaultDirtyStateNotificationService_ShouldWatchForDirty_NationalInstruments_SourceModel_ITransactionManager_">DefaultDirtyStateNotificationService.ShouldWatchForDirty(ITransactionManager)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultDirtyStateNotificationService.html#NationalInstruments_SourceModel_Envoys_DefaultDirtyStateNotificationService_OnPropertyChanged_System_String_">DefaultDirtyStateNotificationService.OnPropertyChanged(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultDirtyStateNotificationService.html#NationalInstruments_SourceModel_Envoys_DefaultDirtyStateNotificationService_HandlePropertyChanged_System_Object_System_ComponentModel_PropertyChangedEventArgs_">DefaultDirtyStateNotificationService.HandlePropertyChanged(Object, PropertyChangedEventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultDirtyStateNotificationService.html#NationalInstruments_SourceModel_Envoys_DefaultDirtyStateNotificationService_HandleWeakEvent_System_Type_System_Object_System_EventArgs_">DefaultDirtyStateNotificationService.HandleWeakEvent(Type, Object, EventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultDirtyStateNotificationService.html#NationalInstruments_SourceModel_Envoys_DefaultDirtyStateNotificationService_HandleComponentAdded_NationalInstruments_SourceModel_Element_NationalInstruments_SourceModel_Element_System_Int32_NationalInstruments_SourceModel_TransactionItem_">DefaultDirtyStateNotificationService.HandleComponentAdded(Element, Element, Int32, TransactionItem)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultDirtyStateNotificationService.html#NationalInstruments_SourceModel_Envoys_DefaultDirtyStateNotificationService_HandleComponentRemoved_NationalInstruments_SourceModel_Element_NationalInstruments_SourceModel_Element_NationalInstruments_SourceModel_TransactionItem_">DefaultDirtyStateNotificationService.HandleComponentRemoved(Element, Element, TransactionItem)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultDirtyStateNotificationService.html#NationalInstruments_SourceModel_Envoys_DefaultDirtyStateNotificationService_HandleModelDetached_NationalInstruments_SourceModel_Element_">DefaultDirtyStateNotificationService.HandleModelDetached(Element)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultDirtyStateNotificationService.html#NationalInstruments_SourceModel_Envoys_DefaultDirtyStateNotificationService_OnAttached_NationalInstruments_SourceModel_Envoys_Envoy_">DefaultDirtyStateNotificationService.OnAttached(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultDirtyStateNotificationService.html#NationalInstruments_SourceModel_Envoys_DefaultDirtyStateNotificationService_OnDetach_NationalInstruments_SourceModel_Envoys_Envoy_">DefaultDirtyStateNotificationService.OnDetach(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultDirtyStateNotificationService.html#NationalInstruments_SourceModel_Envoys_DefaultDirtyStateNotificationService_OnModelLoaded_NationalInstruments_SourceModel_Envoys_Envoy_">DefaultDirtyStateNotificationService.OnModelLoaded(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultDirtyStateNotificationService.html#NationalInstruments_SourceModel_Envoys_DefaultDirtyStateNotificationService_OnModelClosed_NationalInstruments_SourceModel_Envoys_Envoy_">DefaultDirtyStateNotificationService.OnModelClosed(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultDirtyStateNotificationService.html#NationalInstruments_SourceModel_Envoys_DefaultDirtyStateNotificationService_PropertyChanged">DefaultDirtyStateNotificationService.PropertyChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultDirtyStateNotificationService.html#NationalInstruments_SourceModel_Envoys_DefaultDirtyStateNotificationService_NationalInstruments_SourceModel_IModelObserver_ModelPropertyChanged_NationalInstruments_SourceModel_Element_System_String_NationalInstruments_SourceModel_TransactionItem_">DefaultDirtyStateNotificationService.IModelObserver.ModelPropertyChanged(Element, String, TransactionItem)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultDirtyStateNotificationService.html#NationalInstruments_SourceModel_Envoys_DefaultDirtyStateNotificationService_NationalInstruments_SourceModel_IModelObserver_ComponentAdded_NationalInstruments_SourceModel_Element_NationalInstruments_SourceModel_Element_System_Int32_NationalInstruments_SourceModel_TransactionItem_">DefaultDirtyStateNotificationService.IModelObserver.ComponentAdded(Element, Element, Int32, TransactionItem)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultDirtyStateNotificationService.html#NationalInstruments_SourceModel_Envoys_DefaultDirtyStateNotificationService_NationalInstruments_SourceModel_IModelObserver_ComponentRemoved_NationalInstruments_SourceModel_Element_NationalInstruments_SourceModel_Element_NationalInstruments_SourceModel_TransactionItem_">DefaultDirtyStateNotificationService.IModelObserver.ComponentRemoved(Element, Element, TransactionItem)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultDirtyStateNotificationService.html#NationalInstruments_SourceModel_Envoys_DefaultDirtyStateNotificationService_NationalInstruments_SourceModel_IModelObserver_ModelDetached_NationalInstruments_SourceModel_Element_">DefaultDirtyStateNotificationService.IModelObserver.ModelDetached(Element)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultDirtyStateNotificationService.html#NationalInstruments_SourceModel_Envoys_DefaultDirtyStateNotificationService_System_Windows_IWeakEventListener_ReceiveWeakEvent_System_Type_System_Object_System_EventArgs_">DefaultDirtyStateNotificationService.IWeakEventListener.ReceiveWeakEvent(Type, Object, EventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_ProvidesInterface_System_Collections_Generic_IDictionary_System_String_System_Object__System_Type_">EnvoyService.ProvidesInterface(IDictionary&lt;String, Object&gt;, Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_AssociatedEnvoy">EnvoyService.AssociatedEnvoy</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_Project">EnvoyService.Project</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_Host">EnvoyService.Host</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_Detaching_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.Detaching(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_Detach_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.Detach(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_ProjectSaveAsync_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.ProjectSaveAsync(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_ProjectClose_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.ProjectClose(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_ModelLoaded_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.ModelLoaded(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_ModelClosing_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.ModelClosing(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_ModelClosed_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.ModelClosed(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_ModelSavedAsync_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.ModelSavedAsync(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_ModelSavingAsync_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.ModelSavingAsync(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_OnDetaching_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.OnDetaching(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_OnProjectClose_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.OnProjectClose(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_OnModelClosing_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.OnModelClosing(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_OnModelSavingAsync_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.OnModelSavingAsync(Envoy)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.SourceModel.Envoys.html">NationalInstruments.SourceModel.Envoys</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_SourceModel_Envoys_ReferencedFileService_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class ReferencedFileService : DefaultReferencedFileService, IModelObserver, IWeakEventListener, IReferencedFileService, IDirtyStateNotificationService, INotifyPropertyChanged</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_ReferencedFileService_FileOwner_" data-uid="NationalInstruments.SourceModel.Envoys.ReferencedFileService.FileOwner*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_ReferencedFileService_FileOwner" data-uid="NationalInstruments.SourceModel.Envoys.ReferencedFileService.FileOwner">FileOwner</h4>
+  <div class="markdown level1 summary"><p>Gets the owner of the referenced file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override IReferencedFileOwner FileOwner { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.IReferencedFileOwner.html">IReferencedFileOwner</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultReferencedFileService.html#NationalInstruments_SourceModel_Envoys_DefaultReferencedFileService_FileOwner">DefaultReferencedFileService.FileOwner</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_ReferencedFileService_FileStorageHelper_" data-uid="NationalInstruments.SourceModel.Envoys.ReferencedFileService.FileStorageHelper*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_ReferencedFileService_FileStorageHelper" data-uid="NationalInstruments.SourceModel.Envoys.ReferencedFileService.FileStorageHelper">FileStorageHelper</h4>
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="NationalInstruments.SourceModel.Envoys.IReferencedFileStorageHelper.html">IReferencedFileStorageHelper</a> used by our associated item.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReferencedFileStorageHelper FileStorageHelper { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.IReferencedFileStorageHelper.html">IReferencedFileStorageHelper</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_ReferencedFileService_LastLoadException_" data-uid="NationalInstruments.SourceModel.Envoys.ReferencedFileService.LastLoadException*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_ReferencedFileService_LastLoadException" data-uid="NationalInstruments.SourceModel.Envoys.ReferencedFileService.LastLoadException">LastLoadException</h4>
+  <div class="markdown level1 summary"><p>Gets the last exception that occurred during the load of our referenced file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Exception LastLoadException { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Exception</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultReferencedFileService.html#NationalInstruments_SourceModel_Envoys_DefaultReferencedFileService_LastLoadException">DefaultReferencedFileService.LastLoadException</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_ReferencedFileService_Loading_" data-uid="NationalInstruments.SourceModel.Envoys.ReferencedFileService.Loading*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_ReferencedFileService_Loading" data-uid="NationalInstruments.SourceModel.Envoys.ReferencedFileService.Loading">Loading</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether we are currently in the process of loading the referenced file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Loading { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultReferencedFileService.html#NationalInstruments_SourceModel_Envoys_DefaultReferencedFileService_Loading">DefaultReferencedFileService.Loading</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_ReferencedFileService_ReferencedFileLoaded_" data-uid="NationalInstruments.SourceModel.Envoys.ReferencedFileService.ReferencedFileLoaded*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_ReferencedFileService_ReferencedFileLoaded" data-uid="NationalInstruments.SourceModel.Envoys.ReferencedFileService.ReferencedFileLoaded">ReferencedFileLoaded</h4>
+  <div class="markdown level1 summary"><p>True if the referenced file is loaded.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool ReferencedFileLoaded { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultReferencedFileService.html#NationalInstruments_SourceModel_Envoys_DefaultReferencedFileService_ReferencedFileLoaded">DefaultReferencedFileService.ReferencedFileLoaded</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_ReferencedFileService_Refreshing_" data-uid="NationalInstruments.SourceModel.Envoys.ReferencedFileService.Refreshing*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_ReferencedFileService_Refreshing" data-uid="NationalInstruments.SourceModel.Envoys.ReferencedFileService.Refreshing">Refreshing</h4>
+  <div class="markdown level1 summary"><p>True if the referenced file is refreshing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Refreshing { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultReferencedFileService.html#NationalInstruments_SourceModel_Envoys_DefaultReferencedFileService_Refreshing">DefaultReferencedFileService.Refreshing</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_ReferencedFileService_RelativeStoragePath_" data-uid="NationalInstruments.SourceModel.Envoys.ReferencedFileService.RelativeStoragePath*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_ReferencedFileService_RelativeStoragePath" data-uid="NationalInstruments.SourceModel.Envoys.ReferencedFileService.RelativeStoragePath">RelativeStoragePath</h4>
+  <div class="markdown level1 summary"><p>The storage location of the item&apos;s referenced definition relative to the path of the owning envoy manager.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string RelativeStoragePath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultReferencedFileService.html#NationalInstruments_SourceModel_Envoys_DefaultReferencedFileService_RelativeStoragePath">DefaultReferencedFileService.RelativeStoragePath</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_ReferencedFileService_StoragePath_" data-uid="NationalInstruments.SourceModel.Envoys.ReferencedFileService.StoragePath*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_ReferencedFileService_StoragePath" data-uid="NationalInstruments.SourceModel.Envoys.ReferencedFileService.StoragePath">StoragePath</h4>
+  <div class="markdown level1 summary"><p>The storage location of the item&apos;s referenced file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string StoragePath { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultReferencedFileService.html#NationalInstruments_SourceModel_Envoys_DefaultReferencedFileService_StoragePath">DefaultReferencedFileService.StoragePath</a></div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_ReferencedFileService_CreateFileStorageHelper_" data-uid="NationalInstruments.SourceModel.Envoys.ReferencedFileService.CreateFileStorageHelper*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_ReferencedFileService_CreateFileStorageHelper" data-uid="NationalInstruments.SourceModel.Envoys.ReferencedFileService.CreateFileStorageHelper">CreateFileStorageHelper()</h4>
+  <div class="markdown level1 summary"><p>Called by the <a class="xref" href="NationalInstruments.SourceModel.Envoys.ReferencedFileService.html#NationalInstruments_SourceModel_Envoys_ReferencedFileService_FileStorageHelper">FileStorageHelper</a> property to create a <a class="xref" href="NationalInstruments.SourceModel.Envoys.IReferencedFileStorageHelper.html">IReferencedFileStorageHelper</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract IReferencedFileStorageHelper CreateFileStorageHelper()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.IReferencedFileStorageHelper.html">IReferencedFileStorageHelper</a></td>
+        <td><p>The new <a class="xref" href="NationalInstruments.SourceModel.Envoys.IReferencedFileStorageHelper.html">IReferencedFileStorageHelper</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_ReferencedFileService_HandleModelPropertyChanged_" data-uid="NationalInstruments.SourceModel.Envoys.ReferencedFileService.HandleModelPropertyChanged*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_ReferencedFileService_HandleModelPropertyChanged_NationalInstruments_SourceModel_Element_System_String_NationalInstruments_SourceModel_TransactionItem_" data-uid="NationalInstruments.SourceModel.Envoys.ReferencedFileService.HandleModelPropertyChanged(NationalInstruments.SourceModel.Element,System.String,NationalInstruments.SourceModel.TransactionItem)">HandleModelPropertyChanged(Element, String, TransactionItem)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void HandleModelPropertyChanged(Element modelElement, string propertyName, TransactionItem transactionItem)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td><span class="parametername">modelElement</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TransactionItem.html">TransactionItem</a></td>
+        <td><span class="parametername">transactionItem</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultDirtyStateNotificationService.html#NationalInstruments_SourceModel_Envoys_DefaultDirtyStateNotificationService_HandleModelPropertyChanged_NationalInstruments_SourceModel_Element_System_String_NationalInstruments_SourceModel_TransactionItem_">DefaultDirtyStateNotificationService.HandleModelPropertyChanged(Element, String, TransactionItem)</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_ReferencedFileService_KeepReferencedFileInMemory_" data-uid="NationalInstruments.SourceModel.Envoys.ReferencedFileService.KeepReferencedFileInMemory*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_ReferencedFileService_KeepReferencedFileInMemory" data-uid="NationalInstruments.SourceModel.Envoys.ReferencedFileService.KeepReferencedFileInMemory">KeepReferencedFileInMemory()</h4>
+  <div class="markdown level1 summary"><p>Keeps the file referenced in memory.  When disposed, it&apos;s possible that the contents of the
+referenced file might be unloaded.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override ILockedSourceFile KeepReferencedFileInMemory()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.ILockedSourceFile.html">ILockedSourceFile</a></td>
+        <td><p>A disposable object that keeps the referenced file in memory.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultReferencedFileService.html#NationalInstruments_SourceModel_Envoys_DefaultReferencedFileService_KeepReferencedFileInMemory">DefaultReferencedFileService.KeepReferencedFileInMemory()</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_ReferencedFileService_LoadAsync_" data-uid="NationalInstruments.SourceModel.Envoys.ReferencedFileService.LoadAsync*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_ReferencedFileService_LoadAsync_NationalInstruments_SourceModel_Envoys_EnvoyLoadOptions_" data-uid="NationalInstruments.SourceModel.Envoys.ReferencedFileService.LoadAsync(NationalInstruments.SourceModel.Envoys.EnvoyLoadOptions)">LoadAsync(EnvoyLoadOptions)</h4>
+  <div class="markdown level1 summary"><p>Loads the file referenced by this service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;ILockedSourceFile&gt; LoadAsync(EnvoyLoadOptions loadOptions)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyLoadOptions.html">EnvoyLoadOptions</a></td>
+        <td><span class="parametername">loadOptions</span></td>
+        <td><p>The <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyLoadOptions.html">EnvoyLoadOptions</a> used to configure this load.  This can be <code>null</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.ILockedSourceFile.html">ILockedSourceFile</a>&gt;</td>
+        <td><p>A <span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>representing the asynchronous load operation.  The <a class="xref" href="NationalInstruments.SourceModel.Envoys.ILockedSourceFile.html">ILockedSourceFile</a> associated
+with this Task is a hint to the lifetime of the loaded file.  While this object is not disposed, the loaded file will remain loaded
+under most circumstances.  In some situations, like refreshing a file from disk, the file maybe be unloaded even if this object is
+not disposed.  To prevent the file from being unloaded, you must hold a read lock on the Envoy owning the file, which can be acquired
+through <a class="xref" href="NationalInstruments.SourceModel.Element.html#NationalInstruments_SourceModel_Element_AcquireModelReadLock">AcquireModelReadLock()</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultReferencedFileService.html#NationalInstruments_SourceModel_Envoys_DefaultReferencedFileService_LoadAsync_NationalInstruments_SourceModel_Envoys_EnvoyLoadOptions_">DefaultReferencedFileService.LoadAsync(EnvoyLoadOptions)</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_ReferencedFileService_LoadFromStreamAsync_" data-uid="NationalInstruments.SourceModel.Envoys.ReferencedFileService.LoadFromStreamAsync*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_ReferencedFileService_LoadFromStreamAsync_System_IO_Stream_NationalInstruments_SourceModel_Envoys_EnvoyLoadOptions_" data-uid="NationalInstruments.SourceModel.Envoys.ReferencedFileService.LoadFromStreamAsync(System.IO.Stream,NationalInstruments.SourceModel.Envoys.EnvoyLoadOptions)">LoadFromStreamAsync(Stream, EnvoyLoadOptions)</h4>
+  <div class="markdown level1 summary"><p>Loads the file referenced by this service from the given stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;ILockedSourceFile&gt; LoadFromStreamAsync(Stream stream, EnvoyLoadOptions loadOptions)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IO.Stream</span></td>
+        <td><span class="parametername">stream</span></td>
+        <td><p>The <span class="xref">System.IO.Stream</span> from which to load the referenced file.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyLoadOptions.html">EnvoyLoadOptions</a></td>
+        <td><span class="parametername">loadOptions</span></td>
+        <td><p>The <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyLoadOptions.html">EnvoyLoadOptions</a> used to configure this load.  This can be <code>null</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.ILockedSourceFile.html">ILockedSourceFile</a>&gt;</td>
+        <td><p>A <span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>representing the asynchronous load operation.  The <a class="xref" href="NationalInstruments.SourceModel.Envoys.ILockedSourceFile.html">ILockedSourceFile</a> associated
+with this Task is a hint to the lifetime of the loaded file.  While this object is not disposed, the loaded file will remain loaded
+under most circumstances.  In some situations, like refreshing a file from disk, the file maybe be unloaded even if this object is
+not disposed.  To prevent the file from being unloaded, you must hold a read lock on the Envoy owning the file, which can be acquired
+through <a class="xref" href="NationalInstruments.SourceModel.Element.html#NationalInstruments_SourceModel_Element_AcquireModelReadLock">AcquireModelReadLock()</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultReferencedFileService.html#NationalInstruments_SourceModel_Envoys_DefaultReferencedFileService_LoadFromStreamAsync_System_IO_Stream_NationalInstruments_SourceModel_Envoys_EnvoyLoadOptions_">DefaultReferencedFileService.LoadFromStreamAsync(Stream, EnvoyLoadOptions)</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_ReferencedFileService_OnProjectSaveAsync_" data-uid="NationalInstruments.SourceModel.Envoys.ReferencedFileService.OnProjectSaveAsync*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_ReferencedFileService_OnProjectSaveAsync_NationalInstruments_SourceModel_Envoys_Envoy_" data-uid="NationalInstruments.SourceModel.Envoys.ReferencedFileService.OnProjectSaveAsync(NationalInstruments.SourceModel.Envoys.Envoy)">OnProjectSaveAsync(Envoy)</h4>
+  <div class="markdown level1 summary"><p>Called to notify the EnvoyService that the project is saving</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override Task OnProjectSaveAsync(Envoy associatedEnvoy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">associatedEnvoy</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>Task indicating when any work required as a result of saving the project has completed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_OnProjectSaveAsync_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.OnProjectSaveAsync(Envoy)</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_ReferencedFileService_OnRefreshed_" data-uid="NationalInstruments.SourceModel.Envoys.ReferencedFileService.OnRefreshed*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_ReferencedFileService_OnRefreshed_System_EventArgs_" data-uid="NationalInstruments.SourceModel.Envoys.ReferencedFileService.OnRefreshed(System.EventArgs)">OnRefreshed(EventArgs)</h4>
+  <div class="markdown level1 summary"><p>Called when signalling the Refreshed event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnRefreshed(EventArgs args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventArgs</span></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The event arguments for the notification</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_ReferencedFileService_RefreshReferencedFileAsync_" data-uid="NationalInstruments.SourceModel.Envoys.ReferencedFileService.RefreshReferencedFileAsync*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_ReferencedFileService_RefreshReferencedFileAsync" data-uid="NationalInstruments.SourceModel.Envoys.ReferencedFileService.RefreshReferencedFileAsync">RefreshReferencedFileAsync()</h4>
+  <div class="markdown level1 summary"><p>Force the filed referenced by this <a class="xref" href="NationalInstruments.SourceModel.Envoys.IReferencedFileService.html#NationalInstruments_SourceModel_Envoys_IReferencedFileService_Envoy">Envoy</a> and all linked Envoys to leave memory and reload it from the disk.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;ILockedSourceFile&gt; RefreshReferencedFileAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.ILockedSourceFile.html">ILockedSourceFile</a>&gt;</td>
+        <td><p>A <span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>representing the asynchronous refresh operation.  The <a class="xref" href="NationalInstruments.SourceModel.Envoys.ILockedSourceFile.html">ILockedSourceFile</a> associated
+with this Task is a hint to the lifetime of the loaded file.  While this object is not disposed, the loaded file will remain loaded
+under most circumstances.  In some situations, like refreshing a file from disk, the file maybe be unloaded even if this object is
+not disposed.  To prevent the file from being unloaded, you must hold a read lock on the Envoy owning the file, which can be acquired
+through <a class="xref" href="NationalInstruments.SourceModel.Element.html#NationalInstruments_SourceModel_Element_AcquireModelReadLock">AcquireModelReadLock()</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultReferencedFileService.html#NationalInstruments_SourceModel_Envoys_DefaultReferencedFileService_RefreshReferencedFileAsync">DefaultReferencedFileService.RefreshReferencedFileAsync()</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_ReferencedFileService_RefreshReferencedFileAsync_" data-uid="NationalInstruments.SourceModel.Envoys.ReferencedFileService.RefreshReferencedFileAsync*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_ReferencedFileService_RefreshReferencedFileAsync_NationalInstruments_SourceModel_Envoys_RefreshMode_" data-uid="NationalInstruments.SourceModel.Envoys.ReferencedFileService.RefreshReferencedFileAsync(NationalInstruments.SourceModel.Envoys.RefreshMode)">RefreshReferencedFileAsync(RefreshMode)</h4>
+  <div class="markdown level1 summary"><p>Force the filed referenced by this <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a> and all linked Envoys to leave memory and reload it from the disk.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ILockedSourceFile&gt; RefreshReferencedFileAsync(RefreshMode refreshMode)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.RefreshMode.html">RefreshMode</a></td>
+        <td><span class="parametername">refreshMode</span></td>
+        <td><p>Indicates the type of refresh to perform.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.ILockedSourceFile.html">ILockedSourceFile</a>&gt;</td>
+        <td><p>A <span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>representing the asynchronous refresh operation.  The <a class="xref" href="NationalInstruments.SourceModel.Envoys.ILockedSourceFile.html">ILockedSourceFile</a> associated
+with this Task is a hint to the lifetime of the loaded file.  While this object is not disposed, the loaded file will remain loaded
+under most circumstances.  In some situations, like refreshing a file from disk, the file maybe be unloaded even if this object is
+not disposed.  To prevent the file from being unloaded, you must hold a read lock on the Envoy owning the file, which can be acquired
+through <a class="xref" href="NationalInstruments.SourceModel.Element.html#NationalInstruments_SourceModel_Element_AcquireModelReadLock">AcquireModelReadLock()</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_ReferencedFileService_WriteToStorageAsync_" data-uid="NationalInstruments.SourceModel.Envoys.ReferencedFileService.WriteToStorageAsync*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_ReferencedFileService_WriteToStorageAsync_NationalInstruments_SourceModel_Envoys_EnvoySaveOptions_" data-uid="NationalInstruments.SourceModel.Envoys.ReferencedFileService.WriteToStorageAsync(NationalInstruments.SourceModel.Envoys.EnvoySaveOptions)">WriteToStorageAsync(EnvoySaveOptions)</h4>
+  <div class="markdown level1 summary"><p>Called to write the referenced file to storage.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task WriteToStorageAsync(EnvoySaveOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoySaveOptions.html">EnvoySaveOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A set of options regarding the save operation.  This must not be <code>null</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A task that represents the work of writing the file to storage.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultReferencedFileService.html#NationalInstruments_SourceModel_Envoys_DefaultReferencedFileService_WriteToStorageAsync_NationalInstruments_SourceModel_Envoys_EnvoySaveOptions_">DefaultReferencedFileService.WriteToStorageAsync(EnvoySaveOptions)</a></div>
+  <h5 id="NationalInstruments_SourceModel_Envoys_ReferencedFileService_WriteToStorageAsync_NationalInstruments_SourceModel_Envoys_EnvoySaveOptions__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Clients are not intended to call this API directly.  Instead, clients should call <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html#NationalInstruments_SourceModel_Envoys_Envoy_SaveAsync">SaveAsync()</a>.</p>
+</div>
+  <h3 id="events">Events
+  </h3>
+  
+  
+  <h4 id="NationalInstruments_SourceModel_Envoys_ReferencedFileService_Refreshed" data-uid="NationalInstruments.SourceModel.Envoys.ReferencedFileService.Refreshed">Refreshed</h4>
+  <div class="markdown level1 summary"><p>Event that is signalled when a file refresh has completed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;EventArgs&gt; Refreshed</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<span class="xref">System.EventArgs</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.IModelObserver.html">IModelObserver</a>
+  </div>
+  <div>
+      <span class="xref">System.Windows.IWeakEventListener</span>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.IReferencedFileService.html">IReferencedFileService</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.IDirtyStateNotificationService.html">IDirtyStateNotificationService</a>
+  </div>
+  <div>
+      <span class="xref">System.ComponentModel.INotifyPropertyChanged</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.SearchDependenciesExtensions.html#NationalInstruments_SourceModel_SearchDependenciesExtensions_SearchDependenciesAsync_NationalInstruments_SourceModel_Envoys_IReferencedFileService_NationalInstruments_Core_QualifiedName_NationalInstruments_SourceModel_SearchOptions_System_IProgress_System_Collections_Generic_List_NationalInstruments_SourceModel_IDependencyReference___System_Threading_CancellationToken_">SearchDependenciesExtensions.SearchDependenciesAsync(IReferencedFileService, QualifiedName, SearchOptions, IProgress&lt;List&lt;IDependencyReference&gt;&gt;, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.SearchDependenciesExtensions.html#NationalInstruments_SourceModel_SearchDependenciesExtensions_SearchDependencies_NationalInstruments_SourceModel_Envoys_IReferencedFileService_NationalInstruments_SourceModel_Envoys_Envoy_NationalInstruments_SourceModel_SearchOptions_System_IProgress_System_Collections_Generic_List_NationalInstruments_SourceModel_IDependencyReference___System_Threading_CancellationToken_">SearchDependenciesExtensions.SearchDependencies(IReferencedFileService, Envoy, SearchOptions, IProgress&lt;List&lt;IDependencyReference&gt;&gt;, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.SourceFileReferenceHierarchyExtensions.html#NationalInstruments_SourceModel_Envoys_SourceFileReferenceHierarchyExtensions_CopyHierarchy_NationalInstruments_SourceModel_Envoys_IReferencedFileService_System_String_System_String_System_String_NationalInstruments_SourceModel_Envoys_CopyHierarchyComplete_">SourceFileReferenceHierarchyExtensions.CopyHierarchy(IReferencedFileService, String, String, String, CopyHierarchyComplete)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.SourceFileReferenceHierarchyExtensions.html#NationalInstruments_SourceModel_Envoys_SourceFileReferenceHierarchyExtensions_CopyHierarchyToScope_NationalInstruments_SourceModel_Envoys_IReferencedFileService_NationalInstruments_SourceModel_ITargetScopeService_System_String_System_String_System_String_NationalInstruments_SourceModel_Envoys_CopyHierarchyComplete_">SourceFileReferenceHierarchyExtensions.CopyHierarchyToScope(IReferencedFileService, ITargetScopeService, String, String, String, CopyHierarchyComplete)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.SourceFileReferenceHierarchyExtensions.html#NationalInstruments_SourceModel_Envoys_SourceFileReferenceHierarchyExtensions_RenameFileReferenceAndUpdateDependencies_NationalInstruments_SourceModel_Envoys_IReferencedFileService_NationalInstruments_Core_QualifiedName_NationalInstruments_SourceModel_Envoys_UpdateDependenciesProgress_System_Action_System_Exception_System_Collections_Generic_IList_NationalInstruments_SourceModel_Envoys_Envoy__System_Collections_Generic_IList_NationalInstruments_SourceModel_Envoys_EnvoyError___">SourceFileReferenceHierarchyExtensions.RenameFileReferenceAndUpdateDependencies(IReferencedFileService, QualifiedName, UpdateDependenciesProgress, Action&lt;Exception, IList&lt;Envoy&gt;, IList&lt;EnvoyError&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.ReferencedFileServiceHelpers.html#NationalInstruments_SourceModel_Envoys_ReferencedFileServiceHelpers_QueryService__1_NationalInstruments_SourceModel_Envoys_IReferencedFileService_">ReferencedFileServiceHelpers.QueryService&lt;T&gt;(IReferencedFileService)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.ReferencedFileServiceHelpers.html#NationalInstruments_SourceModel_Envoys_ReferencedFileServiceHelpers_MakeProjectRelativeUri_NationalInstruments_SourceModel_Envoys_IReferencedFileService_">ReferencedFileServiceHelpers.MakeProjectRelativeUri(IReferencedFileService)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.ReferencedFileServiceHelpers.html#NationalInstruments_SourceModel_Envoys_ReferencedFileServiceHelpers_TryMakeProjectRelativeUri_NationalInstruments_SourceModel_Envoys_IReferencedFileService_">ReferencedFileServiceHelpers.TryMakeProjectRelativeUri(IReferencedFileService)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.ReferencedFileServiceHelpers.html#NationalInstruments_SourceModel_Envoys_ReferencedFileServiceHelpers_MatchesStoragePath_NationalInstruments_SourceModel_Envoys_IReferencedFileService_System_String_System_Boolean_">ReferencedFileServiceHelpers.MatchesStoragePath(IReferencedFileService, String, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.ReferencedFileServiceHelpers.html#NationalInstruments_SourceModel_Envoys_ReferencedFileServiceHelpers_DeleteReferencedFile_NationalInstruments_SourceModel_Envoys_IReferencedFileService_">ReferencedFileServiceHelpers.DeleteReferencedFile(IReferencedFileService)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.ReferencedFileServiceHelpers.html#NationalInstruments_SourceModel_Envoys_ReferencedFileServiceHelpers_FlattenEnvoyAndReferencedFile_NationalInstruments_SourceModel_Envoys_IReferencedFileService_NationalInstruments_SourceModel_ReferencedFileOwnerCreateReason_">ReferencedFileServiceHelpers.FlattenEnvoyAndReferencedFile(IReferencedFileService, ReferencedFileOwnerCreateReason)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.ReferencedFileServiceHelpers.html#NationalInstruments_SourceModel_Envoys_ReferencedFileServiceHelpers_RefreshReferencedFile_NationalInstruments_SourceModel_Envoys_IReferencedFileService_System_Action_NationalInstruments_SourceModel_Envoys_ILockedSourceFile_System_Exception__NationalInstruments_Core_PlatformDispatcher_">ReferencedFileServiceHelpers.RefreshReferencedFile(IReferencedFileService, Action&lt;ILockedSourceFile, Exception&gt;, PlatformDispatcher)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

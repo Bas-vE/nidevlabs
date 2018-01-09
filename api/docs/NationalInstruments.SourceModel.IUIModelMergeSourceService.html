@@ -1,0 +1,318 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IUIModelMergeSourceService
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IUIModelMergeSourceService
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.SourceModel.IUIModelMergeSourceService">
+  
+  
+  <h1 id="NationalInstruments_SourceModel_IUIModelMergeSourceService" data-uid="NationalInstruments.SourceModel.IUIModelMergeSourceService" class="text-break">Interface IUIModelMergeSourceService
+  </h1>
+  <div class="markdown level0 summary"><p>Interface that parallels IMergeSource, but whose methods take a UIModel parameter signifying the model we&apos;re doing IMergeSource stuff on behalf of.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.SourceModel.html">NationalInstruments.SourceModel</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_SourceModel_IUIModelMergeSourceService_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IUIModelMergeSourceService</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_IUIModelMergeSourceService_AddFusedParameters_" data-uid="NationalInstruments.SourceModel.IUIModelMergeSourceService.AddFusedParameters*"></a>
+  <h4 id="NationalInstruments_SourceModel_IUIModelMergeSourceService_AddFusedParameters_NationalInstruments_SourceModel_UIModel_NationalInstruments_SourceModel_MergeScriptBuilder_" data-uid="NationalInstruments.SourceModel.IUIModelMergeSourceService.AddFusedParameters(NationalInstruments.SourceModel.UIModel,NationalInstruments.SourceModel.MergeScriptBuilder)">AddFusedParameters(UIModel, MergeScriptBuilder)</h4>
+  <div class="markdown level1 summary"><p>The rootAdd element is being added to a merge script. It is either you, or an ancestor.
+Adds or replaces parameters into the merge script.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void AddFusedParameters(UIModel forModel, MergeScriptBuilder builder)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.UIModel.html">UIModel</a></td>
+        <td><span class="parametername">forModel</span></td>
+        <td><p>The UIModel that we&apos;re adding to a MergeScript.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.MergeScriptBuilder.html">MergeScriptBuilder</a></td>
+        <td><span class="parametername">builder</span></td>
+        <td><p>The current builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_IUIModelMergeSourceService_GetItemsToAddToBuilder_" data-uid="NationalInstruments.SourceModel.IUIModelMergeSourceService.GetItemsToAddToBuilder*"></a>
+  <h4 id="NationalInstruments_SourceModel_IUIModelMergeSourceService_GetItemsToAddToBuilder_NationalInstruments_SourceModel_UIModel_System_Boolean_" data-uid="NationalInstruments.SourceModel.IUIModelMergeSourceService.GetItemsToAddToBuilder(NationalInstruments.SourceModel.UIModel,System.Boolean)">GetItemsToAddToBuilder(UIModel, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Return list of additonal elements to generate XML for</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;MergeElement&gt; GetItemsToAddToBuilder(UIModel forModel, bool isPrimary)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.UIModel.html">UIModel</a></td>
+        <td><span class="parametername">forModel</span></td>
+        <td><p>The UIModel in the selection that we&apos;re adding items to the MergeScriptBuilder for.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">isPrimary</span></td>
+        <td><p>Whether the current source is a primary merge item or was added by another source.<br>This is to help prevent the same item from being added more than once.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.MergeElement.html">MergeElement</a>&gt;</td>
+        <td><p>A list of additional elements.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_IUIModelMergeSourceService_ItemsToAddToSelection_" data-uid="NationalInstruments.SourceModel.IUIModelMergeSourceService.ItemsToAddToSelection*"></a>
+  <h4 id="NationalInstruments_SourceModel_IUIModelMergeSourceService_ItemsToAddToSelection_NationalInstruments_SourceModel_UIModel_" data-uid="NationalInstruments.SourceModel.IUIModelMergeSourceService.ItemsToAddToSelection(NationalInstruments.SourceModel.UIModel)">ItemsToAddToSelection(UIModel)</h4>
+  <div class="markdown level1 summary"><p>Return list of elements you want to be added to the initial selection.
+One possible example would be the selection of a label forcing the label&apos;ed object into the selection</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;Element&gt; ItemsToAddToSelection(UIModel forModel)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.UIModel.html">UIModel</a></td>
+        <td><span class="parametername">forModel</span></td>
+        <td><p>The UIModel in the initial selection that we&apos;re adding additional items for.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a>&gt;</td>
+        <td><p>A list of additional elements.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_IUIModelMergeSourceService_ProcessItem_" data-uid="NationalInstruments.SourceModel.IUIModelMergeSourceService.ProcessItem*"></a>
+  <h4 id="NationalInstruments_SourceModel_IUIModelMergeSourceService_ProcessItem_NationalInstruments_SourceModel_UIModel_NationalInstruments_SourceModel_MergeScriptResolver_NationalInstruments_SourceModel_IMergeTarget_NationalInstruments_SourceModel_Element_" data-uid="NationalInstruments.SourceModel.IUIModelMergeSourceService.ProcessItem(NationalInstruments.SourceModel.UIModel,NationalInstruments.SourceModel.MergeScriptResolver,NationalInstruments.SourceModel.IMergeTarget,NationalInstruments.SourceModel.Element)">ProcessItem(UIModel, MergeScriptResolver, IMergeTarget, Element)</h4>
+  <div class="markdown level1 summary"><p>Your element has been constructed from a serialized merge item and is about to be merged into the merge target.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ProcessItem(UIModel forModel, MergeScriptResolver resolver, IMergeTarget target, Element startingMergeLocation)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.UIModel.html">UIModel</a></td>
+        <td><span class="parametername">forModel</span></td>
+        <td><p>The UIModel that we&apos;re merging.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.MergeScriptResolver.html">MergeScriptResolver</a></td>
+        <td><span class="parametername">resolver</span></td>
+        <td><p>The current resolver context. Provides access to merge script and all other merge items.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.IMergeTarget.html">IMergeTarget</a></td>
+        <td><span class="parametername">target</span></td>
+        <td><p>The target you will be merged into.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td><span class="parametername">startingMergeLocation</span></td>
+        <td><p>The original location of the merge operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,610 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ActiveTransaction
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ActiveTransaction
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.Restricted.SourceModel.ActiveTransaction">
+  
+  
+  <h1 id="NationalInstruments_Restricted_SourceModel_ActiveTransaction" data-uid="NationalInstruments.Restricted.SourceModel.ActiveTransaction" class="text-break">Class ActiveTransaction
+  </h1>
+  <div class="markdown level0 summary"><p>A light-weight, IDisposable object that implements IActiveTransaction and relays calls to the
+real transaction</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ActiveTransaction</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="NationalInstruments.SourceModel.IActiveTransaction.html">IActiveTransaction</a></div>
+    <div><span class="xref">System.IDisposable</span></div>
+    <div><a class="xref" href="NationalInstruments.SourceModel.ITransactionInfo.html">ITransactionInfo</a></div>
+    <div><a class="xref" href="NationalInstruments.SourceModel.ITagCollectionOwner.html">ITagCollectionOwner</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.Restricted.SourceModel.html">NationalInstruments.Restricted.SourceModel</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_Restricted_SourceModel_ActiveTransaction_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class ActiveTransaction : IActiveTransaction, IDisposable, ITransactionInfo, ITagCollectionOwner</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_Restricted_SourceModel_ActiveTransaction_Description_" data-uid="NationalInstruments.Restricted.SourceModel.ActiveTransaction.Description*"></a>
+  <h4 id="NationalInstruments_Restricted_SourceModel_ActiveTransaction_Description" data-uid="NationalInstruments.Restricted.SourceModel.ActiveTransaction.Description">Description</h4>
+  <div class="markdown level1 summary"><p>Gets the description of this transaction</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Description { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_SourceModel_ActiveTransaction_ParentTransaction_" data-uid="NationalInstruments.Restricted.SourceModel.ActiveTransaction.ParentTransaction*"></a>
+  <h4 id="NationalInstruments_Restricted_SourceModel_ActiveTransaction_ParentTransaction" data-uid="NationalInstruments.Restricted.SourceModel.ActiveTransaction.ParentTransaction">ParentTransaction</h4>
+  <div class="markdown level1 summary"><p>Gets the parent transaction of this transaction if any</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ITransactionInfo ParentTransaction { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ITransactionInfo.html">ITransactionInfo</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_SourceModel_ActiveTransaction_Purpose_" data-uid="NationalInstruments.Restricted.SourceModel.ActiveTransaction.Purpose*"></a>
+  <h4 id="NationalInstruments_Restricted_SourceModel_ActiveTransaction_Purpose" data-uid="NationalInstruments.Restricted.SourceModel.ActiveTransaction.Purpose">Purpose</h4>
+  <div class="markdown level1 summary"><p>Gets the purpose with which this transaction was created</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransactionPurpose Purpose { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TransactionPurpose.html">TransactionPurpose</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_SourceModel_ActiveTransaction_ShouldPropagate_" data-uid="NationalInstruments.Restricted.SourceModel.ActiveTransaction.ShouldPropagate*"></a>
+  <h4 id="NationalInstruments_Restricted_SourceModel_ActiveTransaction_ShouldPropagate" data-uid="NationalInstruments.Restricted.SourceModel.ActiveTransaction.ShouldPropagate">ShouldPropagate</h4>
+  <div class="markdown level1 summary"><p>Determines whether an outer transaction should propagate to linked definitions when committed.  By default,
+user transactions are propagated and non-user transactions aren&apos;t propagated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ShouldPropagate { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_SourceModel_ActiveTransaction_State_" data-uid="NationalInstruments.Restricted.SourceModel.ActiveTransaction.State*"></a>
+  <h4 id="NationalInstruments_Restricted_SourceModel_ActiveTransaction_State" data-uid="NationalInstruments.Restricted.SourceModel.ActiveTransaction.State">State</h4>
+  <div class="markdown level1 summary"><p>Gets the current state of this transaction</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransactionState State { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TransactionState.html">TransactionState</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_SourceModel_ActiveTransaction_Status_" data-uid="NationalInstruments.Restricted.SourceModel.ActiveTransaction.Status*"></a>
+  <h4 id="NationalInstruments_Restricted_SourceModel_ActiveTransaction_Status" data-uid="NationalInstruments.Restricted.SourceModel.ActiveTransaction.Status">Status</h4>
+  <div class="markdown level1 summary"><p>Gets the status of the currently active transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransactionResultStatus Status { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TransactionResultStatus.html">TransactionResultStatus</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_SourceModel_ActiveTransaction_Tags_" data-uid="NationalInstruments.Restricted.SourceModel.ActiveTransaction.Tags*"></a>
+  <h4 id="NationalInstruments_Restricted_SourceModel_ActiveTransaction_Tags" data-uid="NationalInstruments.Restricted.SourceModel.ActiveTransaction.Tags">Tags</h4>
+  <div class="markdown level1 summary"><p>Gets the collection of tags.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TagCollection Tags { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TagCollection.html">TagCollection</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_SourceModel_ActiveTransaction_Transactions_" data-uid="NationalInstruments.Restricted.SourceModel.ActiveTransaction.Transactions*"></a>
+  <h4 id="NationalInstruments_Restricted_SourceModel_ActiveTransaction_Transactions" data-uid="NationalInstruments.Restricted.SourceModel.ActiveTransaction.Transactions">Transactions</h4>
+  <div class="markdown level1 summary"><p>Gets the list of transaction items in this transaction</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;TransactionItem&gt; Transactions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.TransactionItem.html">TransactionItem</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Restricted_SourceModel_ActiveTransaction_Transactions_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This is not a flattened list, so nested transactions&apos; items are not included</p>
+</div>
+  
+  
+  <a id="NationalInstruments_Restricted_SourceModel_ActiveTransaction_WillPropagate_" data-uid="NationalInstruments.Restricted.SourceModel.ActiveTransaction.WillPropagate*"></a>
+  <h4 id="NationalInstruments_Restricted_SourceModel_ActiveTransaction_WillPropagate" data-uid="NationalInstruments.Restricted.SourceModel.ActiveTransaction.WillPropagate">WillPropagate</h4>
+  <div class="markdown level1 summary"><p>Gets whether the changes from this transaction, if it&apos;s an outermost one, will propagate to linked definitions</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool WillPropagate { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_Restricted_SourceModel_ActiveTransaction_Cancel_" data-uid="NationalInstruments.Restricted.SourceModel.ActiveTransaction.Cancel*"></a>
+  <h4 id="NationalInstruments_Restricted_SourceModel_ActiveTransaction_Cancel" data-uid="NationalInstruments.Restricted.SourceModel.ActiveTransaction.Cancel">Cancel()</h4>
+  <div class="markdown level1 summary"><p>Cancels the current transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Cancel()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Restricted_SourceModel_ActiveTransaction_Commit_" data-uid="NationalInstruments.Restricted.SourceModel.ActiveTransaction.Commit*"></a>
+  <h4 id="NationalInstruments_Restricted_SourceModel_ActiveTransaction_Commit" data-uid="NationalInstruments.Restricted.SourceModel.ActiveTransaction.Commit">Commit()</h4>
+  <div class="markdown level1 summary"><p>Commits the active transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICompletedTransaction Commit()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ICompletedTransaction.html">ICompletedTransaction</a></td>
+        <td><p>The completed transaction</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_SourceModel_ActiveTransaction_CommitAndDiscardUnsafely_" data-uid="NationalInstruments.Restricted.SourceModel.ActiveTransaction.CommitAndDiscardUnsafely*"></a>
+  <h4 id="NationalInstruments_Restricted_SourceModel_ActiveTransaction_CommitAndDiscardUnsafely" data-uid="NationalInstruments.Restricted.SourceModel.ActiveTransaction.CommitAndDiscardUnsafely">CommitAndDiscardUnsafely()</h4>
+  <div class="markdown level1 summary"><p>Commits the transaction without adding it to the undo stack.  If the transaction is marked to propagate to linked contexts,
+it will still get propagated.  The propagated transactions will also be discarded on commit in the linked context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICompletedTransaction CommitAndDiscardUnsafely()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ICompletedTransaction.html">ICompletedTransaction</a></td>
+        <td><p>the committed transaction</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Restricted_SourceModel_ActiveTransaction_CommitAndDiscardUnsafely_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This should only be used with great care and caution as it can easily lead to crashes and unexpected results.  It&apos;s often
+difficult to know exactly what changes are present in a transaction when discarding and if any of the objects modified in 
+the discarded transaction have also been modified in transactions already committed to the undo stack.  By discarding this 
+transaction, those objects will no longer be in the same ending state they were expecting when/if the transaction is undone.
+Assuming the undo can tolerate this change in state and behaves sanely, an undo/redo around the discarded transaction could 
+still leave the objects in a different state than when the transaction was discarded.  Often times discarding the entire undo
+stack is a safer alternative than trying to selectively discard a single transaction.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_Restricted_SourceModel_ActiveTransaction_CommitDelayed_" data-uid="NationalInstruments.Restricted.SourceModel.ActiveTransaction.CommitDelayed*"></a>
+  <h4 id="NationalInstruments_Restricted_SourceModel_ActiveTransaction_CommitDelayed_System_Boolean_" data-uid="NationalInstruments.Restricted.SourceModel.ActiveTransaction.CommitDelayed(System.Boolean)">CommitDelayed(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Immediately commit the designer-activated part of the transaction and start running the rules for that transaction asynchronously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICompletedTransaction CommitDelayed(bool delayNotifications)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">delayNotifications</span></td>
+        <td><p>True if model notifications should be delayed until after rules have finished running and False
+if notifications should be sent immediately.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ICompletedTransaction.html">ICompletedTransaction</a></td>
+        <td><p>the committed transaction</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_SourceModel_ActiveTransaction_Dispose_" data-uid="NationalInstruments.Restricted.SourceModel.ActiveTransaction.Dispose*"></a>
+  <h4 id="NationalInstruments_Restricted_SourceModel_ActiveTransaction_Dispose" data-uid="NationalInstruments.Restricted.SourceModel.ActiveTransaction.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.IActiveTransaction.html">IActiveTransaction</a>
+  </div>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ITransactionInfo.html">ITransactionInfo</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ITagCollectionOwner.html">ITagCollectionOwner</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.TagCollectionHelpers.html#NationalInstruments_SourceModel_TagCollectionHelpers_HasTag_NationalInstruments_SourceModel_ITagCollectionOwner_System_Type_">TagCollectionHelpers.HasTag(ITagCollectionOwner, Type)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.TagCollectionHelpers.html#NationalInstruments_SourceModel_TagCollectionHelpers_HasTag_NationalInstruments_SourceModel_ITagCollectionOwner_System_String_">TagCollectionHelpers.HasTag(ITagCollectionOwner, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.TagCollectionHelpers.html#NationalInstruments_SourceModel_TagCollectionHelpers_GetFirstTag_NationalInstruments_SourceModel_ITagCollectionOwner_System_String_">TagCollectionHelpers.GetFirstTag(ITagCollectionOwner, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.TagCollectionHelpers.html#NationalInstruments_SourceModel_TagCollectionHelpers_GetFirstTag__1_NationalInstruments_SourceModel_ITagCollectionOwner_">TagCollectionHelpers.GetFirstTag&lt;TTag&gt;(ITagCollectionOwner)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.TagCollectionHelpers.html#NationalInstruments_SourceModel_TagCollectionHelpers_GetTag_NationalInstruments_SourceModel_ITagCollectionOwner_System_String_">TagCollectionHelpers.GetTag(ITagCollectionOwner, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.TagCollectionHelpers.html#NationalInstruments_SourceModel_TagCollectionHelpers_GetTag__1_NationalInstruments_SourceModel_ITagCollectionOwner_">TagCollectionHelpers.GetTag&lt;TTag&gt;(ITagCollectionOwner)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.TagCollectionHelpers.html#NationalInstruments_SourceModel_TagCollectionHelpers_AddTag_NationalInstruments_SourceModel_ITagCollectionOwner_NationalInstruments_SourceModel_ITag_">TagCollectionHelpers.AddTag(ITagCollectionOwner, ITag)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.TagCollectionHelpers.html#NationalInstruments_SourceModel_TagCollectionHelpers_RemoveTag_NationalInstruments_SourceModel_ITagCollectionOwner_System_String_">TagCollectionHelpers.RemoveTag(ITagCollectionOwner, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.InteractiveStartElementTagHelpers.html#NationalInstruments_SourceModel_InteractiveStartElementTagHelpers_GetInteractiveStartElement_NationalInstruments_SourceModel_ITagCollectionOwner_">InteractiveStartElementTagHelpers.GetInteractiveStartElement(ITagCollectionOwner)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.InteractiveOperationTagHelpers.html#NationalInstruments_SourceModel_InteractiveOperationTagHelpers_IsInteractiveOperation_NationalInstruments_SourceModel_ITagCollectionOwner_NationalInstruments_SourceModel_InteractiveOperationKind_">InteractiveOperationTagHelpers.IsInteractiveOperation(ITagCollectionOwner, InteractiveOperationKind)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.InteractiveOperationTagHelpers.html#NationalInstruments_SourceModel_InteractiveOperationTagHelpers_AddOrUpdateInteractiveOperationTag_NationalInstruments_SourceModel_IActiveTransaction_NationalInstruments_SourceModel_InteractiveOperationKind_">InteractiveOperationTagHelpers.AddOrUpdateInteractiveOperationTag(IActiveTransaction, InteractiveOperationKind)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.RootEditElementTagHelpers.html#NationalInstruments_SourceModel_RootEditElementTagHelpers_GetRootEditElement_NationalInstruments_SourceModel_ITagCollectionOwner_">RootEditElementTagHelpers.GetRootEditElement(ITagCollectionOwner)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.RootEditElementTagHelpers.html#NationalInstruments_SourceModel_RootEditElementTagHelpers_IsRootElementUnsetOrMatches__1_NationalInstruments_SourceModel_ITagCollectionOwner_">RootEditElementTagHelpers.IsRootElementUnsetOrMatches&lt;T&gt;(ITagCollectionOwner)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.RootEditElementTagHelpers.html#NationalInstruments_SourceModel_RootEditElementTagHelpers_DoesRootElementMatch__1_NationalInstruments_SourceModel_ITagCollectionOwner_">RootEditElementTagHelpers.DoesRootElementMatch&lt;T&gt;(ITagCollectionOwner)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ITransactionManagerExtensions.html#NationalInstruments_SourceModel_ITransactionManagerExtensions_CheckNullCommit_NationalInstruments_SourceModel_IActiveTransaction_">ITransactionManagerExtensions.CheckNullCommit(IActiveTransaction)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ITransactionManagerExtensions.html#NationalInstruments_SourceModel_ITransactionManagerExtensions_CheckNullCancel_NationalInstruments_SourceModel_IActiveTransaction_">ITransactionManagerExtensions.CheckNullCancel(IActiveTransaction)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ITransactionManagerExtensions.html#NationalInstruments_SourceModel_ITransactionManagerExtensions_CheckNullDispose_NationalInstruments_SourceModel_IActiveTransaction_">ITransactionManagerExtensions.CheckNullDispose(IActiveTransaction)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

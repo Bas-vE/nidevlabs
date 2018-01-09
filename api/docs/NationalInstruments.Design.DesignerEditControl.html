@@ -1,0 +1,4454 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DesignerEditControl
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DesignerEditControl
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.Design.DesignerEditControl">
+  
+  
+  <h1 id="NationalInstruments_Design_DesignerEditControl" data-uid="NationalInstruments.Design.DesignerEditControl" class="text-break">Class DesignerEditControl
+  </h1>
+  <div class="markdown level0 summary"><p>The DesignerEditControl is the root visual editor object used to edit a PlatformFramework based editing surface.  It supposed both Diagram based editing
+as well as XamlElement based editing.
+The DesignerEditControl owns the visuals for the editor surface as well as the tooling used to manipulate the objects on the design surface.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">System.Windows.Threading.DispatcherObject</span></div>
+    <div class="level2"><span class="xref">System.Windows.DependencyObject</span></div>
+    <div class="level3"><span class="xref">System.Windows.Media.Visual</span></div>
+    <div class="level4"><span class="xref">System.Windows.UIElement</span></div>
+    <div class="level5"><span class="xref">System.Windows.FrameworkElement</span></div>
+    <div class="level6"><span class="xref">System.Windows.Controls.Control</span></div>
+    <div class="level7"><span class="xref">DesignerEditControl</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.Windows.Media.Animation.IAnimatable</span></div>
+    <div><span class="xref">System.Windows.IFrameworkInputElement</span></div>
+    <div><span class="xref">System.Windows.IInputElement</span></div>
+    <div><span class="xref">System.ComponentModel.ISupportInitialize</span></div>
+    <div><span class="xref">System.Windows.Markup.IQueryAmbient</span></div>
+    <div><span class="xref">System.ComponentModel.INotifyPropertyChanged</span></div>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Windows.Controls.Control.BorderBrushProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.Control.BorderThicknessProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.Control.BackgroundProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.Control.ForegroundProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.Control.FontFamilyProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.Control.FontSizeProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.Control.FontStretchProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.Control.FontStyleProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.Control.FontWeightProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.Control.HorizontalContentAlignmentProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.Control.VerticalContentAlignmentProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.Control.TabIndexProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.Control.IsTabStopProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.Control.PaddingProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.Control.TemplateProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.Control.PreviewMouseDoubleClickEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.Control.MouseDoubleClickEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.Control.OnTemplateChanged(System.Windows.Controls.ControlTemplate, System.Windows.Controls.ControlTemplate)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.Control.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.Control.OnPreviewMouseDoubleClick(System.Windows.Input.MouseButtonEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.Control.OnMouseDoubleClick(System.Windows.Input.MouseButtonEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.Control.MeasureOverride(System.Windows.Size)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.Control.ArrangeOverride(System.Windows.Size)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.Control.BorderBrush</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.Control.BorderThickness</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.Control.Background</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.Control.Foreground</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.Control.FontFamily</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.Control.FontSize</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.Control.FontStretch</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.Control.FontStyle</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.Control.FontWeight</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.Control.HorizontalContentAlignment</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.Control.VerticalContentAlignment</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.Control.TabIndex</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.Control.IsTabStop</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.Control.Padding</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.Control.Template</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.Control.PreviewMouseDoubleClick</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.Control.MouseDoubleClick</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.StyleProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.OverridesDefaultStyleProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.UseLayoutRoundingProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.DefaultStyleKeyProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.DataContextProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.BindingGroupProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.LanguageProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.NameProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.TagProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.InputScopeProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.RequestBringIntoViewEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.SizeChangedEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.ActualWidthProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.ActualHeightProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.LayoutTransformProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.WidthProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.MinWidthProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.MaxWidthProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.HeightProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.MinHeightProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.MaxHeightProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.FlowDirectionProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.MarginProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.HorizontalAlignmentProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.VerticalAlignmentProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.FocusVisualStyleProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.CursorProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.ForceCursorProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.LoadedEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.UnloadedEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.ToolTipProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.ContextMenuProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.ToolTipOpeningEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.ToolTipClosingEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.ContextMenuOpeningEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.ContextMenuClosingEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.OnStyleChanged(System.Windows.Style, System.Windows.Style)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.ParentLayoutInvalidated(System.Windows.UIElement)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.ApplyTemplate()</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.BeginStoryboard(System.Windows.Media.Animation.Storyboard)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.BeginStoryboard(System.Windows.Media.Animation.Storyboard, System.Windows.Media.Animation.HandoffBehavior)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.BeginStoryboard(System.Windows.Media.Animation.Storyboard, System.Windows.Media.Animation.HandoffBehavior, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.GetVisualChild(System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.System.Windows.Markup.IQueryAmbient.IsAmbientPropertyAvailable(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.GetTemplateChild(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.FindResource(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.TryFindResource(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.SetResourceReference(System.Windows.DependencyProperty, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.OnVisualParentChanged(System.Windows.DependencyObject)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.GetBindingExpression(System.Windows.DependencyProperty)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.SetBinding(System.Windows.DependencyProperty, System.Windows.Data.BindingBase)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.SetBinding(System.Windows.DependencyProperty, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.GetUIParentCore()</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.BringIntoView()</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.BringIntoView(System.Windows.Rect)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.GetFlowDirection(System.Windows.DependencyObject)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.SetFlowDirection(System.Windows.DependencyObject, System.Windows.FlowDirection)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.MeasureCore(System.Windows.Size)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.ArrangeCore(System.Windows.Rect)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.OnRenderSizeChanged(System.Windows.SizeChangedInfo)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.GetLayoutClip(System.Windows.Size)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.MoveFocus(System.Windows.Input.TraversalRequest)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.PredictFocus(System.Windows.Input.FocusNavigationDirection)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.BeginInit()</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.EndInit()</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.OnInitialized(System.EventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.OnToolTipOpening(System.Windows.Controls.ToolTipEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.OnToolTipClosing(System.Windows.Controls.ToolTipEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.OnContextMenuOpening(System.Windows.Controls.ContextMenuEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.OnContextMenuClosing(System.Windows.Controls.ContextMenuEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.RegisterName(System.String, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.UnregisterName(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.FindName(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.UpdateDefaultStyle()</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.AddLogicalChild(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.RemoveLogicalChild(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.Style</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.OverridesDefaultStyle</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.UseLayoutRounding</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.DefaultStyleKey</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.Triggers</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.TemplatedParent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.VisualChildrenCount</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.Resources</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.InheritanceBehavior</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.DataContext</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.BindingGroup</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.Language</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.Name</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.Tag</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.InputScope</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.ActualWidth</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.ActualHeight</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.LayoutTransform</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.Width</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.MinWidth</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.MaxWidth</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.Height</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.MinHeight</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.MaxHeight</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.FlowDirection</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.Margin</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.HorizontalAlignment</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.VerticalAlignment</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.FocusVisualStyle</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.Cursor</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.ForceCursor</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.IsInitialized</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.IsLoaded</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.ToolTip</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.ContextMenu</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.Parent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.LogicalChildren</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.TargetUpdated</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.SourceUpdated</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.DataContextChanged</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.RequestBringIntoView</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.SizeChanged</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.Initialized</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.Loaded</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.Unloaded</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.ToolTipOpening</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.ToolTipClosing</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.ContextMenuOpening</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.ContextMenuClosing</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewMouseDownEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.MouseDownEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewMouseUpEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.MouseUpEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewMouseLeftButtonDownEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.MouseLeftButtonDownEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewMouseLeftButtonUpEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.MouseLeftButtonUpEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewMouseRightButtonDownEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.MouseRightButtonDownEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewMouseRightButtonUpEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.MouseRightButtonUpEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewMouseMoveEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.MouseMoveEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewMouseWheelEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.MouseWheelEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.MouseEnterEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.MouseLeaveEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.GotMouseCaptureEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.LostMouseCaptureEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.QueryCursorEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewStylusDownEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.StylusDownEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewStylusUpEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.StylusUpEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewStylusMoveEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.StylusMoveEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewStylusInAirMoveEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.StylusInAirMoveEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.StylusEnterEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.StylusLeaveEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewStylusInRangeEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.StylusInRangeEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewStylusOutOfRangeEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.StylusOutOfRangeEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewStylusSystemGestureEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.StylusSystemGestureEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.GotStylusCaptureEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.LostStylusCaptureEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.StylusButtonDownEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.StylusButtonUpEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewStylusButtonDownEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewStylusButtonUpEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewKeyDownEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.KeyDownEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewKeyUpEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.KeyUpEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewGotKeyboardFocusEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.GotKeyboardFocusEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewLostKeyboardFocusEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.LostKeyboardFocusEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewTextInputEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.TextInputEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewQueryContinueDragEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.QueryContinueDragEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewGiveFeedbackEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.GiveFeedbackEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewDragEnterEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.DragEnterEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewDragOverEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.DragOverEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewDragLeaveEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.DragLeaveEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewDropEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.DropEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewTouchDownEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.TouchDownEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewTouchMoveEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.TouchMoveEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewTouchUpEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.TouchUpEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.GotTouchCaptureEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.LostTouchCaptureEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.TouchEnterEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.TouchLeaveEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.IsMouseDirectlyOverProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.IsMouseOverProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.IsStylusOverProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.IsKeyboardFocusWithinProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.IsMouseCapturedProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.IsMouseCaptureWithinProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.IsStylusDirectlyOverProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.IsStylusCapturedProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.IsStylusCaptureWithinProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.IsKeyboardFocusedProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.AreAnyTouchesDirectlyOverProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.AreAnyTouchesOverProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.AreAnyTouchesCapturedProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.AreAnyTouchesCapturedWithinProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.AllowDropProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.RenderTransformProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.RenderTransformOriginProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OpacityProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OpacityMaskProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.BitmapEffectProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.EffectProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.BitmapEffectInputProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.CacheModeProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.UidProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.VisibilityProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.ClipToBoundsProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.ClipProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.SnapsToDevicePixelsProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.GotFocusEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.LostFocusEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.IsFocusedProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.IsEnabledProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.IsHitTestVisibleProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.IsVisibleProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.FocusableProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.IsManipulationEnabledProperty</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.ManipulationStartingEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.ManipulationStartedEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.ManipulationDeltaEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.ManipulationInertiaStartingEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.ManipulationBoundaryFeedbackEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.ManipulationCompletedEvent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.ApplyAnimationClock(System.Windows.DependencyProperty, System.Windows.Media.Animation.AnimationClock)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.ApplyAnimationClock(System.Windows.DependencyProperty, System.Windows.Media.Animation.AnimationClock, System.Windows.Media.Animation.HandoffBehavior)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.BeginAnimation(System.Windows.DependencyProperty, System.Windows.Media.Animation.AnimationTimeline)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.BeginAnimation(System.Windows.DependencyProperty, System.Windows.Media.Animation.AnimationTimeline, System.Windows.Media.Animation.HandoffBehavior)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.GetAnimationBaseValue(System.Windows.DependencyProperty)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.RaiseEvent(System.Windows.RoutedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.AddHandler(System.Windows.RoutedEvent, System.Delegate)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.AddHandler(System.Windows.RoutedEvent, System.Delegate, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.RemoveHandler(System.Windows.RoutedEvent, System.Delegate)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.AddToEventRoute(System.Windows.EventRoute, System.Windows.RoutedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewMouseDown(System.Windows.Input.MouseButtonEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnMouseDown(System.Windows.Input.MouseButtonEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewMouseUp(System.Windows.Input.MouseButtonEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnMouseUp(System.Windows.Input.MouseButtonEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewMouseLeftButtonUp(System.Windows.Input.MouseButtonEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnMouseLeftButtonUp(System.Windows.Input.MouseButtonEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewMouseRightButtonDown(System.Windows.Input.MouseButtonEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnMouseRightButtonDown(System.Windows.Input.MouseButtonEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewMouseRightButtonUp(System.Windows.Input.MouseButtonEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnMouseRightButtonUp(System.Windows.Input.MouseButtonEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewMouseMove(System.Windows.Input.MouseEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnMouseMove(System.Windows.Input.MouseEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewMouseWheel(System.Windows.Input.MouseWheelEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnMouseWheel(System.Windows.Input.MouseWheelEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnMouseEnter(System.Windows.Input.MouseEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnMouseLeave(System.Windows.Input.MouseEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnGotMouseCapture(System.Windows.Input.MouseEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnLostMouseCapture(System.Windows.Input.MouseEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnQueryCursor(System.Windows.Input.QueryCursorEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewStylusDown(System.Windows.Input.StylusDownEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnStylusDown(System.Windows.Input.StylusDownEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewStylusUp(System.Windows.Input.StylusEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnStylusUp(System.Windows.Input.StylusEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewStylusMove(System.Windows.Input.StylusEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnStylusMove(System.Windows.Input.StylusEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewStylusInAirMove(System.Windows.Input.StylusEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnStylusInAirMove(System.Windows.Input.StylusEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnStylusEnter(System.Windows.Input.StylusEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnStylusLeave(System.Windows.Input.StylusEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewStylusInRange(System.Windows.Input.StylusEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnStylusInRange(System.Windows.Input.StylusEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewStylusOutOfRange(System.Windows.Input.StylusEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnStylusOutOfRange(System.Windows.Input.StylusEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewStylusSystemGesture(System.Windows.Input.StylusSystemGestureEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnStylusSystemGesture(System.Windows.Input.StylusSystemGestureEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnGotStylusCapture(System.Windows.Input.StylusEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnLostStylusCapture(System.Windows.Input.StylusEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnStylusButtonDown(System.Windows.Input.StylusButtonEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnStylusButtonUp(System.Windows.Input.StylusButtonEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewStylusButtonDown(System.Windows.Input.StylusButtonEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewStylusButtonUp(System.Windows.Input.StylusButtonEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewKeyDown(System.Windows.Input.KeyEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnKeyDown(System.Windows.Input.KeyEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewKeyUp(System.Windows.Input.KeyEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnKeyUp(System.Windows.Input.KeyEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewGotKeyboardFocus(System.Windows.Input.KeyboardFocusChangedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnGotKeyboardFocus(System.Windows.Input.KeyboardFocusChangedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewLostKeyboardFocus(System.Windows.Input.KeyboardFocusChangedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnLostKeyboardFocus(System.Windows.Input.KeyboardFocusChangedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewTextInput(System.Windows.Input.TextCompositionEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnTextInput(System.Windows.Input.TextCompositionEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewQueryContinueDrag(System.Windows.QueryContinueDragEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnQueryContinueDrag(System.Windows.QueryContinueDragEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewGiveFeedback(System.Windows.GiveFeedbackEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnGiveFeedback(System.Windows.GiveFeedbackEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewDragEnter(System.Windows.DragEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnDragEnter(System.Windows.DragEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewDragOver(System.Windows.DragEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnDragOver(System.Windows.DragEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewDragLeave(System.Windows.DragEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnDragLeave(System.Windows.DragEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewDrop(System.Windows.DragEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnDrop(System.Windows.DragEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewTouchDown(System.Windows.Input.TouchEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnTouchDown(System.Windows.Input.TouchEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewTouchMove(System.Windows.Input.TouchEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnTouchMove(System.Windows.Input.TouchEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewTouchUp(System.Windows.Input.TouchEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnTouchUp(System.Windows.Input.TouchEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnGotTouchCapture(System.Windows.Input.TouchEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnLostTouchCapture(System.Windows.Input.TouchEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnTouchEnter(System.Windows.Input.TouchEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnTouchLeave(System.Windows.Input.TouchEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnIsMouseDirectlyOverChanged(System.Windows.DependencyPropertyChangedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnIsKeyboardFocusWithinChanged(System.Windows.DependencyPropertyChangedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnIsMouseCapturedChanged(System.Windows.DependencyPropertyChangedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnIsMouseCaptureWithinChanged(System.Windows.DependencyPropertyChangedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnIsStylusDirectlyOverChanged(System.Windows.DependencyPropertyChangedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnIsStylusCapturedChanged(System.Windows.DependencyPropertyChangedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnIsStylusCaptureWithinChanged(System.Windows.DependencyPropertyChangedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnIsKeyboardFocusedChanged(System.Windows.DependencyPropertyChangedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.InvalidateMeasure()</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.InvalidateArrange()</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.InvalidateVisual()</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnChildDesiredSizeChanged(System.Windows.UIElement)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.Measure(System.Windows.Size)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.Arrange(System.Windows.Rect)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnRender(System.Windows.Media.DrawingContext)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.UpdateLayout()</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.TranslatePoint(System.Windows.Point, System.Windows.UIElement)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.InputHitTest(System.Windows.Point)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.CaptureMouse()</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.ReleaseMouseCapture()</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.CaptureStylus()</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.ReleaseStylusCapture()</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.Focus()</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnAccessKey(System.Windows.Input.AccessKeyEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.HitTestCore(System.Windows.Media.PointHitTestParameters)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.HitTestCore(System.Windows.Media.GeometryHitTestParameters)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnLostFocus(System.Windows.RoutedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnCreateAutomationPeer()</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnManipulationStarting(System.Windows.Input.ManipulationStartingEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnManipulationStarted(System.Windows.Input.ManipulationStartedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnManipulationDelta(System.Windows.Input.ManipulationDeltaEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnManipulationInertiaStarting(System.Windows.Input.ManipulationInertiaStartingEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnManipulationBoundaryFeedback(System.Windows.Input.ManipulationBoundaryFeedbackEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnManipulationCompleted(System.Windows.Input.ManipulationCompletedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.CaptureTouch(System.Windows.Input.TouchDevice)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.ReleaseTouchCapture(System.Windows.Input.TouchDevice)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.ReleaseAllTouchCaptures()</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.HasAnimatedProperties</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.InputBindings</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.CommandBindings</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.AllowDrop</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.StylusPlugIns</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.DesiredSize</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.IsMeasureValid</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.IsArrangeValid</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.RenderSize</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.RenderTransform</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.RenderTransformOrigin</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.IsMouseDirectlyOver</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.IsMouseOver</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.IsStylusOver</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.IsKeyboardFocusWithin</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.IsMouseCaptured</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.IsMouseCaptureWithin</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.IsStylusDirectlyOver</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.IsStylusCaptured</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.IsStylusCaptureWithin</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.IsKeyboardFocused</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.IsInputMethodEnabled</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.Opacity</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OpacityMask</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.BitmapEffect</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.Effect</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.BitmapEffectInput</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.CacheMode</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.Uid</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.Visibility</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.ClipToBounds</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.Clip</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.SnapsToDevicePixels</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.HasEffectiveKeyboardFocus</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.IsFocused</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.IsEnabled</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.IsEnabledCore</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.IsHitTestVisible</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.IsVisible</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.Focusable</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PersistId</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.IsManipulationEnabled</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.AreAnyTouchesOver</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.AreAnyTouchesDirectlyOver</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.AreAnyTouchesCapturedWithin</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.AreAnyTouchesCaptured</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.TouchesCaptured</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.TouchesCapturedWithin</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.TouchesOver</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.TouchesDirectlyOver</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewMouseDown</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.MouseDown</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewMouseUp</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.MouseUp</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewMouseLeftButtonDown</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.MouseLeftButtonDown</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewMouseLeftButtonUp</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.MouseLeftButtonUp</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewMouseRightButtonDown</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.MouseRightButtonDown</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewMouseRightButtonUp</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.MouseRightButtonUp</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewMouseMove</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.MouseMove</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewMouseWheel</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.MouseWheel</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.MouseEnter</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.MouseLeave</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.GotMouseCapture</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.LostMouseCapture</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.QueryCursor</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewStylusDown</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.StylusDown</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewStylusUp</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.StylusUp</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewStylusMove</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.StylusMove</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewStylusInAirMove</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.StylusInAirMove</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.StylusEnter</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.StylusLeave</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewStylusInRange</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.StylusInRange</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewStylusOutOfRange</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.StylusOutOfRange</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewStylusSystemGesture</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.StylusSystemGesture</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.GotStylusCapture</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.LostStylusCapture</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.StylusButtonDown</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.StylusButtonUp</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewStylusButtonDown</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewStylusButtonUp</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewKeyDown</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.KeyDown</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewKeyUp</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.KeyUp</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewGotKeyboardFocus</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.GotKeyboardFocus</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewLostKeyboardFocus</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.LostKeyboardFocus</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewTextInput</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.TextInput</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewQueryContinueDrag</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.QueryContinueDrag</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewGiveFeedback</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.GiveFeedback</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewDragEnter</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.DragEnter</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewDragOver</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.DragOver</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewDragLeave</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.DragLeave</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewDrop</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.Drop</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewTouchDown</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.TouchDown</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewTouchMove</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.TouchMove</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.PreviewTouchUp</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.TouchUp</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.GotTouchCapture</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.LostTouchCapture</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.TouchEnter</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.TouchLeave</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.IsMouseDirectlyOverChanged</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.IsKeyboardFocusWithinChanged</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.IsMouseCapturedChanged</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.IsMouseCaptureWithinChanged</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.IsStylusDirectlyOverChanged</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.IsStylusCapturedChanged</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.IsStylusCaptureWithinChanged</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.IsKeyboardFocusedChanged</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.LayoutUpdated</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.GotFocus</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.LostFocus</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.IsEnabledChanged</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.IsHitTestVisibleChanged</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.IsVisibleChanged</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.FocusableChanged</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.ManipulationStarting</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.ManipulationStarted</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.ManipulationDelta</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.ManipulationInertiaStarting</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.ManipulationBoundaryFeedback</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.ManipulationCompleted</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Media.Visual.AddVisualChild(System.Windows.Media.Visual)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Media.Visual.RemoveVisualChild(System.Windows.Media.Visual)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Media.Visual.OnVisualChildrenChanged(System.Windows.DependencyObject, System.Windows.DependencyObject)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Media.Visual.OnDpiChanged(System.Windows.DpiScale, System.Windows.DpiScale)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Media.Visual.IsAncestorOf(System.Windows.DependencyObject)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Media.Visual.IsDescendantOf(System.Windows.DependencyObject)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Media.Visual.FindCommonVisualAncestor(System.Windows.DependencyObject)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Media.Visual.TransformToAncestor(System.Windows.Media.Visual)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Media.Visual.TransformToAncestor(System.Windows.Media.Media3D.Visual3D)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Media.Visual.TransformToDescendant(System.Windows.Media.Visual)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Media.Visual.TransformToVisual(System.Windows.Media.Visual)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Media.Visual.PointToScreen(System.Windows.Point)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Media.Visual.PointFromScreen(System.Windows.Point)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Media.Visual.VisualParent</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Media.Visual.VisualTransform</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Media.Visual.VisualEffect</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Media.Visual.VisualBitmapEffect</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Media.Visual.VisualBitmapEffectInput</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Media.Visual.VisualCacheMode</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Media.Visual.VisualScrollableAreaClip</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Media.Visual.VisualClip</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Media.Visual.VisualOffset</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Media.Visual.VisualOpacity</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Media.Visual.VisualEdgeMode</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Media.Visual.VisualBitmapScalingMode</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Media.Visual.VisualClearTypeHint</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Media.Visual.VisualTextRenderingMode</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Media.Visual.VisualTextHintingMode</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Media.Visual.VisualOpacityMask</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Media.Visual.VisualXSnappingGuidelines</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Media.Visual.VisualYSnappingGuidelines</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.DependencyObject.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.DependencyObject.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.DependencyObject.GetValue(System.Windows.DependencyProperty)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.DependencyObject.SetValue(System.Windows.DependencyProperty, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.DependencyObject.SetCurrentValue(System.Windows.DependencyProperty, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.DependencyObject.SetValue(System.Windows.DependencyPropertyKey, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.DependencyObject.ClearValue(System.Windows.DependencyProperty)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.DependencyObject.ClearValue(System.Windows.DependencyPropertyKey)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.DependencyObject.CoerceValue(System.Windows.DependencyProperty)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.DependencyObject.InvalidateProperty(System.Windows.DependencyProperty)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.DependencyObject.ShouldSerializeProperty(System.Windows.DependencyProperty)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.DependencyObject.ReadLocalValue(System.Windows.DependencyProperty)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.DependencyObject.GetLocalValueEnumerator()</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.DependencyObject.DependencyObjectType</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.DependencyObject.IsSealed</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Threading.DispatcherObject.Dispatcher</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.Design.html">NationalInstruments.Design</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_Design_DesignerEditControl_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TemplatePart(Name = &quot;PART_editCanvasScrollViewer&quot;, Type = typeof (ScrollViewer))]
+[TemplatePart(Name = &quot;PART_designerDecorator&quot;, Type = typeof (AdornerDecorator))]
+[TemplatePart(Name = &quot;PART_scrollForwardingPanel&quot;, Type = typeof (ScrollForwardingPanel))]
+[TemplatePart(Name = &quot;PART_toolContainer&quot;, Type = typeof (Grid))]
+[TemplatePart(Name = &quot;PART_contentRoot&quot;, Type = typeof (Grid))]
+public class DesignerEditControl : Control, DUCE.IResource, IAnimatable, IFrameworkInputElement, IInputElement, ISupportInitialize, IHaveResources, IQueryAmbient, INotifyPropertyChanged, IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl__ctor_" data-uid="NationalInstruments.Design.DesignerEditControl.#ctor*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl__ctor" data-uid="NationalInstruments.Design.DesignerEditControl.#ctor">DesignerEditControl()</h4>
+  <div class="markdown level1 summary"><p>Constructor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DesignerEditControl()</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="NationalInstruments_Design_DesignerEditControl_ActiveToolProperty" data-uid="NationalInstruments.Design.DesignerEditControl.ActiveToolProperty">ActiveToolProperty</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly PlatformDependencyProperty ActiveToolProperty</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.PlatformDependencyProperty</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_Design_DesignerEditControl_ControlZoomValueProperty" data-uid="NationalInstruments.Design.DesignerEditControl.ControlZoomValueProperty">ControlZoomValueProperty</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly PlatformDependencyProperty ControlZoomValueProperty</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.PlatformDependencyProperty</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_Design_DesignerEditControl_DesignerProperty" data-uid="NationalInstruments.Design.DesignerEditControl.DesignerProperty">DesignerProperty</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly PlatformDependencyProperty DesignerProperty</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.PlatformDependencyProperty</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_Design_DesignerEditControl_DesignIDDataFormat" data-uid="NationalInstruments.Design.DesignerEditControl.DesignIDDataFormat">DesignIDDataFormat</h4>
+  <div class="markdown level1 summary"><p>Clipboard format for getting designer ID from the clipboard / drag drop Data provider</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly string DesignIDDataFormat</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_Design_DesignerEditControl_DockedPaletteControlProperty" data-uid="NationalInstruments.Design.DesignerEditControl.DockedPaletteControlProperty">DockedPaletteControlProperty</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly PlatformDependencyProperty DockedPaletteControlProperty</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.PlatformDependencyProperty</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_Design_DesignerEditControl_ModelVisualAddedEvent" data-uid="NationalInstruments.Design.DesignerEditControl.ModelVisualAddedEvent">ModelVisualAddedEvent</h4>
+  <div class="markdown level1 summary"><p>A visual was added.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly RoutedEvent ModelVisualAddedEvent</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Windows.RoutedEvent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_Design_DesignerEditControl_ModelVisualRemovingEvent" data-uid="NationalInstruments.Design.DesignerEditControl.ModelVisualRemovingEvent">ModelVisualRemovingEvent</h4>
+  <div class="markdown level1 summary"><p>A visual was removed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly RoutedEvent ModelVisualRemovingEvent</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Windows.RoutedEvent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_Design_DesignerEditControl_ShowCompilerWarningAdornersProperty" data-uid="NationalInstruments.Design.DesignerEditControl.ShowCompilerWarningAdornersProperty">ShowCompilerWarningAdornersProperty</h4>
+  <div class="markdown level1 summary"><p>Tracks if this designer is currently showing warning adorners for the editing surface.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly PlatformDependencyProperty ShowCompilerWarningAdornersProperty</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.PlatformDependencyProperty</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_Design_DesignerEditControl_ShowDeploymentWarningAdornersProperty" data-uid="NationalInstruments.Design.DesignerEditControl.ShowDeploymentWarningAdornersProperty">ShowDeploymentWarningAdornersProperty</h4>
+  <div class="markdown level1 summary"><p>Tracks if this designer is currently showing information adorners for the editing surface.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly PlatformDependencyProperty ShowDeploymentWarningAdornersProperty</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.PlatformDependencyProperty</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_Design_DesignerEditControl_ShowErrorAdornersProperty" data-uid="NationalInstruments.Design.DesignerEditControl.ShowErrorAdornersProperty">ShowErrorAdornersProperty</h4>
+  <div class="markdown level1 summary"><p>Tracks if this designer is currently showing error adorners for the editing surface.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly PlatformDependencyProperty ShowErrorAdornersProperty</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.PlatformDependencyProperty</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_Design_DesignerEditControl_VerticalScrollbarMarginProperty" data-uid="NationalInstruments.Design.DesignerEditControl.VerticalScrollbarMarginProperty">VerticalScrollbarMarginProperty</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly PlatformDependencyProperty VerticalScrollbarMarginProperty</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.PlatformDependencyProperty</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_Design_DesignerEditControl_ViewableRectProperty" data-uid="NationalInstruments.Design.DesignerEditControl.ViewableRectProperty">ViewableRectProperty</h4>
+  <div class="markdown level1 summary"><p>The current viewable area of the designer surface</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly PlatformDependencyProperty ViewableRectProperty</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.PlatformDependencyProperty</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_ActiveTool_" data-uid="NationalInstruments.Design.DesignerEditControl.ActiveTool*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_ActiveTool" data-uid="NationalInstruments.Design.DesignerEditControl.ActiveTool">ActiveTool</h4>
+  <div class="markdown level1 summary"><p>The active tool.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDesignerToolViewModel ActiveTool { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.IDesignerToolViewModel.html">IDesignerToolViewModel</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_ControlZoomValue_" data-uid="NationalInstruments.Design.DesignerEditControl.ControlZoomValue*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_ControlZoomValue" data-uid="NationalInstruments.Design.DesignerEditControl.ControlZoomValue">ControlZoomValue</h4>
+  <div class="markdown level1 summary"><p>Our zoom level</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double ControlZoomValue { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_DockedPaletteControl_" data-uid="NationalInstruments.Design.DesignerEditControl.DockedPaletteControl*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_DockedPaletteControl" data-uid="NationalInstruments.Design.DesignerEditControl.DockedPaletteControl">DockedPaletteControl</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DockedPaletteControl DockedPaletteControl { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.DockedPaletteControl.html">DockedPaletteControl</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_DocumentEditor_" data-uid="NationalInstruments.Design.DesignerEditControl.DocumentEditor*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_DocumentEditor" data-uid="NationalInstruments.Design.DesignerEditControl.DocumentEditor">DocumentEditor</h4>
+  <div class="markdown level1 summary"><p>Gets the Document Editor which owns this edit control</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DocumentEditControl DocumentEditor { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Shell.DocumentEditControl.html">DocumentEditControl</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_EditPanel_" data-uid="NationalInstruments.Design.DesignerEditControl.EditPanel*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_EditPanel" data-uid="NationalInstruments.Design.DesignerEditControl.EditPanel">EditPanel</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FrameworkElement EditPanel { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Windows.FrameworkElement</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_EditSite_" data-uid="NationalInstruments.Design.DesignerEditControl.EditSite*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_EditSite" data-uid="NationalInstruments.Design.DesignerEditControl.EditSite">EditSite</h4>
+  <div class="markdown level1 summary"><p>Our edit site</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DocumentEditSite EditSite { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Shell.DocumentEditSite.html">DocumentEditSite</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_HandlesScrolling_" data-uid="NationalInstruments.Design.DesignerEditControl.HandlesScrolling*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_HandlesScrolling" data-uid="NationalInstruments.Design.DesignerEditControl.HandlesScrolling">HandlesScrolling</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override bool HandlesScrolling { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Windows.Controls.Control.HandlesScrolling</span></div>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_Is100PercentPixelPerfect_" data-uid="NationalInstruments.Design.DesignerEditControl.Is100PercentPixelPerfect*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_Is100PercentPixelPerfect" data-uid="NationalInstruments.Design.DesignerEditControl.Is100PercentPixelPerfect">Is100PercentPixelPerfect</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Is100PercentPixelPerfect { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_IsActivated_" data-uid="NationalInstruments.Design.DesignerEditControl.IsActivated*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_IsActivated" data-uid="NationalInstruments.Design.DesignerEditControl.IsActivated">IsActivated</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsActivated { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_IsAnimatingAtomicAction_" data-uid="NationalInstruments.Design.DesignerEditControl.IsAnimatingAtomicAction*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_IsAnimatingAtomicAction" data-uid="NationalInstruments.Design.DesignerEditControl.IsAnimatingAtomicAction">IsAnimatingAtomicAction</h4>
+  <div class="markdown level1 summary"><p>Determines if a atomic animation is currently running</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsAnimatingAtomicAction { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_IsMagnifying_" data-uid="NationalInstruments.Design.DesignerEditControl.IsMagnifying*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_IsMagnifying" data-uid="NationalInstruments.Design.DesignerEditControl.IsMagnifying">IsMagnifying</h4>
+  <div class="markdown level1 summary"><p>Whether we are currently magnifying</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsMagnifying { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_IsMouseWheelScrollingEnabled_" data-uid="NationalInstruments.Design.DesignerEditControl.IsMouseWheelScrollingEnabled*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_IsMouseWheelScrollingEnabled" data-uid="NationalInstruments.Design.DesignerEditControl.IsMouseWheelScrollingEnabled">IsMouseWheelScrollingEnabled</h4>
+  <div class="markdown level1 summary"><p>Whether we can scroll this control using the mouse wheel</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsMouseWheelScrollingEnabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_IsReadOnly_" data-uid="NationalInstruments.Design.DesignerEditControl.IsReadOnly*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_IsReadOnly" data-uid="NationalInstruments.Design.DesignerEditControl.IsReadOnly">IsReadOnly</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsReadOnly { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_LatchedZoom_" data-uid="NationalInstruments.Design.DesignerEditControl.LatchedZoom*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_LatchedZoom" data-uid="NationalInstruments.Design.DesignerEditControl.LatchedZoom">LatchedZoom</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double LatchedZoom { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_ScrollViewer_" data-uid="NationalInstruments.Design.DesignerEditControl.ScrollViewer*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_ScrollViewer" data-uid="NationalInstruments.Design.DesignerEditControl.ScrollViewer">ScrollViewer</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ScrollViewer ScrollViewer { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Windows.Controls.ScrollViewer</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_SelectedItems_" data-uid="NationalInstruments.Design.DesignerEditControl.SelectedItems*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_SelectedItems" data-uid="NationalInstruments.Design.DesignerEditControl.SelectedItems">SelectedItems</h4>
+  <div class="markdown level1 summary"><p>Selected Items</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;IElementViewModel&gt; SelectedItems { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.Design.IElementViewModel.html">IElementViewModel</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_ShowCompilerWarningAdorners_" data-uid="NationalInstruments.Design.DesignerEditControl.ShowCompilerWarningAdorners*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_ShowCompilerWarningAdorners" data-uid="NationalInstruments.Design.DesignerEditControl.ShowCompilerWarningAdorners">ShowCompilerWarningAdorners</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ShowCompilerWarningAdorners { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_ShowDeploymentWarningAdorners_" data-uid="NationalInstruments.Design.DesignerEditControl.ShowDeploymentWarningAdorners*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_ShowDeploymentWarningAdorners" data-uid="NationalInstruments.Design.DesignerEditControl.ShowDeploymentWarningAdorners">ShowDeploymentWarningAdorners</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ShowDeploymentWarningAdorners { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_ShowErrorAdorners_" data-uid="NationalInstruments.Design.DesignerEditControl.ShowErrorAdorners*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_ShowErrorAdorners" data-uid="NationalInstruments.Design.DesignerEditControl.ShowErrorAdorners">ShowErrorAdorners</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ShowErrorAdorners { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_ToolPanel_" data-uid="NationalInstruments.Design.DesignerEditControl.ToolPanel*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_ToolPanel" data-uid="NationalInstruments.Design.DesignerEditControl.ToolPanel">ToolPanel</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Panel ToolPanel { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Windows.Controls.Panel</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_VerticalScrollbarMargin_" data-uid="NationalInstruments.Design.DesignerEditControl.VerticalScrollbarMargin*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_VerticalScrollbarMargin" data-uid="NationalInstruments.Design.DesignerEditControl.VerticalScrollbarMargin">VerticalScrollbarMargin</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double VerticalScrollbarMargin { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_ViewableRect_" data-uid="NationalInstruments.Design.DesignerEditControl.ViewableRect*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_ViewableRect" data-uid="NationalInstruments.Design.DesignerEditControl.ViewableRect">ViewableRect</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SMRect ViewableRect { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMRect</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_ViewModel_" data-uid="NationalInstruments.Design.DesignerEditControl.ViewModel*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_ViewModel" data-uid="NationalInstruments.Design.DesignerEditControl.ViewModel">ViewModel</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DesignerEditControlViewModel ViewModel { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.DesignerEditControlViewModel.html">DesignerEditControlViewModel</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_ViewportContentSize_" data-uid="NationalInstruments.Design.DesignerEditControl.ViewportContentSize*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_ViewportContentSize" data-uid="NationalInstruments.Design.DesignerEditControl.ViewportContentSize">ViewportContentSize</h4>
+  <div class="markdown level1 summary"><p>Gets the Scroll Viewer size considering scroll bars.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Size ViewportContentSize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Windows.Size</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_Activate_" data-uid="NationalInstruments.Design.DesignerEditControl.Activate*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_Activate" data-uid="NationalInstruments.Design.DesignerEditControl.Activate">Activate()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Activate()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_AddInputBindings_" data-uid="NationalInstruments.Design.DesignerEditControl.AddInputBindings*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_AddInputBindings_NationalInstruments_Design_IDesignerTool_System_Windows_Input_InputBindingCollection_" data-uid="NationalInstruments.Design.DesignerEditControl.AddInputBindings(NationalInstruments.Design.IDesignerTool,System.Windows.Input.InputBindingCollection)">AddInputBindings(IDesignerTool, InputBindingCollection)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddInputBindings(IDesignerTool tool, InputBindingCollection bindings)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.IDesignerTool.html">IDesignerTool</a></td>
+        <td><span class="parametername">tool</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Windows.Input.InputBindingCollection</span></td>
+        <td><span class="parametername">bindings</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_AddModelVisualAddedHandler_" data-uid="NationalInstruments.Design.DesignerEditControl.AddModelVisualAddedHandler*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_AddModelVisualAddedHandler_NationalInstruments_Design_DesignerEditControl_System_Windows_RoutedEventHandler_" data-uid="NationalInstruments.Design.DesignerEditControl.AddModelVisualAddedHandler(NationalInstruments.Design.DesignerEditControl,System.Windows.RoutedEventHandler)">AddModelVisualAddedHandler(DesignerEditControl, RoutedEventHandler)</h4>
+  <div class="markdown level1 summary"><p>Add model visual added handler</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddModelVisualAddedHandler(DesignerEditControl designer, RoutedEventHandler handler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.DesignerEditControl.html">DesignerEditControl</a></td>
+        <td><span class="parametername">designer</span></td>
+        <td><p>designer</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Windows.RoutedEventHandler</span></td>
+        <td><span class="parametername">handler</span></td>
+        <td><p>handler</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_AddModelVisualRemovingHandler_" data-uid="NationalInstruments.Design.DesignerEditControl.AddModelVisualRemovingHandler*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_AddModelVisualRemovingHandler_NationalInstruments_Design_DesignerEditControl_System_Windows_RoutedEventHandler_" data-uid="NationalInstruments.Design.DesignerEditControl.AddModelVisualRemovingHandler(NationalInstruments.Design.DesignerEditControl,System.Windows.RoutedEventHandler)">AddModelVisualRemovingHandler(DesignerEditControl, RoutedEventHandler)</h4>
+  <div class="markdown level1 summary"><p>Add model visual removed handler</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddModelVisualRemovingHandler(DesignerEditControl designer, RoutedEventHandler handler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.DesignerEditControl.html">DesignerEditControl</a></td>
+        <td><span class="parametername">designer</span></td>
+        <td><p>designer</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Windows.RoutedEventHandler</span></td>
+        <td><span class="parametername">handler</span></td>
+        <td><p>handler</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_AddToAtomicAnimation_" data-uid="NationalInstruments.Design.DesignerEditControl.AddToAtomicAnimation*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_AddToAtomicAnimation_System_Windows_DependencyObject_System_Windows_DependencyProperty_System_Windows_Media_Animation_AnimationTimeline_" data-uid="NationalInstruments.Design.DesignerEditControl.AddToAtomicAnimation(System.Windows.DependencyObject,System.Windows.DependencyProperty,System.Windows.Media.Animation.AnimationTimeline)">AddToAtomicAnimation(DependencyObject, DependencyProperty, AnimationTimeline)</h4>
+  <div class="markdown level1 summary"><p>Adds an animation to the current Atomic Animation Storyboard.
+The animation will be fired during the AtomicAtiomCompletePass2 event.
+Atomic animations are used to animate any changed that occurred during an atomic transaction</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddToAtomicAnimation(DependencyObject target, DependencyProperty targetProperty, AnimationTimeline animation)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Windows.DependencyObject</span></td>
+        <td><span class="parametername">target</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Windows.DependencyProperty</span></td>
+        <td><span class="parametername">targetProperty</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Windows.Media.Animation.AnimationTimeline</span></td>
+        <td><span class="parametername">animation</span></td>
+        <td><p>The animation to add to the storyboard</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_BindToModel_" data-uid="NationalInstruments.Design.DesignerEditControl.BindToModel*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_BindToModel_NationalInstruments_SourceModel_Definition_" data-uid="NationalInstruments.Design.DesignerEditControl.BindToModel(NationalInstruments.SourceModel.Definition)">BindToModel(Definition)</h4>
+  <div class="markdown level1 summary"><p>Binds this view to the given <a class="xref" href="NationalInstruments.SourceModel.Definition.html">Definition</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BindToModel(Definition definition)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Definition.html">Definition</a></td>
+        <td><span class="parametername">definition</span></td>
+        <td><p>The <a class="xref" href="NationalInstruments.SourceModel.Definition.html">Definition</a> to which we should be bound.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_BringIntoView_" data-uid="NationalInstruments.Design.DesignerEditControl.BringIntoView*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_BringIntoView_NationalInstruments_Core_UIPosition_" data-uid="NationalInstruments.Design.DesignerEditControl.BringIntoView(NationalInstruments.Core.UIPosition)">BringIntoView(UIPosition)</h4>
+  <div class="markdown level1 summary"><p>Scrolls the given <span class="xref">NationalInstruments.Core.UIPosition</span> into view, if necessary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BringIntoView(UIPosition position)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.UIPosition</span></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>The <span class="xref">NationalInstruments.Core.UIPosition</span> to be scrolled into view, if necessary.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_BringIntoView_" data-uid="NationalInstruments.Design.DesignerEditControl.BringIntoView*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_BringIntoView_NationalInstruments_Core_UIRectangle_" data-uid="NationalInstruments.Design.DesignerEditControl.BringIntoView(NationalInstruments.Core.UIRectangle)">BringIntoView(UIRectangle)</h4>
+  <div class="markdown level1 summary"><p>Scrolls the given <span class="xref">NationalInstruments.Core.UIRectangle</span> into view, if necessary.  If scrolling is necessary,
+this method will ensure at least the top left point of the given rect is visible when done.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BringIntoView(UIRectangle rect)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.UIRectangle</span></td>
+        <td><span class="parametername">rect</span></td>
+        <td><p>The <span class="xref">NationalInstruments.Core.UIRectangle</span> to be scrolled into view, if necessary.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_BringIntoView_" data-uid="NationalInstruments.Design.DesignerEditControl.BringIntoView*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_BringIntoView_NationalInstruments_Design_IViewElementViewModel_" data-uid="NationalInstruments.Design.DesignerEditControl.BringIntoView(NationalInstruments.Design.IViewElementViewModel)">BringIntoView(IViewElementViewModel)</h4>
+  <div class="markdown level1 summary"><p>Scrolls the given <a class="xref" href="NationalInstruments.Design.IViewElementViewModel.html">IViewElementViewModel</a> into view, if necessary.  If scrolling is necessary,
+this method will ensure at least the top left point of the visual associated with the given
+<a class="xref" href="NationalInstruments.Design.IViewElementViewModel.html">IViewElementViewModel</a> is visible.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BringIntoView(IViewElementViewModel viewModel)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.IViewElementViewModel.html">IViewElementViewModel</a></td>
+        <td><span class="parametername">viewModel</span></td>
+        <td><p>The <a class="xref" href="NationalInstruments.Design.IViewElementViewModel.html">IViewElementViewModel</a> to be scrolled into view, if necessary.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_CancelPendingOperation_" data-uid="NationalInstruments.Design.DesignerEditControl.CancelPendingOperation*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_CancelPendingOperation" data-uid="NationalInstruments.Design.DesignerEditControl.CancelPendingOperation">CancelPendingOperation()</h4>
+  <div class="markdown level1 summary"><p>Cancel any async operations or pending operations from IDesignerTools</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CancelPendingOperation()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>If CancelInteractiveTransactions was called</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_CenterContent_" data-uid="NationalInstruments.Design.DesignerEditControl.CenterContent*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_CenterContent" data-uid="NationalInstruments.Design.DesignerEditControl.CenterContent">CenterContent()</h4>
+  <div class="markdown level1 summary"><p>Center content in screen</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CenterContent()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_CheckMoveFocus_" data-uid="NationalInstruments.Design.DesignerEditControl.CheckMoveFocus*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_CheckMoveFocus_System_Windows_UIElement_" data-uid="NationalInstruments.Design.DesignerEditControl.CheckMoveFocus(System.Windows.UIElement)">CheckMoveFocus(UIElement)</h4>
+  <div class="markdown level1 summary"><p>Move focus from a visual, if it has keyboard focus, back to the designer it is within.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CheckMoveFocus(UIElement visual)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Windows.UIElement</span></td>
+        <td><span class="parametername">visual</span></td>
+        <td><p>visual</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_CompleteFindFrameworkElementForModelElement_" data-uid="NationalInstruments.Design.DesignerEditControl.CompleteFindFrameworkElementForModelElement*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_CompleteFindFrameworkElementForModelElement_NationalInstruments_SourceModel_Element_NationalInstruments_Shell_FindViewModelOptions_System_Action_NationalInstruments_Core_IViewModel__" data-uid="NationalInstruments.Design.DesignerEditControl.CompleteFindFrameworkElementForModelElement(NationalInstruments.SourceModel.Element,NationalInstruments.Shell.FindViewModelOptions,System.Action{NationalInstruments.Core.IViewModel})">CompleteFindFrameworkElementForModelElement(Element, FindViewModelOptions, Action&lt;IViewModel&gt;)</h4>
+  <div class="markdown level1 summary"><p>This function is called to finish the asynchronous portions of waiting for UI to update before returning or flashing.
+I tried using UpdateLayout andFlushUIUpdates to synchronously finish, but it doesn&apos;t work as sub virtual canvas
+don&apos;t add themselves until Loaded, which is not triggered by either of these.
+It will flush virtual canvas, select, highlight and call findComplete</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CompleteFindFrameworkElementForModelElement(Element modelElement, FindViewModelOptions options, Action&lt;IViewModel&gt; findComplete)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td><span class="parametername">modelElement</span></td>
+        <td><p>model</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Shell.FindViewModelOptions.html">FindViewModelOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">NationalInstruments.Core.IViewModel</span>&gt;</td>
+        <td><span class="parametername">findComplete</span></td>
+        <td><p>findComplete</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_CompletePendingOperations_" data-uid="NationalInstruments.Design.DesignerEditControl.CompletePendingOperations*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_CompletePendingOperations_System_Boolean_" data-uid="NationalInstruments.Design.DesignerEditControl.CompletePendingOperations(System.Boolean)">CompletePendingOperations(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Complete any async operations. Pass in false to cancel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CompletePendingOperations(bool cancel)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">cancel</span></td>
+        <td><p>True if this should cancel the pending operation</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_Deactivate_" data-uid="NationalInstruments.Design.DesignerEditControl.Deactivate*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_Deactivate" data-uid="NationalInstruments.Design.DesignerEditControl.Deactivate">Deactivate()</h4>
+  <div class="markdown level1 summary"><p>Designer is being deactivated (no longer active designer to user).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Deactivate()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_Dispose_" data-uid="NationalInstruments.Design.DesignerEditControl.Dispose*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_Dispose" data-uid="NationalInstruments.Design.DesignerEditControl.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_Dispose_" data-uid="NationalInstruments.Design.DesignerEditControl.Dispose*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_Dispose_System_Boolean_" data-uid="NationalInstruments.Design.DesignerEditControl.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Dispose this object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">disposing</span></td>
+        <td><p>Whether this was not called from the IDisposable overload.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_EnableMouseWheelScrolling_" data-uid="NationalInstruments.Design.DesignerEditControl.EnableMouseWheelScrolling*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_EnableMouseWheelScrolling_System_Boolean_" data-uid="NationalInstruments.Design.DesignerEditControl.EnableMouseWheelScrolling(System.Boolean)">EnableMouseWheelScrolling(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Update the scrolling behavior temporarily to specify whether mouse wheel scrolling is enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDisposable EnableMouseWheelScrolling(bool enableScrolling)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enableScrolling</span></td>
+        <td><p>Whether we want to enable scrolling with the mouse wheel.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IDisposable</span></td>
+        <td><p>A DisposeAction that restores the mouse wheel scrolling to its previous state.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_GetActiveDesigner_" data-uid="NationalInstruments.Design.DesignerEditControl.GetActiveDesigner*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_GetActiveDesigner_NationalInstruments_Composition_ICompositionHost_" data-uid="NationalInstruments.Design.DesignerEditControl.GetActiveDesigner(NationalInstruments.Composition.ICompositionHost)">GetActiveDesigner(ICompositionHost)</h4>
+  <div class="markdown level1 summary"><p>Get the Active DesignerEditControl ViewModel for a given ICompositionHost. (Rename these two? PJC)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DesignerEditControlViewModel GetActiveDesigner(ICompositionHost host)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Composition.ICompositionHost</span></td>
+        <td><span class="parametername">host</span></td>
+        <td><p>The ICompositionHost to use</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.DesignerEditControlViewModel.html">DesignerEditControlViewModel</a></td>
+        <td><p>The active DesignerEditControl</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_GetActiveDesigner_" data-uid="NationalInstruments.Design.DesignerEditControl.GetActiveDesigner*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_GetActiveDesigner_NationalInstruments_Core_PlatformVisual_" data-uid="NationalInstruments.Design.DesignerEditControl.GetActiveDesigner(NationalInstruments.Core.PlatformVisual)">GetActiveDesigner(PlatformVisual)</h4>
+  <div class="markdown level1 summary"><p>Get the Active DesignerEditControl for a given visual.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DesignerEditControlViewModel GetActiveDesigner(PlatformVisual visual)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.PlatformVisual</span></td>
+        <td><span class="parametername">visual</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.DesignerEditControlViewModel.html">DesignerEditControlViewModel</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_GetActiveDesignerControl_" data-uid="NationalInstruments.Design.DesignerEditControl.GetActiveDesignerControl*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_GetActiveDesignerControl_NationalInstruments_Composition_ICompositionHost_" data-uid="NationalInstruments.Design.DesignerEditControl.GetActiveDesignerControl(NationalInstruments.Composition.ICompositionHost)">GetActiveDesignerControl(ICompositionHost)</h4>
+  <div class="markdown level1 summary"><p>Get the active DesignerEditControl</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DesignerEditControl GetActiveDesignerControl(ICompositionHost host)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Composition.ICompositionHost</span></td>
+        <td><span class="parametername">host</span></td>
+        <td><p>The ICompositionHost to use</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.DesignerEditControl.html">DesignerEditControl</a></td>
+        <td><p>The active DesignerEditControl</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_GetDesigner_" data-uid="NationalInstruments.Design.DesignerEditControl.GetDesigner*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_GetDesigner_NationalInstruments_Core_IViewModel_" data-uid="NationalInstruments.Design.DesignerEditControl.GetDesigner(NationalInstruments.Core.IViewModel)">GetDesigner(IViewModel)</h4>
+  <div class="markdown level1 summary"><p>Get the DesignerEditControl for any viewmodel underneath it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DesignerEditControlViewModel GetDesigner(IViewModel viewModel)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.IViewModel</span></td>
+        <td><span class="parametername">viewModel</span></td>
+        <td><p>asking viewmodel</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.DesignerEditControlViewModel.html">DesignerEditControlViewModel</a></td>
+        <td><p>The DesignerEditControl, if source is within its tree</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_GetDesigner_" data-uid="NationalInstruments.Design.DesignerEditControl.GetDesigner*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_GetDesigner_NationalInstruments_Core_PlatformVisual_" data-uid="NationalInstruments.Design.DesignerEditControl.GetDesigner(NationalInstruments.Core.PlatformVisual)">GetDesigner(PlatformVisual)</h4>
+  <div class="markdown level1 summary"><p>Get the DesignerEditControl for any DependencyObject underneath it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DesignerEditControlViewModel GetDesigner(PlatformVisual source)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.PlatformVisual</span></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>asking DO</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.DesignerEditControlViewModel.html">DesignerEditControlViewModel</a></td>
+        <td><p>The DesignerEditControl, if source is within its tree</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_InitHandlers_" data-uid="NationalInstruments.Design.DesignerEditControl.InitHandlers*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_InitHandlers" data-uid="NationalInstruments.Design.DesignerEditControl.InitHandlers">InitHandlers()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void InitHandlers()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_Initialize_" data-uid="NationalInstruments.Design.DesignerEditControl.Initialize*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_Initialize" data-uid="NationalInstruments.Design.DesignerEditControl.Initialize">Initialize()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Initialize()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_MoveModelPositionToUIPosition_" data-uid="NationalInstruments.Design.DesignerEditControl.MoveModelPositionToUIPosition*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_MoveModelPositionToUIPosition_System_Windows_Point_NationalInstruments_SourceModel_Element_NationalInstruments_Core_UIPosition_" data-uid="NationalInstruments.Design.DesignerEditControl.MoveModelPositionToUIPosition(System.Windows.Point,NationalInstruments.SourceModel.Element,NationalInstruments.Core.UIPosition)">MoveModelPositionToUIPosition(Point, Element, UIPosition)</h4>
+  <div class="markdown level1 summary"><p>Moves the specified model position to be at the location specified by target position.  This is
+accomplished by scrolling the edit panel, and it possible offsetting the edit panel if the
+edit panel is an infinite panel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void MoveModelPositionToUIPosition(Point modelPosition, Element modelReference, UIPosition targetPosition)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Windows.Point</span></td>
+        <td><span class="parametername">modelPosition</span></td>
+        <td><p>The position in model coordinates</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td><span class="parametername">modelReference</span></td>
+        <td><p>the model element that the position is in reference to</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.UIPosition</span></td>
+        <td><span class="parametername">targetPosition</span></td>
+        <td><p>The position to move to</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_MoveUIPositionToUIPosition_" data-uid="NationalInstruments.Design.DesignerEditControl.MoveUIPositionToUIPosition*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_MoveUIPositionToUIPosition_NationalInstruments_Core_UIPosition_NationalInstruments_Core_UIPosition_" data-uid="NationalInstruments.Design.DesignerEditControl.MoveUIPositionToUIPosition(NationalInstruments.Core.UIPosition,NationalInstruments.Core.UIPosition)">MoveUIPositionToUIPosition(UIPosition, UIPosition)</h4>
+  <div class="markdown level1 summary"><p>Moves the source UI position to be at the location specified by target position.  This is
+accomplished by scrolling the edit panel, and it possible offsetting the edit panel if the
+edit panel is an infinite panel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void MoveUIPositionToUIPosition(UIPosition sourcePosition, UIPosition targetPosition)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.UIPosition</span></td>
+        <td><span class="parametername">sourcePosition</span></td>
+        <td><p>The position to put under targetPosition</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.UIPosition</span></td>
+        <td><span class="parametername">targetPosition</span></td>
+        <td><p>The Position to move to</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_OnActivated_" data-uid="NationalInstruments.Design.DesignerEditControl.OnActivated*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_OnActivated" data-uid="NationalInstruments.Design.DesignerEditControl.OnActivated">OnActivated()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnActivated()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_OnApplyTemplate_" data-uid="NationalInstruments.Design.DesignerEditControl.OnApplyTemplate*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_OnApplyTemplate" data-uid="NationalInstruments.Design.DesignerEditControl.OnApplyTemplate">OnApplyTemplate()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnApplyTemplate()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Windows.FrameworkElement.OnApplyTemplate()</span></div>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_OnAtomicAnimationComplete_" data-uid="NationalInstruments.Design.DesignerEditControl.OnAtomicAnimationComplete*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_OnAtomicAnimationComplete_System_EventArgs_" data-uid="NationalInstruments.Design.DesignerEditControl.OnAtomicAnimationComplete(System.EventArgs)">OnAtomicAnimationComplete(EventArgs)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnAtomicAnimationComplete(EventArgs e)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventArgs</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_OnDesignerSurfacePropertyChanged_" data-uid="NationalInstruments.Design.DesignerEditControl.OnDesignerSurfacePropertyChanged*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_OnDesignerSurfacePropertyChanged_System_String_" data-uid="NationalInstruments.Design.DesignerEditControl.OnDesignerSurfacePropertyChanged(System.String)">OnDesignerSurfacePropertyChanged(String)</h4>
+  <div class="markdown level1 summary"><p>Called when properties of the designer surface (see DesignerSurfaceProperties) changes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnDesignerSurfacePropertyChanged(string propertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>The name of the property that changed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Design_DesignerEditControl_OnDesignerSurfacePropertyChanged_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Only some designer surface properties raise the changed event. See DesignerSurfacePropertices to determine
+which ones raise the event.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_OnDockPaletteChanged_" data-uid="NationalInstruments.Design.DesignerEditControl.OnDockPaletteChanged*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_OnDockPaletteChanged_NationalInstruments_Core_PlatformVisual_System_Windows_DependencyPropertyChangedEventArgs_" data-uid="NationalInstruments.Design.DesignerEditControl.OnDockPaletteChanged(NationalInstruments.Core.PlatformVisual,System.Windows.DependencyPropertyChangedEventArgs)">OnDockPaletteChanged(PlatformVisual, DependencyPropertyChangedEventArgs)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void OnDockPaletteChanged(PlatformVisual visual, DependencyPropertyChangedEventArgs e)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.PlatformVisual</span></td>
+        <td><span class="parametername">visual</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Windows.DependencyPropertyChangedEventArgs</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_OnGotFocus_" data-uid="NationalInstruments.Design.DesignerEditControl.OnGotFocus*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_OnGotFocus_System_Windows_RoutedEventArgs_" data-uid="NationalInstruments.Design.DesignerEditControl.OnGotFocus(System.Windows.RoutedEventArgs)">OnGotFocus(RoutedEventArgs)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnGotFocus(RoutedEventArgs e)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Windows.RoutedEventArgs</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Windows.FrameworkElement.OnGotFocus(System.Windows.RoutedEventArgs)</span></div>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_OnPropertyChanged_" data-uid="NationalInstruments.Design.DesignerEditControl.OnPropertyChanged*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_OnPropertyChanged_System_Windows_DependencyPropertyChangedEventArgs_" data-uid="NationalInstruments.Design.DesignerEditControl.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs)">OnPropertyChanged(DependencyPropertyChangedEventArgs)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnPropertyChanged(DependencyPropertyChangedEventArgs e)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Windows.DependencyPropertyChangedEventArgs</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Windows.FrameworkElement.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs)</span></div>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_OnViewableRectChanged_" data-uid="NationalInstruments.Design.DesignerEditControl.OnViewableRectChanged*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_OnViewableRectChanged_NationalInstruments_Core_PlatformVisual_System_Windows_DependencyPropertyChangedEventArgs_" data-uid="NationalInstruments.Design.DesignerEditControl.OnViewableRectChanged(NationalInstruments.Core.PlatformVisual,System.Windows.DependencyPropertyChangedEventArgs)">OnViewableRectChanged(PlatformVisual, DependencyPropertyChangedEventArgs)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void OnViewableRectChanged(PlatformVisual visual, DependencyPropertyChangedEventArgs e)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.PlatformVisual</span></td>
+        <td><span class="parametername">visual</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Windows.DependencyPropertyChangedEventArgs</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_OnZoomChanged_" data-uid="NationalInstruments.Design.DesignerEditControl.OnZoomChanged*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_OnZoomChanged_NationalInstruments_Core_PlatformVisual_System_Windows_DependencyPropertyChangedEventArgs_" data-uid="NationalInstruments.Design.DesignerEditControl.OnZoomChanged(NationalInstruments.Core.PlatformVisual,System.Windows.DependencyPropertyChangedEventArgs)">OnZoomChanged(PlatformVisual, DependencyPropertyChangedEventArgs)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void OnZoomChanged(PlatformVisual visual, DependencyPropertyChangedEventArgs e)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.PlatformVisual</span></td>
+        <td><span class="parametername">visual</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Windows.DependencyPropertyChangedEventArgs</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_Print_" data-uid="NationalInstruments.Design.DesignerEditControl.Print*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_Print" data-uid="NationalInstruments.Design.DesignerEditControl.Print">Print()</h4>
+  <div class="markdown level1 summary"><p>Print our EditPanel</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Print()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_ProcessGridMouseWheelZooming_" data-uid="NationalInstruments.Design.DesignerEditControl.ProcessGridMouseWheelZooming*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_ProcessGridMouseWheelZooming_System_Int32_" data-uid="NationalInstruments.Design.DesignerEditControl.ProcessGridMouseWheelZooming(System.Int32)">ProcessGridMouseWheelZooming(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ProcessGridMouseWheelZooming(int delta)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">delta</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_RemoveInputBindings_" data-uid="NationalInstruments.Design.DesignerEditControl.RemoveInputBindings*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_RemoveInputBindings_System_Windows_Input_InputBindingCollection_" data-uid="NationalInstruments.Design.DesignerEditControl.RemoveInputBindings(System.Windows.Input.InputBindingCollection)">RemoveInputBindings(InputBindingCollection)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveInputBindings(InputBindingCollection bindings)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Windows.Input.InputBindingCollection</span></td>
+        <td><span class="parametername">bindings</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_RemoveModelVisualAddedHandler_" data-uid="NationalInstruments.Design.DesignerEditControl.RemoveModelVisualAddedHandler*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_RemoveModelVisualAddedHandler_NationalInstruments_Design_DesignerEditControl_System_Windows_RoutedEventHandler_" data-uid="NationalInstruments.Design.DesignerEditControl.RemoveModelVisualAddedHandler(NationalInstruments.Design.DesignerEditControl,System.Windows.RoutedEventHandler)">RemoveModelVisualAddedHandler(DesignerEditControl, RoutedEventHandler)</h4>
+  <div class="markdown level1 summary"><p>Remove model visual added handler</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RemoveModelVisualAddedHandler(DesignerEditControl designer, RoutedEventHandler handler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.DesignerEditControl.html">DesignerEditControl</a></td>
+        <td><span class="parametername">designer</span></td>
+        <td><p>designer</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Windows.RoutedEventHandler</span></td>
+        <td><span class="parametername">handler</span></td>
+        <td><p>handler</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_RemoveModelVisualRemovingHandler_" data-uid="NationalInstruments.Design.DesignerEditControl.RemoveModelVisualRemovingHandler*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_RemoveModelVisualRemovingHandler_NationalInstruments_Design_DesignerEditControl_System_Windows_RoutedEventHandler_" data-uid="NationalInstruments.Design.DesignerEditControl.RemoveModelVisualRemovingHandler(NationalInstruments.Design.DesignerEditControl,System.Windows.RoutedEventHandler)">RemoveModelVisualRemovingHandler(DesignerEditControl, RoutedEventHandler)</h4>
+  <div class="markdown level1 summary"><p>Remove model visual removed handler</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RemoveModelVisualRemovingHandler(DesignerEditControl designer, RoutedEventHandler handler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.DesignerEditControl.html">DesignerEditControl</a></td>
+        <td><span class="parametername">designer</span></td>
+        <td><p>designer</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Windows.RoutedEventHandler</span></td>
+        <td><span class="parametername">handler</span></td>
+        <td><p>handler</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_ScrollOffset_" data-uid="NationalInstruments.Design.DesignerEditControl.ScrollOffset*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_ScrollOffset_NationalInstruments_Core_SMPoint_" data-uid="NationalInstruments.Design.DesignerEditControl.ScrollOffset(NationalInstruments.Core.SMPoint)">ScrollOffset(SMPoint)</h4>
+  <div class="markdown level1 summary"><p>Scroll edit panel by a delta. - = left or top.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ScrollOffset(SMPoint delta)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMPoint</span></td>
+        <td><span class="parametername">delta</span></td>
+        <td><p>delta to scroll</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_ScrollToOffset_" data-uid="NationalInstruments.Design.DesignerEditControl.ScrollToOffset*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_ScrollToOffset_System_Double_System_Double_" data-uid="NationalInstruments.Design.DesignerEditControl.ScrollToOffset(System.Double,System.Double)">ScrollToOffset(Double, Double)</h4>
+  <div class="markdown level1 summary"><p>Scrolls the active panel to the given horizontal and vertical offsets. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ScrollToOffset(double horizontalOffset, double verticalOffset)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">horizontalOffset</span></td>
+        <td><p>horiz offset</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">verticalOffset</span></td>
+        <td><p>vert offset</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_SetDefaultMouseWheelScrolling_" data-uid="NationalInstruments.Design.DesignerEditControl.SetDefaultMouseWheelScrolling*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_SetDefaultMouseWheelScrolling_System_Boolean_" data-uid="NationalInstruments.Design.DesignerEditControl.SetDefaultMouseWheelScrolling(System.Boolean)">SetDefaultMouseWheelScrolling(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Sets the default mouse wheel scrolling behavior if no EnableMouseWheelScrolling call is ongoing</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SetDefaultMouseWheelScrolling(bool enableScrolling)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enableScrolling</span></td>
+        <td><p>true to enable mouse wheel scrolling and false to disable it</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>Whether the operation was completed successfully</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_SetSnapToObjects_" data-uid="NationalInstruments.Design.DesignerEditControl.SetSnapToObjects*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_SetSnapToObjects_System_Boolean_" data-uid="NationalInstruments.Design.DesignerEditControl.SetSnapToObjects(System.Boolean)">SetSnapToObjects(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Set the current value of snap to objects option.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetSnapToObjects(bool snapToObjects)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">snapToObjects</span></td>
+        <td><p>The new value for the snap to objects option.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_SnapToZoomStop_" data-uid="NationalInstruments.Design.DesignerEditControl.SnapToZoomStop*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_SnapToZoomStop_System_Double_System_Collections_ObjectModel_ReadOnlyCollection_System_Int32__" data-uid="NationalInstruments.Design.DesignerEditControl.SnapToZoomStop(System.Double,System.Collections.ObjectModel.ReadOnlyCollection{System.Int32})">SnapToZoomStop(Double, ReadOnlyCollection&lt;Int32&gt;)</h4>
+  <div class="markdown level1 summary"><p>Snap to given zoom stop</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double SnapToZoomStop(double zoomValue, ReadOnlyCollection&lt;int&gt; zoomStops)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">zoomValue</span></td>
+        <td><p>value</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.ObjectModel.ReadOnlyCollection</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">zoomStops</span></td>
+        <td><p>stops</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><p>zoom value coerced to a stop</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_ToggleMagnify_" data-uid="NationalInstruments.Design.DesignerEditControl.ToggleMagnify*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_ToggleMagnify" data-uid="NationalInstruments.Design.DesignerEditControl.ToggleMagnify">ToggleMagnify()</h4>
+  <div class="markdown level1 summary"><p>Turn Magnify on/off</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ToggleMagnify()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_ZoomToFit_" data-uid="NationalInstruments.Design.DesignerEditControl.ZoomToFit*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_ZoomToFit" data-uid="NationalInstruments.Design.DesignerEditControl.ZoomToFit">ZoomToFit()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ZoomToFit()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_DesignerEditControl_ZoomToSelection_" data-uid="NationalInstruments.Design.DesignerEditControl.ZoomToSelection*"></a>
+  <h4 id="NationalInstruments_Design_DesignerEditControl_ZoomToSelection" data-uid="NationalInstruments.Design.DesignerEditControl.ZoomToSelection">ZoomToSelection()</h4>
+  <div class="markdown level1 summary"><p>Zooms and Scrolls to the current selection of items, if any.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ZoomToSelection()</code></pre>
+  </div>
+  <h3 id="events">Events
+  </h3>
+  
+  
+  <h4 id="NationalInstruments_Design_DesignerEditControl_Activated" data-uid="NationalInstruments.Design.DesignerEditControl.Activated">Activated</h4>
+  <div class="markdown level1 summary"><p>Event fired when we are Activated</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;EventArgs&gt; Activated</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<span class="xref">System.EventArgs</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_Design_DesignerEditControl_AtomicAnimationComplete" data-uid="NationalInstruments.Design.DesignerEditControl.AtomicAnimationComplete">AtomicAnimationComplete</h4>
+  <div class="markdown level1 summary"><p>Event which fires when an Atomic Action Animation has completed and there is no replacement animation</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler AtomicAnimationComplete</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventHandler</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_Design_DesignerEditControl_PropertyChanged" data-uid="NationalInstruments.Design.DesignerEditControl.PropertyChanged">PropertyChanged</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event PropertyChangedEventHandler PropertyChanged</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ComponentModel.PropertyChangedEventHandler</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.Windows.Media.Animation.IAnimatable</span>
+  </div>
+  <div>
+      <span class="xref">System.Windows.IFrameworkInputElement</span>
+  </div>
+  <div>
+      <span class="xref">System.Windows.IInputElement</span>
+  </div>
+  <div>
+      <span class="xref">System.ComponentModel.ISupportInitialize</span>
+  </div>
+  <div>
+      <span class="xref">System.Windows.Markup.IQueryAmbient</span>
+  </div>
+  <div>
+      <span class="xref">System.ComponentModel.INotifyPropertyChanged</span>
+  </div>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerExtensions.html#NationalInstruments_Design_DesignerExtensions_GetHost_System_Windows_DependencyObject_">DesignerExtensions.GetHost(DependencyObject)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerExtensions.html#NationalInstruments_Design_DesignerExtensions_GetEditSite_System_Windows_DependencyObject_">DesignerExtensions.GetEditSite(DependencyObject)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerExtensions.html#NationalInstruments_Design_DesignerExtensions_GetDocumentManager_System_Windows_DependencyObject_">DesignerExtensions.GetDocumentManager(DependencyObject)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerUIHelpers.html#NationalInstruments_Design_DesignerUIHelpers_PlatformRecordMouseEvent_System_Windows_FrameworkElement_System_Windows_Input_MouseEventArgs_">DesignerUIHelpers.PlatformRecordMouseEvent(FrameworkElement, MouseEventArgs)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerUIHelpers.html#NationalInstruments_Design_DesignerUIHelpers_PlatformFocus_System_Windows_UIElement_">DesignerUIHelpers.PlatformFocus(UIElement)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerUIHelpers.html#NationalInstruments_Design_DesignerUIHelpers_SetForceCursor_System_Windows_FrameworkElement_System_Boolean_">DesignerUIHelpers.SetForceCursor(FrameworkElement, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Shell.ShellDocumentCommandHelpers.html#NationalInstruments_Shell_ShellDocumentCommandHelpers_AddInputBinding_System_Windows_FrameworkElement_NationalInstruments_Core_ICommandEx_NationalInstruments_Composition_ICompositionHost_">ShellDocumentCommandHelpers.AddInputBinding(FrameworkElement, ICommandEx, ICompositionHost)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Shell.ShellDocumentCommandHelpers.html#NationalInstruments_Shell_ShellDocumentCommandHelpers_AddInputBinding_System_Windows_FrameworkElement_System_Windows_Input_InputBinding_NationalInstruments_Composition_ICompositionHost_">ShellDocumentCommandHelpers.AddInputBinding(FrameworkElement, InputBinding, ICompositionHost)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

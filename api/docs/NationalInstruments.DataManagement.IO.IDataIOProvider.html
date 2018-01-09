@@ -1,0 +1,997 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IDataIOProvider
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IDataIOProvider
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.DataManagement.IO.IDataIOProvider">
+  
+  
+  <h1 id="NationalInstruments_DataManagement_IO_IDataIOProvider" data-uid="NationalInstruments.DataManagement.IO.IDataIOProvider" class="text-break">Interface IDataIOProvider
+  </h1>
+  <div class="markdown level0 summary"><p>Data I/O providers which read/write to TDMS files implement this interface.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.DataManagement.IO.html">NationalInstruments.DataManagement.IO</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_DataManagement_IO_IDataIOProvider_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IDataIOProvider</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_DataManagement_IO_IDataIOProvider_DeleteChannel_" data-uid="NationalInstruments.DataManagement.IO.IDataIOProvider.DeleteChannel*"></a>
+  <h4 id="NationalInstruments_DataManagement_IO_IDataIOProvider_DeleteChannel_System_String_System_String_System_String_" data-uid="NationalInstruments.DataManagement.IO.IDataIOProvider.DeleteChannel(System.String,System.String,System.String)">DeleteChannel(String, String, String)</h4>
+  <div class="markdown level1 summary"><p>Deletes the specified channel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void DeleteChannel(string filePath, string groupName, string channelName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">filePath</span></td>
+        <td><p>Path to TDMS file.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">groupName</span></td>
+        <td><p>Name of the tdms group where channel exists. Use null for default group name.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">channelName</span></td>
+        <td><p>Name of the channel to be deleted</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataManagement_IO_IDataIOProvider_DeleteData_" data-uid="NationalInstruments.DataManagement.IO.IDataIOProvider.DeleteData*"></a>
+  <h4 id="NationalInstruments_DataManagement_IO_IDataIOProvider_DeleteData_System_String_System_String_System_String_" data-uid="NationalInstruments.DataManagement.IO.IDataIOProvider.DeleteData(System.String,System.String,System.String)">DeleteData(String, String, String)</h4>
+  <div class="markdown level1 summary"><p>Deletes all channels corresponding to data name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void DeleteData(string filePath, string groupName, string dataName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">filePath</span></td>
+        <td><p>Path to TDMS file.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">groupName</span></td>
+        <td><p>Name of the tdms group where data exists. Use null for default group name.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">dataName</span></td>
+        <td><p>Name of the data element to be deleted</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataManagement_IO_IDataIOProvider_GetChannels_" data-uid="NationalInstruments.DataManagement.IO.IDataIOProvider.GetChannels*"></a>
+  <h4 id="NationalInstruments_DataManagement_IO_IDataIOProvider_GetChannels_NationalInstruments_DataManagement_IO_IDataIOSession_System_String_" data-uid="NationalInstruments.DataManagement.IO.IDataIOProvider.GetChannels(NationalInstruments.DataManagement.IO.IDataIOSession,System.String)">GetChannels(IDataIOSession, String)</h4>
+  <div class="markdown level1 summary"><p>Returns the channels in a group</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;string&gt; GetChannels(IDataIOSession session, string groupName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataManagement.IO.IDataIOSession.html">IDataIOSession</a></td>
+        <td><span class="parametername">session</span></td>
+        <td><p>IO session</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">groupName</span></td>
+        <td><p>Name of the tdms group where the channels exist. If null, default group name is used.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><p>Names of channels.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataManagement_IO_IDataIOProvider_GetChannels_" data-uid="NationalInstruments.DataManagement.IO.IDataIOProvider.GetChannels*"></a>
+  <h4 id="NationalInstruments_DataManagement_IO_IDataIOProvider_GetChannels_NationalInstruments_DataManagement_IO_IDataIOSession_System_String_System_String_" data-uid="NationalInstruments.DataManagement.IO.IDataIOProvider.GetChannels(NationalInstruments.DataManagement.IO.IDataIOSession,System.String,System.String)">GetChannels(IDataIOSession, String, String)</h4>
+  <div class="markdown level1 summary"><p>Returns the channels in a data item</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;string&gt; GetChannels(IDataIOSession session, string groupName, string dataName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataManagement.IO.IDataIOSession.html">IDataIOSession</a></td>
+        <td><span class="parametername">session</span></td>
+        <td><p>IO session</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">groupName</span></td>
+        <td><p>Name of the tdms group where the data item exists. If null, default group name is used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">dataName</span></td>
+        <td><p>Name of the data item</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><p>Names of channels.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataManagement_IO_IDataIOProvider_GetDataItems_" data-uid="NationalInstruments.DataManagement.IO.IDataIOProvider.GetDataItems*"></a>
+  <h4 id="NationalInstruments_DataManagement_IO_IDataIOProvider_GetDataItems_NationalInstruments_DataManagement_IO_IDataIOSession_System_String_" data-uid="NationalInstruments.DataManagement.IO.IDataIOProvider.GetDataItems(NationalInstruments.DataManagement.IO.IDataIOSession,System.String)">GetDataItems(IDataIOSession, String)</h4>
+  <div class="markdown level1 summary"><p>Returns the data items in a group</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;string&gt; GetDataItems(IDataIOSession session, string groupName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataManagement.IO.IDataIOSession.html">IDataIOSession</a></td>
+        <td><span class="parametername">session</span></td>
+        <td><p>IO session</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">groupName</span></td>
+        <td><p>Name of the tdms group where data items exist. If null, default group name is used.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><p>Names of data items.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataManagement_IO_IDataIOProvider_GetDataType_" data-uid="NationalInstruments.DataManagement.IO.IDataIOProvider.GetDataType*"></a>
+  <h4 id="NationalInstruments_DataManagement_IO_IDataIOProvider_GetDataType_NationalInstruments_DataManagement_IO_IDataIOSession_System_String_System_String_" data-uid="NationalInstruments.DataManagement.IO.IDataIOProvider.GetDataType(NationalInstruments.DataManagement.IO.IDataIOSession,System.String,System.String)">GetDataType(IDataIOSession, String, String)</h4>
+  <div class="markdown level1 summary"><p>Returns the datatype of the specified data element</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">NIType GetDataType(IDataIOSession session, string groupName, string dataName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataManagement.IO.IDataIOSession.html">IDataIOSession</a></td>
+        <td><span class="parametername">session</span></td>
+        <td><p>IO session</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">groupName</span></td>
+        <td><p>Name of the tdms group where data exists. Use null for default group name.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">dataName</span></td>
+        <td><p>Name of the data element</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataTypes.NIType</span></td>
+        <td><p>data tye of the data element</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataManagement_IO_IDataIOProvider_GetDimensionSize_" data-uid="NationalInstruments.DataManagement.IO.IDataIOProvider.GetDimensionSize*"></a>
+  <h4 id="NationalInstruments_DataManagement_IO_IDataIOProvider_GetDimensionSize_NationalInstruments_DataManagement_IO_IDataIOSession_System_String_System_String_" data-uid="NationalInstruments.DataManagement.IO.IDataIOProvider.GetDimensionSize(NationalInstruments.DataManagement.IO.IDataIOSession,System.String,System.String)">GetDimensionSize(IDataIOSession, String, String)</h4>
+  <div class="markdown level1 summary"><p>Returns first array dimension for the specified data item</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int GetDimensionSize(IDataIOSession session, string groupName, string dataName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataManagement.IO.IDataIOSession.html">IDataIOSession</a></td>
+        <td><span class="parametername">session</span></td>
+        <td><p>IO session</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">groupName</span></td>
+        <td><p>Name of the tdms group where data exists. Use null for default group name.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">dataName</span></td>
+        <td><p>Name of the data element</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>first array dimension size</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataManagement_IO_IDataIOProvider_GetGroups_" data-uid="NationalInstruments.DataManagement.IO.IDataIOProvider.GetGroups*"></a>
+  <h4 id="NationalInstruments_DataManagement_IO_IDataIOProvider_GetGroups_NationalInstruments_DataManagement_IO_IDataIOSession_" data-uid="NationalInstruments.DataManagement.IO.IDataIOProvider.GetGroups(NationalInstruments.DataManagement.IO.IDataIOSession)">GetGroups(IDataIOSession)</h4>
+  <div class="markdown level1 summary"><p>Returns the names of the groups in a TDMS file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;string&gt; GetGroups(IDataIOSession session)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataManagement.IO.IDataIOSession.html">IDataIOSession</a></td>
+        <td><span class="parametername">session</span></td>
+        <td><p>IO session</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><p>Names of groups.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataManagement_IO_IDataIOProvider_GetProperties_" data-uid="NationalInstruments.DataManagement.IO.IDataIOProvider.GetProperties*"></a>
+  <h4 id="NationalInstruments_DataManagement_IO_IDataIOProvider_GetProperties_NationalInstruments_DataManagement_IO_IDataIOSession_System_String_System_String_System_String___System_String____System_Object____" data-uid="NationalInstruments.DataManagement.IO.IDataIOProvider.GetProperties(NationalInstruments.DataManagement.IO.IDataIOSession,System.String,System.String,System.String[],System.String[]@,System.Object[]@)">GetProperties(IDataIOSession, String, String, String[], out String[], out Object[])</h4>
+  <div class="markdown level1 summary"><p>Retrieves properties from a tdms root, group or data. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void GetProperties(IDataIOSession session, string groupName, string dataName, string[] propNames, out string[] foundPropNames, out object[] propValues)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataManagement.IO.IDataIOSession.html">IDataIOSession</a></td>
+        <td><span class="parametername">session</span></td>
+        <td><p>IO session</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">groupName</span></td>
+        <td><p>Name of the tdms group where data exists. Use null for default group name. If both group name and data name are null, root properties are returned</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">dataName</span></td>
+        <td><p>Name of the data element. If null, group properties are returned</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">propNames</span></td>
+        <td><p>Names of the desired properties. If null, all properties are returned</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">foundPropNames</span></td>
+        <td><p>Names of the properties that were found</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">propValues</span></td>
+        <td><p>Values of the properties that were found</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataManagement_IO_IDataIOProvider_NewSession_" data-uid="NationalInstruments.DataManagement.IO.IDataIOProvider.NewSession*"></a>
+  <h4 id="NationalInstruments_DataManagement_IO_IDataIOProvider_NewSession_System_String_NationalInstruments_DataManagement_IO_FileOpenMode_System_Nullable_NationalInstruments_PrecisionDateTime__" data-uid="NationalInstruments.DataManagement.IO.IDataIOProvider.NewSession(System.String,NationalInstruments.DataManagement.IO.FileOpenMode,System.Nullable{NationalInstruments.PrecisionDateTime})">NewSession(String, FileOpenMode, Nullable&lt;PrecisionDateTime&gt;)</h4>
+  <div class="markdown level1 summary"><p>Creates a new session</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IDataIOSession NewSession(string filePath, FileOpenMode mode, PrecisionDateTime? timestamp)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">filePath</span></td>
+        <td><p>Absolute path to the tdms file</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataManagement.IO.FileOpenMode.html">FileOpenMode</a></td>
+        <td><span class="parametername">mode</span></td>
+        <td><p>Type of IO session</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">NationalInstruments.PrecisionDateTime</span>&gt;</td>
+        <td><span class="parametername">timestamp</span></td>
+        <td><p>Time stamp</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataManagement.IO.IDataIOSession.html">IDataIOSession</a></td>
+        <td><p>session</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataManagement_IO_IDataIOProvider_ReadData_" data-uid="NationalInstruments.DataManagement.IO.IDataIOProvider.ReadData*"></a>
+  <h4 id="NationalInstruments_DataManagement_IO_IDataIOProvider_ReadData_NationalInstruments_DataManagement_IO_IDataIOSession_System_String_System_String_System_Nullable_NationalInstruments_DataTypes_NIType__System_Int64_System_Int64_System_Boolean__" data-uid="NationalInstruments.DataManagement.IO.IDataIOProvider.ReadData(NationalInstruments.DataManagement.IO.IDataIOSession,System.String,System.String,System.Nullable{NationalInstruments.DataTypes.NIType},System.Int64,System.Int64,System.Boolean@)">ReadData(IDataIOSession, String, String, Nullable&lt;NIType&gt;, Int64, Int64, out Boolean)</h4>
+  <div class="markdown level1 summary"><p>Retrieves custom formatted tdms data from a tdms file</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">object ReadData(IDataIOSession session, string groupName, string dataName, NIType? dataType, long offset, long count, out bool endOfFile)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataManagement.IO.IDataIOSession.html">IDataIOSession</a></td>
+        <td><span class="parametername">session</span></td>
+        <td><p>IO session</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">groupName</span></td>
+        <td><p>Name of the tdms group where data exists. Use null for default group name.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">dataName</span></td>
+        <td><p>Name of the data element to be retrieved</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">NationalInstruments.DataTypes.NIType</span>&gt;</td>
+        <td><span class="parametername">dataType</span></td>
+        <td><p>Type of data to be retrieved</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">offset</span></td>
+        <td><p>Offset into the data stream. Specify 0 to read from start.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">count</span></td>
+        <td><p>Number of elements to be read. Specify -1 to read all.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">endOfFile</span></td>
+        <td><p>Returns true if the end of file was reached.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>Retrieved data value</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataManagement_IO_IDataIOProvider_RecordData_" data-uid="NationalInstruments.DataManagement.IO.IDataIOProvider.RecordData*"></a>
+  <h4 id="NationalInstruments_DataManagement_IO_IDataIOProvider_RecordData_NationalInstruments_DataManagement_IO_IDataIOSession_System_String_System_String_NationalInstruments_DataTypes_NIType_System_Object_System_Boolean_" data-uid="NationalInstruments.DataManagement.IO.IDataIOProvider.RecordData(NationalInstruments.DataManagement.IO.IDataIOSession,System.String,System.String,NationalInstruments.DataTypes.NIType,System.Object,System.Boolean)">RecordData(IDataIOSession, String, String, NIType, Object, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Records data to TDMS channels</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void RecordData(IDataIOSession session, string groupName, string dataName, NIType dataType, object value, bool firstWrite)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataManagement.IO.IDataIOSession.html">IDataIOSession</a></td>
+        <td><span class="parametername">session</span></td>
+        <td><p>IO session</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">groupName</span></td>
+        <td><p>Name of the tdms group where data exists. Use null for default group name.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">dataName</span></td>
+        <td><p>Name of the data element to be recorded</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataTypes.NIType</span></td>
+        <td><span class="parametername">dataType</span></td>
+        <td><p>Type of the data element to be persisted</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>Value of the data element to be persisted</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">firstWrite</span></td>
+        <td><p>Set to true on first write and false on subsequent writes. Helps optimize subsequent writes.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataManagement_IO_IDataIOProvider_RenameData_" data-uid="NationalInstruments.DataManagement.IO.IDataIOProvider.RenameData*"></a>
+  <h4 id="NationalInstruments_DataManagement_IO_IDataIOProvider_RenameData_NationalInstruments_DataManagement_IO_IDataIOSession_System_String_System_String_System_String_" data-uid="NationalInstruments.DataManagement.IO.IDataIOProvider.RenameData(NationalInstruments.DataManagement.IO.IDataIOSession,System.String,System.String,System.String)">RenameData(IDataIOSession, String, String, String)</h4>
+  <div class="markdown level1 summary"><p>Renames all channels corresponding to data name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void RenameData(IDataIOSession session, string groupName, string dataName, string newDataName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataManagement.IO.IDataIOSession.html">IDataIOSession</a></td>
+        <td><span class="parametername">session</span></td>
+        <td><p>IO session</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">groupName</span></td>
+        <td><p>Name of the tdms group where data exists. Use null for default group name.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">dataName</span></td>
+        <td><p>Name of the data element to be renamed</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">newDataName</span></td>
+        <td><p>New name of the data element</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataManagement_IO_IDataIOProvider_RenameGroup_" data-uid="NationalInstruments.DataManagement.IO.IDataIOProvider.RenameGroup*"></a>
+  <h4 id="NationalInstruments_DataManagement_IO_IDataIOProvider_RenameGroup_NationalInstruments_DataManagement_IO_IDataIOSession_System_String_System_String_" data-uid="NationalInstruments.DataManagement.IO.IDataIOProvider.RenameGroup(NationalInstruments.DataManagement.IO.IDataIOSession,System.String,System.String)">RenameGroup(IDataIOSession, String, String)</h4>
+  <div class="markdown level1 summary"><p>Renames an existing group name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void RenameGroup(IDataIOSession session, string groupName, string newGroupName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataManagement.IO.IDataIOSession.html">IDataIOSession</a></td>
+        <td><span class="parametername">session</span></td>
+        <td><p>IO session</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">groupName</span></td>
+        <td><p>Name of the tdms group. Not null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">newGroupName</span></td>
+        <td><p>New name of the tdms group. Not null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataManagement_IO_IDataIOProvider_SetProperties_" data-uid="NationalInstruments.DataManagement.IO.IDataIOProvider.SetProperties*"></a>
+  <h4 id="NationalInstruments_DataManagement_IO_IDataIOProvider_SetProperties_NationalInstruments_DataManagement_IO_IDataIOSession_System_String_System_String_System_String___System_Object___" data-uid="NationalInstruments.DataManagement.IO.IDataIOProvider.SetProperties(NationalInstruments.DataManagement.IO.IDataIOSession,System.String,System.String,System.String[],System.Object[])">SetProperties(IDataIOSession, String, String, String[], Object[])</h4>
+  <div class="markdown level1 summary"><p>Sets properties for a tdms root, group or data. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetProperties(IDataIOSession session, string groupName, string dataName, string[] propNames, object[] propValues)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataManagement.IO.IDataIOSession.html">IDataIOSession</a></td>
+        <td><span class="parametername">session</span></td>
+        <td><p>IO session</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">groupName</span></td>
+        <td><p>Name of the tdms group where data exists. Use null for default group name. If both group name and data name are null, root properties are set</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">dataName</span></td>
+        <td><p>Name of the data element. If null, group properties are set</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">propNames</span></td>
+        <td><p>Names of the desired properties. If null, all properties are set</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">propValues</span></td>
+        <td><p>Values of the properties</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataManagement_IO_IDataIOProvider_WriteData_" data-uid="NationalInstruments.DataManagement.IO.IDataIOProvider.WriteData*"></a>
+  <h4 id="NationalInstruments_DataManagement_IO_IDataIOProvider_WriteData_NationalInstruments_DataManagement_IO_IDataIOSession_System_String_System_String_NationalInstruments_DataTypes_NIType_System_Object_" data-uid="NationalInstruments.DataManagement.IO.IDataIOProvider.WriteData(NationalInstruments.DataManagement.IO.IDataIOSession,System.String,System.String,NationalInstruments.DataTypes.NIType,System.Object)">WriteData(IDataIOSession, String, String, NIType, Object)</h4>
+  <div class="markdown level1 summary"><p>Persists data with custom formatting to tdms channels</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void WriteData(IDataIOSession session, string groupName, string dataName, NIType dataType, object value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataManagement.IO.IDataIOSession.html">IDataIOSession</a></td>
+        <td><span class="parametername">session</span></td>
+        <td><p>IO session</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">groupName</span></td>
+        <td><p>Name of the tdms group where data exists. Use null for default group name.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">dataName</span></td>
+        <td><p>Name of the data element to be persisted</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataTypes.NIType</span></td>
+        <td><span class="parametername">dataType</span></td>
+        <td><p>Type of the data element to be persisted</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>Value of the data element to be persisted</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataManagement.IO.DataIOProviderExtensions.html#NationalInstruments_DataManagement_IO_DataIOProviderExtensions_ReadData_NationalInstruments_DataManagement_IO_IDataIOProvider_NationalInstruments_DataManagement_IO_IDataIOSession_System_String_System_String_System_Nullable_NationalInstruments_DataTypes_NIType__">DataIOProviderExtensions.ReadData(IDataIOProvider, IDataIOSession, String, String, Nullable&lt;NIType&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataManagement.IO.DataIOProviderExtensions.html#NationalInstruments_DataManagement_IO_DataIOProviderExtensions_GetValueProperty__1_NationalInstruments_DataManagement_IO_IDataIOProvider_NationalInstruments_DataManagement_IO_IDataIOSession_System_String_System_String_System_String_">DataIOProviderExtensions.GetValueProperty&lt;T&gt;(IDataIOProvider, IDataIOSession, String, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataManagement.IO.DataIOProviderExtensions.html#NationalInstruments_DataManagement_IO_DataIOProviderExtensions_GetProperty__1_NationalInstruments_DataManagement_IO_IDataIOProvider_NationalInstruments_DataManagement_IO_IDataIOSession_System_String_System_String_System_String_">DataIOProviderExtensions.GetProperty&lt;T&gt;(IDataIOProvider, IDataIOSession, String, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

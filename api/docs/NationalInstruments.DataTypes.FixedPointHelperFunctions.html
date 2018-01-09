@@ -1,0 +1,1406 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class FixedPointHelperFunctions
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class FixedPointHelperFunctions
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions">
+  
+  
+  <h1 id="NationalInstruments_DataTypes_FixedPointHelperFunctions" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions" class="text-break">Class FixedPointHelperFunctions
+  </h1>
+  <div class="markdown level0 summary"><p>Helper class to define limits of fixed-point type parameters and provide various validation utilities.
+The parameter limits are designed such that all values of any fixed-point type with word length of 53 bits
+or less should be exactly representable by a double. Values with word lengths greater than 53 bits will
+lose precision, but will be correct to 53-bit accuracy without overflowing or underflowing.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">FixedPointHelperFunctions</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.DataTypes.html">NationalInstruments.DataTypes</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_DataTypes_FixedPointHelperFunctions_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class FixedPointHelperFunctions</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="NationalInstruments_DataTypes_FixedPointHelperFunctions_DefaultWordLength" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.DefaultWordLength">DefaultWordLength</h4>
+  <div class="markdown level1 summary"><p>Default FixedPoint wordlength for the entire System</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const uint DefaultWordLength = 16U</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_DataTypes_FixedPointHelperFunctions_MaximumFixedPointFractionalLength" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.MaximumFixedPointFractionalLength">MaximumFixedPointFractionalLength</h4>
+  <div class="markdown level1 summary"><p>A constant integer defining the maximum number of bits allowed for the representation of the
+fractional part (right bits) of a FXP datatype. The value is derived from the word length
+of a double precision value and the minimum exponent value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int MaximumFixedPointFractionalLength = 1074</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_DataTypes_FixedPointHelperFunctions_MaximumFixedPointIntegerLength" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.MaximumFixedPointIntegerLength">MaximumFixedPointIntegerLength</h4>
+  <div class="markdown level1 summary"><p>A constant integer defining the maximum number of bits allowed for the representation
+of the integer part (left bits) of a FXP datatype. The value is based on the exponent range
+of a double precision value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int MaximumFixedPointIntegerLength = 1024</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_DataTypes_FixedPointHelperFunctions_MaximumFixedPointIntegerLength_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Maximum finite exponent is 1023. IWL is exponent + 1.</p>
+</div>
+  
+  
+  <h4 id="NationalInstruments_DataTypes_FixedPointHelperFunctions_MaximumFixedPointWordLength" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.MaximumFixedPointWordLength">MaximumFixedPointWordLength</h4>
+  <div class="markdown level1 summary"><p>A constant integer defining the maximum
+number of bits allowed for the word size of a FXP data type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int MaximumFixedPointWordLength = 64</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_DataTypes_FixedPointHelperFunctions_MinimumFixedPointFractionalLength" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.MinimumFixedPointFractionalLength">MinimumFixedPointFractionalLength</h4>
+  <div class="markdown level1 summary"><p>A constant integer defining the minimum (negative) number of bits allowed for the representation
+of the fractional part (right bits) of a FXP datatype. The value is derived from the maximum integer word
+length, assuming a minimum fixed point word length of 1 bit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int MinimumFixedPointFractionalLength = -1023</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_DataTypes_FixedPointHelperFunctions_MinimumFixedPointIntegerLength" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.MinimumFixedPointIntegerLength">MinimumFixedPointIntegerLength</h4>
+  <div class="markdown level1 summary"><p>A constant integer defining the minimum (negative) number of bits allowed for the representation
+of the integer part (left bits) of a FXP datatype. The value is based on the range of the smallest normal double.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int MinimumFixedPointIntegerLength = -1021</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_DataTypes_FixedPointHelperFunctions_MinimumFixedPointIntegerLength_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Minimum normal exponent is -1022. IWL is exponent + 1.</p>
+</div>
+  
+  
+  <h4 id="NationalInstruments_DataTypes_FixedPointHelperFunctions_MinimumFixedPointWordLength" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.MinimumFixedPointWordLength">MinimumFixedPointWordLength</h4>
+  <div class="markdown level1 summary"><p>A constant integer defining the minimum
+number of bits allowed for the word size of a FXP data type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int MinimumFixedPointWordLength = 1</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_DataTypes_FixedPointHelperFunctions_TypeOfZero" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.TypeOfZero">TypeOfZero</h4>
+  <div class="markdown level1 summary"><p>Arbitrary type to use for adapt to data when input value is zero</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly NIType TypeOfZero</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataTypes.NIType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_DataTypes_FixedPointHelperFunctions_DefaultNormalizedComplexType_" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.DefaultNormalizedComplexType*"></a>
+  <h4 id="NationalInstruments_DataTypes_FixedPointHelperFunctions_DefaultNormalizedComplexType" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.DefaultNormalizedComplexType">DefaultNormalizedComplexType</h4>
+  <div class="markdown level1 summary"><p>The Normalized ComplexFixedPoint type of the Default WordLength</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static NIType DefaultNormalizedComplexType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataTypes.NIType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_FixedPointHelperFunctions_DefaultNormalizedType_" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.DefaultNormalizedType*"></a>
+  <h4 id="NationalInstruments_DataTypes_FixedPointHelperFunctions_DefaultNormalizedType" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.DefaultNormalizedType">DefaultNormalizedType</h4>
+  <div class="markdown level1 summary"><p>The Normalized FixedPoint type of the Default WordLength</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static NIType DefaultNormalizedType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataTypes.NIType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_DataTypes_FixedPointHelperFunctions_CoerceFractionalLength_" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.CoerceFractionalLength*"></a>
+  <h4 id="NationalInstruments_DataTypes_FixedPointHelperFunctions_CoerceFractionalLength_System_Int32_" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.CoerceFractionalLength(System.Int32)">CoerceFractionalLength(Int32)</h4>
+  <div class="markdown level1 summary"><p>Coerces an integer to be within the range of default 
+[MinimumFixedPointFractionalLength, MaximumFixedPointFractionalLength].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int CoerceFractionalLength(int fractionalLength)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">fractionalLength</span></td>
+        <td><p>The fractional length of a FXP data type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The coerced integer length</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_FixedPointHelperFunctions_CoerceFractionalLength_" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.CoerceFractionalLength*"></a>
+  <h4 id="NationalInstruments_DataTypes_FixedPointHelperFunctions_CoerceFractionalLength_System_Int32_System_Int32_System_Int32_" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.CoerceFractionalLength(System.Int32,System.Int32,System.Int32)">CoerceFractionalLength(Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Coerces an integer to be within the range 
+[MinimumFixedPointFractionalLength, MaximumFixedPointFractionalLength].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int CoerceFractionalLength(int fractionalLength, int minimumFixedPointFractionalLength, int maximumFixedPointFractionalLength)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">fractionalLength</span></td>
+        <td><p>The fractional length of a FXP data type</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">minimumFixedPointFractionalLength</span></td>
+        <td><p>The minimum fractional length limit of a FXP data type</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">maximumFixedPointFractionalLength</span></td>
+        <td><p>The maxcimum fractional length limit of a FXP data type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The coerced integer length</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_FixedPointHelperFunctions_CoerceIntegerLength_" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.CoerceIntegerLength*"></a>
+  <h4 id="NationalInstruments_DataTypes_FixedPointHelperFunctions_CoerceIntegerLength_System_Int32_" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.CoerceIntegerLength(System.Int32)">CoerceIntegerLength(Int32)</h4>
+  <div class="markdown level1 summary"><p>Coerces an integer to be within the range of default 
+[MinimumFixedPointIntegerLength, MaximumFixedPointIntegerLength].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int CoerceIntegerLength(int integerLength)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">integerLength</span></td>
+        <td><p>The integer length of a FXP data type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The coerced integer length</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_FixedPointHelperFunctions_CoerceIntegerLength_" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.CoerceIntegerLength*"></a>
+  <h4 id="NationalInstruments_DataTypes_FixedPointHelperFunctions_CoerceIntegerLength_System_Int32_System_Int32_System_Int32_" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.CoerceIntegerLength(System.Int32,System.Int32,System.Int32)">CoerceIntegerLength(Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Coerces an integer to be within the range 
+[MinimumFixedPointIntegerLength, MaximumFixedPointIntegerLength].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int CoerceIntegerLength(int integerLength, int minimumIntegerWordLength, int maximumIntegerWordLength)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">integerLength</span></td>
+        <td><p>The integer length of a FXP data type</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">minimumIntegerWordLength</span></td>
+        <td><p>The minimum  integer length limit of a FXP data type</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">maximumIntegerWordLength</span></td>
+        <td><p>The maximum integer length limitof a FXP data type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The coerced integer length</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_FixedPointHelperFunctions_CoerceWordLength_" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.CoerceWordLength*"></a>
+  <h4 id="NationalInstruments_DataTypes_FixedPointHelperFunctions_CoerceWordLength_System_Int32_" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.CoerceWordLength(System.Int32)">CoerceWordLength(Int32)</h4>
+  <div class="markdown level1 summary"><p>CoerceWordLength takes as a parameter an integer and coerces that integer to be
+within the range of global default [MinimumWordLength, MaximumWordLength].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static uint CoerceWordLength(int wordLength)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">wordLength</span></td>
+        <td><p>The word length of a FXP data type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><p>The word length coerced to be within the range [MinimumWordLength, MaximumWordLength].</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_FixedPointHelperFunctions_CoerceWordLength_" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.CoerceWordLength*"></a>
+  <h4 id="NationalInstruments_DataTypes_FixedPointHelperFunctions_CoerceWordLength_System_Int32_System_Int32_System_Int32_" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.CoerceWordLength(System.Int32,System.Int32,System.Int32)">CoerceWordLength(Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>CoerceWordLength takes as a parameter an integer and coerces that integer to be
+within the range [minimumWordLength, maximumWordLength].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static uint CoerceWordLength(int wordLength, int minimumWordLength, int maximumWordLength)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">wordLength</span></td>
+        <td><p>The word length of a FXP data type</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">minimumWordLength</span></td>
+        <td><p>The min word length limit</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">maximumWordLength</span></td>
+        <td><p>The max word length limit </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><p>The word length coerced to be within the range [MinimumWordLength, MaximumWordLength].</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_FixedPointHelperFunctions_ComputeOverflowAndQuantizationPossible_" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.ComputeOverflowAndQuantizationPossible*"></a>
+  <h4 id="NationalInstruments_DataTypes_FixedPointHelperFunctions_ComputeOverflowAndQuantizationPossible_NationalInstruments_DataTypes_NIType_NationalInstruments_DataTypes_NIType_NationalInstruments_DataTypes_WordLengthReductionMode__" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.ComputeOverflowAndQuantizationPossible(NationalInstruments.DataTypes.NIType,NationalInstruments.DataTypes.NIType,NationalInstruments.DataTypes.WordLengthReductionMode@)">ComputeOverflowAndQuantizationPossible(NIType, NIType, ref WordLengthReductionMode)</h4>
+  <div class="markdown level1 summary"><p>Checks if overflow/quantization is impossible, then revert to ShouldNotOverflow/ShouldNotQuantize</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ComputeOverflowAndQuantizationPossible(NIType fullRangeType, NIType originalType, ref WordLengthReductionMode wordLengthReduction)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataTypes.NIType</span></td>
+        <td><span class="parametername">fullRangeType</span></td>
+        <td><p>The full range computed type</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataTypes.NIType</span></td>
+        <td><span class="parametername">originalType</span></td>
+        <td><p>The original output type</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.WordLengthReductionMode.html">WordLengthReductionMode</a></td>
+        <td><span class="parametername">wordLengthReduction</span></td>
+        <td><p>The optimized overflow and quantization</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_FixedPointHelperFunctions_ComputeOverflowAndQuantizationPossible_" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.ComputeOverflowAndQuantizationPossible*"></a>
+  <h4 id="NationalInstruments_DataTypes_FixedPointHelperFunctions_ComputeOverflowAndQuantizationPossible_System_Int32_NationalInstruments_DataValues_Number_NationalInstruments_DataValues_Number_System_Int32_NationalInstruments_DataValues_Number_NationalInstruments_DataValues_Number_NationalInstruments_DataTypes_RoundMode_System_Boolean__System_Boolean__" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.ComputeOverflowAndQuantizationPossible(System.Int32,NationalInstruments.DataValues.Number,NationalInstruments.DataValues.Number,System.Int32,NationalInstruments.DataValues.Number,NationalInstruments.DataValues.Number,NationalInstruments.DataTypes.RoundMode,System.Boolean@,System.Boolean@)">ComputeOverflowAndQuantizationPossible(Int32, Number, Number, Int32, Number, Number, RoundMode, out Boolean, out Boolean)</h4>
+  <div class="markdown level1 summary"><p>Computes if overflow and quantization are possible when going fom one type to another </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ComputeOverflowAndQuantizationPossible(int sourceMinBitPosition, Number sourceMinIn, Number sourceMaxIn, int destinationMinBitPosition, Number destinationMin, Number destinationMax, RoundMode quantizationMode, out bool overflowPossibleOut, out bool quantizationPossibleOut)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">sourceMinBitPosition</span></td>
+        <td><p>Source type least significant bit position</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataValues.Number</span></td>
+        <td><span class="parametername">sourceMinIn</span></td>
+        <td><p>Source type minimum value </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataValues.Number</span></td>
+        <td><span class="parametername">sourceMaxIn</span></td>
+        <td><p>Source Type maximum value</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">destinationMinBitPosition</span></td>
+        <td><p>Destination Type least significant bit position</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataValues.Number</span></td>
+        <td><span class="parametername">destinationMin</span></td>
+        <td><p>Destination type minimum value</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataValues.Number</span></td>
+        <td><span class="parametername">destinationMax</span></td>
+        <td><p>Destination type maximum value</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataTypes.RoundMode</span></td>
+        <td><span class="parametername">quantizationMode</span></td>
+        <td><p>Quantization mode</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">overflowPossibleOut</span></td>
+        <td><p>(out)Possible oveflow </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">quantizationPossibleOut</span></td>
+        <td><p>(out)Possible loss when quantizing</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_FixedPointHelperFunctions_DemoteComplexArrayOrScalarToRealScalar_" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.DemoteComplexArrayOrScalarToRealScalar*"></a>
+  <h4 id="NationalInstruments_DataTypes_FixedPointHelperFunctions_DemoteComplexArrayOrScalarToRealScalar_NationalInstruments_DataTypes_NIType_" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.DemoteComplexArrayOrScalarToRealScalar(NationalInstruments.DataTypes.NIType)">DemoteComplexArrayOrScalarToRealScalar(NIType)</h4>
+  <div class="markdown level1 summary"><p>Returns real scalar corresponding to a complex fixed point array element or scalar type. 
+Incompatible types are returned unmodified</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static NIType DemoteComplexArrayOrScalarToRealScalar(this NIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataTypes.NIType</span></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>Array or scalar numeric type to demote</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataTypes.NIType</span></td>
+        <td><p>Real scalar type corresponding to <see cref="!:type"></see></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_FixedPointHelperFunctions_GetFixedPointRanges_" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.GetFixedPointRanges*"></a>
+  <h4 id="NationalInstruments_DataTypes_FixedPointHelperFunctions_GetFixedPointRanges_NationalInstruments_DataTypes_NIType_NationalInstruments_DataValues_Number__NationalInstruments_DataValues_Number__NationalInstruments_DataValues_Number__" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.GetFixedPointRanges(NationalInstruments.DataTypes.NIType,NationalInstruments.DataValues.Number@,NationalInstruments.DataValues.Number@,NationalInstruments.DataValues.Number@)">GetFixedPointRanges(NIType, out Number, out Number, out Number)</h4>
+  <div class="markdown level1 summary"><p>Get exact range and precision values from a fixed-point or integer data type as Numbers</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void GetFixedPointRanges(this NIType type, out Number minValue, out Number maxValue, out Number deltaValue)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataTypes.NIType</span></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>Fixed-point or integer data type</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataValues.Number</span></td>
+        <td><span class="parametername">minValue</span></td>
+        <td><p>Minimum value representable by the type</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataValues.Number</span></td>
+        <td><span class="parametername">maxValue</span></td>
+        <td><p>Maximum value representable by the type</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataValues.Number</span></td>
+        <td><span class="parametername">deltaValue</span></td>
+        <td><p>Resolution of the type (LSB weight)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_FixedPointHelperFunctions_GetFixedPointTypeMaxIntegerValue_" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.GetFixedPointTypeMaxIntegerValue*"></a>
+  <h4 id="NationalInstruments_DataTypes_FixedPointHelperFunctions_GetFixedPointTypeMaxIntegerValue_NationalInstruments_DataTypes_NIType_" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.GetFixedPointTypeMaxIntegerValue(NationalInstruments.DataTypes.NIType)">GetFixedPointTypeMaxIntegerValue(NIType)</h4>
+  <div class="markdown level1 summary"><p>Given a fixed-point or integer data type, returns the max integer value representable by that type. If
+the max integer is outside the range of a UInt64, returns the maximum value of a UInt64.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ulong GetFixedPointTypeMaxIntegerValue(NIType fixedPointType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataTypes.NIType</span></td>
+        <td><span class="parametername">fixedPointType</span></td>
+        <td><p>Fixed point type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><p>Maximum integer value representable</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_FixedPointHelperFunctions_IsAnyComplexFixedPointArrayOrScalar_" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.IsAnyComplexFixedPointArrayOrScalar*"></a>
+  <h4 id="NationalInstruments_DataTypes_FixedPointHelperFunctions_IsAnyComplexFixedPointArrayOrScalar_NationalInstruments_DataTypes_NIType_" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.IsAnyComplexFixedPointArrayOrScalar(NationalInstruments.DataTypes.NIType)">IsAnyComplexFixedPointArrayOrScalar(NIType)</h4>
+  <div class="markdown level1 summary"><p>Checks whether the given type is a complex fixed point array element or scalar type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsAnyComplexFixedPointArrayOrScalar(this NIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataTypes.NIType</span></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The type to check.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the type is or contains a complex fixed point type, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_FixedPointHelperFunctions_IsBalancedWordLength_" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.IsBalancedWordLength*"></a>
+  <h4 id="NationalInstruments_DataTypes_FixedPointHelperFunctions_IsBalancedWordLength_NationalInstruments_DataTypes_NIType_" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.IsBalancedWordLength(NationalInstruments.DataTypes.NIType)">IsBalancedWordLength(NIType)</h4>
+  <div class="markdown level1 summary"><p>Checks sanity of a fixed-point type&apos;s word length. The three length parameters must all be in range and 
+consistent with each other.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsBalancedWordLength(this NIType fixedPointType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataTypes.NIType</span></td>
+        <td><span class="parametername">fixedPointType</span></td>
+        <td><p>Fixed-point or integer type to validate</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the word length is valid related to the integer bits and fractional bits</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_FixedPointHelperFunctions_IsValidFixedPointConfiguration_" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.IsValidFixedPointConfiguration*"></a>
+  <h4 id="NationalInstruments_DataTypes_FixedPointHelperFunctions_IsValidFixedPointConfiguration_NationalInstruments_DataTypes_NIType_" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.IsValidFixedPointConfiguration(NationalInstruments.DataTypes.NIType)">IsValidFixedPointConfiguration(NIType)</h4>
+  <div class="markdown level1 summary"><p>Checks sanity of a fixed-point type configuration. The three length parameters must all be in range and 
+consistent with each other.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsValidFixedPointConfiguration(this NIType fixedPointType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataTypes.NIType</span></td>
+        <td><span class="parametername">fixedPointType</span></td>
+        <td><p>Fixed-point or integer type to validate</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the fixed-point configuration is valid</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_FixedPointHelperFunctions_IsValidFractionalBits_" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.IsValidFractionalBits*"></a>
+  <h4 id="NationalInstruments_DataTypes_FixedPointHelperFunctions_IsValidFractionalBits_NationalInstruments_DataTypes_NIType_" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.IsValidFractionalBits(NationalInstruments.DataTypes.NIType)">IsValidFractionalBits(NIType)</h4>
+  <div class="markdown level1 summary"><p>Checks sanity of a fixed-point type&apos;s fractional bits. The fractional bits must be within the range specified by
+MinimumFixedPointFractionalLength and MaximumFixedPointFractionalLength.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsValidFractionalBits(this NIType fixedPointType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataTypes.NIType</span></td>
+        <td><span class="parametername">fixedPointType</span></td>
+        <td><p>Fixed-point or integer type to validate</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the fractional bit is between the minimum and maximum fractional bits</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_FixedPointHelperFunctions_IsValidIntegerBits_" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.IsValidIntegerBits*"></a>
+  <h4 id="NationalInstruments_DataTypes_FixedPointHelperFunctions_IsValidIntegerBits_NationalInstruments_DataTypes_NIType_" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.IsValidIntegerBits(NationalInstruments.DataTypes.NIType)">IsValidIntegerBits(NIType)</h4>
+  <div class="markdown level1 summary"><p>Checks sanity of a fixed-point type&apos;s integer bits. The integer bits must be within the range specified by
+MinimumFixedPointIntegerLength and MaximumFixedPointIntegerLength.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsValidIntegerBits(this NIType fixedPointType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataTypes.NIType</span></td>
+        <td><span class="parametername">fixedPointType</span></td>
+        <td><p>Fixed-point or integer type to validate</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the integer bit is between the minimum and maximum integer bits</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_FixedPointHelperFunctions_IsValidWordLength_" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.IsValidWordLength*"></a>
+  <h4 id="NationalInstruments_DataTypes_FixedPointHelperFunctions_IsValidWordLength_NationalInstruments_DataTypes_NIType_" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.IsValidWordLength(NationalInstruments.DataTypes.NIType)">IsValidWordLength(NIType)</h4>
+  <div class="markdown level1 summary"><p>Checks sanity of a fixed-point type&apos;s word length. The word length must be within the range specified by
+MinimumFixedPointWordLength and MaximumFixedPointWordLength.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsValidWordLength(this NIType fixedPointType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataTypes.NIType</span></td>
+        <td><span class="parametername">fixedPointType</span></td>
+        <td><p>Fixed-point or integer type to validate</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the word length is between the minimum and maximum word length</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_FixedPointHelperFunctions_MinBitPosition_" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.MinBitPosition*"></a>
+  <h4 id="NationalInstruments_DataTypes_FixedPointHelperFunctions_MinBitPosition_NationalInstruments_DataTypes_NIType_" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.MinBitPosition(NationalInstruments.DataTypes.NIType)">MinBitPosition(NIType)</h4>
+  <div class="markdown level1 summary"><p>Gets the index of the least significant bit. (can be negative for fixed point types)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static short MinBitPosition(this NIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataTypes.NIType</span></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int16</span></td>
+        <td><p>The index of the least significant bit.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_FixedPointHelperFunctions_PromoteToFixedPoint_" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.PromoteToFixedPoint*"></a>
+  <h4 id="NationalInstruments_DataTypes_FixedPointHelperFunctions_PromoteToFixedPoint_NationalInstruments_DataTypes_NIType_" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.PromoteToFixedPoint(NationalInstruments.DataTypes.NIType)">PromoteToFixedPoint(NIType)</h4>
+  <div class="markdown level1 summary"><p>Promote integer types to FixedPoint</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static NIType PromoteToFixedPoint(this NIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataTypes.NIType</span></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>an integer type to promote</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataTypes.NIType</span></td>
+        <td><p>The equivalent FXP type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_FixedPointHelperFunctions_PromoteToSignedFixedPoint_" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.PromoteToSignedFixedPoint*"></a>
+  <h4 id="NationalInstruments_DataTypes_FixedPointHelperFunctions_PromoteToSignedFixedPoint_NationalInstruments_DataTypes_NIType_" data-uid="NationalInstruments.DataTypes.FixedPointHelperFunctions.PromoteToSignedFixedPoint(NationalInstruments.DataTypes.NIType)">PromoteToSignedFixedPoint(NIType)</h4>
+  <div class="markdown level1 summary"><p>Returns minimum signed type covering the range of any real or complex 
+fixed-point type or integer.
+If input type is not integer or fixed-point, it is returned unchanged.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static NIType PromoteToSignedFixedPoint(this NIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataTypes.NIType</span></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>signed or unsigned integer or fixed-point (real or complex) data type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataTypes.NIType</span></td>
+        <td><p>range-equivalent signed real or complex fixed-point data type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

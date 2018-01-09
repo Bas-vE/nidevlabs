@@ -1,0 +1,652 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ParsedElementFactory
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ParsedElementFactory
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.SourceModel.Persistence.ParsedElementFactory">
+  
+  
+  <h1 id="NationalInstruments_SourceModel_Persistence_ParsedElementFactory" data-uid="NationalInstruments.SourceModel.Persistence.ParsedElementFactory" class="text-break">Class ParsedElementFactory
+  </h1>
+  <div class="markdown level0 summary"><p>This class helps during parsing of dynamic elements by finding the proper factory method and calling it, as well as
+handling caching of the factory methods for best performance.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ParsedElementFactory</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">NationalInstruments.DynamicProperties.IParsableFactory</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.SourceModel.Persistence.html">NationalInstruments.SourceModel.Persistence</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_SourceModel_Persistence_ParsedElementFactory_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Export]
+public class ParsedElementFactory : IParsableFactory</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_ParsedElementFactory__ctor_" data-uid="NationalInstruments.SourceModel.Persistence.ParsedElementFactory.#ctor*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_ParsedElementFactory__ctor_NationalInstruments_Composition_ICompositionHost_" data-uid="NationalInstruments.SourceModel.Persistence.ParsedElementFactory.#ctor(NationalInstruments.Composition.ICompositionHost)">ParsedElementFactory(ICompositionHost)</h4>
+  <div class="markdown level1 summary"><p>This version of the constructor calls into <span class="xref">System.ComponentModel.Composition.Hosting.CompositionContainer</span> to obtain the list of factory method
+exports using <a class="xref" href="NationalInstruments.SourceModel.Persistence.XmlParserFactoryMethodAttribute.html#NationalInstruments_SourceModel_Persistence_XmlParserFactoryMethodAttribute_ParserContract">ParserContract</a> as the contract identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ImportingConstructor]
+public ParsedElementFactory(ICompositionHost host)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Composition.ICompositionHost</span></td>
+        <td><span class="parametername">host</span></td>
+        <td><p>Host used to obtain parser factory method exports and to use to create an IElementCreateInfo to pass as an argument to all factory methods.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_SourceModel_Persistence_ParsedElementFactory__ctor_NationalInstruments_Composition_ICompositionHost__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This constructor is expensive (could take up to a couple seconds to run in a large system with 1000s of factory methods) so should be avoided during
+startup.  The expensive part is the call to GetExports() on <span class="xref">System.ComponentModel.Composition.Hosting.CompositionContainer</span>.  This call
+is not involved in the other form of the constructor, so that form us much less expensive.</p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_ParsedElementFactory_CanCreateParsable_" data-uid="NationalInstruments.SourceModel.Persistence.ParsedElementFactory.CanCreateParsable*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_ParsedElementFactory_CanCreateParsable_System_Xml_Linq_XName_" data-uid="NationalInstruments.SourceModel.Persistence.ParsedElementFactory.CanCreateParsable(System.Xml.Linq.XName)">CanCreateParsable(XName)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CanCreateParsable(XName parsableName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Xml.Linq.XName</span></td>
+        <td><span class="parametername">parsableName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_ParsedElementFactory_CreateNewElement_" data-uid="NationalInstruments.SourceModel.Persistence.ParsedElementFactory.CreateNewElement*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_ParsedElementFactory_CreateNewElement_System_Type_" data-uid="NationalInstruments.SourceModel.Persistence.ParsedElementFactory.CreateNewElement(System.Type)">CreateNewElement(Type)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a> of the given type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Element CreateNewElement(Type type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The type of Element to be created.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td><p>The newly created <a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_ParsedElementFactory_CreateNewElement_" data-uid="NationalInstruments.SourceModel.Persistence.ParsedElementFactory.CreateNewElement*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_ParsedElementFactory_CreateNewElement_System_Xml_Linq_XName_" data-uid="NationalInstruments.SourceModel.Persistence.ParsedElementFactory.CreateNewElement(System.Xml.Linq.XName)">CreateNewElement(XName)</h4>
+  <div class="markdown level1 summary"><p>Creates a new Element with the given name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Element CreateNewElement(XName elementName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Xml.Linq.XName</span></td>
+        <td><span class="parametername">elementName</span></td>
+        <td><p>Name of the element to create.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td><p>A newly created <a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p>Thrown if an Element with the given name couldn&apos;t be found.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_ParsedElementFactory_CreateNewElement_" data-uid="NationalInstruments.SourceModel.Persistence.ParsedElementFactory.CreateNewElement*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_ParsedElementFactory_CreateNewElement__1" data-uid="NationalInstruments.SourceModel.Persistence.ParsedElementFactory.CreateNewElement``1">CreateNewElement&lt;T&gt;()</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a> of the given type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T CreateNewElement&lt;T&gt;()where T : Element</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><p>The newly created <a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of Element to be created.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_ParsedElementFactory_GetFactoryMethod_" data-uid="NationalInstruments.SourceModel.Persistence.ParsedElementFactory.GetFactoryMethod*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_ParsedElementFactory_GetFactoryMethod_System_Xml_Linq_XName_" data-uid="NationalInstruments.SourceModel.Persistence.ParsedElementFactory.GetFactoryMethod(System.Xml.Linq.XName)">GetFactoryMethod(XName)</h4>
+  <div class="markdown level1 summary"><p>Retrieves the factory method for creating an element with the given XName.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Func&lt;IElementCreateInfo, Element&gt; GetFactoryMethod(XName xmlTag)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Xml.Linq.XName</span></td>
+        <td><span class="parametername">xmlTag</span></td>
+        <td><p>The XName for the element to create</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.IElementCreateInfo.html">IElementCreateInfo</a>, <a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a>&gt;</td>
+        <td><p>A method that can be invoked to create a new element with the given XName</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_ParsedElementFactory_GetTypeForXName_" data-uid="NationalInstruments.SourceModel.Persistence.ParsedElementFactory.GetTypeForXName*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_ParsedElementFactory_GetTypeForXName_System_Xml_Linq_XName_" data-uid="NationalInstruments.SourceModel.Persistence.ParsedElementFactory.GetTypeForXName(System.Xml.Linq.XName)">GetTypeForXName(XName)</h4>
+  <div class="markdown level1 summary"><p>Returns the type of object that will be created for a given XName.  This is intended primarily for 
+mutation purposes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Type GetTypeForXName(XName name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Xml.Linq.XName</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The XName to retrive a type for</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><p>The type of object that will be created or null if an object corresponding to the XName couldn&apos;t be
+found in the system</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_ParsedElementFactory_TryCreateElementFromXml_" data-uid="NationalInstruments.SourceModel.Persistence.ParsedElementFactory.TryCreateElementFromXml*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_ParsedElementFactory_TryCreateElementFromXml_NationalInstruments_SourceModel_IElementCreateInfo_NationalInstruments_SourceModel_Element__System_Boolean__" data-uid="NationalInstruments.SourceModel.Persistence.ParsedElementFactory.TryCreateElementFromXml(NationalInstruments.SourceModel.IElementCreateInfo,NationalInstruments.SourceModel.Element@,System.Boolean@)">TryCreateElementFromXml(IElementCreateInfo, out Element, out Boolean)</h4>
+  <div class="markdown level1 summary"><p>Given the namespaced name of an XML element, create an <a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a> that corresponds to it from a
+registered factory method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryCreateElementFromXml(IElementCreateInfo createInfo, out Element element, out bool parseProperties)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.IElementCreateInfo.html">IElementCreateInfo</a></td>
+        <td><span class="parametername">createInfo</span></td>
+        <td><p>The IElementCreateInfo to use while parsing the Element</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td><span class="parametername">element</span></td>
+        <td><p>On successful exit, contains the newly-created <a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">parseProperties</span></td>
+        <td><p>True to parse the element&apos;s properties, False if the element captured the properties itself</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if successful.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_ParsedElementFactory_NationalInstruments_DynamicProperties_IParsableFactory_CreateNewParsable_" data-uid="NationalInstruments.SourceModel.Persistence.ParsedElementFactory.NationalInstruments#DynamicProperties#IParsableFactory#CreateNewParsable*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_ParsedElementFactory_NationalInstruments_DynamicProperties_IParsableFactory_CreateNewParsable_System_Xml_Linq_XName_" data-uid="NationalInstruments.SourceModel.Persistence.ParsedElementFactory.NationalInstruments#DynamicProperties#IParsableFactory#CreateNewParsable(System.Xml.Linq.XName)">IParsableFactory.CreateNewParsable(XName)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IParsable IParsableFactory.CreateNewParsable(XName parsableName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Xml.Linq.XName</span></td>
+        <td><span class="parametername">parsableName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DynamicProperties.IParsable</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_ParsedElementFactory_NationalInstruments_DynamicProperties_IParsableFactory_TryCreateParsableFromInfo_" data-uid="NationalInstruments.SourceModel.Persistence.ParsedElementFactory.NationalInstruments#DynamicProperties#IParsableFactory#TryCreateParsableFromInfo*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_ParsedElementFactory_NationalInstruments_DynamicProperties_IParsableFactory_TryCreateParsableFromInfo_NationalInstruments_DynamicProperties_IParsableCreateInfo_NationalInstruments_DynamicProperties_IParsable__System_Boolean__" data-uid="NationalInstruments.SourceModel.Persistence.ParsedElementFactory.NationalInstruments#DynamicProperties#IParsableFactory#TryCreateParsableFromInfo(NationalInstruments.DynamicProperties.IParsableCreateInfo,NationalInstruments.DynamicProperties.IParsable@,System.Boolean@)">IParsableFactory.TryCreateParsableFromInfo(IParsableCreateInfo, out IParsable, out Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IParsableFactory.TryCreateParsableFromInfo(IParsableCreateInfo createInfo, out IParsable parsable, out bool parseProperties)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DynamicProperties.IParsableCreateInfo</span></td>
+        <td><span class="parametername">createInfo</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.DynamicProperties.IParsable</span></td>
+        <td><span class="parametername">parsable</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">parseProperties</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">NationalInstruments.DynamicProperties.IParsableFactory</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

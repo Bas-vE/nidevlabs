@@ -1,0 +1,505 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class UniversalParser
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class UniversalParser
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.SourceModel.Persistence.UniversalParser">
+  
+  
+  <h1 id="NationalInstruments_SourceModel_Persistence_UniversalParser" data-uid="NationalInstruments.SourceModel.Persistence.UniversalParser" class="text-break">Class UniversalParser
+  </h1>
+  <div class="markdown level0 summary"><p>The universal parser for parsing all source files.
+This parser acts as THE embedded parser used by <a class="xref" href="NationalInstruments.SourceModel.SourceFileParser.html">SourceFileParser</a> for all content under the
+universal persistence scheme.
+Obviously the vast majority of the functionality of this parser is implemented in the base classes.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="NationalInstruments.SourceModel.Persistence.XmlModelParser.html">XmlModelParser</a></div>
+    <div class="level2"><span class="xref">UniversalParser</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="NationalInstruments.SourceModel.Persistence.IElementFixupRegistrar.html">IElementFixupRegistrar</a></div>
+    <div><span class="xref">NationalInstruments.DynamicProperties.IParsableErrorReporter</span></div>
+    <div><span class="xref">NationalInstruments.DynamicProperties.IPropertyParserFactory</span></div>
+    <div><span class="xref">NationalInstruments.Core.IServiceAggregator</span></div>
+    <div><span class="xref">NationalInstruments.Core.IQueryService</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Persistence.XmlModelParser.html#NationalInstruments_SourceModel_Persistence_XmlModelParser_Result">XmlModelParser.Result</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Persistence.XmlModelParser.html#NationalInstruments_SourceModel_Persistence_XmlModelParser_DataTypeReferenceTable">XmlModelParser.DataTypeReferenceTable</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Persistence.XmlModelParser.html#NationalInstruments_SourceModel_Persistence_XmlModelParser_Options">XmlModelParser.Options</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Persistence.XmlModelParser.html#NationalInstruments_SourceModel_Persistence_XmlModelParser_AllowUnknownElementsAndProperties">XmlModelParser.AllowUnknownElementsAndProperties</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Persistence.XmlModelParser.html#NationalInstruments_SourceModel_Persistence_XmlModelParser_XmlReader">XmlModelParser.XmlReader</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Persistence.XmlModelParser.html#NationalInstruments_SourceModel_Persistence_XmlModelParser_Host">XmlModelParser.Host</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Persistence.XmlModelParser.html#NationalInstruments_SourceModel_Persistence_XmlModelParser_RegisterPostParseFixup_NationalInstruments_SourceModel_Element_System_Action_NationalInstruments_SourceModel_Element_NationalInstruments_SourceModel_IElementServices__">XmlModelParser.RegisterPostParseFixup(Element, Action&lt;Element, IElementServices&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Persistence.XmlModelParser.html#NationalInstruments_SourceModel_Persistence_XmlModelParser_RegisterPostParseFixup_NationalInstruments_SourceModel_Element_System_Action_NationalInstruments_SourceModel_Element_NationalInstruments_SourceModel_IElementServices__System_String_">XmlModelParser.RegisterPostParseFixup(Element, Action&lt;Element, IElementServices&gt;, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Persistence.XmlModelParser.html#NationalInstruments_SourceModel_Persistence_XmlModelParser_RegisterParseCompleteFixup_NationalInstruments_SourceModel_Element_System_Action_NationalInstruments_SourceModel_Element_NationalInstruments_SourceModel_IElementServices__">XmlModelParser.RegisterParseCompleteFixup(Element, Action&lt;Element, IElementServices&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Persistence.XmlModelParser.html#NationalInstruments_SourceModel_Persistence_XmlModelParser_RegisterParseCompleteFixup_NationalInstruments_SourceModel_Element_System_Action_NationalInstruments_SourceModel_Element_NationalInstruments_SourceModel_IElementServices__System_String_">XmlModelParser.RegisterParseCompleteFixup(Element, Action&lt;Element, IElementServices&gt;, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Persistence.XmlModelParser.html#NationalInstruments_SourceModel_Persistence_XmlModelParser_NationalInstruments_SourceModel_Persistence_IElementFixupRegistrar_RegisterIdentifierFixup_NationalInstruments_SourceModel_Persistence_IdContainer_">XmlModelParser.IElementFixupRegistrar.RegisterIdentifierFixup(IdContainer)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Persistence.XmlModelParser.html#NationalInstruments_SourceModel_Persistence_XmlModelParser_NationalInstruments_SourceModel_Persistence_IElementFixupRegistrar_RegisterTerminalIdentifierFixup_NationalInstruments_SourceModel_Persistence_ContentIdContainer_NationalInstruments_SourceModel_Persistence_TerminalIdContainer_">XmlModelParser.IElementFixupRegistrar.RegisterTerminalIdentifierFixup(ContentIdContainer, TerminalIdContainer)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Persistence.XmlModelParser.html#NationalInstruments_SourceModel_Persistence_XmlModelParser_NationalInstruments_SourceModel_Persistence_IElementFixupRegistrar_RegisterWireDescription_NationalInstruments_SourceModel_WireDescription_">XmlModelParser.IElementFixupRegistrar.RegisterWireDescription(WireDescription)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Persistence.XmlModelParser.html#NationalInstruments_SourceModel_Persistence_XmlModelParser_FinishPreparations_NationalInstruments_SourceModel_IElementServices_System_Boolean_">XmlModelParser.FinishPreparations(IElementServices, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Persistence.XmlModelParser.html#NationalInstruments_SourceModel_Persistence_XmlModelParser_FinishPreparations_NationalInstruments_SourceModel_IElementServices_NationalInstruments_SourceModel_ModelParserResult_System_Boolean_">XmlModelParser.FinishPreparations(IElementServices, ModelParserResult, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Persistence.XmlModelParser.html#NationalInstruments_SourceModel_Persistence_XmlModelParser_FinishParse">XmlModelParser.FinishParse()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Persistence.XmlModelParser.html#NationalInstruments_SourceModel_Persistence_XmlModelParser_AddPostParseFixupOrder_System_String_System_String_">XmlModelParser.AddPostParseFixupOrder(String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Persistence.XmlModelParser.html#NationalInstruments_SourceModel_Persistence_XmlModelParser_AddParseCompleteFixupOrder_System_String_System_String_">XmlModelParser.AddParseCompleteFixupOrder(String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Persistence.XmlModelParser.html#NationalInstruments_SourceModel_Persistence_XmlModelParser_InitializeToNewReader_System_Xml_XmlReader_">XmlModelParser.InitializeToNewReader(XmlReader)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Persistence.XmlModelParser.html#NationalInstruments_SourceModel_Persistence_XmlModelParser_InitializeToNewStream_System_IO_Stream_">XmlModelParser.InitializeToNewStream(Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Persistence.XmlModelParser.html#NationalInstruments_SourceModel_Persistence_XmlModelParser_ParseReason">XmlModelParser.ParseReason</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Persistence.XmlModelParser.html#NationalInstruments_SourceModel_Persistence_XmlModelParser_Parse_NationalInstruments_SourceModel_Element_">XmlModelParser.Parse(Element)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Persistence.XmlModelParser.html#NationalInstruments_SourceModel_Persistence_XmlModelParser_IgnoreCurrentElement">XmlModelParser.IgnoreCurrentElement()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Persistence.XmlModelParser.html#NationalInstruments_SourceModel_Persistence_XmlModelParser_ParseDynamicElement_NationalInstruments_SourceModel_Element_">XmlModelParser.ParseDynamicElement(Element)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Persistence.XmlModelParser.html#NationalInstruments_SourceModel_Persistence_XmlModelParser_ParseDynamicPropertiesForElement_NationalInstruments_SourceModel_Element_">XmlModelParser.ParseDynamicPropertiesForElement(Element)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Persistence.XmlModelParser.html#NationalInstruments_SourceModel_Persistence_XmlModelParser_NationalInstruments_DynamicProperties_IParsableErrorReporter_ReportUnrecognizedPropertyValue_NationalInstruments_DynamicProperties_IParsable_NationalInstruments_DynamicProperties_SerializablePropertySymbol_System_String_">XmlModelParser.IParsableErrorReporter.ReportUnrecognizedPropertyValue(IParsable, SerializablePropertySymbol, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Persistence.XmlModelParser.html#NationalInstruments_SourceModel_Persistence_XmlModelParser_NationalInstruments_DynamicProperties_IParsableErrorReporter_ReportUnknownProperty_NationalInstruments_DynamicProperties_IParsable_System_Xml_Linq_XName_System_String_">XmlModelParser.IParsableErrorReporter.ReportUnknownProperty(IParsable, XName, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Persistence.XmlModelParser.html#NationalInstruments_SourceModel_Persistence_XmlModelParser_NationalInstruments_DynamicProperties_IParsableErrorReporter_ReportUnknownParsable_NationalInstruments_DynamicProperties_IParsable_System_Xml_Linq_XName_System_Boolean_">XmlModelParser.IParsableErrorReporter.ReportUnknownParsable(IParsable, XName, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Persistence.XmlModelParser.html#NationalInstruments_SourceModel_Persistence_XmlModelParser_NationalInstruments_DynamicProperties_IParsableErrorReporter_ReportUnknownParsable_NationalInstruments_DynamicProperties_IParsable_NationalInstruments_DynamicProperties_IUnknownParsableInfo_System_Boolean_">XmlModelParser.IParsableErrorReporter.ReportUnknownParsable(IParsable, IUnknownParsableInfo, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Persistence.XmlModelParser.html#NationalInstruments_SourceModel_Persistence_XmlModelParser_NationalInstruments_DynamicProperties_IPropertyParserFactory_CreatePropertyParser_NationalInstruments_DynamicProperties_IParsable_NationalInstruments_DynamicProperties_UniversalParsingAlgorithm_System_Collections_Generic_IEnumerable_NationalInstruments_DynamicProperties_SerializablePropertySymbol__">XmlModelParser.IPropertyParserFactory.CreatePropertyParser(IParsable, UniversalParsingAlgorithm, IEnumerable&lt;SerializablePropertySymbol&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Persistence.XmlModelParser.html#NationalInstruments_SourceModel_Persistence_XmlModelParser_QueryService__1">XmlModelParser.QueryService&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Persistence.XmlModelParser.html#NationalInstruments_SourceModel_Persistence_XmlModelParser_AttachService_System_Object_">XmlModelParser.AttachService(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Persistence.XmlModelParser.html#NationalInstruments_SourceModel_Persistence_XmlModelParser_RemoveService_System_Object_">XmlModelParser.RemoveService(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Persistence.XmlModelParser.html#NationalInstruments_SourceModel_Persistence_XmlModelParser_RemoveAll_System_Predicate_System_Object__">XmlModelParser.RemoveAll(Predicate&lt;Object&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Persistence.XmlModelParser.html#NationalInstruments_SourceModel_Persistence_XmlModelParser_SetService__1_System_Object_">XmlModelParser.SetService&lt;T&gt;(Object)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.SourceModel.Persistence.html">NationalInstruments.SourceModel.Persistence</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_SourceModel_Persistence_UniversalParser_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class UniversalParser : XmlModelParser, IElementFixupRegistrar, IParsableErrorReporter, IPropertyParserFactory, IServiceAggregator, IQueryService</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_UniversalParser__ctor_" data-uid="NationalInstruments.SourceModel.Persistence.UniversalParser.#ctor*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_UniversalParser__ctor_NationalInstruments_Composition_ICompositionHost_System_IO_Stream_" data-uid="NationalInstruments.SourceModel.Persistence.UniversalParser.#ctor(NationalInstruments.Composition.ICompositionHost,System.IO.Stream)">UniversalParser(ICompositionHost, Stream)</h4>
+  <div class="markdown level1 summary"><p>Constucts a new UniversalParser</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UniversalParser(ICompositionHost host, Stream stream)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Composition.ICompositionHost</span></td>
+        <td><span class="parametername">host</span></td>
+        <td><p>the host the parser should use</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.IO.Stream</span></td>
+        <td><span class="parametername">stream</span></td>
+        <td><p>The stream from which the parser will read.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_UniversalParser__ctor_" data-uid="NationalInstruments.SourceModel.Persistence.UniversalParser.#ctor*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_UniversalParser__ctor_NationalInstruments_Composition_ICompositionHost_System_IO_Stream_NationalInstruments_SourceModel_ModelParserOptions_" data-uid="NationalInstruments.SourceModel.Persistence.UniversalParser.#ctor(NationalInstruments.Composition.ICompositionHost,System.IO.Stream,NationalInstruments.SourceModel.ModelParserOptions)">UniversalParser(ICompositionHost, Stream, ModelParserOptions)</h4>
+  <div class="markdown level1 summary"><p>Constucts a new UniversalParser</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UniversalParser(ICompositionHost host, Stream stream, ModelParserOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Composition.ICompositionHost</span></td>
+        <td><span class="parametername">host</span></td>
+        <td><p>the host the parser should use</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.IO.Stream</span></td>
+        <td><span class="parametername">stream</span></td>
+        <td><p>The stream from which the parser will read.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ModelParserOptions.html">ModelParserOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Specifies various options for how the parser behaves while parsing. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_UniversalParser__ctor_" data-uid="NationalInstruments.SourceModel.Persistence.UniversalParser.#ctor*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_UniversalParser__ctor_NationalInstruments_Composition_ICompositionHost_System_Xml_XmlReader_" data-uid="NationalInstruments.SourceModel.Persistence.UniversalParser.#ctor(NationalInstruments.Composition.ICompositionHost,System.Xml.XmlReader)">UniversalParser(ICompositionHost, XmlReader)</h4>
+  <div class="markdown level1 summary"><p>Constucts a new UniversalParser</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UniversalParser(ICompositionHost host, XmlReader reader)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Composition.ICompositionHost</span></td>
+        <td><span class="parametername">host</span></td>
+        <td><p>the host the parser should use</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Xml.XmlReader</span></td>
+        <td><span class="parametername">reader</span></td>
+        <td><p>The XmlReader from which the parser will read.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_UniversalParser__ctor_" data-uid="NationalInstruments.SourceModel.Persistence.UniversalParser.#ctor*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_UniversalParser__ctor_NationalInstruments_Composition_ICompositionHost_System_Xml_XmlReader_NationalInstruments_SourceModel_ModelParserOptions_" data-uid="NationalInstruments.SourceModel.Persistence.UniversalParser.#ctor(NationalInstruments.Composition.ICompositionHost,System.Xml.XmlReader,NationalInstruments.SourceModel.ModelParserOptions)">UniversalParser(ICompositionHost, XmlReader, ModelParserOptions)</h4>
+  <div class="markdown level1 summary"><p>Constucts a new UniversalParser</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UniversalParser(ICompositionHost host, XmlReader reader, ModelParserOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Composition.ICompositionHost</span></td>
+        <td><span class="parametername">host</span></td>
+        <td><p>the host the parser should use</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Xml.XmlReader</span></td>
+        <td><span class="parametername">reader</span></td>
+        <td><p>The XmlReader from which the parser will read.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ModelParserOptions.html">ModelParserOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Specifies various options for how the parser behaves while parsing. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_UniversalParser_OnParse_" data-uid="NationalInstruments.SourceModel.Persistence.UniversalParser.OnParse*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_UniversalParser_OnParse_NationalInstruments_SourceModel_Element_" data-uid="NationalInstruments.SourceModel.Persistence.UniversalParser.OnParse(NationalInstruments.SourceModel.Element)">OnParse(Element)</h4>
+  <div class="markdown level1 summary"><p>Performs the action parsing of top level or root elements. This method
+must populate the Results.RootElements with whatever is has parsed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override bool OnParse(Element owner)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td><span class="parametername">owner</span></td>
+        <td><p>The parsed owner</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>boolean</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.Persistence.XmlModelParser.html#NationalInstruments_SourceModel_Persistence_XmlModelParser_OnParse_NationalInstruments_SourceModel_Element_">XmlModelParser.OnParse(Element)</a></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Persistence.IElementFixupRegistrar.html">IElementFixupRegistrar</a>
+  </div>
+  <div>
+      <span class="xref">NationalInstruments.DynamicProperties.IParsableErrorReporter</span>
+  </div>
+  <div>
+      <span class="xref">NationalInstruments.DynamicProperties.IPropertyParserFactory</span>
+  </div>
+  <div>
+      <span class="xref">NationalInstruments.Core.IServiceAggregator</span>
+  </div>
+  <div>
+      <span class="xref">NationalInstruments.Core.IQueryService</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.PaletteContextHelpers.html#NationalInstruments_Design_PaletteContextHelpers_GetPaletteContextKeywords_NationalInstruments_Core_IQueryService_">PaletteContextHelpers.GetPaletteContextKeywords(IQueryService)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

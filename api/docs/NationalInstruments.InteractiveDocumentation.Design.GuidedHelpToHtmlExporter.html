@@ -1,0 +1,949 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class GuidedHelpToHtmlExporter
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class GuidedHelpToHtmlExporter
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.InteractiveDocumentation.Design.GuidedHelpToHtmlExporter">
+  
+  
+  <h1 id="NationalInstruments_InteractiveDocumentation_Design_GuidedHelpToHtmlExporter" data-uid="NationalInstruments.InteractiveDocumentation.Design.GuidedHelpToHtmlExporter" class="text-break">Class GuidedHelpToHtmlExporter
+  </h1>
+  <div class="markdown level0 summary"><p>Exports guided help pages to single HTML file.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">GuidedHelpToHtmlExporter</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="NationalInstruments.InteractiveDocumentation.View.IGuidedHelpExporter.html">IGuidedHelpExporter</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.InteractiveDocumentation.Design.html">NationalInstruments.InteractiveDocumentation.Design</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_InteractiveDocumentation_Design_GuidedHelpToHtmlExporter_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Export(typeof (IGuidedHelpExporter))]
+public class GuidedHelpToHtmlExporter : IGuidedHelpExporter</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="NationalInstruments_InteractiveDocumentation_Design_GuidedHelpToHtmlExporter_ContentClassName" data-uid="NationalInstruments.InteractiveDocumentation.Design.GuidedHelpToHtmlExporter.ContentClassName">ContentClassName</h4>
+  <div class="markdown level1 summary"><p>The name of the class for the content of each page</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ContentClassName = &quot;exportContent&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_InteractiveDocumentation_Design_GuidedHelpToHtmlExporter_LinkClassName" data-uid="NationalInstruments.InteractiveDocumentation.Design.GuidedHelpToHtmlExporter.LinkClassName">LinkClassName</h4>
+  <div class="markdown level1 summary"><p>The name of the class for each link to the table of contents</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string LinkClassName = &quot;exportLink&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_InteractiveDocumentation_Design_GuidedHelpToHtmlExporter_OverallContainerClassName" data-uid="NationalInstruments.InteractiveDocumentation.Design.GuidedHelpToHtmlExporter.OverallContainerClassName">OverallContainerClassName</h4>
+  <div class="markdown level1 summary"><p>The name of the class of the content of the entire export document</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string OverallContainerClassName = &quot;exportContainer&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_InteractiveDocumentation_Design_GuidedHelpToHtmlExporter_PageClassName" data-uid="NationalInstruments.InteractiveDocumentation.Design.GuidedHelpToHtmlExporter.PageClassName">PageClassName</h4>
+  <div class="markdown level1 summary"><p>The name of the class for each page</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PageClassName = &quot;exportPage&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_InteractiveDocumentation_Design_GuidedHelpToHtmlExporter_ResponseFieldClassName" data-uid="NationalInstruments.InteractiveDocumentation.Design.GuidedHelpToHtmlExporter.ResponseFieldClassName">ResponseFieldClassName</h4>
+  <div class="markdown level1 summary"><p>The name of the class for response fields</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ResponseFieldClassName = &quot;responseField&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_InteractiveDocumentation_Design_GuidedHelpToHtmlExporter_TableOfContentsId" data-uid="NationalInstruments.InteractiveDocumentation.Design.GuidedHelpToHtmlExporter.TableOfContentsId">TableOfContentsId</h4>
+  <div class="markdown level1 summary"><p>The id of the table of contents</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string TableOfContentsId = &quot;exportTable&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_InteractiveDocumentation_Design_GuidedHelpToHtmlExporter_TitleId" data-uid="NationalInstruments.InteractiveDocumentation.Design.GuidedHelpToHtmlExporter.TitleId">TitleId</h4>
+  <div class="markdown level1 summary"><p>The id of the title of the exported page</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string TitleId = &quot;exportTitle&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_InteractiveDocumentation_Design_GuidedHelpToHtmlExporter_FileExtensions_" data-uid="NationalInstruments.InteractiveDocumentation.Design.GuidedHelpToHtmlExporter.FileExtensions*"></a>
+  <h4 id="NationalInstruments_InteractiveDocumentation_Design_GuidedHelpToHtmlExporter_FileExtensions" data-uid="NationalInstruments.InteractiveDocumentation.Design.GuidedHelpToHtmlExporter.FileExtensions">FileExtensions</h4>
+  <div class="markdown level1 summary"><p>List of supported file extensions. (e.g. &apos;.html&apos;, &apos;.pdf&apos; etc.)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;string&gt; FileExtensions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_InteractiveDocumentation_Design_GuidedHelpToHtmlExporter_FileTypeDescription_" data-uid="NationalInstruments.InteractiveDocumentation.Design.GuidedHelpToHtmlExporter.FileTypeDescription*"></a>
+  <h4 id="NationalInstruments_InteractiveDocumentation_Design_GuidedHelpToHtmlExporter_FileTypeDescription" data-uid="NationalInstruments.InteractiveDocumentation.Design.GuidedHelpToHtmlExporter.FileTypeDescription">FileTypeDescription</h4>
+  <div class="markdown level1 summary"><p>Description for supported file type. (e.g. &apos;HTML Files&apos;, &apos;PDF Files&apos; etc.)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string FileTypeDescription { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_InteractiveDocumentation_Design_GuidedHelpToHtmlExporter_BeginExportContent_" data-uid="NationalInstruments.InteractiveDocumentation.Design.GuidedHelpToHtmlExporter.BeginExportContent*"></a>
+  <h4 id="NationalInstruments_InteractiveDocumentation_Design_GuidedHelpToHtmlExporter_BeginExportContent_NationalInstruments_InteractiveDocumentation_Model_HtmlGuidedHelp_System_String_System_Action_System_String_System_Exception__" data-uid="NationalInstruments.InteractiveDocumentation.Design.GuidedHelpToHtmlExporter.BeginExportContent(NationalInstruments.InteractiveDocumentation.Model.HtmlGuidedHelp,System.String,System.Action{System.String,System.Exception})">BeginExportContent(HtmlGuidedHelp, String, Action&lt;String, Exception&gt;)</h4>
+  <div class="markdown level1 summary"><p>Begin exporting guided help content to specified path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BeginExportContent(HtmlGuidedHelp model, string filePath, Action&lt;string, Exception&gt; exportComplete)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.InteractiveDocumentation.Model.HtmlGuidedHelp.html">HtmlGuidedHelp</a></td>
+        <td><span class="parametername">model</span></td>
+        <td><p>HtmlGuidedHelp model to export.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">filePath</span></td>
+        <td><p>Path of file on disk.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Exception</span>&gt;</td>
+        <td><span class="parametername">exportComplete</span></td>
+        <td><p>Action to be called when file export is complete. If exporter is not able to 
+export content to specified location, appropriate exception would be passed to the callback function. Path
+of file on disk is passed as first parameter. If export fails, string.Empty will be passed as first parameter.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_InteractiveDocumentation_Design_GuidedHelpToHtmlExporter_CopyDirectory_" data-uid="NationalInstruments.InteractiveDocumentation.Design.GuidedHelpToHtmlExporter.CopyDirectory*"></a>
+  <h4 id="NationalInstruments_InteractiveDocumentation_Design_GuidedHelpToHtmlExporter_CopyDirectory_System_String_System_String_" data-uid="NationalInstruments.InteractiveDocumentation.Design.GuidedHelpToHtmlExporter.CopyDirectory(System.String,System.String)">CopyDirectory(String, String)</h4>
+  <div class="markdown level1 summary"><p>Copy a directory, and all files and sub-files within it recursively to the target directory</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CopyDirectory(string sourceDirectory, string targetDirectory)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sourceDirectory</span></td>
+        <td><p>The source directory</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">targetDirectory</span></td>
+        <td><p>The target directory</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_InteractiveDocumentation_Design_GuidedHelpToHtmlExporter_CreateOutputHtmlDocument_" data-uid="NationalInstruments.InteractiveDocumentation.Design.GuidedHelpToHtmlExporter.CreateOutputHtmlDocument*"></a>
+  <h4 id="NationalInstruments_InteractiveDocumentation_Design_GuidedHelpToHtmlExporter_CreateOutputHtmlDocument_System_Collections_ObjectModel_ReadOnlyCollection_NationalInstruments_InteractiveDocumentation_Model_HtmlGuidedHelpPage__System_String_System_String_NationalInstruments_SourceModel_Envoys_Project_System_Collections_ObjectModel_Collection_NationalInstruments_ExternalFileSupport_SourceModel_ExternalFileType___System_String_" data-uid="NationalInstruments.InteractiveDocumentation.Design.GuidedHelpToHtmlExporter.CreateOutputHtmlDocument(System.Collections.ObjectModel.ReadOnlyCollection{NationalInstruments.InteractiveDocumentation.Model.HtmlGuidedHelpPage},System.String,System.String,NationalInstruments.SourceModel.Envoys.Project,System.Collections.ObjectModel.Collection{NationalInstruments.ExternalFileSupport.SourceModel.ExternalFileType}@,System.String)">CreateOutputHtmlDocument(ReadOnlyCollection&lt;HtmlGuidedHelpPage&gt;, String, String, Project, ref Collection&lt;ExternalFileType&gt;, String)</h4>
+  <div class="markdown level1 summary"><p>Given a list of Guided Help page view-models and a title, output an HtmlDocument that combines them all.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static HtmlDocument CreateOutputHtmlDocument(ReadOnlyCollection&lt;HtmlGuidedHelpPage&gt; pages, string guidedHelpTitle, string assetsPath, Project activeProject, ref Collection&lt;ExternalFileType&gt; screenshotImageItems, string resourceDirectoryName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.ObjectModel.ReadOnlyCollection</span>&lt;<a class="xref" href="NationalInstruments.InteractiveDocumentation.Model.HtmlGuidedHelpPage.html">HtmlGuidedHelpPage</a>&gt;</td>
+        <td><span class="parametername">pages</span></td>
+        <td><p>The models of our Guided Help pages.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">guidedHelpTitle</span></td>
+        <td><p>The title for the page.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">assetsPath</span></td>
+        <td><p>The path to the assets directory</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Project.html">Project</a></td>
+        <td><span class="parametername">activeProject</span></td>
+        <td><p>Active project</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.ObjectModel.Collection</span>&lt;<a class="xref" href="NationalInstruments.ExternalFileSupport.SourceModel.ExternalFileType.html">ExternalFileType</a>&gt;</td>
+        <td><span class="parametername">screenshotImageItems</span></td>
+        <td><p>The screenshot image items collection (out parameter).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">resourceDirectoryName</span></td>
+        <td><p>Relative path for css etc.,</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">HtmlAgilityPack.HtmlDocument</span></td>
+        <td><p>An HtmlDocument all the pages combined into one.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_InteractiveDocumentation_Design_GuidedHelpToHtmlExporter_CreateTag_" data-uid="NationalInstruments.InteractiveDocumentation.Design.GuidedHelpToHtmlExporter.CreateTag*"></a>
+  <h4 id="NationalInstruments_InteractiveDocumentation_Design_GuidedHelpToHtmlExporter_CreateTag_HtmlAgilityPack_HtmlDocument_System_String_System_String_System_Collections_Generic_IEnumerable_System_Tuple_System_String_System_String___" data-uid="NationalInstruments.InteractiveDocumentation.Design.GuidedHelpToHtmlExporter.CreateTag(HtmlAgilityPack.HtmlDocument,System.String,System.String,System.Collections.Generic.IEnumerable{System.Tuple{System.String,System.String}})">CreateTag(HtmlDocument, String, String, IEnumerable&lt;Tuple&lt;String, String&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Given an HtmlDocument, the name of the tag, the inner-HTML we want within the tag, and a list of tuples representing
+attribute-value pairs, create an HtmlNode of that tag</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static HtmlNode CreateTag(HtmlDocument htmlDocument, string tag, string innerHtml, IEnumerable&lt;Tuple&lt;string, string&gt;&gt; attributes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">HtmlAgilityPack.HtmlDocument</span></td>
+        <td><span class="parametername">htmlDocument</span></td>
+        <td><p>The document to use to create the HtmlNode</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">tag</span></td>
+        <td><p>The name of the tag</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">innerHtml</span></td>
+        <td><p>The HTML within the tag</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Tuple</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="parametername">attributes</span></td>
+        <td><p>The attributes to use for our tag</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">HtmlAgilityPack.HtmlNode</span></td>
+        <td><p>An HtmlNode that represents our tag</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_InteractiveDocumentation_Design_GuidedHelpToHtmlExporter_CreateTag_HtmlAgilityPack_HtmlDocument_System_String_System_String_System_Collections_Generic_IEnumerable_System_Tuple_System_String_System_String____examples">Examples</h5>
+  <p>To make:
+&quot;&lt;a href=&quot;http://www.ni.com&quot;&gt;National Instruments&lt;/a&gt;
+We would write:
+CreateTag(htmlDocument,&quot;a&quot;,&quot;National Instruments&quot;,new string[]{Tuple.Create(&quot;href&quot;,&quot;http://www.ni.com&quot;)});</p>
+
+  
+  
+  <a id="NationalInstruments_InteractiveDocumentation_Design_GuidedHelpToHtmlExporter_ExtractTitle_" data-uid="NationalInstruments.InteractiveDocumentation.Design.GuidedHelpToHtmlExporter.ExtractTitle*"></a>
+  <h4 id="NationalInstruments_InteractiveDocumentation_Design_GuidedHelpToHtmlExporter_ExtractTitle_HtmlAgilityPack_HtmlDocument_" data-uid="NationalInstruments.InteractiveDocumentation.Design.GuidedHelpToHtmlExporter.ExtractTitle(HtmlAgilityPack.HtmlDocument)">ExtractTitle(HtmlDocument)</h4>
+  <div class="markdown level1 summary"><p>Given an HTML document, attempt to find the title, first by looking
+for div, span, h1, h2, and b tags with the class &quot;title&quot;, then by searching for the first h1,
+h2, h3, and b tags in that order</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string ExtractTitle(HtmlDocument doc)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">HtmlAgilityPack.HtmlDocument</span></td>
+        <td><span class="parametername">doc</span></td>
+        <td><p>The HtmlDocument to search</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The title, an estimate of what the title might be, or null</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_InteractiveDocumentation_Design_GuidedHelpToHtmlExporter_ExtractTitle_" data-uid="NationalInstruments.InteractiveDocumentation.Design.GuidedHelpToHtmlExporter.ExtractTitle*"></a>
+  <h4 id="NationalInstruments_InteractiveDocumentation_Design_GuidedHelpToHtmlExporter_ExtractTitle_System_String_" data-uid="NationalInstruments.InteractiveDocumentation.Design.GuidedHelpToHtmlExporter.ExtractTitle(System.String)">ExtractTitle(String)</h4>
+  <div class="markdown level1 summary"><p>Given a string that represents an HTML document, attempt to find the title, first by looking
+for div, span, h1, h2, and b tags with the class &quot;title&quot;, then by searching for the first h1,
+h2, h3, and b tags in that order</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string ExtractTitle(string content)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">content</span></td>
+        <td><p>A string representation of HTML data</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The title, an estimate of what the title might be, or simply &quot;Title&quot;</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_InteractiveDocumentation_Design_GuidedHelpToHtmlExporter_GetFullPathRelativeTo_" data-uid="NationalInstruments.InteractiveDocumentation.Design.GuidedHelpToHtmlExporter.GetFullPathRelativeTo*"></a>
+  <h4 id="NationalInstruments_InteractiveDocumentation_Design_GuidedHelpToHtmlExporter_GetFullPathRelativeTo_System_String_System_String_" data-uid="NationalInstruments.InteractiveDocumentation.Design.GuidedHelpToHtmlExporter.GetFullPathRelativeTo(System.String,System.String)">GetFullPathRelativeTo(String, String)</h4>
+  <div class="markdown level1 summary"><p>Given a file and a relative path in that file, determine the absolute path
+of that relative path referred to in that file</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetFullPathRelativeTo(string pathToFile, string relativePath)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">pathToFile</span></td>
+        <td><p>The file that we want to get the relative path ... relative to</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">relativePath</span></td>
+        <td><p>The relative path in the file</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The absolute path</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_InteractiveDocumentation_Design_GuidedHelpToHtmlExporter_GetSubdirectories_" data-uid="NationalInstruments.InteractiveDocumentation.Design.GuidedHelpToHtmlExporter.GetSubdirectories*"></a>
+  <h4 id="NationalInstruments_InteractiveDocumentation_Design_GuidedHelpToHtmlExporter_GetSubdirectories_System_String_" data-uid="NationalInstruments.InteractiveDocumentation.Design.GuidedHelpToHtmlExporter.GetSubdirectories(System.String)">GetSubdirectories(String)</h4>
+  <div class="markdown level1 summary"><p>Get the full path of a directory and all it&apos;s sub-directories in depth-first order</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;string&gt; GetSubdirectories(string directoryPath)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">directoryPath</span></td>
+        <td><p>The initial directory</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><p>An IEnumerable of DirectoryInfos of this directory and all sub-directories</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_InteractiveDocumentation_Design_GuidedHelpToHtmlExporter_HasMathJaxContent_" data-uid="NationalInstruments.InteractiveDocumentation.Design.GuidedHelpToHtmlExporter.HasMathJaxContent*"></a>
+  <h4 id="NationalInstruments_InteractiveDocumentation_Design_GuidedHelpToHtmlExporter_HasMathJaxContent_System_Collections_Generic_IEnumerable_NationalInstruments_InteractiveDocumentation_Model_HtmlGuidedHelpPage__" data-uid="NationalInstruments.InteractiveDocumentation.Design.GuidedHelpToHtmlExporter.HasMathJaxContent(System.Collections.Generic.IEnumerable{NationalInstruments.InteractiveDocumentation.Model.HtmlGuidedHelpPage})">HasMathJaxContent(IEnumerable&lt;HtmlGuidedHelpPage&gt;)</h4>
+  <div class="markdown level1 summary"><p>Runs through the pages and determines if there is any MathJax content</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasMathJaxContent(IEnumerable&lt;HtmlGuidedHelpPage&gt; pages)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.InteractiveDocumentation.Model.HtmlGuidedHelpPage.html">HtmlGuidedHelpPage</a>&gt;</td>
+        <td><span class="parametername">pages</span></td>
+        <td><p>The models of our HTML pages</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if there is MathJax content, false otherwise</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_InteractiveDocumentation_Design_GuidedHelpToHtmlExporter_HasMathJaxContent_System_Collections_Generic_IEnumerable_NationalInstruments_InteractiveDocumentation_Model_HtmlGuidedHelpPage___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This is for the purpose of optimization, as the MathJax content is fairly large and not needed the majority of the time</p>
+</div>
+  
+  
+  <a id="NationalInstruments_InteractiveDocumentation_Design_GuidedHelpToHtmlExporter_ParseHtmlDocuments_" data-uid="NationalInstruments.InteractiveDocumentation.Design.GuidedHelpToHtmlExporter.ParseHtmlDocuments*"></a>
+  <h4 id="NationalInstruments_InteractiveDocumentation_Design_GuidedHelpToHtmlExporter_ParseHtmlDocuments_System_Collections_Generic_IEnumerable_NationalInstruments_InteractiveDocumentation_Model_HtmlGuidedHelpPage__" data-uid="NationalInstruments.InteractiveDocumentation.Design.GuidedHelpToHtmlExporter.ParseHtmlDocuments(System.Collections.Generic.IEnumerable{NationalInstruments.InteractiveDocumentation.Model.HtmlGuidedHelpPage})">ParseHtmlDocuments(IEnumerable&lt;HtmlGuidedHelpPage&gt;)</h4>
+  <div class="markdown level1 summary"><p>Convert a list of Guided Help page models to (HtmlDocument, Guided Help page model) tuples</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;Tuple&lt;HtmlDocument, HtmlGuidedHelpPage&gt;&gt; ParseHtmlDocuments(IEnumerable&lt;HtmlGuidedHelpPage&gt; pages)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.InteractiveDocumentation.Model.HtmlGuidedHelpPage.html">HtmlGuidedHelpPage</a>&gt;</td>
+        <td><span class="parametername">pages</span></td>
+        <td><p>A list of Guided Help pages</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Tuple</span>&lt;<span class="xref">HtmlAgilityPack.HtmlDocument</span>, <a class="xref" href="NationalInstruments.InteractiveDocumentation.Model.HtmlGuidedHelpPage.html">HtmlGuidedHelpPage</a>&gt;&gt;</td>
+        <td><p>A list of (HtmlDocument, HtmlGuidedHelpPageViewModel) tuples</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_InteractiveDocumentation_Design_GuidedHelpToHtmlExporter_WriteHtmlDocument_" data-uid="NationalInstruments.InteractiveDocumentation.Design.GuidedHelpToHtmlExporter.WriteHtmlDocument*"></a>
+  <h4 id="NationalInstruments_InteractiveDocumentation_Design_GuidedHelpToHtmlExporter_WriteHtmlDocument_HtmlAgilityPack_HtmlDocument_System_String_" data-uid="NationalInstruments.InteractiveDocumentation.Design.GuidedHelpToHtmlExporter.WriteHtmlDocument(HtmlAgilityPack.HtmlDocument,System.String)">WriteHtmlDocument(HtmlDocument, String)</h4>
+  <div class="markdown level1 summary"><p>Output an html document to a file</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void WriteHtmlDocument(HtmlDocument htmlDocument, string outputFile)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">HtmlAgilityPack.HtmlDocument</span></td>
+        <td><span class="parametername">htmlDocument</span></td>
+        <td><p>The html document to output</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">outputFile</span></td>
+        <td><p>The full file path to output to</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.InteractiveDocumentation.View.IGuidedHelpExporter.html">IGuidedHelpExporter</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

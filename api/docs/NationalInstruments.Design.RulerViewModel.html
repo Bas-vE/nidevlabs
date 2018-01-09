@@ -1,0 +1,2185 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class RulerViewModel
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class RulerViewModel
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.Design.RulerViewModel">
+  
+  
+  <h1 id="NationalInstruments_Design_RulerViewModel" data-uid="NationalInstruments.Design.RulerViewModel" class="text-break">Class RulerViewModel
+  </h1>
+  <div class="markdown level0 summary"><p>The view model for the Ruler control</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">NationalInstruments.Core.ViewModelBase</span></div>
+    <div class="level2"><span class="xref">RulerViewModel</span></div>
+      <div class="level3"><a class="xref" href="NationalInstruments.Design.AccumulatorRulerViewModel.html">AccumulatorRulerViewModel</a></div>
+      <div class="level3"><a class="xref" href="NationalInstruments.Design.OperatorConfigurationPanelViewModel.html">OperatorConfigurationPanelViewModel</a></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">NationalInstruments.Core.IViewModel</span></div>
+    <div><span class="xref">System.ComponentModel.INotifyPropertyChanged</span></div>
+    <div><span class="xref">System.Windows.IWeakEventListener</span></div>
+    <div><span class="xref">NationalInstruments.Core.IServiceAggregator</span></div>
+    <div><span class="xref">NationalInstruments.Core.IQueryService</span></div>
+    <div><span class="xref">NationalInstruments.Core.IColorResolver</span></div>
+    <div><a class="xref" href="NationalInstruments.Design.IFixedPointConfigurationMessageProvider.html">IFixedPointConfigurationMessageProvider</a></div>
+    <div><span class="xref">System.ComponentModel.IDataErrorInfo</span></div>
+    <div><a class="xref" href="NationalInstruments.Design.IFixedPointConfiguration.html">IFixedPointConfiguration</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.ViewModelProperty</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.GetNonInheritedViewModel(NationalInstruments.Core.PlatformVisual)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.GetNearestViewModel(NationalInstruments.Core.PlatformVisual)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.SetViewModel(NationalInstruments.Core.PlatformVisual, NationalInstruments.Core.IViewModel)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.Model</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.CreateViewHandler</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.View</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.ParentViewModel</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.OnParentViewModelChanged()</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.BindToView(NationalInstruments.Core.PlatformVisual)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.AddCommandBindings(NationalInstruments.Core.PlatformVisual)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.CommandBindings</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.TryFindResource(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.AttachService(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.RemoveService(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.RemoveAll(System.Predicate&lt;System.Object&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.SetService&lt;T&gt;(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.QueryService&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.PropertyChanged</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.NotifyPropertyChanged(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.ReceiveWeakEvent(System.Type, System.Object, System.EventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.HandlePropertyChanged(System.Object, System.ComponentModel.PropertyChangedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.ContextHelpServicesCreated</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.CreateContextHelpServices()</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.ResolveBrush(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.Design.html">NationalInstruments.Design</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_Design_RulerViewModel_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class RulerViewModel : ViewModelBase, IViewModel, INotifyPropertyChanged, IWeakEventListener, IServiceAggregator, IQueryService, IColorResolver, IFixedPointConfigurationMessageProvider, IDataErrorInfo, IFixedPointConfiguration</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel__ctor_" data-uid="NationalInstruments.Design.RulerViewModel.#ctor*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel__ctor_NationalInstruments_Design_IFixedPointViewModel_" data-uid="NationalInstruments.Design.RulerViewModel.#ctor(NationalInstruments.Design.IFixedPointViewModel)">RulerViewModel(IFixedPointViewModel)</h4>
+  <div class="markdown level1 summary"><p>The constructor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RulerViewModel(IFixedPointViewModel fixedPointViewModel)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.IFixedPointViewModel.html">IFixedPointViewModel</a></td>
+        <td><span class="parametername">fixedPointViewModel</span></td>
+        <td><p>The fixed point view model to configure</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="NationalInstruments_Design_RulerViewModel_HistogramFieldWidth" data-uid="NationalInstruments.Design.RulerViewModel.HistogramFieldWidth">HistogramFieldWidth</h4>
+  <div class="markdown level1 summary"><p>Gets the width of  histogram related preview fields. These fields don&apos;t have to be as long as the non histogram ones.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly GridLength HistogramFieldWidth</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Windows.GridLength</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_Design_RulerViewModel_PixelsPerBitDefault" data-uid="NationalInstruments.Design.RulerViewModel.PixelsPerBitDefault">PixelsPerBitDefault</h4>
+  <div class="markdown level1 summary"><p>Gets the default pixels per bit.  This changes once the scroll viewer&apos;s width is established.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const uint PixelsPerBitDefault = 10U</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_Design_RulerViewModel_PreviewFieldWidth" data-uid="NationalInstruments.Design.RulerViewModel.PreviewFieldWidth">PreviewFieldWidth</h4>
+  <div class="markdown level1 summary"><p>Gets the width of non-histogram related preview fields (min, max, delta)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly GridLength PreviewFieldWidth</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Windows.GridLength</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_AllowLeftAdjustment_" data-uid="NationalInstruments.Design.RulerViewModel.AllowLeftAdjustment*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_AllowLeftAdjustment" data-uid="NationalInstruments.Design.RulerViewModel.AllowLeftAdjustment">AllowLeftAdjustment</h4>
+  <div class="markdown level1 summary"><p>Sets and gets whether the left side of the selection can be adjusted</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AllowLeftAdjustment { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_AllowMovement_" data-uid="NationalInstruments.Design.RulerViewModel.AllowMovement*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_AllowMovement" data-uid="NationalInstruments.Design.RulerViewModel.AllowMovement">AllowMovement</h4>
+  <div class="markdown level1 summary"><p>Sets and gets whether the selection bar can be moved</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AllowMovement { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_AllowRightAdjustment_" data-uid="NationalInstruments.Design.RulerViewModel.AllowRightAdjustment*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_AllowRightAdjustment" data-uid="NationalInstruments.Design.RulerViewModel.AllowRightAdjustment">AllowRightAdjustment</h4>
+  <div class="markdown level1 summary"><p>Sets and gets whether the right side of the selection can be adjusted</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AllowRightAdjustment { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_AnalysisData_" data-uid="NationalInstruments.Design.RulerViewModel.AnalysisData*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_AnalysisData" data-uid="NationalInstruments.Design.RulerViewModel.AnalysisData">AnalysisData</h4>
+  <div class="markdown level1 summary"><p>Gets the fixed point configuration analysis data (if available)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IFixedPointConfiguratorAnalysisData AnalysisData { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.IFixedPointConfiguratorAnalysisData.html">IFixedPointConfiguratorAnalysisData</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_AnalysisDataMaximum_" data-uid="NationalInstruments.Design.RulerViewModel.AnalysisDataMaximum*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_AnalysisDataMaximum" data-uid="NationalInstruments.Design.RulerViewModel.AnalysisDataMaximum">AnalysisDataMaximum</h4>
+  <div class="markdown level1 summary"><p>The analysis data maximum</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string AnalysisDataMaximum { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_AnalysisDataMinimum_" data-uid="NationalInstruments.Design.RulerViewModel.AnalysisDataMinimum*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_AnalysisDataMinimum" data-uid="NationalInstruments.Design.RulerViewModel.AnalysisDataMinimum">AnalysisDataMinimum</h4>
+  <div class="markdown level1 summary"><p>The analysis data minimum</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string AnalysisDataMinimum { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_AnalysisDataOverflowPercentage_" data-uid="NationalInstruments.Design.RulerViewModel.AnalysisDataOverflowPercentage*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_AnalysisDataOverflowPercentage" data-uid="NationalInstruments.Design.RulerViewModel.AnalysisDataOverflowPercentage">AnalysisDataOverflowPercentage</h4>
+  <div class="markdown level1 summary"><p>The analysis data of overflow percentage</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string AnalysisDataOverflowPercentage { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_AnalysisDataRoundingPercentage_" data-uid="NationalInstruments.Design.RulerViewModel.AnalysisDataRoundingPercentage*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_AnalysisDataRoundingPercentage" data-uid="NationalInstruments.Design.RulerViewModel.AnalysisDataRoundingPercentage">AnalysisDataRoundingPercentage</h4>
+  <div class="markdown level1 summary"><p>The analysis data of rounding percentage</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string AnalysisDataRoundingPercentage { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_AnalysisDataSignalToNoiseRatio_" data-uid="NationalInstruments.Design.RulerViewModel.AnalysisDataSignalToNoiseRatio*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_AnalysisDataSignalToNoiseRatio" data-uid="NationalInstruments.Design.RulerViewModel.AnalysisDataSignalToNoiseRatio">AnalysisDataSignalToNoiseRatio</h4>
+  <div class="markdown level1 summary"><p>The analysis data of signal to noise ratio</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string AnalysisDataSignalToNoiseRatio { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_AnalysisDataUnderflowPercentage_" data-uid="NationalInstruments.Design.RulerViewModel.AnalysisDataUnderflowPercentage*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_AnalysisDataUnderflowPercentage" data-uid="NationalInstruments.Design.RulerViewModel.AnalysisDataUnderflowPercentage">AnalysisDataUnderflowPercentage</h4>
+  <div class="markdown level1 summary"><p>The analysis data of underflow percentage</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string AnalysisDataUnderflowPercentage { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_AnalysisProgress_" data-uid="NationalInstruments.Design.RulerViewModel.AnalysisProgress*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_AnalysisProgress" data-uid="NationalInstruments.Design.RulerViewModel.AnalysisProgress">AnalysisProgress</h4>
+  <div class="markdown level1 summary"><p>Gets the progress of the analysis calculation (between 0 and 100)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int AnalysisProgress { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_ApplyDataTypeChange_" data-uid="NationalInstruments.Design.RulerViewModel.ApplyDataTypeChange*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_ApplyDataTypeChange" data-uid="NationalInstruments.Design.RulerViewModel.ApplyDataTypeChange">ApplyDataTypeChange</h4>
+  <div class="markdown level1 summary"><p>Gets and sets whether to apply the data type change</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ApplyDataTypeChange { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_CancelChangesCommand_" data-uid="NationalInstruments.Design.RulerViewModel.CancelChangesCommand*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_CancelChangesCommand" data-uid="NationalInstruments.Design.RulerViewModel.CancelChangesCommand">CancelChangesCommand</h4>
+  <div class="markdown level1 summary"><p>Gets the command associated with the Cancel button</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICommandEx CancelChangesCommand { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.ICommandEx</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_ConfigurationMessage_" data-uid="NationalInstruments.Design.RulerViewModel.ConfigurationMessage*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_ConfigurationMessage" data-uid="NationalInstruments.Design.RulerViewModel.ConfigurationMessage">ConfigurationMessage</h4>
+  <div class="markdown level1 summary"><p>Gets the current message to display (null if no message)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FixedPointConfigurationMessage ConfigurationMessage { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.FixedPointConfigurationMessage.html">FixedPointConfigurationMessage</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_ConfigurationText_" data-uid="NationalInstruments.Design.RulerViewModel.ConfigurationText*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_ConfigurationText" data-uid="NationalInstruments.Design.RulerViewModel.ConfigurationText">ConfigurationText</h4>
+  <div class="markdown level1 summary"><p>Sets and gets the current fixed point configuration in text form</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ConfigurationText { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_DataTypeBars_" data-uid="NationalInstruments.Design.RulerViewModel.DataTypeBars*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_DataTypeBars" data-uid="NationalInstruments.Design.RulerViewModel.DataTypeBars">DataTypeBars</h4>
+  <div class="markdown level1 summary"><p>Gets the collection of data type bars to display above the histogram/ruler</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;DataTypeBarViewModelBase&gt; DataTypeBars { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.Design.DataTypeBarViewModelBase.html">DataTypeBarViewModelBase</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_DataTypeBarSectionHeight_" data-uid="NationalInstruments.Design.RulerViewModel.DataTypeBarSectionHeight*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_DataTypeBarSectionHeight" data-uid="NationalInstruments.Design.RulerViewModel.DataTypeBarSectionHeight">DataTypeBarSectionHeight</h4>
+  <div class="markdown level1 summary"><p>Gets the height of the related terminals section of the ruler</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double DataTypeBarSectionHeight { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_Error_" data-uid="NationalInstruments.Design.RulerViewModel.Error*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_Error" data-uid="NationalInstruments.Design.RulerViewModel.Error">Error</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Error { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_FixedPointType_" data-uid="NationalInstruments.Design.RulerViewModel.FixedPointType*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_FixedPointType" data-uid="NationalInstruments.Design.RulerViewModel.FixedPointType">FixedPointType</h4>
+  <div class="markdown level1 summary"><p>Sets and gets the fixed-point data type corresponding to <a class="xref" href="NationalInstruments.Design.IFixedPointConfiguration.html#NationalInstruments_Design_IFixedPointConfiguration_ConfigurationText">ConfigurationText</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NIType FixedPointType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataTypes.NIType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_FixedPointViewModel_" data-uid="NationalInstruments.Design.RulerViewModel.FixedPointViewModel*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_FixedPointViewModel" data-uid="NationalInstruments.Design.RulerViewModel.FixedPointViewModel">FixedPointViewModel</h4>
+  <div class="markdown level1 summary"><p>Gets the fixed point view model</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IFixedPointViewModel FixedPointViewModel { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.IFixedPointViewModel.html">IFixedPointViewModel</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_GalleryEditor_" data-uid="NationalInstruments.Design.RulerViewModel.GalleryEditor*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_GalleryEditor" data-uid="NationalInstruments.Design.RulerViewModel.GalleryEditor">GalleryEditor</h4>
+  <div class="markdown level1 summary"><p>Represents the underlying view model that changes get committed to</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDataTypeGalleryEditor GalleryEditor { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.IDataTypeGalleryEditor.html">IDataTypeGalleryEditor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_HistogramPreviewFieldWidth_" data-uid="NationalInstruments.Design.RulerViewModel.HistogramPreviewFieldWidth*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_HistogramPreviewFieldWidth" data-uid="NationalInstruments.Design.RulerViewModel.HistogramPreviewFieldWidth">HistogramPreviewFieldWidth</h4>
+  <div class="markdown level1 summary"><p>Gets the width of histogram related preview fields (overflow and rounding)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GridLength HistogramPreviewFieldWidth { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Windows.GridLength</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_Host_" data-uid="NationalInstruments.Design.RulerViewModel.Host*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_Host" data-uid="NationalInstruments.Design.RulerViewModel.Host">Host</h4>
+  <div class="markdown level1 summary"><p>The composition host used by this view model</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICompositionHost Host { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Composition.ICompositionHost</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_IsAnalysisDataEstimated_" data-uid="NationalInstruments.Design.RulerViewModel.IsAnalysisDataEstimated*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_IsAnalysisDataEstimated" data-uid="NationalInstruments.Design.RulerViewModel.IsAnalysisDataEstimated">IsAnalysisDataEstimated</h4>
+  <div class="markdown level1 summary"><p>Represents whether the analysis data is estimated or not</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsAnalysisDataEstimated { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_IsAnalysisRunning_" data-uid="NationalInstruments.Design.RulerViewModel.IsAnalysisRunning*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_IsAnalysisRunning" data-uid="NationalInstruments.Design.RulerViewModel.IsAnalysisRunning">IsAnalysisRunning</h4>
+  <div class="markdown level1 summary"><p>Gets whether the analysis calculation is currently running</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsAnalysisRunning { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_IsConfigurationTextEnabled_" data-uid="NationalInstruments.Design.RulerViewModel.IsConfigurationTextEnabled*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_IsConfigurationTextEnabled" data-uid="NationalInstruments.Design.RulerViewModel.IsConfigurationTextEnabled">IsConfigurationTextEnabled</h4>
+  <div class="markdown level1 summary"><p>Gets whether configuration text is enabled</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool IsConfigurationTextEnabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_IsEditingConfigurationText_" data-uid="NationalInstruments.Design.RulerViewModel.IsEditingConfigurationText*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_IsEditingConfigurationText" data-uid="NationalInstruments.Design.RulerViewModel.IsEditingConfigurationText">IsEditingConfigurationText</h4>
+  <div class="markdown level1 summary"><p>Sets and gets whether the user is currently editing the configuration text</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsEditingConfigurationText { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_IsFirstRowVisible_" data-uid="NationalInstruments.Design.RulerViewModel.IsFirstRowVisible*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_IsFirstRowVisible" data-uid="NationalInstruments.Design.RulerViewModel.IsFirstRowVisible">IsFirstRowVisible</h4>
+  <div class="markdown level1 summary"><p>Whether to show the information for the first row (SQNR, Value, Coerced Value)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsFirstRowVisible { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_IsFixedPointPrecisionLocked_" data-uid="NationalInstruments.Design.RulerViewModel.IsFixedPointPrecisionLocked*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_IsFixedPointPrecisionLocked" data-uid="NationalInstruments.Design.RulerViewModel.IsFixedPointPrecisionLocked">IsFixedPointPrecisionLocked</h4>
+  <div class="markdown level1 summary"><p>Sets and gets whether the output is overridden to a specific fixed-point precision,
+or if it is adapting to input type(s)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool ? IsFixedPointPrecisionLocked { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_IsLockEnabled_" data-uid="NationalInstruments.Design.RulerViewModel.IsLockEnabled*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_IsLockEnabled" data-uid="NationalInstruments.Design.RulerViewModel.IsLockEnabled">IsLockEnabled</h4>
+  <div class="markdown level1 summary"><p>Gets whether the lock button is clickable, true means the node support both auto-adapt to data and overriding types</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool IsLockEnabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_IsSecondRowVisible_" data-uid="NationalInstruments.Design.RulerViewModel.IsSecondRowVisible*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_IsSecondRowVisible" data-uid="NationalInstruments.Design.RulerViewModel.IsSecondRowVisible">IsSecondRowVisible</h4>
+  <div class="markdown level1 summary"><p>Whether to show the information for the second row (SQNR, Max, Min, Overflow, Underflow, Rounding)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSecondRowVisible { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_IsSignedChecked_" data-uid="NationalInstruments.Design.RulerViewModel.IsSignedChecked*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_IsSignedChecked" data-uid="NationalInstruments.Design.RulerViewModel.IsSignedChecked">IsSignedChecked</h4>
+  <div class="markdown level1 summary"><p>Sets and gets whether the signed checkedbox is checked</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSignedChecked { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_IsUsingSpeedStep_" data-uid="NationalInstruments.Design.RulerViewModel.IsUsingSpeedStep*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_IsUsingSpeedStep" data-uid="NationalInstruments.Design.RulerViewModel.IsUsingSpeedStep">IsUsingSpeedStep</h4>
+  <div class="markdown level1 summary"><p>Sets and gets whether the user is currently using the speed steps to move the selection bar.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsUsingSpeedStep { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_IsWaitingForSuggestedType_" data-uid="NationalInstruments.Design.RulerViewModel.IsWaitingForSuggestedType*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_IsWaitingForSuggestedType" data-uid="NationalInstruments.Design.RulerViewModel.IsWaitingForSuggestedType">IsWaitingForSuggestedType</h4>
+  <div class="markdown level1 summary"><p>Gets whether a suggest type is still pending the completion of the analysis calculation</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsWaitingForSuggestedType { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_Item_" data-uid="NationalInstruments.Design.RulerViewModel.Item*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_Item_System_String_" data-uid="NationalInstruments.Design.RulerViewModel.Item(System.String)">Item[String]</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string this[string columnName] { get; }</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">columnName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_LeftSpeed_" data-uid="NationalInstruments.Design.RulerViewModel.LeftSpeed*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_LeftSpeed" data-uid="NationalInstruments.Design.RulerViewModel.LeftSpeed">LeftSpeed</h4>
+  <div class="markdown level1 summary"><p>Sets or gets the left scrolling speed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RulerScrollingSpeed LeftSpeed { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.RulerScrollingSpeed.html">RulerScrollingSpeed</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_MaximumWordLength_" data-uid="NationalInstruments.Design.RulerViewModel.MaximumWordLength*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_MaximumWordLength" data-uid="NationalInstruments.Design.RulerViewModel.MaximumWordLength">MaximumWordLength</h4>
+  <div class="markdown level1 summary"><p>Gets the maximum word length (if specified)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MaximumWordLength { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_MinimumWordLength_" data-uid="NationalInstruments.Design.RulerViewModel.MinimumWordLength*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_MinimumWordLength" data-uid="NationalInstruments.Design.RulerViewModel.MinimumWordLength">MinimumWordLength</h4>
+  <div class="markdown level1 summary"><p>Gets the minimum word length</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MinimumWordLength { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_PixelsPerBit_" data-uid="NationalInstruments.Design.RulerViewModel.PixelsPerBit*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_PixelsPerBit" data-uid="NationalInstruments.Design.RulerViewModel.PixelsPerBit">PixelsPerBit</h4>
+  <div class="markdown level1 summary"><p>Sets or gets the pixels per bit</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint PixelsPerBit { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Design_RulerViewModel_PixelsPerBit_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This is established from the VisibleWidth property (sort of a best fit scheme)</p>
+</div>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_RightSpeed_" data-uid="NationalInstruments.Design.RulerViewModel.RightSpeed*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_RightSpeed" data-uid="NationalInstruments.Design.RulerViewModel.RightSpeed">RightSpeed</h4>
+  <div class="markdown level1 summary"><p>Sets or gets the right scrolling speed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RulerScrollingSpeed RightSpeed { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.RulerScrollingSpeed.html">RulerScrollingSpeed</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_SaveChangesCommand_" data-uid="NationalInstruments.Design.RulerViewModel.SaveChangesCommand*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_SaveChangesCommand" data-uid="NationalInstruments.Design.RulerViewModel.SaveChangesCommand">SaveChangesCommand</h4>
+  <div class="markdown level1 summary"><p>Gets the command associated with the Apply button</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICommandEx SaveChangesCommand { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.ICommandEx</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_ShouldShowLeftThumb_" data-uid="NationalInstruments.Design.RulerViewModel.ShouldShowLeftThumb*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_ShouldShowLeftThumb" data-uid="NationalInstruments.Design.RulerViewModel.ShouldShowLeftThumb">ShouldShowLeftThumb</h4>
+  <div class="markdown level1 summary"><p>Gets whether the left thumb should be visible</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ShouldShowLeftThumb { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_ShouldShowRightThumb_" data-uid="NationalInstruments.Design.RulerViewModel.ShouldShowRightThumb*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_ShouldShowRightThumb" data-uid="NationalInstruments.Design.RulerViewModel.ShouldShowRightThumb">ShouldShowRightThumb</h4>
+  <div class="markdown level1 summary"><p>Gets whether the right thumb should be visible</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ShouldShowRightThumb { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_ShouldShowSelection_" data-uid="NationalInstruments.Design.RulerViewModel.ShouldShowSelection*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_ShouldShowSelection" data-uid="NationalInstruments.Design.RulerViewModel.ShouldShowSelection">ShouldShowSelection</h4>
+  <div class="markdown level1 summary"><p>Gets whether the selection bar should be shown</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ShouldShowSelection { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_ShowHistogram_" data-uid="NationalInstruments.Design.RulerViewModel.ShowHistogram*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_ShowHistogram" data-uid="NationalInstruments.Design.RulerViewModel.ShowHistogram">ShowHistogram</h4>
+  <div class="markdown level1 summary"><p>Gets whether the histogram should be shown</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ShowHistogram { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_ShowInputDataTypeBarWarning_" data-uid="NationalInstruments.Design.RulerViewModel.ShowInputDataTypeBarWarning*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_ShowInputDataTypeBarWarning" data-uid="NationalInstruments.Design.RulerViewModel.ShowInputDataTypeBarWarning">ShowInputDataTypeBarWarning</h4>
+  <div class="markdown level1 summary"><p>Gets whether to show a warning message that there are more input datatype bars to display</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ShowInputDataTypeBarWarning { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_SupportsSign_" data-uid="NationalInstruments.Design.RulerViewModel.SupportsSign*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_SupportsSign" data-uid="NationalInstruments.Design.RulerViewModel.SupportsSign">SupportsSign</h4>
+  <div class="markdown level1 summary"><p>Gets whether the underlying fixed point type supports setting the sign</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool SupportsSign { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_SwitchFixedPointPrecisionLock_" data-uid="NationalInstruments.Design.RulerViewModel.SwitchFixedPointPrecisionLock*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_SwitchFixedPointPrecisionLock" data-uid="NationalInstruments.Design.RulerViewModel.SwitchFixedPointPrecisionLock">SwitchFixedPointPrecisionLock</h4>
+  <div class="markdown level1 summary"><p>Gets the command associated with the Lock button</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICommandEx SwitchFixedPointPrecisionLock { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.ICommandEx</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_VisibleWidth_" data-uid="NationalInstruments.Design.RulerViewModel.VisibleWidth*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_VisibleWidth" data-uid="NationalInstruments.Design.RulerViewModel.VisibleWidth">VisibleWidth</h4>
+  <div class="markdown level1 summary"><p>Sets or gets the visible width of the ruler</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double VisibleWidth { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_YAxisMax_" data-uid="NationalInstruments.Design.RulerViewModel.YAxisMax*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_YAxisMax" data-uid="NationalInstruments.Design.RulerViewModel.YAxisMax">YAxisMax</h4>
+  <div class="markdown level1 summary"><p>Gets the maximum used in the histogram</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int YAxisMax { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_YAxisMaxIntegral_" data-uid="NationalInstruments.Design.RulerViewModel.YAxisMaxIntegral*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_YAxisMaxIntegral" data-uid="NationalInstruments.Design.RulerViewModel.YAxisMaxIntegral">YAxisMaxIntegral</h4>
+  <div class="markdown level1 summary"><p>Gets the maximum integral used in the histogram (used to calculate tick marks)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int YAxisMaxIntegral { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_YAxisMaxLabel_" data-uid="NationalInstruments.Design.RulerViewModel.YAxisMaxLabel*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_YAxisMaxLabel" data-uid="NationalInstruments.Design.RulerViewModel.YAxisMaxLabel">YAxisMaxLabel</h4>
+  <div class="markdown level1 summary"><p>Gets the label for the y-axis maximum</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string YAxisMaxLabel { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_YAxisMinLabel_" data-uid="NationalInstruments.Design.RulerViewModel.YAxisMinLabel*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_YAxisMinLabel" data-uid="NationalInstruments.Design.RulerViewModel.YAxisMinLabel">YAxisMinLabel</h4>
+  <div class="markdown level1 summary"><p>Gets the label for the y-axis minimum</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string YAxisMinLabel { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_ApplyDataTypeBar_" data-uid="NationalInstruments.Design.RulerViewModel.ApplyDataTypeBar*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_ApplyDataTypeBar_NationalInstruments_Design_DataTypeBarViewModelBase_" data-uid="NationalInstruments.Design.RulerViewModel.ApplyDataTypeBar(NationalInstruments.Design.DataTypeBarViewModelBase)">ApplyDataTypeBar(DataTypeBarViewModelBase)</h4>
+  <div class="markdown level1 summary"><p>Called when a data type bar is clicked on</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ApplyDataTypeBar(DataTypeBarViewModelBase dataTypeBar)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.DataTypeBarViewModelBase.html">DataTypeBarViewModelBase</a></td>
+        <td><span class="parametername">dataTypeBar</span></td>
+        <td><p>The data type bar that was clicked on</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_CreateAnalysisData_" data-uid="NationalInstruments.Design.RulerViewModel.CreateAnalysisData*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_CreateAnalysisData_NationalInstruments_Design_IDataTypeGalleryEditor_NationalInstruments_Design_IFixedPointConfiguratorAnalysis_" data-uid="NationalInstruments.Design.RulerViewModel.CreateAnalysisData(NationalInstruments.Design.IDataTypeGalleryEditor,NationalInstruments.Design.IFixedPointConfiguratorAnalysis)">CreateAnalysisData(IDataTypeGalleryEditor, IFixedPointConfiguratorAnalysis)</h4>
+  <div class="markdown level1 summary"><p>Creates the analysis data associated with this terminal</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IFixedPointConfiguratorAnalysisData CreateAnalysisData(IDataTypeGalleryEditor galleryEditor, IFixedPointConfiguratorAnalysis analysis)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.IDataTypeGalleryEditor.html">IDataTypeGalleryEditor</a></td>
+        <td><span class="parametername">galleryEditor</span></td>
+        <td><p>The associated gallery editor</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.IFixedPointConfiguratorAnalysis.html">IFixedPointConfiguratorAnalysis</a></td>
+        <td><span class="parametername">analysis</span></td>
+        <td><p>The analysis object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.IFixedPointConfiguratorAnalysisData.html">IFixedPointConfiguratorAnalysisData</a></td>
+        <td><p>The analysis data</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_HandleAnalysisCompleted_" data-uid="NationalInstruments.Design.RulerViewModel.HandleAnalysisCompleted*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_HandleAnalysisCompleted" data-uid="NationalInstruments.Design.RulerViewModel.HandleAnalysisCompleted">HandleAnalysisCompleted()</h4>
+  <div class="markdown level1 summary"><p>Called when the analysis calculation has completed (on the UI thread)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void HandleAnalysisCompleted()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_Initialize_" data-uid="NationalInstruments.Design.RulerViewModel.Initialize*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_Initialize_NationalInstruments_Design_IDataTypeGalleryEditor_NationalInstruments_Design_IFixedPointConfiguratorAnalysis_System_Boolean_" data-uid="NationalInstruments.Design.RulerViewModel.Initialize(NationalInstruments.Design.IDataTypeGalleryEditor,NationalInstruments.Design.IFixedPointConfiguratorAnalysis,System.Boolean)">Initialize(IDataTypeGalleryEditor, IFixedPointConfiguratorAnalysis, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Initializes the view model (outside of the constructor to allow virtual calls)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Initialize(IDataTypeGalleryEditor galleryEditor, IFixedPointConfiguratorAnalysis analysis, bool applyDataTypeChange)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.IDataTypeGalleryEditor.html">IDataTypeGalleryEditor</a></td>
+        <td><span class="parametername">galleryEditor</span></td>
+        <td><p>The associated gallery editor</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.IFixedPointConfiguratorAnalysis.html">IFixedPointConfiguratorAnalysis</a></td>
+        <td><span class="parametername">analysis</span></td>
+        <td><p>The analysis object</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">applyDataTypeChange</span></td>
+        <td><p>Wehther to apply data type change</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_InitializeDataTypeBars_" data-uid="NationalInstruments.Design.RulerViewModel.InitializeDataTypeBars*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_InitializeDataTypeBars_NationalInstruments_Design_IDataTypeGalleryEditor_" data-uid="NationalInstruments.Design.RulerViewModel.InitializeDataTypeBars(NationalInstruments.Design.IDataTypeGalleryEditor)">InitializeDataTypeBars(IDataTypeGalleryEditor)</h4>
+  <div class="markdown level1 summary"><p>Called during the initialization process to setup data type bars.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void InitializeDataTypeBars(IDataTypeGalleryEditor galleryEditor)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.IDataTypeGalleryEditor.html">IDataTypeGalleryEditor</a></td>
+        <td><span class="parametername">galleryEditor</span></td>
+        <td><p>The associated gallery editor</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_InitializeForDialog_" data-uid="NationalInstruments.Design.RulerViewModel.InitializeForDialog*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_InitializeForDialog" data-uid="NationalInstruments.Design.RulerViewModel.InitializeForDialog">InitializeForDialog()</h4>
+  <div class="markdown level1 summary"><p>Initializes the view model before launching the dialog</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void InitializeForDialog()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_InitializeOptions_" data-uid="NationalInstruments.Design.RulerViewModel.InitializeOptions*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_InitializeOptions_NationalInstruments_Design_IDataTypeGalleryEditor_NationalInstruments_Design_IFixedPointConfiguratorAnalysis_" data-uid="NationalInstruments.Design.RulerViewModel.InitializeOptions(NationalInstruments.Design.IDataTypeGalleryEditor,NationalInstruments.Design.IFixedPointConfiguratorAnalysis)">InitializeOptions(IDataTypeGalleryEditor, IFixedPointConfiguratorAnalysis)</h4>
+  <div class="markdown level1 summary"><p>Initializes the view model (overrideable)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void InitializeOptions(IDataTypeGalleryEditor galleryEditor, IFixedPointConfiguratorAnalysis analysis)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.IDataTypeGalleryEditor.html">IDataTypeGalleryEditor</a></td>
+        <td><span class="parametername">galleryEditor</span></td>
+        <td><p>The associated gallery editor</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.IFixedPointConfiguratorAnalysis.html">IFixedPointConfiguratorAnalysis</a></td>
+        <td><span class="parametername">analysis</span></td>
+        <td><p>The analysis object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_OnTypeChanged_" data-uid="NationalInstruments.Design.RulerViewModel.OnTypeChanged*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_OnTypeChanged" data-uid="NationalInstruments.Design.RulerViewModel.OnTypeChanged">OnTypeChanged()</h4>
+  <div class="markdown level1 summary"><p>Called when the type is changed (either user or programmatic).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnTypeChanged()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_OnUserChangedType_" data-uid="NationalInstruments.Design.RulerViewModel.OnUserChangedType*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_OnUserChangedType" data-uid="NationalInstruments.Design.RulerViewModel.OnUserChangedType">OnUserChangedType()</h4>
+  <div class="markdown level1 summary"><p>Called when the user changes the selection via the ruler.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnUserChangedType()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_SetDataTypeOption_" data-uid="NationalInstruments.Design.RulerViewModel.SetDataTypeOption*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_SetDataTypeOption" data-uid="NationalInstruments.Design.RulerViewModel.SetDataTypeOption">SetDataTypeOption()</h4>
+  <div class="markdown level1 summary"><p>Uses the <a class="xref" href="NationalInstruments.Design.IDataTypeGalleryEditor.html">IDataTypeGalleryEditor</a> interface to commit parameters supported by <a class="xref" href="NationalInstruments.Design.DataTypeOption.html">DataTypeOption</a>.
+This needs to be called on any save initiated from this class to handle the commit and any specialized implemenations (ie, XIPIN).
+Bypass this whenever a type change is not involved (eg, adapt options dialog or changing round/overflow modes). </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void SetDataTypeOption()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_TryParseTypeDescription_" data-uid="NationalInstruments.Design.RulerViewModel.TryParseTypeDescription*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_TryParseTypeDescription_System_String_System_Boolean__System_Boolean__System_UInt32__System_Int32__System_Int32__" data-uid="NationalInstruments.Design.RulerViewModel.TryParseTypeDescription(System.String,System.Boolean@,System.Boolean@,System.UInt32@,System.Int32@,System.Int32@)">TryParseTypeDescription(String, out Boolean, out Boolean, out UInt32, out Int32, out Int32)</h4>
+  <div class="markdown level1 summary"><p>Parses the ConfigurationText as either the shortcut version or the full version.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool TryParseTypeDescription(string description, out bool isComplex, out bool isSigned, out uint wordLength, out int integerBits, out int fractionalBits)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>The type description string to parse</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">isComplex</span></td>
+        <td><p>Whether the type is complex</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">isSigned</span></td>
+        <td><p>Whether the type is signed</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">wordLength</span></td>
+        <td><p>The word length of the type</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">integerBits</span></td>
+        <td><p>The integer bits of the type</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">fractionalBits</span></td>
+        <td><p>The fractional bits of the type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>Whether the parse was successful or not</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_ValidateProperty_" data-uid="NationalInstruments.Design.RulerViewModel.ValidateProperty*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_ValidateProperty_System_String_" data-uid="NationalInstruments.Design.RulerViewModel.ValidateProperty(System.String)">ValidateProperty(String)</h4>
+  <div class="markdown level1 summary"><p>Performs validation on properties that are bound to textboxes</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual string ValidateProperty(string propertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>The name of the property to validate</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The error message or null</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  
+  
+  <a id="NationalInstruments_Design_RulerViewModel_NationalInstruments_Design_IFixedPointConfiguration_Save_" data-uid="NationalInstruments.Design.RulerViewModel.NationalInstruments#Design#IFixedPointConfiguration#Save*"></a>
+  <h4 id="NationalInstruments_Design_RulerViewModel_NationalInstruments_Design_IFixedPointConfiguration_Save" data-uid="NationalInstruments.Design.RulerViewModel.NationalInstruments#Design#IFixedPointConfiguration#Save">IFixedPointConfiguration.Save()</h4>
+  <div class="markdown level1 summary"><p>Commit changes to underlying view model</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void IFixedPointConfiguration.Save()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">NationalInstruments.Core.IViewModel</span>
+  </div>
+  <div>
+      <span class="xref">System.ComponentModel.INotifyPropertyChanged</span>
+  </div>
+  <div>
+      <span class="xref">System.Windows.IWeakEventListener</span>
+  </div>
+  <div>
+      <span class="xref">NationalInstruments.Core.IServiceAggregator</span>
+  </div>
+  <div>
+      <span class="xref">NationalInstruments.Core.IQueryService</span>
+  </div>
+  <div>
+      <span class="xref">NationalInstruments.Core.IColorResolver</span>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.IFixedPointConfigurationMessageProvider.html">IFixedPointConfigurationMessageProvider</a>
+  </div>
+  <div>
+      <span class="xref">System.ComponentModel.IDataErrorInfo</span>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.IFixedPointConfiguration.html">IFixedPointConfiguration</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.ContextualHelp.HelpCommonHelpers.html#NationalInstruments_ContextualHelp_HelpCommonHelpers_InitializeContextHelpIfNecessary__1_NationalInstruments_Core_ViewModelBase_">HelpCommonHelpers.InitializeContextHelpIfNecessary&lt;T&gt;(ViewModelBase)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.PaletteContextHelpers.html#NationalInstruments_Design_PaletteContextHelpers_GetPaletteContextKeywords_NationalInstruments_Core_IQueryService_">PaletteContextHelpers.GetPaletteContextKeywords(IQueryService)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.ChildDataContextProviderHelpers.html#NationalInstruments_Design_ChildDataContextProviderHelpers_GetDataContextProvider_NationalInstruments_Core_IViewModel_">ChildDataContextProviderHelpers.GetDataContextProvider(IViewModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ElementLocalizationHelpers.html#NationalInstruments_SourceModel_ElementLocalizationHelpers_GetLocalizedValue_NationalInstruments_Core_IViewModel_NationalInstruments_DynamicProperties_PropertySymbol_System_Object_">ElementLocalizationHelpers.GetLocalizedValue(IViewModel, PropertySymbol, Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ElementLocalizationHelpers.html#NationalInstruments_SourceModel_ElementLocalizationHelpers_CreateLocalizedDisplayBinding_NationalInstruments_Core_IViewModel_System_String_NationalInstruments_DynamicProperties_PropertySymbol_">ElementLocalizationHelpers.CreateLocalizedDisplayBinding(IViewModel, String, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ElementLocalizationHelpers.html#NationalInstruments_SourceModel_ElementLocalizationHelpers_CreateLocalizedDisplayBinding_NationalInstruments_Core_IViewModel_System_String_NationalInstruments_DynamicProperties_PropertySymbol_NationalInstruments_Core_PlatformBindingMode_">ElementLocalizationHelpers.CreateLocalizedDisplayBinding(IViewModel, String, PropertySymbol, PlatformBindingMode)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

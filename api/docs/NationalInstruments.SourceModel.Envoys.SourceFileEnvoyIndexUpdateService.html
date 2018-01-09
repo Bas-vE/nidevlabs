@@ -1,0 +1,461 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SourceFileEnvoyIndexUpdateService
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SourceFileEnvoyIndexUpdateService
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.SourceModel.Envoys.SourceFileEnvoyIndexUpdateService">
+  
+  
+  <h1 id="NationalInstruments_SourceModel_Envoys_SourceFileEnvoyIndexUpdateService" data-uid="NationalInstruments.SourceModel.Envoys.SourceFileEnvoyIndexUpdateService" class="text-break">Class SourceFileEnvoyIndexUpdateService
+  </h1>
+  <div class="markdown level0 summary"><p>Envoy service for registering, unregistering, and detecting Envoy Index information.
+Here are some useful definitions when thinking about the Envoy Indexes:</p>
+<ul>
+<li>KindAndKey - A pair of strings used to map to one or more envoys.</li>
+<li>Envoy Index - A KindAndKey that is mapped to an envoy.</li>
+<li>Envoy Indexes - A collection of EnvoyIndex items. The collection might be project wide, envoy manager wide, or source file wide.</li>
+<li>Envoy Index Hints - A collection of KindAndKeys specifying what Envoy Indexes might be found in an EnvoyManager. This does not
+                    return the actual envoys but is instead just what KindAndKeys can be found. For more information on these
+                    hints, <span class="xref">NationalInstruments.Restricted.SourceModel.Envoys.IEnvoyManagerEnvoyIndexHints</span>.</li>
+</ul>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html">EnvoyService</a></div>
+    <div class="level2"><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyIndexUpdateService.html">EnvoyIndexUpdateService</a></div>
+    <div class="level3"><span class="xref">SourceFileEnvoyIndexUpdateService</span></div>
+      <div class="level4"><a class="xref" href="NationalInstruments.SourceModel.FunctionSignatureEnvoyIndexUpdateService.html">FunctionSignatureEnvoyIndexUpdateService</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyIndexUpdateService.html#NationalInstruments_SourceModel_Envoys_EnvoyIndexUpdateService_AddEnvoyIndex_NationalInstruments_SourceModel_Envoys_Envoy_System_String_System_String_">EnvoyIndexUpdateService.AddEnvoyIndex(Envoy, String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyIndexUpdateService.html#NationalInstruments_SourceModel_Envoys_EnvoyIndexUpdateService_RemoveEnvoyIndex_NationalInstruments_SourceModel_Envoys_Envoy_System_String_System_String_">EnvoyIndexUpdateService.RemoveEnvoyIndex(Envoy, String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyIndexUpdateService.html#NationalInstruments_SourceModel_Envoys_EnvoyIndexUpdateService_UpdateEnvoyIndexesCache_NationalInstruments_SourceModel_Envoys_Envoy_System_String_System_String_System_String_">EnvoyIndexUpdateService.UpdateEnvoyIndexesCache(Envoy, String, String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_ProvidesInterface_System_Collections_Generic_IDictionary_System_String_System_Object__System_Type_">EnvoyService.ProvidesInterface(IDictionary&lt;String, Object&gt;, Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_AssociatedEnvoy">EnvoyService.AssociatedEnvoy</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_Project">EnvoyService.Project</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_Host">EnvoyService.Host</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_Detaching_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.Detaching(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_Detach_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.Detach(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_ProjectSaveAsync_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.ProjectSaveAsync(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_ProjectClose_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.ProjectClose(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_ModelLoaded_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.ModelLoaded(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_ModelClosing_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.ModelClosing(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_ModelClosed_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.ModelClosed(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_ModelSavedAsync_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.ModelSavedAsync(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_ModelSavingAsync_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.ModelSavingAsync(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_OnAttached_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.OnAttached(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_OnDetaching_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.OnDetaching(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_OnDetach_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.OnDetach(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_OnProjectSaveAsync_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.OnProjectSaveAsync(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_OnProjectClose_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.OnProjectClose(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_OnModelLoaded_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.OnModelLoaded(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_OnModelClosing_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.OnModelClosing(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_OnModelClosed_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.OnModelClosed(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_OnModelSavingAsync_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.OnModelSavingAsync(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_OnModelSavedAsync_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.OnModelSavedAsync(Envoy)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.SourceModel.Envoys.html">NationalInstruments.SourceModel.Envoys</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_SourceModel_Envoys_SourceFileEnvoyIndexUpdateService_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class SourceFileEnvoyIndexUpdateService : EnvoyIndexUpdateService</code></pre>
+  </div>
+  <h5 id="NationalInstruments_SourceModel_Envoys_SourceFileEnvoyIndexUpdateService_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>This is a secondary abstract base class for use by those <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyIndexUpdateService.html">EnvoyIndexUpdateService</a>
+implementations where a <a class="xref" href="NationalInstruments.SourceModel.SourceFile.html">SourceFile</a> is needed to compute the indexes.</p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_SourceFileEnvoyIndexUpdateService_GetEnvoyIndexes_" data-uid="NationalInstruments.SourceModel.Envoys.SourceFileEnvoyIndexUpdateService.GetEnvoyIndexes*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_SourceFileEnvoyIndexUpdateService_GetEnvoyIndexes_NationalInstruments_SourceModel_Envoys_Envoy_" data-uid="NationalInstruments.SourceModel.Envoys.SourceFileEnvoyIndexUpdateService.GetEnvoyIndexes(NationalInstruments.SourceModel.Envoys.Envoy)">GetEnvoyIndexes(Envoy)</h4>
+  <div class="markdown level1 summary"><p>Find envoy index information for the given envoy</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override IEnumerable&lt;KindAndKey&gt; GetEnvoyIndexes(Envoy envoy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">envoy</span></td>
+        <td><p>The envoy</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.KindAndKey.html">KindAndKey</a>&gt;</td>
+        <td><p>The envoy index information.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyIndexUpdateService.html#NationalInstruments_SourceModel_Envoys_EnvoyIndexUpdateService_GetEnvoyIndexes_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyIndexUpdateService.GetEnvoyIndexes(Envoy)</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_SourceFileEnvoyIndexUpdateService_GetEnvoyIndexes_" data-uid="NationalInstruments.SourceModel.Envoys.SourceFileEnvoyIndexUpdateService.GetEnvoyIndexes*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_SourceFileEnvoyIndexUpdateService_GetEnvoyIndexes_NationalInstruments_SourceModel_Envoys_Envoy_System_Object_" data-uid="NationalInstruments.SourceModel.Envoys.SourceFileEnvoyIndexUpdateService.GetEnvoyIndexes(NationalInstruments.SourceModel.Envoys.Envoy,System.Object)">GetEnvoyIndexes(Envoy, Object)</h4>
+  <div class="markdown level1 summary"><p>Find envoy index information for the given envoy and referenced file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override IEnumerable&lt;KindAndKey&gt; GetEnvoyIndexes(Envoy envoy, object file)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">envoy</span></td>
+        <td><p>The envoy</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">file</span></td>
+        <td><p>The file referenced by the envoy. NOTE: This parameter may
+be null if the <a class="xref" href="NationalInstruments.SourceModel.SourceFile.html">SourceFile</a> is not loaded correctly.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.KindAndKey.html">KindAndKey</a>&gt;</td>
+        <td><p>The envoy index information.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyIndexUpdateService.html#NationalInstruments_SourceModel_Envoys_EnvoyIndexUpdateService_GetEnvoyIndexes_NationalInstruments_SourceModel_Envoys_Envoy_System_Object_">EnvoyIndexUpdateService.GetEnvoyIndexes(Envoy, Object)</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_SourceFileEnvoyIndexUpdateService_GetEnvoyIndexesFromSourceFile_" data-uid="NationalInstruments.SourceModel.Envoys.SourceFileEnvoyIndexUpdateService.GetEnvoyIndexesFromSourceFile*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_SourceFileEnvoyIndexUpdateService_GetEnvoyIndexesFromSourceFile_NationalInstruments_SourceModel_Envoys_Envoy_NationalInstruments_SourceModel_SourceFile_" data-uid="NationalInstruments.SourceModel.Envoys.SourceFileEnvoyIndexUpdateService.GetEnvoyIndexesFromSourceFile(NationalInstruments.SourceModel.Envoys.Envoy,NationalInstruments.SourceModel.SourceFile)">GetEnvoyIndexesFromSourceFile(Envoy, SourceFile)</h4>
+  <div class="markdown level1 summary"><p>Calculate the envoy index information using the specified <a class="xref" href="NationalInstruments.SourceModel.SourceFile.html">SourceFile</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract IEnumerable&lt;KindAndKey&gt; GetEnvoyIndexesFromSourceFile(Envoy envoy, SourceFile sourceFile)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">envoy</span></td>
+        <td><p>The envoy for which we are calculating envoy indexes</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.SourceFile.html">SourceFile</a></td>
+        <td><span class="parametername">sourceFile</span></td>
+        <td><p>The <a class="xref" href="NationalInstruments.SourceModel.SourceFile.html">SourceFile</a> needed by the derived class to calculate the
+envoy index information</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.KindAndKey.html">KindAndKey</a>&gt;</td>
+        <td><p>The envoy index information.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_SourceFileEnvoyIndexUpdateService_RequiresReferencedFile_" data-uid="NationalInstruments.SourceModel.Envoys.SourceFileEnvoyIndexUpdateService.RequiresReferencedFile*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_SourceFileEnvoyIndexUpdateService_RequiresReferencedFile_NationalInstruments_SourceModel_Envoys_Envoy_" data-uid="NationalInstruments.SourceModel.Envoys.SourceFileEnvoyIndexUpdateService.RequiresReferencedFile(NationalInstruments.SourceModel.Envoys.Envoy)">RequiresReferencedFile(Envoy)</h4>
+  <div class="markdown level1 summary"><p>True if this implementation of <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyIndexUpdateService.html#NationalInstruments_SourceModel_Envoys_EnvoyIndexUpdateService_GetEnvoyIndexes_NationalInstruments_SourceModel_Envoys_Envoy_System_Object_">GetEnvoyIndexes(Envoy, Object)</a> requires the file referenced by the envoy to be loaded.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override bool RequiresReferencedFile(Envoy envoy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">envoy</span></td>
+        <td><p>The envoy</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the enovy to be loaded before calling <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyIndexUpdateService.html#NationalInstruments_SourceModel_Envoys_EnvoyIndexUpdateService_GetEnvoyIndexes_NationalInstruments_SourceModel_Envoys_Envoy_System_Object_">GetEnvoyIndexes(Envoy, Object)</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyIndexUpdateService.html#NationalInstruments_SourceModel_Envoys_EnvoyIndexUpdateService_RequiresReferencedFile_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyIndexUpdateService.RequiresReferencedFile(Envoy)</a></div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

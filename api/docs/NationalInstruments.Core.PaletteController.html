@@ -1,0 +1,842 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class PaletteController
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class PaletteController
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.Core.PaletteController">
+  
+  
+  <h1 id="NationalInstruments_Core_PaletteController" data-uid="NationalInstruments.Core.PaletteController" class="text-break">Class PaletteController
+  </h1>
+  <div class="markdown level0 summary"><p>The PaletteController is an MEF created singleton for managing the data side of palettes</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">PaletteController</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.Core.html">NationalInstruments.Core</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_Core_PaletteController_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Export(typeof (PaletteController))]
+[PartCreationPolicy(CreationPolicy.Shared)]
+public sealed class PaletteController</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="NationalInstruments_Core_PaletteController__ctor_" data-uid="NationalInstruments.Core.PaletteController.#ctor*"></a>
+  <h4 id="NationalInstruments_Core_PaletteController__ctor" data-uid="NationalInstruments.Core.PaletteController.#ctor">PaletteController()</h4>
+  <div class="markdown level1 summary"><p>The default constructor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PaletteController()</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="NationalInstruments_Core_PaletteController_PaletteIdentifier" data-uid="NationalInstruments.Core.PaletteController.PaletteIdentifier">PaletteIdentifier</h4>
+  <div class="markdown level1 summary"><p>Must match IPaletteLoaderInfo.PaletteIdentifier. Generally specified by using ExportPaletteLoader</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PaletteIdentifier = &quot;PaletteIdentifier&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_Core_PaletteController_Host_" data-uid="NationalInstruments.Core.PaletteController.Host*"></a>
+  <h4 id="NationalInstruments_Core_PaletteController_Host" data-uid="NationalInstruments.Core.PaletteController.Host">Host</h4>
+  <div class="markdown level1 summary"><p>The imported <span class="xref">NationalInstruments.Composition.ICompositionHost</span></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Import]
+public ICompositionHost Host { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Composition.ICompositionHost</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PaletteController_LoadedPalettes_" data-uid="NationalInstruments.Core.PaletteController.LoadedPalettes*"></a>
+  <h4 id="NationalInstruments_Core_PaletteController_LoadedPalettes" data-uid="NationalInstruments.Core.PaletteController.LoadedPalettes">LoadedPalettes</h4>
+  <div class="markdown level1 summary"><p>Get all the loaded palettes</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;Palette&gt; LoadedPalettes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Palette.html">Palette</a>&gt;</td>
+        <td><p>enumerable of loaded palettes</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PaletteController_PaletteLoaders_" data-uid="NationalInstruments.Core.PaletteController.PaletteLoaders*"></a>
+  <h4 id="NationalInstruments_Core_PaletteController_PaletteLoaders" data-uid="NationalInstruments.Core.PaletteController.PaletteLoaders">PaletteLoaders</h4>
+  <div class="markdown level1 summary"><p>The imported <a class="xref" href="NationalInstruments.Core.PaletteController.html#NationalInstruments_Core_PaletteController_PaletteLoaders">PaletteLoaders</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ImportMany]
+public IEnumerable&lt;Lazy&lt;IPaletteLoader, IPaletteLoaderInfo&gt;&gt; PaletteLoaders { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Lazy</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.IPaletteLoader.html">IPaletteLoader</a>, <a class="xref" href="NationalInstruments.SourceModel.IPaletteLoaderInfo.html">IPaletteLoaderInfo</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PaletteController_PaletteTypeInfos_" data-uid="NationalInstruments.Core.PaletteController.PaletteTypeInfos*"></a>
+  <h4 id="NationalInstruments_Core_PaletteController_PaletteTypeInfos" data-uid="NationalInstruments.Core.PaletteController.PaletteTypeInfos">PaletteTypeInfos</h4>
+  <div class="markdown level1 summary"><p>Returns all palette types that exists in the application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;IPaletteTypeInfo&gt; PaletteTypeInfos { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.IPaletteTypeInfo.html">IPaletteTypeInfo</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PaletteController_PaletteTypes_" data-uid="NationalInstruments.Core.PaletteController.PaletteTypes*"></a>
+  <h4 id="NationalInstruments_Core_PaletteController_PaletteTypes" data-uid="NationalInstruments.Core.PaletteController.PaletteTypes">PaletteTypes</h4>
+  <div class="markdown level1 summary"><p>The imported palette types</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ImportMany]
+public IEnumerable&lt;Lazy&lt;IPaletteType, IPaletteTypeInfo&gt;&gt; PaletteTypes { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Lazy</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.IPaletteType.html">IPaletteType</a>, <a class="xref" href="NationalInstruments.SourceModel.IPaletteTypeInfo.html">IPaletteTypeInfo</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PaletteController_UserPalettes_" data-uid="NationalInstruments.Core.PaletteController.UserPalettes*"></a>
+  <h4 id="NationalInstruments_Core_PaletteController_UserPalettes" data-uid="NationalInstruments.Core.PaletteController.UserPalettes">UserPalettes</h4>
+  <div class="markdown level1 summary"><p>Get all the palette type infos that have a user friendly name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This property cannot diferentiate VI and CDL, they have the same PaletteIdentifier.&quot;, false)]
+public Dictionary&lt;string, string&gt; UserPalettes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><p>dictionary of paletteIdentifier to user friendly names</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PaletteController_UserPaletteTypes_" data-uid="NationalInstruments.Core.PaletteController.UserPaletteTypes*"></a>
+  <h4 id="NationalInstruments_Core_PaletteController_UserPaletteTypes" data-uid="NationalInstruments.Core.PaletteController.UserPaletteTypes">UserPaletteTypes</h4>
+  <div class="markdown level1 summary"><p>Get all the palette types. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;string, string&gt; UserPaletteTypes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><p>Dictionary mapping <a class="xref" href="NationalInstruments.SourceModel.IPaletteTypeInfo.html#NationalInstruments_SourceModel_IPaletteTypeInfo_PaletteTypeIdentifier">PaletteTypeIdentifier</a>
+to user friendly palette names.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_Core_PaletteController_AddLoader_" data-uid="NationalInstruments.Core.PaletteController.AddLoader*"></a>
+  <h4 id="NationalInstruments_Core_PaletteController_AddLoader_System_Lazy_NationalInstruments_SourceModel_IPaletteLoader_NationalInstruments_SourceModel_IPaletteLoaderInfo__" data-uid="NationalInstruments.Core.PaletteController.AddLoader(System.Lazy{NationalInstruments.SourceModel.IPaletteLoader,NationalInstruments.SourceModel.IPaletteLoaderInfo})">AddLoader(Lazy&lt;IPaletteLoader, IPaletteLoaderInfo&gt;)</h4>
+  <div class="markdown level1 summary"><p>Add a dynamic loader</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddLoader(Lazy&lt;IPaletteLoader, IPaletteLoaderInfo&gt; loader)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Lazy</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.IPaletteLoader.html">IPaletteLoader</a>, <a class="xref" href="NationalInstruments.SourceModel.IPaletteLoaderInfo.html">IPaletteLoaderInfo</a>&gt;</td>
+        <td><span class="parametername">loader</span></td>
+        <td><p>new loader</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PaletteController_GetPalette_" data-uid="NationalInstruments.Core.PaletteController.GetPalette*"></a>
+  <h4 id="NationalInstruments_Core_PaletteController_GetPalette_NationalInstruments_Core_PaletteKey_" data-uid="NationalInstruments.Core.PaletteController.GetPalette(NationalInstruments.Core.PaletteKey)">GetPalette(PaletteKey)</h4>
+  <div class="markdown level1 summary"><p>Gets a PaletteBase by its name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Palette GetPalette(PaletteKey key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PaletteKey.html">PaletteKey</a></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>Key to use to load palette</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Palette.html">Palette</a></td>
+        <td><p>the found palette base or null if none found</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PaletteController_GetPalette_" data-uid="NationalInstruments.Core.PaletteController.GetPalette*"></a>
+  <h4 id="NationalInstruments_Core_PaletteController_GetPalette_NationalInstruments_SourceModel_Envoys_Envoy_System_String_System_Collections_Generic_IEnumerable_NationalInstruments_Core_BindingKeyword__" data-uid="NationalInstruments.Core.PaletteController.GetPalette(NationalInstruments.SourceModel.Envoys.Envoy,System.String,System.Collections.Generic.IEnumerable{NationalInstruments.Core.BindingKeyword})">GetPalette(Envoy, String, IEnumerable&lt;BindingKeyword&gt;)</h4>
+  <div class="markdown level1 summary"><p>Gets a PaletteBase by its name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Palette GetPalette(Envoy envoyForPalette, string name, IEnumerable&lt;BindingKeyword&gt; bindingKeywords)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">envoyForPalette</span></td>
+        <td><p>The envoy</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>the name to use to find a paletteBase</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">NationalInstruments.Core.BindingKeyword</span>&gt;</td>
+        <td><span class="parametername">bindingKeywords</span></td>
+        <td><p>the binding keywords</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Palette.html">Palette</a></td>
+        <td><p>the found palette base or null if none found</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PaletteController_GetPalette_" data-uid="NationalInstruments.Core.PaletteController.GetPalette*"></a>
+  <h4 id="NationalInstruments_Core_PaletteController_GetPalette_System_String_System_Collections_Generic_IEnumerable_System_String__NationalInstruments_SourceModel_Envoys_Envoy_" data-uid="NationalInstruments.Core.PaletteController.GetPalette(System.String,System.Collections.Generic.IEnumerable{System.String},NationalInstruments.SourceModel.Envoys.Envoy)">GetPalette(String, IEnumerable&lt;String&gt;, Envoy)</h4>
+  <div class="markdown level1 summary"><p>Gets a PaletteBase by its name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use GetPalette(Envoy, string, IEnumerable&lt;BindingKeyword&gt;) instead (6/9/2017).&quot;, false)]
+public Palette GetPalette(string name, IEnumerable&lt;string&gt; bindingKeywords, Envoy envoyForPalette)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>the name to use to find a paletteBase</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">bindingKeywords</span></td>
+        <td><p>the binding keywords</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">envoyForPalette</span></td>
+        <td><p>The envoy</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Palette.html">Palette</a></td>
+        <td><p>the found palette base or null if none found</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PaletteController_GetPaletteLoadersForKey_" data-uid="NationalInstruments.Core.PaletteController.GetPaletteLoadersForKey*"></a>
+  <h4 id="NationalInstruments_Core_PaletteController_GetPaletteLoadersForKey_NationalInstruments_Core_PaletteKey_" data-uid="NationalInstruments.Core.PaletteController.GetPaletteLoadersForKey(NationalInstruments.Core.PaletteKey)">GetPaletteLoadersForKey(PaletteKey)</h4>
+  <div class="markdown level1 summary"><p>Get palette loaders that match a given key</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;IPaletteLoader&gt; GetPaletteLoadersForKey(PaletteKey key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PaletteKey.html">PaletteKey</a></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>palette key</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.IPaletteLoader.html">IPaletteLoader</a>&gt;</td>
+        <td><p>all valid loaders</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PaletteController_RemoveLoader_" data-uid="NationalInstruments.Core.PaletteController.RemoveLoader*"></a>
+  <h4 id="NationalInstruments_Core_PaletteController_RemoveLoader_NationalInstruments_SourceModel_IPaletteLoaderInfo_" data-uid="NationalInstruments.Core.PaletteController.RemoveLoader(NationalInstruments.SourceModel.IPaletteLoaderInfo)">RemoveLoader(IPaletteLoaderInfo)</h4>
+  <div class="markdown level1 summary"><p>Remove a dynamic loader</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveLoader(IPaletteLoaderInfo metadata)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.IPaletteLoaderInfo.html">IPaletteLoaderInfo</a></td>
+        <td><span class="parametername">metadata</span></td>
+        <td><p>metadata for loader to remove</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PaletteController_ShouldBindLoader_" data-uid="NationalInstruments.Core.PaletteController.ShouldBindLoader*"></a>
+  <h4 id="NationalInstruments_Core_PaletteController_ShouldBindLoader_NationalInstruments_Core_PaletteKey_System_String_System_Collections_Generic_IEnumerable_NationalInstruments_Core_BindingKeyword__System_Collections_Generic_IEnumerable_NationalInstruments_Core_BindingKeyword__" data-uid="NationalInstruments.Core.PaletteController.ShouldBindLoader(NationalInstruments.Core.PaletteKey,System.String,System.Collections.Generic.IEnumerable{NationalInstruments.Core.BindingKeyword},System.Collections.Generic.IEnumerable{NationalInstruments.Core.BindingKeyword})">ShouldBindLoader(PaletteKey, String, IEnumerable&lt;BindingKeyword&gt;, IEnumerable&lt;BindingKeyword&gt;)</h4>
+  <div class="markdown level1 summary"><p>Whether the given key should be bound given paletteIdentifier, bindsToKeywords and excludeIfKeywords. The rules are not quite the same as Envoy.ShouldBind</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ShouldBindLoader(PaletteKey key, string paletteIdentifier, IEnumerable&lt;BindingKeyword&gt; bindsToKeywords, IEnumerable&lt;BindingKeyword&gt; excludeIfKeywords)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PaletteKey.html">PaletteKey</a></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>key for a palette</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">paletteIdentifier</span></td>
+        <td><p>identifier to match against key</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">NationalInstruments.Core.BindingKeyword</span>&gt;</td>
+        <td><span class="parametername">bindsToKeywords</span></td>
+        <td><p>keywords to check against key</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">NationalInstruments.Core.BindingKeyword</span>&gt;</td>
+        <td><span class="parametername">excludeIfKeywords</span></td>
+        <td><p>excluding keywords to check against key</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if we should bind</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PaletteController_ShouldBindLoader_" data-uid="NationalInstruments.Core.PaletteController.ShouldBindLoader*"></a>
+  <h4 id="NationalInstruments_Core_PaletteController_ShouldBindLoader_NationalInstruments_Core_PaletteKey_System_String_System_Collections_Generic_IEnumerable_System_String__System_Collections_Generic_IEnumerable_System_String__" data-uid="NationalInstruments.Core.PaletteController.ShouldBindLoader(NationalInstruments.Core.PaletteKey,System.String,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String})">ShouldBindLoader(PaletteKey, String, IEnumerable&lt;String&gt;, IEnumerable&lt;String&gt;)</h4>
+  <div class="markdown level1 summary"><p>Whether the given key should be bound given paletteIdentifier, bindsToKeywords and excludeIfKeywords. The rules are not quite the same as Envoy.ShouldBind</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use ShouldBindLoader(PaletteKey, string, IEnumerable&lt;BindingKeyword&gt;, IEnumerable&lt;BindingKeyword&gt;) instead (6/9/2017).&quot;, false)]
+public static bool ShouldBindLoader(PaletteKey key, string paletteIdentifier, IEnumerable&lt;string&gt; bindsToKeywords, IEnumerable&lt;string&gt; excludeIfKeywords)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PaletteKey.html">PaletteKey</a></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>key for a palette</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">paletteIdentifier</span></td>
+        <td><p>identifier to match against key</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">bindsToKeywords</span></td>
+        <td><p>keywords to check against key</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">excludeIfKeywords</span></td>
+        <td><p>excluding keywords to check against key</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if we should bind</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PaletteController_ShouldBindPaletteLoader_" data-uid="NationalInstruments.Core.PaletteController.ShouldBindPaletteLoader*"></a>
+  <h4 id="NationalInstruments_Core_PaletteController_ShouldBindPaletteLoader_NationalInstruments_Core_PaletteKey_System_Lazy_NationalInstruments_SourceModel_IPaletteLoader_NationalInstruments_SourceModel_IPaletteLoaderInfo__" data-uid="NationalInstruments.Core.PaletteController.ShouldBindPaletteLoader(NationalInstruments.Core.PaletteKey,System.Lazy{NationalInstruments.SourceModel.IPaletteLoader,NationalInstruments.SourceModel.IPaletteLoaderInfo})">ShouldBindPaletteLoader(PaletteKey, Lazy&lt;IPaletteLoader, IPaletteLoaderInfo&gt;)</h4>
+  <div class="markdown level1 summary"><p>Determine if we should bind the given loader</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ShouldBindPaletteLoader(PaletteKey key, Lazy&lt;IPaletteLoader, IPaletteLoaderInfo&gt; info)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PaletteKey.html">PaletteKey</a></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>palette key</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Lazy</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.IPaletteLoader.html">IPaletteLoader</a>, <a class="xref" href="NationalInstruments.SourceModel.IPaletteLoaderInfo.html">IPaletteLoaderInfo</a>&gt;</td>
+        <td><span class="parametername">info</span></td>
+        <td><p>loader and it&apos;s metadata</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if we should bind, false otherwise</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

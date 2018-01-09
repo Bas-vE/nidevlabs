@@ -23,3 +23,12 @@ category: navigation
       {% endif %}
     {% endfor %}
   </ul>
+  
+  <h1 class="page-heading">API Reference</h1>
+  
+  <ul>
+    <li>
+	  <a href="../api/docs/index.html">API Reference index</a>
+	</li>
+  </ul>
+  

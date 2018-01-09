@@ -1,0 +1,349 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IPendingDeferredExportsQueryData
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IPendingDeferredExportsQueryData
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.SourceModel.IPendingDeferredExportsQueryData">
+  
+  
+  <h1 id="NationalInstruments_SourceModel_IPendingDeferredExportsQueryData" data-uid="NationalInstruments.SourceModel.IPendingDeferredExportsQueryData" class="text-break">Interface IPendingDeferredExportsQueryData
+  </h1>
+  <div class="markdown level0 summary"><p>An interface containing all the information needed by the 
+<see cref="!:ILinker.HasPendingDeferredExports(Definition, Envoy, EventHandler&lt;EventArgs>)"></see>
+API to determine which things should be considered to determine if there are 
+pending deferred <a class="xref" href="NationalInstruments.SourceModel.IDependencyTargetExportChanged.html#NationalInstruments_SourceModel_IDependencyTargetExportChanged_OnExportsChangedAsync_NationalInstruments_SourceModel_Envoys_Envoy_NationalInstruments_SourceModel_ExportsChangedData_">OnExportsChangedAsync(Envoy, ExportsChangedData)</a>
+notifications.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.SourceModel.html">NationalInstruments.SourceModel</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_SourceModel_IPendingDeferredExportsQueryData_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IPendingDeferredExportsQueryData</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_IPendingDeferredExportsQueryData_ConsiderListener_" data-uid="NationalInstruments.SourceModel.IPendingDeferredExportsQueryData.ConsiderListener*"></a>
+  <h4 id="NationalInstruments_SourceModel_IPendingDeferredExportsQueryData_ConsiderListener" data-uid="NationalInstruments.SourceModel.IPendingDeferredExportsQueryData.ConsiderListener">ConsiderListener</h4>
+  <div class="markdown level1 summary"><p>Gets a predicate that will be called for each <a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a> in the <a class="xref" href="NationalInstruments.SourceModel.IPendingDeferredExportsQueryData.html#NationalInstruments_SourceModel_IPendingDeferredExportsQueryData_ListenersToCheck">ListenersToCheck</a> 
+list or in the same transaction system that own the <a class="xref" href="NationalInstruments.SourceModel.IPendingDeferredExportsQueryData.html#NationalInstruments_SourceModel_IPendingDeferredExportsQueryData_DefinitionToCheck">DefinitionToCheck</a> whose 
+<a class="xref" href="NationalInstruments.SourceModel.IDependencyTargetExportChanged.html#NationalInstruments_SourceModel_IDependencyTargetExportChanged_OnExportsChangedAsync_NationalInstruments_SourceModel_Envoys_Envoy_NationalInstruments_SourceModel_ExportsChangedData_">OnExportsChangedAsync(Envoy, ExportsChangedData)</a> notification
+has been deferred.  If this predicate returns <code>false</code>, the Element will not be considered when determining
+the result of the call to <a class="xref" href="NationalInstruments.SourceModel.ILinker.html#NationalInstruments_SourceModel_ILinker_HasPendingDeferredExports__1___0_">HasPendingDeferredExports&lt;T&gt;(T)</a>. This value can be <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Predicate&lt;IDependencyTargetExportChanged&gt; ConsiderListener { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Predicate</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.IDependencyTargetExportChanged.html">IDependencyTargetExportChanged</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_IPendingDeferredExportsQueryData_ConsiderTarget_" data-uid="NationalInstruments.SourceModel.IPendingDeferredExportsQueryData.ConsiderTarget*"></a>
+  <h4 id="NationalInstruments_SourceModel_IPendingDeferredExportsQueryData_ConsiderTarget" data-uid="NationalInstruments.SourceModel.IPendingDeferredExportsQueryData.ConsiderTarget">ConsiderTarget</h4>
+  <div class="markdown level1 summary"><p>Gets a predicate that will be called for each <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a> in the <a class="xref" href="NationalInstruments.SourceModel.IPendingDeferredExportsQueryData.html#NationalInstruments_SourceModel_IPendingDeferredExportsQueryData_TargetsToCheck">TargetsToCheck</a> list whose 
+<a class="xref" href="NationalInstruments.SourceModel.IDependencyTargetExportChanged.html#NationalInstruments_SourceModel_IDependencyTargetExportChanged_OnExportsChangedAsync_NationalInstruments_SourceModel_Envoys_Envoy_NationalInstruments_SourceModel_ExportsChangedData_">OnExportsChangedAsync(Envoy, ExportsChangedData)</a> notification
+has been deferred.  If this predicate returns <code>false</code>, the Envoy will not be considered when determining
+the result of the call to <a class="xref" href="NationalInstruments.SourceModel.ILinker.html#NationalInstruments_SourceModel_ILinker_HasPendingDeferredExports__1___0_">HasPendingDeferredExports&lt;T&gt;(T)</a>. This value can be <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Predicate&lt;Envoy&gt; ConsiderTarget { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Predicate</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_IPendingDeferredExportsQueryData_DefinitionToCheck_" data-uid="NationalInstruments.SourceModel.IPendingDeferredExportsQueryData.DefinitionToCheck*"></a>
+  <h4 id="NationalInstruments_SourceModel_IPendingDeferredExportsQueryData_DefinitionToCheck" data-uid="NationalInstruments.SourceModel.IPendingDeferredExportsQueryData.DefinitionToCheck">DefinitionToCheck</h4>
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="NationalInstruments.SourceModel.Definition.html">Definition</a> to check for pending export deferrals.  If this value is not 
+<code>null</code>, <a class="xref" href="NationalInstruments.SourceModel.IPendingDeferredExportsQueryData.html#NationalInstruments_SourceModel_IPendingDeferredExportsQueryData_ListenersToCheck">ListenersToCheck</a> must be <code>null</code>.  If this value is not <code>null</code>,
+the linker will check for pending deferrals for any <a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a> in the transaction 
+system that owns this Definition.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Definition DefinitionToCheck { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Definition.html">Definition</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_IPendingDeferredExportsQueryData_ListenersToCheck_" data-uid="NationalInstruments.SourceModel.IPendingDeferredExportsQueryData.ListenersToCheck*"></a>
+  <h4 id="NationalInstruments_SourceModel_IPendingDeferredExportsQueryData_ListenersToCheck" data-uid="NationalInstruments.SourceModel.IPendingDeferredExportsQueryData.ListenersToCheck">ListenersToCheck</h4>
+  <div class="markdown level1 summary"><p>Gets a collection of <a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a>s to check for pending export deferrals.  If this value is
+not <code>null</code>, <a class="xref" href="NationalInstruments.SourceModel.IPendingDeferredExportsQueryData.html#NationalInstruments_SourceModel_IPendingDeferredExportsQueryData_DefinitionToCheck">DefinitionToCheck</a> must be <code>null</code>.  If this value is not <code>null</code>,
+the linker will check if any of the elements in this collection have pending deferrals.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;IDependencyTargetExportChanged&gt; ListenersToCheck { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.IDependencyTargetExportChanged.html">IDependencyTargetExportChanged</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_IPendingDeferredExportsQueryData_OnDeferralComplete_" data-uid="NationalInstruments.SourceModel.IPendingDeferredExportsQueryData.OnDeferralComplete*"></a>
+  <h4 id="NationalInstruments_SourceModel_IPendingDeferredExportsQueryData_OnDeferralComplete" data-uid="NationalInstruments.SourceModel.IPendingDeferredExportsQueryData.OnDeferralComplete">OnDeferralComplete</h4>
+  <div class="markdown level1 summary"><p>Gets a delegate that will be called upon completion of the deferral for any of the Definitions, Elements,
+or Envoys specified.  If there were no pending deferrals, this delegate will not be called.  This property
+can return <code>null</code> to indicate it does not need to be notified when deferral is complete.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">EventHandler&lt;EventArgs&gt; OnDeferralComplete { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<span class="xref">System.EventArgs</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_IPendingDeferredExportsQueryData_TargetsToCheck_" data-uid="NationalInstruments.SourceModel.IPendingDeferredExportsQueryData.TargetsToCheck*"></a>
+  <h4 id="NationalInstruments_SourceModel_IPendingDeferredExportsQueryData_TargetsToCheck" data-uid="NationalInstruments.SourceModel.IPendingDeferredExportsQueryData.TargetsToCheck">TargetsToCheck</h4>
+  <div class="markdown level1 summary"><p>Gets a collection of <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a>s to check if there are <a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a>s in the system that
+have been notified of export changes to the given Envoys, but the notifications have been deferred.  If 
+either <a class="xref" href="NationalInstruments.SourceModel.IPendingDeferredExportsQueryData.html#NationalInstruments_SourceModel_IPendingDeferredExportsQueryData_DefinitionToCheck">DefinitionToCheck</a> or <a class="xref" href="NationalInstruments.SourceModel.IPendingDeferredExportsQueryData.html#NationalInstruments_SourceModel_IPendingDeferredExportsQueryData_ListenersToCheck">ListenersToCheck</a> is not <code>null</code>, this value
+must be null.  If both <a class="xref" href="NationalInstruments.SourceModel.IPendingDeferredExportsQueryData.html#NationalInstruments_SourceModel_IPendingDeferredExportsQueryData_DefinitionToCheck">DefinitionToCheck</a> and <a class="xref" href="NationalInstruments.SourceModel.IPendingDeferredExportsQueryData.html#NationalInstruments_SourceModel_IPendingDeferredExportsQueryData_ListenersToCheck">ListenersToCheck</a> are null, this 
+data will instruct the linker to check all elements in the system that have pending notifications from 
+any of the <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a>s in this list.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;Envoy&gt; TargetsToCheck { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_IPendingDeferredExportsQueryData_WaitForAllDeferralApprovers_" data-uid="NationalInstruments.SourceModel.IPendingDeferredExportsQueryData.WaitForAllDeferralApprovers*"></a>
+  <h4 id="NationalInstruments_SourceModel_IPendingDeferredExportsQueryData_WaitForAllDeferralApprovers" data-uid="NationalInstruments.SourceModel.IPendingDeferredExportsQueryData.WaitForAllDeferralApprovers">WaitForAllDeferralApprovers</h4>
+  <div class="markdown level1 summary"><p>Instructs the linker that all implementations of <a class="xref" href="NationalInstruments.SourceModel.IExportsChangedDeferralApprover.html">IExportsChangedDeferralApprover</a> must stop deferring
+the elements defined by <a class="xref" href="NationalInstruments.SourceModel.IPendingDeferredExportsQueryData.html#NationalInstruments_SourceModel_IPendingDeferredExportsQueryData_DefinitionToCheck">DefinitionToCheck</a>, <a class="xref" href="NationalInstruments.SourceModel.IPendingDeferredExportsQueryData.html#NationalInstruments_SourceModel_IPendingDeferredExportsQueryData_ListenersToCheck">ListenersToCheck</a>, or <a class="xref" href="NationalInstruments.SourceModel.IPendingDeferredExportsQueryData.html#NationalInstruments_SourceModel_IPendingDeferredExportsQueryData_TargetsToCheck">TargetsToCheck</a>
+before we consider all deferrals to be processed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool WaitForAllDeferralApprovers { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_SourceModel_IPendingDeferredExportsQueryData_WaitForAllDeferralApprovers_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>A value of <code>true</code> for this property is currently unsupported.  The only supported behavior is to notify when the
+linker has stopped deferring, not when all implementations of <a class="xref" href="NationalInstruments.SourceModel.IExportsChangedDeferralApprover.html">IExportsChangedDeferralApprover</a> have stopped.</p>
+</div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,731 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class MessagesTableViewModel
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class MessagesTableViewModel
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.Restricted.Shell.MessagesTableViewModel">
+  
+  
+  <h1 id="NationalInstruments_Restricted_Shell_MessagesTableViewModel" data-uid="NationalInstruments.Restricted.Shell.MessagesTableViewModel" class="text-break">Class MessagesTableViewModel
+  </h1>
+  <div class="markdown level0 summary"><p>TableViewModel implementation for displaying messages</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel</span></div>
+    <div class="level2"><span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel</span>&lt;<span class="xref">NationalInstruments.Controls.Tables.Model.IRowContent</span>&gt;</div>
+    <div class="level3"><span class="xref">NationalInstruments.Controls.Tables.ViewModel.ContentTableViewModel</span></div>
+    <div class="level4"><span class="xref">MessagesTableViewModel</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.Windows.IWeakEventListener</span></div>
+    <div><span class="xref">NationalInstruments.Controls.Tables.ViewModel.ITableViewModel</span>&lt;<span class="xref">NationalInstruments.Controls.Tables.Model.IRowContent</span>&gt;</div>
+    <div><span class="xref">NationalInstruments.Controls.Tables.ViewModel.ITableViewModel</span></div>
+    <div><span class="xref">System.ComponentModel.INotifyPropertyChanged</span></div>
+    <div><span class="xref">NationalInstruments.Controls.Tables.Model.IDataObserver</span>&lt;<span class="xref">NationalInstruments.Controls.Tables.Model.IRowContent</span>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.ContentTableViewModel.ContentDataSource</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel&lt;NationalInstruments.Controls.Tables.Model.IRowContent&gt;.DataSource</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel&lt;NationalInstruments.Controls.Tables.Model.IRowContent&gt;.TotalRowCount</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel&lt;NationalInstruments.Controls.Tables.Model.IRowContent&gt;.GetRowViewModel(System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel&lt;NationalInstruments.Controls.Tables.Model.IRowContent&gt;.GetGlobalRowIndex(NationalInstruments.Controls.Tables.ViewModel.ITableRowViewModel)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel&lt;NationalInstruments.Controls.Tables.Model.IRowContent&gt;.ModelPropertyChanged(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel&lt;NationalInstruments.Controls.Tables.Model.IRowContent&gt;.RowPropertyChanged(NationalInstruments.Controls.Tables.Model.IRowContent, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel&lt;NationalInstruments.Controls.Tables.Model.IRowContent&gt;.RowColumnValueChanged(NationalInstruments.Controls.Tables.Model.IRowContent, System.Int32, NationalInstruments.Controls.Tables.Model.IDataColumn, System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel&lt;NationalInstruments.Controls.Tables.Model.IRowContent&gt;.RowsAdded(NationalInstruments.Controls.Tables.Model.IRowContent[], System.Int32[])</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel&lt;NationalInstruments.Controls.Tables.Model.IRowContent&gt;.RowsRemoved(NationalInstruments.Controls.Tables.Model.IRowContent[], System.Int32[])</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel&lt;NationalInstruments.Controls.Tables.Model.IRowContent&gt;.RowsSorted(NationalInstruments.Controls.Tables.Model.DataRowRange)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel&lt;NationalInstruments.Controls.Tables.Model.IRowContent&gt;.RowsFiltered(System.Boolean, NationalInstruments.Controls.Tables.Model.IRowContent[], System.Int32[])</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel&lt;NationalInstruments.Controls.Tables.Model.IRowContent&gt;.MessagesAdded(NationalInstruments.Controls.Tables.Model.IMessage&lt;NationalInstruments.Controls.Tables.Model.IRowContent&gt;[])</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel&lt;NationalInstruments.Controls.Tables.Model.IRowContent&gt;.MessagesRemoved(NationalInstruments.Controls.Tables.Model.IMessage&lt;NationalInstruments.Controls.Tables.Model.IRowContent&gt;[])</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel&lt;NationalInstruments.Controls.Tables.Model.IRowContent&gt;.CreateRowViewModel(NationalInstruments.Controls.Tables.Model.IRowContent)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel&lt;NationalInstruments.Controls.Tables.Model.IRowContent&gt;.GetRowViewModel(NationalInstruments.Controls.Tables.Model.IRowContent)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel&lt;NationalInstruments.Controls.Tables.Model.IRowContent&gt;.GetOrCreateRowViewModel(NationalInstruments.Controls.Tables.Model.IRowContent)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel&lt;NationalInstruments.Controls.Tables.Model.IRowContent&gt;.CreateGroupViewModel(NationalInstruments.Controls.Tables.Model.GroupDescription)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel&lt;NationalInstruments.Controls.Tables.Model.IRowContent&gt;.OnRowsCleared()</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.ExpandedRowCount</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.AllColumns</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.FrozenColumnCount</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.Commands</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.Metrics</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.AvailableValues(NationalInstruments.Controls.Tables.Model.IDataColumn, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.GetValue(NationalInstruments.Controls.Tables.Model.IDataColumn, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.SetValue(NationalInstruments.Controls.Tables.Model.IDataColumn, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.SetValue(NationalInstruments.Controls.Tables.Model.IDataColumn, System.Object, System.Collections.Generic.IEnumerable&lt;NationalInstruments.Controls.Tables.Model.DataRowRange&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.SetValue(System.Collections.Generic.IReadOnlyDictionary&lt;NationalInstruments.Controls.Tables.Model.IDataColumn, System.Object&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.EditableRowCount(NationalInstruments.Controls.Tables.Model.IDataColumn, System.Collections.Generic.IEnumerable&lt;NationalInstruments.Controls.Tables.Model.DataRowRange&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.EditableRowCount(NationalInstruments.Controls.Tables.Model.IDataColumn)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.GetLocalRowIndex(NationalInstruments.Controls.Tables.ViewModel.ITableRowViewModel)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.UpdateVisibleRows(NationalInstruments.Controls.Tables.Model.DataRowRange)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.RowSynchronizationInProgress</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.HasGroups</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.AllGroups</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.AllGroupViewModels</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.VisibleGroups</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.CurrentGroup</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.GroupBy(NationalInstruments.Controls.Tables.Model.SortDescription)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.FocusFirstSelectedRow()</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.SelectedRowRanges</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.SelectedRowCount</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.LastClickedRowIndex</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.LastSelectedRowIndex</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.ShiftSelectStartRowIndex</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.ShiftSelectEndRowIndex</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.LastClickedColumn</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.SuppressScrollToNewSelection</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.IsSelectionChanging</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.SelectRange(NationalInstruments.Controls.Tables.Model.DataRowRange)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.DeselectRange(NationalInstruments.Controls.Tables.Model.DataRowRange)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.ClearSelection()</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.ClearSelectionInOtherGroups(NationalInstruments.Controls.Tables.ViewModel.ITableGroupViewModel)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.IsFiltered</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.FilterDescriptions</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.AddFilterDescription(NationalInstruments.Controls.Tables.Model.FilterDescription)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.AddFilterDescription(NationalInstruments.Controls.Tables.Model.FilterDescription, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.AddFilterDescription(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.Filter()</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.ClearFilters()</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.SortDescriptions</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.AddSortDescription(NationalInstruments.Controls.Tables.Model.SortDescription)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.SetPrimarySortDescription(NationalInstruments.Controls.Tables.Model.SortDescription, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.ClearSortDescriptions()</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.Sort()</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.IsTree</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.ExpandCollapseRowContainer(NationalInstruments.Controls.Tables.ViewModel.ITableRowViewModel, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.ExpandCollapseAll(System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.IsRowExpanded(System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.RemoveCollapsedRows(System.Collections.Generic.IList&lt;NationalInstruments.Controls.Tables.ViewModel.ITableRowViewModel&gt;, System.Collections.Generic.IList&lt;System.Int32&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.CopyCommand</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.CutCommand</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.PasteCommand</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.CanCopy()</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.OnCopy()</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.CanCut()</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.OnCut()</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.CanPaste()</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.OnPaste()</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.HandleCopy(NationalInstruments.Controls.Tables.Model.IDataColumn, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.CopyColumnValueToClipboard(NationalInstruments.Controls.Tables.Model.IDataColumn, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.CopyColumnValuesToClipboard()</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.SelectedRowColumnValuesToTabDelimitedString()</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.HandleCut(NationalInstruments.Controls.Tables.Model.IDataColumn, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.HandlePaste(NationalInstruments.Controls.Tables.Model.IDataColumn, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.PropertyChanged</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.OnPropertyChanged(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.ReceiveWeakEvent(System.Type, System.Object, System.EventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.OnActiveRowsChanged()</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.CellPopupIsOpen</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.NotifyGroupRowColumnValueChanged(System.Collections.Generic.IEnumerable&lt;System.Int32&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.AddGroupViewModel(NationalInstruments.Controls.Tables.ViewModel.TableGroupViewModel)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.InsertGroupViewModel(System.Int32, NationalInstruments.Controls.Tables.ViewModel.TableGroupViewModel)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.RemoveGroupViewModel(System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.RemoveAllGroupViewModels()</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.GetRowIds(System.Collections.Generic.IEnumerable&lt;System.Int32&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.GetRowRangesFromIds(System.Collections.Generic.ISet&lt;System.Object&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.GetVisibleGroupForRow(System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.Restricted.Shell.html">NationalInstruments.Restricted.Shell</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_Restricted_Shell_MessagesTableViewModel_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class MessagesTableViewModel : ContentTableViewModel, IWeakEventListener, ITableViewModel&lt;IRowContent&gt;, ITableViewModel, INotifyPropertyChanged, IDataObserver&lt;IRowContent&gt;</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_MessagesTableViewModel__ctor_" data-uid="NationalInstruments.Restricted.Shell.MessagesTableViewModel.#ctor*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_MessagesTableViewModel__ctor_NationalInstruments_Restricted_Shell_MessagesDataSource_" data-uid="NationalInstruments.Restricted.Shell.MessagesTableViewModel.#ctor(NationalInstruments.Restricted.Shell.MessagesDataSource)">MessagesTableViewModel(MessagesDataSource)</h4>
+  <div class="markdown level1 summary"><p>The Constructor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MessagesTableViewModel(MessagesDataSource dataSource)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Restricted.Shell.MessagesDataSource.html">MessagesDataSource</a></td>
+        <td><span class="parametername">dataSource</span></td>
+        <td><p>Data source for this view model.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_MessagesTableViewModel_ApplyFilters_" data-uid="NationalInstruments.Restricted.Shell.MessagesTableViewModel.ApplyFilters*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_MessagesTableViewModel_ApplyFilters" data-uid="NationalInstruments.Restricted.Shell.MessagesTableViewModel.ApplyFilters">ApplyFilters()</h4>
+  <div class="markdown level1 summary"><p>Applies all filters</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ApplyFilters()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_MessagesTableViewModel_ClearData_" data-uid="NationalInstruments.Restricted.Shell.MessagesTableViewModel.ClearData*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_MessagesTableViewModel_ClearData" data-uid="NationalInstruments.Restricted.Shell.MessagesTableViewModel.ClearData">ClearData()</h4>
+  <div class="markdown level1 summary"><p>Clears the table</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClearData()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_MessagesTableViewModel_CreateGroupViewModel_" data-uid="NationalInstruments.Restricted.Shell.MessagesTableViewModel.CreateGroupViewModel*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_MessagesTableViewModel_CreateGroupViewModel_NationalInstruments_Controls_Tables_Model_GroupDescription_System_Int32_" data-uid="NationalInstruments.Restricted.Shell.MessagesTableViewModel.CreateGroupViewModel(NationalInstruments.Controls.Tables.Model.GroupDescription,System.Int32)">CreateGroupViewModel(GroupDescription, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override ITableGroupViewModel CreateGroupViewModel(GroupDescription groupDescription, int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Controls.Tables.Model.GroupDescription</span></td>
+        <td><span class="parametername">groupDescription</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Controls.Tables.ViewModel.ITableGroupViewModel</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel&lt;NationalInstruments.Controls.Tables.Model.IRowContent&gt;.CreateGroupViewModel(NationalInstruments.Controls.Tables.Model.GroupDescription, System.Int32)</span></div>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_MessagesTableViewModel_HighlightMessage_" data-uid="NationalInstruments.Restricted.Shell.MessagesTableViewModel.HighlightMessage*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_MessagesTableViewModel_HighlightMessage_NationalInstruments_SourceModel_IMessage_" data-uid="NationalInstruments.Restricted.Shell.MessagesTableViewModel.HighlightMessage(NationalInstruments.SourceModel.IMessage)">HighlightMessage(IMessage)</h4>
+  <div class="markdown level1 summary"><p>Highlights a message in the table</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void HighlightMessage(IMessage message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.IMessage.html">IMessage</a></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The message to highlight</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_MessagesTableViewModel_OnSelectionChanged_" data-uid="NationalInstruments.Restricted.Shell.MessagesTableViewModel.OnSelectionChanged*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_MessagesTableViewModel_OnSelectionChanged_System_Collections_Generic_IEnumerable_NationalInstruments_Controls_Tables_Model_DataRowRange__System_Collections_Generic_IEnumerable_NationalInstruments_Controls_Tables_Model_DataRowRange__" data-uid="NationalInstruments.Restricted.Shell.MessagesTableViewModel.OnSelectionChanged(System.Collections.Generic.IEnumerable{NationalInstruments.Controls.Tables.Model.DataRowRange},System.Collections.Generic.IEnumerable{NationalInstruments.Controls.Tables.Model.DataRowRange})">OnSelectionChanged(IEnumerable&lt;DataRowRange&gt;, IEnumerable&lt;DataRowRange&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnSelectionChanged(IEnumerable&lt;DataRowRange&gt; oldSelection, IEnumerable&lt;DataRowRange&gt; newSelection)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">NationalInstruments.Controls.Tables.Model.DataRowRange</span>&gt;</td>
+        <td><span class="parametername">oldSelection</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">NationalInstruments.Controls.Tables.Model.DataRowRange</span>&gt;</td>
+        <td><span class="parametername">newSelection</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">NationalInstruments.Controls.Tables.ViewModel.TableViewModel.OnSelectionChanged(System.Collections.Generic.IEnumerable&lt;NationalInstruments.Controls.Tables.Model.DataRowRange&gt;, System.Collections.Generic.IEnumerable&lt;NationalInstruments.Controls.Tables.Model.DataRowRange&gt;)</span></div>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_MessagesTableViewModel_RefreshMessages_" data-uid="NationalInstruments.Restricted.Shell.MessagesTableViewModel.RefreshMessages*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_MessagesTableViewModel_RefreshMessages" data-uid="NationalInstruments.Restricted.Shell.MessagesTableViewModel.RefreshMessages">RefreshMessages()</h4>
+  <div class="markdown level1 summary"><p>Refreshes all messages</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RefreshMessages()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_MessagesTableViewModel_ScrollIntoView_" data-uid="NationalInstruments.Restricted.Shell.MessagesTableViewModel.ScrollIntoView*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_MessagesTableViewModel_ScrollIntoView_NationalInstruments_SourceModel_IMessage_" data-uid="NationalInstruments.Restricted.Shell.MessagesTableViewModel.ScrollIntoView(NationalInstruments.SourceModel.IMessage)">ScrollIntoView(IMessage)</h4>
+  <div class="markdown level1 summary"><p>Makes a message visible in the table</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ScrollIntoView(IMessage message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.IMessage.html">IMessage</a></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The message to make visible</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_MessagesTableViewModel_UpdateMessagesCollection_" data-uid="NationalInstruments.Restricted.Shell.MessagesTableViewModel.UpdateMessagesCollection*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_MessagesTableViewModel_UpdateMessagesCollection_NationalInstruments_SourceModel_IReadOnlyMessageCollection_" data-uid="NationalInstruments.Restricted.Shell.MessagesTableViewModel.UpdateMessagesCollection(NationalInstruments.SourceModel.IReadOnlyMessageCollection)">UpdateMessagesCollection(IReadOnlyMessageCollection)</h4>
+  <div class="markdown level1 summary"><p>Updates the message collection shown in SCT</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateMessagesCollection(IReadOnlyMessageCollection messages)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.IReadOnlyMessageCollection.html">IReadOnlyMessageCollection</a></td>
+        <td><span class="parametername">messages</span></td>
+        <td><p>The message collection</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.Windows.IWeakEventListener</span>
+  </div>
+  <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.ITableViewModel`1</span>
+  </div>
+  <div>
+      <span class="xref">NationalInstruments.Controls.Tables.ViewModel.ITableViewModel</span>
+  </div>
+  <div>
+      <span class="xref">System.ComponentModel.INotifyPropertyChanged</span>
+  </div>
+  <div>
+      <span class="xref">NationalInstruments.Controls.Tables.Model.IDataObserver`1</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Shell.SctFilterCommandHelper.html#NationalInstruments_Shell_SctFilterCommandHelper_CustomTextFilter_NationalInstruments_Controls_Tables_ViewModel_ITableViewModel_System_String_System_Collections_Generic_IEnumerable_NationalInstruments_Controls_Tables_Model_IDataColumn__">SctFilterCommandHelper.CustomTextFilter(ITableViewModel, String, IEnumerable&lt;IDataColumn&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Shell.SctFilterCommandHelper.html#NationalInstruments_Shell_SctFilterCommandHelper_SetCustomTextFilter_NationalInstruments_Controls_Tables_ViewModel_ITableViewModel_System_String_System_Collections_Generic_IEnumerable_NationalInstruments_Controls_Tables_Model_IDataColumn__">SctFilterCommandHelper.SetCustomTextFilter(ITableViewModel, String, IEnumerable&lt;IDataColumn&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

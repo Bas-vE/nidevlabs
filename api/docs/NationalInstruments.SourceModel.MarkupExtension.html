@@ -1,0 +1,592 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class MarkupExtension
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class MarkupExtension
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.SourceModel.MarkupExtension">
+  
+  
+  <h1 id="NationalInstruments_SourceModel_MarkupExtension" data-uid="NationalInstruments.SourceModel.MarkupExtension" class="text-break">Class MarkupExtension
+  </h1>
+  <div class="markdown level0 summary"><p>Class for capturing markup extensions (expressions of the form {...}) that occur in XAML.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="NationalInstruments.SourceModel.NamespaceQualifiedValue.html">NamespaceQualifiedValue</a></div>
+    <div class="level2"><span class="xref">MarkupExtension</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.NamespaceQualifiedValue.html#NationalInstruments_SourceModel_NamespaceQualifiedValue_Create_System_Func_System_Collections_Generic_Dictionary_System_String_System_String__System_String__System_String___">NamespaceQualifiedValue.Create(Func&lt;Dictionary&lt;String, String&gt;, String&gt;, String[])</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.SourceModel.html">NationalInstruments.SourceModel</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_SourceModel_MarkupExtension_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class MarkupExtension : NamespaceQualifiedValue</code></pre>
+  </div>
+  <h5 id="NationalInstruments_SourceModel_MarkupExtension_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>Rules:</p>
+<ol>
+<li>A markup extension is of the form { identifier attribute* }.</li>
+<li>An attribute is of the form identifier | identifier = value, where value is an identifier or a markup extension.</li>
+<li>Identifiers contain letters and periods and may be qualified by a namespace prefix (separated by a colon).</li>
+</ol>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_MarkupExtension__ctor_" data-uid="NationalInstruments.SourceModel.MarkupExtension.#ctor*"></a>
+  <h4 id="NationalInstruments_SourceModel_MarkupExtension__ctor" data-uid="NationalInstruments.SourceModel.MarkupExtension.#ctor">MarkupExtension()</h4>
+  <div class="markdown level1 summary"><p>Public constructor for MarkupExtension.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MarkupExtension()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_MarkupExtension_Name_" data-uid="NationalInstruments.SourceModel.MarkupExtension.Name*"></a>
+  <h4 id="NationalInstruments_SourceModel_MarkupExtension_Name" data-uid="NationalInstruments.SourceModel.MarkupExtension.Name">Name</h4>
+  <div class="markdown level1 summary"><p>The name or first identifier in this expression.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NameWithNamespace Name { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.NameWithNamespace.html">NameWithNamespace</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_MarkupExtension_NamespaceDependencies_" data-uid="NationalInstruments.SourceModel.MarkupExtension.NamespaceDependencies*"></a>
+  <h4 id="NationalInstruments_SourceModel_MarkupExtension_NamespaceDependencies" data-uid="NationalInstruments.SourceModel.MarkupExtension.NamespaceDependencies">NamespaceDependencies</h4>
+  <div class="markdown level1 summary"><p>The set of namespaces that this value expects to be defined with prefixes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IEnumerable&lt;string&gt; NamespaceDependencies { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.NamespaceQualifiedValue.html#NationalInstruments_SourceModel_NamespaceQualifiedValue_NamespaceDependencies">NamespaceQualifiedValue.NamespaceDependencies</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_MarkupExtension_NamespacePrefixes_" data-uid="NationalInstruments.SourceModel.MarkupExtension.NamespacePrefixes*"></a>
+  <h4 id="NationalInstruments_SourceModel_MarkupExtension_NamespacePrefixes" data-uid="NationalInstruments.SourceModel.MarkupExtension.NamespacePrefixes">NamespacePrefixes</h4>
+  <div class="markdown level1 summary"><p>Dictionary of XML-defined namespace prefixes to the namespaces they are defined for; after parsing a MarkupExtension, this should contain an entry for each prefix
+used by some element in the MarkupExtension.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;string, string&gt; NamespacePrefixes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_MarkupExtension_Properties_" data-uid="NationalInstruments.SourceModel.MarkupExtension.Properties*"></a>
+  <h4 id="NationalInstruments_SourceModel_MarkupExtension_Properties" data-uid="NationalInstruments.SourceModel.MarkupExtension.Properties">Properties</h4>
+  <div class="markdown level1 summary"><p>The key-value pairs in this expression. The values in this Dictionary may be either strings or MarkupExtensions;
+empty values are represented by empty strings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;NameWithNamespace, object&gt; Properties { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.NameWithNamespace.html">NameWithNamespace</a>, <span class="xref">System.Object</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_MarkupExtension_Equals_" data-uid="NationalInstruments.SourceModel.MarkupExtension.Equals*"></a>
+  <h4 id="NationalInstruments_SourceModel_MarkupExtension_Equals_System_Object_" data-uid="NationalInstruments.SourceModel.MarkupExtension.Equals(System.Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"><p>Compares this object with another MarkupExtension for semantic equality.  </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td><p>Another MarkupExtension to compare this object instance to.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the objects are semantically equivalent, false otherwise</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.Equals(System.Object)</span></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_MarkupExtension_GetHashCode_" data-uid="NationalInstruments.SourceModel.MarkupExtension.GetHashCode*"></a>
+  <h4 id="NationalInstruments_SourceModel_MarkupExtension_GetHashCode" data-uid="NationalInstruments.SourceModel.MarkupExtension.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"><p>Override GetHashCode() per <a href="http://go.microsoft.com/fwlink/?LinkID=85237">http://go.microsoft.com/fwlink/?LinkID=85237</a>.  I also used ideas from <a href="http://stackoverflow.com/questions/263400/what-is-the-best-algorithm-for-an-overridden-system-object-gethashcode">http://stackoverflow.com/questions/263400/what-is-the-best-algorithm-for-an-overridden-system-object-gethashcode</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Hash value</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.GetHashCode()</span></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_MarkupExtension_ParseMarkupExtension_" data-uid="NationalInstruments.SourceModel.MarkupExtension.ParseMarkupExtension*"></a>
+  <h4 id="NationalInstruments_SourceModel_MarkupExtension_ParseMarkupExtension_System_String_" data-uid="NationalInstruments.SourceModel.MarkupExtension.ParseMarkupExtension(System.String)">ParseMarkupExtension(String)</h4>
+  <div class="markdown level1 summary"><p>Parses a markup extension.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MarkupExtension ParseMarkupExtension(string expression)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">expression</span></td>
+        <td><p>The string form of the markup extension to parse.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.MarkupExtension.html">MarkupExtension</a></td>
+        <td><p>The MarkupExtension that was parsed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_MarkupExtension_ToString_" data-uid="NationalInstruments.SourceModel.MarkupExtension.ToString*"></a>
+  <h4 id="NationalInstruments_SourceModel_MarkupExtension_ToString" data-uid="NationalInstruments.SourceModel.MarkupExtension.ToString">ToString()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.ToString()</span></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_MarkupExtension_ToString_" data-uid="NationalInstruments.SourceModel.MarkupExtension.ToString*"></a>
+  <h4 id="NationalInstruments_SourceModel_MarkupExtension_ToString_System_Collections_Generic_Dictionary_System_String_System_String__" data-uid="NationalInstruments.SourceModel.MarkupExtension.ToString(System.Collections.Generic.Dictionary{System.String,System.String})">ToString(Dictionary&lt;String, String&gt;)</h4>
+  <div class="markdown level1 summary"><p>Format the object as a string, given a mapping of XML namespaces to prefixes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString(Dictionary&lt;string, string&gt; namespacePrefixes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">namespacePrefixes</span></td>
+        <td><p>A dictionary from XML namespaces to prefixes.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The string form of the value, wiht namespace prefixes substituted appropriately.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.NamespaceQualifiedValue.html#NationalInstruments_SourceModel_NamespaceQualifiedValue_ToString_System_Collections_Generic_Dictionary_System_String_System_String__">NamespaceQualifiedValue.ToString(Dictionary&lt;String, String&gt;)</a></div>
+  <h3 id="operators">Operators
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_MarkupExtension_op_Equality_" data-uid="NationalInstruments.SourceModel.MarkupExtension.op_Equality*"></a>
+  <h4 id="NationalInstruments_SourceModel_MarkupExtension_op_Equality_NationalInstruments_SourceModel_MarkupExtension_NationalInstruments_SourceModel_MarkupExtension_" data-uid="NationalInstruments.SourceModel.MarkupExtension.op_Equality(NationalInstruments.SourceModel.MarkupExtension,NationalInstruments.SourceModel.MarkupExtension)">Equality(MarkupExtension, MarkupExtension)</h4>
+  <div class="markdown level1 summary"><p>== operator overload</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(MarkupExtension lhs, MarkupExtension rhs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.MarkupExtension.html">MarkupExtension</a></td>
+        <td><span class="parametername">lhs</span></td>
+        <td><p>Lefthand side of binary operator</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.MarkupExtension.html">MarkupExtension</a></td>
+        <td><span class="parametername">rhs</span></td>
+        <td><p>Righthand side of binary operator</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if lhs == rhs, false otherwise</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_MarkupExtension_op_Inequality_" data-uid="NationalInstruments.SourceModel.MarkupExtension.op_Inequality*"></a>
+  <h4 id="NationalInstruments_SourceModel_MarkupExtension_op_Inequality_NationalInstruments_SourceModel_MarkupExtension_NationalInstruments_SourceModel_MarkupExtension_" data-uid="NationalInstruments.SourceModel.MarkupExtension.op_Inequality(NationalInstruments.SourceModel.MarkupExtension,NationalInstruments.SourceModel.MarkupExtension)">Inequality(MarkupExtension, MarkupExtension)</h4>
+  <div class="markdown level1 summary"><p>!= operator overload</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(MarkupExtension lhs, MarkupExtension rhs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.MarkupExtension.html">MarkupExtension</a></td>
+        <td><span class="parametername">lhs</span></td>
+        <td><p>Lefthand side of binary operator</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.MarkupExtension.html">MarkupExtension</a></td>
+        <td><span class="parametername">rhs</span></td>
+        <td><p>Righthand side of binary operator</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if lhs == rhs, false otherwise</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,3949 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ManhattanWiringBehavior
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ManhattanWiringBehavior
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior">
+  
+  
+  <h1 id="NationalInstruments_SourceModel_ManhattanWiringBehavior" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior" class="text-break">Class ManhattanWiringBehavior
+  </h1>
+  <div class="markdown level0 summary"><p>Implementation of IWiringBehavior for manhattan-style wires (i.e. &quot;rectilinear&quot;, &quot;orthogonal&quot;)</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html">EnvoyService</a></div>
+    <div class="level2"><span class="xref">ManhattanWiringBehavior</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="NationalInstruments.SourceModel.IWiringBehavior.html">IWiringBehavior</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_ProvidesInterface_System_Collections_Generic_IDictionary_System_String_System_Object__System_Type_">EnvoyService.ProvidesInterface(IDictionary&lt;String, Object&gt;, Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_AssociatedEnvoy">EnvoyService.AssociatedEnvoy</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_Project">EnvoyService.Project</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_Host">EnvoyService.Host</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_Detaching_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.Detaching(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_Detach_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.Detach(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_ProjectSaveAsync_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.ProjectSaveAsync(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_ProjectClose_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.ProjectClose(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_ModelLoaded_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.ModelLoaded(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_ModelClosing_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.ModelClosing(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_ModelClosed_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.ModelClosed(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_ModelSavedAsync_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.ModelSavedAsync(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_ModelSavingAsync_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.ModelSavingAsync(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_OnAttached_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.OnAttached(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_OnDetaching_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.OnDetaching(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_OnDetach_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.OnDetach(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_OnProjectSaveAsync_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.OnProjectSaveAsync(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_OnProjectClose_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.OnProjectClose(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_OnModelLoaded_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.OnModelLoaded(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_OnModelClosed_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.OnModelClosed(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_OnModelSavingAsync_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.OnModelSavingAsync(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_OnModelSavedAsync_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.OnModelSavedAsync(Envoy)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.SourceModel.html">NationalInstruments.SourceModel</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ManhattanWiringBehavior : EnvoyService, IWiringBehavior</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior__ctor_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.#ctor*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior__ctor" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.#ctor">ManhattanWiringBehavior()</h4>
+  <div class="markdown level1 summary"><p>Construct the manhattan wiring.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ManhattanWiringBehavior()</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_BehaviorName" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.BehaviorName">BehaviorName</h4>
+  <div class="markdown level1 summary"><p>Name of the wiring behavior. Used for MEF exports.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string BehaviorName = &quot;ManhattanWiringBehavior&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_AdditionalWiringTransactionTagsForBehavior_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.AdditionalWiringTransactionTagsForBehavior*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_AdditionalWiringTransactionTagsForBehavior" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.AdditionalWiringTransactionTagsForBehavior">AdditionalWiringTransactionTagsForBehavior</h4>
+  <div class="markdown level1 summary"><p>Gets any additional wiring transaction tags specific to the behavior</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IEnumerable&lt;WiringTransaction&gt; AdditionalWiringTransactionTagsForBehavior { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.WiringTransaction.html">WiringTransaction</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_AllowsCollapseOfOverlappingSegments_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.AllowsCollapseOfOverlappingSegments*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_AllowsCollapseOfOverlappingSegments" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.AllowsCollapseOfOverlappingSegments">AllowsCollapseOfOverlappingSegments</h4>
+  <div class="markdown level1 summary"><p>Gets whether the wire segment is allowed to overlap.
+<returns>
+<code>true</code> if [segment should collapse on overlap]; otherwise, <code>false</code>
+</returns></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool AllowsCollapseOfOverlappingSegments { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_AllowSegmentSplitDuringTerminalSheer_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.AllowSegmentSplitDuringTerminalSheer*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_AllowSegmentSplitDuringTerminalSheer" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.AllowSegmentSplitDuringTerminalSheer">AllowSegmentSplitDuringTerminalSheer</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether [allow segment split during terminal sheer].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool AllowSegmentSplitDuringTerminalSheer { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if [allow segment split during terminal sheer]; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_AllowsInterDiagramWiring_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.AllowsInterDiagramWiring*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_AllowsInterDiagramWiring" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.AllowsInterDiagramWiring">AllowsInterDiagramWiring</h4>
+  <div class="markdown level1 summary"><p>Gets whether this wiring behavior supports wiring between nested diagrams.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool AllowsInterDiagramWiring { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_AllowsMultipleTunnelsForWire_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.AllowsMultipleTunnelsForWire*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_AllowsMultipleTunnelsForWire" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.AllowsMultipleTunnelsForWire">AllowsMultipleTunnelsForWire</h4>
+  <div class="markdown level1 summary"><p>Gets whether this wiring behavior supports multiple tunnels across the same structure for single wire.
+<returns>
+<code>true</code> if [allow multiple tunnels for wire]; otherwise, <code>false</code>
+</returns></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool AllowsMultipleTunnelsForWire { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_AutoRoutingEnabled_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.AutoRoutingEnabled*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_AutoRoutingEnabled" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.AutoRoutingEnabled">AutoRoutingEnabled</h4>
+  <div class="markdown level1 summary"><p>Is auto routing enabled?</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AutoRoutingEnabled { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_AvoidShapingSegmentOverlap_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.AvoidShapingSegmentOverlap*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_AvoidShapingSegmentOverlap" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.AvoidShapingSegmentOverlap">AvoidShapingSegmentOverlap</h4>
+  <div class="markdown level1 summary"><p>Switch to enable prevention of node segment overlap</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool AvoidShapingSegmentOverlap { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_DefaultAutoRouter_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.DefaultAutoRouter*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_DefaultAutoRouter" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.DefaultAutoRouter">DefaultAutoRouter</h4>
+  <div class="markdown level1 summary"><p>Default router. Used when no MEF exports present during load/unattached definition, etc.
+Defaults to <a class="xref" href="NationalInstruments.SourceModel.HightowerRouter.html">HightowerRouter</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Lazy&lt;IWireAutoRouter&gt; DefaultAutoRouter { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Lazy</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.IWireAutoRouter.html">IWireAutoRouter</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_DefaultAutoRoutingAlgorithm_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.DefaultAutoRoutingAlgorithm*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_DefaultAutoRoutingAlgorithm" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.DefaultAutoRoutingAlgorithm">DefaultAutoRoutingAlgorithm</h4>
+  <div class="markdown level1 summary"><p>Default routing algorithm. Used when no MEF exports present during load/unattached definition, etc.
+Default is <a class="xref" href="NationalInstruments.SourceModel.HightowerRoutingAlgorithm.html">HightowerRoutingAlgorithm</a>. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Lazy&lt;IWireRoutingAlgorithm&gt; DefaultAutoRoutingAlgorithm { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Lazy</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.IWireRoutingAlgorithm.html">IWireRoutingAlgorithm</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_DeleteUnnecessaryTunnelsWhenReparenting_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.DeleteUnnecessaryTunnelsWhenReparenting*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_DeleteUnnecessaryTunnelsWhenReparenting" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.DeleteUnnecessaryTunnelsWhenReparenting">DeleteUnnecessaryTunnelsWhenReparenting</h4>
+  <div class="markdown level1 summary"><p>Perform a clean up of unnecessary tunnel when reparenting</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool DeleteUnnecessaryTunnelsWhenReparenting { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_InferredJointScaling_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.InferredJointScaling*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_InferredJointScaling" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.InferredJointScaling">InferredJointScaling</h4>
+  <div class="markdown level1 summary"><p>Gets and sets the amount to scale SnapToGridSize when inferring
+joints needed to extend wires to location.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float InferredJointScaling { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_Router_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.Router*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_Router" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.Router">Router</h4>
+  <div class="markdown level1 summary"><p>The router associated with this wiring behavior.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IWireAutoRouter Router { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.IWireAutoRouter.html">IWireAutoRouter</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_Routers_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.Routers*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_Routers" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.Routers">Routers</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ImportMany]
+public List&lt;Lazy&lt;IWireAutoRouter, IWiringMetadata&gt;&gt; Routers { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.Lazy</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.IWireAutoRouter.html">IWireAutoRouter</a>, <a class="xref" href="NationalInstruments.SourceModel.IWiringMetadata.html">IWiringMetadata</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_RoutingAlgorithm_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.RoutingAlgorithm*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_RoutingAlgorithm" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.RoutingAlgorithm">RoutingAlgorithm</h4>
+  <div class="markdown level1 summary"><p>The routing algorithm associated with this wiring behavior.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IWireRoutingAlgorithm RoutingAlgorithm { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.IWireRoutingAlgorithm.html">IWireRoutingAlgorithm</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_RoutingAlgorithms_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.RoutingAlgorithms*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_RoutingAlgorithms" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.RoutingAlgorithms">RoutingAlgorithms</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ImportMany]
+public List&lt;Lazy&lt;IWireRoutingAlgorithm, IWiringMetadata&gt;&gt; RoutingAlgorithms { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.Lazy</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.IWireRoutingAlgorithm.html">IWireRoutingAlgorithm</a>, <a class="xref" href="NationalInstruments.SourceModel.IWiringMetadata.html">IWiringMetadata</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_SnapToGridLine_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.SnapToGridLine*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_SnapToGridLine" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.SnapToGridLine">SnapToGridLine</h4>
+  <div class="markdown level1 summary"><p>The property indicates if the SnapToGrid property is enabled for the blockDiagram.
+Used as a hint to the routing algorithm.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SnapToGridLine { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_SnapToGridSize_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.SnapToGridSize*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_SnapToGridSize" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.SnapToGridSize">SnapToGridSize</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SMSize SnapToGridSize { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMSize</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_SupportedRoutingAlgorithms_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.SupportedRoutingAlgorithms*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_SupportedRoutingAlgorithms" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.SupportedRoutingAlgorithms">SupportedRoutingAlgorithms</h4>
+  <div class="markdown level1 summary"><p>Gets the supported routing algorithms.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IList&lt;string&gt; SupportedRoutingAlgorithms { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><p>The supported routing algorithms.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_SupportsSegmentBranching_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.SupportsSegmentBranching*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_SupportsSegmentBranching" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.SupportsSegmentBranching">SupportsSegmentBranching</h4>
+  <div class="markdown level1 summary"><p>Gets whether this wiring behavior supports branching a wire from a segment</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool SupportsSegmentBranching { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_SupportsSegmentMovementPastTerminal_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.SupportsSegmentMovementPastTerminal*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_SupportsSegmentMovementPastTerminal" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.SupportsSegmentMovementPastTerminal">SupportsSegmentMovementPastTerminal</h4>
+  <div class="markdown level1 summary"><p>Gets whether the behavior allows for wire segments to be moved past the terminals
+<returns>
+<code>true</code> if [allow segment to move beyond terminals]; otherwise, <code>false</code>
+</returns></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool SupportsSegmentMovementPastTerminal { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_SupportsTacking_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.SupportsTacking*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_SupportsTacking" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.SupportsTacking">SupportsTacking</h4>
+  <div class="markdown level1 summary"><p>Gets whether this wiring behavior supports tacking down a wire and continuing to wire from the tack point</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool SupportsTacking { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_SupportsWhiskersDuringDiagonalFixup_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.SupportsWhiskersDuringDiagonalFixup*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_SupportsWhiskersDuringDiagonalFixup" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.SupportsWhiskersDuringDiagonalFixup">SupportsWhiskersDuringDiagonalFixup</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether we create terminal whiskers when we fix up diagonals during shaping.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SupportsWhiskersDuringDiagonalFixup { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if [supports whiskers during diagonal fixup]; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_SupportsWhiskersDuringDiagonalFixup_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This is turned off right now when we turn iton we should fix issues with connect when the terminal joint has two adjacent
+diagonal joints creating the whiskers to fix one of them may end up connecting the whisker to the other joint.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_TerminalWhiskerWidth_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.TerminalWhiskerWidth*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_TerminalWhiskerWidth" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.TerminalWhiskerWidth">TerminalWhiskerWidth</h4>
+  <div class="markdown level1 summary"><p>Gets the width of the terminal whisker which we should maintain during shaping.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual int TerminalWhiskerWidth { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The width of the terminal whisker.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_UseOfflineShaping_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.UseOfflineShaping*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_UseOfflineShaping" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.UseOfflineShaping">UseOfflineShaping</h4>
+  <div class="markdown level1 summary"><p>If this flag is set we will use ofline data structures to perform the shaping on</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseOfflineShaping { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_AreComplimentaryDirections_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.AreComplimentaryDirections*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_AreComplimentaryDirections_NationalInstruments_SourceModel_WireRouteDirections_NationalInstruments_SourceModel_WireRouteDirections_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.AreComplimentaryDirections(NationalInstruments.SourceModel.WireRouteDirections,NationalInstruments.SourceModel.WireRouteDirections)">AreComplimentaryDirections(WireRouteDirections, WireRouteDirections)</h4>
+  <div class="markdown level1 summary"><p>Check if the two direction flags have complimentary directions (they point toward each other).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool AreComplimentaryDirections(WireRouteDirections start, WireRouteDirections end)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireRouteDirections.html">WireRouteDirections</a></td>
+        <td><span class="parametername">start</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireRouteDirections.html">WireRouteDirections</a></td>
+        <td><span class="parametername">end</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_AreOrthogonalDirections_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.AreOrthogonalDirections*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_AreOrthogonalDirections_NationalInstruments_SourceModel_WireRouteDirections_NationalInstruments_SourceModel_WireRouteDirections_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.AreOrthogonalDirections(NationalInstruments.SourceModel.WireRouteDirections,NationalInstruments.SourceModel.WireRouteDirections)">AreOrthogonalDirections(WireRouteDirections, WireRouteDirections)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool AreOrthogonalDirections(WireRouteDirections start, WireRouteDirections end)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireRouteDirections.html">WireRouteDirections</a></td>
+        <td><span class="parametername">start</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireRouteDirections.html">WireRouteDirections</a></td>
+        <td><span class="parametername">end</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_AreTerminalsCompatible_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.AreTerminalsCompatible*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_AreTerminalsCompatible_NationalInstruments_SourceModel_WireableTerminal_NationalInstruments_SourceModel_WireableTerminal_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.AreTerminalsCompatible(NationalInstruments.SourceModel.WireableTerminal,NationalInstruments.SourceModel.WireableTerminal)">AreTerminalsCompatible(WireableTerminal, WireableTerminal)</h4>
+  <div class="markdown level1 summary"><p>Checks whether the two terminals are compatible for wiring or not.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool AreTerminalsCompatible(WireableTerminal terminal1, WireableTerminal terminal2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireableTerminal.html">WireableTerminal</a></td>
+        <td><span class="parametername">terminal1</span></td>
+        <td><p>First Terminal</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireableTerminal.html">WireableTerminal</a></td>
+        <td><span class="parametername">terminal2</span></td>
+        <td><p>Second Terminal</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if compatible, false otherwise</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_BeginWiring_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.BeginWiring*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_BeginWiring" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.BeginWiring">BeginWiring()</h4>
+  <div class="markdown level1 summary"><p>Start of the wiring operation; This will help prepare for internal data structures in case of preview operations</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BeginWiring()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_CleanUpBranch_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.CleanUpBranch*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_CleanUpBranch_NationalInstruments_SourceModel_WireSegment_NationalInstruments_SourceModel_Wire_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.CleanUpBranch(NationalInstruments.SourceModel.WireSegment,NationalInstruments.SourceModel.Wire)">CleanUpBranch(WireSegment, Wire)</h4>
+  <div class="markdown level1 summary"><p>Auto layout the branch of the given wire, of which the termianl is a part.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CleanUpBranch(WireSegment segment, Wire wire)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireSegment.html">WireSegment</a></td>
+        <td><span class="parametername">segment</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Wire.html">Wire</a></td>
+        <td><span class="parametername">wire</span></td>
+        <td><p>The wire.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_CleanUpBranch_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.CleanUpBranch*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_CleanUpBranch_NationalInstruments_SourceModel_WireTerminal_NationalInstruments_SourceModel_Wire_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.CleanUpBranch(NationalInstruments.SourceModel.WireTerminal,NationalInstruments.SourceModel.Wire)">CleanUpBranch(WireTerminal, Wire)</h4>
+  <div class="markdown level1 summary"><p>Cleans up branch.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CleanUpBranch(WireTerminal outputTerminal, Wire wire)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireTerminal.html">WireTerminal</a></td>
+        <td><span class="parametername">outputTerminal</span></td>
+        <td><p>The output terminal.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Wire.html">Wire</a></td>
+        <td><span class="parametername">wire</span></td>
+        <td><p>The wire.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_CleanUpDanglingBranches_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.CleanUpDanglingBranches*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_CleanUpDanglingBranches_NationalInstruments_SourceModel_Wire_System_Single_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.CleanUpDanglingBranches(NationalInstruments.SourceModel.Wire,System.Single)">CleanUpDanglingBranches(Wire, Single)</h4>
+  <div class="markdown level1 summary"><p>Cleans wire for stray segments and small whiskers</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CleanUpDanglingBranches(Wire wire, float cleanupDistance)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Wire.html">Wire</a></td>
+        <td><span class="parametername">wire</span></td>
+        <td><p>Wire to be cleaned</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">cleanupDistance</span></td>
+        <td><p>Maximum length of the branch that can be deleted while cleanup</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if joints are deleted</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_CleanUpWire_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.CleanUpWire*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_CleanUpWire_NationalInstruments_SourceModel_Wire_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.CleanUpWire(NationalInstruments.SourceModel.Wire)">CleanUpWire(Wire)</h4>
+  <div class="markdown level1 summary"><p>Removes the loose ends and re-routes the wire.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void CleanUpWire(Wire wire)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Wire.html">Wire</a></td>
+        <td><span class="parametername">wire</span></td>
+        <td><p>The wire to be cleaned.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_ConfigureTunnels_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.ConfigureTunnels*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_ConfigureTunnels_System_Collections_Generic_IEnumerable_NationalInstruments_SourceModel_BorderNode__" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.ConfigureTunnels(System.Collections.Generic.IEnumerable{NationalInstruments.SourceModel.BorderNode})">ConfigureTunnels(IEnumerable&lt;BorderNode&gt;)</h4>
+  <div class="markdown level1 summary"><p>Do nothing for now. Derived types should override this to do something interested.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ConfigureTunnels(IEnumerable&lt;BorderNode&gt; tunnels)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.BorderNode.html">BorderNode</a>&gt;</td>
+        <td><span class="parametername">tunnels</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_ConfigureWires_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.ConfigureWires*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_ConfigureWires_System_Collections_Generic_IEnumerable_NationalInstruments_SourceModel_Wire__" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.ConfigureWires(System.Collections.Generic.IEnumerable{NationalInstruments.SourceModel.Wire})">ConfigureWires(IEnumerable&lt;Wire&gt;)</h4>
+  <div class="markdown level1 summary"><p>Do nothing. This should be override by specialized wiring behavior.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ConfigureWires(IEnumerable&lt;Wire&gt; wires)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Wire.html">Wire</a>&gt;</td>
+        <td><span class="parametername">wires</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_CreateWire_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.CreateWire*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_CreateWire" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.CreateWire">CreateWire()</h4>
+  <div class="markdown level1 summary"><p>See documentation on IWiringBehavior</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Wire CreateWire()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Wire.html">Wire</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_CreateWireShapingContext_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.CreateWireShapingContext*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_CreateWireShapingContext" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.CreateWireShapingContext">CreateWireShapingContext()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IWireShapingContext CreateWireShapingContext()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.IWireShapingContext.html">IWireShapingContext</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_DeleteNonTerminalJointsAndRemoveBranches_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.DeleteNonTerminalJointsAndRemoveBranches*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_DeleteNonTerminalJointsAndRemoveBranches_NationalInstruments_SourceModel_Wire_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.DeleteNonTerminalJointsAndRemoveBranches(NationalInstruments.SourceModel.Wire)">DeleteNonTerminalJointsAndRemoveBranches(Wire)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected static void DeleteNonTerminalJointsAndRemoveBranches(Wire wire)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Wire.html">Wire</a></td>
+        <td><span class="parametername">wire</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_DeleteWireIfDisconnected_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.DeleteWireIfDisconnected*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_DeleteWireIfDisconnected_NationalInstruments_SourceModel_Wire_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.DeleteWireIfDisconnected(NationalInstruments.SourceModel.Wire)">DeleteWireIfDisconnected(Wire)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected static bool DeleteWireIfDisconnected(Wire wire)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Wire.html">Wire</a></td>
+        <td><span class="parametername">wire</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_GetAdjustedTunnelPosition_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.GetAdjustedTunnelPosition*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_GetAdjustedTunnelPosition_NationalInstruments_SourceModel_WireJoint_NationalInstruments_SourceModel_Structure_NationalInstruments_SourceModel_DiagramPoint_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.GetAdjustedTunnelPosition(NationalInstruments.SourceModel.WireJoint,NationalInstruments.SourceModel.Structure,NationalInstruments.SourceModel.DiagramPoint)">GetAdjustedTunnelPosition(WireJoint, Structure, DiagramPoint)</h4>
+  <div class="markdown level1 summary"><p>Does nothing for the default behavior. Overridden to force tunnel to desired positions e.g. bottom of structure</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DiagramPoint GetAdjustedTunnelPosition(WireJoint startJoint, Structure structure, DiagramPoint originalPoint)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireJoint.html">WireJoint</a></td>
+        <td><span class="parametername">startJoint</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Structure.html">Structure</a></td>
+        <td><span class="parametername">structure</span></td>
+        <td><p>Structure to create tunnel on.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.DiagramPoint.html">DiagramPoint</a></td>
+        <td><span class="parametername">originalPoint</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.DiagramPoint.html">DiagramPoint</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_GetInitialUserHint_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.GetInitialUserHint*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_GetInitialUserHint_NationalInstruments_SourceModel_DiagramPoint_NationalInstruments_SourceModel_DiagramPoint_NationalInstruments_SourceModel_WireRouteHint_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.GetInitialUserHint(NationalInstruments.SourceModel.DiagramPoint,NationalInstruments.SourceModel.DiagramPoint,NationalInstruments.SourceModel.WireRouteHint)">GetInitialUserHint(DiagramPoint, DiagramPoint, WireRouteHint)</h4>
+  <div class="markdown level1 summary"><p>Get the initial user hint from two points specified by the user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WireRouteHint GetInitialUserHint(DiagramPoint startPoint, DiagramPoint endPoint, WireRouteHint previousHint)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.DiagramPoint.html">DiagramPoint</a></td>
+        <td><span class="parametername">startPoint</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.DiagramPoint.html">DiagramPoint</a></td>
+        <td><span class="parametername">endPoint</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireRouteHint.html">WireRouteHint</a></td>
+        <td><span class="parametername">previousHint</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireRouteHint.html">WireRouteHint</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_GetJointWireDirections_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.GetJointWireDirections*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_GetJointWireDirections_NationalInstruments_SourceModel_WireJoint_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.GetJointWireDirections(NationalInstruments.SourceModel.WireJoint)">GetJointWireDirections(WireJoint)</h4>
+  <div class="markdown level1 summary"><p>Get the orientation the wire should have when connecting to two related joints.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static WireRouteDirections GetJointWireDirections(WireJoint joint)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireJoint.html">WireJoint</a></td>
+        <td><span class="parametername">joint</span></td>
+        <td><p>The joint.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireRouteDirections.html">WireRouteDirections</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_GetJointWireStartDirection_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.GetJointWireStartDirection*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_GetJointWireStartDirection_NationalInstruments_SourceModel_WireJoint_NationalInstruments_SourceModel_DiagramPoint_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.GetJointWireStartDirection(NationalInstruments.SourceModel.WireJoint,NationalInstruments.SourceModel.DiagramPoint)">GetJointWireStartDirection(WireJoint, DiagramPoint)</h4>
+  <div class="markdown level1 summary"><p>Get the orientation to use for a wire starting from a joint going to another point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static WireRouteDirections GetJointWireStartDirection(WireJoint joint, DiagramPoint point)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireJoint.html">WireJoint</a></td>
+        <td><span class="parametername">joint</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.DiagramPoint.html">DiagramPoint</a></td>
+        <td><span class="parametername">point</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireRouteDirections.html">WireRouteDirections</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_GetModifiedWireEndTarget_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.GetModifiedWireEndTarget*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_GetModifiedWireEndTarget_NationalInstruments_SourceModel_WireJoint_NationalInstruments_SourceModel_Diagram_NationalInstruments_SourceModel_DiagramPoint__NationalInstruments_SourceModel_IWiringEnd_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.GetModifiedWireEndTarget(NationalInstruments.SourceModel.WireJoint,NationalInstruments.SourceModel.Diagram,NationalInstruments.SourceModel.DiagramPoint@,NationalInstruments.SourceModel.IWiringEnd)">GetModifiedWireEndTarget(WireJoint, Diagram, ref DiagramPoint, IWiringEnd)</h4>
+  <div class="markdown level1 summary"><p>Does nothing for default behavior. Can be overriden to force particular wires to end differently</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IWiringEnd GetModifiedWireEndTarget(WireJoint startJoint, Diagram endDiagram, ref DiagramPoint endPoint, IWiringEnd originalWireEndTarget)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireJoint.html">WireJoint</a></td>
+        <td><span class="parametername">startJoint</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Diagram.html">Diagram</a></td>
+        <td><span class="parametername">endDiagram</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.DiagramPoint.html">DiagramPoint</a></td>
+        <td><span class="parametername">endPoint</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.IWiringEnd.html">IWiringEnd</a></td>
+        <td><span class="parametername">originalWireEndTarget</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.IWiringEnd.html">IWiringEnd</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_GetNodeBounds_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.GetNodeBounds*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_GetNodeBounds_NationalInstruments_SourceModel_Node_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.GetNodeBounds(NationalInstruments.SourceModel.Node)">GetNodeBounds(Node)</h4>
+  <div class="markdown level1 summary"><p>Gets the node bounds which include the node label bounds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SMRect GetNodeBounds(Node node)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Node.html">Node</a></td>
+        <td><span class="parametername">node</span></td>
+        <td><p>Node</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMRect</span></td>
+        <td><p>Node bounds as per wiring behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_GetNodeBounds_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.GetNodeBounds*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_GetNodeBounds_NationalInstruments_SourceModel_ShapingNode_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.GetNodeBounds(NationalInstruments.SourceModel.ShapingNode)">GetNodeBounds(ShapingNode)</h4>
+  <div class="markdown level1 summary"><p>Gets the node bounds which include the node label bounds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SMRect GetNodeBounds(ShapingNode node)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ShapingNode.html">ShapingNode</a></td>
+        <td><span class="parametername">node</span></td>
+        <td><p>Node</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMRect</span></td>
+        <td><p>Node bounds as per wiring behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_GetNodeBoundsInfo_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.GetNodeBoundsInfo*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_GetNodeBoundsInfo_NationalInstruments_SourceModel_Node_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.GetNodeBoundsInfo(NationalInstruments.SourceModel.Node)">GetNodeBoundsInfo(Node)</h4>
+  <div class="markdown level1 summary"><p>Gets the node bounds Info which include the node label bounds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ManhattanWiringBehaviorNodeBoundsInfo GetNodeBoundsInfo(Node node)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Node.html">Node</a></td>
+        <td><span class="parametername">node</span></td>
+        <td><p>Node</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ManhattanWiringBehaviorNodeBoundsInfo.html">ManhattanWiringBehaviorNodeBoundsInfo</a></td>
+        <td><p>Node bounds as per wiring behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_GetNodeBoundsInfo_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.GetNodeBoundsInfo*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_GetNodeBoundsInfo_NationalInstruments_SourceModel_ShapingNode_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.GetNodeBoundsInfo(NationalInstruments.SourceModel.ShapingNode)">GetNodeBoundsInfo(ShapingNode)</h4>
+  <div class="markdown level1 summary"><p>Gets the node bounds Info which include the node label bounds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ManhattanWiringBehaviorShapingNodeBoundsInfo GetNodeBoundsInfo(ShapingNode node)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ShapingNode.html">ShapingNode</a></td>
+        <td><span class="parametername">node</span></td>
+        <td><p>Node</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ManhattanWiringBehaviorShapingNodeBoundsInfo.html">ManhattanWiringBehaviorShapingNodeBoundsInfo</a></td>
+        <td><p>Node bounds as per wiring behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_GetOppositeDirection_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.GetOppositeDirection*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_GetOppositeDirection_NationalInstruments_SourceModel_WireRouteDirections_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.GetOppositeDirection(NationalInstruments.SourceModel.WireRouteDirections)">GetOppositeDirection(WireRouteDirections)</h4>
+  <div class="markdown level1 summary"><p>Get the opposite direction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static WireRouteDirections GetOppositeDirection(WireRouteDirections dir)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireRouteDirections.html">WireRouteDirections</a></td>
+        <td><span class="parametername">dir</span></td>
+        <td><p>The dir.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireRouteDirections.html">WireRouteDirections</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_GetPointDirections_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.GetPointDirections*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_GetPointDirections_System_Single_System_Single_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.GetPointDirections(System.Single,System.Single)">GetPointDirections(Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Get the direction of a point in one of the four cardinal directions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static WireRouteDirections GetPointDirections(float dx, float dy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">dx</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">dy</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireRouteDirections.html">WireRouteDirections</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_GetSingleMovementDirection_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.GetSingleMovementDirection*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_GetSingleMovementDirection_System_Single_System_Single_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.GetSingleMovementDirection(System.Single,System.Single)">GetSingleMovementDirection(Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Get a direction based on the changes in x and y</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static WireRouteDirections GetSingleMovementDirection(float dx, float dy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">dx</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">dy</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireRouteDirections.html">WireRouteDirections</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_GetStructureIntersection_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.GetStructureIntersection*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_GetStructureIntersection_NationalInstruments_SourceModel_Structure_NationalInstruments_SourceModel_DiagramPoint_NationalInstruments_SourceModel_DiagramPoint_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.GetStructureIntersection(NationalInstruments.SourceModel.Structure,NationalInstruments.SourceModel.DiagramPoint,NationalInstruments.SourceModel.DiagramPoint)">GetStructureIntersection(Structure, DiagramPoint, DiagramPoint)</h4>
+  <div class="markdown level1 summary"><p>Get the intersection between the borders of a <a class="xref" href="NationalInstruments.SourceModel.Structure.html">Structure</a>
+and two points in diagrams related to the structure.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StructureIntersection GetStructureIntersection(Structure structure, DiagramPoint start, DiagramPoint end)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Structure.html">Structure</a></td>
+        <td><span class="parametername">structure</span></td>
+        <td><p>The structure we are getting the intersection with.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.DiagramPoint.html">DiagramPoint</a></td>
+        <td><span class="parametername">start</span></td>
+        <td><p>The start point in a diagram related to the structure (parent or child).</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.DiagramPoint.html">DiagramPoint</a></td>
+        <td><span class="parametername">end</span></td>
+        <td><p>The end point in a diagram related to the structure (parent or child).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.StructureIntersection.html">StructureIntersection</a></td>
+        <td><p>The intersection information.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_GetTerminalWireDirections_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.GetTerminalWireDirections*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_GetTerminalWireDirections_NationalInstruments_SourceModel_WireableTerminal_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.GetTerminalWireDirections(NationalInstruments.SourceModel.WireableTerminal)">GetTerminalWireDirections(WireableTerminal)</h4>
+  <div class="markdown level1 summary"><p>Get the orientation a wire should have when connecting to the terminal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static WireRouteDirections GetTerminalWireDirections(WireableTerminal terminal)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireableTerminal.html">WireableTerminal</a></td>
+        <td><span class="parametername">terminal</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireRouteDirections.html">WireRouteDirections</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_GetWireRouteHintFromJoint_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.GetWireRouteHintFromJoint*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_GetWireRouteHintFromJoint_NationalInstruments_SourceModel_WireJoint_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.GetWireRouteHintFromJoint(NationalInstruments.SourceModel.WireJoint)">GetWireRouteHintFromJoint(WireJoint)</h4>
+  <div class="markdown level1 summary"><p>Get a <a class="xref" href="NationalInstruments.SourceModel.WireRouteHint.html">WireRouteHint</a> for a <a class="xref" href="NationalInstruments.SourceModel.WireJoint.html">WireJoint</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WireRouteHint GetWireRouteHintFromJoint(WireJoint joint)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireJoint.html">WireJoint</a></td>
+        <td><span class="parametername">joint</span></td>
+        <td><p>The joint.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireRouteHint.html">WireRouteHint</a></td>
+        <td><p>The hint for starting or ending a wire on the joint.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_GetWireRouteHintFromPoints_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.GetWireRouteHintFromPoints*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_GetWireRouteHintFromPoints_NationalInstruments_SourceModel_DiagramPoint_NationalInstruments_SourceModel_DiagramPoint_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.GetWireRouteHintFromPoints(NationalInstruments.SourceModel.DiagramPoint,NationalInstruments.SourceModel.DiagramPoint)">GetWireRouteHintFromPoints(DiagramPoint, DiagramPoint)</h4>
+  <div class="markdown level1 summary"><p>Get the <a class="xref" href="NationalInstruments.SourceModel.WireRouteHint.html">WireRouteHint</a> needed from the end point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WireRouteHint GetWireRouteHintFromPoints(DiagramPoint startPoint, DiagramPoint endPoint)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.DiagramPoint.html">DiagramPoint</a></td>
+        <td><span class="parametername">startPoint</span></td>
+        <td><p>The start point.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.DiagramPoint.html">DiagramPoint</a></td>
+        <td><span class="parametername">endPoint</span></td>
+        <td><p>The end point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireRouteHint.html">WireRouteHint</a></td>
+        <td><p>The hint for a wire ending on <code data-dev-comment-type="paramref" class="paramref">endPoint</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_GetWireRouteHintFromSegment_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.GetWireRouteHintFromSegment*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_GetWireRouteHintFromSegment_NationalInstruments_SourceModel_WireSegment_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.GetWireRouteHintFromSegment(NationalInstruments.SourceModel.WireSegment)">GetWireRouteHintFromSegment(WireSegment)</h4>
+  <div class="markdown level1 summary"><p>Get a <a class="xref" href="NationalInstruments.SourceModel.WireRouteHint.html">WireRouteHint</a> for a <a class="xref" href="NationalInstruments.SourceModel.WireSegment.html">WireSegment</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WireRouteHint GetWireRouteHintFromSegment(WireSegment segment)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireSegment.html">WireSegment</a></td>
+        <td><span class="parametername">segment</span></td>
+        <td><p>The segment.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireRouteHint.html">WireRouteHint</a></td>
+        <td><p>The hint to use when starting or ending a wire on the segment.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_GetWireRouteHintFromTerminal_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.GetWireRouteHintFromTerminal*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_GetWireRouteHintFromTerminal_NationalInstruments_SourceModel_WireableTerminal_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.GetWireRouteHintFromTerminal(NationalInstruments.SourceModel.WireableTerminal)">GetWireRouteHintFromTerminal(WireableTerminal)</h4>
+  <div class="markdown level1 summary"><p>Get a <a class="xref" href="NationalInstruments.SourceModel.WireRouteHint.html">WireRouteHint</a> for a <a class="xref" href="NationalInstruments.SourceModel.WireableTerminal.html">WireableTerminal</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WireRouteHint GetWireRouteHintFromTerminal(WireableTerminal terminal)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireableTerminal.html">WireableTerminal</a></td>
+        <td><span class="parametername">terminal</span></td>
+        <td><p>The terminal to get the hint for.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireRouteHint.html">WireRouteHint</a></td>
+        <td><p>The hint for wires start or ending on the terminal.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_HasDirection_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.HasDirection*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_HasDirection_NationalInstruments_SourceModel_WireRouteDirections_NationalInstruments_SourceModel_WireRouteDirections_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.HasDirection(NationalInstruments.SourceModel.WireRouteDirections,NationalInstruments.SourceModel.WireRouteDirections)">HasDirection(WireRouteDirections, WireRouteDirections)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the specified set has direction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasDirection(WireRouteDirections set, WireRouteDirections single)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireRouteDirections.html">WireRouteDirections</a></td>
+        <td><span class="parametername">set</span></td>
+        <td><p>The set.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireRouteDirections.html">WireRouteDirections</a></td>
+        <td><span class="parametername">single</span></td>
+        <td><p>The single.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if the specified set has direction; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_HasOnlyDirection_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.HasOnlyDirection*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_HasOnlyDirection_NationalInstruments_SourceModel_WireRouteDirections_NationalInstruments_SourceModel_WireRouteDirections_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.HasOnlyDirection(NationalInstruments.SourceModel.WireRouteDirections,NationalInstruments.SourceModel.WireRouteDirections)">HasOnlyDirection(WireRouteDirections, WireRouteDirections)</h4>
+  <div class="markdown level1 summary"><p>Determines whether [has only direction] [the specified set].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasOnlyDirection(WireRouteDirections set, WireRouteDirections single)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireRouteDirections.html">WireRouteDirections</a></td>
+        <td><span class="parametername">set</span></td>
+        <td><p>The set.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireRouteDirections.html">WireRouteDirections</a></td>
+        <td><span class="parametername">single</span></td>
+        <td><p>The single.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if [has only direction] [the specified set]; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_HasSingleDirection_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.HasSingleDirection*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_HasSingleDirection_NationalInstruments_SourceModel_WireRouteDirections_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.HasSingleDirection(NationalInstruments.SourceModel.WireRouteDirections)">HasSingleDirection(WireRouteDirections)</h4>
+  <div class="markdown level1 summary"><p>Check that the directions is actually a single direction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasSingleDirection(WireRouteDirections directions)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireRouteDirections.html">WireRouteDirections</a></td>
+        <td><span class="parametername">directions</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_LayoutBranches_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.LayoutBranches*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_LayoutBranches_NationalInstruments_SourceModel_Wire_NationalInstruments_SourceModel_WireTerminal_System_Collections_Generic_IReadOnlyList_NationalInstruments_SourceModel_WireTerminal__" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.LayoutBranches(NationalInstruments.SourceModel.Wire,NationalInstruments.SourceModel.WireTerminal,System.Collections.Generic.IReadOnlyList{NationalInstruments.SourceModel.WireTerminal})">LayoutBranches(Wire, WireTerminal, IReadOnlyList&lt;WireTerminal&gt;)</h4>
+  <div class="markdown level1 summary"><p>Re-routes the branches specified by the input Terminal and outputTerminals.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void LayoutBranches(Wire wire, WireTerminal inputTerminal, IReadOnlyList&lt;WireTerminal&gt; outputTerminals)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Wire.html">Wire</a></td>
+        <td><span class="parametername">wire</span></td>
+        <td><p>The wire of which the branch is a part.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireTerminal.html">WireTerminal</a></td>
+        <td><span class="parametername">inputTerminal</span></td>
+        <td><p>The input terminal of the branch.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.WireTerminal.html">WireTerminal</a>&gt;</td>
+        <td><span class="parametername">outputTerminals</span></td>
+        <td><p>The outputTerminals of the branch.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_OffsetPoint_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.OffsetPoint*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_OffsetPoint_NationalInstruments_Core_SMPoint_NationalInstruments_SourceModel_WireRouteDirections_NationalInstruments_Core_SMSize_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.OffsetPoint(NationalInstruments.Core.SMPoint,NationalInstruments.SourceModel.WireRouteDirections,NationalInstruments.Core.SMSize)">OffsetPoint(SMPoint, WireRouteDirections, SMSize)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SMPoint OffsetPoint(SMPoint point, WireRouteDirections dir, SMSize offset)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMPoint</span></td>
+        <td><span class="parametername">point</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireRouteDirections.html">WireRouteDirections</a></td>
+        <td><span class="parametername">dir</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMSize</span></td>
+        <td><span class="parametername">offset</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMPoint</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_OnModelClosing_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.OnModelClosing*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_OnModelClosing_NationalInstruments_SourceModel_Envoys_Envoy_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.OnModelClosing(NationalInstruments.SourceModel.Envoys.Envoy)">OnModelClosing(Envoy)</h4>
+  <div class="markdown level1 summary"><p>Called when the model owned by this <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a> is closing.  When this method is
+called, the model obtained through <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html#NationalInstruments_SourceModel_Envoys_Envoy_ReferenceElement">ReferenceElement</a> is valid.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnModelClosing(Envoy associatedEnvoy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">associatedEnvoy</span></td>
+        <td><p>The <see cref="!:associatedEnvoy"></see> whose model is closing.  This is the same envoy that is passed to 
+<span class="xref">NationalInstruments.SourceModel.Envoys.EnvoyService.NotifyAttach(NationalInstruments.SourceModel.Envoys.Envoy)</span> for envoy services which are instanced per envoy.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_OnModelClosing_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.OnModelClosing(Envoy)</a></div>
+  <h5 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_OnModelClosing_NationalInstruments_SourceModel_Envoys_Envoy__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method is only called when the model referenced by the <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a> is closed while
+the envoy is still attached.  This usually only happens when the last reference to the referenced
+model is released.  When the last reference is released, the model is unloaded and can be loaded 
+again later by calling <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html#NationalInstruments_SourceModel_Envoys_Envoy_LoadAsync">LoadAsync()</a>.  If the envoy itself is removed from the 
+project, this method will not be called. When the envoy itself is removed, <see cref="!:OnDetaching()"></see> 
+and <see cref="!:OnDetach()"></see> are the only methods that will be called.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_PreviewRouteBranch_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.PreviewRouteBranch*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_PreviewRouteBranch_NationalInstruments_SourceModel_Wire_NationalInstruments_SourceModel_WireableTerminal_NationalInstruments_SourceModel_WireableTerminal_System_Boolean_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.PreviewRouteBranch(NationalInstruments.SourceModel.Wire,NationalInstruments.SourceModel.WireableTerminal,NationalInstruments.SourceModel.WireableTerminal,System.Boolean)">PreviewRouteBranch(Wire, WireableTerminal, WireableTerminal, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Re-routes the branch(assumed to have a start and end Terminal) specified by the start and end terminal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IList&lt;DiagramPoint&gt; PreviewRouteBranch(Wire wire, WireableTerminal startTerminal, WireableTerminal endTerminal, bool isBranchingOperation)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Wire.html">Wire</a></td>
+        <td><span class="parametername">wire</span></td>
+        <td><p>The wire of which the</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireableTerminal.html">WireableTerminal</a></td>
+        <td><span class="parametername">startTerminal</span></td>
+        <td><p>The start Terminal of the branch.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireableTerminal.html">WireableTerminal</a></td>
+        <td><span class="parametername">endTerminal</span></td>
+        <td><p>The endTerminal of the branch.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">isBranchingOperation</span></td>
+        <td><p>Will the operation create a branch</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.DiagramPoint.html">DiagramPoint</a>&gt;</td>
+        <td><p>The list of Diagram Points that forms the route form the start terminal to the end terminal.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_PreviewRouteWire_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.PreviewRouteWire*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_PreviewRouteWire_NationalInstruments_SourceModel_Wire_NationalInstruments_SourceModel_DiagramPoint_NationalInstruments_SourceModel_DiagramPoint_NationalInstruments_SourceModel_WireRouteDirections_NationalInstruments_SourceModel_WireRouteDirections_NationalInstruments_SourceModel_Terminal_NationalInstruments_SourceModel_Terminal_NationalInstruments_SourceModel_WireRoutingPurpose_NationalInstruments_SourceModel_WireRouteDirections_NationalInstruments_SourceModel_WireSegment_System_Boolean_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.PreviewRouteWire(NationalInstruments.SourceModel.Wire,NationalInstruments.SourceModel.DiagramPoint,NationalInstruments.SourceModel.DiagramPoint,NationalInstruments.SourceModel.WireRouteDirections,NationalInstruments.SourceModel.WireRouteDirections,NationalInstruments.SourceModel.Terminal,NationalInstruments.SourceModel.Terminal,NationalInstruments.SourceModel.WireRoutingPurpose,NationalInstruments.SourceModel.WireRouteDirections,NationalInstruments.SourceModel.WireSegment,System.Boolean)">PreviewRouteWire(Wire, DiagramPoint, DiagramPoint, WireRouteDirections, WireRouteDirections, Terminal, Terminal, WireRoutingPurpose, WireRouteDirections, WireSegment, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Auto layout wire routing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;DiagramPoint&gt; PreviewRouteWire(Wire wire, DiagramPoint startDiagramPoint, DiagramPoint endDiagramPoint, WireRouteDirections startDirections, WireRouteDirections endDirections, Terminal startTerminal, Terminal endTerminal, WireRoutingPurpose purpose, WireRouteDirections userHint, WireSegment endingWireSegment, bool isBranchingOperation)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Wire.html">Wire</a></td>
+        <td><span class="parametername">wire</span></td>
+        <td><p>The wire to be routed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.DiagramPoint.html">DiagramPoint</a></td>
+        <td><span class="parametername">startDiagramPoint</span></td>
+        <td><p>The start Diagram Point, the point where the route starts.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.DiagramPoint.html">DiagramPoint</a></td>
+        <td><span class="parametername">endDiagramPoint</span></td>
+        <td><p>The end DiagramPoint, the point where the route ends.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireRouteDirections.html">WireRouteDirections</a></td>
+        <td><span class="parametername">startDirections</span></td>
+        <td><p>The hint direction from the start point.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireRouteDirections.html">WireRouteDirections</a></td>
+        <td><span class="parametername">endDirections</span></td>
+        <td><p>The hint direction to the end point.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Terminal.html">Terminal</a></td>
+        <td><span class="parametername">startTerminal</span></td>
+        <td><p>The start terminal.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Terminal.html">Terminal</a></td>
+        <td><span class="parametername">endTerminal</span></td>
+        <td><p>The end terminal.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireRoutingPurpose.html">WireRoutingPurpose</a></td>
+        <td><span class="parametername">purpose</span></td>
+        <td><p>Is the layout being called for cleanup wire operation or for preview operation (the later might give a very quick but rough intermediate results sometimes)</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireRouteDirections.html">WireRouteDirections</a></td>
+        <td><span class="parametername">userHint</span></td>
+        <td><p>The user hint direction to the end point.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireSegment.html">WireSegment</a></td>
+        <td><span class="parametername">endingWireSegment</span></td>
+        <td><p>If the layout is ending on a wire then the segment on which it is ending (for merging operations)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">isBranchingOperation</span></td>
+        <td><p>If the layout is branching off from an already existing wire</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.DiagramPoint.html">DiagramPoint</a>&gt;</td>
+        <td><p>A list of diagram points that form the route.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_PreviewRouteWireToJoint_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.PreviewRouteWireToJoint*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_PreviewRouteWireToJoint_NationalInstruments_SourceModel_WireJoint_NationalInstruments_SourceModel_WireRouteHint_NationalInstruments_SourceModel_WireJoint_System_Boolean_System_Boolean_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.PreviewRouteWireToJoint(NationalInstruments.SourceModel.WireJoint,NationalInstruments.SourceModel.WireRouteHint,NationalInstruments.SourceModel.WireJoint,System.Boolean,System.Boolean)">PreviewRouteWireToJoint(WireJoint, WireRouteHint, WireJoint, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Extend the wire to a <a class="xref" href="NationalInstruments.SourceModel.WireJoint.html">WireJoint</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;DiagramPoint&gt; PreviewRouteWireToJoint(WireJoint joint, WireRouteHint userHint, WireJoint existingJoint, bool isBranchingOperation, bool retianPreviousRoute)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireJoint.html">WireJoint</a></td>
+        <td><span class="parametername">joint</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireRouteHint.html">WireRouteHint</a></td>
+        <td><span class="parametername">userHint</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireJoint.html">WireJoint</a></td>
+        <td><span class="parametername">existingJoint</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">isBranchingOperation</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">retianPreviousRoute</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.DiagramPoint.html">DiagramPoint</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_PreviewRouteWireToPoint_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.PreviewRouteWireToPoint*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_PreviewRouteWireToPoint_NationalInstruments_SourceModel_WireJoint_NationalInstruments_SourceModel_WireRouteHint_NationalInstruments_SourceModel_WireRouteDirections_NationalInstruments_SourceModel_DiagramPoint_System_Boolean_System_Boolean_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.PreviewRouteWireToPoint(NationalInstruments.SourceModel.WireJoint,NationalInstruments.SourceModel.WireRouteHint,NationalInstruments.SourceModel.WireRouteDirections,NationalInstruments.SourceModel.DiagramPoint,System.Boolean,System.Boolean)">PreviewRouteWireToPoint(WireJoint, WireRouteHint, WireRouteDirections, DiagramPoint, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Extend the wire to a point</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;DiagramPoint&gt; PreviewRouteWireToPoint(WireJoint joint, WireRouteHint userHint, WireRouteDirections endDirections, DiagramPoint point, bool isBranchingOperation, bool retainPreviousRoute)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireJoint.html">WireJoint</a></td>
+        <td><span class="parametername">joint</span></td>
+        <td><p>A <a class="xref" href="NationalInstruments.SourceModel.WireJoint.html">WireJoint</a> on a <a class="xref" href="NationalInstruments.SourceModel.Wire.html">Wire</a> from which the wire will be extended.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireRouteHint.html">WireRouteHint</a></td>
+        <td><span class="parametername">userHint</span></td>
+        <td><p>The user hint for the direction they want the wire to route.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireRouteDirections.html">WireRouteDirections</a></td>
+        <td><span class="parametername">endDirections</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.DiagramPoint.html">DiagramPoint</a></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The end point of the wire.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">isBranchingOperation</span></td>
+        <td><p>Is the start joint a branch of already routed wire</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">retainPreviousRoute</span></td>
+        <td><p>Indicates if the userHint&apos;s direction must be the enddirection.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.DiagramPoint.html">DiagramPoint</a>&gt;</td>
+        <td><p>The points needed to get to the secondPoint including the secondPoint.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_PreviewRouteWireToPoint_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.PreviewRouteWireToPoint*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_PreviewRouteWireToPoint_NationalInstruments_SourceModel_WireJoint_NationalInstruments_SourceModel_WireRouteHint_NationalInstruments_SourceModel_WireRouteDirections_NationalInstruments_SourceModel_DiagramPoint_System_Boolean_System_Boolean_System_Boolean_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.PreviewRouteWireToPoint(NationalInstruments.SourceModel.WireJoint,NationalInstruments.SourceModel.WireRouteHint,NationalInstruments.SourceModel.WireRouteDirections,NationalInstruments.SourceModel.DiagramPoint,System.Boolean,System.Boolean,System.Boolean)">PreviewRouteWireToPoint(WireJoint, WireRouteHint, WireRouteDirections, DiagramPoint, Boolean, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Previews the route wire to point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;DiagramPoint&gt; PreviewRouteWireToPoint(WireJoint joint, WireRouteHint userHint, WireRouteDirections endDirections, DiagramPoint point, bool isBranchingOperation, bool retainPreviousRoute, bool forceLayout)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireJoint.html">WireJoint</a></td>
+        <td><span class="parametername">joint</span></td>
+        <td><p>The joint.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireRouteHint.html">WireRouteHint</a></td>
+        <td><span class="parametername">userHint</span></td>
+        <td><p>The user hint.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireRouteDirections.html">WireRouteDirections</a></td>
+        <td><span class="parametername">endDirections</span></td>
+        <td><p>The end directions.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.DiagramPoint.html">DiagramPoint</a></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The point.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">isBranchingOperation</span></td>
+        <td><p>if set to <code>true</code> [is branching operation].</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">retainPreviousRoute</span></td>
+        <td><p>if set to <code>true</code> [retain previous route].</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">forceLayout</span></td>
+        <td><p>if set to <code>true</code> [force layout].</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.DiagramPoint.html">DiagramPoint</a>&gt;</td>
+        <td><p>List of Diagram Points</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>The routing hint cannot be custom;userHint</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_PreviewRouteWireToSegment_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.PreviewRouteWireToSegment*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_PreviewRouteWireToSegment_NationalInstruments_SourceModel_WireJoint_NationalInstruments_SourceModel_WireRouteHint_NationalInstruments_SourceModel_WireSegment_NationalInstruments_SourceModel_DiagramPoint_System_Boolean_System_Boolean_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.PreviewRouteWireToSegment(NationalInstruments.SourceModel.WireJoint,NationalInstruments.SourceModel.WireRouteHint,NationalInstruments.SourceModel.WireSegment,NationalInstruments.SourceModel.DiagramPoint,System.Boolean,System.Boolean)">PreviewRouteWireToSegment(WireJoint, WireRouteHint, WireSegment, DiagramPoint, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Extend the wire to a <a class="xref" href="NationalInstruments.SourceModel.WireSegment.html">WireSegment</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;DiagramPoint&gt; PreviewRouteWireToSegment(WireJoint joint, WireRouteHint userHint, WireSegment segment, DiagramPoint point, bool isBranchingOperation, bool retainPreviousRoute)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireJoint.html">WireJoint</a></td>
+        <td><span class="parametername">joint</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireRouteHint.html">WireRouteHint</a></td>
+        <td><span class="parametername">userHint</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireSegment.html">WireSegment</a></td>
+        <td><span class="parametername">segment</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.DiagramPoint.html">DiagramPoint</a></td>
+        <td><span class="parametername">point</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">isBranchingOperation</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">retainPreviousRoute</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.DiagramPoint.html">DiagramPoint</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_PreviewRouteWireToTerminal_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.PreviewRouteWireToTerminal*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_PreviewRouteWireToTerminal_NationalInstruments_SourceModel_WireJoint_NationalInstruments_SourceModel_WireRouteHint_NationalInstruments_SourceModel_WireableTerminal_System_Boolean_System_Boolean_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.PreviewRouteWireToTerminal(NationalInstruments.SourceModel.WireJoint,NationalInstruments.SourceModel.WireRouteHint,NationalInstruments.SourceModel.WireableTerminal,System.Boolean,System.Boolean)">PreviewRouteWireToTerminal(WireJoint, WireRouteHint, WireableTerminal, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Extend the wire to a <a class="xref" href="NationalInstruments.SourceModel.WireableTerminal.html">WireableTerminal</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;DiagramPoint&gt; PreviewRouteWireToTerminal(WireJoint joint, WireRouteHint userHint, WireableTerminal terminal, bool isBranchingOperation, bool retainPreviousRoute)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireJoint.html">WireJoint</a></td>
+        <td><span class="parametername">joint</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireRouteHint.html">WireRouteHint</a></td>
+        <td><span class="parametername">userHint</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireableTerminal.html">WireableTerminal</a></td>
+        <td><span class="parametername">terminal</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">isBranchingOperation</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">retainPreviousRoute</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.DiagramPoint.html">DiagramPoint</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_RemoveCycles_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.RemoveCycles*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_RemoveCycles_NationalInstruments_SourceModel_IWireAlgorithmInfo_NationalInstruments_SourceModel_WireDanglingEndHandling_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.RemoveCycles(NationalInstruments.SourceModel.IWireAlgorithmInfo,NationalInstruments.SourceModel.WireDanglingEndHandling)">RemoveCycles(IWireAlgorithmInfo, WireDanglingEndHandling)</h4>
+  <div class="markdown level1 summary"><p>Where there are segments intersecting/overlapping, short the intersections/overlaps; and then remove the cycles in the wire.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void RemoveCycles(IWireAlgorithmInfo wire, WireDanglingEndHandling danglingEndHandling)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.IWireAlgorithmInfo.html">IWireAlgorithmInfo</a></td>
+        <td><span class="parametername">wire</span></td>
+        <td><p>The wire in which to remove cycles.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireDanglingEndHandling.html">WireDanglingEndHandling</a></td>
+        <td><span class="parametername">danglingEndHandling</span></td>
+        <td><p>how to handle dangling ends to the wire</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_RemoveCycles_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.RemoveCycles*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_RemoveCycles_NationalInstruments_SourceModel_ShapingWire_NationalInstruments_SourceModel_WireDanglingEndHandling_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.RemoveCycles(NationalInstruments.SourceModel.ShapingWire,NationalInstruments.SourceModel.WireDanglingEndHandling)">RemoveCycles(ShapingWire, WireDanglingEndHandling)</h4>
+  <div class="markdown level1 summary"><p>Where there are segments intersecting/overlapping, short the intersections/overlaps; and then remove the cycles in the wire.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void RemoveCycles(ShapingWire wire, WireDanglingEndHandling danglingEndHandling)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ShapingWire.html">ShapingWire</a></td>
+        <td><span class="parametername">wire</span></td>
+        <td><p>The wire in which to remove cycles.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireDanglingEndHandling.html">WireDanglingEndHandling</a></td>
+        <td><span class="parametername">danglingEndHandling</span></td>
+        <td><p>how to handle dangling ends to the wire</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_RemoveCyclesForNewJoints_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.RemoveCyclesForNewJoints*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_RemoveCyclesForNewJoints_NationalInstruments_SourceModel_Wire_System_Collections_Generic_Stack_NationalInstruments_SourceModel_WireJoint__NationalInstruments_SourceModel_WireDanglingEndHandling_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.RemoveCyclesForNewJoints(NationalInstruments.SourceModel.Wire,System.Collections.Generic.Stack{NationalInstruments.SourceModel.WireJoint},NationalInstruments.SourceModel.WireDanglingEndHandling)">RemoveCyclesForNewJoints(Wire, Stack&lt;WireJoint&gt;, WireDanglingEndHandling)</h4>
+  <div class="markdown level1 summary"><p>Where there are new segments intersecting with existing segments, short the intersections; and then remove the resulting cycles in the wire.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void RemoveCyclesForNewJoints(Wire wire, Stack&lt;WireJoint&gt; newJoints, WireDanglingEndHandling danglingEndHandling)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Wire.html">Wire</a></td>
+        <td><span class="parametername">wire</span></td>
+        <td><p>The wire in which to remove cycles.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.Stack</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.WireJoint.html">WireJoint</a>&gt;</td>
+        <td><span class="parametername">newJoints</span></td>
+        <td><p>The new adjacent joints, which form a path from the first joint to the last joint.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireDanglingEndHandling.html">WireDanglingEndHandling</a></td>
+        <td><span class="parametername">danglingEndHandling</span></td>
+        <td><p>how to handle dangling ends to the wire</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_ReparentJointsAndGetJointsToConnect_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.ReparentJointsAndGetJointsToConnect*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_ReparentJointsAndGetJointsToConnect_System_Collections_Generic_IEnumerable_NationalInstruments_SourceModel_WireJoint__NationalInstruments_SourceModel_Wire_NationalInstruments_SourceModel_Diagram_NationalInstruments_SourceModel_IWireShapingContext_NationalInstruments_SourceModel_WireJoint__NationalInstruments_SourceModel_WireJoint__" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.ReparentJointsAndGetJointsToConnect(System.Collections.Generic.IEnumerable{NationalInstruments.SourceModel.WireJoint},NationalInstruments.SourceModel.Wire,NationalInstruments.SourceModel.Diagram,NationalInstruments.SourceModel.IWireShapingContext,NationalInstruments.SourceModel.WireJoint@,NationalInstruments.SourceModel.WireJoint@)">ReparentJointsAndGetJointsToConnect(IEnumerable&lt;WireJoint&gt;, Wire, Diagram, IWireShapingContext, out WireJoint, out WireJoint)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ReparentJointsAndGetJointsToConnect(IEnumerable&lt;WireJoint&gt; jointsInNewParent, Wire existingWire, Diagram diagramToReparentTo, IWireShapingContext shapingContext, out WireJoint commonJointInOldWire, out WireJoint commonJointInNewWire)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.WireJoint.html">WireJoint</a>&gt;</td>
+        <td><span class="parametername">jointsInNewParent</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Wire.html">Wire</a></td>
+        <td><span class="parametername">existingWire</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Diagram.html">Diagram</a></td>
+        <td><span class="parametername">diagramToReparentTo</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.IWireShapingContext.html">IWireShapingContext</a></td>
+        <td><span class="parametername">shapingContext</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireJoint.html">WireJoint</a></td>
+        <td><span class="parametername">commonJointInOldWire</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireJoint.html">WireJoint</a></td>
+        <td><span class="parametername">commonJointInNewWire</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_SelectSingleDirection_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.SelectSingleDirection*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_SelectSingleDirection_NationalInstruments_SourceModel_WireRouteDirections_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.SelectSingleDirection(NationalInstruments.SourceModel.WireRouteDirections)">SelectSingleDirection(WireRouteDirections)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static WireRouteDirections SelectSingleDirection(WireRouteDirections desired)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireRouteDirections.html">WireRouteDirections</a></td>
+        <td><span class="parametername">desired</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireRouteDirections.html">WireRouteDirections</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_SelectSingleDirection_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.SelectSingleDirection*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_SelectSingleDirection_NationalInstruments_SourceModel_WireRouteDirections_System_Single_System_Single_NationalInstruments_SourceModel_WireRouteDirections_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.SelectSingleDirection(NationalInstruments.SourceModel.WireRouteDirections,System.Single,System.Single,NationalInstruments.SourceModel.WireRouteDirections)">SelectSingleDirection(WireRouteDirections, Single, Single, WireRouteDirections)</h4>
+  <div class="markdown level1 summary"><p>Select a single direction given a directions from a point and the
+direction of movement.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static WireRouteDirections SelectSingleDirection(WireRouteDirections start, float dx, float dy, WireRouteDirections previousEnd)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireRouteDirections.html">WireRouteDirections</a></td>
+        <td><span class="parametername">start</span></td>
+        <td><p>The possible start directions.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">dx</span></td>
+        <td><p>The change in the X axis from the current point
+and the point were moving to.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">dy</span></td>
+        <td><p>The change in the Y axis from the current point
+and the point were moving to.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireRouteDirections.html">WireRouteDirections</a></td>
+        <td><span class="parametername">previousEnd</span></td>
+        <td><p>The previous end.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireRouteDirections.html">WireRouteDirections</a></td>
+        <td><p>The direction to use.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_ShapeOfflineWire_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.ShapeOfflineWire*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_ShapeOfflineWire_NationalInstruments_SourceModel_ShapingWire_System_Boolean_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.ShapeOfflineWire(NationalInstruments.SourceModel.ShapingWire,System.Boolean)">ShapeOfflineWire(ShapingWire, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Shapes the offline wire.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;SimplifyShapingJointChange&gt; ShapeOfflineWire(ShapingWire shapingWire, bool removeCycles)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ShapingWire.html">ShapingWire</a></td>
+        <td><span class="parametername">shapingWire</span></td>
+        <td><p>The shaping wire.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">removeCycles</span></td>
+        <td><p>if set to <code>true</code> [remove cycles].</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.SimplifyShapingJointChange.html">SimplifyShapingJointChange</a>&gt;</td>
+        <td><p>The list of joints that have been simplified along with the reason</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_ShapeWire_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.ShapeWire*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_ShapeWire_NationalInstruments_SourceModel_Wire_System_Collections_Generic_IEnumerable_NationalInstruments_SourceModel_IWireShapingElement__System_Boolean_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.ShapeWire(NationalInstruments.SourceModel.Wire,System.Collections.Generic.IEnumerable{NationalInstruments.SourceModel.IWireShapingElement},System.Boolean)">ShapeWire(Wire, IEnumerable&lt;IWireShapingElement&gt;, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Shape a wire based</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual List&lt;SimplifyJointChange&gt; ShapeWire(Wire wire, IEnumerable&lt;IWireShapingElement&gt; changedShapingElements, bool removeCycles)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Wire.html">Wire</a></td>
+        <td><span class="parametername">wire</span></td>
+        <td><p>The wire.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.IWireShapingElement.html">IWireShapingElement</a>&gt;</td>
+        <td><span class="parametername">changedShapingElements</span></td>
+        <td><p>The shaping elements.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">removeCycles</span></td>
+        <td><p>if set to <code>true</code> [remove cycles].</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.SimplifyJointChange.html">SimplifyJointChange</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_SimplifyJoint_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.SimplifyJoint*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_SimplifyJoint_NationalInstruments_SourceModel_ShapingJoint_System_Collections_Generic_HashSet_NationalInstruments_SourceModel_ShapingJoint__System_Collections_Generic_List_NationalInstruments_SourceModel_ShapingJoint__NationalInstruments_SourceModel_WireOverlapHandling_NationalInstruments_SourceModel_WireConnectivity_NationalInstruments_SourceModel_WireDanglingEndHandling_System_Collections_Generic_List_NationalInstruments_SourceModel_SimplifyShapingJointChange__" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.SimplifyJoint(NationalInstruments.SourceModel.ShapingJoint,System.Collections.Generic.HashSet{NationalInstruments.SourceModel.ShapingJoint},System.Collections.Generic.List{NationalInstruments.SourceModel.ShapingJoint},NationalInstruments.SourceModel.WireOverlapHandling,NationalInstruments.SourceModel.WireConnectivity,NationalInstruments.SourceModel.WireDanglingEndHandling,System.Collections.Generic.List{NationalInstruments.SourceModel.SimplifyShapingJointChange})">SimplifyJoint(ShapingJoint, HashSet&lt;ShapingJoint&gt;, List&lt;ShapingJoint&gt;, WireOverlapHandling, WireConnectivity, WireDanglingEndHandling, List&lt;SimplifyShapingJointChange&gt;)</h4>
+  <div class="markdown level1 summary"><p>Simplify a joint.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;ShapingJoint&gt; SimplifyJoint(ShapingJoint joint, HashSet&lt;ShapingJoint&gt; jointsToPreserve, List&lt;ShapingJoint&gt; addedJoints, WireOverlapHandling overlapProcessing, WireConnectivity originalConnectivity, WireDanglingEndHandling danglingEndClipping, List&lt;SimplifyShapingJointChange&gt; changes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ShapingJoint.html">ShapingJoint</a></td>
+        <td><span class="parametername">joint</span></td>
+        <td><p>The joint.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.HashSet</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.ShapingJoint.html">ShapingJoint</a>&gt;</td>
+        <td><span class="parametername">jointsToPreserve</span></td>
+        <td><p>The joints to preserve.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.ShapingJoint.html">ShapingJoint</a>&gt;</td>
+        <td><span class="parametername">addedJoints</span></td>
+        <td><p>The added joints.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireOverlapHandling.html">WireOverlapHandling</a></td>
+        <td><span class="parametername">overlapProcessing</span></td>
+        <td><p>The overlap processing.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireConnectivity.html">WireConnectivity</a></td>
+        <td><span class="parametername">originalConnectivity</span></td>
+        <td><p>The original connectivity.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireDanglingEndHandling.html">WireDanglingEndHandling</a></td>
+        <td><span class="parametername">danglingEndClipping</span></td>
+        <td><p>The dangling end clipping.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.SimplifyShapingJointChange.html">SimplifyShapingJointChange</a>&gt;</td>
+        <td><span class="parametername">changes</span></td>
+        <td><p>The changes.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.ShapingJoint.html">ShapingJoint</a>&gt;</td>
+        <td><p>The effected Joints</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_SimplifyJoint_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.SimplifyJoint*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_SimplifyJoint_NationalInstruments_SourceModel_WireJoint_System_Collections_Generic_HashSet_NationalInstruments_SourceModel_WireJoint__System_Collections_Generic_List_NationalInstruments_SourceModel_WireJoint__NationalInstruments_SourceModel_WireOverlapHandling_NationalInstruments_SourceModel_WireConnectivity_NationalInstruments_SourceModel_WireDanglingEndHandling_System_Collections_Generic_List_NationalInstruments_SourceModel_SimplifyJointChange__" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.SimplifyJoint(NationalInstruments.SourceModel.WireJoint,System.Collections.Generic.HashSet{NationalInstruments.SourceModel.WireJoint},System.Collections.Generic.List{NationalInstruments.SourceModel.WireJoint},NationalInstruments.SourceModel.WireOverlapHandling,NationalInstruments.SourceModel.WireConnectivity,NationalInstruments.SourceModel.WireDanglingEndHandling,System.Collections.Generic.List{NationalInstruments.SourceModel.SimplifyJointChange})">SimplifyJoint(WireJoint, HashSet&lt;WireJoint&gt;, List&lt;WireJoint&gt;, WireOverlapHandling, WireConnectivity, WireDanglingEndHandling, List&lt;SimplifyJointChange&gt;)</h4>
+  <div class="markdown level1 summary"><p>Simplify a joint.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;WireJoint&gt; SimplifyJoint(WireJoint joint, HashSet&lt;WireJoint&gt; jointsToPreserve, List&lt;WireJoint&gt; addedJoints, WireOverlapHandling overlapProcessing, WireConnectivity originalConnectivity, WireDanglingEndHandling danglingEndClipping, List&lt;SimplifyJointChange&gt; changes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireJoint.html">WireJoint</a></td>
+        <td><span class="parametername">joint</span></td>
+        <td><p>The joint.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.HashSet</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.WireJoint.html">WireJoint</a>&gt;</td>
+        <td><span class="parametername">jointsToPreserve</span></td>
+        <td><p>The joints to preserve.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.WireJoint.html">WireJoint</a>&gt;</td>
+        <td><span class="parametername">addedJoints</span></td>
+        <td><p>The added joints.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireOverlapHandling.html">WireOverlapHandling</a></td>
+        <td><span class="parametername">overlapProcessing</span></td>
+        <td><p>The overlap processing.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireConnectivity.html">WireConnectivity</a></td>
+        <td><span class="parametername">originalConnectivity</span></td>
+        <td><p>The original connectivity.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireDanglingEndHandling.html">WireDanglingEndHandling</a></td>
+        <td><span class="parametername">danglingEndClipping</span></td>
+        <td><p>The dangling end clipping.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.SimplifyJointChange.html">SimplifyJointChange</a>&gt;</td>
+        <td><span class="parametername">changes</span></td>
+        <td><p>The changes.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.WireJoint.html">WireJoint</a>&gt;</td>
+        <td><p>The effected Joints</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_SimplifyWire_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.SimplifyWire*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_SimplifyWire_NationalInstruments_SourceModel_ShapingWire_System_Collections_Generic_HashSet_NationalInstruments_SourceModel_ShapingJoint__NationalInstruments_SourceModel_WireOverlapHandling_NationalInstruments_SourceModel_WireDanglingEndHandling_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.SimplifyWire(NationalInstruments.SourceModel.ShapingWire,System.Collections.Generic.HashSet{NationalInstruments.SourceModel.ShapingJoint},NationalInstruments.SourceModel.WireOverlapHandling,NationalInstruments.SourceModel.WireDanglingEndHandling)">SimplifyWire(ShapingWire, HashSet&lt;ShapingJoint&gt;, WireOverlapHandling, WireDanglingEndHandling)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual List&lt;SimplifyShapingJointChange&gt; SimplifyWire(ShapingWire wire, HashSet&lt;ShapingJoint&gt; jointsToPreserve, WireOverlapHandling overlapHandling, WireDanglingEndHandling danglingEndHandling)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ShapingWire.html">ShapingWire</a></td>
+        <td><span class="parametername">wire</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.HashSet</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.ShapingJoint.html">ShapingJoint</a>&gt;</td>
+        <td><span class="parametername">jointsToPreserve</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireOverlapHandling.html">WireOverlapHandling</a></td>
+        <td><span class="parametername">overlapHandling</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireDanglingEndHandling.html">WireDanglingEndHandling</a></td>
+        <td><span class="parametername">danglingEndHandling</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.SimplifyShapingJointChange.html">SimplifyShapingJointChange</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_SimplifyWire_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.SimplifyWire*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_SimplifyWire_NationalInstruments_SourceModel_ShapingWire_System_Collections_Generic_HashSet_NationalInstruments_SourceModel_ShapingJoint__System_Collections_Generic_List_NationalInstruments_SourceModel_ShapingJoint__NationalInstruments_SourceModel_WireOverlapHandling_NationalInstruments_SourceModel_WireDanglingEndHandling_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.SimplifyWire(NationalInstruments.SourceModel.ShapingWire,System.Collections.Generic.HashSet{NationalInstruments.SourceModel.ShapingJoint},System.Collections.Generic.List{NationalInstruments.SourceModel.ShapingJoint},NationalInstruments.SourceModel.WireOverlapHandling,NationalInstruments.SourceModel.WireDanglingEndHandling)">SimplifyWire(ShapingWire, HashSet&lt;ShapingJoint&gt;, List&lt;ShapingJoint&gt;, WireOverlapHandling, WireDanglingEndHandling)</h4>
+  <div class="markdown level1 summary"><p>Simplifies the wire.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual List&lt;SimplifyShapingJointChange&gt; SimplifyWire(ShapingWire wire, HashSet&lt;ShapingJoint&gt; jointsToPreserve, List&lt;ShapingJoint&gt; clippableJoints, WireOverlapHandling overlapProcessing, WireDanglingEndHandling danglingEndClipping)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ShapingWire.html">ShapingWire</a></td>
+        <td><span class="parametername">wire</span></td>
+        <td><p>The wire.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.HashSet</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.ShapingJoint.html">ShapingJoint</a>&gt;</td>
+        <td><span class="parametername">jointsToPreserve</span></td>
+        <td><p>The joints to preserve.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.ShapingJoint.html">ShapingJoint</a>&gt;</td>
+        <td><span class="parametername">clippableJoints</span></td>
+        <td><p>The added joints.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireOverlapHandling.html">WireOverlapHandling</a></td>
+        <td><span class="parametername">overlapProcessing</span></td>
+        <td><p>The overlap processing.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireDanglingEndHandling.html">WireDanglingEndHandling</a></td>
+        <td><span class="parametername">danglingEndClipping</span></td>
+        <td><p>The dangling end clipping.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.SimplifyShapingJointChange.html">SimplifyShapingJointChange</a>&gt;</td>
+        <td><p>The list of joints that were simplified along with the reason</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_SimplifyWire_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.SimplifyWire*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_SimplifyWire_NationalInstruments_SourceModel_Wire_System_Collections_Generic_HashSet_NationalInstruments_SourceModel_WireJoint__NationalInstruments_SourceModel_WireOverlapHandling_NationalInstruments_SourceModel_WireDanglingEndHandling_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.SimplifyWire(NationalInstruments.SourceModel.Wire,System.Collections.Generic.HashSet{NationalInstruments.SourceModel.WireJoint},NationalInstruments.SourceModel.WireOverlapHandling,NationalInstruments.SourceModel.WireDanglingEndHandling)">SimplifyWire(Wire, HashSet&lt;WireJoint&gt;, WireOverlapHandling, WireDanglingEndHandling)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual List&lt;SimplifyJointChange&gt; SimplifyWire(Wire wire, HashSet&lt;WireJoint&gt; jointsToPreserve, WireOverlapHandling overlapHandling, WireDanglingEndHandling danglingEndHandling)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Wire.html">Wire</a></td>
+        <td><span class="parametername">wire</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.HashSet</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.WireJoint.html">WireJoint</a>&gt;</td>
+        <td><span class="parametername">jointsToPreserve</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireOverlapHandling.html">WireOverlapHandling</a></td>
+        <td><span class="parametername">overlapHandling</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireDanglingEndHandling.html">WireDanglingEndHandling</a></td>
+        <td><span class="parametername">danglingEndHandling</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.SimplifyJointChange.html">SimplifyJointChange</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_SimplifyWire_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.SimplifyWire*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_SimplifyWire_NationalInstruments_SourceModel_Wire_System_Collections_Generic_HashSet_NationalInstruments_SourceModel_WireJoint__System_Collections_Generic_List_NationalInstruments_SourceModel_WireJoint__NationalInstruments_SourceModel_WireOverlapHandling_NationalInstruments_SourceModel_WireDanglingEndHandling_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.SimplifyWire(NationalInstruments.SourceModel.Wire,System.Collections.Generic.HashSet{NationalInstruments.SourceModel.WireJoint},System.Collections.Generic.List{NationalInstruments.SourceModel.WireJoint},NationalInstruments.SourceModel.WireOverlapHandling,NationalInstruments.SourceModel.WireDanglingEndHandling)">SimplifyWire(Wire, HashSet&lt;WireJoint&gt;, List&lt;WireJoint&gt;, WireOverlapHandling, WireDanglingEndHandling)</h4>
+  <div class="markdown level1 summary"><p>Simplifies the wire.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual List&lt;SimplifyJointChange&gt; SimplifyWire(Wire wire, HashSet&lt;WireJoint&gt; jointsToPreserve, List&lt;WireJoint&gt; clippableJoints, WireOverlapHandling overlapProcessing, WireDanglingEndHandling danglingEndClipping)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Wire.html">Wire</a></td>
+        <td><span class="parametername">wire</span></td>
+        <td><p>The wire.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.HashSet</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.WireJoint.html">WireJoint</a>&gt;</td>
+        <td><span class="parametername">jointsToPreserve</span></td>
+        <td><p>The joints to preserve.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.WireJoint.html">WireJoint</a>&gt;</td>
+        <td><span class="parametername">clippableJoints</span></td>
+        <td><p>The added joints.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireOverlapHandling.html">WireOverlapHandling</a></td>
+        <td><span class="parametername">overlapProcessing</span></td>
+        <td><p>The overlap processing.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireDanglingEndHandling.html">WireDanglingEndHandling</a></td>
+        <td><span class="parametername">danglingEndClipping</span></td>
+        <td><p>The dangling end clipping.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.SimplifyJointChange.html">SimplifyJointChange</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ManhattanWiringBehavior_ToggleUserRouteHint_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.ToggleUserRouteHint*"></a>
+  <h4 id="NationalInstruments_SourceModel_ManhattanWiringBehavior_ToggleUserRouteHint_NationalInstruments_SourceModel_WireRouteHint_" data-uid="NationalInstruments.SourceModel.ManhattanWiringBehavior.ToggleUserRouteHint(NationalInstruments.SourceModel.WireRouteHint)">ToggleUserRouteHint(WireRouteHint)</h4>
+  <div class="markdown level1 summary"><p>Toggle the user&apos;s routing hint.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WireRouteHint ToggleUserRouteHint(WireRouteHint currentUserHint)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireRouteHint.html">WireRouteHint</a></td>
+        <td><span class="parametername">currentUserHint</span></td>
+        <td><p>The current user <a class="xref" href="NationalInstruments.SourceModel.WireRouteHint.html">WireRouteHint</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireRouteHint.html">WireRouteHint</a></td>
+        <td><p>The toggled user hint.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.IWiringBehavior.html">IWiringBehavior</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.IWiringBehaviorRoutingExtensions.html#NationalInstruments_SourceModel_IWiringBehaviorRoutingExtensions_RouteWireToPoint_NationalInstruments_SourceModel_IWiringBehavior_NationalInstruments_SourceModel_WireJoint_NationalInstruments_SourceModel_WireRouteHint_NationalInstruments_SourceModel_DiagramPoint_System_Boolean_System_Boolean_">IWiringBehaviorRoutingExtensions.RouteWireToPoint(IWiringBehavior, WireJoint, WireRouteHint, DiagramPoint, Boolean, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.IWiringBehaviorRoutingExtensions.html#NationalInstruments_SourceModel_IWiringBehaviorRoutingExtensions_RouteWireToPoint_NationalInstruments_SourceModel_IWiringBehavior_NationalInstruments_SourceModel_WireJoint_NationalInstruments_SourceModel_WireRouteHint_NationalInstruments_SourceModel_DiagramPoint_System_Boolean_System_Boolean_System_Boolean_">IWiringBehaviorRoutingExtensions.RouteWireToPoint(IWiringBehavior, WireJoint, WireRouteHint, DiagramPoint, Boolean, Boolean, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.IWiringBehaviorRoutingExtensions.html#NationalInstruments_SourceModel_IWiringBehaviorRoutingExtensions_RouteWireToPoint_NationalInstruments_SourceModel_IWiringBehavior_NationalInstruments_SourceModel_WireJoint_NationalInstruments_SourceModel_WireRouteHint_NationalInstruments_SourceModel_WireRouteDirections_NationalInstruments_SourceModel_DiagramPoint_System_Boolean_System_Boolean_System_Boolean_">IWiringBehaviorRoutingExtensions.RouteWireToPoint(IWiringBehavior, WireJoint, WireRouteHint, WireRouteDirections, DiagramPoint, Boolean, Boolean, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.IWiringBehaviorRoutingExtensions.html#NationalInstruments_SourceModel_IWiringBehaviorRoutingExtensions_RouteWireToPoint_NationalInstruments_SourceModel_IWiringBehavior_NationalInstruments_SourceModel_WireJoint_NationalInstruments_SourceModel_WireRouteHint_NationalInstruments_SourceModel_WireRouteDirections_NationalInstruments_SourceModel_DiagramPoint_System_Boolean_System_Boolean_">IWiringBehaviorRoutingExtensions.RouteWireToPoint(IWiringBehavior, WireJoint, WireRouteHint, WireRouteDirections, DiagramPoint, Boolean, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.IWiringBehaviorRoutingExtensions.html#NationalInstruments_SourceModel_IWiringBehaviorRoutingExtensions_RouteWireToTerminal_NationalInstruments_SourceModel_IWiringBehavior_NationalInstruments_SourceModel_WireJoint_NationalInstruments_SourceModel_WireRouteHint_NationalInstruments_SourceModel_WireableTerminal_System_Boolean_System_Boolean_">IWiringBehaviorRoutingExtensions.RouteWireToTerminal(IWiringBehavior, WireJoint, WireRouteHint, WireableTerminal, Boolean, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.IWiringBehaviorRoutingExtensions.html#NationalInstruments_SourceModel_IWiringBehaviorRoutingExtensions_RouteWireToJoint_NationalInstruments_SourceModel_IWiringBehavior_NationalInstruments_SourceModel_WireJoint_NationalInstruments_SourceModel_WireRouteHint_NationalInstruments_SourceModel_WireJoint_System_Boolean_System_Boolean_System_Collections_Generic_IList_NationalInstruments_SourceModel_Mapping_NationalInstruments_SourceModel_WireJoint___">IWiringBehaviorRoutingExtensions.RouteWireToJoint(IWiringBehavior, WireJoint, WireRouteHint, WireJoint, Boolean, Boolean, IList&lt;Mapping&lt;WireJoint&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.IWiringBehaviorRoutingExtensions.html#NationalInstruments_SourceModel_IWiringBehaviorRoutingExtensions_RouteWireToSegment_NationalInstruments_SourceModel_IWiringBehavior_NationalInstruments_SourceModel_WireJoint_NationalInstruments_SourceModel_WireRouteHint_NationalInstruments_SourceModel_WireSegment_NationalInstruments_SourceModel_DiagramPoint_System_Boolean_System_Boolean_">IWiringBehaviorRoutingExtensions.RouteWireToSegment(IWiringBehavior, WireJoint, WireRouteHint, WireSegment, DiagramPoint, Boolean, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.IWiringBehaviorRoutingExtensions.html#NationalInstruments_SourceModel_IWiringBehaviorRoutingExtensions_AddThisDiagramPoints_NationalInstruments_SourceModel_IWiringBehavior_NationalInstruments_SourceModel_WireJoint_System_Collections_Generic_IList_NationalInstruments_SourceModel_DiagramPoint__System_Int32_NationalInstruments_SourceModel_DiagramPoint_">IWiringBehaviorRoutingExtensions.AddThisDiagramPoints(IWiringBehavior, WireJoint, IList&lt;DiagramPoint&gt;, Int32, DiagramPoint)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.IWiringBehaviorRoutingExtensions.html#NationalInstruments_SourceModel_IWiringBehaviorRoutingExtensions_AddThisDiagramPoints_NationalInstruments_SourceModel_IWiringBehavior_NationalInstruments_SourceModel_WireJoint_System_Collections_Generic_IList_NationalInstruments_SourceModel_DiagramPoint__System_Int32_">IWiringBehaviorRoutingExtensions.AddThisDiagramPoints(IWiringBehavior, WireJoint, IList&lt;DiagramPoint&gt;, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

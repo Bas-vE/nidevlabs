@@ -1,0 +1,1213 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DataValueSerializer
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DataValueSerializer
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.SourceModel.Persistence.DataValueSerializer">
+  
+  
+  <h1 id="NationalInstruments_SourceModel_Persistence_DataValueSerializer" data-uid="NationalInstruments.SourceModel.Persistence.DataValueSerializer" class="text-break">Class DataValueSerializer
+  </h1>
+  <div class="markdown level0 summary"><p>This class provides a centralized implementation for serializing value objects for a given NIType.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="NationalInstruments.SourceModel.Persistence.BasePropertySerializer.html">BasePropertySerializer</a></div>
+    <div class="level2"><a class="xref" href="NationalInstruments.SourceModel.Persistence.BasePlatformFrameworkPropertySerializer.html">BasePlatformFrameworkPropertySerializer</a></div>
+    <div class="level3"><span class="xref">DataValueSerializer</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="NationalInstruments.SourceModel.Persistence.IElementPropertySerializer.html">IElementPropertySerializer</a></div>
+    <div><span class="xref">NationalInstruments.DynamicProperties.IPropertySerializer</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Persistence.BasePlatformFrameworkPropertySerializer.html#NationalInstruments_SourceModel_Persistence_BasePlatformFrameworkPropertySerializer_ParsableNamespaceVersionCompatibility">BasePlatformFrameworkPropertySerializer.ParsableNamespaceVersionCompatibility</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Persistence.BasePropertySerializer.html#NationalInstruments_SourceModel_Persistence_BasePropertySerializer_NationalInstruments_DynamicProperties_IPropertySerializer_Generate_NationalInstruments_DynamicProperties_SerializablePropertySymbol_NationalInstruments_DynamicProperties_IPropertyGenerator_System_Object_">BasePropertySerializer.IPropertySerializer.Generate(SerializablePropertySymbol, IPropertyGenerator, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Persistence.BasePropertySerializer.html#NationalInstruments_SourceModel_Persistence_BasePropertySerializer_NationalInstruments_DynamicProperties_IPropertySerializer_TryParse_NationalInstruments_DynamicProperties_SerializablePropertySymbol_NationalInstruments_DynamicProperties_IPropertyParser_System_Object__">BasePropertySerializer.IPropertySerializer.TryParse(SerializablePropertySymbol, IPropertyParser, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Persistence.BasePropertySerializer.html#NationalInstruments_SourceModel_Persistence_BasePropertySerializer_NationalInstruments_DynamicProperties_IPropertySerializer_IsSet_NationalInstruments_DynamicProperties_SerializablePropertySymbol_NationalInstruments_DynamicProperties_IParsable_System_Object_System_Object_">BasePropertySerializer.IPropertySerializer.IsSet(SerializablePropertySymbol, IParsable, Object, Object)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.SourceModel.Persistence.html">NationalInstruments.SourceModel.Persistence</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_SourceModel_Persistence_DataValueSerializer_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class DataValueSerializer : BasePlatformFrameworkPropertySerializer, IElementPropertySerializer, IPropertySerializer</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_DataValueSerializer__ctor_" data-uid="NationalInstruments.SourceModel.Persistence.DataValueSerializer.#ctor*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_DataValueSerializer__ctor" data-uid="NationalInstruments.SourceModel.Persistence.DataValueSerializer.#ctor">DataValueSerializer()</h4>
+  <div class="markdown level1 summary"><p>The constructor for this serializer</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataValueSerializer()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_DataValueSerializer__ctor_" data-uid="NationalInstruments.SourceModel.Persistence.DataValueSerializer.#ctor*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_DataValueSerializer__ctor_System_Boolean_" data-uid="NationalInstruments.SourceModel.Persistence.DataValueSerializer.#ctor(System.Boolean)">DataValueSerializer(Boolean)</h4>
+  <div class="markdown level1 summary"><p>The constructor for this serializer</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataValueSerializer(bool deferDataTypeReferenceTableFixupUntilParseComplete)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">deferDataTypeReferenceTableFixupUntilParseComplete</span></td>
+        <td><p>True if this serializer should defer data type reference table fixup until parse complete fixup time.
+False to fixup the table during post parse.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="NationalInstruments_SourceModel_Persistence_DataValueSerializer_DataValueSerializerPostParseFixupName" data-uid="NationalInstruments.SourceModel.Persistence.DataValueSerializer.DataValueSerializerPostParseFixupName">DataValueSerializerPostParseFixupName</h4>
+  <div class="markdown level1 summary"><p>Name of the post parse fixup that gets registered for this serializer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DataValueSerializerPostParseFixupName = &quot;FixupDataValue&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_SourceModel_Persistence_DataValueSerializer_UnsetValue" data-uid="NationalInstruments.SourceModel.Persistence.DataValueSerializer.UnsetValue">UnsetValue</h4>
+  <div class="markdown level1 summary"><p>Placeholder value for a property whose value has not been set, and for which null is a valid set value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly object UnsetValue</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_DataValueSerializer_AddPostParseFixupOrder_" data-uid="NationalInstruments.SourceModel.Persistence.DataValueSerializer.AddPostParseFixupOrder*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_DataValueSerializer_AddPostParseFixupOrder_NationalInstruments_SourceModel_Persistence_IElementPropertyParser_System_String_" data-uid="NationalInstruments.SourceModel.Persistence.DataValueSerializer.AddPostParseFixupOrder(NationalInstruments.SourceModel.Persistence.IElementPropertyParser,System.String)">AddPostParseFixupOrder(IElementPropertyParser, String)</h4>
+  <div class="markdown level1 summary"><p>Allows derived class to add more fixup order</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void AddPostParseFixupOrder(IElementPropertyParser parser, string dataValueSerializerPostParseFixupName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Persistence.IElementPropertyParser.html">IElementPropertyParser</a></td>
+        <td><span class="parametername">parser</span></td>
+        <td><p>Property FixupRegistrar</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">dataValueSerializerPostParseFixupName</span></td>
+        <td><p>Name of the dataValueSerializerPostParseFixup</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_DataValueSerializer_AreEqual_" data-uid="NationalInstruments.SourceModel.Persistence.DataValueSerializer.AreEqual*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_DataValueSerializer_AreEqual_System_Object_System_Object_" data-uid="NationalInstruments.SourceModel.Persistence.DataValueSerializer.AreEqual(System.Object,System.Object)">AreEqual(Object, Object)</h4>
+  <div class="markdown level1 summary"><p>Compare two ValueTypePair object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool AreEqual(object sourceValue, object targetValue)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">sourceValue</span></td>
+        <td><p>Source <a class="xref" href="NationalInstruments.SourceModel.ValueTypePair.html">ValueTypePair</a> to be compared</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">targetValue</span></td>
+        <td><p>Target <a class="xref" href="NationalInstruments.SourceModel.ValueTypePair.html">ValueTypePair</a> to be compared</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if both type and value is the same, false if either type and value is different.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.Persistence.BasePropertySerializer.html#NationalInstruments_SourceModel_Persistence_BasePropertySerializer_AreEqual_System_Object_System_Object_">BasePropertySerializer.AreEqual(Object, Object)</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_DataValueSerializer_EscapeIllegalPathCharacters_" data-uid="NationalInstruments.SourceModel.Persistence.DataValueSerializer.EscapeIllegalPathCharacters*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_DataValueSerializer_EscapeIllegalPathCharacters_System_String_System_Boolean_" data-uid="NationalInstruments.SourceModel.Persistence.DataValueSerializer.EscapeIllegalPathCharacters(System.String,System.Boolean)">EscapeIllegalPathCharacters(String, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Escapes illegal characters in the string that are invalid path chars (As defined by Path.GetInvalidPathChars)
+If the characters aren&apos;t escaped, the system Path functions will throw exceptions. Used with EscapeIllegalPathCharacters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string EscapeIllegalPathCharacters(string path, bool escapeQuotes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>The path to escape.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">escapeQuotes</span></td>
+        <td><p>Bool to decide whether to escape quotes as well</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>A string with illegal path characters replaced with legal replacements.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_DataValueSerializer_EscapeStringForXmlContent_" data-uid="NationalInstruments.SourceModel.Persistence.DataValueSerializer.EscapeStringForXmlContent*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_DataValueSerializer_EscapeStringForXmlContent_System_String_" data-uid="NationalInstruments.SourceModel.Persistence.DataValueSerializer.EscapeStringForXmlContent(System.String)">EscapeStringForXmlContent(String)</h4>
+  <div class="markdown level1 summary"><p>Escapes white space characters in strings that are meant to serve as element and attribute values in an XML document.
+If the characters aren&apos;t escaped, an XMLReader object may choose to treat the characters as formatting or pad
+characters and throw them away.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string EscapeStringForXmlContent(string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">text</span></td>
+        <td><p>The string to escape.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>A string with white space characters escaped.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_DataValueSerializer_Generate_" data-uid="NationalInstruments.SourceModel.Persistence.DataValueSerializer.Generate*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_DataValueSerializer_Generate_NationalInstruments_DynamicProperties_SerializablePropertySymbol_NationalInstruments_SourceModel_Persistence_IElementPropertyGenerator_System_Object_" data-uid="NationalInstruments.SourceModel.Persistence.DataValueSerializer.Generate(NationalInstruments.DynamicProperties.SerializablePropertySymbol,NationalInstruments.SourceModel.Persistence.IElementPropertyGenerator,System.Object)">Generate(SerializablePropertySymbol, IElementPropertyGenerator, Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Generate(SerializablePropertySymbol symbol, IElementPropertyGenerator generator, object value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DynamicProperties.SerializablePropertySymbol</span></td>
+        <td><span class="parametername">symbol</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Persistence.IElementPropertyGenerator.html">IElementPropertyGenerator</a></td>
+        <td><span class="parametername">generator</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.Persistence.BasePropertySerializer.html#NationalInstruments_SourceModel_Persistence_BasePropertySerializer_Generate_NationalInstruments_DynamicProperties_SerializablePropertySymbol_NationalInstruments_SourceModel_Persistence_IElementPropertyGenerator_System_Object_">BasePropertySerializer.Generate(SerializablePropertySymbol, IElementPropertyGenerator, Object)</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_DataValueSerializer_GenerateDataValueCookie_" data-uid="NationalInstruments.SourceModel.Persistence.DataValueSerializer.GenerateDataValueCookie*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_DataValueSerializer_GenerateDataValueCookie_NationalInstruments_SourceModel_Persistence_IElementPropertyGenerator_System_Xml_XmlWriter_System_Object_" data-uid="NationalInstruments.SourceModel.Persistence.DataValueSerializer.GenerateDataValueCookie(NationalInstruments.SourceModel.Persistence.IElementPropertyGenerator,System.Xml.XmlWriter,System.Object)">GenerateDataValueCookie(IElementPropertyGenerator, XmlWriter, Object)</h4>
+  <div class="markdown level1 summary"><p>This function allows you to serialize a cookie that represents an object in memory instead of fully serializing out
+the entire contents of the object.  This cookie can then be used to lookup the object when parsed instead of parsing
+the entire object again.  This is an optimization that can only be used for copy/paste within the same process.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected static void GenerateDataValueCookie(IElementPropertyGenerator generator, XmlWriter writer, object value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Persistence.IElementPropertyGenerator.html">IElementPropertyGenerator</a></td>
+        <td><span class="parametername">generator</span></td>
+        <td><p>the generator used for serialization</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Xml.XmlWriter</span></td>
+        <td><span class="parametername">writer</span></td>
+        <td><p>the writer used for storing the serialized data</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>the object in memory that will be referenced by the cookie</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_DataValueSerializer_GenerateSimpleDataValue_" data-uid="NationalInstruments.SourceModel.Persistence.DataValueSerializer.GenerateSimpleDataValue*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_DataValueSerializer_GenerateSimpleDataValue_NationalInstruments_DataTypes_NIType_System_Object_" data-uid="NationalInstruments.SourceModel.Persistence.DataValueSerializer.GenerateSimpleDataValue(NationalInstruments.DataTypes.NIType,System.Object)">GenerateSimpleDataValue(NIType, Object)</h4>
+  <div class="markdown level1 summary"><p>Provides centralized implementation for serializing simple data types and values that multiple serializers can leverage.  A simple type
+is one where the data value can be serialized into a single string that doesn&apos;t require complex parsing or tokenization to reconstruct
+the data value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GenerateSimpleDataValue(NIType currentType, object value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataTypes.NIType</span></td>
+        <td><span class="parametername">currentType</span></td>
+        <td><p>The NIType for the data value object you want to serialize.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The data value object for the currentType.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>Null if the data type isn&apos;t a simple data type.  Otherwise, returns a string representing the serialized data value for the type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_DataValueSerializer_GenerateSimpleDataValue_" data-uid="NationalInstruments.SourceModel.Persistence.DataValueSerializer.GenerateSimpleDataValue*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_DataValueSerializer_GenerateSimpleDataValue_NationalInstruments_DataTypes_NIType_System_Object_System_Boolean_" data-uid="NationalInstruments.SourceModel.Persistence.DataValueSerializer.GenerateSimpleDataValue(NationalInstruments.DataTypes.NIType,System.Object,System.Boolean)">GenerateSimpleDataValue(NIType, Object, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Provides centralized implementation for serializing simple data types and values that multiple serializers can leverage.  A simple type
+is one where the data value can be serialized into a single string that doesn&apos;t require complex parsing or tokenization to reconstruct
+the data value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GenerateSimpleDataValue(NIType currentType, object value, bool forPersistence)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataTypes.NIType</span></td>
+        <td><span class="parametername">currentType</span></td>
+        <td><p>The NIType for the data value object you want to serialize.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The data value object for the currentType.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">forPersistence</span></td>
+        <td><p>True if the generated string is intended for persisting and False if the generated string is for human consumption.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>Null if the data type isn&apos;t a simple data type.  Otherwise, returns a string representing the serialized data value for the type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_DataValueSerializer_GetDataType_" data-uid="NationalInstruments.SourceModel.Persistence.DataValueSerializer.GetDataType*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_DataValueSerializer_GetDataType_NationalInstruments_SourceModel_IDataTypeReferenceOwner_NationalInstruments_DynamicProperties_SerializablePropertySymbol_" data-uid="NationalInstruments.SourceModel.Persistence.DataValueSerializer.GetDataType(NationalInstruments.SourceModel.IDataTypeReferenceOwner,NationalInstruments.DynamicProperties.SerializablePropertySymbol)">GetDataType(IDataTypeReferenceOwner, SerializablePropertySymbol)</h4>
+  <div class="markdown level1 summary"><p>Get the data type of the owner.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual NIType GetDataType(IDataTypeReferenceOwner owner, SerializablePropertySymbol symbol)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.IDataTypeReferenceOwner.html">IDataTypeReferenceOwner</a></td>
+        <td><span class="parametername">owner</span></td>
+        <td><p>Owner with a data type.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.DynamicProperties.SerializablePropertySymbol</span></td>
+        <td><span class="parametername">symbol</span></td>
+        <td><p>The symbol for which to retrieve a data type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataTypes.NIType</span></td>
+        <td><p>Data type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_DataValueSerializer_GetDefaultDataValueForType_" data-uid="NationalInstruments.SourceModel.Persistence.DataValueSerializer.GetDefaultDataValueForType*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_DataValueSerializer_GetDefaultDataValueForType_NationalInstruments_DataTypes_NIType_" data-uid="NationalInstruments.SourceModel.Persistence.DataValueSerializer.GetDefaultDataValueForType(NationalInstruments.DataTypes.NIType)">GetDefaultDataValueForType(NIType)</h4>
+  <div class="markdown level1 summary"><p>Returns a default data value object for a given NIType.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object GetDefaultDataValueForType(NIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataTypes.NIType</span></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The type for which to retrieve a default value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>The default value for the type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_DataValueSerializer_GetDefaultDataValueForTypeAllocatingArrays_" data-uid="NationalInstruments.SourceModel.Persistence.DataValueSerializer.GetDefaultDataValueForTypeAllocatingArrays*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_DataValueSerializer_GetDefaultDataValueForTypeAllocatingArrays_NationalInstruments_DataTypes_NIType_" data-uid="NationalInstruments.SourceModel.Persistence.DataValueSerializer.GetDefaultDataValueForTypeAllocatingArrays(NationalInstruments.DataTypes.NIType)">GetDefaultDataValueForTypeAllocatingArrays(NIType)</h4>
+  <div class="markdown level1 summary"><p>Returns a default data value for a given NIType, inflating any array types along the way.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object GetDefaultDataValueForTypeAllocatingArrays(NIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataTypes.NIType</span></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The type for which to retrieve a default value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>The default value for the type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_DataValueSerializer_GetDefaultDataValueForTypeAllocatingArraysForEditTime_" data-uid="NationalInstruments.SourceModel.Persistence.DataValueSerializer.GetDefaultDataValueForTypeAllocatingArraysForEditTime*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_DataValueSerializer_GetDefaultDataValueForTypeAllocatingArraysForEditTime_NationalInstruments_DataTypes_NIType_" data-uid="NationalInstruments.SourceModel.Persistence.DataValueSerializer.GetDefaultDataValueForTypeAllocatingArraysForEditTime(NationalInstruments.DataTypes.NIType)">GetDefaultDataValueForTypeAllocatingArraysForEditTime(NIType)</h4>
+  <div class="markdown level1 summary"><p>Returns a default data value for a given NIType in Edit Time, inflating any array types along the way.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object GetDefaultDataValueForTypeAllocatingArraysForEditTime(NIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataTypes.NIType</span></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The type for which to retrieve a default value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>The default value for the type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_DataValueSerializer_IsSet_" data-uid="NationalInstruments.SourceModel.Persistence.DataValueSerializer.IsSet*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_DataValueSerializer_IsSet_NationalInstruments_DynamicProperties_SerializablePropertySymbol_NationalInstruments_SourceModel_Element_System_Object_System_Object_" data-uid="NationalInstruments.SourceModel.Persistence.DataValueSerializer.IsSet(NationalInstruments.DynamicProperties.SerializablePropertySymbol,NationalInstruments.SourceModel.Element,System.Object,System.Object)">IsSet(SerializablePropertySymbol, Element, Object, Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsSet(SerializablePropertySymbol symbol, Element element, object currentValue, object defaultValue)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DynamicProperties.SerializablePropertySymbol</span></td>
+        <td><span class="parametername">symbol</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td><span class="parametername">element</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">currentValue</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">defaultValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.Persistence.BasePropertySerializer.html#NationalInstruments_SourceModel_Persistence_BasePropertySerializer_IsSet_NationalInstruments_DynamicProperties_SerializablePropertySymbol_NationalInstruments_SourceModel_Element_System_Object_System_Object_">BasePropertySerializer.IsSet(SerializablePropertySymbol, Element, Object, Object)</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_DataValueSerializer_ParseSimpleDataValue_" data-uid="NationalInstruments.SourceModel.Persistence.DataValueSerializer.ParseSimpleDataValue*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_DataValueSerializer_ParseSimpleDataValue_NationalInstruments_DataTypes_NIType_System_String_System_Object__" data-uid="NationalInstruments.SourceModel.Persistence.DataValueSerializer.ParseSimpleDataValue(NationalInstruments.DataTypes.NIType,System.String,System.Object@)">ParseSimpleDataValue(NIType, String, out Object)</h4>
+  <div class="markdown level1 summary"><p>Attempts to parse the given serialized string into a value of the given NIType.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ParseSimpleDataValue(NIType currentType, string serializedValue, out object deserializedValue)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataTypes.NIType</span></td>
+        <td><span class="parametername">currentType</span></td>
+        <td><p>Type to attempt to parse the serialized value into.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">serializedValue</span></td>
+        <td><p>Serialized value.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">deserializedValue</span></td>
+        <td><p>Unserialized value of the given type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if parsing was successful, otherwise false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_DataValueSerializer_SetTransitionsOnDigitalTable_" data-uid="NationalInstruments.SourceModel.Persistence.DataValueSerializer.SetTransitionsOnDigitalTable*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_DataValueSerializer_SetTransitionsOnDigitalTable_System_UInt32___NationalInstruments_DigitalWaveform__" data-uid="NationalInstruments.SourceModel.Persistence.DataValueSerializer.SetTransitionsOnDigitalTable(System.UInt32[],NationalInstruments.DigitalWaveform@)">SetTransitionsOnDigitalTable(UInt32[], ref DigitalWaveform)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetTransitionsOnDigitalTable(uint[] transitions, ref DigitalWaveform digitalTable)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span>[]</td>
+        <td><span class="parametername">transitions</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.DigitalWaveform</span></td>
+        <td><span class="parametername">digitalTable</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_DataValueSerializer_TryDeepCopy_" data-uid="NationalInstruments.SourceModel.Persistence.DataValueSerializer.TryDeepCopy*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_DataValueSerializer_TryDeepCopy_NationalInstruments_DynamicProperties_SerializablePropertySymbol_NationalInstruments_SourceModel_Element_System_Object__" data-uid="NationalInstruments.SourceModel.Persistence.DataValueSerializer.TryDeepCopy(NationalInstruments.DynamicProperties.SerializablePropertySymbol,NationalInstruments.SourceModel.Element,System.Object@)">TryDeepCopy(SerializablePropertySymbol, Element, out Object)</h4>
+  <div class="markdown level1 summary"><p>Returns a deep copy of the current value for the property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool TryDeepCopy(SerializablePropertySymbol symbol, Element owner, out object copiedValue)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DynamicProperties.SerializablePropertySymbol</span></td>
+        <td><span class="parametername">symbol</span></td>
+        <td><p>Symbol representing the property we want to deep copy</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td><span class="parametername">owner</span></td>
+        <td><p>The owning element of the property</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">copiedValue</span></td>
+        <td><p>An object that is a deep copy of the current value or possibly the same value if the type is immutable</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the value was copied successfully and False otherwise</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.Persistence.BasePropertySerializer.html#NationalInstruments_SourceModel_Persistence_BasePropertySerializer_TryDeepCopy_NationalInstruments_DynamicProperties_SerializablePropertySymbol_NationalInstruments_SourceModel_Element_System_Object__">BasePropertySerializer.TryDeepCopy(SerializablePropertySymbol, Element, out Object)</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_DataValueSerializer_TryParse_" data-uid="NationalInstruments.SourceModel.Persistence.DataValueSerializer.TryParse*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_DataValueSerializer_TryParse_NationalInstruments_DynamicProperties_SerializablePropertySymbol_NationalInstruments_SourceModel_Persistence_IElementPropertyParser_System_Object__" data-uid="NationalInstruments.SourceModel.Persistence.DataValueSerializer.TryParse(NationalInstruments.DynamicProperties.SerializablePropertySymbol,NationalInstruments.SourceModel.Persistence.IElementPropertyParser,System.Object@)">TryParse(SerializablePropertySymbol, IElementPropertyParser, out Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool TryParse(SerializablePropertySymbol symbol, IElementPropertyParser parser, out object value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DynamicProperties.SerializablePropertySymbol</span></td>
+        <td><span class="parametername">symbol</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Persistence.IElementPropertyParser.html">IElementPropertyParser</a></td>
+        <td><span class="parametername">parser</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.Persistence.BasePropertySerializer.html#NationalInstruments_SourceModel_Persistence_BasePropertySerializer_TryParse_NationalInstruments_DynamicProperties_SerializablePropertySymbol_NationalInstruments_SourceModel_Persistence_IElementPropertyParser_System_Object__">BasePropertySerializer.TryParse(SerializablePropertySymbol, IElementPropertyParser, out Object)</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_DataValueSerializer_UnescapeIllegalPathCharacters_" data-uid="NationalInstruments.SourceModel.Persistence.DataValueSerializer.UnescapeIllegalPathCharacters*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_DataValueSerializer_UnescapeIllegalPathCharacters_System_String_System_Boolean_" data-uid="NationalInstruments.SourceModel.Persistence.DataValueSerializer.UnescapeIllegalPathCharacters(System.String,System.Boolean)">UnescapeIllegalPathCharacters(String, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Unescapes illegal characters in the string that are invalid path chars (As defined by Path.GetInvalidPathChars)
+If the characters aren&apos;t escaped, the system Path functions will throw exceptions. Used with EscapeIllegalPathCharacters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string UnescapeIllegalPathCharacters(string path, bool unescapeQuotes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>The path to escape.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">unescapeQuotes</span></td>
+        <td><p>Bool to decide whether to un escape quotes as well</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>A string with illegal path characters replaced with legal replacements.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_DataValueSerializer_UnescapeStringFromXmlContent_" data-uid="NationalInstruments.SourceModel.Persistence.DataValueSerializer.UnescapeStringFromXmlContent*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_DataValueSerializer_UnescapeStringFromXmlContent_System_String_" data-uid="NationalInstruments.SourceModel.Persistence.DataValueSerializer.UnescapeStringFromXmlContent(System.String)">UnescapeStringFromXmlContent(String)</h4>
+  <div class="markdown level1 summary"><p>Performs the reverse functionality of EscapeStringFromXmlContent</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string UnescapeStringFromXmlContent(string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">text</span></td>
+        <td><p>The string to unescape.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>An unescaped value string from an XML element or attribute value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Persistence.IElementPropertySerializer.html">IElementPropertySerializer</a>
+  </div>
+  <div>
+      <span class="xref">NationalInstruments.DynamicProperties.IPropertySerializer</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

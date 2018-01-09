@@ -1,0 +1,866 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace NationalInstruments.SourceModel.Envoys
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace NationalInstruments.SourceModel.Envoys
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.SourceModel.Envoys">
+  
+  <h1 id="NationalInstruments_SourceModel_Envoys" data-uid="NationalInstruments.SourceModel.Envoys" class="text-break">Namespace NationalInstruments.SourceModel.Envoys
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.AllowSupportForItemsInScopeService.html">AllowSupportForItemsInScopeService</a></h4>
+      <section><p>This basic service can be used by tests or production code to mark any bound envoy as supported.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.BindOnLoadedAttribute.html">BindOnLoadedAttribute</a></h4>
+      <section><p>Declares that service should be bound to a project
+item when the associated file is loaded, or on demand
+(when a provided service is queried for).
+This is the most efficient auto binding mode.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.BindOnTargetedAttribute.html">BindOnTargetedAttribute</a></h4>
+      <section><p>Declares that service should be bound to a project
+item immediately when the item is under a real target,
+or on demand (when a provided service is queried for).
+Specifying ImmediateBind is the most expensive binding mode
+since it will bind to all matching envoys at load, even for Envoys
+which are unused in the NULL target.
+This is preferred over ImmediateBind since it will not bind to objects
+under the NULL target, but will immediately bind to all targeted items.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.BindsToModelDefinitionTypeAttribute.html">BindsToModelDefinitionTypeAttribute</a></h4>
+      <section><p>Attribute which declares which project item &quot;ModelDefinitionType&quot;
+that the service supports.  The service will only be bound to project
+items which have a matching model definition type.</p>
+<p>This attribute can be used more than once to specify that the service
+binds to multiple model definition types.</p>
+<p>If a service does not provide any ModelDefinitionTypes then it is
+assumed that the service is model definition type agnostic.</p>
+<p>When registering a binding to a &quot;ModelDefinitionType&quot;, it&apos;s recommened that you
+also provide a namespace name for the type.  This namespace name should be the same
+name as provided by an INamespaceSchema and allows for the possibility of running
+future mutations on this type.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.BindsToModelDefinitionTypeMetadataView.html">BindsToModelDefinitionTypeMetadataView</a></h4>
+      <section><p>Metadata view that can be used to see what types of model defintion types we bind to</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.ContentReferenceExtensions.html">ContentReferenceExtensions</a></h4>
+      <section><p>Extensions for the <span class="xref">NationalInstruments.Restricted.SourceModel.Envoys.ContentReference</span> class</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.CreateItemsInScopeRulesHelper.html">CreateItemsInScopeRulesHelper</a></h4>
+      <section><p>Helper class for ICreateItemsInScopeRules.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultDirtyStateNotificationService.html">DefaultDirtyStateNotificationService</a></h4>
+      <section><p>An implementation of <a class="xref" href="NationalInstruments.SourceModel.Envoys.IDirtyStateNotificationService.html">IDirtyStateNotificationService</a> that uses the <a class="xref" href="NationalInstruments.SourceModel.ITransactionManager.html">ITransactionManager</a> associated
+with this service&apos;s <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_AssociatedEnvoy">AssociatedEnvoy</a> to track the dirty state of the referenced file.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultReferencedFileService.html">DefaultReferencedFileService</a></h4>
+      <section><p>A default implementation of a service capable of saving, loading, and describing a referenced file.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultsForIFileTypeInfo.html">DefaultsForIFileTypeInfo</a></h4>
+      <section><p>This class stores the default values for <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a>. We need to apply these values again elsewhere
+to get them to work with MonoDroid Link All Assemblies, so we put them in a common location to make sure the values stay in sync.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultsForIProjectInitializationInfo.html">DefaultsForIProjectInitializationInfo</a></h4>
+      <section><p>This class stores the default values for <a class="xref" href="NationalInstruments.SourceModel.Envoys.IProjectInitializationInfo.html">IProjectInitializationInfo</a>. We need to apply these values again elsewhere
+to get them to work with MonoDroid Link All Assemblies, so we put them in a common location to make sure the values stay in sync.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultsForIStorageTypeInfo.html">DefaultsForIStorageTypeInfo</a></h4>
+      <section><p>This class stores the default values for <a class="xref" href="NationalInstruments.SourceModel.Envoys.IStorageTypeInfo.html">IStorageTypeInfo</a>. We need to apply these values again elsewhere
+to get them to work with MonoDroid Link All Assemblies, so we put them in a common location to make sure the values stay in sync.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultTarget.html">DefaultTarget</a></h4>
+      <section><p>Definition of a Default Target.  this is the definition you get for the Auto-Added TargetEnvoy
+when other Envoys are added to the Project and a Target has not been added by the application
+or project initializers.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.DefaultTargetCreateRulesServiceFactory.html">DefaultTargetCreateRulesServiceFactory</a></h4>
+      <section><p>Envoy service factory</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.DefinitionFactory.html">DefinitionFactory</a></h4>
+      <section><p>Factory Export used to manage the Create Methods which can be used to create Definitions when items are
+added to the project</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.DefinitionReferenceExtensions.html">DefinitionReferenceExtensions</a></h4>
+      <section><p>Extension methods for DefinitionReference envoys.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.DisallowSupportForItemsInScopeService.html">DisallowSupportForItemsInScopeService</a></h4>
+      <section><p>This basic service can be used by tests or production code to mark any bound envoy as not supported.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.EmbeddedDefinitionReferenceExtensions.html">EmbeddedDefinitionReferenceExtensions</a></h4>
+      <section><p>Extension Methods to make adding a new ProjectRefernence easy</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.EmbeddedFileType.html">EmbeddedFileType</a></h4>
+      <section><p>The <a class="xref" href="NationalInstruments.SourceModel.Envoys.EmbeddedFileType.html">EmbeddedFileType</a> is a factory interface used to create <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a>s
+which are bound to a file that is represented by a <a class="xref" href="NationalInstruments.SourceModel.Definition.html">Definition</a> that is persisted in
+the <a class="xref" href="NationalInstruments.SourceModel.ProjectSourceFile.html">ProjectSourceFile</a>.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.EmbeddedReferencedFileService.html">EmbeddedReferencedFileService</a></h4>
+      <section><p>An implementation of <a class="xref" href="NationalInstruments.SourceModel.Envoys.IReferencedFileService.html">IReferencedFileService</a> for files that are saved as 
+embedded within another <a class="xref" href="NationalInstruments.SourceModel.SourceFileBase.html">SourceFileBase</a>.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></h4>
+      <section><p>Base class for an item in an <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyManager.html">EnvoyManager</a> or one of its derived classes. An Envoy is a representative of
+another model item, similar to the Proxy design pattern.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyCreateInfo.html">EnvoyCreateInfo</a></h4>
+      <section><p>A container for information regarding how to create new <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a>s.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyExtensions.html">EnvoyExtensions</a></h4>
+      <section><p>Extensions for <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyIndexUpdateService.html">EnvoyIndexUpdateService</a></h4>
+      <section><p>Envoy service for registering, unregistering, and detecting Envoy Index information.
+Here are some useful definitions when thinking about the Envoy Indexes:</p>
+<ul>
+<li>KindAndKey - A pair of strings used to map to one or more envoys.</li>
+<li>Envoy Index - A KindAndKey that is mapped to an envoy.</li>
+<li>Envoy Indexes - A collection of EnvoyIndex items. The collection might be project wide, envoy manager wide, or source file wide.</li>
+<li>Envoy Index Hints - A collection of KindAndKeys specifying what Envoy Indexes might be found in an EnvoyManager. This does not
+                    return the actual envoys but is instead just what KindAndKeys can be found. For more information on these
+                    hints, <span class="xref">NationalInstruments.Restricted.SourceModel.Envoys.IEnvoyManagerEnvoyIndexHints</span>.</li>
+</ul>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyIndexUpdateServiceExtensions.html">EnvoyIndexUpdateServiceExtensions</a></h4>
+      <section><p>Extension methods for <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyIndexUpdateService.html">EnvoyIndexUpdateService</a>.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyKeywords.html">EnvoyKeywords</a></h4>
+      <section><p>Binding keywords that can be used to bind project servies to any envoy of a certain category.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyLoadException.html">EnvoyLoadException</a></h4>
+      <section><p>The exception thrown when we fail to load an envoy.
+The inner exception represents the actual load error.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyLoadExceptionHelpers.html">EnvoyLoadExceptionHelpers</a></h4>
+      <section><p>Helper class to assist with EnvoyLoadException operations.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyLoadOptions.html">EnvoyLoadOptions</a></h4>
+      <section><p>Options used when loading an <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a> via <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html#NationalInstruments_SourceModel_Envoys_Envoy_BeginLoad_System_Action_NationalInstruments_SourceModel_Envoys_ILockedSourceFile_System_Exception__NationalInstruments_Core_PlatformDispatcher_NationalInstruments_SourceModel_Envoys_EnvoyLoadOptions_">BeginLoad(Action&lt;ILockedSourceFile, Exception&gt;, PlatformDispatcher, EnvoyLoadOptions)</a> or <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html#NationalInstruments_SourceModel_Envoys_Envoy_LoadAsync_NationalInstruments_SourceModel_Envoys_EnvoyLoadOptions_">LoadAsync(EnvoyLoadOptions)</a>.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyManager.html">EnvoyManager</a></h4>
+      <section><p>Manages the <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a> hierarchy within the IDE. Storage (save/ load) of files
+is handled by implementations of <a class="xref" href="NationalInstruments.SourceModel.Envoys.IStorageManager.html">IStorageManager</a>.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyManagerEnvoyIndexHintsCustomizerExtensions.html">EnvoyManagerEnvoyIndexHintsCustomizerExtensions</a></h4>
+      <section><p>Helper methods for <a class="xref" href="NationalInstruments.SourceModel.Envoys.IEnvoyManagerEnvoyIndexHintsCustomizer.html">IEnvoyManagerEnvoyIndexHintsCustomizer</a></p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyManagerExtensions.html">EnvoyManagerExtensions</a></h4>
+      <section><p>Extensions for working with the <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyManager.html">EnvoyManager</a> class.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyManagerFile.html">EnvoyManagerFile</a></h4>
+      <section><p>Implementation of <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyManager.html">EnvoyManager</a> to be used by source files that contain envoys.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyManagerFileType.html">EnvoyManagerFileType</a></h4>
+      <section><p>An implementation of <a class="xref" href="NationalInstruments.SourceModel.Envoys.SourceFileType.html">SourceFileType</a> specifically for file types than contain an <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyManagerFile.html">EnvoyManagerFile</a>.
+This will create a model on the lines of:
+SourceFileReference - Name=&quot;Foo.xyz&quot;, BindingKeywords=&quot;..., EnvoyManager, ...&quot;
+   SourceFile
+       XyzDefinition
+       EnvoyManagerFile
+           [Optional: if CreateEmbeddedNameTrackingScope] NameScopingEnvoy - Name=&quot;Foo.xyz&quot;, NameTracksFileName=True, AutomaticallyResolveUp=True</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyManagerFileTypeDeprecated.html">EnvoyManagerFileTypeDeprecated</a></h4>
+      <section><p>This class is deprecated in favor of <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyManagerFileType.html">EnvoyManagerFileType</a>. This class creates envoy managers with the old model format
+as described below.</p>
+<p>Used to properly implement <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html#NationalInstruments_SourceModel_Envoys_IFileType_AddNewEnvoy_NationalInstruments_SourceModel_Element_NationalInstruments_SourceModel_Envoys_EnvoyCreateInfo_">AddNewEnvoy(Element, EnvoyCreateInfo)</a> for an <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyManagerFile.html">EnvoyManagerFile</a> source file. When
+creating an envoy manager, source file, the created model should look something like:
+   NameScopingEnvoy - The parent element passed. NOTE: This should be the NullTarget.
+       SourceFileReference - This is the envoy that is created
+           SourceFile
+               EnvoyManagerFile (Definition)
+                   EmbeddedDefinitionReference
+                       Definition that is bound by the exported ModelDefinitionType</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyManagerResolveHintsCustomizerExtensions.html">EnvoyManagerResolveHintsCustomizerExtensions</a></h4>
+      <section><p>Helper methods for <a class="xref" href="NationalInstruments.SourceModel.Envoys.IEnvoyManagerResolveHintsCustomizer.html">IEnvoyManagerResolveHintsCustomizer</a></p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyNameChangeEventArgs.html">EnvoyNameChangeEventArgs</a></h4>
+      <section><p>Event arguments for providing information when an Envoy&apos;s name changes.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyNameDebugHelper.html">EnvoyNameDebugHelper</a></h4>
+      <section><p>Helpers for getting/displaying envoy names when debugging.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyReferenceExtensions.html">EnvoyReferenceExtensions</a></h4>
+      <section><p>Extensions for the <span class="xref">NationalInstruments.Restricted.SourceModel.Envoys.EnvoyReference</span> class</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoySaveOptions.html">EnvoySaveOptions</a></h4>
+      <section><p>A token passed to implementations of <a class="xref" href="NationalInstruments.SourceModel.Envoys.IReferencedFileService.html#NationalInstruments_SourceModel_Envoys_IReferencedFileService_WriteToStorageAsync_NationalInstruments_SourceModel_Envoys_EnvoySaveOptions_">WriteToStorageAsync(EnvoySaveOptions)</a>.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html">EnvoyService</a></h4>
+      <section><p>Base implementation of a Envoy Service</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyServiceFactory.html">EnvoyServiceFactory</a></h4>
+      <section><p>Default implementation of IEnvoyServiceFactory interface</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyServiceMetadataView.html">EnvoyServiceMetadataView</a></h4>
+      <section><p>Metadata view implementation.
+While it seems it should derive from ServiceProviderMetadataView, that did not seem to work.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyServiceMetadataViewExtensions.html">EnvoyServiceMetadataViewExtensions</a></h4>
+      <section><p>Envoy service metadata data extension methods</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyServicePropertyChangeEventManager.html">EnvoyServicePropertyChangeEventManager</a></h4>
+      <section><p>A service event manager for <span class="xref">System.ComponentModel.INotifyPropertyChanged.PropertyChanged</span> events.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyServiceWeakEventManager-1.html">EnvoyServiceWeakEventManager&lt;T&gt;</a></h4>
+      <section><p>A base implementation of the <a class="xref" href="NationalInstruments.SourceModel.Envoys.IEnvoyServiceWeakEventManager-1.html">IEnvoyServiceWeakEventManager&lt;T&gt;</a> class.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyToggles.html">EnvoyToggles</a></h4>
+      <section><p>Feature toggles related to envoys.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.ExportEnvoyIndexUpdateServiceFactoryAttribute.html">ExportEnvoyIndexUpdateServiceFactoryAttribute</a></h4>
+      <section><p>Exports a factory for creating <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyIndexUpdateService.html">EnvoyIndexUpdateService</a> services. This will attach to the project&apos;s root envoy.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.ExportEnvoyServiceFactoryAttribute.html">ExportEnvoyServiceFactoryAttribute</a></h4>
+      <section><p>Export attribute which marks a type as being a envoy service factory.
+Envoy service factories create services that match the specified binding
+criteria.  Factories can also dynamically inspect a project item to determine
+if a service should be bound to a project item.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.ExportFileTypeAttribute.html">ExportFileTypeAttribute</a></h4>
+      <section><p>An export attribute used to export an implementation of <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a> to the rest of the system.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.ExportProjectInitializationAttribute.html">ExportProjectInitializationAttribute</a></h4>
+      <section><p>Export attribute for project initializations
+<a class="xref" href="NationalInstruments.Shell.IProjectCreationParticipant.html">IProjectCreationParticipant</a> for additional async hook in the document manager for project creation.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.ExportStorageTypeAttribute.html">ExportStorageTypeAttribute</a></h4>
+      <section><p>Export attribute for storage types</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.FileReferenceDiagnostics.html">FileReferenceDiagnostics</a></h4>
+      <section><p>Static functions to keep track of FileReference source file counts</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.FileReferenceUndoRedoExtensions.html">FileReferenceUndoRedoExtensions</a></h4>
+      <section><p>File reference extensions related to undo/redo.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.FileStreamInfo.html">FileStreamInfo</a></h4>
+      <section><p>Information for a file stream</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.FileType.html">FileType</a></h4>
+      <section><p>The base class for most implementations of <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a>.  Clients are not intended
+to inherit from this class directly.  Instead, there are multiple derived classes such as
+<a class="xref" href="NationalInstruments.SourceModel.Envoys.SourceFileType.html">SourceFileType</a>, and <a class="xref" href="NationalInstruments.SourceModel.Envoys.ReferencedFileType.html">ReferencedFileType</a> that should be derived
+instead.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.FileTypeExtensions.html">FileTypeExtensions</a></h4>
+      <section><p>Extension methods for <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a></p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.FileTypeInfoImplementation.html">FileTypeInfoImplementation</a></h4>
+      <section><p>Metadata view implementation</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.FileTypeManagerExtensions.html">FileTypeManagerExtensions</a></h4>
+      <section><p>Helpful extension methods for dealing with the <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeManager.html">IFileTypeManager</a> interface.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.ImmediateBindAttribute.html">ImmediateBindAttribute</a></h4>
+      <section><p>Declares that service should be bound immediately to a project
+item or on demand (when a provided service is queried for).
+Specifying ImmediateBind is the most expensive binding mode
+since it will bind to all matching envoys at load, even for Envoys
+which are unused in the NULL target.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.LinkedEnvoysChangedEventArgs.html">LinkedEnvoysChangedEventArgs</a></h4>
+      <section><p>Event args for the <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html#NationalInstruments_SourceModel_Envoys_Envoy_LinkedEnvoysChangedEvent">LinkedEnvoysChangedEvent</a> event.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.LinkedEnvoysSingletonServiceFactory.html">LinkedEnvoysSingletonServiceFactory</a></h4>
+      <section><p>Baseclass <a class="xref" href="NationalInstruments.SourceModel.Envoys.IEnvoyServiceFactory.html">IEnvoyServiceFactory</a> for services which desire a single <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html">EnvoyService</a> per <a class="xref" href="NationalInstruments.SourceModel.Envoys.LinkId.html">LinkId</a>
+Derived export must be marked as [PartCreationPolicy(CreationPolicy.Shared)]</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.LinkedEnvoysUpdatedEventArgs.html">LinkedEnvoysUpdatedEventArgs</a></h4>
+      <section><p>Represents envoy that is added or removed or it&apos;s property is changed</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.LoadNestedEnvoyManagersOptions.html">LoadNestedEnvoyManagersOptions</a></h4>
+      <section><p>Options used by <span class="xref">NationalInstruments.SourceModel.Envoys.EnvoyManagerExtensions.LoadNestedEnvoyManagersAsync(NationalInstruments.SourceModel.Envoys.EnvoyManager,NationalInstruments.SourceModel.Envoys.LoadNestedEnvoyManagersOptions)</span></p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.LockedSourceFileExtensions.html">LockedSourceFileExtensions</a></h4>
+      <section><p>Extension methods for <a class="xref" href="NationalInstruments.SourceModel.Envoys.ILockedSourceFile.html">ILockedSourceFile</a></p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.ManageLockedSourceFileLifetimeExtensions.html">ManageLockedSourceFileLifetimeExtensions</a></h4>
+      <section><p>Extension methods for <a class="xref" href="NationalInstruments.SourceModel.Envoys.RecentlyAccessedSourceFilesManager.html">RecentlyAccessedSourceFilesManager</a></p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.MergeScriptFilter.html">MergeScriptFilter</a></h4>
+      <section><p>Provide a base implementation of IMergeScriptFilter, </p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.NameScopingEnvoyExtensions.html">NameScopingEnvoyExtensions</a></h4>
+      <section><p>Extensions methods that help with adding and removing targets from a project</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.NonTargetTargetInfoService.html">NonTargetTargetInfoService</a></h4>
+      <section><p>Indicates an envoy is not a target.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.NullTarget.html">NullTarget</a></h4>
+      <section><p>Definition of a Null Target.  Feature sets should choose to use this if they want to be
+able to add things to the project but not be in a particular target yet still retain
+QueryService functionality for project support, etc.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.OpenStreamCompleteInfo.html">OpenStreamCompleteInfo</a></h4>
+      <section><p>Information for opened file stream.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.Project.html">Project</a></h4>
+      <section><p>The Project. This class is the modeling side of the project. Storage (save/ load) of files in the
+project are handled by implementations of IStorageManager.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.ProjectCreateInfo.html">ProjectCreateInfo</a></h4>
+      <section><p>Information to be passed when creating or initializing a new project</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.ProjectEnvoyServiceFactory.html">ProjectEnvoyServiceFactory</a></h4>
+      <section><p>An implementation of <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyServiceFactory.html">EnvoyServiceFactory</a> that only binds to the single 
+Envoy associated with the project.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.ProjectExtensions.html">ProjectExtensions</a></h4>
+      <section><p>Project extension methods</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.ProjectInitializationInfoImplementation.html">ProjectInitializationInfoImplementation</a></h4>
+      <section><p>Metadata view implementation</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.ProjectItemInfoKeywords.html">ProjectItemInfoKeywords</a></h4>
+      <section><p>Binding keywords that can be used to bind project services that implement various IProjectItemInfo behavior</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.ProjectUnavailableException.html">ProjectUnavailableException</a></h4>
+      <section><p>Exception when a project is not available</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.PromptForStorageNameOptions.html">PromptForStorageNameOptions</a></h4>
+      <section><p>Specifies options for a open / save item name user prompt</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.ProtectedFileServiceExtensions.html">ProtectedFileServiceExtensions</a></h4>
+      <section><p>Set of helpers for converting a file into a protected file.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.ProvidedInterfaceAttribute.html">ProvidedInterfaceAttribute</a></h4>
+      <section><p>Envoy Service metadata attribute which specifies an interface
+which can be queried for that this envoy service implements.
+&quot;ProvidedInterface&quot; should match typeof(interface).FullName</p>
+<p>This attribute should be used once for each interface</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.ProvideMergeScriptDataHelpers.html">ProvideMergeScriptDataHelpers</a></h4>
+      <section><p>Helper class for <a class="xref" href="NationalInstruments.SourceModel.Envoys.IProvideMergeScriptData.html">IProvideMergeScriptData</a>.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.ProvideNameScopingInfo.html">ProvideNameScopingInfo</a></h4>
+      <section><p>Implements adding and removing the language used by the definition this service is attached to 
+from the project the definition is in.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.RecentlyAccessedSourceFilesManager.html">RecentlyAccessedSourceFilesManager</a></h4>
+      <section><p>Manages the lifetime of an <a class="xref" href="NationalInstruments.SourceModel.Envoys.ILockedSourceFile.html">ILockedSourceFile</a> added here using a most recently used item list.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.ReferencedFileLock.html">ReferencedFileLock</a></h4>
+      <section><p>A class for managing the lifetime of a referenced file.  Call <a class="xref" href="NationalInstruments.SourceModel.Envoys.ReferencedFileLock.html#NationalInstruments_SourceModel_Envoys_ReferencedFileLock_Acquire_NationalInstruments_SourceModel_IReferencedFileOwner_">Acquire(IReferencedFileOwner)</a> to obtain an
+instance of <a class="xref" href="NationalInstruments.SourceModel.Envoys.ILockedSourceFile.html">ILockedSourceFile</a> for the given file owner.  Once all <a class="xref" href="NationalInstruments.SourceModel.Envoys.ILockedSourceFile.html">ILockedSourceFile</a>s
+for the given file owner have been disposed, the referenced file can be unloaded.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.ReferencedFileService.html">ReferencedFileService</a></h4>
+      <section><p>A base implementation of <a class="xref" href="NationalInstruments.SourceModel.Envoys.IReferencedFileService.html">IReferencedFileService</a> for clients that save files to disk
+that do not match the source model persistence format.  The <a class="xref" href="NationalInstruments.SourceModel.Definition.html">Definition</a> for these files,
+if any, will not be owned by a <a class="xref" href="NationalInstruments.SourceModel.SourceFileBase.html">SourceFileBase</a>, and will not be persisted.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.ReferencedFileServiceHelpers.html">ReferencedFileServiceHelpers</a></h4>
+      <section><p>Helper methods related to <a class="xref" href="NationalInstruments.SourceModel.Envoys.IReferencedFileService.html">IReferencedFileService</a></p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.ReferencedFileStorageHelper-1.html">ReferencedFileStorageHelper&lt;T&gt;</a></h4>
+      <section><p>An implementation of <a class="xref" href="NationalInstruments.SourceModel.Envoys.IReferencedFileStorageHelper.html">IReferencedFileStorageHelper</a>.  Represents an object capable of loading a referenced file.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.ReferencedFileType.html">ReferencedFileType</a></h4>
+      <section><p>The <a class="xref" href="NationalInstruments.SourceModel.Envoys.ReferencedFileType.html">ReferencedFileType</a> is a factory interface used to create <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a>s
+which are bound to a file on disk that is not persisted as a <a class="xref" href="NationalInstruments.SourceModel.SourceFileBase.html">SourceFileBase</a>.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.RegisterRepositoryManagerService.html">RegisterRepositoryManagerService</a></h4>
+      <section><p>Abstract service to register a repository manager.
+The repository manager will refer to the location [ApplicationDirectory]/Resources/OuterFolderName/InnerFolderName </p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.RepositoryManagerDefinition.html">RepositoryManagerDefinition</a></h4>
+      <section><p>This is a Definition class for an intermediate definition in the system that represents a container-type object that is responsible for
+loading concrete Definitions that are inside of a single sub-scope, i.e. have a common QualifiedName head. ex: A folder on disk containing VIs
+The Content.Name of this Definition is the sub-scope it is responsible for.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.RepositoryManagerDefinitionExtensions.html">RepositoryManagerDefinitionExtensions</a></h4>
+      <section><p>Repository manager extensions</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.RepositoryManagerDefinitionService.html">RepositoryManagerDefinitionService</a></h4>
+      <section><p>This service is required for a RepositoryManagerDefinition Envoy to function correctly in the Project window, where the RepositoryManagerDefinition is used as a repository container.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.RepositoryManagerDefinitionServiceFactory.html">RepositoryManagerDefinitionServiceFactory</a></h4>
+      <section><p>Envoy Service Factory</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.RequiresItemFolderAttribute.html">RequiresItemFolderAttribute</a></h4>
+      <section><p>Attribute for <a class="xref" href="NationalInstruments.SourceModel.Envoys.IRequiresItemFolderMetadataView.html">IRequiresItemFolderMetadataView</a>.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.RequiresItemFolderMetadataView.html">RequiresItemFolderMetadataView</a></h4>
+      <section><p>Implementation for metadata indicating if a file should behave as an item folder.
+An item folder logically contains items (is an envoy manager) and has 
+a folder on disk that contains the item folder itself and all of its children.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.SelfOrAncestorReparentedEventArgs.html">SelfOrAncestorReparentedEventArgs</a></h4>
+      <section><p>The event arguments for when an envoy or an ancestor of the envoy is reparented.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.SimpleReferencedFileStorageHelper-1.html">SimpleReferencedFileStorageHelper&lt;T&gt;</a></h4>
+      <section><p>A simple implementation of <a class="xref" href="NationalInstruments.SourceModel.Envoys.ReferencedFileStorageHelper-1.html">ReferencedFileStorageHelper&lt;T&gt;</a> that allows you to supply a delegate
+capable of converting a stream to an in memory representation of your referenced file.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.SourceFileReferencedFileService.html">SourceFileReferencedFileService</a></h4>
+      <section><p>Envoy service implementing <a class="xref" href="NationalInstruments.SourceModel.Envoys.IReferencedFileService.html">IReferencedFileService</a> for <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a>s that reference <a class="xref" href="NationalInstruments.SourceModel.SourceFileBase.html">SourceFileBase</a>.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.SourceFileReferencedFileServiceFactory.html">SourceFileReferencedFileServiceFactory</a></h4>
+      <section><p>Factory class for <a class="xref" href="NationalInstruments.SourceModel.Envoys.SourceFileReferencedFileService.html">SourceFileReferencedFileService</a></p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.SourceFileReferenceExtensions.html">SourceFileReferenceExtensions</a></h4>
+      <section><p>Extension methods which make adding SourceFileReferences to a project easy.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.SourceFileReferenceHierarchyExtensions.html">SourceFileReferenceHierarchyExtensions</a></h4>
+      <section><p>SourceFileReference extensions related to the hierarchy of dependencies</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.SourceFileReferenceServiceHelpers.html">SourceFileReferenceServiceHelpers</a></h4>
+      <section><p>Helper methods related to <a class="xref" href="NationalInstruments.SourceModel.Envoys.ISourceFileReferenceService.html">ISourceFileReferenceService</a></p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.SourceFileType.html">SourceFileType</a></h4>
+      <section><p>The <a class="xref" href="NationalInstruments.SourceModel.Envoys.SourceFileType.html">SourceFileType</a> is a factory interface used to create <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a>s
+which are bound to a file on disk that is persisted as a <a class="xref" href="NationalInstruments.SourceModel.SourceFile.html">SourceFile</a>.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.SparseEnvoyManager.html">SparseEnvoyManager</a></h4>
+      <section><p>A sparse envoy manager refers to a real <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyManager.html">EnvoyManager</a> via a <span class="xref">NationalInstruments.SourceModel.Envoys.SparseEnvoyManager.SparseEnvoyManagerDependency</span>. 
+Envoys are copied from the real envoy manager to the sparse envoy manager as necessary to resolve dependencies.
+There are multiple reasons to use a SparseEnvoyManager as opposed to adding linked SourceFileRefs to each target:</p>
+<ul>
+<li>You care about the sparseness. ie: You don&apos;t want to duplicate all envoys from the EnvoyManager into the targets.</li>
+<li>Your Definition/EnvoyManager cannot handle multi-context editing.</li>
+<li>You want different user settings for envoys under different targets. ex: A VI might cache different info
+depending on the target. In that case, you would want a SparseEnvoyManager so that there can be different
+cached user settings.
+The real envoy manager can be an <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyManagerFile.html">EnvoyManagerFile</a> or a <a class="xref" href="NationalInstruments.SourceModel.Envoys.Project.html">Project</a> both of which are actually
+EnvoyManagers. If the envoy manager is the project, the <a class="xref" href="NationalInstruments.SourceModel.Envoys.SparseEnvoyManager.html#NationalInstruments_SourceModel_Envoys_SparseEnvoyManager_AssociatedRootEnvoy">AssociatedRootEnvoy</a> is actually an envoy below the
+project used to limit the scope of the sparse envoy manager.</li>
+</ul>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.SparseEnvoyManagerExtensions.html">SparseEnvoyManagerExtensions</a></h4>
+      <section><p>Extension methods for <a class="xref" href="NationalInstruments.SourceModel.Envoys.SparseEnvoyManager.html">SparseEnvoyManager</a></p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.SparseEnvoyManagerInitializeEnvoyService.html">SparseEnvoyManagerInitializeEnvoyService</a></h4>
+      <section><p>Service to add the ComponentMoC keyword to all <a class="xref" href="NationalInstruments.SourceModel.Envoys.SparseEnvoyManager.html">SparseEnvoyManager</a></p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.SparseEnvoyManagerInitializeEnvoyServiceFactory.html">SparseEnvoyManagerInitializeEnvoyServiceFactory</a></h4>
+      <section><p>Envoy service factory</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.StandardTargetInfoService.html">StandardTargetInfoService</a></h4>
+      <section><p>Indicates an envoy is a standard user-managed target.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.StorageExtensions.html">StorageExtensions</a></h4>
+      <section><p>Storage related extension methods</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.StorageManagerException.html">StorageManagerException</a></h4>
+      <section><p>Wrapper exception class meant to be the catch-all for exceptions originating from storage management actions.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.StorageTypeInfoImplementation.html">StorageTypeInfoImplementation</a></h4>
+      <section><p>Metadata view implementation</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.TargetInfoService.html">TargetInfoService</a></h4>
+      <section><p>Provides methods to query <a class="xref" href="NationalInstruments.SourceModel.Envoys.ITargetInfoService.html">ITargetInfoService</a>.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.UnattachedLoadResult.html">UnattachedLoadResult</a></h4>
+      <section><p>Class to hold the results of an unattached load.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.UnreferencedAutoAddedReferencesRemovalEventEventArgs.html">UnreferencedAutoAddedReferencesRemovalEventEventArgs</a></h4>
+      <section><p>Represents Envoys that are being removed from project that were automatically added and no longer in use any more</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.UserCreatedEnvoyTag.html">UserCreatedEnvoyTag</a></h4>
+      <section><p>Tag indicating that the user has explicitly created a new envoy.</p>
+</section>
+    <h3 id="structs">Structs
+  </h3>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.DateTimeSignature.html">DateTimeSignature</a></h4>
+      <section><p>Class that wraps a <span class="xref">System.DateTime</span>. The purpose of this class is to
+centralize the comparison of timestamps. Because there is no exposed method
+to access the <span class="xref">System.DateTime.Ticks</span> of the wrapped <span class="xref">System.DateTime</span>,
+this prevents clients from incorrectly comparing timestamps with exact precision.
+The accuracy of timestamps varies in multiple ways. E.g. when a file is created on a
+FAT file system, the timestamp is rounded up to the nearest even second. When a file is packaged
+and installed by nipm, the timestamp is cut off at seconds. Because of this, it is not
+safe / correct to compare them exactly. The Equals method of this class considers timestamps that
+are within 2 seconds of each other to be equal. This has been determined to be correct for all scenarios we are aware of.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyAndLoadResult.html">EnvoyAndLoadResult</a></h4>
+      <section><p>A custom result returned from APIs that synchronously add an Envoy to a project, and then immediately begin the load
+of that <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a>.  This result contains the Envoy that was added synchronously, and a Task representing
+the load of that Envoy.  This enables callers of APIs that do this type of work to transact around the add of the Envoy, 
+but not around the load of the <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a>.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyError.html">EnvoyError</a></h4>
+      <section><p>Error information associated with a <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyError.html#NationalInstruments_SourceModel_Envoys_EnvoyError_Envoy">Envoy</a></p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyInformation.html">EnvoyInformation</a></h4>
+      <section><p>Provide information about an envoy without exposing the actual envoy object.
+Callers can obtain the actual envoy by using the linker to resolve to the envoy using the absolute qualified name.
+This might look something like:
+envoy = project.Resolve(envoyInfo.MakeAbsoluteQualifiedName(), new ResolveOptions(AutoResolveModes.None)).FirstOrDefault();</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.LinkId.html">LinkId</a></h4>
+      <section><p>This object represents the identifier used to link envoys together.  For instance, Envoys
+referencing the same file on disk and living under multiple different scopes will likely 
+all have the same LinkId.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.SourceFileLoadInfo.html">SourceFileLoadInfo</a></h4>
+      <section><p>Error and <a class="xref" href="NationalInstruments.SourceModel.Envoys.ILockedSourceFile.html">ILockedSourceFile</a> information from loading a source file</p>
+</section>
+    <h3 id="interfaces">Interfaces
+  </h3>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.IBindOnLoadedService.html">IBindOnLoadedService</a></h4>
+      <section><p>Proxy interface used to identify bind on loaded interfaces
+The services do not necessarily implement this interface
+but we use this type for book keeping purposes</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.IBindOnTargetedService.html">IBindOnTargetedService</a></h4>
+      <section><p>Proxy interface used to identify bind on targeted interfaces
+The services do not necessarily implement this interface
+but we use this type for book keeping purposes</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.ICopyHierarchyCustomization.html">ICopyHierarchyCustomization</a></h4>
+      <section><p>Interface to allow customization of <a class="xref" href="NationalInstruments.SourceModel.Envoys.SourceFileReferenceHierarchyExtensions.html#NationalInstruments_SourceModel_Envoys_SourceFileReferenceHierarchyExtensions_CopyHierarchy_NationalInstruments_SourceModel_Envoys_IReferencedFileService_System_String_System_String_System_String_NationalInstruments_SourceModel_Envoys_CopyHierarchyComplete_">CopyHierarchy(IReferencedFileService, String, String, String, CopyHierarchyComplete)</a>.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.ICreateItemsInScopeRules.html">ICreateItemsInScopeRules</a></h4>
+      <section><p>Envoy Service interface to provide information about what model definition types a scope supports.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.IDeleteReferencedFile.html">IDeleteReferencedFile</a></h4>
+      <section><p>Information about deleting a referenced file when an envoy is deleted.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.IDirtyStateNotificationService.html">IDirtyStateNotificationService</a></h4>
+      <section><p>An interface that describes a file referenced on disk.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.IDocumentEnvoy.html">IDocumentEnvoy</a></h4>
+      <section></section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.IDynamicEnvoyServiceFactory.html">IDynamicEnvoyServiceFactory</a></h4>
+      <section><p>Dynamic service factory interface for EnvoyService extensions.  Called to create a project
+services dynamically.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.IEnvoyManagerEnvoyIndexHintsCustomizer.html">IEnvoyManagerEnvoyIndexHintsCustomizer</a></h4>
+      <section><p>Interface used to override the envoy index hints for an envoy manager</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.IEnvoyManagerResolveHintsCustomizer.html">IEnvoyManagerResolveHintsCustomizer</a></h4>
+      <section><p>Interface used to override the resolve hints for an envoy manager</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.IEnvoyOwnershipService.html">IEnvoyOwnershipService</a></h4>
+      <section><p>Envoy Service interface that allows your envoy to take ownership of a newly created <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a>.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.IEnvoyReference.html">IEnvoyReference</a></h4>
+      <section><p>Interface for an envoy that is an envoy reference.
+This interface is queryable via Envoy.QueryService</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.IEnvoyServiceFactory.html">IEnvoyServiceFactory</a></h4>
+      <section><p>Factory interface for EnvoyService extensions.  Called to create a project
+service for each project item which matches the binding criteria as specified
+in the metadata</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.IEnvoyServiceMetadataView.html">IEnvoyServiceMetadataView</a></h4>
+      <section><p>MEF Metadata View of EnvoyService registration metadata</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.IEnvoyServiceWeakEventListener.html">IEnvoyServiceWeakEventListener</a></h4>
+      <section><p>Describes an object that wishes to listen to event notifications from 
+envoy services, and is able to select a particular service (or set of services)
+from a collection of services.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.IEnvoyServiceWeakEventManager.html">IEnvoyServiceWeakEventManager</a></h4>
+      <section><p>Implement this interface to control how an exposed services event is
+registered a given <span class="xref">System.Windows.IWeakEventListener</span>.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.IEnvoyServiceWeakEventManager-1.html">IEnvoyServiceWeakEventManager&lt;T&gt;</a></h4>
+      <section><p>Implement this interface to control how an exposed services event is
+registered a given <span class="xref">System.Windows.IWeakEventListener</span>.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a></h4>
+      <section><p>The <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a> factory used to create envoys that represent files.  Use this
+factory to create envoys for different situations.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a></h4>
+      <section><p>Interface which represents the metadata for a particular file type. MEF generates 
+implementations of this interface for each IFileType registered with the system.
+The values of the parameters are set from the export meta data of the file type.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeManager.html">IFileTypeManager</a></h4>
+      <section><p>Describes an object responsible for managing all exported file types in the system.  Is able to
+find <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a> and <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a> implementations for all 
+exported file types in the system.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.IImmediateBindService.html">IImmediateBindService</a></h4>
+      <section><p>Proxy interface used to identify immediate bind interfaces
+The services do not necessarily implement this interface
+but we use this type for book keeping purposes</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.IInitializeEmbeddedDefinition.html">IInitializeEmbeddedDefinition</a></h4>
+      <section><p>Interface used by embedded definitions to properly initialize a definition given an original definition.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.IInitializeEnvoy.html">IInitializeEnvoy</a></h4>
+      <section><p>Envoy Service interface which is used to initialize new Envoys when they are added to the project.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.IInitializeMirroringEnvoys.html">IInitializeMirroringEnvoys</a></h4>
+      <section><p>Interface used to perform any initialization on the mirroring copy of an envoy.  Called on the original mirrored envoy.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.ILockDocument.html">ILockDocument</a></h4>
+      <section><p>Interface for locking documents so that the user cannot edit them. Should only be 
+implemented by Services attached to a source file reference.
+Must implement INotifyPropertyChanged to tell UI when this state should change.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.ILockedSourceFile.html">ILockedSourceFile</a></h4>
+      <section><p>Interface to keep a file in memory. The file may be a <a class="xref" href="NationalInstruments.SourceModel.Envoys.IReferencedFileService.html">IReferencedFileService</a>, a <a class="xref" href="NationalInstruments.SourceModel.SourceFile.html">SourceFile</a>, etc.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.IMergeScriptFilter.html">IMergeScriptFilter</a></h4>
+      <section><p>Implement this interface to provide the filter, this is used for getting the matched
+merge script from <a class="xref" href="NationalInstruments.SourceModel.Envoys.IProvideMergeScriptData.html#NationalInstruments_SourceModel_Envoys_IProvideMergeScriptData_MergeScriptData">MergeScriptData</a>.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.IModifyMessageDisplay.html">IModifyMessageDisplay</a></h4>
+      <section><p>An interface for project services to allow documents to override the display behaviors of the Errors pane (<a class="xref" href="NationalInstruments.Restricted.Shell.SourceFileMessageControl.html">SourceFileMessageControl</a></p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.IOverrideFileTypeAddParent.html">IOverrideFileTypeAddParent</a></h4>
+      <section><p>Envoy service interface that can be used by the various <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a> add methods to override parent element.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.IOverrideModDateUriService.html">IOverrideModDateUriService</a></h4>
+      <section><p>Envoy service to allow indirect overrides of <a class="xref" href="NationalInstruments.SourceModel.Envoys.ReferencedFileServiceHelpers.html#NationalInstruments_SourceModel_Envoys_ReferencedFileServiceHelpers_MakeProjectRelativeUri_NationalInstruments_SourceModel_Envoys_IReferencedFileService_">MakeProjectRelativeUri(IReferencedFileService)</a>.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.IOverrideStorageManager.html">IOverrideStorageManager</a></h4>
+      <section><p>Envoy Service to override the storage manager.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.IPreProjectCloseService.html">IPreProjectCloseService</a></h4>
+      <section><p>This interface provides the ability to perform an action before the project close operation begins and also before project saves. 
+Based on the return value of the action, this service can cancel a project close.
+The behavior differs from EnvoyService.OnClose, which occurs while the project close is already in progress.
+Note: The interface is intended to be exposed as a envoy service on dirty envoys.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.IProjectInitialization.html">IProjectInitialization</a></h4>
+      <section><p>Interface which will notify listeners that a project has been created</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.IProjectInitializationInfo.html">IProjectInitializationInfo</a></h4>
+      <section><p>Metadata class for MEF</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.IProtectedDocument.html">IProtectedDocument</a></h4>
+      <section><p>Interface that determines if a document is password protected</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.IProtectedFileService.html">IProtectedFileService</a></h4>
+      <section><p>Interface that provides information about protected files. The implementation of this interface
+is expected to be an <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html">EnvoyService</a> that is queryable from the envoy that references
+the file to be protected.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.IProvideDragData.html">IProvideDragData</a></h4>
+      <section></section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.IProvideMergeScriptData.html">IProvideMergeScriptData</a></h4>
+      <section><p>Implement this interface to provide merge script data for your project item. This is used for both projects and any other content that needs
+to generate merge script data like palettes, etc.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.IProvideNameScopingInfo.html">IProvideNameScopingInfo</a></h4>
+      <section><p>Implement this interface to provide information about the current scope of the document </p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.IProvideProjectInformation.html">IProvideProjectInformation</a></h4>
+      <section><p>An interface that should be implemented by all classes that add information to a project which the project or feature set might not be aware of.
+For example, there might be a project cache file next to the project file with the same name as the project but a different extension.
+The project doesn&apos;t know about them, but it can look for the exports of this interface to obtain that information.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.IReferencedFileService.html">IReferencedFileService</a></h4>
+      <section><p>Envoy service interface implemented for envoys that reference a file on disk.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.IReferencedFileStorageHelper.html">IReferencedFileStorageHelper</a></h4>
+      <section><p>Represents an object capable of loading a referenced file.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.IRepositoryManagerDefinitionService.html">IRepositoryManagerDefinitionService</a></h4>
+      <section><p>Implement this interface if your Envoy is a <a class="xref" href="NationalInstruments.SourceModel.Envoys.RepositoryManagerDefinition.html">RepositoryManagerDefinition</a> type</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.IRequiresItemFolderMetadataView.html">IRequiresItemFolderMetadataView</a></h4>
+      <section><p>Interface for metadata indicating if a file should behave as an item folder.
+An item folder logically contains items (is an envoy manager) and has 
+a folder on disk that contains the item folder itself and all of its children.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.IResolveFailedHintService.html">IResolveFailedHintService</a></h4>
+      <section><p>Interface that provides information used for the resolved failed hint of an <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a>. </p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.IResourceDictionaryTypeService.html">IResourceDictionaryTypeService</a></h4>
+      <section><p>Service which can be implemented on an envoy to allow it to define a resource
+dictionary type to be used when looking for resources.  Called by the
+DocumentEditControlViewModel</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.ISourceFileLifetimeManagement.html">ISourceFileLifetimeManagement</a></h4>
+      <section><p>Allows a <a class="xref" href="NationalInstruments.Restricted.SourceModel.Envoys.SourceFileReference.html">SourceFileReference</a> to define its lifetime management.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.ISourceFileReferenceService.html">ISourceFileReferenceService</a></h4>
+      <section><p>Envoy service interface implemented when the envoy is a <a class="xref" href="NationalInstruments.Restricted.SourceModel.Envoys.SourceFileReference.html">SourceFileReference</a>.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.IStorageManager.html">IStorageManager</a></h4>
+      <section><p>The StorageManager handles storage (save/ load) for all files within a project. There are different implementations
+of this class for projects stored on the web, on the file system, or in isolated storage.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.IStorageType.html">IStorageType</a></h4>
+      <section><p>IStorageType represents a type of backing storage (e.g. file based, web based).</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.IStorageTypeInfo.html">IStorageTypeInfo</a></h4>
+      <section><p>Metadata class for IStorageManager and MEF</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.ITargetedEnvoyInitialization.html">ITargetedEnvoyInitialization</a></h4>
+      <section><p>Interface implemented by services of targets to allow keyword filtering of envoys scoped
+to a target</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.ITargetInfoService.html">ITargetInfoService</a></h4>
+      <section><p>Indicates whether an associated envoy is a target, and provides further information if it is.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.IUserPriorityEnvoyService.html">IUserPriorityEnvoyService</a></h4>
+      <section><p>Envoy services which pay attention to the changing user priority of an Envoy</p>
+</section>
+    <h3 id="enums">Enums
+  </h3>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.ConsiderUnsavedState.html">ConsiderUnsavedState</a></h4>
+      <section><p>The state used by <a class="xref" href="NationalInstruments.SourceModel.Envoys.Project.html#NationalInstruments_SourceModel_Envoys_Project_ConsiderUnsavedState">ConsiderUnsavedState</a></p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.ContentReferenceStyle.html">ContentReferenceStyle</a></h4>
+      <section><p>Varieties of <span class="xref">NationalInstruments.Restricted.SourceModel.Envoys.ContentReference</span></p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.EnvoyFlags.html">Envoy.EnvoyFlags</a></h4>
+      <section><p>State flags for various operations in Envoy.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoySearchFlags.html">EnvoySearchFlags</a></h4>
+      <section><p>Flags that can be used to specify the search criteria for <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyManagerExtensions.html#NationalInstruments_SourceModel_Envoys_EnvoyManagerExtensions_RecurseIntoEnvoyManagers_NationalInstruments_SourceModel_Element_NationalInstruments_SourceModel_Envoys_EnvoySearchFlags_">RecurseIntoEnvoyManagers(Element, EnvoySearchFlags)</a></p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.GetTargetsOptions.html">GetTargetsOptions</a></h4>
+      <section><p>Indicates options for <a class="xref" href="NationalInstruments.SourceModel.Envoys.ProjectExtensions.html#NationalInstruments_SourceModel_Envoys_ProjectExtensions_GetTargets_NationalInstruments_SourceModel_Envoys_Project_NationalInstruments_SourceModel_Envoys_GetTargetsOptions_">GetTargets(Project, GetTargetsOptions)</a>.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.LinkedEnvoysChangedReason.html">LinkedEnvoysChangedReason</a></h4>
+      <section><p>The reason for a linked envoy changed notificaton</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.LinkedEnvoysUpdatedReason.html">LinkedEnvoysUpdatedReason</a></h4>
+      <section><p>The type of operation on the envoy</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.NameUniqueness.html">NameUniqueness</a></h4>
+      <section><p>Enum that defines the uniqueness of an envoy name.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.ProjectSaveFormat.html">ProjectSaveFormat</a></h4>
+      <section><p>Project save format</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.PromptForStorageNameOptions.OpenStreamOption.html">PromptForStorageNameOptions.OpenStreamOption</a></h4>
+      <section><p>Options for opening a stream</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.ProtectedFileState.html">ProtectedFileState</a></h4>
+      <section><p>The possible protected states for a file referenced by an envoy.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.RecycleOption.html">RecycleOption</a></h4>
+      <section><p>Specifies whether a file should be deleted permanently or placed in the Recycle Bin.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.RefreshMode.html">RefreshMode</a></h4>
+      <section><p>Specifies how a refresh of a loaded file should be performed.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.StoragePathPermissions.html">StoragePathPermissions</a></h4>
+      <section><p>Defines the access rights to a storage target.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.StoragePathValidationResult.html">StoragePathValidationResult</a></h4>
+      <section><p>Storage path validation result</p>
+</section>
+    <h3 id="delegates">Delegates
+  </h3>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.CopyHierarchyComplete.html">CopyHierarchyComplete</a></h4>
+      <section><p>Callback when a <a class="xref" href="NationalInstruments.SourceModel.Envoys.SourceFileReferenceHierarchyExtensions.html#NationalInstruments_SourceModel_Envoys_SourceFileReferenceHierarchyExtensions_CopyHierarchy_NationalInstruments_SourceModel_Envoys_IReferencedFileService_System_String_System_String_System_String_NationalInstruments_SourceModel_Envoys_CopyHierarchyComplete_">CopyHierarchy(IReferencedFileService, String, String, String, CopyHierarchyComplete)</a> operation completes</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.OpenStreamComplete.html">OpenStreamComplete</a></h4>
+      <section><p>Delegate for when an open stream operation completes.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.OpenStreamsComplete.html">OpenStreamsComplete</a></h4>
+      <section><p>Delegate for when an open stream operation completes.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.PromptForStorageNameComplete.html">PromptForStorageNameComplete</a></h4>
+      <section><p>Delegate for when the prompting for a storage name completes</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.SaveComplete.html">SaveComplete</a></h4>
+      <section><p>Delegate for when a save operation completes</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.SourceModel.Envoys.UpdateDependenciesProgress.html">UpdateDependenciesProgress</a></h4>
+      <section><p>Used to report the progress of updating dependencies</p>
+</section>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

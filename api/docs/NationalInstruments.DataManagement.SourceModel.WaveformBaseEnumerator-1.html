@@ -1,0 +1,914 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class WaveformBaseEnumerator&lt;T&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class WaveformBaseEnumerator&lt;T&gt;
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.DataManagement.SourceModel.WaveformBaseEnumerator`1">
+  
+  
+  <h1 id="NationalInstruments_DataManagement_SourceModel_WaveformBaseEnumerator_1" data-uid="NationalInstruments.DataManagement.SourceModel.WaveformBaseEnumerator`1" class="text-break">Class WaveformBaseEnumerator&lt;T&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>Base enumerator class for any enumerator which uses waveforms.
+Contains helper functions which are used when dealing with waveforms.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">WaveformBaseEnumerator&lt;T&gt;</span></div>
+      <div class="level2"><a class="xref" href="NationalInstruments.DataManagement.SourceModel.AnalogWaveformBaseEnumerator-1.html">AnalogWaveformBaseEnumerator&lt;T&gt;</a></div>
+      <div class="level2"><a class="xref" href="NationalInstruments.DataManagement.SourceModel.ComplexWaveformBaseEnumerator-1.html">ComplexWaveformBaseEnumerator&lt;T&gt;</a></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="NationalInstruments.DataManagement.SourceModel.IDataEnumerator.html">IDataEnumerator</a></div>
+    <div><a class="xref" href="NationalInstruments.DataManagement.SourceModel.IDataDeserializer.html">IDataDeserializer</a></div>
+    <div><a class="xref" href="NationalInstruments.DataManagement.SourceModel.IDataSerializationFactory.html">IDataSerializationFactory</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.DataManagement.SourceModel.html">NationalInstruments.DataManagement.SourceModel</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_DataManagement_SourceModel_WaveformBaseEnumerator_1_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class WaveformBaseEnumerator&lt;T&gt; : IDataEnumerator, IDataDeserializer, IDataSerializationFactory where T : struct</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of the element in the waveform.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="NationalInstruments_DataManagement_SourceModel_WaveformBaseEnumerator_1_DateTimeFormatString" data-uid="NationalInstruments.DataManagement.SourceModel.WaveformBaseEnumerator`1.DateTimeFormatString">DateTimeFormatString</h4>
+  <div class="markdown level1 summary"><p>The format string we should use when printing out a date time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected const string DateTimeFormatString = &quot;MM-dd-yyyy HH:MM:ss.ffffff&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_DataManagement_SourceModel_WaveformBaseEnumerator_1_NumberOfRows_" data-uid="NationalInstruments.DataManagement.SourceModel.WaveformBaseEnumerator`1.NumberOfRows*"></a>
+  <h4 id="NationalInstruments_DataManagement_SourceModel_WaveformBaseEnumerator_1_NumberOfRows" data-uid="NationalInstruments.DataManagement.SourceModel.WaveformBaseEnumerator`1.NumberOfRows">NumberOfRows</h4>
+  <div class="markdown level1 summary"><p>Indicates how many rows or lines of output will be created by this enumerator.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract int NumberOfRows { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataManagement_SourceModel_WaveformBaseEnumerator_1_TableHeaders_" data-uid="NationalInstruments.DataManagement.SourceModel.WaveformBaseEnumerator`1.TableHeaders*"></a>
+  <h4 id="NationalInstruments_DataManagement_SourceModel_WaveformBaseEnumerator_1_TableHeaders" data-uid="NationalInstruments.DataManagement.SourceModel.WaveformBaseEnumerator`1.TableHeaders">TableHeaders</h4>
+  <div class="markdown level1 summary"><p>Returns a list of strings that describe the data for each property in a given line.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract IEnumerable&lt;string&gt; TableHeaders { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_DataManagement_SourceModel_WaveformBaseEnumerator_1_CountWaveformColumns_" data-uid="NationalInstruments.DataManagement.SourceModel.WaveformBaseEnumerator`1.CountWaveformColumns*"></a>
+  <h4 id="NationalInstruments_DataManagement_SourceModel_WaveformBaseEnumerator_1_CountWaveformColumns_NationalInstruments_DataManagement_SourceModel_EnumeratedElementCollection_" data-uid="NationalInstruments.DataManagement.SourceModel.WaveformBaseEnumerator`1.CountWaveformColumns(NationalInstruments.DataManagement.SourceModel.EnumeratedElementCollection)">CountWaveformColumns(EnumeratedElementCollection)</h4>
+  <div class="markdown level1 summary"><p>Counts valid waveform columns.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected int CountWaveformColumns(EnumeratedElementCollection input)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataManagement.SourceModel.EnumeratedElementCollection.html">EnumeratedElementCollection</a></td>
+        <td><span class="parametername">input</span></td>
+        <td><p>The serialized values to read.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The number of columns. Zero means no valid waveform columns.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataManagement_SourceModel_WaveformBaseEnumerator_1_CreateDeserializer_" data-uid="NationalInstruments.DataManagement.SourceModel.WaveformBaseEnumerator`1.CreateDeserializer*"></a>
+  <h4 id="NationalInstruments_DataManagement_SourceModel_WaveformBaseEnumerator_1_CreateDeserializer_NationalInstruments_DataManagement_SourceModel_EnumeratedElementCollection_" data-uid="NationalInstruments.DataManagement.SourceModel.WaveformBaseEnumerator`1.CreateDeserializer(NationalInstruments.DataManagement.SourceModel.EnumeratedElementCollection)">CreateDeserializer(EnumeratedElementCollection)</h4>
+  <div class="markdown level1 summary"><p>Creates a deserializer for the given input.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract IDataDeserializer CreateDeserializer(EnumeratedElementCollection input)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataManagement.SourceModel.EnumeratedElementCollection.html">EnumeratedElementCollection</a></td>
+        <td><span class="parametername">input</span></td>
+        <td><p>The parsed input which we are trying to read.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataManagement.SourceModel.IDataDeserializer.html">IDataDeserializer</a></td>
+        <td><p>A deserializer meant to read the given input, or null if this factory cannot handle the input.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_DataManagement_SourceModel_WaveformBaseEnumerator_1_CreateDeserializer_NationalInstruments_DataManagement_SourceModel_EnumeratedElementCollection__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The validity check of the input may be a spot check, meaning the function may return a non-null value, yet
+the input is not correct.
+This was done in order to make import more efficient, doing as little reading in as possible.
+Check the output of the deserializer for null when using it, and if it returns null, you should continue to a new factory.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_DataManagement_SourceModel_WaveformBaseEnumerator_1_CreateEnumerator_" data-uid="NationalInstruments.DataManagement.SourceModel.WaveformBaseEnumerator`1.CreateEnumerator*"></a>
+  <h4 id="NationalInstruments_DataManagement_SourceModel_WaveformBaseEnumerator_1_CreateEnumerator_System_Object_NationalInstruments_DataTypes_NIType_System_Boolean_" data-uid="NationalInstruments.DataManagement.SourceModel.WaveformBaseEnumerator`1.CreateEnumerator(System.Object,NationalInstruments.DataTypes.NIType,System.Boolean)">CreateEnumerator(Object, NIType, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Creates an enumerator for the given input.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract IDataEnumerator CreateEnumerator(object data, NIType dataType, bool oneBasedTable)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">data</span></td>
+        <td><p>Data to enumerate</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataTypes.NIType</span></td>
+        <td><span class="parametername">dataType</span></td>
+        <td><p>The data type of the object being queried for.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">oneBasedTable</span></td>
+        <td><p>Indicates whether this table should start indexing at 0 or 1.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataManagement.SourceModel.IDataEnumerator.html">IDataEnumerator</a></td>
+        <td><p>An enumerator meant to serialize the given data, or null if this factory cannot handle the data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataManagement_SourceModel_WaveformBaseEnumerator_1_EnumerateWaveformChannelNameAsString_" data-uid="NationalInstruments.DataManagement.SourceModel.WaveformBaseEnumerator`1.EnumerateWaveformChannelNameAsString*"></a>
+  <h4 id="NationalInstruments_DataManagement_SourceModel_WaveformBaseEnumerator_1_EnumerateWaveformChannelNameAsString_System_String_System_Boolean_" data-uid="NationalInstruments.DataManagement.SourceModel.WaveformBaseEnumerator`1.EnumerateWaveformChannelNameAsString(System.String,System.Boolean)">EnumerateWaveformChannelNameAsString(String, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Enumerates the strings necessary to describe the channel name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IEnumerable&lt;string&gt; EnumerateWaveformChannelNameAsString(string channelName, bool forDisplay)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">channelName</span></td>
+        <td><p>Name of the channel to describe.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">forDisplay</span></td>
+        <td><p>Whether this is to be displayed to the user or recorded in a file.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><p>Waveform channel name as an enumerable of strings</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataManagement_SourceModel_WaveformBaseEnumerator_1_EnumerateWaveformIntervalAsString_" data-uid="NationalInstruments.DataManagement.SourceModel.WaveformBaseEnumerator`1.EnumerateWaveformIntervalAsString*"></a>
+  <h4 id="NationalInstruments_DataManagement_SourceModel_WaveformBaseEnumerator_1_EnumerateWaveformIntervalAsString_NationalInstruments_PrecisionWaveformTiming_" data-uid="NationalInstruments.DataManagement.SourceModel.WaveformBaseEnumerator`1.EnumerateWaveformIntervalAsString(NationalInstruments.PrecisionWaveformTiming)">EnumerateWaveformIntervalAsString(PrecisionWaveformTiming)</h4>
+  <div class="markdown level1 summary"><p>Enumerates the strings necessary to describe the dt interval.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IEnumerable&lt;string&gt; EnumerateWaveformIntervalAsString(PrecisionWaveformTiming timing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.PrecisionWaveformTiming</span></td>
+        <td><span class="parametername">timing</span></td>
+        <td><p>Timing to use when getting the interval.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><p>Waveform dt interval as an enumerable of strings</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataManagement_SourceModel_WaveformBaseEnumerator_1_EnumerateWaveformSampleAsString_" data-uid="NationalInstruments.DataManagement.SourceModel.WaveformBaseEnumerator`1.EnumerateWaveformSampleAsString*"></a>
+  <h4 id="NationalInstruments_DataManagement_SourceModel_WaveformBaseEnumerator_1_EnumerateWaveformSampleAsString_NationalInstruments_DataTypes_NIType__0_System_String_System_Boolean_" data-uid="NationalInstruments.DataManagement.SourceModel.WaveformBaseEnumerator`1.EnumerateWaveformSampleAsString(NationalInstruments.DataTypes.NIType,`0,System.String,System.Boolean)">EnumerateWaveformSampleAsString(NIType, T, String, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Enumerates the strings necessary to describe a waveform sample.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IEnumerable&lt;string&gt; EnumerateWaveformSampleAsString(NIType elementType, T value, string timestamp, bool forDisplay)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataTypes.NIType</span></td>
+        <td><span class="parametername">elementType</span></td>
+        <td><p>The type of the sample.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value of this sample.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">timestamp</span></td>
+        <td><p>The timestamp at which this sample occured.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">forDisplay</span></td>
+        <td><p>Whether this is to be displayed to the user or recorded in a file.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><p>Waveform sample. as an enumerable of strings</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataManagement_SourceModel_WaveformBaseEnumerator_1_EnumerateWaveformTimestampAsString_" data-uid="NationalInstruments.DataManagement.SourceModel.WaveformBaseEnumerator`1.EnumerateWaveformTimestampAsString*"></a>
+  <h4 id="NationalInstruments_DataManagement_SourceModel_WaveformBaseEnumerator_1_EnumerateWaveformTimestampAsString_NationalInstruments_PrecisionWaveformTiming_System_Boolean_" data-uid="NationalInstruments.DataManagement.SourceModel.WaveformBaseEnumerator`1.EnumerateWaveformTimestampAsString(NationalInstruments.PrecisionWaveformTiming,System.Boolean)">EnumerateWaveformTimestampAsString(PrecisionWaveformTiming, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Enumerates the strings necessary to describe the t0 timestamp.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IEnumerable&lt;string&gt; EnumerateWaveformTimestampAsString(PrecisionWaveformTiming timing, bool forDisplay)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.PrecisionWaveformTiming</span></td>
+        <td><span class="parametername">timing</span></td>
+        <td><p>Timing to use when getting the timestamp.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">forDisplay</span></td>
+        <td><p>Whether this is to be displayed to the user or recorded in a file.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><p>Waveform t0 timestamp as an enumerable of strings</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataManagement_SourceModel_WaveformBaseEnumerator_1_EnumerateWaveformUnitAsString_" data-uid="NationalInstruments.DataManagement.SourceModel.WaveformBaseEnumerator`1.EnumerateWaveformUnitAsString*"></a>
+  <h4 id="NationalInstruments_DataManagement_SourceModel_WaveformBaseEnumerator_1_EnumerateWaveformUnitAsString_System_String_System_Boolean_" data-uid="NationalInstruments.DataManagement.SourceModel.WaveformBaseEnumerator`1.EnumerateWaveformUnitAsString(System.String,System.Boolean)">EnumerateWaveformUnitAsString(String, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Enumerates the strings necessary to describe the unit description.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IEnumerable&lt;string&gt; EnumerateWaveformUnitAsString(string unitDescription, bool forDisplay)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">unitDescription</span></td>
+        <td><p>Description of the unit to describe.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">forDisplay</span></td>
+        <td><p>Whether this is to be displayed to the user or recorded in a file.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><p>Waveform unit description as an enumerable of strings</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataManagement_SourceModel_WaveformBaseEnumerator_1_GetDataForCell_" data-uid="NationalInstruments.DataManagement.SourceModel.WaveformBaseEnumerator`1.GetDataForCell*"></a>
+  <h4 id="NationalInstruments_DataManagement_SourceModel_WaveformBaseEnumerator_1_GetDataForCell_System_Int32_System_Int32_" data-uid="NationalInstruments.DataManagement.SourceModel.WaveformBaseEnumerator`1.GetDataForCell(System.Int32,System.Int32)">GetDataForCell(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets the string that should be displayed for the given row and column.
+If you require only one cell, you should use this function.
+If you require many cells, <see cref="!:GetAllData"></see> may be better performance wise.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract string GetDataForCell(int row, int column)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">row</span></td>
+        <td><p>The zero-indexed row which should be displayed. This may include the row header, if applicable.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">column</span></td>
+        <td><p>The zero-indexed column which should be displayed. This may include the column header, if applicable.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>String representation of the data at that row or column</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataManagement_SourceModel_WaveformBaseEnumerator_1_ParseInput_" data-uid="NationalInstruments.DataManagement.SourceModel.WaveformBaseEnumerator`1.ParseInput*"></a>
+  <h4 id="NationalInstruments_DataManagement_SourceModel_WaveformBaseEnumerator_1_ParseInput" data-uid="NationalInstruments.DataManagement.SourceModel.WaveformBaseEnumerator`1.ParseInput">ParseInput()</h4>
+  <div class="markdown level1 summary"><p>Parses the given input, returning a .NET object representing the input if possible.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract object ParseInput()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>Null if the input cannot be understood, the .NET object otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataManagement_SourceModel_WaveformBaseEnumerator_1_ReadWaveformData_" data-uid="NationalInstruments.DataManagement.SourceModel.WaveformBaseEnumerator`1.ReadWaveformData*"></a>
+  <h4 id="NationalInstruments_DataManagement_SourceModel_WaveformBaseEnumerator_1_ReadWaveformData_System_Collections_Generic_IEnumerator_System_Collections_Generic_IList_System_String___System_Int32__0______" data-uid="NationalInstruments.DataManagement.SourceModel.WaveformBaseEnumerator`1.ReadWaveformData(System.Collections.Generic.IEnumerator{System.Collections.Generic.IList{System.String}},System.Int32,`0[][]@)">ReadWaveformData(IEnumerator&lt;IList&lt;String&gt;&gt;, Int32, ref T[][])</h4>
+  <div class="markdown level1 summary"><p>Reads in one or more waveforms, putting the raw data (without waveforms) into the referenced array.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool ReadWaveformData(IEnumerator&lt;IList&lt;string&gt;&gt; enumerator, int numberOfColumns, ref T[][] data)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;<span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="parametername">enumerator</span></td>
+        <td><p>Input data to look at. It is expected the enumerator is pointing at the first row of data (not metadata).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">numberOfColumns</span></td>
+        <td><p>Number of columns we should expect the data to have.</p>
+</td>
+      </tr>
+      <tr>
+        <td>T[][]</td>
+        <td><span class="parametername">data</span></td>
+        <td><p>The array that we should put the data into.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>If the data was valid, it returns true. Otherwise, it returns false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataManagement_SourceModel_WaveformBaseEnumerator_1_RepresentsWaveform_" data-uid="NationalInstruments.DataManagement.SourceModel.WaveformBaseEnumerator`1.RepresentsWaveform*"></a>
+  <h4 id="NationalInstruments_DataManagement_SourceModel_WaveformBaseEnumerator_1_RepresentsWaveform_NationalInstruments_DataManagement_SourceModel_EnumeratedElementCollection_System_Int32_" data-uid="NationalInstruments.DataManagement.SourceModel.WaveformBaseEnumerator`1.RepresentsWaveform(NationalInstruments.DataManagement.SourceModel.EnumeratedElementCollection,System.Int32)">RepresentsWaveform(EnumeratedElementCollection, Int32)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the serialized values represent a waveform.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool RepresentsWaveform(EnumeratedElementCollection input, int startCol)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataManagement.SourceModel.EnumeratedElementCollection.html">EnumeratedElementCollection</a></td>
+        <td><span class="parametername">input</span></td>
+        <td><p>The serialized values to read.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">startCol</span></td>
+        <td><p>The column at which to check.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the serialized values could be a waveform of any type, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataManagement_SourceModel_WaveformBaseEnumerator_1_WriteDataToFile_" data-uid="NationalInstruments.DataManagement.SourceModel.WaveformBaseEnumerator`1.WriteDataToFile*"></a>
+  <h4 id="NationalInstruments_DataManagement_SourceModel_WaveformBaseEnumerator_1_WriteDataToFile_NationalInstruments_DataManagement_SourceModel_IEnumeratorWriter_" data-uid="NationalInstruments.DataManagement.SourceModel.WaveformBaseEnumerator`1.WriteDataToFile(NationalInstruments.DataManagement.SourceModel.IEnumeratorWriter)">WriteDataToFile(IEnumeratorWriter)</h4>
+  <div class="markdown level1 summary"><p>Writes all data to the given writer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void WriteDataToFile(IEnumeratorWriter writer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataManagement.SourceModel.IEnumeratorWriter.html">IEnumeratorWriter</a></td>
+        <td><span class="parametername">writer</span></td>
+        <td><p>Writer to which the data should be written to.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataManagement.SourceModel.IDataEnumerator.html">IDataEnumerator</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataManagement.SourceModel.IDataDeserializer.html">IDataDeserializer</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataManagement.SourceModel.IDataSerializationFactory.html">IDataSerializationFactory</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,290 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IFilteredTreeViewDataItem
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IFilteredTreeViewDataItem
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.Controls.Shell.IFilteredTreeViewDataItem">
+  
+  
+  <h1 id="NationalInstruments_Controls_Shell_IFilteredTreeViewDataItem" data-uid="NationalInstruments.Controls.Shell.IFilteredTreeViewDataItem" class="text-break">Interface IFilteredTreeViewDataItem
+  </h1>
+  <div class="markdown level0 summary"><p>Ther interface to be fulfilled by objects that wish to be displayed in a <a class="xref" href="NationalInstruments.Controls.Shell.FilteredTreeView.html">FilteredTreeView</a>. This interfae
+is technically optional in the sense that objects not implementing it can be added to the <a class="xref" href="NationalInstruments.Controls.Shell.FilteredTreeView.html">FilteredTreeView</a>; however,
+this interface is mandatory for items in the <a class="xref" href="NationalInstruments.Controls.Shell.FilteredTreeView.html">FilteredTreeView</a> that have children or wish for searching
+and display behavior that is richer than simply working off the object&apos;s ToString method.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="NationalInstruments.Controls.Shell.IFilteredTreeViewInfoTip.html#NationalInstruments_Controls_Shell_IFilteredTreeViewInfoTip_InfoTipProvider">IFilteredTreeViewInfoTip.InfoTipProvider</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Controls.Shell.IFilteredTreeViewInfoTip.html#NationalInstruments_Controls_Shell_IFilteredTreeViewInfoTip_InfoTipStyle">IFilteredTreeViewInfoTip.InfoTipStyle</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.Controls.Shell.html">NationalInstruments.Controls.Shell</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_Controls_Shell_IFilteredTreeViewDataItem_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IFilteredTreeViewDataItem : IFilteredTreeViewInfoTip</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_Controls_Shell_IFilteredTreeViewDataItem_ChildItems_" data-uid="NationalInstruments.Controls.Shell.IFilteredTreeViewDataItem.ChildItems*"></a>
+  <h4 id="NationalInstruments_Controls_Shell_IFilteredTreeViewDataItem_ChildItems" data-uid="NationalInstruments.Controls.Shell.IFilteredTreeViewDataItem.ChildItems">ChildItems</h4>
+  <div class="markdown level1 summary"><p>The children items for this object. They should also implement <a class="xref" href="NationalInstruments.Controls.Shell.IFilteredTreeViewDataItem.html">IFilteredTreeViewDataItem</a> to enable the fullest set of functionality (see the
+description of <a class="xref" href="NationalInstruments.Controls.Shell.IFilteredTreeViewDataItem.html">IFilteredTreeViewDataItem</a> for more information).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IList ChildItems { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.IList</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Controls_Shell_IFilteredTreeViewDataItem_DisplayContent_" data-uid="NationalInstruments.Controls.Shell.IFilteredTreeViewDataItem.DisplayContent*"></a>
+  <h4 id="NationalInstruments_Controls_Shell_IFilteredTreeViewDataItem_DisplayContent" data-uid="NationalInstruments.Controls.Shell.IFilteredTreeViewDataItem.DisplayContent">DisplayContent</h4>
+  <div class="markdown level1 summary"><p>The text to be displayed for the item in both the tree and search result views.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string DisplayContent { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Controls_Shell_IFilteredTreeViewDataItem_GroupName_" data-uid="NationalInstruments.Controls.Shell.IFilteredTreeViewDataItem.GroupName*"></a>
+  <h4 id="NationalInstruments_Controls_Shell_IFilteredTreeViewDataItem_GroupName" data-uid="NationalInstruments.Controls.Shell.IFilteredTreeViewDataItem.GroupName">GroupName</h4>
+  <div class="markdown level1 summary"><p>The name of the grouping in the search results view that the item will be placed in. If no grouping is desired within the search results view, then leave
+this null or empty on all items in the hierarchy.  If at least one item in the search results sets <a class="xref" href="NationalInstruments.Controls.Shell.IFilteredTreeViewDataItem.html#NationalInstruments_Controls_Shell_IFilteredTreeViewDataItem_GroupName">GroupName</a>, then the search results view will
+contain groupings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GroupName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Controls_Shell_IFilteredTreeViewDataItem_IsSelectionStateUnchangeable_" data-uid="NationalInstruments.Controls.Shell.IFilteredTreeViewDataItem.IsSelectionStateUnchangeable*"></a>
+  <h4 id="NationalInstruments_Controls_Shell_IFilteredTreeViewDataItem_IsSelectionStateUnchangeable" data-uid="NationalInstruments.Controls.Shell.IFilteredTreeViewDataItem.IsSelectionStateUnchangeable">IsSelectionStateUnchangeable</h4>
+  <div class="markdown level1 summary"><p>Specifies whether or not this item is selectable. If IsSelectionStateUnchangeable is true, the user won&apos;t
+be able to change the item&apos;s selection state.
+If a non-leaf item is set IsSelectionStateUnchangeable, all of its child items will be set IsSelectionStateUnchangeable automatically.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsSelectionStateUnchangeable { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Controls_Shell_IFilteredTreeViewDataItem_SearchContent_" data-uid="NationalInstruments.Controls.Shell.IFilteredTreeViewDataItem.SearchContent*"></a>
+  <h4 id="NationalInstruments_Controls_Shell_IFilteredTreeViewDataItem_SearchContent" data-uid="NationalInstruments.Controls.Shell.IFilteredTreeViewDataItem.SearchContent">SearchContent</h4>
+  <div class="markdown level1 summary"><p>A set of search terms for this object when searching. In many cases, this will likely only contain a single string that is equal to the
+value held in <a class="xref" href="NationalInstruments.Controls.Shell.IFilteredTreeViewDataItem.html#NationalInstruments_Controls_Shell_IFilteredTreeViewDataItem_DisplayContent">DisplayContent</a> (so that the search term for a given object will be equal to the text that is displayed for it).
+However, the option is provided to add additional search terms that will result in a match for this object.  For instance, if we had an
+item representing a False Constant, we could provide search terms of &quot;False Constant&quot; and &quot;Boolean Constant,&quot; and consequently filtering
+by &quot;fal&quot; or &quot;lean&quot; would return the False Constant as a search result.  The search that is performed is case-insensitive and will match
+anywhere within a <a class="xref" href="NationalInstruments.Controls.Shell.IFilteredTreeViewDataItem.html#NationalInstruments_Controls_Shell_IFilteredTreeViewDataItem_SearchContent">SearchContent</a> string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;string&gt; SearchContent { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

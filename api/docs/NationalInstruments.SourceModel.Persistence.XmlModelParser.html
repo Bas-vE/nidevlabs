@@ -1,0 +1,1524 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class XmlModelParser
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class XmlModelParser
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser">
+  
+  
+  <h1 id="NationalInstruments_SourceModel_Persistence_XmlModelParser" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser" class="text-break">Class XmlModelParser
+  </h1>
+  <div class="markdown level0 summary"><p>This class provides a starting point for deriving a model parser for an XML format.
+Prior to the creation of the <a class="xref" href="NationalInstruments.SourceModel.Persistence.UniversalParser.html">UniversalParser</a>, when we had many parsers and generators, this was the home for all the common
+parser code.  Now, all this code can eventually be merged with the UniversalParser.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">XmlModelParser</span></div>
+      <div class="level2"><a class="xref" href="NationalInstruments.SourceModel.Persistence.UniversalParser.html">UniversalParser</a></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="NationalInstruments.SourceModel.Persistence.IElementFixupRegistrar.html">IElementFixupRegistrar</a></div>
+    <div><span class="xref">NationalInstruments.DynamicProperties.IParsableErrorReporter</span></div>
+    <div><span class="xref">NationalInstruments.DynamicProperties.IPropertyParserFactory</span></div>
+    <div><span class="xref">NationalInstruments.Core.IServiceAggregator</span></div>
+    <div><span class="xref">NationalInstruments.Core.IQueryService</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.SourceModel.Persistence.html">NationalInstruments.SourceModel.Persistence</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_SourceModel_Persistence_XmlModelParser_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class XmlModelParser : IElementFixupRegistrar, IParsableErrorReporter, IPropertyParserFactory, IServiceAggregator, IQueryService</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_XmlModelParser__ctor_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.#ctor*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_XmlModelParser__ctor_NationalInstruments_Composition_ICompositionHost_System_IO_Stream_NationalInstruments_SourceModel_ModelParserOptions_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.#ctor(NationalInstruments.Composition.ICompositionHost,System.IO.Stream,NationalInstruments.SourceModel.ModelParserOptions)">XmlModelParser(ICompositionHost, Stream, ModelParserOptions)</h4>
+  <div class="markdown level1 summary"><p>Creates a new XmlModelParser</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected XmlModelParser(ICompositionHost host, Stream stream, ModelParserOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Composition.ICompositionHost</span></td>
+        <td><span class="parametername">host</span></td>
+        <td><p>the host the parser belongs to</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.IO.Stream</span></td>
+        <td><span class="parametername">stream</span></td>
+        <td><p>The stream from which the parser will read.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ModelParserOptions.html">ModelParserOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Specifies various options for how the parser behaves while parsing. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_XmlModelParser__ctor_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.#ctor*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_XmlModelParser__ctor_NationalInstruments_Composition_ICompositionHost_System_Xml_XmlReader_NationalInstruments_SourceModel_ModelParserOptions_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.#ctor(NationalInstruments.Composition.ICompositionHost,System.Xml.XmlReader,NationalInstruments.SourceModel.ModelParserOptions)">XmlModelParser(ICompositionHost, XmlReader, ModelParserOptions)</h4>
+  <div class="markdown level1 summary"><p>Creates a new XmlModelParser</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected XmlModelParser(ICompositionHost host, XmlReader reader, ModelParserOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Composition.ICompositionHost</span></td>
+        <td><span class="parametername">host</span></td>
+        <td><p>the host the parser belongs to</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Xml.XmlReader</span></td>
+        <td><span class="parametername">reader</span></td>
+        <td><p>The XmlReader from which the parser will read.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ModelParserOptions.html">ModelParserOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Specifies various options for how the parser behaves while parsing. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_XmlModelParser_AllowUnknownElementsAndProperties_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.AllowUnknownElementsAndProperties*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_XmlModelParser_AllowUnknownElementsAndProperties" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.AllowUnknownElementsAndProperties">AllowUnknownElementsAndProperties</h4>
+  <div class="markdown level1 summary"><p>False if the parser should generate errors when it encounters unknown properties and elements</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AllowUnknownElementsAndProperties { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_XmlModelParser_DataTypeReferenceTable_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.DataTypeReferenceTable*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_XmlModelParser_DataTypeReferenceTable" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.DataTypeReferenceTable">DataTypeReferenceTable</h4>
+  <div class="markdown level1 summary"><p>The DataTypeReferenceTable associated with the parser.  This is either the table parsed from the content
+or an already inflated table to be used by the parser as an optimization for the parsing operation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataTypeReferenceTable DataTypeReferenceTable { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.DataTypeReferenceTable.html">DataTypeReferenceTable</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_XmlModelParser_Host_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.Host*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_XmlModelParser_Host" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.Host">Host</h4>
+  <div class="markdown level1 summary"><p>Composition host.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICompositionHost Host { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Composition.ICompositionHost</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_XmlModelParser_Options_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.Options*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_XmlModelParser_Options" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.Options">Options</h4>
+  <div class="markdown level1 summary"><p>The options to be used while parsing</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ModelParserOptions Options { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ModelParserOptions.html">ModelParserOptions</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_XmlModelParser_ParseReason_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.ParseReason*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_XmlModelParser_ParseReason" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.ParseReason">ParseReason</h4>
+  <div class="markdown level1 summary"><p>Returns the reason for why the model is being parsed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ParseReason ParseReason { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Persistence.ParseReason.html">ParseReason</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_XmlModelParser_Result_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.Result*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_XmlModelParser_Result" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.Result">Result</h4>
+  <div class="markdown level1 summary"><p>Contains the end result of the parsing operation that was performed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ModelParserResult Result { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ModelParserResult.html">ModelParserResult</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_XmlModelParser_XmlReader_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.XmlReader*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_XmlModelParser_XmlReader" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.XmlReader">XmlReader</h4>
+  <div class="markdown level1 summary"><p>Get the XmlReader used for parsing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public XmlReader XmlReader { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Xml.XmlReader</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_XmlModelParser_AddParseCompleteFixupOrder_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.AddParseCompleteFixupOrder*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_XmlModelParser_AddParseCompleteFixupOrder_System_String_System_String_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.AddParseCompleteFixupOrder(System.String,System.String)">AddParseCompleteFixupOrder(String, String)</h4>
+  <div class="markdown level1 summary"><p>Adds a parse complete fixup dependency order</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddParseCompleteFixupOrder(string beforeFixupName, string afterFixupName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">beforeFixupName</span></td>
+        <td><p>name of fixup that should run before fixup with <code data-dev-comment-type="paramref" class="paramref">afterFixupName</code></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">afterFixupName</span></td>
+        <td><p>name of fixup that should run after fixup with <code data-dev-comment-type="paramref" class="paramref">beforeFixupName</code></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_XmlModelParser_AddPostParseFixupOrder_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.AddPostParseFixupOrder*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_XmlModelParser_AddPostParseFixupOrder_System_String_System_String_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.AddPostParseFixupOrder(System.String,System.String)">AddPostParseFixupOrder(String, String)</h4>
+  <div class="markdown level1 summary"><p>Adds a post parse fixup dependency order</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddPostParseFixupOrder(string beforeFixupName, string afterFixupName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">beforeFixupName</span></td>
+        <td><p>name of fixup that should run before fixup with <code data-dev-comment-type="paramref" class="paramref">afterFixupName</code></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">afterFixupName</span></td>
+        <td><p>name of fixup that should run after fixup with <code data-dev-comment-type="paramref" class="paramref">beforeFixupName</code></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_XmlModelParser_AttachService_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.AttachService*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_XmlModelParser_AttachService_System_Object_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.AttachService(System.Object)">AttachService(Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AttachService(object service)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">service</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_XmlModelParser_FinishParse_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.FinishParse*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_XmlModelParser_FinishParse" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.FinishParse">FinishParse()</h4>
+  <div class="markdown level1 summary"><p>Call when parsing is finished. Base class nulls out references so we aren&apos;t holding them in memory.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void FinishParse()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_XmlModelParser_FinishPreparations_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.FinishPreparations*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_XmlModelParser_FinishPreparations_NationalInstruments_SourceModel_IElementServices_NationalInstruments_SourceModel_ModelParserResult_System_Boolean_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.FinishPreparations(NationalInstruments.SourceModel.IElementServices,NationalInstruments.SourceModel.ModelParserResult,System.Boolean)">FinishPreparations(IElementServices, ModelParserResult, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Attempt to finish any unfinished business. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void FinishPreparations(IElementServices rootElement, ModelParserResult result, bool runParseCompleteFixups)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.IElementServices.html">IElementServices</a></td>
+        <td><span class="parametername">rootElement</span></td>
+        <td><p>The root element that was parsed</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ModelParserResult.html">ModelParserResult</a></td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The result of the parsing operation for the root element</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">runParseCompleteFixups</span></td>
+        <td><p>True if parse complete fixups should run and False otherwise</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_SourceModel_Persistence_XmlModelParser_FinishPreparations_NationalInstruments_SourceModel_IElementServices_NationalInstruments_SourceModel_ModelParserResult_System_Boolean__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Currently this goes through the list of unfinished wires and attempts to finish
+them by connecting them to the node terminals and then creating their joint
+list.  </p>
+</div>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_XmlModelParser_FinishPreparations_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.FinishPreparations*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_XmlModelParser_FinishPreparations_NationalInstruments_SourceModel_IElementServices_System_Boolean_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.FinishPreparations(NationalInstruments.SourceModel.IElementServices,System.Boolean)">FinishPreparations(IElementServices, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Attempt to finish any unfinished business. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void FinishPreparations(IElementServices rootElement, bool runParseCompleteFixups)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.IElementServices.html">IElementServices</a></td>
+        <td><span class="parametername">rootElement</span></td>
+        <td><p>The root element that was parsed</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">runParseCompleteFixups</span></td>
+        <td><p>True if parse complete fixups should run and False otherwise</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_XmlModelParser_IgnoreCurrentElement_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.IgnoreCurrentElement*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_XmlModelParser_IgnoreCurrentElement" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.IgnoreCurrentElement">IgnoreCurrentElement()</h4>
+  <div class="markdown level1 summary"><p>Expectes XML stream to be positioned at the start of the element.  Advances past the element and all children.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void IgnoreCurrentElement()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_XmlModelParser_InitializeToNewReader_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.InitializeToNewReader*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_XmlModelParser_InitializeToNewReader_System_Xml_XmlReader_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.InitializeToNewReader(System.Xml.XmlReader)">InitializeToNewReader(XmlReader)</h4>
+  <div class="markdown level1 summary"><p>Configures the parser to start reading from the new XmlReader.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void InitializeToNewReader(XmlReader newReader)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Xml.XmlReader</span></td>
+        <td><span class="parametername">newReader</span></td>
+        <td><p>The new <a class="xref" href="NationalInstruments.SourceModel.Persistence.XmlModelParser.html#NationalInstruments_SourceModel_Persistence_XmlModelParser_XmlReader">XmlReader</a> from which the parser will read.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_XmlModelParser_InitializeToNewStream_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.InitializeToNewStream*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_XmlModelParser_InitializeToNewStream_System_IO_Stream_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.InitializeToNewStream(System.IO.Stream)">InitializeToNewStream(Stream)</h4>
+  <div class="markdown level1 summary"><p>Configures the parser to start reading from the new stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void InitializeToNewStream(Stream newStream)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IO.Stream</span></td>
+        <td><span class="parametername">newStream</span></td>
+        <td><p>The new stream from which the parser will read.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_XmlModelParser_OnParse_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.OnParse*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_XmlModelParser_OnParse_NationalInstruments_SourceModel_Element_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.OnParse(NationalInstruments.SourceModel.Element)">OnParse(Element)</h4>
+  <div class="markdown level1 summary"><p>Performs the action parsing of top level or root elements. This method
+must populate the Results.RootElements with whatever is has parsed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract bool OnParse(Element owner)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td><span class="parametername">owner</span></td>
+        <td><p>The parsed owner</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>boolean</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_XmlModelParser_Parse_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.Parse*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_XmlModelParser_Parse_NationalInstruments_SourceModel_Element_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.Parse(NationalInstruments.SourceModel.Element)">Parse(Element)</h4>
+  <div class="markdown level1 summary"><p>Parses the hierarchy of elements that were specified by the reader parameter to the Initialize function.  This
+obviously means you should call Initialize before calling this function.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ModelParserResult Parse(Element owner)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td><span class="parametername">owner</span></td>
+        <td><p>Parsed owner. Could be null</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ModelParserResult.html">ModelParserResult</a></td>
+        <td><p>The result of the parsing which contains the root element among other information about what happened
+during parse.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_XmlModelParser_ParseDynamicElement_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.ParseDynamicElement*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_XmlModelParser_ParseDynamicElement_NationalInstruments_SourceModel_Element_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.ParseDynamicElement(NationalInstruments.SourceModel.Element)">ParseDynamicElement(Element)</h4>
+  <div class="markdown level1 summary"><p>Parse an <a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a> using the full universal persistence mechanism.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Element ParseDynamicElement(Element parsedOwner)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td><span class="parametername">parsedOwner</span></td>
+        <td><p>Owner of the element being parsed. Could be null</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td><p>The parsed element, or null if we failed to parse the element.  If null is returned,
+the XML stream is untouched.  If an element is returned, the xml stream is resting at the end of
+that element.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_XmlModelParser_ParseDynamicPropertiesForElement_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.ParseDynamicPropertiesForElement*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_XmlModelParser_ParseDynamicPropertiesForElement_NationalInstruments_SourceModel_Element_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.ParseDynamicPropertiesForElement(NationalInstruments.SourceModel.Element)">ParseDynamicPropertiesForElement(Element)</h4>
+  <div class="markdown level1 summary"><p>Parse and apply properties for the specified element.  This can be useful for copying properties in place on an element
+without first creating a new element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void ParseDynamicPropertiesForElement(Element element)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td><span class="parametername">element</span></td>
+        <td><p>The element whose properties are being parsed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_XmlModelParser_QueryService_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.QueryService*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_XmlModelParser_QueryService__1" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.QueryService``1">QueryService&lt;T&gt;()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public QueryResult&lt;T&gt; QueryService&lt;T&gt;()where T : class</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.QueryResult</span>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_XmlModelParser_RegisterParseCompleteFixup_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.RegisterParseCompleteFixup*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_XmlModelParser_RegisterParseCompleteFixup_NationalInstruments_SourceModel_Element_System_Action_NationalInstruments_SourceModel_Element_NationalInstruments_SourceModel_IElementServices__" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.RegisterParseCompleteFixup(NationalInstruments.SourceModel.Element,System.Action{NationalInstruments.SourceModel.Element,NationalInstruments.SourceModel.IElementServices})">RegisterParseCompleteFixup(Element, Action&lt;Element, IElementServices&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RegisterParseCompleteFixup(Element element, Action&lt;Element, IElementServices&gt; fixupAction)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td><span class="parametername">element</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a>, <a class="xref" href="NationalInstruments.SourceModel.IElementServices.html">IElementServices</a>&gt;</td>
+        <td><span class="parametername">fixupAction</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_XmlModelParser_RegisterParseCompleteFixup_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.RegisterParseCompleteFixup*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_XmlModelParser_RegisterParseCompleteFixup_NationalInstruments_SourceModel_Element_System_Action_NationalInstruments_SourceModel_Element_NationalInstruments_SourceModel_IElementServices__System_String_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.RegisterParseCompleteFixup(NationalInstruments.SourceModel.Element,System.Action{NationalInstruments.SourceModel.Element,NationalInstruments.SourceModel.IElementServices},System.String)">RegisterParseCompleteFixup(Element, Action&lt;Element, IElementServices&gt;, String)</h4>
+  <div class="markdown level1 summary"><p>Register a function to be called when all parsing has been completed.
+The registered function is invoked after all elements have been parsed, all post parse fixups
+have run, all wiring is complete, and all elements have been attached to the source file.</p>
+<p>The most common scenarios for using this fixup are:
+1.) You have coupled fixup methods where you need to ensure one fixup runs before the other.
+2.) As part of element initialization, you need to access other elements in the component hierarchy 
+where you need to traverse through the source file in order to find them.
+3.) You need to clear or reset data that is only relevant during the process of parsing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RegisterParseCompleteFixup(Element element, Action&lt;Element, IElementServices&gt; fixupAction, string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td><span class="parametername">element</span></td>
+        <td><p>The <a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a> used as the target of the fixupAction.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a>, <a class="xref" href="NationalInstruments.SourceModel.IElementServices.html">IElementServices</a>&gt;</td>
+        <td><span class="parametername">fixupAction</span></td>
+        <td><p>Action that will be called at the end of parsing, with the
+<a class="xref" href="NationalInstruments.SourceModel.IElementServices.html">IElementServices</a> for the model and the <a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a> being parsed
+when the fixup was registered.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Name of the post-parse fixup method</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_XmlModelParser_RegisterPostParseFixup_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.RegisterPostParseFixup*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_XmlModelParser_RegisterPostParseFixup_NationalInstruments_SourceModel_Element_System_Action_NationalInstruments_SourceModel_Element_NationalInstruments_SourceModel_IElementServices__" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.RegisterPostParseFixup(NationalInstruments.SourceModel.Element,System.Action{NationalInstruments.SourceModel.Element,NationalInstruments.SourceModel.IElementServices})">RegisterPostParseFixup(Element, Action&lt;Element, IElementServices&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RegisterPostParseFixup(Element element, Action&lt;Element, IElementServices&gt; fixupAction)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td><span class="parametername">element</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a>, <a class="xref" href="NationalInstruments.SourceModel.IElementServices.html">IElementServices</a>&gt;</td>
+        <td><span class="parametername">fixupAction</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_XmlModelParser_RegisterPostParseFixup_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.RegisterPostParseFixup*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_XmlModelParser_RegisterPostParseFixup_NationalInstruments_SourceModel_Element_System_Action_NationalInstruments_SourceModel_Element_NationalInstruments_SourceModel_IElementServices__System_String_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.RegisterPostParseFixup(NationalInstruments.SourceModel.Element,System.Action{NationalInstruments.SourceModel.Element,NationalInstruments.SourceModel.IElementServices},System.String)">RegisterPostParseFixup(Element, Action&lt;Element, IElementServices&gt;, String)</h4>
+  <div class="markdown level1 summary"><p>Register a function to be called when parsing is done, to perform any post-parse fixups.
+The registered function is invoked after all elements have been parsed and child elements
+have been added to their owner.  While parent/child relationships have been set up, you can&apos;t
+assume elements have been attached yet.  Elements will be attached if the parse operation is
+for a merge (i.e. copy/paste) and won&apos;t be attached if the parse operation is for a load.
+Also, at this point in time, no wiring operations have taken place.</p>
+<p>The most common scenarios for using this fixup are:
+1.) You have coupled properties (e.g. data type and value) where you need to make sure one of 
+the properties has been parsed before you can successfully parse the other property.<br>2.) Performing mutation on an element when loading from older source file version.
+3.) You need to access child/parent/sibling elements in the component hierarchy (minus the source
+file itself) as part of element initialization.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RegisterPostParseFixup(Element element, Action&lt;Element, IElementServices&gt; fixupAction, string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td><span class="parametername">element</span></td>
+        <td><p>The <a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a> used as the target of the fixupAction.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a>, <a class="xref" href="NationalInstruments.SourceModel.IElementServices.html">IElementServices</a>&gt;</td>
+        <td><span class="parametername">fixupAction</span></td>
+        <td><p>Action that will be called at the end of parsing, with the
+<a class="xref" href="NationalInstruments.SourceModel.IElementServices.html">IElementServices</a> for the model and the <a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a> being parsed
+when the fixup was registered.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Name of the post-parse fixup method</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_XmlModelParser_RemoveAll_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.RemoveAll*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_XmlModelParser_RemoveAll_System_Predicate_System_Object__" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.RemoveAll(System.Predicate{System.Object})">RemoveAll(Predicate&lt;Object&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int RemoveAll(Predicate&lt;object&gt; match)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Predicate</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><span class="parametername">match</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_XmlModelParser_RemoveService_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.RemoveService*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_XmlModelParser_RemoveService_System_Object_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.RemoveService(System.Object)">RemoveService(Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemoveService(object service)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">service</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_XmlModelParser_SetService_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.SetService*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_XmlModelParser_SetService__1_System_Object_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.SetService``1(System.Object)">SetService&lt;T&gt;(Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetService&lt;T&gt;(object service)where T : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">service</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_XmlModelParser_NationalInstruments_DynamicProperties_IParsableErrorReporter_ReportUnknownParsable_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.NationalInstruments#DynamicProperties#IParsableErrorReporter#ReportUnknownParsable*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_XmlModelParser_NationalInstruments_DynamicProperties_IParsableErrorReporter_ReportUnknownParsable_NationalInstruments_DynamicProperties_IParsable_NationalInstruments_DynamicProperties_IUnknownParsableInfo_System_Boolean_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.NationalInstruments#DynamicProperties#IParsableErrorReporter#ReportUnknownParsable(NationalInstruments.DynamicProperties.IParsable,NationalInstruments.DynamicProperties.IUnknownParsableInfo,System.Boolean)">IParsableErrorReporter.ReportUnknownParsable(IParsable, IUnknownParsableInfo, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void IParsableErrorReporter.ReportUnknownParsable(IParsable parent, IUnknownParsableInfo unknownParsableInfo, bool throwException)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DynamicProperties.IParsable</span></td>
+        <td><span class="parametername">parent</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.DynamicProperties.IUnknownParsableInfo</span></td>
+        <td><span class="parametername">unknownParsableInfo</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">throwException</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_XmlModelParser_NationalInstruments_DynamicProperties_IParsableErrorReporter_ReportUnknownParsable_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.NationalInstruments#DynamicProperties#IParsableErrorReporter#ReportUnknownParsable*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_XmlModelParser_NationalInstruments_DynamicProperties_IParsableErrorReporter_ReportUnknownParsable_NationalInstruments_DynamicProperties_IParsable_System_Xml_Linq_XName_System_Boolean_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.NationalInstruments#DynamicProperties#IParsableErrorReporter#ReportUnknownParsable(NationalInstruments.DynamicProperties.IParsable,System.Xml.Linq.XName,System.Boolean)">IParsableErrorReporter.ReportUnknownParsable(IParsable, XName, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void IParsableErrorReporter.ReportUnknownParsable(IParsable parent, XName parsableName, bool throwExceptionForUnknownChild)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DynamicProperties.IParsable</span></td>
+        <td><span class="parametername">parent</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Xml.Linq.XName</span></td>
+        <td><span class="parametername">parsableName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">throwExceptionForUnknownChild</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_XmlModelParser_NationalInstruments_DynamicProperties_IParsableErrorReporter_ReportUnknownProperty_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.NationalInstruments#DynamicProperties#IParsableErrorReporter#ReportUnknownProperty*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_XmlModelParser_NationalInstruments_DynamicProperties_IParsableErrorReporter_ReportUnknownProperty_NationalInstruments_DynamicProperties_IParsable_System_Xml_Linq_XName_System_String_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.NationalInstruments#DynamicProperties#IParsableErrorReporter#ReportUnknownProperty(NationalInstruments.DynamicProperties.IParsable,System.Xml.Linq.XName,System.String)">IParsableErrorReporter.ReportUnknownProperty(IParsable, XName, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void IParsableErrorReporter.ReportUnknownProperty(IParsable parsable, XName propertyName, string value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DynamicProperties.IParsable</span></td>
+        <td><span class="parametername">parsable</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Xml.Linq.XName</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_XmlModelParser_NationalInstruments_DynamicProperties_IParsableErrorReporter_ReportUnrecognizedPropertyValue_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.NationalInstruments#DynamicProperties#IParsableErrorReporter#ReportUnrecognizedPropertyValue*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_XmlModelParser_NationalInstruments_DynamicProperties_IParsableErrorReporter_ReportUnrecognizedPropertyValue_NationalInstruments_DynamicProperties_IParsable_NationalInstruments_DynamicProperties_SerializablePropertySymbol_System_String_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.NationalInstruments#DynamicProperties#IParsableErrorReporter#ReportUnrecognizedPropertyValue(NationalInstruments.DynamicProperties.IParsable,NationalInstruments.DynamicProperties.SerializablePropertySymbol,System.String)">IParsableErrorReporter.ReportUnrecognizedPropertyValue(IParsable, SerializablePropertySymbol, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void IParsableErrorReporter.ReportUnrecognizedPropertyValue(IParsable element, SerializablePropertySymbol propertySymbol, string value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DynamicProperties.IParsable</span></td>
+        <td><span class="parametername">element</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.DynamicProperties.SerializablePropertySymbol</span></td>
+        <td><span class="parametername">propertySymbol</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_XmlModelParser_NationalInstruments_DynamicProperties_IPropertyParserFactory_CreatePropertyParser_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.NationalInstruments#DynamicProperties#IPropertyParserFactory#CreatePropertyParser*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_XmlModelParser_NationalInstruments_DynamicProperties_IPropertyParserFactory_CreatePropertyParser_NationalInstruments_DynamicProperties_IParsable_NationalInstruments_DynamicProperties_UniversalParsingAlgorithm_System_Collections_Generic_IEnumerable_NationalInstruments_DynamicProperties_SerializablePropertySymbol__" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.NationalInstruments#DynamicProperties#IPropertyParserFactory#CreatePropertyParser(NationalInstruments.DynamicProperties.IParsable,NationalInstruments.DynamicProperties.UniversalParsingAlgorithm,System.Collections.Generic.IEnumerable{NationalInstruments.DynamicProperties.SerializablePropertySymbol})">IPropertyParserFactory.CreatePropertyParser(IParsable, UniversalParsingAlgorithm, IEnumerable&lt;SerializablePropertySymbol&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IPropertyParser IPropertyParserFactory.CreatePropertyParser(IParsable propertyOwner, UniversalParsingAlgorithm algorithm, IEnumerable&lt;SerializablePropertySymbol&gt; symbols)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DynamicProperties.IParsable</span></td>
+        <td><span class="parametername">propertyOwner</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.DynamicProperties.UniversalParsingAlgorithm</span></td>
+        <td><span class="parametername">algorithm</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">NationalInstruments.DynamicProperties.SerializablePropertySymbol</span>&gt;</td>
+        <td><span class="parametername">symbols</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DynamicProperties.IPropertyParser</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_XmlModelParser_NationalInstruments_SourceModel_Persistence_IElementFixupRegistrar_RegisterIdentifierFixup_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.NationalInstruments#SourceModel#Persistence#IElementFixupRegistrar#RegisterIdentifierFixup*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_XmlModelParser_NationalInstruments_SourceModel_Persistence_IElementFixupRegistrar_RegisterIdentifierFixup_NationalInstruments_SourceModel_Persistence_IdContainer_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.NationalInstruments#SourceModel#Persistence#IElementFixupRegistrar#RegisterIdentifierFixup(NationalInstruments.SourceModel.Persistence.IdContainer)">IElementFixupRegistrar.RegisterIdentifierFixup(IdContainer)</h4>
+  <div class="markdown level1 summary"><p>Register a fixup for identifier references in case an identifier gets mutated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void IElementFixupRegistrar.RegisterIdentifierFixup(IdContainer identifierFixup)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Persistence.IdContainer.html">IdContainer</a></td>
+        <td><span class="parametername">identifierFixup</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_XmlModelParser_NationalInstruments_SourceModel_Persistence_IElementFixupRegistrar_RegisterTerminalIdentifierFixup_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.NationalInstruments#SourceModel#Persistence#IElementFixupRegistrar#RegisterTerminalIdentifierFixup*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_XmlModelParser_NationalInstruments_SourceModel_Persistence_IElementFixupRegistrar_RegisterTerminalIdentifierFixup_NationalInstruments_SourceModel_Persistence_ContentIdContainer_NationalInstruments_SourceModel_Persistence_TerminalIdContainer_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.NationalInstruments#SourceModel#Persistence#IElementFixupRegistrar#RegisterTerminalIdentifierFixup(NationalInstruments.SourceModel.Persistence.ContentIdContainer,NationalInstruments.SourceModel.Persistence.TerminalIdContainer)">IElementFixupRegistrar.RegisterTerminalIdentifierFixup(ContentIdContainer, TerminalIdContainer)</h4>
+  <div class="markdown level1 summary"><p>Register a fixup for a wired terminal identifier in case it needs to mutate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void IElementFixupRegistrar.RegisterTerminalIdentifierFixup(ContentIdContainer contentId, TerminalIdContainer terminalId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Persistence.ContentIdContainer.html">ContentIdContainer</a></td>
+        <td><span class="parametername">contentId</span></td>
+        <td><p>The content identifier before mutation took place.  This is the content Id
+and not the terminal Id.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Persistence.TerminalIdContainer.html">TerminalIdContainer</a></td>
+        <td><span class="parametername">terminalId</span></td>
+        <td><p>A container for reading the terminal Id after it has been parsed but before it has
+been merged. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Persistence_XmlModelParser_NationalInstruments_SourceModel_Persistence_IElementFixupRegistrar_RegisterWireDescription_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.NationalInstruments#SourceModel#Persistence#IElementFixupRegistrar#RegisterWireDescription*"></a>
+  <h4 id="NationalInstruments_SourceModel_Persistence_XmlModelParser_NationalInstruments_SourceModel_Persistence_IElementFixupRegistrar_RegisterWireDescription_NationalInstruments_SourceModel_WireDescription_" data-uid="NationalInstruments.SourceModel.Persistence.XmlModelParser.NationalInstruments#SourceModel#Persistence#IElementFixupRegistrar#RegisterWireDescription(NationalInstruments.SourceModel.WireDescription)">IElementFixupRegistrar.RegisterWireDescription(WireDescription)</h4>
+  <div class="markdown level1 summary"><p>Register a wire description for a wire in the model.  Registered wire descriptions are processed
+after all other properties and elements have been processed so they can be connected and laid out properly.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void IElementFixupRegistrar.RegisterWireDescription(WireDescription description)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireDescription.html">WireDescription</a></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>The wire description for the wire being parsed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Persistence.IElementFixupRegistrar.html">IElementFixupRegistrar</a>
+  </div>
+  <div>
+      <span class="xref">NationalInstruments.DynamicProperties.IParsableErrorReporter</span>
+  </div>
+  <div>
+      <span class="xref">NationalInstruments.DynamicProperties.IPropertyParserFactory</span>
+  </div>
+  <div>
+      <span class="xref">NationalInstruments.Core.IServiceAggregator</span>
+  </div>
+  <div>
+      <span class="xref">NationalInstruments.Core.IQueryService</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.PaletteContextHelpers.html#NationalInstruments_Design_PaletteContextHelpers_GetPaletteContextKeywords_NationalInstruments_Core_IQueryService_">PaletteContextHelpers.GetPaletteContextKeywords(IQueryService)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
