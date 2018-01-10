@@ -1,0 +1,656 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IViewElement
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IViewElement
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.SourceModel.IViewElement">
+  
+  
+  <h1 id="NationalInstruments_SourceModel_IViewElement" data-uid="NationalInstruments.SourceModel.IViewElement" class="text-break">Interface IViewElement
+  </h1>
+  <div class="markdown level0 summary"><p>Represents a model object that can be resized. This was changed to a
+bounds rather than just a size since most ui operations in LV set
+both. Also, when a structure is resized, it really clips each side,
+which requires us to know the context of all changes, not just the top,
+left, width and height individually.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.SourceModel.html">NationalInstruments.SourceModel</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_SourceModel_IViewElement_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IViewElement</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_IViewElement_Angle_" data-uid="NationalInstruments.SourceModel.IViewElement.Angle*"></a>
+  <h4 id="NationalInstruments_SourceModel_IViewElement_Angle" data-uid="NationalInstruments.SourceModel.IViewElement.Angle">Angle</h4>
+  <div class="markdown level1 summary"><p>Angle (if transformed). Generally 0</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">float Angle { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_IViewElement_Bounds_" data-uid="NationalInstruments.SourceModel.IViewElement.Bounds*"></a>
+  <h4 id="NationalInstruments_SourceModel_IViewElement_Bounds" data-uid="NationalInstruments.SourceModel.IViewElement.Bounds">Bounds</h4>
+  <div class="markdown level1 summary"><p>Bounds of this element. Does not include descendants, which may exceed our bounds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">SMRect Bounds { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMRect</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_IViewElement_Facade_" data-uid="NationalInstruments.SourceModel.IViewElement.Facade*"></a>
+  <h4 id="NationalInstruments_SourceModel_IViewElement_Facade" data-uid="NationalInstruments.SourceModel.IViewElement.Facade">Facade</h4>
+  <div class="markdown level1 summary"><p>A different key (other than type) to use to lookup the ViewModel/View for this Element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Facade { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_IViewElement_Height_" data-uid="NationalInstruments.SourceModel.IViewElement.Height*"></a>
+  <h4 id="NationalInstruments_SourceModel_IViewElement_Height" data-uid="NationalInstruments.SourceModel.IViewElement.Height">Height</h4>
+  <div class="markdown level1 summary"><p>Height of this element</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">float Height { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_IViewElement_Left_" data-uid="NationalInstruments.SourceModel.IViewElement.Left*"></a>
+  <h4 id="NationalInstruments_SourceModel_IViewElement_Left" data-uid="NationalInstruments.SourceModel.IViewElement.Left">Left</h4>
+  <div class="markdown level1 summary"><p>Left (x) coordinate of this element</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">float Left { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_IViewElement_LogicalModel_" data-uid="NationalInstruments.SourceModel.IViewElement.LogicalModel*"></a>
+  <h4 id="NationalInstruments_SourceModel_IViewElement_LogicalModel" data-uid="NationalInstruments.SourceModel.IViewElement.LogicalModel">LogicalModel</h4>
+  <div class="markdown level1 summary"><p>The Element this interface is for</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Element LogicalModel { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_IViewElement_MaximumSize_" data-uid="NationalInstruments.SourceModel.IViewElement.MaximumSize*"></a>
+  <h4 id="NationalInstruments_SourceModel_IViewElement_MaximumSize" data-uid="NationalInstruments.SourceModel.IViewElement.MaximumSize">MaximumSize</h4>
+  <div class="markdown level1 summary"><p>The maximum size for this element</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">SMSize MaximumSize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMSize</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_IViewElement_MinimumSize_" data-uid="NationalInstruments.SourceModel.IViewElement.MinimumSize*"></a>
+  <h4 id="NationalInstruments_SourceModel_IViewElement_MinimumSize" data-uid="NationalInstruments.SourceModel.IViewElement.MinimumSize">MinimumSize</h4>
+  <div class="markdown level1 summary"><p>The minimum size for this element</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">SMSize MinimumSize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMSize</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_IViewElement_Scale_" data-uid="NationalInstruments.SourceModel.IViewElement.Scale*"></a>
+  <h4 id="NationalInstruments_SourceModel_IViewElement_Scale" data-uid="NationalInstruments.SourceModel.IViewElement.Scale">Scale</h4>
+  <div class="markdown level1 summary"><p>Scale to apply to the viewElement. Generally 1</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">float Scale { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_IViewElement_Template_" data-uid="NationalInstruments.SourceModel.IViewElement.Template*"></a>
+  <h4 id="NationalInstruments_SourceModel_IViewElement_Template" data-uid="NationalInstruments.SourceModel.IViewElement.Template">Template</h4>
+  <div class="markdown level1 summary"><p>PJC This property does not belong. Either go back to string or move to Node/IViewNode.
+The templated view for the view element.
+Different than Facade - Facade is &quot;Pick this ViewModel/View for this model&quot;, this is more a different style for same control.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ViewElementTemplate Template { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ViewElementTemplate.html">ViewElementTemplate</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_IViewElement_Top_" data-uid="NationalInstruments.SourceModel.IViewElement.Top*"></a>
+  <h4 id="NationalInstruments_SourceModel_IViewElement_Top" data-uid="NationalInstruments.SourceModel.IViewElement.Top">Top</h4>
+  <div class="markdown level1 summary"><p>Top (y) coordinate of this element</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">float Top { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_IViewElement_Transform_" data-uid="NationalInstruments.SourceModel.IViewElement.Transform*"></a>
+  <h4 id="NationalInstruments_SourceModel_IViewElement_Transform" data-uid="NationalInstruments.SourceModel.IViewElement.Transform">Transform</h4>
+  <div class="markdown level1 summary"><p>Full transform for this view element</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">PlatformTransform Transform { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.PlatformTransform</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_IViewElement_Translate_" data-uid="NationalInstruments.SourceModel.IViewElement.Translate*"></a>
+  <h4 id="NationalInstruments_SourceModel_IViewElement_Translate" data-uid="NationalInstruments.SourceModel.IViewElement.Translate">Translate</h4>
+  <div class="markdown level1 summary"><p>Translate to apply to the viewElement</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">SMPoint Translate { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMPoint</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_IViewElement_ViewAlignment_" data-uid="NationalInstruments.SourceModel.IViewElement.ViewAlignment*"></a>
+  <h4 id="NationalInstruments_SourceModel_IViewElement_ViewAlignment" data-uid="NationalInstruments.SourceModel.IViewElement.ViewAlignment">ViewAlignment</h4>
+  <div class="markdown level1 summary"><p>Which side this element wants to be aligned on: left or right edge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ViewAlignment ViewAlignment { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ViewAlignment.html">ViewAlignment</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_IViewElement_Visible_" data-uid="NationalInstruments.SourceModel.IViewElement.Visible*"></a>
+  <h4 id="NationalInstruments_SourceModel_IViewElement_Visible" data-uid="NationalInstruments.SourceModel.IViewElement.Visible">Visible</h4>
+  <div class="markdown level1 summary"><p>Whether we are visible</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool Visible { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_IViewElement_Width_" data-uid="NationalInstruments.SourceModel.IViewElement.Width*"></a>
+  <h4 id="NationalInstruments_SourceModel_IViewElement_Width" data-uid="NationalInstruments.SourceModel.IViewElement.Width">Width</h4>
+  <div class="markdown level1 summary"><p>Width of this element</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">float Width { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_IViewElement_EnsureView_" data-uid="NationalInstruments.SourceModel.IViewElement.EnsureView*"></a>
+  <h4 id="NationalInstruments_SourceModel_IViewElement_EnsureView_NationalInstruments_SourceModel_EnsureViewHints_" data-uid="NationalInstruments.SourceModel.IViewElement.EnsureView(NationalInstruments.SourceModel.EnsureViewHints)">EnsureView(EnsureViewHints)</h4>
+  <div class="markdown level1 summary"><p>Ensure that the visual characteristics of a model are valid given the
+current state of the object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void EnsureView(EnsureViewHints hints)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.EnsureViewHints.html">EnsureViewHints</a></td>
+        <td><span class="parametername">hints</span></td>
+        <td><p>ensure hints to identify what work should be performed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.GravityField.html#NationalInstruments_Design_GravityField_Gravitate_NationalInstruments_SourceModel_IViewElement_NationalInstruments_SourceModel_IViewElement_System_Double_">GravityField.Gravitate(IViewElement, IViewElement, Double)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.IViewElementHelper.html#NationalInstruments_SourceModel_IViewElementHelper_CoercePositionToParent_NationalInstruments_SourceModel_IViewElement_">IViewElementHelper.CoercePositionToParent(IViewElement)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.IViewElementHelper.html#NationalInstruments_SourceModel_IViewElementHelper_CoerceBoundsToMinimumSize_NationalInstruments_SourceModel_IViewElement_NationalInstruments_Core_SMRect_">IViewElementHelper.CoerceBoundsToMinimumSize(IViewElement, SMRect)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.IViewElementHelper.html#NationalInstruments_SourceModel_IViewElementHelper_HitTest_NationalInstruments_SourceModel_IViewElement_NationalInstruments_Core_SMRect_">IViewElementHelper.HitTest(IViewElement, SMRect)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.IViewElementHelper.html#NationalInstruments_SourceModel_IViewElementHelper_UnorderedHitTest_NationalInstruments_SourceModel_IViewElement_NationalInstruments_Core_SMRect_">IViewElementHelper.UnorderedHitTest(IViewElement, SMRect)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.IViewElementHelper.html#NationalInstruments_SourceModel_IViewElementHelper_GetMatrix_NationalInstruments_SourceModel_IViewElement_">IViewElementHelper.GetMatrix(IViewElement)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.IViewElementHelper.html#NationalInstruments_SourceModel_IViewElementHelper_TransformPoint_NationalInstruments_SourceModel_IViewElement_NationalInstruments_Core_SMPoint_NationalInstruments_SourceModel_IViewElement_">IViewElementHelper.TransformPoint(IViewElement, SMPoint, IViewElement)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.IViewElementHelper.html#NationalInstruments_SourceModel_IViewElementHelper_TransformPointToOrigin_NationalInstruments_SourceModel_IViewElement_NationalInstruments_Core_SMPoint_">IViewElementHelper.TransformPointToOrigin(IViewElement, SMPoint)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.IViewElementHelper.html#NationalInstruments_SourceModel_IViewElementHelper_TransformBoundsToOrigin_NationalInstruments_SourceModel_IViewElement_">IViewElementHelper.TransformBoundsToOrigin(IViewElement)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.IViewElementHelper.html#NationalInstruments_SourceModel_IViewElementHelper_TransformRectangleToOrigin_NationalInstruments_SourceModel_IViewElement_NationalInstruments_Core_SMRect_">IViewElementHelper.TransformRectangleToOrigin(IViewElement, SMRect)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.IViewElementHelper.html#NationalInstruments_SourceModel_IViewElementHelper_TransformRect_NationalInstruments_SourceModel_IViewElement_NationalInstruments_Core_SMRect_NationalInstruments_SourceModel_IViewElement_">IViewElementHelper.TransformRect(IViewElement, SMRect, IViewElement)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.IViewElementHelper.html#NationalInstruments_SourceModel_IViewElementHelper_GetTransformToOrigin_NationalInstruments_SourceModel_IViewElement_">IViewElementHelper.GetTransformToOrigin(IViewElement)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.IViewElementHelper.html#NationalInstruments_SourceModel_IViewElementHelper_GetParent_NationalInstruments_SourceModel_IViewElement_">IViewElementHelper.GetParent(IViewElement)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.IViewElementHelper.html#NationalInstruments_SourceModel_IViewElementHelper_GetSize_NationalInstruments_SourceModel_IViewElement_">IViewElementHelper.GetSize(IViewElement)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.IViewElementHelper.html#NationalInstruments_SourceModel_IViewElementHelper_GetCommonAncestor_NationalInstruments_SourceModel_IViewElement_NationalInstruments_SourceModel_IViewElement_">IViewElementHelper.GetCommonAncestor(IViewElement, IViewElement)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.IViewElementHelper.html#NationalInstruments_SourceModel_IViewElementHelper_Offset_NationalInstruments_SourceModel_IViewElement_NationalInstruments_Core_SMPoint_">IViewElementHelper.Offset(IViewElement, SMPoint)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.IViewElementHelper.html#NationalInstruments_SourceModel_IViewElementHelper_GetChildren_NationalInstruments_SourceModel_IViewElement_">IViewElementHelper.GetChildren(IViewElement)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.IViewElementHelper.html#NationalInstruments_SourceModel_IViewElementHelper_GetSiblings_NationalInstruments_SourceModel_IViewElement_">IViewElementHelper.GetSiblings(IViewElement)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.IViewElementHelper.html#NationalInstruments_SourceModel_IViewElementHelper_GetSelfAndViewDescendants_NationalInstruments_SourceModel_IViewElement_">IViewElementHelper.GetSelfAndViewDescendants(IViewElement)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.IViewElementHelper.html#NationalInstruments_SourceModel_IViewElementHelper_GetViewDescendants_NationalInstruments_SourceModel_IViewElement_">IViewElementHelper.GetViewDescendants(IViewElement)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.IViewElementHelper.html#NationalInstruments_SourceModel_IViewElementHelper_InitializePositionFrom_NationalInstruments_SourceModel_IViewElement_NationalInstruments_SourceModel_IViewElement_">IViewElementHelper.InitializePositionFrom(IViewElement, IViewElement)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

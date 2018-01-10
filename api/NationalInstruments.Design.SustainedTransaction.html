@@ -1,0 +1,472 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SustainedTransaction
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SustainedTransaction
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.Design.SustainedTransaction">
+  
+  
+  <h1 id="NationalInstruments_Design_SustainedTransaction" data-uid="NationalInstruments.Design.SustainedTransaction" class="text-break">Class SustainedTransaction
+  </h1>
+  <div class="markdown level0 summary"><p>Represents a transaction that is created and then kept open for a certain period of time.
+While the transaction is open, a client of this class can extend the lifetime of the transaction 
+by calling the <a class="xref" href="NationalInstruments.Design.SustainedTransaction.html#NationalInstruments_Design_SustainedTransaction_BeginOrSustain">BeginOrSustain()</a> method.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">NationalInstruments.Core.Disposable</span></div>
+    <div class="level2"><span class="xref">SustainedTransaction</span></div>
+      <div class="level3"><a class="xref" href="NationalInstruments.Design.SimpleSustainedTransaction.html">SimpleSustainedTransaction</a></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IDisposable</span></div>
+    <div><span class="xref">System.Windows.IWeakEventListener</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">NationalInstruments.Core.Disposable.IsDisposed</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.Disposable.Dispose()</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.Disposable.ThrowIfDisposed()</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.Disposable.DisposeUnmanagedResources()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.Design.html">NationalInstruments.Design</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_Design_SustainedTransaction_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class SustainedTransaction : Disposable, IDisposable, IWeakEventListener</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="NationalInstruments_Design_SustainedTransaction__ctor_" data-uid="NationalInstruments.Design.SustainedTransaction.#ctor*"></a>
+  <h4 id="NationalInstruments_Design_SustainedTransaction__ctor_NationalInstruments_SourceModel_ITransactionManager_" data-uid="NationalInstruments.Design.SustainedTransaction.#ctor(NationalInstruments.SourceModel.ITransactionManager)">SustainedTransaction(ITransactionManager)</h4>
+  <div class="markdown level1 summary"><p>Creates a new instance of the <a class="xref" href="NationalInstruments.Design.SustainedTransaction.html">SustainedTransaction</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected SustainedTransaction(ITransactionManager manager)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ITransactionManager.html">ITransactionManager</a></td>
+        <td><span class="parametername">manager</span></td>
+        <td><p>The <a class="xref" href="NationalInstruments.SourceModel.ITransactionManager.html">ITransactionManager</a> used to created transactions.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_Design_SustainedTransaction_Interval_" data-uid="NationalInstruments.Design.SustainedTransaction.Interval*"></a>
+  <h4 id="NationalInstruments_Design_SustainedTransaction_Interval" data-uid="NationalInstruments.Design.SustainedTransaction.Interval">Interval</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the amount of time that must elapse before the transacted operation is considered complete and is committed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan Interval { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_SustainedTransaction_IsActive_" data-uid="NationalInstruments.Design.SustainedTransaction.IsActive*"></a>
+  <h4 id="NationalInstruments_Design_SustainedTransaction_IsActive" data-uid="NationalInstruments.Design.SustainedTransaction.IsActive">IsActive</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether the sustained transaction is active.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsActive { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_SustainedTransaction_Transaction_" data-uid="NationalInstruments.Design.SustainedTransaction.Transaction*"></a>
+  <h4 id="NationalInstruments_Design_SustainedTransaction_Transaction" data-uid="NationalInstruments.Design.SustainedTransaction.Transaction">Transaction</h4>
+  <div class="markdown level1 summary"><p>Gets the currently active sustained <a class="xref" href="NationalInstruments.SourceModel.IActiveTransaction.html">IActiveTransaction</a>.  This can be <code>null</code>
+if there is not an active sustained transction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IActiveTransaction Transaction { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.IActiveTransaction.html">IActiveTransaction</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_Design_SustainedTransaction_BeginInteractiveTransaction_" data-uid="NationalInstruments.Design.SustainedTransaction.BeginInteractiveTransaction*"></a>
+  <h4 id="NationalInstruments_Design_SustainedTransaction_BeginInteractiveTransaction" data-uid="NationalInstruments.Design.SustainedTransaction.BeginInteractiveTransaction">BeginInteractiveTransaction()</h4>
+  <div class="markdown level1 summary"><p>Called to begin a new asynchronous transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract IActiveTransaction BeginInteractiveTransaction()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.IActiveTransaction.html">IActiveTransaction</a></td>
+        <td><p>The created asynchronous transaction.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_SustainedTransaction_BeginOrSustain_" data-uid="NationalInstruments.Design.SustainedTransaction.BeginOrSustain*"></a>
+  <h4 id="NationalInstruments_Design_SustainedTransaction_BeginOrSustain" data-uid="NationalInstruments.Design.SustainedTransaction.BeginOrSustain">BeginOrSustain()</h4>
+  <div class="markdown level1 summary"><p>Creates a new asynchronous transaction that will be alive for a period of time, or extends
+the lifetime of a previously created transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BeginOrSustain()</code></pre>
+  </div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ObjectDisposedException</span></td>
+        <td><p>Thrown if this object has been disposed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_SustainedTransaction_DisposeManagedResources_" data-uid="NationalInstruments.Design.SustainedTransaction.DisposeManagedResources*"></a>
+  <h4 id="NationalInstruments_Design_SustainedTransaction_DisposeManagedResources" data-uid="NationalInstruments.Design.SustainedTransaction.DisposeManagedResources">DisposeManagedResources()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void DisposeManagedResources()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">NationalInstruments.Core.Disposable.DisposeManagedResources</span></div>
+  
+  
+  <a id="NationalInstruments_Design_SustainedTransaction_EndIfActive_" data-uid="NationalInstruments.Design.SustainedTransaction.EndIfActive*"></a>
+  <h4 id="NationalInstruments_Design_SustainedTransaction_EndIfActive" data-uid="NationalInstruments.Design.SustainedTransaction.EndIfActive">EndIfActive()</h4>
+  <div class="markdown level1 summary"><p>Ends the current transaction if it is alive.  This is safe to call any time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void EndIfActive()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_SustainedTransaction_EndTransaction_" data-uid="NationalInstruments.Design.SustainedTransaction.EndTransaction*"></a>
+  <h4 id="NationalInstruments_Design_SustainedTransaction_EndTransaction" data-uid="NationalInstruments.Design.SustainedTransaction.EndTransaction">EndTransaction()</h4>
+  <div class="markdown level1 summary"><p>Called to end the sustained transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void EndTransaction()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_SustainedTransaction_OnTransactionComplete_" data-uid="NationalInstruments.Design.SustainedTransaction.OnTransactionComplete*"></a>
+  <h4 id="NationalInstruments_Design_SustainedTransaction_OnTransactionComplete" data-uid="NationalInstruments.Design.SustainedTransaction.OnTransactionComplete">OnTransactionComplete()</h4>
+  <div class="markdown level1 summary"><p>Called when the transaction has ended.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnTransactionComplete()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_SustainedTransaction_OnTransactionCreated_" data-uid="NationalInstruments.Design.SustainedTransaction.OnTransactionCreated*"></a>
+  <h4 id="NationalInstruments_Design_SustainedTransaction_OnTransactionCreated" data-uid="NationalInstruments.Design.SustainedTransaction.OnTransactionCreated">OnTransactionCreated()</h4>
+  <div class="markdown level1 summary"><p>Called when the sustained transaction has been started.  It can be accessed through the
+<a class="xref" href="NationalInstruments.Design.SustainedTransaction.html#NationalInstruments_Design_SustainedTransaction_Transaction">Transaction</a> property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnTransactionCreated()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_SustainedTransaction_ReceiveWeakEvent_" data-uid="NationalInstruments.Design.SustainedTransaction.ReceiveWeakEvent*"></a>
+  <h4 id="NationalInstruments_Design_SustainedTransaction_ReceiveWeakEvent_System_Type_System_Object_System_EventArgs_" data-uid="NationalInstruments.Design.SustainedTransaction.ReceiveWeakEvent(System.Type,System.Object,System.EventArgs)">ReceiveWeakEvent(Type, Object, EventArgs)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ReceiveWeakEvent(Type managerType, object sender, EventArgs e)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">managerType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">sender</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.EventArgs</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+  <div>
+      <span class="xref">System.Windows.IWeakEventListener</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

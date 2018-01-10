@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>The Wiring System </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="The Wiring System ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="the-wiring-system">The Wiring System</h1>
+
+<p>The Diagram SDK wiring system manages the creation and editing of wires between nodes on a diagram. In many cases, there are application-specific requirements for wiring visuals and constraints that must be adhered to when creating and manipulating wires. Thus, the wiring system provides interfaces and base classes that allow you to customize wire visuals and write wire management plug-ins that constrain wires as you see fit.</p>
+<h2 id="wiring-system-architecture">Wiring System Architecture</h2>
+<p>The following diagram illustrates the high-level architecture of the wiring system.</p>
+<p><img src="../../images/concepts/WiringRelationships.png" alt="WiringRelationships"></p>
+<h3 id="wiring-system-theory-of-operation">Wiring System Theory of Operation</h3>
+<p><a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_Wire.htm">Wires</a>, which are composed of <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_WireTerminal.htm">WireTerminals</a>, <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_WireJoint.htm">WireJoints</a>, and <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_WireSegment.htm">WireSegments</a>, connect <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_Wireable.htm">Wireables</a>, such as <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_Node.htm">Nodes</a> and <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_NestedDiagram.htm">NestedDiagrams</a>, on a <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_RootDiagram.htm">RootDiagram</a>. Wire routing is constrained by an implementation of <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_IWiringBehavior.htm">IWiringBehavior</a>, which manages the end user&#39;s creation, movement, and configuration of wires through a <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Designer_WiringTool.htm">WiringTool</a>.</p>
+<p>As shown in the following simplified diagram, a wire originates at a WireableTerminal (i.e. a <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_NodeTerminal.htm">NodeTerminal</a> or a <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_BorderNodeTerminal.htm">BorderNodeTerminal</a>), which connects to a <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_WireTerminal.htm">WireTerminal</a>. The length of the wire, which comprises 1 or more WireSegments connected by WireJoints, routes on a <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_Diagram.htm">Diagram</a> and terminates with one or more WireTerminals, each of which connects to a WireableTerminal.</p>
+<p><img src="../../images/concepts/WiringDiagram.png" alt="WiringDiagram"></p>
+<h3 id="managing-wirejoints-and-wiresegments">Managing WireJoints and WireSegments</h3>
+<p>Wire management involves keeping WireJoints and WireSegments up-to-date and consistent with one another. If you use the <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_ManhattanWiringBehavior.htm">ManhattanWiringBehavior</a> built into the Diagram SDK, you won&#39;t need to worry about wire management. However, if you implement your own <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_IWiringBehavior.htm">IWiringBehavior</a> based on the Wire and WireJoint APIs, wire management is up to you.</p>
+<h2 id="primary-types-that-participate-in-the-wiring-system">Primary Types that Participate in the Wiring System</h2>
+<p>The following table describes the primary types that participate in the wiring system.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Class</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Wire</td>
+<td style="text-align:left">Contains WireJoints and WireSegments and represents a wire in the model</td>
+</tr>
+<tr>
+<td style="text-align:left">WireJoint</td>
+<td style="text-align:left">A joint is a point in a wire that is connected to one or more other joints in the wire. A joint can be a terminating joint or bend or a branch</td>
+</tr>
+<tr>
+<td style="text-align:left">WireSegment</td>
+<td style="text-align:left">A segment represents the connection between two adjacent joints</td>
+</tr>
+<tr>
+<td style="text-align:left">IWiringBehavior</td>
+<td style="text-align:left">Controls how Wires are created and joints and segments are moved</td>
+</tr>
+<tr>
+<td style="text-align:left">WiringContext</td>
+<td style="text-align:left">Uses an IWiringBehavior to create and edit wires</td>
+</tr>
+<tr>
+<td style="text-align:left">IWiringStart</td>
+<td style="text-align:left">A start element for a wiring operation</td>
+</tr>
+<tr>
+<td style="text-align:left">IWiringEnd</td>
+<td style="text-align:left">An end element for a wiring operation</td>
+</tr>
+<tr>
+<td style="text-align:left">WiringTool</td>
+<td style="text-align:left">The tool in the editor that allows the user to create, branch, and connect wires</td>
+</tr>
+<tr>
+<td style="text-align:left">WireControl</td>
+<td style="text-align:left">The WPF/Silverlight UserControl which binds to the Wire and visually displays it; also manages direct wire segment selection and movement (it moves segments by calling into the IWiringBehavior functions and passing in the WireSegment(s) selected)</td>
+</tr>
+<tr>
+<td style="text-align:left">Diagram Wires</td>
+<td style="text-align:left">can be created between IWiringStart and IWiringEnd points on a diagram</td>
+</tr>
+<tr>
+<td style="text-align:left">RootDiagram</td>
+<td style="text-align:left">Contains several high-level functions which create wires and connect them using the lower-level Wire API; also has the KeepWiresAttached function which updates the wire to stay connected to moving nodes with wired terminals</td>
+</tr>
+</tbody>
+</table>
+<h3 id="wiringtool">WiringTool</h3>
+<p>The <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Designer_WiringTool.htm">WiringTool</a> is the <a href="diagram-editing-system.html#adorners-and-tools">tool</a> responsible for intercepting user gestures such as mouse clicks and translating them into wiring actions on the diagram.</p>
+<p>The WiringTool uses the RootDiagram for point transformation, for example in its <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/M_NationalInstruments_SourceModel_Designer_WiringTool_CreateWiresBetweenSelection.htm">CreateWiresBetweenSelection</a> method. The WiringTool 
+uses the <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_Wire.htm">Wire</a> by calling <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/M_NationalInstruments_SourceModel_Modeling_Wire_MakeJoint.htm">MakeJoint</a> to create joints in the source wire and calling <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/M_NationalInstruments_SourceModel_Modeling_Wire_CreateTerminal.htm">CreateTerminal</a> to add 
+<a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_Terminal.htm">Terminals</a> to the source Wire. The WiringTool uses the <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_IWiringBehavior.htm">IWiringBehavior</a> interface by calling its <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/M_NationalInstruments_SourceModel_Modeling_IWiringBehavior_CreateWire.htm">CreateWire</a> method to create a simple wire when the user 
+starts a new wire operation, and continues to call into the interface as the user progresses through the wiring operation. The WiringTool also uses the IWiringBehaviour 
+interface to determine whether a WireJoint exists near a given position.</p>
+<h3 id="iwiringbehavior">IWiringBehavior</h3>
+<p>An <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_IWiringBehavior.htm">IWiringBehavior</a> implementation calls directly into the APIs for Wire, WireJoint, and WireSegment to manage custom wiring behaviors. This interface allows you to design a custom wiring system by defining specific behaviors, such as how to create, move, and collapse wire joints and segments. This interface also helps enfore the validity of wires through the <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/M_NationalInstruments_SourceModel_Modeling_IWiringBehavior_ValidateSegmentPoints.htm">ValidateSegmentPoints</a> method.</p>
+<h3 id="wire">Wire</h3>
+<p>The <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_Wire.htm">Wire</a> class makes extensive use of the WireJoint and WireSegment APIs, as it maintains lists of its joints and segments and manipulates them frequently.</p>
+<h3 id="wirejoint">WireJoint</h3>
+<p>The <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_WireJoint.htm">WireJoint</a> implements the <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_ICompositeWireJoint.htm">ICompositeWireJoint</a> interface and so calls back into its parent Wire to implement the functions on that interface. It also calls into its parent wire when its Top or Left position changes so that it can tell the wire to emit the PropertyChanged event.</p>
+<h3 id="wiresegment">WireSegment</h3>
+<p>The <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_WireSegment.htm">WireSegment</a> uses the WireJoint API, since it is comprised to two WireJoints. It listens to its two joints&#39; PropertyChanged events and passes them up to the user interface.</p>
+<h3 id="rootdiagram-class">RootDiagram Class</h3>
+<p>The <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_RootDiagram.htm">RootDiagram</a> can create complex wires by calling into the Wire API and the IWiringBehavior API.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

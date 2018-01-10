@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>The Command System </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="The Command System ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="the-command-system">The Command System</h1>
+
+<p>The Diagram SDK command system provides base classes, events, plug-in contracts, and helpers for defining and implementing UI commands, including:</p>
+<ul>
+<li>Ribbon content</li>
+<li>Right-click context menu items</li>
+<li>The main menu bar and toolbar</li>
+</ul>
+<p>In addition to outlining the design of the Diagram SDK command system, this document also describes best practices for generating command UI in a Diagram SDK Shell application.</p>
+<h2 id="command-system-architecture">Command System Architecture</h2>
+<p>The following diagram illustrates the high-level architecture of the command system:</p>
+<p><img src="../../images/concepts/CommandRelationships.png" alt="CommandRelationships"></p>
+<h2 id="command-system-theory-of-operation">Command System Theory of Operation</h2>
+<p>At the heart of both menu UI population and command execution are the various command base classes provided by the Diagram SDK:</p>
+<ul>
+<li><a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/4b859548-5702-8e8f-e0bb-1c458164d3f5.htm">RibbonCommand</a> - a routed command that can be handled by any arbitrary command handler</li>
+<li><a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/6a17a5b6-6edf-ca9d-1ab3-2d8549dfba47.htm">RibbonRelayCommand</a> - a non-routed command that attaches to a known command handler</li>
+<li><a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/4b859548-5702-8e8f-e0bb-1c458164d3f5.htm">RibbonSelectionCommand</a> - a non-routed command that acts on the current selection</li>
+<li><a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/67fe7128-2629-540a-c98a-7182e3212a7e.htm">RibbonSelectionRelayCommand</a> - a non-routed command that acts on the current selection</li>
+</ul>
+<p>You should never use any other type of command in a Diagram SDK shell application. The main reason for this restriction is to prevent disrupting the shell application&#39;s command filtering process, which is crucial to the behavior of various aspects of the editor UI. For routed commands, filtering is accomplished by hooking into the command preview pass for both CanExecute and Execute. For non-routed commands, the ribbon commands directly participate in the filtering process.</p>
+<h3 id="best-practices">Best Practices</h3>
+<p>Use the following best practices to ensure that your command UI code supports all current and future command system features:</p>
+<ul>
+<li>DO define your commands by using the Ribbon Command types from NationalInstruments.ShellControls.Ribbon (<a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/4b859548-5702-8e8f-e0bb-1c458164d3f5.htm">RibbonCommand</a>, <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/6a17a5b6-6edf-ca9d-1ab3-2d8549dfba47.htm">RibbonRelayCommand</a>, <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/4b859548-5702-8e8f-e0bb-1c458164d3f5.htm">RibbonSelectionCommand</a>, <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/4b859548-5702-8e8f-e0bb-1c458164d3f5.htm">RibbonSelectionRelayCommand</a>).</li>
+<li>DO NOT use commands that are not based on the Diagram SDK&#39;s ribbon command base classes.</li>
+<li>DO use the layout configuration APIs described in this document.</li>
+<li>DO NOT use XAML. </li>
+<li>DO NOT use any custom layout panels (e.g. StackPanels, etc.). Instead, leverage the layout hinting API described in this document, which provides various layout options. If you use custom layout panels, your ribbon UI will likely suffer from poor resize characteristics.</li>
+<li>DO derive your command from <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/4b859548-5702-8e8f-e0bb-1c458164d3f5.htm">RibbonSelectionCommand</a> if it operates on the current selection in the editor.</li>
+<li>DO NOT simply derive all your commands from RibbonCommand, which uses expensive routed commands and events under the hood. Use RibbonCommand only when the command handler is not known up-front.</li>
+<li>DO use command parameters to manage your command state.</li>
+<li>DO NOT attempt to attach state directly to a command. Commands are inherently shared, stateless objects.</li>
+<li>DO declare all your commands with the <code>static</code> keyword.</li>
+<li>DO NOT use commands that are not static ribbon commands. This requirement is necessary to enable user-customization of the commanding UI. The static ribbon commands are registered with the editor and provide enough information to allow the user to place commands in the QuickAccessToolbar and in the future create their own ribbon tabs and groups. This also reinforces the need to avoid assumptions about a command visual&#39;s context within the command UI, since command visuals can be displayed in user-specified locations.</li>
+<li>DO asssume that your command UI visuals may appear in places you might not expect (e.g. in user-defined locations).</li>
+<li>DO NOT make assumptions about a visual&#39;s context within the command UI. For example, if your command UI is a RibbonButton, you should not assume that it will only appear in a specific RibbonGroup or RibbonTab. By providing the selection command, the need to create a ViewModel for the selection is reduced and thus the need to create a ViewModel shared via the group or tab is removed.</li>
+</ul>
+<h2 id="selecting-a-command-base-class">Selecting a Command Base Class</h2>
+<p>When choosing which command type to use, first consider whether you need the command to be routed through the visual tree hierarchy. Typically, this is necessary if the command handler is not known up-front. In this case, you will need to derive from <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/4b859548-5702-8e8f-e0bb-1c458164d3f5.htm">RibbonCommand</a>, which uses <a href="http://msdn.microsoft.com/en-us/magazine/cc785480.aspx">routed events</a>. If your command has a single handler that is known up-front and is not based on the state of the UI, it is more efficient to use a <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/6a17a5b6-6edf-ca9d-1ab3-2d8549dfba47.htm">RibbonRelayCommand</a>, which does not use routed events and commands. Note that unlike RibbonCommand, RibbonRelayCommand takes a delegate object for Execute, and optionally for CanExecute and AttachToVisual.</p>
+<p>Routed events and commands work by walking through the visual hierarchy looking for a handler to execute the command. If no handler is found, the command is disabled. These are useful when a command handler is different than the object that registered the command and the presence of the handler in the chain makes it easy for command enabling. For example the Cut command is registered by the documents but is handled by the selection tool. When the selection tool is not present in the UI (such as during VI execution), the command is automatically disabled. Routed commands are much more expensive when performing the CanExecute command updates so they should only be used when needed.</p>
+<p>To make it easy to write commands that deal with the selected object(s) on the designer surface, the Diagram SDK provides the <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/4b859548-5702-8e8f-e0bb-1c458164d3f5.htm">RibbonSelectionCommand</a> and <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/67fe7128-2629-540a-c98a-7182e3212a7e.htm">RibbonSelectionRelayCommand</a> base classes. The command system automatically passes the current selection and other commonly-used objects to these commands, which makes it easy to act upon the current selection. These two base classes have the same capabilities and performance characteristics, so your choice depends entirely on programming style preferences. RibbonSelectionCommand requires you to derive your command and override the Execute, CanExecute, and AttachToVisual methods, whereas with RibbonSelectionRelayCommand, you pass these method implementations as delegates to the command constructor.</p>
+<h3 id="using-command-parameters">Using Command Parameters</h3>
+<p>Commands are stateless objects in the sense that the same command can be in used in multiple places in the editor at any given time, or even in multiple editors when more than one project is open. Thus, a command cannot store state directly and must instead rely on a non-shared mechanism to store state. This role is filled by <a href="http://msdn.microsoft.com/en-us/library/system.windows.input.icommandsource.commandparameter(v=vs.110).aspx">command parameters</a>.</p>
+<p>Every visual element provided by the Diagram SDK includes a command parameter with properties suitable for the type of visual element. In general, there are properties for managing states such as enabled, disabled, checked, etc. There are also properties for specific visual types, e.g. to manage the items in a combo box.</p>
+<p>When a command is set on a visual element provided by the Diagram SDK, the command’s AttachToVisual method is called and both the visual and its command parameter are passed in as parameters. At this point, the command can use the IServiceAggregator to add additional state data to the command parameter. For example, you can add state objects that implement an interface that can later be queried via <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/fd18f86d-af1f-af4f-f4c6-25d9127169bd.htm">ShellCommandInstance.QueryService</a> or <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/7d27a6bf-9f8a-1584-7220-b07e991fd1c0.htm">ViewModelBase.QueryService</a>.</p>
+<h3 id="managing-ui-state-and-reacting-to-user-input">Managing UI State and Reacting to User Input</h3>
+<p>The command system supports two ways of managing UI state and reacting to user input: via the CanExecute and Execute methods or via data binding. Note, however, that the Diagram SDK currently does not provide any special mechanisms such that a command can connect to multiple visualizations (e.g. a ribbon visual and a menu item) via data binding.</p>
+<p>Traditionally, WPF commands implement CanExecute to update the state of UI elements and implement Execute to react to user input. All of the IRibbonCommand variants support this mode of interaction. The visual elements provided by the Diagram SDK also support this form of command updating in the form of command parameters with properties that allow visual-specific property updating. In this scenario, it is advisable to store state in the command parameters to optimize the CanExecute callback method, since it is called frequently. The Execute method can then be used to handle user interactions.</p>
+<p>You can also choose to use data binding to the visual to manage state and user interactions. You should do this by setting the visual&#39;s DataContext in your command&#39;s AttachToVisual method, so that the framework can create additional UI visualizations of the command, e.g. in the Quick Access Toolbar. When setting up the data binding, you can choose to bind to state in the command parameter or other bindable objects in the system.</p>
+<h3 id="adding-command-visuals-to-a-shell-application">Adding Command Visuals to a Shell Application</h3>
+<p>The Diagram SDK provides interfaces, helpers, and MEF contracts to facilitate adding command visuals to common locations in the editor UI.</p>
+<h4 id="defining-contextual-tab-groups-via-editing-contexts">Defining Contextual Tab Groups Via Editing Contexts</h4>
+<p>Editing contexts are objects that define the general appearance of the user-facing contextual tab groups presented in a shell application. When an object is selected, one or more editing contexts will be used to display its command visuals. For example, editing contexts define the content of ribbon tabs.</p>
+<p>Each editing context has a string alias that is used to identify it. ViewModels indicate which editing contexts they are associated with by returning a set of aliases from the GetEditingContexts methods of IProvideRibbonContent and IPushRibbonContent.</p>
+<p>Ultimately, the aggregate collection of editing contexts returned by all ribbon providers is presented in the ribbon. In many cases, it is desirable to merge editing contexts together when displaying the content for an object. For example, the Node Configuration Framework defines an editing context that is generally used for all Nodes. Some nodes need to augment the tabs of this editing context to add additional configuration tabs. To do this, a new editing context can be specified that is a superset of the configuration context. This superset context can add a “WhenActiveAlias” attribute to the definition of the context. This attribute indicates that if both the configuration framework editing context and the superset context are specified, the configuration framework context should be excluded since the other context is a superset. All ribbon content that is defined to be in the node configuration context will then be added to the other context instead. A single context can have as many WhenActiveAlias attributes as needed.</p>
+<p>When adding content to the ribbon tabs, the RibbonPlacementProperties set of attached properties can be added to ribbon groups to control where the group will be added in the ribbon. The properties can specify weights so that groups can be sorted. The properties can also indicate to which contextual tab the group should be added.</p>
+<h4 id="populating-ribbon-content-for-elements">Populating Ribbon Content for Elements</h4>
+<p>When a visual is selected, the Diagram SDK automatically calls the CreateRibbonContent method of the corresponding ViewModel. Thus, to provide custom ribbon content, you should override the IProvideRibbonContent.CreateRibbonContent method in your ViewModel. All the ViewModel base classes implement IProvideRibbonContent and provide virtual methods that can be overridden.</p>
+<p>The CreateRibbonContent method should create all the visuals that you want to expose in the ribbon. The visuals should be IRibbonItem objects associated with commands and wrapped in a RibbonGroup or a RibbonTab (e.g. in the case of a Document ViewModel). The RibbonGroup class provides an AddItem API, which accepts either IRibbonItem visuals or IRibbonCommand objects directly.</p>
+<p>View Models can also filter content that is provided by Push Ribbon content providers as well as their base classes by looking at the content of the display context and using the context&#39;s Remove methods.</p>
+<h4 id="populating-popup-menus">Populating Popup Menus</h4>
+<p>The Diagram SDK populates the popup menu for selected items from IRibbonCommand objects in the same manner as the ribbon, except it filters based on the presence of PopupMenuPath. When you right-click an object, the system queries the relevant EditingContexts for commands that specify a PopupMenuPath. You can also use the MenuOnlyCommands collection to add popup-specific commands.</p>
+<p>Selected objects can also directly handle the DisplayPopupMenu routed event and display a custom popup menu by adding commands that define the popup menu. Visual elements that are not part of the current selection yet still need to display a popup menu should handle the DisplayPopupMenu event and add commands to be displayed.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

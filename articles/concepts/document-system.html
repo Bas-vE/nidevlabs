@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>The Document System </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="The Document System ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="the-document-system">The Document System</h1>
+
+<p>The Diagram SDK document system is responsible for managing, displaying and editing the user&#39;s source files within a <a href="shell.html">shell application</a>.</p>
+<h2 id="document-system-architecture">Document System Architecture</h2>
+<p>The following diagram illustrates the high-level architecture of the document system.</p>
+<p><img src="../../images/concepts/DocSystemRelationships.png" alt="DocSystemRelationships"></p>
+<h2 id="document-system-theory-of-operation">Document System Theory of Operation</h2>
+<p>When the end user opens a <a href="shell.html">shell application</a>, the <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_Shell_Restricted_ShellApplication.htm">ShellApplication</a> instantiates a <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_Shell_DocumentManager.htm">DocumentManager</a>, which is responsible for managing the life cycle of all <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Shell_Document.htm">Documents</a> opened within the application. The ShellApplication&#39;s <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_Shell_StudioWindow.htm">StudioWindow</a> instantiates a <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_Shell_DocumentEditor.htm">DocumentEditor</a>, which is responsible for managing the DocumentEditControls]<a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Shell_DocumentEditControl.htm">DocumentEditControlRef</a> that edit Documents.</p>
+<p>When the user opens an XML source file from disk, the <a href="persistence.html">persistence system</a> parses the file to create a <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_SourceFile.htm">SourceFile</a>, which represents the underlying XML source file in memory. The DocumentEditor instantiates the default DocumentEditControl specified by the Document&#39;s <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Shell_DocumentType_1.htm">DocumentType</a>. The DocumentEditControl provides a view that the end user can interact with to edit the document.</p>
+<h2 id="primary-classes-that-participate-in-the-document-system">Primary Classes that Participate in the Document System</h2>
+<h3 id="sourcefile">SourceFile</h3>
+<p>A <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_SourceFile.htm">SourceFile</a> represents a persisted file as a hierarchy of Diagram Object Model <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_Element.htm">Elements</a> in memory. A Document serves as a <a href="MVVM.html">ViewModel</a> for a SourceFile.</p>
+<h3 id="idocumenttype">IDocumentType</h3>
+<p>The <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Shell_IDocumentType.htm">IDocumentType</a> interface must be implemented by all <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Shell_DocumentType_1.htm">DocumentType</a> plug-ins. To be recognized by a shell application, you must export your DocumentTypes through the <a href="plugins.html">plug-in system</a> by declaring them as implementers of the IDocumentType contract. DocumentTypes are primarily responsible for creating new Documents and opening existing SourceFiles as Documents.</p>
+<h3 id="document">Document</h3>
+<p>A Document is a ViewModel for a <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_SourceFile.htm">SourceFile</a>. The purpose of a Document is to provide editor features for a SourceFile. Documents are created by their corresponding <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Shell_DocumentType_1.htm">ocumentType</a> factory classes and are used to track what is currently being edited. Documents have two major purposes:</p>
+<ol>
+<li>Providing commands and handlers for a SourceFile</li>
+<li>Connecting a SourceFile&#39;s Elements to DocumentEditControls in the View layer</li>
+</ol>
+<h3 id="documentmanager">DocumentManager</h3>
+<p>The <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_Shell_DocumentManager.htm">DocumentManager</a> maintains a list of currently open Documents and provides mechanisms to bind a SourceFile to a Document. It owns the lifetimes of Documents. The DocumentManager is a singleton for an application instance. The DocumentManager also owns the reference to the current project. There is always one and only one project open at a time for a given shell application instance. There is also a requirement that everything opened is part of the current project. The DocumentManager implements the <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Shell_DocumentType_1.htm">IDocumentManager</a> interface, which is importable through the <a href="plugins.html">plug-in framework</a>.</p>
+<h3 id="documenttype">DocumentType</h3>
+<p>The <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Shell_DocumentType_1.htm">DocumentType</a> class is a factory used to create Documents bound to SourceFiles.</p>
+<h3 id="documenteditor">DocumentEditor</h3>
+<p><a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_Shell_DocumentEditor.htm">DocumentEditor</a> is the root control in the <a href="shell.html">shell</a> responsible for document editing. The DocumentEditor is an internal object whose role is to:</p>
+<ul>
+<li>Instantiate <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Shell_DocumentEditControl.htm">DocumentEditControls</a> for open documents and provide the user with the means of switching between available DocumentEditControls</li>
+<li>Provide helpers for DocumentEditControls to navigate document hierarchies</li>
+<li>Provide zoom and auto-zoom behavior</li>
+</ul>
+<p>A document editor comprises a hierarchy of .NET FrameworkElements. At the root of the hierarchy is the DocumentEditControl, which includes a ResourceDictionary and a DesignerEditControl. The resource dictionary contains DataTemplates that can be data bound to model elements. The DesignerEditControl contains a RootDiagramCanvas, which is responsible for binding the model elements to the data templates.</p>
+<h3 id="documenteditsite">DocumentEditSite</h3>
+<p>The <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Shell_DocumentEditSite.htm">DocumentEditSite</a> type provides services to user interface elements of a DocumentEditControl, including:</p>
+<ul>
+<li>Access to the application instance and the <a href="http://msdn.microsoft.com/en-us/library/system.componentmodel.composition.hosting.compositioncontainer.aspx">CompositionContainer</a></li>
+<li>Methods to edit related documents</li>
+<li>Methods to change the active editor for a document</li>
+</ul>
+<p>You can call <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/M_NationalInstruments_SourceModel_Shell_DocumentEditSite_GetEditSite.htm">DocumentEditSite.GetEditSite</a> to access the DocumentEditSite for a specific dependency object.</p>
+<h3 id="documenteditcontrol">DocumentEditControl</h3>
+<p>The <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Shell_DocumentEditControl.htm">DocumentEditControl</a> type provides the root visual element for editing a Document. Thus, a DocumentEditControl is a View for a SourceFile. DocumentEditControls are hosted in the StudioWindow<a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_Shell_StudioWindow.htm">StudioWindowRef</a> Documents tab. Each IDocumentType can support one or more DocumentEditControls. For example, a VI supports both a front panel DocumentEditControl and a block diagram DocumentEditControl.</p>
+<p>The DocumentEditControl includes a <a href="http://msdn.microsoft.com/en-us/library/system.windows.resourcedictionary.aspx">ResourceDictionary</a> and a <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Designer_DesignerEditControl.htm">DesignerEditControl</a>. The ResourceDictionary contains <a href="http://msdn.microsoft.com/en-us/library/system.windows.datatemplate.aspx">DataTemplates</a> that can be data bound to model <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_Element.htm">Elements</a>.</p>
+<p>DocumentEditControl is the first plug-in point in the visual tree, and serves as a View of a SourceFile. A DocumentEditControl can control everything it shows the user. However, a DocumentEditControl for a diagram-based Document typically uses a nested <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Designer_DesignerEditControl.htm">DesignerEditControl</a> to take advantage of the Diagram SDK&#39;s built-in <a href="diagram-editing-system.html">diagram editing system</a>. In this case, the DocumentEditControl would:</p>
+<ol>
+<li>Include a nested DesignerEditControl in its XAML definition.</li>
+<li>Include a nested RootDiagram within its DesignerEditControl.</li>
+<li>Override the <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/P_NationalInstruments_SourceModel_Shell_DocumentEditControl_Designer.htm">Designer</a> property in the code-behind to return the nested DesignerEditControl.</li>
+<li>Override the <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/M_NationalInstruments_SourceModel_Shell_DocumentEditControl_CreateDefaultTool.htm">CreateDefaultTool</a> method to return a default <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Designer_AutoTool.htm">AutoTool</a> with a set of custom sub-tools. See <a href="diagram-editing-system.html#adorners-and-tools">Tool Management</a> for more details.</li>
+<li>Override the <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/M_NationalInstruments_SourceModel_Shell_DocumentEditControl_CreateRibbonBars.htm">CreateRibbonBars</a> method to return top-level Ribbon tab content to display when the DocumentEditControl is active.</li>
+</ol>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

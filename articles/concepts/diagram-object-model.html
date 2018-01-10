@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>The Diagram Object Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="The Diagram Object Model ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="the-diagram-object-model">The Diagram Object Model</h1>
+
+<p>The Diagram Object Model (DiOM) is a meta-model for modeling diagram models. The DiOM defines a set of diagram modeling classes that model hierarchical and diagrammatic systems. When creating applications based on the Diagram SDK, you will derive your model objects from <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_Element.htm">Element</a>, the root base class of the DiOM hierarchy.</p>
+<h2 id="diagram-object-model-architecture">Diagram Object Model Architecture</h2>
+<p>The following figure illustrates the high-level architecture of the diagram object model. There are many more classes in the DiOM class hierarchy, but the types in this figure represent some of the most important components of the DiOM. Each connection represents an object-oriented inheritance relationship.</p>
+<p><img src="../../images/concepts/DiOMRelationships.png" alt="DiOMRelationships"></p>
+<h2 id="diagram-object-model-theory-of-operation">Diagram Object Model Theory of Operation</h2>
+<p>The base type <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_Element.htm">Element</a> is the foundation of the DiOM&#39;s hierarchical modeling. Every object in your modeling hierarchy must ultimately derive from Element. However, Element is a light-weight class that does not provide a great deal of functionality. As a MoC developer, most of the model Elements you define will most likely derive from <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_Node.htm">Node</a> or one of its descendants.</p>
+<p>The Owner–Component Hierarchy
+All Elements in a model are related to one another in a hierarchy defined by their Owner and Components properties. The hierarchy of an Element&#39;s ownership chain comprises the element&#39;s ancestry. The Elements reachable by traversing an Element&#39;s chain of owned components comprise the Element&#39;s descendants. The ancestor and descendant relationships are important since a number of Diagram SDK features rely on finding services through ancestors or descendants.</p>
+<p>The following figure illustrates the basic structure of the DiOM Owner-Component hierarchy.</p>
+<p><img src="../../images/concepts/DiOMOwnerComponentHierarchy.png" alt="DiOMOwnerComponentHierarchy"></p>
+<p>As shown in the figure above, <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_SourceFile.htm">SourceFile</a> serves as the root of the Owner-Component hierarchy. Generally, the only Element that a SourceFile should directly contain is a <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_Definition.htm">Definition</a>, which is the abstract class from which you should derive the root object of your modeling hierarchy.</p>
+<h3 id="automatic-management-of-ownership">Automatic Management of Ownership</h3>
+<p>Each Element can have only one owner at a time, which means that a given element cannot appear in multiple places within the model hierarchy. This single-owner restriction allows the Diagram SDK to automatically manage owner/component relationships. Thus, when an element is added to a new owner&#39;s components, the Diagram SDK automatically updates element&#39;s Owner property and removes the element from its old owner&#39;s Components property.</p>
+<h3 id="ensuring-diom-validity">Ensuring DiOM Validity</h3>
+<p>For the system to function correctly, every Element must report its property changes to the <a href="transactions.html">transaction system</a> through its <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/P_NationalInstruments_SourceModel_Modeling_Element_TransactionRecruiter.htm">TransactionRecruiter</a>. Before finalizing a transaction, the transaction system validates the Elements affected by the transaction. At any given time, an element can either be valid or invalid. A valid Element has a consistent state and consistent relationships with other Elements. An Element&#39;s validity is determined by calling its <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/M_NationalInstruments_SourceModel_Modeling_Element_Validate.htm">Validate</a> method, which in turn invokes CheckModel. In your derived Elements, you should override <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/M_NationalInstruments_SourceModel_Modeling_Element_CheckModel.htm">CheckModel</a> to enforce your own modeling restrictions.</p>
+<h3 id="linking-to-external-dependencies">Linking to External Dependencies</h3>
+<p>The <a href="name-resolution-system.html">name resolution</a> is the only mechanism that the Diagram SDK officially supports for linking to external dependencies. The Definition base class, by implementing the <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Naming_IQualifiedScope.htm">IQualifiedScope</a> interface, enables your modeling hierarchy to participate in the name resolution system.</p>
+<h3 id="reporting-errors-and-warnings">Reporting Errors and Warnings</h3>
+<p>The Diagram SDK provides the <a href="messaging.html">messaging system</a> for reporting errors and warnings on Elements. All Elements participate in the messaging system by default, and each Element&#39;s <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/M_NationalInstruments_SourceModel_Modeling_Element_GetMessages.htm">GetMessages</a> method returns messages regarding the state of the Element.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

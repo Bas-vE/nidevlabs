@@ -1,0 +1,1359 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class FunctionSignatureCacheService
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class FunctionSignatureCacheService
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService">
+  
+  
+  <h1 id="NationalInstruments_SourceModel_FunctionSignatureCacheService" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService" class="text-break">Class FunctionSignatureCacheService
+  </h1>
+  <div class="markdown level0 summary"><p>Provides a service for a model to store its cached signature information.
+See <a class="xref" href="NationalInstruments.SourceModel.FunctionSignatureCacheService.html#NationalInstruments_SourceModel_FunctionSignatureCacheService_FunctionSignatureCache">FunctionSignatureCache</a> for more details.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html">EnvoyService</a></div>
+    <div class="level2"><a class="xref" href="NationalInstruments.SourceModel.DependencyTargetExportService.html">DependencyTargetExportService</a></div>
+    <div class="level3"><a class="xref" href="NationalInstruments.SourceModel.MethodCallTargetService.html">MethodCallTargetService</a></div>
+    <div class="level4"><a class="xref" href="NationalInstruments.SourceModel.BasicCacheService.html">BasicCacheService</a></div>
+    <div class="level5"><span class="xref">FunctionSignatureCacheService</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="NationalInstruments.SourceModel.IMethodCallTarget.html">IMethodCallTarget</a></div>
+    <div><a class="xref" href="NationalInstruments.SourceModel.IDependencyTargetExport.html">IDependencyTargetExport</a></div>
+    <div><a class="xref" href="NationalInstruments.SourceModel.IParameterValueProvider.html">IParameterValueProvider</a></div>
+    <div><a class="xref" href="NationalInstruments.SourceModel.IModelObserver.html">IModelObserver</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.BasicCacheService.html#NationalInstruments_SourceModel_BasicCacheService_TargetElement">BasicCacheService.TargetElement</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.BasicCacheService.html#NationalInstruments_SourceModel_BasicCacheService_BasicModelCache">BasicCacheService.BasicModelCache</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.BasicCacheService.html#NationalInstruments_SourceModel_BasicCacheService_AssociatedReferencedFile">BasicCacheService.AssociatedReferencedFile</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.BasicCacheService.html#NationalInstruments_SourceModel_BasicCacheService_Initialized">BasicCacheService.Initialized</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.BasicCacheService.html#NationalInstruments_SourceModel_BasicCacheService_CreateBasicModelCache">BasicCacheService.CreateBasicModelCache()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.BasicCacheService.html#NationalInstruments_SourceModel_BasicCacheService_GetCacheFromUserSettings">BasicCacheService.GetCacheFromUserSettings()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.BasicCacheService.html#NationalInstruments_SourceModel_BasicCacheService_ValidatePersistedCacheAsync_NationalInstruments_Core_InitializationToken_NationalInstruments_SourceModel_BasicModelCache_">BasicCacheService.ValidatePersistedCacheAsync(InitializationToken, BasicModelCache)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.BasicCacheService.html#NationalInstruments_SourceModel_BasicCacheService_InitializeCacheFromModel_NationalInstruments_SourceModel_Element_">BasicCacheService.InitializeCacheFromModel(Element)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.BasicCacheService.html#NationalInstruments_SourceModel_BasicCacheService_InitializeAsync_NationalInstruments_Core_InitializationToken_">BasicCacheService.InitializeAsync(InitializationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.BasicCacheService.html#NationalInstruments_SourceModel_BasicCacheService_RegisterFixupForFailedInitialization_System_Object_System_Predicate_NationalInstruments_SourceModel_IDependencyTargetExport__System_Action_NationalInstruments_SourceModel_IDependencyTargetExport__">BasicCacheService.RegisterFixupForFailedInitialization(Object, Predicate&lt;IDependencyTargetExport&gt;, Action&lt;IDependencyTargetExport&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.BasicCacheService.html#NationalInstruments_SourceModel_BasicCacheService_UnregisterFixupForFailedInitialization_System_Object_">BasicCacheService.UnregisterFixupForFailedInitialization(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.BasicCacheService.html#NationalInstruments_SourceModel_BasicCacheService_LoadModelAsync_NationalInstruments_Core_InitializationToken_">BasicCacheService.LoadModelAsync(InitializationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.BasicCacheService.html#NationalInstruments_SourceModel_BasicCacheService_SignalStateChanged_System_Collections_Generic_IEnumerable_System_String__">BasicCacheService.SignalStateChanged(IEnumerable&lt;String&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.BasicCacheService.html#NationalInstruments_SourceModel_BasicCacheService_OnModelLoaded_NationalInstruments_SourceModel_Envoys_Envoy_">BasicCacheService.OnModelLoaded(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.BasicCacheService.html#NationalInstruments_SourceModel_BasicCacheService_OnModelClosing_NationalInstruments_SourceModel_Envoys_Envoy_">BasicCacheService.OnModelClosing(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.BasicCacheService.html#NationalInstruments_SourceModel_BasicCacheService_OnModelClosed_NationalInstruments_SourceModel_Envoys_Envoy_">BasicCacheService.OnModelClosed(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.BasicCacheService.html#NationalInstruments_SourceModel_BasicCacheService_SignalCacheSignatureChanged">BasicCacheService.SignalCacheSignatureChanged()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.BasicCacheService.html#NationalInstruments_SourceModel_BasicCacheService_OnModelSavingAsync_NationalInstruments_SourceModel_Envoys_Envoy_">BasicCacheService.OnModelSavingAsync(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.BasicCacheService.html#NationalInstruments_SourceModel_BasicCacheService_OnModelSavedAsync_NationalInstruments_SourceModel_Envoys_Envoy_">BasicCacheService.OnModelSavedAsync(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.BasicCacheService.html#NationalInstruments_SourceModel_BasicCacheService_GetSize_NationalInstruments_SourceModel_ViewElementTemplate_">BasicCacheService.GetSize(ViewElementTemplate)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.BasicCacheService.html#NationalInstruments_SourceModel_BasicCacheService_GetCachedQualifiedDependencyAsync_System_Action_System_Collections_Generic_IEnumerable_NationalInstruments_SourceModel_CachedDependency__System_Exception__">BasicCacheService.GetCachedQualifiedDependencyAsync(Action&lt;IEnumerable&lt;CachedDependency&gt;, Exception&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.BasicCacheService.html#NationalInstruments_SourceModel_BasicCacheService_GetCachedQualifiedDependenciesAsync">BasicCacheService.GetCachedQualifiedDependenciesAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.BasicCacheService.html#NationalInstruments_SourceModel_BasicCacheService_FindOrCreateInTemporaryStorage__1">BasicCacheService.FindOrCreateInTemporaryStorage&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.BasicCacheService.html#NationalInstruments_SourceModel_BasicCacheService_FindOrCreateInTemporaryStorage__1_System_Func___0__">BasicCacheService.FindOrCreateInTemporaryStorage&lt;T&gt;(Func&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.BasicCacheService.html#NationalInstruments_SourceModel_BasicCacheService_FindInTemporaryStorage__1">BasicCacheService.FindInTemporaryStorage&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.BasicCacheService.html#NationalInstruments_SourceModel_BasicCacheService_AddToTemporaryStorage_System_Object_">BasicCacheService.AddToTemporaryStorage(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.BasicCacheService.html#NationalInstruments_SourceModel_BasicCacheService_ClearFromTemporaryStorage__1">BasicCacheService.ClearFromTemporaryStorage&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.BasicCacheService.html#NationalInstruments_SourceModel_BasicCacheService_RemoveFromTemporaryStorage_System_Object_">BasicCacheService.RemoveFromTemporaryStorage(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.MethodCallTargetService.html#NationalInstruments_SourceModel_MethodCallTargetService_TargetModel">MethodCallTargetService.TargetModel</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.MethodCallTargetService.html#NationalInstruments_SourceModel_MethodCallTargetService_Name">MethodCallTargetService.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.MethodCallTargetService.html#NationalInstruments_SourceModel_MethodCallTargetService_QualifiedTarget">MethodCallTargetService.QualifiedTarget</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.MethodCallTargetService.html#NationalInstruments_SourceModel_MethodCallTargetService_BasicMethodType_System_Collections_Generic_IEnumerable_NationalInstruments_SourceModel_IDiagramParameter__">MethodCallTargetService.BasicMethodType(IEnumerable&lt;IDiagramParameter&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.MethodCallTargetService.html#NationalInstruments_SourceModel_MethodCallTargetService_GetParameterHotspotForBasicMethodType_NationalInstruments_DataTypes_NIType_NationalInstruments_SourceModel_ViewElementTemplate_NationalInstruments_SourceModel_ConnectorPane_">MethodCallTargetService.GetParameterHotspotForBasicMethodType(NIType, ViewElementTemplate, ConnectorPane)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.DependencyTargetExportService.html#NationalInstruments_SourceModel_DependencyTargetExportService_ExportsPropertyName">DependencyTargetExportService.ExportsPropertyName</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.DependencyTargetExportService.html#NationalInstruments_SourceModel_DependencyTargetExportService_Target">DependencyTargetExportService.Target</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.DependencyTargetExportService.html#NationalInstruments_SourceModel_DependencyTargetExportService_GetObserversToNotifyOnStateChange_System_Collections_Generic_IEnumerable_System_String__">DependencyTargetExportService.GetObserversToNotifyOnStateChange(IEnumerable&lt;String&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.DependencyTargetExportService.html#NationalInstruments_SourceModel_DependencyTargetExportService_AddObserver_NationalInstruments_SourceModel_IDependencyTargetExportChanged_System_Collections_Generic_IEnumerable_System_String__">DependencyTargetExportService.AddObserver(IDependencyTargetExportChanged, IEnumerable&lt;String&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.DependencyTargetExportService.html#NationalInstruments_SourceModel_DependencyTargetExportService_RemoveObserver_NationalInstruments_SourceModel_IDependencyTargetExportChanged_">DependencyTargetExportService.RemoveObserver(IDependencyTargetExportChanged)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_ProvidesInterface_System_Collections_Generic_IDictionary_System_String_System_Object__System_Type_">EnvoyService.ProvidesInterface(IDictionary&lt;String, Object&gt;, Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_AssociatedEnvoy">EnvoyService.AssociatedEnvoy</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_Project">EnvoyService.Project</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_Host">EnvoyService.Host</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_Detaching_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.Detaching(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_Detach_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.Detach(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_ProjectSaveAsync_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.ProjectSaveAsync(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_ProjectClose_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.ProjectClose(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_ModelLoaded_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.ModelLoaded(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_ModelClosing_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.ModelClosing(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_ModelClosed_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.ModelClosed(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_ModelSavedAsync_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.ModelSavedAsync(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_ModelSavingAsync_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.ModelSavingAsync(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_OnProjectSaveAsync_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.OnProjectSaveAsync(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_OnProjectClose_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.OnProjectClose(Envoy)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.SourceModel.html">NationalInstruments.SourceModel</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_SourceModel_FunctionSignatureCacheService_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class FunctionSignatureCacheService : BasicCacheService, IMethodCallTarget, IDependencyTargetExport, IParameterValueProvider, IModelObserver</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_FunctionSignatureCacheService_FunctionSignatureCache_" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.FunctionSignatureCache*"></a>
+  <h4 id="NationalInstruments_SourceModel_FunctionSignatureCacheService_FunctionSignatureCache" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.FunctionSignatureCache">FunctionSignatureCache</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="NationalInstruments.SourceModel.FunctionSignatureCacheService.html#NationalInstruments_SourceModel_FunctionSignatureCacheService_FunctionSignatureCache">FunctionSignatureCache</a> associated with this cache service </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FunctionSignatureCache FunctionSignatureCache { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.FunctionSignatureCache.html">FunctionSignatureCache</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_FunctionSignatureCacheService_IconModel_" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.IconModel*"></a>
+  <h4 id="NationalInstruments_SourceModel_FunctionSignatureCacheService_IconModel" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.IconModel">IconModel</h4>
+  <div class="markdown level1 summary"><p>Returns the target icon model if it exists, otherwise null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Icon IconModel { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Icon.html">Icon</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.BasicCacheService.html#NationalInstruments_SourceModel_BasicCacheService_IconModel">BasicCacheService.IconModel</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_FunctionSignatureCacheService_MoreHelpLink_" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.MoreHelpLink*"></a>
+  <h4 id="NationalInstruments_SourceModel_FunctionSignatureCacheService_MoreHelpLink" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.MoreHelpLink">MoreHelpLink</h4>
+  <div class="markdown level1 summary"><p>Returns the more help link of the associated function.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string MoreHelpLink { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_FunctionSignatureCacheService_OverloadGroup_" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.OverloadGroup*"></a>
+  <h4 id="NationalInstruments_SourceModel_FunctionSignatureCacheService_OverloadGroup" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.OverloadGroup">OverloadGroup</h4>
+  <div class="markdown level1 summary"><p>Returns the overload group this method call is associated with.  NULL or an empty string means none.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string OverloadGroup { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.MethodCallTargetService.html#NationalInstruments_SourceModel_MethodCallTargetService_OverloadGroup">MethodCallTargetService.OverloadGroup</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_FunctionSignatureCacheService_Signature_" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.Signature*"></a>
+  <h4 id="NationalInstruments_SourceModel_FunctionSignatureCacheService_Signature" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.Signature">Signature</h4>
+  <div class="markdown level1 summary"><p>Gets the method <span class="xref">NationalInstruments.DataTypes.NIType</span> representing the signature of the method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override NIType Signature { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataTypes.NIType</span></td>
+        <td><p>The &lt;see cref=&quot;NIType&quot;/&gt;</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.MethodCallTargetService.html#NationalInstruments_SourceModel_MethodCallTargetService_Signature">MethodCallTargetService.Signature</a></div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_FunctionSignatureCacheService_ComponentAdded_" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.ComponentAdded*"></a>
+  <h4 id="NationalInstruments_SourceModel_FunctionSignatureCacheService_ComponentAdded_NationalInstruments_SourceModel_Element_NationalInstruments_SourceModel_Element_System_Int32_NationalInstruments_SourceModel_TransactionItem_" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.ComponentAdded(NationalInstruments.SourceModel.Element,NationalInstruments.SourceModel.Element,System.Int32,NationalInstruments.SourceModel.TransactionItem)">ComponentAdded(Element, Element, Int32, TransactionItem)</h4>
+  <div class="markdown level1 summary"><p>The given owner has added newComponent to its Components collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ComponentAdded(Element owner, Element newComponent, int insertedAtIndex, TransactionItem transactionItem)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td><span class="parametername">owner</span></td>
+        <td><p>The owner that has a new component.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td><span class="parametername">newComponent</span></td>
+        <td><p>The new component.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">insertedAtIndex</span></td>
+        <td><p>Where in the component list was this new component added.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TransactionItem.html">TransactionItem</a></td>
+        <td><span class="parametername">transactionItem</span></td>
+        <td><p>The transaction that added the component.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_FunctionSignatureCacheService_ComponentRemoved_" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.ComponentRemoved*"></a>
+  <h4 id="NationalInstruments_SourceModel_FunctionSignatureCacheService_ComponentRemoved_NationalInstruments_SourceModel_Element_NationalInstruments_SourceModel_Element_NationalInstruments_SourceModel_TransactionItem_" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.ComponentRemoved(NationalInstruments.SourceModel.Element,NationalInstruments.SourceModel.Element,NationalInstruments.SourceModel.TransactionItem)">ComponentRemoved(Element, Element, TransactionItem)</h4>
+  <div class="markdown level1 summary"><p>The given owner has removed newComponent to its Components collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ComponentRemoved(Element owner, Element oldComponent, TransactionItem transactionItem)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td><span class="parametername">owner</span></td>
+        <td><p>The owner that lost a component.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td><span class="parametername">oldComponent</span></td>
+        <td><p>The removed component.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TransactionItem.html">TransactionItem</a></td>
+        <td><span class="parametername">transactionItem</span></td>
+        <td><p>The transaction that removed the component.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_FunctionSignatureCacheService_GetExportChangesFromTransaction_" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.GetExportChangesFromTransaction*"></a>
+  <h4 id="NationalInstruments_SourceModel_FunctionSignatureCacheService_GetExportChangesFromTransaction_NationalInstruments_SourceModel_TransactionEventArgs_" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.GetExportChangesFromTransaction(NationalInstruments.SourceModel.TransactionEventArgs)">GetExportChangesFromTransaction(TransactionEventArgs)</h4>
+  <div class="markdown level1 summary"><p>Override this method in order to examine any transactions that have occurred in order to see if any exports of this service have changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override IEnumerable&lt;string&gt; GetExportChangesFromTransaction(TransactionEventArgs e)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TransactionEventArgs.html">TransactionEventArgs</a></td>
+        <td><span class="parametername">e</span></td>
+        <td><p>TransactionEventArgs that describe the changes made to the model</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><p>Enumeration of the exported properties from this service that changed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.DependencyTargetExportService.html#NationalInstruments_SourceModel_DependencyTargetExportService_GetExportChangesFromTransaction_NationalInstruments_SourceModel_TransactionEventArgs_">DependencyTargetExportService.GetExportChangesFromTransaction(TransactionEventArgs)</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_FunctionSignatureCacheService_GetIcon_" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.GetIcon*"></a>
+  <h4 id="NationalInstruments_SourceModel_FunctionSignatureCacheService_GetIcon_NationalInstruments_SourceModel_ViewElementTemplate_" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.GetIcon(NationalInstruments.SourceModel.ViewElementTemplate)">GetIcon(ViewElementTemplate)</h4>
+  <div class="markdown level1 summary"><p>Returns the associated icon</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override PlatformImage GetIcon(ViewElementTemplate viewTemplate)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ViewElementTemplate.html">ViewElementTemplate</a></td>
+        <td><span class="parametername">viewTemplate</span></td>
+        <td><p>The view template</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.PlatformImage</span></td>
+        <td><p>The icon image</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.BasicCacheService.html#NationalInstruments_SourceModel_BasicCacheService_GetIcon_NationalInstruments_SourceModel_ViewElementTemplate_">BasicCacheService.GetIcon(ViewElementTemplate)</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_FunctionSignatureCacheService_GetParameterDescription_" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.GetParameterDescription*"></a>
+  <h4 id="NationalInstruments_SourceModel_FunctionSignatureCacheService_GetParameterDescription_NationalInstruments_DataTypes_NIType_" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.GetParameterDescription(NationalInstruments.DataTypes.NIType)">GetParameterDescription(NIType)</h4>
+  <div class="markdown level1 summary"><p>Returns the description of the parameter</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string GetParameterDescription(NIType parameter)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataTypes.NIType</span></td>
+        <td><span class="parametername">parameter</span></td>
+        <td><p>Parameter of the method</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>if description is not available return the name of the parameter</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.MethodCallTargetService.html#NationalInstruments_SourceModel_MethodCallTargetService_GetParameterDescription_NationalInstruments_DataTypes_NIType_">MethodCallTargetService.GetParameterDescription(NIType)</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_FunctionSignatureCacheService_GetParameterHotspot_" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.GetParameterHotspot*"></a>
+  <h4 id="NationalInstruments_SourceModel_FunctionSignatureCacheService_GetParameterHotspot_NationalInstruments_DataTypes_NIType_NationalInstruments_SourceModel_ViewElementTemplate_" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.GetParameterHotspot(NationalInstruments.DataTypes.NIType,NationalInstruments.SourceModel.ViewElementTemplate)">GetParameterHotspot(NIType, ViewElementTemplate)</h4>
+  <div class="markdown level1 summary"><p>Get the hotspot for a parameter. If this info cannot be provided, just return IMethodCallTargetHelpers.DefaultHotspot</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override SMPoint GetParameterHotspot(NIType parameter, ViewElementTemplate viewTemplate)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataTypes.NIType</span></td>
+        <td><span class="parametername">parameter</span></td>
+        <td><p>The type parameter</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ViewElementTemplate.html">ViewElementTemplate</a></td>
+        <td><span class="parametername">viewTemplate</span></td>
+        <td><p>The view template</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMPoint</span></td>
+        <td><p>The hotspot</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.MethodCallTargetService.html#NationalInstruments_SourceModel_MethodCallTargetService_GetParameterHotspot_NationalInstruments_DataTypes_NIType_NationalInstruments_SourceModel_ViewElementTemplate_">MethodCallTargetService.GetParameterHotspot(NIType, ViewElementTemplate)</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_FunctionSignatureCacheService_GetParameterSideIndex_" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.GetParameterSideIndex*"></a>
+  <h4 id="NationalInstruments_SourceModel_FunctionSignatureCacheService_GetParameterSideIndex_NationalInstruments_DataTypes_NIType_" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.GetParameterSideIndex(NationalInstruments.DataTypes.NIType)">GetParameterSideIndex(NIType)</h4>
+  <div class="markdown level1 summary"><p>Get the parameter position with respect to connector pane</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override SideIndex GetParameterSideIndex(NIType parameter)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataTypes.NIType</span></td>
+        <td><span class="parametername">parameter</span></td>
+        <td><p>Parameter of the method</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.CommonModel.SideIndex.html">SideIndex</a></td>
+        <td><p>sideIndex</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.MethodCallTargetService.html#NationalInstruments_SourceModel_MethodCallTargetService_GetParameterSideIndex_NationalInstruments_DataTypes_NIType_">MethodCallTargetService.GetParameterSideIndex(NIType)</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_FunctionSignatureCacheService_GetParameterType_" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.GetParameterType*"></a>
+  <h4 id="NationalInstruments_SourceModel_FunctionSignatureCacheService_GetParameterType_System_String_" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.GetParameterType(System.String)">GetParameterType(String)</h4>
+  <div class="markdown level1 summary"><p>Find the Parameters with the specified name, and return its data type.
+Returns void if there is no data item with the specified name. 
+Throws InvalidOperationException if the service is not initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NIType GetParameterType(string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>name of the data item</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataTypes.NIType</span></td>
+        <td><p>type of the data item (or Void if not found)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_FunctionSignatureCacheService_HasDiagram_" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.HasDiagram*"></a>
+  <h4 id="NationalInstruments_SourceModel_FunctionSignatureCacheService_HasDiagram" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.HasDiagram">HasDiagram()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool HasDiagram()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_FunctionSignatureCacheService_HasIcon_" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.HasIcon*"></a>
+  <h4 id="NationalInstruments_SourceModel_FunctionSignatureCacheService_HasIcon" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.HasIcon">HasIcon()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool HasIcon()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_FunctionSignatureCacheService_HasPanel_" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.HasPanel*"></a>
+  <h4 id="NationalInstruments_SourceModel_FunctionSignatureCacheService_HasPanel" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.HasPanel">HasPanel()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool HasPanel()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_FunctionSignatureCacheService_ModelDetached_" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.ModelDetached*"></a>
+  <h4 id="NationalInstruments_SourceModel_FunctionSignatureCacheService_ModelDetached_NationalInstruments_SourceModel_Element_" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.ModelDetached(NationalInstruments.SourceModel.Element)">ModelDetached(Element)</h4>
+  <div class="markdown level1 summary"><p>The model (that you were watching) has gone to the detached state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ModelDetached(Element modelElement)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td><span class="parametername">modelElement</span></td>
+        <td><p>The removed model</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>Return true to have your observer removed from watching this object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_FunctionSignatureCacheService_ModelPropertyChanged_" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.ModelPropertyChanged*"></a>
+  <h4 id="NationalInstruments_SourceModel_FunctionSignatureCacheService_ModelPropertyChanged_NationalInstruments_SourceModel_Element_System_String_NationalInstruments_SourceModel_TransactionItem_" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.ModelPropertyChanged(NationalInstruments.SourceModel.Element,System.String,NationalInstruments.SourceModel.TransactionItem)">ModelPropertyChanged(Element, String, TransactionItem)</h4>
+  <div class="markdown level1 summary"><p>Function is registered to hear about source model changes from the file associated with this service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ModelPropertyChanged(Element modelElement, string propertyName, TransactionItem transactionItem)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td><span class="parametername">modelElement</span></td>
+        <td><p>The model element that changed</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>The property on the model element that changed</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TransactionItem.html">TransactionItem</a></td>
+        <td><span class="parametername">transactionItem</span></td>
+        <td><p>The transaction in which the property changed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_FunctionSignatureCacheService_OnAttached_" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.OnAttached*"></a>
+  <h4 id="NationalInstruments_SourceModel_FunctionSignatureCacheService_OnAttached_NationalInstruments_SourceModel_Envoys_Envoy_" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.OnAttached(NationalInstruments.SourceModel.Envoys.Envoy)">OnAttached(Envoy)</h4>
+  <div class="markdown level1 summary"><p>Called after construction to associated this envoy service with its Envoy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnAttached(Envoy associatedEnvoy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">associatedEnvoy</span></td>
+        <td><p>The Envoy that this service should be associated with.  This method will be called once
+for each <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a> the service is associated with.  If a new service is created
+for each Envoy, this method will only be called once, and this Envoy will match <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_AssociatedEnvoy">AssociatedEnvoy</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.BasicCacheService.html#NationalInstruments_SourceModel_BasicCacheService_OnAttached_NationalInstruments_SourceModel_Envoys_Envoy_">BasicCacheService.OnAttached(Envoy)</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_FunctionSignatureCacheService_OnDetach_" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.OnDetach*"></a>
+  <h4 id="NationalInstruments_SourceModel_FunctionSignatureCacheService_OnDetach_NationalInstruments_SourceModel_Envoys_Envoy_" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.OnDetach(NationalInstruments.SourceModel.Envoys.Envoy)">OnDetach(Envoy)</h4>
+  <div class="markdown level1 summary"><p>Called to detach this envoy service from its <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_AssociatedEnvoy">AssociatedEnvoy</a>.  This method can be called
+when the associated envoy is being removed from the project, or when the associated envoy changes in such
+a way that this service no longer binds to the associated envoy.</p>
+<p>If the associated envoy is being removed from the project, it is possible that other envoy services bound
+to this associated envoy will have already been  detached.  Therefore, it is not safe to query for other services
+within this callback.  Instead, this callback should only be used to clean up state that is local to and
+understood by this service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnDetach(Envoy associatedEnvoy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">associatedEnvoy</span></td>
+        <td><p>The <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a> that is detaching from this service.  This is the same envoy that is passed to 
+<span class="xref">NationalInstruments.SourceModel.Envoys.EnvoyService.NotifyAttach(NationalInstruments.SourceModel.Envoys.Envoy)</span> for envoy services which are instanced per envoy.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.BasicCacheService.html#NationalInstruments_SourceModel_BasicCacheService_OnDetach_NationalInstruments_SourceModel_Envoys_Envoy_">BasicCacheService.OnDetach(Envoy)</a></div>
+  <h5 id="NationalInstruments_SourceModel_FunctionSignatureCacheService_OnDetach_NationalInstruments_SourceModel_Envoys_Envoy__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>After this method returns, the <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_AssociatedEnvoy">AssociatedEnvoy</a> property will be set to <code>null</code>.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_SourceModel_FunctionSignatureCacheService_OnDetaching_" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.OnDetaching*"></a>
+  <h4 id="NationalInstruments_SourceModel_FunctionSignatureCacheService_OnDetaching_NationalInstruments_SourceModel_Envoys_Envoy_" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.OnDetaching(NationalInstruments.SourceModel.Envoys.Envoy)">OnDetaching(Envoy)</h4>
+  <div class="markdown level1 summary"><p>Called before the service is detached from its <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_AssociatedEnvoy">AssociatedEnvoy</a>.  This method can be called
+when the associated envoy is being removed from the project, or when the associated envoy changes in such
+a way that this service no longer binds to the associated envoy.</p>
+<p>If the AssociatedEnvoy is being removed from the project, or if the project is closing, all attached 
+envoy services will receive this Detaching callback before any of them receive the <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_Detach_NationalInstruments_SourceModel_Envoys_Envoy_">Detach(Envoy)</a> 
+callback.  This means is it safe to query for other services attached to <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_AssociatedEnvoy">AssociatedEnvoy</a> 
+from within this callback, but it is not safe within the Detach callback. This is a good point to 
+perform any cleanup of this service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnDetaching(Envoy associatedEnvoy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">associatedEnvoy</span></td>
+        <td><p>The <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a> that is detaching from this service.  This is the same envoy that is passed to 
+<span class="xref">NationalInstruments.SourceModel.Envoys.EnvoyService.NotifyAttach(NationalInstruments.SourceModel.Envoys.Envoy)</span> for envoy services which are instanced per envoy.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_OnDetaching_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.OnDetaching(Envoy)</a></div>
+  <h5 id="NationalInstruments_SourceModel_FunctionSignatureCacheService_OnDetaching_NationalInstruments_SourceModel_Envoys_Envoy__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>After this method returns, the <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_AssociatedEnvoy">AssociatedEnvoy</a> property will not be set to <code>null</code>.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_SourceModel_FunctionSignatureCacheService_OnInitialized_" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.OnInitialized*"></a>
+  <h4 id="NationalInstruments_SourceModel_FunctionSignatureCacheService_OnInitialized_System_Exception_" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.OnInitialized(System.Exception)">OnInitialized(Exception)</h4>
+  <div class="markdown level1 summary"><p>We have been initialized. Ok to access cache now.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnInitialized(Exception exception)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Exception</span></td>
+        <td><span class="parametername">exception</span></td>
+        <td><p>exception, or null if there wasn&apos;t any</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.BasicCacheService.html#NationalInstruments_SourceModel_BasicCacheService_OnInitialized_System_Exception_">BasicCacheService.OnInitialized(Exception)</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_FunctionSignatureCacheService_SupportsDuplicateHierarchy_" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.SupportsDuplicateHierarchy*"></a>
+  <h4 id="NationalInstruments_SourceModel_FunctionSignatureCacheService_SupportsDuplicateHierarchy" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.SupportsDuplicateHierarchy">SupportsDuplicateHierarchy()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool SupportsDuplicateHierarchy()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_FunctionSignatureCacheService_TryGetCurrentValue_" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.TryGetCurrentValue*"></a>
+  <h4 id="NationalInstruments_SourceModel_FunctionSignatureCacheService_TryGetCurrentValue_System_String_System_Object__" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.TryGetCurrentValue(System.String,System.Object@)">TryGetCurrentValue(String, out Object)</h4>
+  <div class="markdown level1 summary"><p>Get the current value of the data item</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract bool TryGetCurrentValue(string parameterName, out object currentValue)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameterName</span></td>
+        <td><p>Name of the data item</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">currentValue</span></td>
+        <td><p>returned current value</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if success</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_FunctionSignatureCacheService_TryGetDefaultValue_" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.TryGetDefaultValue*"></a>
+  <h4 id="NationalInstruments_SourceModel_FunctionSignatureCacheService_TryGetDefaultValue_System_String_System_Object__" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.TryGetDefaultValue(System.String,System.Object@)">TryGetDefaultValue(String, out Object)</h4>
+  <div class="markdown level1 summary"><p>Get the default value of the data item</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract bool TryGetDefaultValue(string parameterName, out object defaultValue)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameterName</span></td>
+        <td><p>Name of the data item</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">defaultValue</span></td>
+        <td><p>returned default value</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if success</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_FunctionSignatureCacheService_TryGetDefaultValueText_" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.TryGetDefaultValueText*"></a>
+  <h4 id="NationalInstruments_SourceModel_FunctionSignatureCacheService_TryGetDefaultValueText_System_String_System_String__" data-uid="NationalInstruments.SourceModel.FunctionSignatureCacheService.TryGetDefaultValueText(System.String,System.String@)">TryGetDefaultValueText(String, out String)</h4>
+  <div class="markdown level1 summary"><p>Get the default display value of the data item</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract bool TryGetDefaultValueText(string parameterName, out string defaultValueText)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameterName</span></td>
+        <td><p>Name of the data item</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">defaultValueText</span></td>
+        <td><p>returned default display value</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if success</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.IMethodCallTarget.html">IMethodCallTarget</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.IDependencyTargetExport.html">IDependencyTargetExport</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.IParameterValueProvider.html">IParameterValueProvider</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.IModelObserver.html">IModelObserver</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.DependencyTargetExportHelpers.html#NationalInstruments_SourceModel_DependencyTargetExportHelpers_TryInitializeAsync_NationalInstruments_SourceModel_IDependencyTargetExport_NationalInstruments_Core_InitializationToken_">DependencyTargetExportHelpers.TryInitializeAsync(IDependencyTargetExport, InitializationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.DependencyTargetExportHelpers.html#NationalInstruments_SourceModel_DependencyTargetExportHelpers_Initialize_NationalInstruments_SourceModel_IDependencyTargetExport_NationalInstruments_Core_InitializationToken_System_Action_NationalInstruments_SourceModel_IDependencyTargetExport_System_Exception__">DependencyTargetExportHelpers.Initialize(IDependencyTargetExport, InitializationToken, Action&lt;IDependencyTargetExport, Exception&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

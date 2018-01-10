@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>The Model-View-ViewModel Pattern </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="The Model-View-ViewModel Pattern ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="the-model-view-viewmodel-pattern">The Model-View-ViewModel Pattern</h1>
+
+<p>The Diagram SDK is designed around the <a href="http://en.wikipedia.org/wiki/Model_View_ViewModel">Model-View-ViewModel (MVVM)</a> architectural pattern, which comprises the following layers:</p>
+<ul>
+<li><strong>Model</strong>—The object model, which represents the program&#39;s underlying data structures.</li>
+<li><strong>View</strong>—The graphical user interface (GUI) elements of the program.</li>
+<li><strong>ViewModel</strong>—An abstraction of the View that serves in data binding and passing commands between the View and the Model. This can be conceived as a specialized aspect of a Controller, as defined in the <a href="http://en.wikipedia.org/wiki/Model_View_Controller">Model-View-Controller (MVC)</a> pattern.</li>
+</ul>
+<h2 id="mvvm-architecture">MVVM Architecture</h2>
+<p>The following diagram illustrates the basic structure of the MVVM architectural pattern.</p>
+<p><img src="../../images/concepts/MVVMRelationships.png" alt="MVVMRelationships"></p>
+<p>The primary feature of the MVVM is a separation of concerns between the Model, View, and ViewModel, which yields substantial development benefits, including:</p>
+<ul>
+<li>A clean, modular architecture</li>
+<li>Simplified collaboration between backend developers and visual designers</li>
+<li>The ability to swap out user interface elements or entire Views/GUIs without modifying core algorithms or data structures</li>
+<li>Simplified automated testing due to de-coupling of Model and ViewModel logic from the user interface</li>
+<li>An abundance of MVVM examples, tutorials, and discussions within the .NET community</li>
+<li>A robust <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Designer_ElementViewModel.htm">ElementViewModel</a> class built into the Diagram SDK</li>
+</ul>
+<h2 id="mvvm-theory-of-operation">MVVM Theory of Operation</h2>
+<p>The following diagram illustrates the high-level interaction flow of a typical Diagram SDK application using MVVM.</p>
+<p><img src="../../images/concepts/MVVMInteractions.png" alt="MVVMInteractions"></p>
+<p>Using a standard input method such as a mouse, keyboard, stylus or touch, the end user interacts with View controls displayed within a <a href="shell.html">Shell</a> instance, which comprises the application&#39;s graphical user interface (GUI). The View controls, which ultimately derive from <a href="http://msdn.microsoft.com/en-us/library/ms609826">Control</a> or <a href="http://msdn.microsoft.com/en-us/library/system.windows.controls.usercontrol(v=vs.100).aspx">UserControl</a>, communicate with the ViewModel layer through <a href="http://msdn.microsoft.com/en-us/library/ms752347.aspx">databinding</a> to ViewModel <a href="http://msdn.microsoft.com/en-us/library/aa288470(v=VS.71).aspx">properties</a>. The ViewModel layer interprets data from the View, performing any necessary data type conversions, and then passes the interpreted data to the Model layer by setting Model properties.</p>
+<p>Similarly, ViewModels listen for updates from their associated Model <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_Element.htm">Elements</a> (e.g. [Nodes][NodeRef[, <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_Structure.htm">Structures</a>, or <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_Wire.htm">Wires</a>), interpreting the state of the Model layer and performing any necessary data conversions before passing the data to databound controls in the View layer by calling <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/M_NationalInstruments_SourceModel_Designer_ElementViewModel_NotifyPropertyChanged.htm">NotifyPropertyChanged</a>, which fires a <a href="http://msdn.microsoft.com/en-us/library/system.componentmodel.inotifypropertychanged.propertychanged.aspx">PropertyChanged</a> Event.</p>
+<h2 id="mvvm-guidelines">MVVM Guidelines</h2>
+<p>Following these simple guidelines will help you get the most of your MVVM implementation:</p>
+<ul>
+<li>Keep the View layer as simple as possible</li>
+<li>Keep all your logic in the ViewModel and Model layers</li>
+<li>To facilitate automated testing of the Model and ViewModel layers, keep them free of View dependencies. The ViewModel layer can be aware of the View layer but should not depend on it.</li>
+</ul>
+<h3 id="using-the-elementviewmodel-class">Using the ElementViewModel Class</h3>
+<p><a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Designer_ElementViewModel.htm">ElementViewModel</a> is a ViewModel base class provided by the Diagram SDK. You can use this class directly or derive from it to add custom functinality.</p>
+<h2 id="propogating-property-changes-from-the-view-layer-to-the-model-layer">Propogating Property Changes from the View Layer to the Model Layer</h2>
+<p>The ViewModel layer is responsible for propagating user-initiated property changes to the model layer and initiating <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_Transaction.htm">Transactions</a> so that the <a href="transactions.html#rules">transaction system</a> can ensure model validity, notify listeners of property changes, and track changes for persistence and undo/redo operations. However, to avoid an infinite cycle of property changes and notifications, your ViewModels should always check to ensure that a property change is fresh before setting the underlying model property, as shown in the following example.</p>
+<pre><code class="lang-C#">    public String MyProperty
+    {
+        get
+        {
+            return model.MyProperty;
+        }
+        set
+        {
+            if (model.MyProperty != value)
+            {
+                using (var myPropertyTransaction = TransactionManager.BeginTransaction(&quot;Change MyProperty&quot;, TransactionPurpose.User)
+                {
+                    model.MyProperty = value;
+                    myPropertyTransaction.Commit();
+                }
+            }
+        }
+    }
+</code></pre><h2 id="propagating-property-changes-from-the-model-layer-to-the-view-layer">Propagating Property Changes from the Model Layer to the View Layer</h2>
+<p>The ViewModel layer is responsible for listening for change notifications from the transaction system and forwarding relevant model change notifications to the view layer. Your ElementViewModels should do this in the ViewElementPropertyChanged method. As shown in the following example, your <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/M_NationalInstruments_SourceModel_Designer_ElementViewModel_ViewElementPropertyChanged.htm">ViewElementPropertyChanged</a> method should contain an if statement that checks for the actual property names you care about to avoid sending out redundant notifications.</p>
+<pre><code class="lang-C#">    protected override void ViewElementPropertyChanged(object sender, string propertyName)
+    {
+        base.ViewElementPropertyChanged(sender, propertyName);
+        if (propertyName == &quot;MyProperty1&quot; || propertyName == &quot;MyProperty2&quot;)
+        {
+            NotifyPropertyChanged(propertyName);
+        }
+    }
+</code></pre><h3 id="delaying-notifications-for-atomic-actions">Delaying Notifications for Atomic Actions</h3>
+<p>The <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_TransactionManager.htm">TransactionManager</a> supports batching of user operations to allow certain visuals to avoid displaying intermediate updates during user modifications. This is accomplished by wrapping the property changes in an <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/M_NationalInstruments_SourceModel_Modeling_ITransactionManager_BeginAtomicAction.htm">atomic action</a>. You can use the ElementViewModel <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/P_NationalInstruments_SourceModel_Designer_ElementViewModel_InUserModification.htm">InUserModification</a> property to detect when a property change has occurred during an atomic action and call the <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/M_NationalInstruments_SourceModel_Designer_ElementViewModel_NotifyPropertyChangedOnActionComplete.htm">NotifyPropertyChangedOnActionComplete</a> method to batch up property change notifications and delay sending them to the view. When the atomic action is complete, the ElementViewModel base class implementation of the <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/M_NationalInstruments_SourceModel_Designer_ElementViewModel_UserModificationComplete.htm">UserModificationComplete</a> method sends out these delayed notifications.</p>
+<pre><code class="lang-C#">    protected override void ViewElementPropertyChanged(object sender, string propertyName)
+    {
+         base.ViewElementPropertyChanged(sender, propertyName);
+         if (propertyName == &quot;MyDelayableProperty&quot;)
+         {
+             if (InUserModification)
+             {
+                 NotifyPropertyChangedOnActionComplete(&quot;MyDelayableProperty&quot;);
+             }
+             else
+             {
+                 NotifyPropertyChanged(&quot;MyDelayableProperty&quot;);
+             }
+         }
+    }
+</code></pre><h3 id="editing-multiple-elements-simultaneously">Editing Multiple Elements Simultaneously</h3>
+<p>Constructing an ElementViewModel requires one or more <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_Element.htm">Elements</a> to be passed in as the models that the ViewModel will represent. A common example of the N-Element use case is a ribbon that changes properties on a group of selected Elements. The following example shows how to obtain references to a group of selected MyNodes and pass them to a MyViewModel class designed to represent one to N MyNodes.</p>
+<p>The following diagram illustrates the relationships between the model, view, and ViewModel layers in the case of a RibbonGroup that supports multi-select editing of multiple Nodes.</p>
+<p><img src="../../images/concepts/MVVMRelationshipsDetail.png" alt="MVVMRelationshipsDetail"></p>
+<p>Note that in this case, each of the selected Nodes is represented by two ViewModel instances. Each Node is represented by its own primary ViewModel instance, and the selected Nodes are jointly represented by a second, temporary ViewModel instance that only applies while the group of Nodes remains selected. When the Node type&#39;s view (DiagramControl) instantiates the RibbonGroup upon selection, it must instantiate an instance of the Node type&#39;s ViewModel and set the RibbonGroup&#39;s Datacontext to this shared ViewModel, as shown in the following example.</p>
+<pre><code class="lang-C#">    public override IEnumerable CreateRibbonContent(IEnumerable selection)
+        {
+            var ribbon = new List();
+            if (selection.Count() == 1)
+            {
+                ribbon.Add(new MyNodeRibbonGroup() { DataContext = ViewModel });
+            }
+            else
+            {
+                MyNodeViewModel groupViewModel = new MyNodeViewModel(selection.Select(t =&gt; t.Model).OfType());
+                ribbon.Add(new MyNodeRibbonGroup() { DataContext = groupViewModel });
+            }
+            return ribbon;
+        }
+</code></pre><h3 id="adding-command-bindings">Adding Command Bindings</h3>
+<p>ElementViewModel provides the <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/M_NationalInstruments_SourceModel_Designer_ElementViewModel_AddCommandBindings.htm">AddCommandBindings</a> method, which you can override to add command bindings to any visual that needs to handle specific commands. Doing this within the ViewModel allows you to consolidate logic in one place and keep your visual code as simple as possible. Instead of creating handlers on the ribbon, the adorner, and the property pane visual, you just need code in the ViewModel.</p>
+<pre><code class="lang-C#">    public override void AddCommandBindings(UIElement element)
+    {
+        base.AddCommandBindings(element);
+        element.GetCommandBindings().Add(new CommandBinding(MyCommand1, MyCommand1ExecuteHandler, MyCommand1CanExecuteHandler));
+        element.GetCommandBindings().Add(new CommandBinding(MyCommand2, MyCommand2ExecuteHandler, MyCommand2CanExecuteHandler));
+    }
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

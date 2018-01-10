@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>The Plug-in System </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="The Plug-in System ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="the-plug-in-system">The Plug-in System</h1>
+
+<p>The Diagram SDK plug-in system, which is based on the .NET <a href="http://msdn.microsoft.com/en-us/library/dd460648.aspx">Managed Extensibility Framework (MEF)</a>, provides a unified system for extending your application by importing UI and modeling components housed in separate assemblies. Refer to the <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/PluginContracts.html">PlatformFramework Plugin Contracts</a> document for a list of importing types, imported types, and assciated metadata types.</p>
+<h2 id="plug-in-system-architecture">Plug-In System Architecture</h2>
+<p>The following diagram illustrates the high-level architecture of the plug-in system.</p>
+<p><img src="../../images/concepts/PluginRelationships.png" alt="PluginRelationships"></p>
+<h2 id="plug-in-system-theory-of-operation">Plug-in System Theory of Operation</h2>
+<p>When the end user launches a <a href="shell.html">shell application</a>, the shell instantiates a <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_Composition_CompositionHost.htm">CompositionHost</a>. The CompositionHost populates its CompositionContainer by searching the local folder from which the application instance was launched, looking at each assembly for classes declared as exports. These exported classes can then be used as import satisfiers for importer classes.</p>
+<p>An importer is a class that uses an import declaration to designate a contract for exporters to meet. External assemblies can then declare exports that satisfy those contracts and thus plug into the importer. For example, the shell&#39;s ribbon is an importer designed to consume plug-ins that export an IDocumentType so that it can display launch buttons for each available document type. Other examples of extensibility points in the Diagram SDK include DocumentEditControls, Commands, Adorners, Rules, IModels, Parsers and Generators, among many others. Refer to the <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/PluginContracts.html">PlatformFramework Plugin Contracts</a> document for a list of importing types, imported types, and assciated metadata types.</p>
+<h2 id="using-the-plug-in-system">Using the Plug-In System</h2>
+<p>The basic usage of the Diagram SDK plug-in system involves creating a <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_Composition_CompositionHost.htm">CompositionHost</a>, usually as a stack variable or a class member. The CompositionHost implements the <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_Composition_ICompositionHost.htm">ICompositionHost</a> interface, which provides a property to access the <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/P_NationalInstruments_Composition_CompositionHost_CompositionContainer.htm">CompositionContainer</a>. The CompositionContainer is the MEF component that manages exported plug-in types and instances. Once the CompositionHost is created, you can access the CompositionContainer member and instance top-level items such as a <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_SourceFile.htm">SourceFile</a> or <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_Shell_StudioWindow.htm">StudioWindow</a>, as shown in the following example.</p>
+<pre><code class="lang-C#">using (CompositionHost host = CompositionHost.InitializeNew(null))
+    {
+        myApp.ShutdownMode = ShutdownMode.OnExplicitShutdown;
+        StudioWindow mainWnd = host.CreateInstance();
+        myApp.Run(mainWnd);
+    }
+</code></pre><h3 id="avoiding-statics">Avoiding Statics</h3>
+<p>Avoid creating static objects that reference the Host or CompositionContainer. The Diagram SDK allows the end user to open multiple instances of the core framework in the same <a href="http://msdn.microsoft.com/en-us/library/System.AppDomain.aspx">AppDomain</a>. Statics are incompatible with this feature, because statics would be shared by all instances of the system in the AppDomain. You can use singletons, but they should be exposed through MEF rather than through class statics.</p>
+<p>All top-level entities in the Diagram SDK include a property that returns the CompositionHost they are associated with. By convention, this property is called Host. UI Elements can access the CompositionHost through the <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/P_NationalInstruments_SourceModel_Shell_DocumentEditSite_Host.htm">DocumentEditSite.Host</a> property. The DocumentEditSite is available to all UI elements using the static method <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/M_NationalInstruments_SourceModel_Shell_DocumentEditSite_GetEditSite.htm">DocumentEditSite.GetEditSite</a>.</p>
+<p>In the modeling layer, the Host is available through the following classes:</p>
+<ul>
+<li><a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_SourceFile.htm">SourceFile</a></li>
+<li><a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Envoys_Project.htm">Project</a></li>
+<li><a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Envoys_Envoy.htm">Envoy</a></li>
+<li><a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_Persistence_XmlModelParser.htm">XmlModelParser</a></li>
+<li><a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_Persistence_XmlModelGenerator.htm">Generator</a></li>
+</ul>
+<h3 id="exporting-types">Exporting Types</h3>
+<p>To expose your type as a plug-in, you must declare the class as an export. You can do so using the standard MEF [Export] and [ExportMetadata] attributes, but creating custom export attributes can improve both type safety and ease of use. For example, you can turn an export like this:</p>
+<pre><code class="lang-C#">    [Export(typeof(IProjectServiceInitialization)]
+    [ExportMetadata(&quot;ProvidedInterface&quot;, &quot;NationalInstruments.SourceModel.Projects.IInitializeProjectItem&quot;)]
+    [ExportMetadata(&quot;BindsToModelDefinitionType&quot;, &quot;ReadonlySketch&quot;)]
+    public class ReadonlySketchFactory
+    {
+    }
+</code></pre><p>Into this:</p>
+<pre><code class="lang-C#">    [ExportProjectServiceFactory(&quot;NationalInstruments.SourceModel.Projects.IInitializeProjectItem&quot;)]
+    [BindsToModelDefinitionType(&quot;ReadonlySketch&quot;)]
+    public class ReadonlySketchFactory
+    {
+    }
+</code></pre><h3 id="accessing-exported-types-as-import-satisfiers">Accessing Exported Types as Import Satisfiers</h3>
+<p>If your type is exposed through the CompositionContainer as explained in the next section, you can gain access to the ICompositionHost by importing it as follows:</p>
+<pre><code class="lang-C#">    [Import]
+    ICompositionHost Host { get; set; }
+</code></pre><p>Once you have access to an ICompositionHost interface, you can can access system singletons or create instances of top-level entities, such as SourceFiles. To obtain a reference to a singleton, you can use the GetExportedObject&lt;&gt;() method on the CompositionContainer:</p>
+<pre><code class="lang-C#">    Host.CompositionContainer.GetExportedObject();
+</code></pre><p>This call will return the reference to the DocumentManager. To create instances of top-level entities, you can use the CreateInstance extension method:</p>
+<pre><code class="lang-C#">    Host.CreateInstance();
+</code></pre><p>This will create a new SourceFile ready for use.</p>
+<h3 id="using-createinstance">Using CreateInstance</h3>
+<p>It is important to understand when to use CreateInstance versus the New operator to create an object. In general, only top-level objects require CreateInstance. If the declaration of a type is marked with the [Export] attribute or if the class uses [Import] properties, then you need to use CreateInstance. When in doubt, you can always use CreateInstance t a non-exported type, and it will be created and its imports will be satisfied.</p>
+<h3 id="using-the-plug-in-system-in-automated-tests">Using the Plug-In System in Automated Tests</h3>
+<p>Test methods should create a CompositionHost instance for each test. Failing to create a CompositionHost prevents the system from finding any plug-ins.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

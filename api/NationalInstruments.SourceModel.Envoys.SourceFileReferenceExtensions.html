@@ -1,0 +1,658 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SourceFileReferenceExtensions
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SourceFileReferenceExtensions
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.SourceModel.Envoys.SourceFileReferenceExtensions">
+  
+  
+  <h1 id="NationalInstruments_SourceModel_Envoys_SourceFileReferenceExtensions" data-uid="NationalInstruments.SourceModel.Envoys.SourceFileReferenceExtensions" class="text-break">Class SourceFileReferenceExtensions
+  </h1>
+  <div class="markdown level0 summary"><p>Extension methods which make adding SourceFileReferences to a project easy.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">SourceFileReferenceExtensions</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.SourceModel.Envoys.html">NationalInstruments.SourceModel.Envoys</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_SourceModel_Envoys_SourceFileReferenceExtensions_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class SourceFileReferenceExtensions</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_SourceFileReferenceExtensions_AddDuplicateFileReference_" data-uid="NationalInstruments.SourceModel.Envoys.SourceFileReferenceExtensions.AddDuplicateFileReference*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_SourceFileReferenceExtensions_AddDuplicateFileReference_NationalInstruments_SourceModel_Element_NationalInstruments_SourceModel_Envoys_IReferencedFileService_" data-uid="NationalInstruments.SourceModel.Envoys.SourceFileReferenceExtensions.AddDuplicateFileReference(NationalInstruments.SourceModel.Element,NationalInstruments.SourceModel.Envoys.IReferencedFileService)">AddDuplicateFileReference(Element, IReferencedFileService)</h4>
+  <div class="markdown level1 summary"><p>Create a new file reference that is based on and linked to an original file reference. 
+This will not explicitly load the referenced definition of the original or the target.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Envoy AddDuplicateFileReference(this Element parent, IReferencedFileService originalFileReference)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td><span class="parametername">parent</span></td>
+        <td><p>The owner of the new file reference</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.IReferencedFileService.html">IReferencedFileService</a></td>
+        <td><span class="parametername">originalFileReference</span></td>
+        <td><p>The file reference to mimic</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><p>The new file reference that is linked to the original</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_SourceFileReferenceExtensions_AddDuplicateFileReferenceToPreferredParent_" data-uid="NationalInstruments.SourceModel.Envoys.SourceFileReferenceExtensions.AddDuplicateFileReferenceToPreferredParent*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_SourceFileReferenceExtensions_AddDuplicateFileReferenceToPreferredParent_NationalInstruments_SourceModel_Envoys_Envoy_NationalInstruments_SourceModel_Envoys_IReferencedFileService_" data-uid="NationalInstruments.SourceModel.Envoys.SourceFileReferenceExtensions.AddDuplicateFileReferenceToPreferredParent(NationalInstruments.SourceModel.Envoys.Envoy,NationalInstruments.SourceModel.Envoys.IReferencedFileService)">AddDuplicateFileReferenceToPreferredParent(Envoy, IReferencedFileService)</h4>
+  <div class="markdown level1 summary"><p>Create a new file reference that is based on and linked to an original file reference under the preferred parent for the file&apos;s <a class="xref" href="NationalInstruments.SourceModel.Envoys.FileType.html">FileType</a>. 
+This will not explicitly load the referenced definition of the original or the target.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Envoy AddDuplicateFileReferenceToPreferredParent(this Envoy parent, IReferencedFileService originalFileReference)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">parent</span></td>
+        <td><p>The envoy to seek the preferred parent under, which will own the new file reference</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.IReferencedFileService.html">IReferencedFileService</a></td>
+        <td><span class="parametername">originalFileReference</span></td>
+        <td><p>The file reference to mimic</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><p>The new file reference that is linked to the original</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_SourceFileReferenceExtensions_AddFileReferenceCopy_" data-uid="NationalInstruments.SourceModel.Envoys.SourceFileReferenceExtensions.AddFileReferenceCopy*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_SourceFileReferenceExtensions_AddFileReferenceCopy_NationalInstruments_SourceModel_Envoys_Envoy_NationalInstruments_SourceModel_Envoys_Envoy_System_String_System_String_System_Action_NationalInstruments_SourceModel_Envoys_ILockedSourceFile_System_Exception__" data-uid="NationalInstruments.SourceModel.Envoys.SourceFileReferenceExtensions.AddFileReferenceCopy(NationalInstruments.SourceModel.Envoys.Envoy,NationalInstruments.SourceModel.Envoys.Envoy,System.String,System.String,System.Action{NationalInstruments.SourceModel.Envoys.ILockedSourceFile,System.Exception})">AddFileReferenceCopy(Envoy, Envoy, String, String, Action&lt;ILockedSourceFile, Exception&gt;)</h4>
+  <div class="markdown level1 summary"><p>Make a copy of the given <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a>, add the copy to the specified scoping envoy,
+and asynchronously load the copy definition from the original. The copy will not be linked to the original item.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Envoy AddFileReferenceCopy(this Envoy parent, Envoy toCopy, string newName, string containingDirectoryRelativePath, Action&lt;ILockedSourceFile, Exception&gt; operationComplete)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">parent</span></td>
+        <td><p>The scope that will own the duplicated source file reference</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">toCopy</span></td>
+        <td><p>The file reference to duplicate</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">newName</span></td>
+        <td><p>The name of the duplicated file reference. If null or empty, the name will be a unique version of the original name.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">containingDirectoryRelativePath</span></td>
+        <td><p>Path to the directory that will contain the duplicate. This path is relative to the parent&apos;s EnvoyManager.
+If null, the default storage path for a new envoy will be used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.ILockedSourceFile.html">ILockedSourceFile</a>, <span class="xref">System.Exception</span>&gt;</td>
+        <td><span class="parametername">operationComplete</span></td>
+        <td><p>Required callback called when this operation completes</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><p>The new file reference that is linked to the original</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_SourceFileReferenceExtensions_AddNewSourceFileReference_" data-uid="NationalInstruments.SourceModel.Envoys.SourceFileReferenceExtensions.AddNewSourceFileReference*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_SourceFileReferenceExtensions_AddNewSourceFileReference_NationalInstruments_SourceModel_Element_NationalInstruments_SourceModel_Envoys_EnvoyCreateInfo_" data-uid="NationalInstruments.SourceModel.Envoys.SourceFileReferenceExtensions.AddNewSourceFileReference(NationalInstruments.SourceModel.Element,NationalInstruments.SourceModel.Envoys.EnvoyCreateInfo)">AddNewSourceFileReference(Element, EnvoyCreateInfo)</h4>
+  <div class="markdown level1 summary"><p>Synchronously adds a new source file reference to the project</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ILockedSourceFile AddNewSourceFileReference(this Element parent, EnvoyCreateInfo createInfo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td><span class="parametername">parent</span></td>
+        <td><p>Indicates the suggested <a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a> under which the new envoy should be added.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyCreateInfo.html">EnvoyCreateInfo</a></td>
+        <td><span class="parametername">createInfo</span></td>
+        <td><p>The <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyCreateInfo.html">EnvoyCreateInfo</a> defining how the new source file reference should be created.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.ILockedSourceFile.html">ILockedSourceFile</a></td>
+        <td><p>The <a class="xref" href="NationalInstruments.SourceModel.Envoys.ILockedSourceFile.html">ILockedSourceFile</a> for the newly created source file reference</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_SourceFileReferenceExtensions_AddNewSourceFileReference_" data-uid="NationalInstruments.SourceModel.Envoys.SourceFileReferenceExtensions.AddNewSourceFileReference*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_SourceFileReferenceExtensions_AddNewSourceFileReference_NationalInstruments_SourceModel_Envoys_Envoy_NationalInstruments_Core_BindingKeyword_NationalInstruments_Core_QualifiedName_System_Boolean_" data-uid="NationalInstruments.SourceModel.Envoys.SourceFileReferenceExtensions.AddNewSourceFileReference(NationalInstruments.SourceModel.Envoys.Envoy,NationalInstruments.Core.BindingKeyword,NationalInstruments.Core.QualifiedName,System.Boolean)">AddNewSourceFileReference(Envoy, BindingKeyword, QualifiedName, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Synchronously adds a new source file reference to the project</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ILockedSourceFile AddNewSourceFileReference(this Envoy parent, BindingKeyword modelDefinitionType, QualifiedName name, bool addToPreferredParentScope)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">parent</span></td>
+        <td><p>The owner of the new source file reference</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.BindingKeyword</span></td>
+        <td><span class="parametername">modelDefinitionType</span></td>
+        <td><p>Type of definition to create and associate with the new source file reference</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.QualifiedName</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Initial name of the project item</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">addToPreferredParentScope</span></td>
+        <td><p>True to search all mirrors, if any exist, and and use the parent that is preferred</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.ILockedSourceFile.html">ILockedSourceFile</a></td>
+        <td><p>The <a class="xref" href="NationalInstruments.SourceModel.Envoys.ILockedSourceFile.html">ILockedSourceFile</a> for the newly created source file reference</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_SourceFileReferenceExtensions_AddNewSourceFileReference_" data-uid="NationalInstruments.SourceModel.Envoys.SourceFileReferenceExtensions.AddNewSourceFileReference*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_SourceFileReferenceExtensions_AddNewSourceFileReference_NationalInstruments_SourceModel_Envoys_EnvoyManager_NationalInstruments_Core_BindingKeyword_NationalInstruments_Core_QualifiedName_NationalInstruments_SourceModel_Envoys_NameUniqueness_" data-uid="NationalInstruments.SourceModel.Envoys.SourceFileReferenceExtensions.AddNewSourceFileReference(NationalInstruments.SourceModel.Envoys.EnvoyManager,NationalInstruments.Core.BindingKeyword,NationalInstruments.Core.QualifiedName,NationalInstruments.SourceModel.Envoys.NameUniqueness)">AddNewSourceFileReference(EnvoyManager, BindingKeyword, QualifiedName, NameUniqueness)</h4>
+  <div class="markdown level1 summary"><p>Adds a new SourceFileReference to an EnvoyManager at its root.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ILockedSourceFile AddNewSourceFileReference(this EnvoyManager envoyManager, BindingKeyword modelDefinitionType, QualifiedName name, NameUniqueness uniqueness)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyManager.html">EnvoyManager</a></td>
+        <td><span class="parametername">envoyManager</span></td>
+        <td><p>The <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyManager.html">EnvoyManager</a> to add the target to</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.BindingKeyword</span></td>
+        <td><span class="parametername">modelDefinitionType</span></td>
+        <td><p>Type of target to add</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.QualifiedName</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>name of the target</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.NameUniqueness.html">NameUniqueness</a></td>
+        <td><span class="parametername">uniqueness</span></td>
+        <td><p>Specifies when to make the name unique</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.ILockedSourceFile.html">ILockedSourceFile</a></td>
+        <td><p>The <a class="xref" href="NationalInstruments.SourceModel.Envoys.ILockedSourceFile.html">ILockedSourceFile</a> for the newly created source file reference</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_SourceFileReferenceExtensions_AddSourceFileReference_" data-uid="NationalInstruments.SourceModel.Envoys.SourceFileReferenceExtensions.AddSourceFileReference*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_SourceFileReferenceExtensions_AddSourceFileReference_NationalInstruments_SourceModel_Element_NationalInstruments_SourceModel_Envoys_EnvoyCreateInfo_" data-uid="NationalInstruments.SourceModel.Envoys.SourceFileReferenceExtensions.AddSourceFileReference(NationalInstruments.SourceModel.Element,NationalInstruments.SourceModel.Envoys.EnvoyCreateInfo)">AddSourceFileReference(Element, EnvoyCreateInfo)</h4>
+  <div class="markdown level1 summary"><p>Create a <a class="xref" href="NationalInstruments.Restricted.SourceModel.Envoys.SourceFileReference.html">SourceFileReference</a> and add it to the parent envoy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Envoy AddSourceFileReference(this Element parent, EnvoyCreateInfo createInfo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td><span class="parametername">parent</span></td>
+        <td><p>The owner of the new source file reference</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyCreateInfo.html">EnvoyCreateInfo</a></td>
+        <td><span class="parametername">createInfo</span></td>
+        <td><p>The <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyCreateInfo.html">EnvoyCreateInfo</a> defining how the new source file reference should be created.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><p>The newly created source file reference</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_SourceModel_Envoys_SourceFileReferenceExtensions_AddSourceFileReference_NationalInstruments_SourceModel_Element_NationalInstruments_SourceModel_Envoys_EnvoyCreateInfo__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This will not explicitly load the referenced definition. Use one of the SourceFileReference BeginLoad
+methods to load the referenced definition.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_SourceFileReferenceExtensions_AddSourceFileReference_" data-uid="NationalInstruments.SourceModel.Envoys.SourceFileReferenceExtensions.AddSourceFileReference*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_SourceFileReferenceExtensions_AddSourceFileReference_NationalInstruments_SourceModel_Envoys_Envoy_System_String_NationalInstruments_Core_BindingKeyword_" data-uid="NationalInstruments.SourceModel.Envoys.SourceFileReferenceExtensions.AddSourceFileReference(NationalInstruments.SourceModel.Envoys.Envoy,System.String,NationalInstruments.Core.BindingKeyword)">AddSourceFileReference(Envoy, String, BindingKeyword)</h4>
+  <div class="markdown level1 summary"><p>Create a <a class="xref" href="NationalInstruments.Restricted.SourceModel.Envoys.SourceFileReference.html">SourceFileReference</a> and add it to the parent envoy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Envoy AddSourceFileReference(this Envoy parent, string storagePath, BindingKeyword modelDefinitionType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">parent</span></td>
+        <td><p>The owner of the new source file reference</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">storagePath</span></td>
+        <td><p>The storage path</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.BindingKeyword</span></td>
+        <td><span class="parametername">modelDefinitionType</span></td>
+        <td><p>The expected model definition type. When the load eventually occurs, an error will be returned if the actual type does not match
+the model definition type given here. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><p>The newly created source file reference</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_SourceModel_Envoys_SourceFileReferenceExtensions_AddSourceFileReference_NationalInstruments_SourceModel_Envoys_Envoy_System_String_NationalInstruments_Core_BindingKeyword__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This will not explicitly load the referenced definition. Use one of the SourceFileReference BeginLoad
+methods to load the referenced definition.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_SourceFileReferenceExtensions_ReparentUnderPreferredParent_" data-uid="NationalInstruments.SourceModel.Envoys.SourceFileReferenceExtensions.ReparentUnderPreferredParent*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_SourceFileReferenceExtensions_ReparentUnderPreferredParent_NationalInstruments_SourceModel_Envoys_Envoy_NationalInstruments_SourceModel_Envoys_Envoy_" data-uid="NationalInstruments.SourceModel.Envoys.SourceFileReferenceExtensions.ReparentUnderPreferredParent(NationalInstruments.SourceModel.Envoys.Envoy,NationalInstruments.SourceModel.Envoys.Envoy)">ReparentUnderPreferredParent(Envoy, Envoy)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ReparentUnderPreferredParent(this Envoy envoy, Envoy newParent)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">envoy</span></td>
+        <td><p>The envoy to reparent</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">newParent</span></td>
+        <td><p>The new parent to find the perferred parent from</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_SourceModel_Envoys_SourceFileReferenceExtensions_ReparentUnderPreferredParent_NationalInstruments_SourceModel_Envoys_Envoy_NationalInstruments_SourceModel_Envoys_Envoy__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Reparent that places the envoy under the preferred parent of <code data-dev-comment-type="paramref" class="paramref">newParent</code>.</p>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

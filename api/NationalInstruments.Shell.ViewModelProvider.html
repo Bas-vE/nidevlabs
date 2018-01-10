@@ -1,0 +1,478 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ViewModelProvider
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ViewModelProvider
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.Shell.ViewModelProvider">
+  
+  
+  <h1 id="NationalInstruments_Shell_ViewModelProvider" data-uid="NationalInstruments.Shell.ViewModelProvider" class="text-break">Class ViewModelProvider
+  </h1>
+  <div class="markdown level0 summary"><p>Stock implementation of the IProvideViewModels interface.  This should be used to create a map from string to ViewModel.
+Derive from this class, export your item as described in IProvideViewModels and fill the type dictionary.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ViewModelProvider</span></div>
+      <div class="level2"><a class="xref" href="NationalInstruments.Design.BlackBoxViewModelProvider.html">BlackBoxViewModelProvider</a></div>
+      <div class="level2"><a class="xref" href="NationalInstruments.Design.IconEditorViewModelProvider.html">IconEditorViewModelProvider</a></div>
+      <div class="level2"><a class="xref" href="NationalInstruments.Design.ModesPaletteEditorViewModelProvider.html">ModesPaletteEditorViewModelProvider</a></div>
+      <div class="level2"><a class="xref" href="NationalInstruments.Design.PaletteAuthorViewModelProvider.html">PaletteAuthorViewModelProvider</a></div>
+      <div class="level2"><a class="xref" href="NationalInstruments.Design.PaletteEditorViewModelProvider.html">PaletteEditorViewModelProvider</a></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="NationalInstruments.Shell.IProvideViewModels.html">IProvideViewModels</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.Shell.html">NationalInstruments.Shell</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_Shell_ViewModelProvider_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class ViewModelProvider : IProvideViewModels</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_Shell_ViewModelProvider_AddSupportedModel_" data-uid="NationalInstruments.Shell.ViewModelProvider.AddSupportedModel*"></a>
+  <h4 id="NationalInstruments_Shell_ViewModelProvider_AddSupportedModel__1_System_Func___0_NationalInstruments_Design_IElementViewModel__" data-uid="NationalInstruments.Shell.ViewModelProvider.AddSupportedModel``1(System.Func{``0,NationalInstruments.Design.IElementViewModel})">AddSupportedModel&lt;TElement&gt;(Func&lt;TElement, IElementViewModel&gt;)</h4>
+  <div class="markdown level1 summary"><p>Adds a view model provider for the given element type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void AddSupportedModel&lt;TElement&gt;(Func&lt;TElement, IElementViewModel&gt; makeViewModelForElement)where TElement : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;TElement, <a class="xref" href="NationalInstruments.Design.IElementViewModel.html">IElementViewModel</a>&gt;</td>
+        <td><span class="parametername">makeViewModelForElement</span></td>
+        <td><p>A delegate used to construct an <a class="xref" href="NationalInstruments.Design.IElementViewModel.html">IElementViewModel</a> for the given element type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TElement</span></td>
+        <td><p>The type of <a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a> for which a view model will be provided.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Shell_ViewModelProvider_AddSupportedModel_" data-uid="NationalInstruments.Shell.ViewModelProvider.AddSupportedModel*"></a>
+  <h4 id="NationalInstruments_Shell_ViewModelProvider_AddSupportedModel__1_System_String_System_Func___0_NationalInstruments_Design_IElementViewModel__" data-uid="NationalInstruments.Shell.ViewModelProvider.AddSupportedModel``1(System.String,System.Func{``0,NationalInstruments.Design.IElementViewModel})">AddSupportedModel&lt;TElement&gt;(String, Func&lt;TElement, IElementViewModel&gt;)</h4>
+  <div class="markdown level1 summary"><p>Adds a view model provider for the given element type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void AddSupportedModel&lt;TElement&gt;(string modelType, Func&lt;TElement, IElementViewModel&gt; makeViewModelForElement)where TElement : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">modelType</span></td>
+        <td><p>The full type name of the model, or the name of a facade applied to the model.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;TElement, <a class="xref" href="NationalInstruments.Design.IElementViewModel.html">IElementViewModel</a>&gt;</td>
+        <td><span class="parametername">makeViewModelForElement</span></td>
+        <td><p>A delegate used to construct an <a class="xref" href="NationalInstruments.Design.IElementViewModel.html">IElementViewModel</a> for the given element type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TElement</span></td>
+        <td><p>The type of <a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a> for which a view model will be provided.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Shell_ViewModelProvider_CreateViewModel_" data-uid="NationalInstruments.Shell.ViewModelProvider.CreateViewModel*"></a>
+  <h4 id="NationalInstruments_Shell_ViewModelProvider_CreateViewModel_NationalInstruments_Design_DesignerEditControlViewModel_NationalInstruments_SourceModel_Element_System_String_" data-uid="NationalInstruments.Shell.ViewModelProvider.CreateViewModel(NationalInstruments.Design.DesignerEditControlViewModel,NationalInstruments.SourceModel.Element,System.String)">CreateViewModel(DesignerEditControlViewModel, Element, String)</h4>
+  <div class="markdown level1 summary"><p>Gets the resources that are used application wide and should be added to the application resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IElementViewModel CreateViewModel(DesignerEditControlViewModel designer, Element model, string facade)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.DesignerEditControlViewModel.html">DesignerEditControlViewModel</a></td>
+        <td><span class="parametername">designer</span></td>
+        <td><p>The designer view model to use to map the model and view model.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td><span class="parametername">model</span></td>
+        <td><p>The model to create a view model for.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">facade</span></td>
+        <td><p>The facade to use for the new view model.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.IElementViewModel.html">IElementViewModel</a></td>
+        <td><p>The application level resources</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Shell_ViewModelProvider_GetSupportedModels_" data-uid="NationalInstruments.Shell.ViewModelProvider.GetSupportedModels*"></a>
+  <h4 id="NationalInstruments_Shell_ViewModelProvider_GetSupportedModels" data-uid="NationalInstruments.Shell.ViewModelProvider.GetSupportedModels">GetSupportedModels()</h4>
+  <div class="markdown level1 summary"><p>Get all the Models that you provide types for. The string should be either FullName or facade name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;string&gt; GetSupportedModels()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><p>The diagram specific resources</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Shell_ViewModelProvider_OnAnyViewModelCreated_" data-uid="NationalInstruments.Shell.ViewModelProvider.OnAnyViewModelCreated*"></a>
+  <h4 id="NationalInstruments_Shell_ViewModelProvider_OnAnyViewModelCreated_NationalInstruments_SourceModel_Element_NationalInstruments_Design_IElementViewModel_" data-uid="NationalInstruments.Shell.ViewModelProvider.OnAnyViewModelCreated(NationalInstruments.SourceModel.Element,NationalInstruments.Design.IElementViewModel)">OnAnyViewModelCreated(Element, IElementViewModel)</h4>
+  <div class="markdown level1 summary"><p>Called once a view model has been constructed for the given model from any ViewModelProvider.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void OnAnyViewModelCreated(Element model, IElementViewModel viewModel)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td><span class="parametername">model</span></td>
+        <td><p>The model for which a view model has been created.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.IElementViewModel.html">IElementViewModel</a></td>
+        <td><span class="parametername">viewModel</span></td>
+        <td><p>The view model that has been created.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Shell_ViewModelProvider_OnViewModelCreated_" data-uid="NationalInstruments.Shell.ViewModelProvider.OnViewModelCreated*"></a>
+  <h4 id="NationalInstruments_Shell_ViewModelProvider_OnViewModelCreated_NationalInstruments_SourceModel_Element_NationalInstruments_Design_IElementViewModel_" data-uid="NationalInstruments.Shell.ViewModelProvider.OnViewModelCreated(NationalInstruments.SourceModel.Element,NationalInstruments.Design.IElementViewModel)">OnViewModelCreated(Element, IElementViewModel)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnViewModelCreated(Element model, IElementViewModel viewModel)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td><span class="parametername">model</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.IElementViewModel.html">IElementViewModel</a></td>
+        <td><span class="parametername">viewModel</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Shell_ViewModelProvider_RemoveSupportedModel_" data-uid="NationalInstruments.Shell.ViewModelProvider.RemoveSupportedModel*"></a>
+  <h4 id="NationalInstruments_Shell_ViewModelProvider_RemoveSupportedModel_System_Type_" data-uid="NationalInstruments.Shell.ViewModelProvider.RemoveSupportedModel(System.Type)">RemoveSupportedModel(Type)</h4>
+  <div class="markdown level1 summary"><p>Removes an existing model type if present from the list of supported models.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool RemoveSupportedModel(Type modelType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">modelType</span></td>
+        <td><p>Type of model to remove</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the type was removed, false if the type was not present.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Shell_ViewModelProvider_RemoveSupportedModel_System_Type__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Useful in derived view model providers to replace the chosen view
+model implementation given by the base class</p>
+</div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.Shell.IProvideViewModels.html">IProvideViewModels</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

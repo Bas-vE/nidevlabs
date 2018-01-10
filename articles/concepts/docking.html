@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>The Docking System </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="The Docking System ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="the-docking-system">The Docking System</h1>
+
+<p>The Diagram SDK docking system manages the docking of tool windows within a <a href="shell.html">shell application</a> window and provides an API through which you can customize tool window appearance and docking behavior.</p>
+<h2 id="docking-system-architecture">Docking System Architecture</h2>
+<p>The following diagram illustrates the high-level architecture of the docking system.</p>
+<p><img src="../../images/concepts/DockingRelationships.png" alt="DockingRelationships"></p>
+<h2 id="docking-system-theory-of-operation">Docking System Theory of Operation</h2>
+<p>The Diagram SDK provides support for tool windows, which are semi-autonomous, yet subordinate to the main shell application window. Tool windows can either float freely or dock within the main application window, and you can customize their appearance and docking behaviors using the APIs described in this document.</p>
+<h3 id="creating-a-custom-tool-window">Creating a Custom Tool Window</h3>
+<p>Complete the following steps to create a custom tool window:</p>
+<ol>
+<li>Create the visual for your window (e.g. a UserControl with a nested Grid that contains your tool window&#39;s UI elements.</li>
+<li>Create a new class that derives from <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/06c1f416-6012-f0d7-4df8-db3b1a36c4ea.htm">ToolWindowType</a>.</li>
+<li>Export your ToolWindowType class as an <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/37b92fe1-89f8-27de-055d-977e6ccb10fe.htm">IToolWindowType</a>.</li>
+<li>Declare <a href="http://msdn.microsoft.com/en-us/library/system.componentmodel.composition.exportmetadataattribute(v=vs.110).aspx">ExportMetadataAttributes</a> to customize your tool window. See the next section for more information about customization options.</li>
+<li>Override the <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/2d6a522b-326a-34e4-c159-6f1b31464a71.htm">IToolWindowType.CreateToolWindow()</a> method and return an instance of your visual class.</li>
+</ol>
+<p>The following example code demonstrates a simple ToolWindowType implementation.</p>
+<pre><code class="lang-C#">    [Export(typeof(IToolWindowType))]
+    [ExportMetadata(&quot;UniqueID&quot;, &quot;{804b449c-a447-7c94-a4f8-d9317b9eba73}&quot;)]
+    [Name(&quot;MyCustomToolWindow&quot;)]
+    [ExportMetadata(&quot;SmallImagePath&quot;, &quot;&quot;)]
+    [ExportMetadata(&quot;LargeImagePath&quot;, &quot;&quot;)]
+    [ExportMetadata(&quot;DefaultCreationTime&quot;, ToolWindowCreationTime.UserRequested)]
+    [ExportMetadata(&quot;DefaultCreationMode&quot;, ToolWindowCreationMode.Pinned)]
+    [ExportMetadata(&quot;DefaultLocation&quot;, ToolWindowLocation.BottomRightDock)]
+    [ExportMetadata(&quot;AssociatedDocumentType&quot;, ArchitecturalDocument.TypeName)]
+    [ExportMetadata(&quot;Weight&quot;, 0.5)]
+    [ExportMetadata(&quot;ForceOpenPinned&quot;, true)]
+    public class MyToolWindowType : ToolWindowType
+    {
+        public override NationalInstruments.Core.PlatformVisual CreateToolWindow()
+        {
+            return new MyCustomToolWindow();
+        }
+    }
+</code></pre><h3 id="customizing-tool-window-docking-behavior">Customizing Tool Window Docking Behavior</h3>
+<p>Tool window docking behavior customizations are exposed as properties on the <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/2f4d8470-aab3-fdcd-b95d-12488439d114.htm">IToolWindowTypeInfo</a> interface and are set through ExportMetadata declarations on your ToolWindowType. Common customizations include:</p>
+<ul>
+<li>Make a tool window float upon creation - set <strong>FloatsOnCreation</strong> to true</li>
+<li>Remove a tool window&#39;s tab bar – set <strong>ShowWindowTabBarWhileDocked</strong> and/or <strong>ShowWindowTabBarWhileFloating</strong> to false</li>
+<li>Include standard window controls on a tool window – set <strong>CanMaximizeRestoreAndClose</strong> to true (note, however, that tool windows cannot be minimized)</li>
+</ul>
+<p>Refer to the the IToolWindowTypeInfo <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/2f4d8470-aab3-fdcd-b95d-12488439d114.htm">IToolWindowTypeInfoRef</a> interface documentation for the complete list of options and their default values.</p>
+<h3 id="creating-custom-dock-harbors">Creating Custom Dock Harbors</h3>
+<p>The phrase <em>dock harbor</em> refers to the spaces within the shell window that hold docked tool windows. By default, the only available dock harbors are the spaces that the shell application highlights when the user drags a tool window. If these default dock harbors are insufficient for your use case, you can define custom dock harbors for your tool window(s) by providing:</p>
+<ul>
+<li>An <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_Divelements_SandDock_IRestrictedDockHarborHost.htm">IRestrictedDockHarborHost</a></li>
+<li>An <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/37b92fe1-89f8-27de-055d-977e6ccb10fe.htm">IToolWindowType</a> for the tool window that sets <strong>UsesRestrictedDockHarbor</strong> to true</li>
+<li>A visual to act as the dock harbor itself</li>
+</ul>
+<p>The IRestrictedDockHarborHost interface provides methods to perform docking system customizations. The interface’s documentation explains where each of its methods fit in the scheme of the docking system’s execution logic. However, the following points shed additional light on the interface:</p>
+<ul>
+<li>You can use the <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/M_Divelements_SandDock_IRestrictedDockHarborHost_AllowedToolWindowIsDocking.htm">IRestrictedDockHarborHost.AllowedToolWindowIsDocking()</a> method to display visual docking hints similar to those provided by default. The docking system calls this method whenever the user starts dragging a tool window whose Guid fits the host’s <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/P_Divelements_SandDock_IRestrictedDockHarborHost_AllowedToolWindowId.htm">AllowedToolWindowId</a>, so this is a logical place to perform docking set-up processes in addition to displaying visual hints.</li>
+<li>When the user stops dragging a tool window, the docking operation for the tool window stops and the docking system calls one of two functions, depending on how the operation ended:<ul>
+<li>If the user releases the mouse in the visual returned by GetDockHarbor, the docking system calls the <a href="http://xgen/DiagramSDK/html/M_Divelements_SandDock_IRestrictedDockHarborHost_Dock.htm">IRestrictedDockHarborHost.Dock()</a> method. It is the IRestrictedDockHarborHost&#39;s responsibility to facilitate the interaction between the dock harbor visual and the tool window.</li>
+<li>If the user releases the mouse anywhere else, the docking system calls the <a href="http://xgen/DiagramSDK/html/M_Divelements_SandDock_IRestrictedDockHarborHost_AllowedToolWindowFinishedDockingElsewhere.htm">IRestrictedDockHarborHost.AllowedToolWindowFinishedDockingElsewhere()</a> method.</li>
+</ul>
+</li>
+<li>Note that each custom dock harbor can be used with only one type of tool window.</li>
+</ul>
+<h3 id="persisting-docking-layouts">Persisting Docking Layouts</h3>
+<p>The term <em>docking layout</em> refers to the complete configuration of all tool windows on the screen – which ones are open, where they are, whether they are docked, etc. By default, the docking system persists the user&#39;s docking layout in the application preferences. However, you can choose to persist the docking layout in the open project’s settings file instead by setting <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/151756ff-f15a-63a8-81a9-5bd3737c88da.htm">ProjectSettings.PersistentLayoutRecordingRule</a> to <strong>UpdateLayoutRecord</strong>.</p>
+<h3 id="programmatically-accessing-docking-states">Programmatically Accessing Docking States</h3>
+<p><a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/AllMembers_T_NationalInstruments_SourceModel_Shell_ToolWindowEditSite.htm">ToolWindowEditSite</a> provides programmatic access to the docking state of a particular tool window. You can access a tool window&#39;s edit site by passing its visual to the <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/M_NationalInstruments_SourceModel_Shell_ToolWindowEditSite_GetEditSite.htm">ToolWindowEditSite.GetEditSite()</a> method. External clients can call <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/dfc5ef6c-6036-07be-e3f4-27d2782a35f4.htm">DocumentEditSite.ShowToolWindow()</a> to access the visual for a particular tool window. <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/AllMembers_T_NationalInstruments_SourceModel_Shell_ToolWindowEditSite.htm">ToolWindowEditSite</a> offers a number of useful properties and methods, including:</p>
+<ul>
+<li><a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/M_NationalInstruments_SourceModel_Shell_ToolWindowEditSite_Show.htm">Show()</a> to open the tool window and make it visible</li>
+<li><a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/M_NationalInstruments_SourceModel_Shell_ToolWindowEditSite_Hide.htm">Hide()</a> to close the tool window</li>
+<li><a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/P_NationalInstruments_SourceModel_Shell_ToolWindowEditSite_Pinned.htm">Pinned</a> to check whether the tool window is currently pinned, or to pin or unpin it</li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

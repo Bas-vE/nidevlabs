@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>The Debugging System </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="The Debugging System ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="the-debugging-system">The Debugging System</h1>
+
+<p>Although the Diagram SDK editor is not aware of execution, it provides a debugging system with a set of base classes, helpers, visual assets, and MEF contracts to support debugging.</p>
+<h2 id="debugging-system-architecture">Debugging System Architecture</h2>
+<p>The following diagram illustrates the high-level architecture of the debugging system:</p>
+<p><img src="../../images/concepts/DebuggingRelationships2.png" alt="DebuggingRelationships"></p>
+<h2 id="debugging-system-theory-of-operation">Debugging System Theory of Operation</h2>
+<p>The debugging system consists of components for modeling, visualizing, customizing, and interacting with <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/5a3e77fc-f5ec-474f-42dd-baf11fd1fdd7.htm">Probes</a> and <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/e615e335-59e3-1e23-2f11-f507b32d049a.htm">Breakpoints</a>.</p>
+<h2 id="modeling-probes-and-breakpoints">Modeling Probes and Breakpoints</h2>
+<p>The <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/5a3e77fc-f5ec-474f-42dd-baf11fd1fdd7.htm">Probe</a> and <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/e615e335-59e3-1e23-2f11-f507b32d049a.htm">Breakpoint</a> classes are <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/4ac52bc6-3f1b-b9bc-9122-2a1f93f65b89.htm">UserSetting</a> base classes available in the Diagram SDK, designed to support the aggregation and management of different types of probes and breakpoints (e.g. on a node vs. in text code) via the <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/0f26689c-f7ea-06af-38a8-1511efe3b97d.htm">ProbeManager</a> and <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/9d31b1ab-01ce-64b5-0f1a-9354bd726bf4.htm">BreakpointManager</a> classes. These manager classes in turn are used by clients, such as the <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/d99a173b-9479-02a6-f566-0372761d7992.htm">BreakpointWindowViewModel</a>, <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/03581e4f-0cfc-3e3a-4899-100c3d5ee697.htm">ProbeWindowViewModel</a> and <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/df970654-082d-bf71-d574-48c609b09ef8.htm">DebuggingToolViewModel</a>.</p>
+<h3 id="visualizing-probes-and-breakpoints">Visualizing Probes and Breakpoints</h3>
+<p>The Diagram SDK supplies the following default visual controls for debugging:</p>
+<ul>
+<li><a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/208331e3-40da-242a-ea23-7eb70686e3da.htm">BreakpointProbeControl</a></li>
+<li><a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/fce73701-a124-c748-3b92-82188dc0e2d5.htm">ExecutionPointControl</a></li>
+<li><a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/a1544712-4095-8c46-2c78-cff31c11b519.htm">BreakpointWindowControl</a></li>
+<li><a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/1a10ad7a-163e-fde5-2c62-811c6da28d0b.htm">ProbeWindowControl</a></li>
+</ul>
+<p>The Diagram SDK also provides a set of default images, primarily used by DebuggingCommands for debugging-related buttons.</p>
+<h3 id="customizing-probes-and-breakpoints">Customizing Probes and Breakpoints</h3>
+<p>Probe and Breakpoint can be subclassed to store additional information about location/configuration. A <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/570ebb43-70ca-3e3d-031d-88bd8715a39d.htm">NodeViewModel</a> or a <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/41e6184c-7e62-e8f7-ea4c-eb2a7a676a43.htm">DocumentEditControl</a> can implement <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/58fbe38c-93f5-9f28-000c-a41583996185.htm">IDebuggablePresentation</a> to provide specific visuals for breakpoints. The vast majority of the commands in <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/665ced8a-44dc-e0ed-72f1-a9d759271237.htm">DebuggingCommands</a> are <a href="http://msdn.microsoft.com/en-us/library/system.windows.input.routedcommand(v=vs.110).aspx">RoutedCommands</a> so that the source (ViewModel or DocumentEditControl) can override to provide specific CanExecute() logic.</p>
+<p>The Diagram SDK supplies the <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/9ad2839f-575e-2d64-edfd-06172f1e237a.htm">IDataView</a> and <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/2b002a83-cd1d-400f-e6dd-331bbe9294de.htm">IDataViewFactory</a> interfaces as the plug-in mechanism to provide custom visualizations for data. For example, VI probes and Data Depot currently use this mechanism. Currently, all specific views are provided by VI. In the future, a set of standard data views might be pushed down to MocCommon or PlatformFramework.</p>
+<h3 id="interacting-with-probes-and-breakpoints">Interacting With Probes and Breakpoints</h3>
+<p>The DebuggingTool, accessed via <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/df970654-082d-bf71-d574-48c609b09ef8.htm">DebuggingToolViewModel</a>, is a <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/b9138942-a7e8-9d05-0e54-c5c1a90a9390.htm">DesignerTool</a> that provides typical debugging interactions, such as panning when executing, clicking on a wire to show a probe, and displaying debugging adorners for probes and breakpoints. It also has built-in support for wire highlighting and disabled visualization for nodes that have not been executed.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

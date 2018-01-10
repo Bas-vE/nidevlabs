@@ -1,0 +1,1631 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class PlacementViewModel
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class PlacementViewModel
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.Design.PlacementViewModel">
+  
+  
+  <h1 id="NationalInstruments_Design_PlacementViewModel" data-uid="NationalInstruments.Design.PlacementViewModel" class="text-break">Class PlacementViewModel
+  </h1>
+  <div class="markdown level0 summary"><p>The Controller/ViewModel for PlacementTool.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">NationalInstruments.Core.ViewModelBase</span></div>
+    <div class="level2"><a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html">DesignerToolViewModel</a></div>
+    <div class="level3"><span class="xref">PlacementViewModel</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.Windows.IWeakEventListener</span></div>
+    <div><span class="xref">NationalInstruments.Core.IServiceAggregator</span></div>
+    <div><span class="xref">NationalInstruments.Core.IColorResolver</span></div>
+    <div><a class="xref" href="NationalInstruments.Design.IDesignerToolViewModel.html">IDesignerToolViewModel</a></div>
+    <div><span class="xref">NationalInstruments.Core.IViewModel</span></div>
+    <div><span class="xref">NationalInstruments.Core.IQueryService</span></div>
+    <div><span class="xref">System.ComponentModel.INotifyPropertyChanged</span></div>
+    <div><a class="xref" href="NationalInstruments.SourceModel.IInteractiveTransactionOwner.html">IInteractiveTransactionOwner</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_View">DesignerToolViewModel.View</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_Cleanup">DesignerToolViewModel.Cleanup()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_IsAggregate">DesignerToolViewModel.IsAggregate</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_IsActive">DesignerToolViewModel.IsActive</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_Host">DesignerToolViewModel.Host</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_IsEditTool">DesignerToolViewModel.IsEditTool</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_IsModalTool">DesignerToolViewModel.IsModalTool</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_UseCustomEventRouting">DesignerToolViewModel.UseCustomEventRouting</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_Tool">DesignerToolViewModel.Tool</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_Designer">DesignerToolViewModel.Designer</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_EditSite">DesignerToolViewModel.EditSite</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_ClickSelectionThreshold">DesignerToolViewModel.ClickSelectionThreshold</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_AutoScrollHelper">DesignerToolViewModel.AutoScrollHelper</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_InitializeTool">DesignerToolViewModel.InitializeTool()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_OnDesignerInitialized">DesignerToolViewModel.OnDesignerInitialized()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_GetItemAtPosition_NationalInstruments_Core_UIPosition_">DesignerToolViewModel.GetItemAtPosition(UIPosition)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_GetSelectableItemNearPosition_NationalInstruments_Core_UIPosition_">DesignerToolViewModel.GetSelectableItemNearPosition(UIPosition)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_OnVisualRemoved_NationalInstruments_Core_IViewModel_">DesignerToolViewModel.OnVisualRemoved(IViewModel)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_GetAsTool__1_NationalInstruments_Design_IDesignerToolViewModel_">DesignerToolViewModel.GetAsTool&lt;T&gt;(IDesignerToolViewModel)</a>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.ViewModelProperty</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.GetNonInheritedViewModel(NationalInstruments.Core.PlatformVisual)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.GetNearestViewModel(NationalInstruments.Core.PlatformVisual)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.SetViewModel(NationalInstruments.Core.PlatformVisual, NationalInstruments.Core.IViewModel)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.Model</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.CreateViewHandler</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.ParentViewModel</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.OnParentViewModelChanged()</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.BindToView(NationalInstruments.Core.PlatformVisual)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.AddCommandBindings(NationalInstruments.Core.PlatformVisual)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.CommandBindings</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.TryFindResource(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.AttachService(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.RemoveService(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.RemoveAll(System.Predicate&lt;System.Object&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.SetService&lt;T&gt;(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.QueryService&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.PropertyChanged</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.NotifyPropertyChanged(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.ReceiveWeakEvent(System.Type, System.Object, System.EventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.HandlePropertyChanged(System.Object, System.ComponentModel.PropertyChangedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.ContextHelpServicesCreated</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.CreateContextHelpServices()</span>
+    </div>
+    <div>
+      <span class="xref">NationalInstruments.Core.ViewModelBase.ResolveBrush(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.Design.html">NationalInstruments.Design</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_Design_PlacementViewModel_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PlacementViewModel : DesignerToolViewModel, IWeakEventListener, IServiceAggregator, IColorResolver, IDesignerToolViewModel, IViewModel, IQueryService, INotifyPropertyChanged, IInteractiveTransactionOwner</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="NationalInstruments_Design_PlacementViewModel__ctor_" data-uid="NationalInstruments.Design.PlacementViewModel.#ctor*"></a>
+  <h4 id="NationalInstruments_Design_PlacementViewModel__ctor" data-uid="NationalInstruments.Design.PlacementViewModel.#ctor">PlacementViewModel()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PlacementViewModel()</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="NationalInstruments_Design_PlacementViewModel_AsyncPlacementTransactionString" data-uid="NationalInstruments.Design.PlacementViewModel.AsyncPlacementTransactionString">AsyncPlacementTransactionString</h4>
+  <div class="markdown level1 summary"><p>The async placement transaction string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly string AsyncPlacementTransactionString</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_Design_PlacementViewModel_BottomPlacementCursor" data-uid="NationalInstruments.Design.PlacementViewModel.BottomPlacementCursor">BottomPlacementCursor</h4>
+  <div class="markdown level1 summary"><p>Bottom placement cursor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly PlatformCursor BottomPlacementCursor</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.PlatformCursor</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_Design_PlacementViewModel_DefaultPlacementCursor" data-uid="NationalInstruments.Design.PlacementViewModel.DefaultPlacementCursor">DefaultPlacementCursor</h4>
+  <div class="markdown level1 summary"><p>Default placement cursor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly PlatformCursor DefaultPlacementCursor</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.PlatformCursor</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_Design_PlacementViewModel_InitialPlacementMoveTransactionString" data-uid="NationalInstruments.Design.PlacementViewModel.InitialPlacementMoveTransactionString">InitialPlacementMoveTransactionString</h4>
+  <div class="markdown level1 summary"><p>The initial placement move transaction string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly string InitialPlacementMoveTransactionString</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_Design_PlacementViewModel_ReparentingElementDataFormat" data-uid="NationalInstruments.Design.PlacementViewModel.ReparentingElementDataFormat">ReparentingElementDataFormat</h4>
+  <div class="markdown level1 summary"><p>Clipboard format when reparenting an element within a designer.
+When using this format, the object being dragged should be the actual element that will be reparented.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly string ReparentingElementDataFormat</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Design_PlacementViewModel_ReparentingElementDataFormat_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The data object should be an instance of ReparentingElementDataInfo</p>
+</div>
+  
+  
+  <h4 id="NationalInstruments_Design_PlacementViewModel_TopLeftPlacementCursor" data-uid="NationalInstruments.Design.PlacementViewModel.TopLeftPlacementCursor">TopLeftPlacementCursor</h4>
+  <div class="markdown level1 summary"><p>TopLeft placement cursor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly PlatformCursor TopLeftPlacementCursor</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.PlatformCursor</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_Design_PlacementViewModel_AnchorItem_" data-uid="NationalInstruments.Design.PlacementViewModel.AnchorItem*"></a>
+  <h4 id="NationalInstruments_Design_PlacementViewModel_AnchorItem" data-uid="NationalInstruments.Design.PlacementViewModel.AnchorItem">AnchorItem</h4>
+  <div class="markdown level1 summary"><p>Our anchor. First itemViewModel in reparenting info.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IElementViewModel AnchorItem { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.IElementViewModel.html">IElementViewModel</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_PlacementViewModel_AnchorItemAsResizable_" data-uid="NationalInstruments.Design.PlacementViewModel.AnchorItemAsResizable*"></a>
+  <h4 id="NationalInstruments_Design_PlacementViewModel_AnchorItemAsResizable" data-uid="NationalInstruments.Design.PlacementViewModel.AnchorItemAsResizable">AnchorItemAsResizable</h4>
+  <div class="markdown level1 summary"><p>Our anchor. First itemViewModel in reparenting info.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IResizableItem AnchorItemAsResizable { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.IResizableItem.html">IResizableItem</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_PlacementViewModel_CurrentViewModels_" data-uid="NationalInstruments.Design.PlacementViewModel.CurrentViewModels*"></a>
+  <h4 id="NationalInstruments_Design_PlacementViewModel_CurrentViewModels" data-uid="NationalInstruments.Design.PlacementViewModel.CurrentViewModels">CurrentViewModels</h4>
+  <div class="markdown level1 summary"><p>The designerItems for the Elements currently being placed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;IElementViewModel&gt; CurrentViewModels { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.Design.IElementViewModel.html">IElementViewModel</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_PlacementViewModel_Elements_" data-uid="NationalInstruments.Design.PlacementViewModel.Elements*"></a>
+  <h4 id="NationalInstruments_Design_PlacementViewModel_Elements" data-uid="NationalInstruments.Design.PlacementViewModel.Elements">Elements</h4>
+  <div class="markdown level1 summary"><p>The list of model elements parsed from the xml</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;Element&gt; Elements { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_PlacementViewModel_EnableLogging_" data-uid="NationalInstruments.Design.PlacementViewModel.EnableLogging*"></a>
+  <h4 id="NationalInstruments_Design_PlacementViewModel_EnableLogging" data-uid="NationalInstruments.Design.PlacementViewModel.EnableLogging">EnableLogging</h4>
+  <div class="markdown level1 summary"><p>Whether to log beginning and ending of placement</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool EnableLogging { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_PlacementViewModel_IsCopyPaste_" data-uid="NationalInstruments.Design.PlacementViewModel.IsCopyPaste*"></a>
+  <h4 id="NationalInstruments_Design_PlacementViewModel_IsCopyPaste" data-uid="NationalInstruments.Design.PlacementViewModel.IsCopyPaste">IsCopyPaste</h4>
+  <div class="markdown level1 summary"><p>Whether we are currently in a Copy/Paste placement</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsCopyPaste { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_PlacementViewModel_PlacementHelperTools_" data-uid="NationalInstruments.Design.PlacementViewModel.PlacementHelperTools*"></a>
+  <h4 id="NationalInstruments_Design_PlacementViewModel_PlacementHelperTools" data-uid="NationalInstruments.Design.PlacementViewModel.PlacementHelperTools">PlacementHelperTools</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;Lazy&lt;IPlacementHelperTool, IPlacementHelperToolMetadata&gt;&gt; PlacementHelperTools { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Lazy</span>&lt;<a class="xref" href="NationalInstruments.Design.IPlacementHelperTool.html">IPlacementHelperTool</a>, <a class="xref" href="NationalInstruments.Design.IPlacementHelperToolMetadata.html">IPlacementHelperToolMetadata</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_PlacementViewModel_PlacementPosition_" data-uid="NationalInstruments.Design.PlacementViewModel.PlacementPosition*"></a>
+  <h4 id="NationalInstruments_Design_PlacementViewModel_PlacementPosition" data-uid="NationalInstruments.Design.PlacementViewModel.PlacementPosition">PlacementPosition</h4>
+  <div class="markdown level1 summary"><p>Our anchor. First itemViewModel in reparenting info.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PlacementPosition PlacementPosition { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.PlacementPosition.html">PlacementPosition</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_PlacementViewModel_PlacementSource_" data-uid="NationalInstruments.Design.PlacementViewModel.PlacementSource*"></a>
+  <h4 id="NationalInstruments_Design_PlacementViewModel_PlacementSource" data-uid="NationalInstruments.Design.PlacementViewModel.PlacementSource">PlacementSource</h4>
+  <div class="markdown level1 summary"><p>Our PlacementSource</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MovementSource PlacementSource { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.MovementSource.html">MovementSource</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_PlacementViewModel_TopLeftPlacedOverMinimumSize_" data-uid="NationalInstruments.Design.PlacementViewModel.TopLeftPlacedOverMinimumSize*"></a>
+  <h4 id="NationalInstruments_Design_PlacementViewModel_TopLeftPlacedOverMinimumSize" data-uid="NationalInstruments.Design.PlacementViewModel.TopLeftPlacedOverMinimumSize">TopLeftPlacedOverMinimumSize</h4>
+  <div class="markdown level1 summary"><p>If we click + click to size place, we must go above minimum drag thresh-hold.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TopLeftPlacedOverMinimumSize { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_PlacementViewModel_TransactionManager_" data-uid="NationalInstruments.Design.PlacementViewModel.TransactionManager*"></a>
+  <h4 id="NationalInstruments_Design_PlacementViewModel_TransactionManager" data-uid="NationalInstruments.Design.PlacementViewModel.TransactionManager">TransactionManager</h4>
+  <div class="markdown level1 summary"><p>Get a transaction manager that can be used for asynchronous UI transactions</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ITransactionManager TransactionManager { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ITransactionManager.html">ITransactionManager</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_Design_PlacementViewModel_Activate_" data-uid="NationalInstruments.Design.PlacementViewModel.Activate*"></a>
+  <h4 id="NationalInstruments_Design_PlacementViewModel_Activate_NationalInstruments_Design_DesignerEditControlViewModel_System_Boolean_" data-uid="NationalInstruments.Design.PlacementViewModel.Activate(NationalInstruments.Design.DesignerEditControlViewModel,System.Boolean)">Activate(DesignerEditControlViewModel, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Called when the placement tool is activated</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Activate(DesignerEditControlViewModel designer, bool isAggregate)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.DesignerEditControlViewModel.html">DesignerEditControlViewModel</a></td>
+        <td><span class="parametername">designer</span></td>
+        <td><p>the designer panel this tool will operate on </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">isAggregate</span></td>
+        <td><p>whether this tool is an aggregate with other tools </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_Activate_NationalInstruments_Design_DesignerEditControlViewModel_System_Boolean_">DesignerToolViewModel.Activate(DesignerEditControlViewModel, Boolean)</a></div>
+  
+  
+  <a id="NationalInstruments_Design_PlacementViewModel_BeginPlacement_" data-uid="NationalInstruments.Design.PlacementViewModel.BeginPlacement*"></a>
+  <h4 id="NationalInstruments_Design_PlacementViewModel_BeginPlacement_NationalInstruments_SourceModel_Element_NationalInstruments_Core_UIPosition_System_Action_" data-uid="NationalInstruments.Design.PlacementViewModel.BeginPlacement(NationalInstruments.SourceModel.Element,NationalInstruments.Core.UIPosition,System.Action)">BeginPlacement(Element, UIPosition, Action)</h4>
+  <div class="markdown level1 summary"><p>Start a placement operation</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PlacementToolState BeginPlacement(Element element, UIPosition uiPosition, Action customMovementAction)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td><span class="parametername">element</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.UIPosition</span></td>
+        <td><span class="parametername">uiPosition</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td><span class="parametername">customMovementAction</span></td>
+        <td><p>Custom action to perform after placement/each mouse move </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.PlacementToolState.html">PlacementToolState</a></td>
+        <td><p>State of tool, None would indicate begin failure, placing success, control ceded if the itemViewModel requires a viewModel tool. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_PlacementViewModel_BeginPlacement_" data-uid="NationalInstruments.Design.PlacementViewModel.BeginPlacement*"></a>
+  <h4 id="NationalInstruments_Design_PlacementViewModel_BeginPlacement_System_Func_NationalInstruments_SourceModel_Element__NationalInstruments_Core_UIPosition_" data-uid="NationalInstruments.Design.PlacementViewModel.BeginPlacement(System.Func{NationalInstruments.SourceModel.Element},NationalInstruments.Core.UIPosition)">BeginPlacement(Func&lt;Element&gt;, UIPosition)</h4>
+  <div class="markdown level1 summary"><p>Place an object whose create function is passed in.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PlacementToolState BeginPlacement(Func&lt;Element&gt; create, UIPosition position)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a>&gt;</td>
+        <td><span class="parametername">create</span></td>
+        <td><p>create function for object</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.UIPosition</span></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>position to start placement</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.PlacementToolState.html">PlacementToolState</a></td>
+        <td><p>Placement state.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_PlacementViewModel_CancelPendingOperations_" data-uid="NationalInstruments.Design.PlacementViewModel.CancelPendingOperations*"></a>
+  <h4 id="NationalInstruments_Design_PlacementViewModel_CancelPendingOperations" data-uid="NationalInstruments.Design.PlacementViewModel.CancelPendingOperations">CancelPendingOperations()</h4>
+  <div class="markdown level1 summary"><p>Called when a designer has focus and the user indicates that they want to cancel what they are
+seeing.  (Pressing Esc during a pending placement for example)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void CancelPendingOperations()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_CancelPendingOperations">DesignerToolViewModel.CancelPendingOperations()</a></div>
+  
+  
+  <a id="NationalInstruments_Design_PlacementViewModel_CancelPlacement_" data-uid="NationalInstruments.Design.PlacementViewModel.CancelPlacement*"></a>
+  <h4 id="NationalInstruments_Design_PlacementViewModel_CancelPlacement" data-uid="NationalInstruments.Design.PlacementViewModel.CancelPlacement">CancelPlacement()</h4>
+  <div class="markdown level1 summary"><p>This will end a placement. If the user hasn&apos;t placed this will revert the current placement transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CancelPlacement()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_PlacementViewModel_CompleteTransaction_" data-uid="NationalInstruments.Design.PlacementViewModel.CompleteTransaction*"></a>
+  <h4 id="NationalInstruments_Design_PlacementViewModel_CompleteTransaction_System_Boolean_" data-uid="NationalInstruments.Design.PlacementViewModel.CompleteTransaction(System.Boolean)">CompleteTransaction(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Called when an asynchronous transaction created by this needs to be completed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CompleteTransaction(bool cancel)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">cancel</span></td>
+        <td><p>True if the transaction should be cancelled. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_PlacementViewModel_CreateTool_" data-uid="NationalInstruments.Design.PlacementViewModel.CreateTool*"></a>
+  <h4 id="NationalInstruments_Design_PlacementViewModel_CreateTool" data-uid="NationalInstruments.Design.PlacementViewModel.CreateTool">CreateTool()</h4>
+  <div class="markdown level1 summary"><p>override and create your tool</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override IDesignerTool CreateTool()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.IDesignerTool.html">IDesignerTool</a></td>
+        <td><p>tool (visual) as IDesignerTool</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_CreateTool">DesignerToolViewModel.CreateTool()</a></div>
+  
+  
+  <a id="NationalInstruments_Design_PlacementViewModel_Deactivate_" data-uid="NationalInstruments.Design.PlacementViewModel.Deactivate*"></a>
+  <h4 id="NationalInstruments_Design_PlacementViewModel_Deactivate_NationalInstruments_Design_DesignerEditControlViewModel_System_Boolean_NationalInstruments_Design_IDesignerToolViewModel_" data-uid="NationalInstruments.Design.PlacementViewModel.Deactivate(NationalInstruments.Design.DesignerEditControlViewModel,System.Boolean,NationalInstruments.Design.IDesignerToolViewModel)">Deactivate(DesignerEditControlViewModel, Boolean, IDesignerToolViewModel)</h4>
+  <div class="markdown level1 summary"><p>Called by the DesignerEditControl when this tool is deactivated.  Tools are Deactivated
+when they are removed from the DesignerEditControl because a new tool is being activated
+or when the DesignerEditControl itself is no longer available to the user</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Deactivate(DesignerEditControlViewModel designer, bool designerDeactivate, IDesignerToolViewModel replacementTool)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.DesignerEditControlViewModel.html">DesignerEditControlViewModel</a></td>
+        <td><span class="parametername">designer</span></td>
+        <td><p>The DesignerEditoControl that owns the tool</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">designerDeactivate</span></td>
+        <td><p>true if the DesignerEditControl is being deactivated, false
+ if the tool is being removed from the designer.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.IDesignerToolViewModel.html">IDesignerToolViewModel</a></td>
+        <td><span class="parametername">replacementTool</span></td>
+        <td><p>The tool that is replacing this tool if there is a replacement tool</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_Deactivate_NationalInstruments_Design_DesignerEditControlViewModel_System_Boolean_NationalInstruments_Design_IDesignerToolViewModel_">DesignerToolViewModel.Deactivate(DesignerEditControlViewModel, Boolean, IDesignerToolViewModel)</a></div>
+  
+  
+  <a id="NationalInstruments_Design_PlacementViewModel_GetPlacementTool_" data-uid="NationalInstruments.Design.PlacementViewModel.GetPlacementTool*"></a>
+  <h4 id="NationalInstruments_Design_PlacementViewModel_GetPlacementTool_NationalInstruments_Design_DesignerEditControlViewModel_" data-uid="NationalInstruments.Design.PlacementViewModel.GetPlacementTool(NationalInstruments.Design.DesignerEditControlViewModel)">GetPlacementTool(DesignerEditControlViewModel)</h4>
+  <div class="markdown level1 summary"><p>Get the placement tool for the given Designer</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PlacementViewModel GetPlacementTool(DesignerEditControlViewModel designer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.DesignerEditControlViewModel.html">DesignerEditControlViewModel</a></td>
+        <td><span class="parametername">designer</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.PlacementViewModel.html">PlacementViewModel</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_PlacementViewModel_InsertIntoWire_" data-uid="NationalInstruments.Design.PlacementViewModel.InsertIntoWire*"></a>
+  <h4 id="NationalInstruments_Design_PlacementViewModel_InsertIntoWire_System_Func_NationalInstruments_SourceModel_Element__NationalInstruments_Design_WireSegmentViewModel_System_Func_NationalInstruments_SourceModel_Node_NationalInstruments_DataTypes_NIType_NationalInstruments_SourceModel_Direction_NationalInstruments_SourceModel_Terminal__NationalInstruments_Core_UIPosition_" data-uid="NationalInstruments.Design.PlacementViewModel.InsertIntoWire(System.Func{NationalInstruments.SourceModel.Element},NationalInstruments.Design.WireSegmentViewModel,System.Func{NationalInstruments.SourceModel.Node,NationalInstruments.DataTypes.NIType,NationalInstruments.SourceModel.Direction,NationalInstruments.SourceModel.Terminal},NationalInstruments.Core.UIPosition)">InsertIntoWire(Func&lt;Element&gt;, WireSegmentViewModel, Func&lt;Node, NIType, Direction, Terminal&gt;, UIPosition)</h4>
+  <div class="markdown level1 summary"><p>Insert a node into a wire-segment</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void InsertIntoWire(Func&lt;Element&gt; createElementCallback, WireSegmentViewModel segmentViewModel, Func&lt;Node, NIType, Direction, Terminal&gt; selectTerminalCallback, UIPosition position)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a>&gt;</td>
+        <td><span class="parametername">createElementCallback</span></td>
+        <td><p>Function that generates an element</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.WireSegmentViewModel.html">WireSegmentViewModel</a></td>
+        <td><span class="parametername">segmentViewModel</span></td>
+        <td><p>The view model for the wire segment to insert into</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Node.html">Node</a>, <span class="xref">NationalInstruments.DataTypes.NIType</span>, <a class="xref" href="NationalInstruments.SourceModel.Direction.html">Direction</a>, <a class="xref" href="NationalInstruments.SourceModel.Terminal.html">Terminal</a>&gt;</td>
+        <td><span class="parametername">selectTerminalCallback</span></td>
+        <td><p>Function that, given a Node and source-terminal will select an appropriate terminal on that node</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.UIPosition</span></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>Position at which the node should be dropped</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_PlacementViewModel_NewTransactionStarting_" data-uid="NationalInstruments.Design.PlacementViewModel.NewTransactionStarting*"></a>
+  <h4 id="NationalInstruments_Design_PlacementViewModel_NewTransactionStarting_NationalInstruments_SourceModel_IInteractiveTransactionOwner_" data-uid="NationalInstruments.Design.PlacementViewModel.NewTransactionStarting(NationalInstruments.SourceModel.IInteractiveTransactionOwner)">NewTransactionStarting(IInteractiveTransactionOwner)</h4>
+  <div class="markdown level1 summary"><p>When another creator attempts to start a transaction, lets the manager know what to do with any current transactions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransactionTransferPolicy NewTransactionStarting(IInteractiveTransactionOwner newTransaction)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.IInteractiveTransactionOwner.html">IInteractiveTransactionOwner</a></td>
+        <td><span class="parametername">newTransaction</span></td>
+        <td><p>The creator of the transaction being started </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TransactionTransferPolicy.html">TransactionTransferPolicy</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_PlacementViewModel_OnAutoScroll_" data-uid="NationalInstruments.Design.PlacementViewModel.OnAutoScroll*"></a>
+  <h4 id="NationalInstruments_Design_PlacementViewModel_OnAutoScroll_NationalInstruments_Core_SMPoint_" data-uid="NationalInstruments.Design.PlacementViewModel.OnAutoScroll(NationalInstruments.Core.SMPoint)">OnAutoScroll(SMPoint)</h4>
+  <div class="markdown level1 summary"><p>Auto scroll callback. Base class handles scrolling designer. Derived class may want to update its current positioning after that.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnAutoScroll(SMPoint delta)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMPoint</span></td>
+        <td><span class="parametername">delta</span></td>
+        <td><p>delta</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_OnAutoScroll_NationalInstruments_Core_SMPoint_">DesignerToolViewModel.OnAutoScroll(SMPoint)</a></div>
+  
+  
+  <a id="NationalInstruments_Design_PlacementViewModel_OnVisualAdded_" data-uid="NationalInstruments.Design.PlacementViewModel.OnVisualAdded*"></a>
+  <h4 id="NationalInstruments_Design_PlacementViewModel_OnVisualAdded_NationalInstruments_Core_IViewModel_" data-uid="NationalInstruments.Design.PlacementViewModel.OnVisualAdded(NationalInstruments.Core.IViewModel)">OnVisualAdded(IViewModel)</h4>
+  <div class="markdown level1 summary"><p>Called when a model/visual is added to the system. Common place to add adorners.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnVisualAdded(IViewModel viewModel)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.IViewModel</span></td>
+        <td><span class="parametername">viewModel</span></td>
+        <td><p>view model</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_OnVisualAdded_NationalInstruments_Core_IViewModel_">DesignerToolViewModel.OnVisualAdded(IViewModel)</a></div>
+  
+  
+  <a id="NationalInstruments_Design_PlacementViewModel_PlaceAndWireAsync_" data-uid="NationalInstruments.Design.PlacementViewModel.PlaceAndWireAsync*"></a>
+  <h4 id="NationalInstruments_Design_PlacementViewModel_PlaceAndWireAsync_NationalInstruments_Design_CreateMergeScriptAndMergeResult_NationalInstruments_SourceModel_IWiringStart_System_Func_NationalInstruments_SourceModel_Node_NationalInstruments_DataTypes_NIType_NationalInstruments_SourceModel_Direction_NationalInstruments_SourceModel_Terminal__System_Boolean_" data-uid="NationalInstruments.Design.PlacementViewModel.PlaceAndWireAsync(NationalInstruments.Design.CreateMergeScriptAndMergeResult,NationalInstruments.SourceModel.IWiringStart,System.Func{NationalInstruments.SourceModel.Node,NationalInstruments.DataTypes.NIType,NationalInstruments.SourceModel.Direction,NationalInstruments.SourceModel.Terminal},System.Boolean)">PlaceAndWireAsync(CreateMergeScriptAndMergeResult, IWiringStart, Func&lt;Node, NIType, Direction, Terminal&gt;, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Place an object and begin wiring. Useful for create node from terminal like commands.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task PlaceAndWireAsync(CreateMergeScriptAndMergeResult createMergeScriptAndMergeResult, IWiringStart wiringStart, Func&lt;Node, NIType, Direction, Terminal&gt; selectTerminal, bool complete)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.CreateMergeScriptAndMergeResult.html">CreateMergeScriptAndMergeResult</a></td>
+        <td><span class="parametername">createMergeScriptAndMergeResult</span></td>
+        <td><p>The functions that create the merge script and merge the script</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.IWiringStart.html">IWiringStart</a></td>
+        <td><span class="parametername">wiringStart</span></td>
+        <td><p>Wiring start.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Node.html">Node</a>, <span class="xref">NationalInstruments.DataTypes.NIType</span>, <a class="xref" href="NationalInstruments.SourceModel.Direction.html">Direction</a>, <a class="xref" href="NationalInstruments.SourceModel.Terminal.html">Terminal</a>&gt;</td>
+        <td><span class="parametername">selectTerminal</span></td>
+        <td><p>Function that given a Node, a data-type, and the direction will select an appropriate terminal</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">complete</span></td>
+        <td><p>Set to true to automatically drop and wire the node, false to use the placement tool</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A task that can be awaited on</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_PlacementViewModel_PlaceAndWireAsync_" data-uid="NationalInstruments.Design.PlacementViewModel.PlaceAndWireAsync*"></a>
+  <h4 id="NationalInstruments_Design_PlacementViewModel_PlaceAndWireAsync_NationalInstruments_Design_CreateMergeScriptAndMergeResult_NationalInstruments_SourceModel_IWiringStart_System_Func_NationalInstruments_SourceModel_Node_NationalInstruments_DataTypes_NIType_NationalInstruments_SourceModel_Direction_NationalInstruments_SourceModel_Terminal__System_Boolean_NationalInstruments_Core_UIPosition_" data-uid="NationalInstruments.Design.PlacementViewModel.PlaceAndWireAsync(NationalInstruments.Design.CreateMergeScriptAndMergeResult,NationalInstruments.SourceModel.IWiringStart,System.Func{NationalInstruments.SourceModel.Node,NationalInstruments.DataTypes.NIType,NationalInstruments.SourceModel.Direction,NationalInstruments.SourceModel.Terminal},System.Boolean,NationalInstruments.Core.UIPosition)">PlaceAndWireAsync(CreateMergeScriptAndMergeResult, IWiringStart, Func&lt;Node, NIType, Direction, Terminal&gt;, Boolean, UIPosition)</h4>
+  <div class="markdown level1 summary"><p>Place an object and begin wiring. Useful for create node from terminal like commands.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task PlaceAndWireAsync(CreateMergeScriptAndMergeResult createMergeScriptAndMergeResult, IWiringStart wiringStart, Func&lt;Node, NIType, Direction, Terminal&gt; selectTerminal, bool complete, UIPosition position)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.CreateMergeScriptAndMergeResult.html">CreateMergeScriptAndMergeResult</a></td>
+        <td><span class="parametername">createMergeScriptAndMergeResult</span></td>
+        <td><p>The functions that create the merge script and merge the script</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.IWiringStart.html">IWiringStart</a></td>
+        <td><span class="parametername">wiringStart</span></td>
+        <td><p>Wiring start.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Node.html">Node</a>, <span class="xref">NationalInstruments.DataTypes.NIType</span>, <a class="xref" href="NationalInstruments.SourceModel.Direction.html">Direction</a>, <a class="xref" href="NationalInstruments.SourceModel.Terminal.html">Terminal</a>&gt;</td>
+        <td><span class="parametername">selectTerminal</span></td>
+        <td><p>Function that given a Node, a data-type, and the direction will select an appropriate terminal</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">complete</span></td>
+        <td><p>Set to true to automatically drop and wire the node, false to use the placement tool</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.UIPosition</span></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>Provide initial click location. It will be used as the node drop location if complete is true and it is not within 5 px of another item</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A task that can be awaited on</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_PlacementViewModel_PlacementHelperToolCanceled_" data-uid="NationalInstruments.Design.PlacementViewModel.PlacementHelperToolCanceled*"></a>
+  <h4 id="NationalInstruments_Design_PlacementViewModel_PlacementHelperToolCanceled" data-uid="NationalInstruments.Design.PlacementViewModel.PlacementHelperToolCanceled">PlacementHelperToolCanceled()</h4>
+  <div class="markdown level1 summary"><p>Call to cancel a helper tool operation</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PlacementHelperToolCanceled()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_PlacementViewModel_PlacementHelperToolFinished_" data-uid="NationalInstruments.Design.PlacementViewModel.PlacementHelperToolFinished*"></a>
+  <h4 id="NationalInstruments_Design_PlacementViewModel_PlacementHelperToolFinished" data-uid="NationalInstruments.Design.PlacementViewModel.PlacementHelperToolFinished">PlacementHelperToolFinished()</h4>
+  <div class="markdown level1 summary"><p>Call this method when a placement helper tool is finished and is returning control to the placement tool</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PlacementHelperToolFinished()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_PlacementViewModel_PlacementHelperToolFinished_" data-uid="NationalInstruments.Design.PlacementViewModel.PlacementHelperToolFinished*"></a>
+  <h4 id="NationalInstruments_Design_PlacementViewModel_PlacementHelperToolFinished_System_Collections_Generic_IEnumerable_NationalInstruments_Core_IViewModel__" data-uid="NationalInstruments.Design.PlacementViewModel.PlacementHelperToolFinished(System.Collections.Generic.IEnumerable{NationalInstruments.Core.IViewModel})">PlacementHelperToolFinished(IEnumerable&lt;IViewModel&gt;)</h4>
+  <div class="markdown level1 summary"><p>Call to finish a helper tool operation, with the given items being placed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PlacementHelperToolFinished(IEnumerable&lt;IViewModel&gt; items)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">NationalInstruments.Core.IViewModel</span>&gt;</td>
+        <td><span class="parametername">items</span></td>
+        <td><p>placed items</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_PlacementViewModel_PlacePaletteEntry_" data-uid="NationalInstruments.Design.PlacementViewModel.PlacePaletteEntry*"></a>
+  <h4 id="NationalInstruments_Design_PlacementViewModel_PlacePaletteEntry_NationalInstruments_SourceModel_PaletteElementLeaf_NationalInstruments_Core_UIPosition_" data-uid="NationalInstruments.Design.PlacementViewModel.PlacePaletteEntry(NationalInstruments.SourceModel.PaletteElementLeaf,NationalInstruments.Core.UIPosition)">PlacePaletteEntry(PaletteElementLeaf, UIPosition)</h4>
+  <div class="markdown level1 summary"><p>Programmatically place an element. This will do normal post place operations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;Element&gt; PlacePaletteEntry(PaletteElementLeaf entry, UIPosition position)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.PaletteElementLeaf.html">PaletteElementLeaf</a></td>
+        <td><span class="parametername">entry</span></td>
+        <td><p>The PaletteElementLeaf</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.UIPosition</span></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>The position to place at. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a>&gt;</td>
+        <td><p>The placed elements.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Design_PlacementViewModel_PlacePaletteEntry_NationalInstruments_SourceModel_PaletteElementLeaf_NationalInstruments_Core_UIPosition__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>callers must immediately pump events after they call this function then call
+var visuals = elements.Select(e =&gt; designer.TryGetVisualForModel(e)).Where(v =&gt; v != null).ToArray();
+to get the IEnumerable<frameworkelement>, the visuals for the model elements placed</frameworkelement></p>
+</div>
+  
+  
+  <a id="NationalInstruments_Design_PlacementViewModel_SearchForInteractiveMergeTarget_" data-uid="NationalInstruments.Design.PlacementViewModel.SearchForInteractiveMergeTarget*"></a>
+  <h4 id="NationalInstruments_Design_PlacementViewModel_SearchForInteractiveMergeTarget_NationalInstruments_Core_PlatformVisual_NationalInstruments_Core_UIPosition_" data-uid="NationalInstruments.Design.PlacementViewModel.SearchForInteractiveMergeTarget(NationalInstruments.Core.PlatformVisual,NationalInstruments.Core.UIPosition)">SearchForInteractiveMergeTarget(PlatformVisual, UIPosition)</h4>
+  <div class="markdown level1 summary"><p>Find merge target at the given position.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PlatformVisual SearchForInteractiveMergeTarget(PlatformVisual reference, UIPosition position)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.PlatformVisual</span></td>
+        <td><span class="parametername">reference</span></td>
+        <td><p>reference visual to hit test against</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.UIPosition</span></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>ui position</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.PlatformVisual</span></td>
+        <td><p>valid mergetarget visual hit.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_PlacementViewModel_ShowDragDropTooltipMessage_" data-uid="NationalInstruments.Design.PlacementViewModel.ShowDragDropTooltipMessage*"></a>
+  <h4 id="NationalInstruments_Design_PlacementViewModel_ShowDragDropTooltipMessage_NationalInstruments_Core_UIPosition_System_String_" data-uid="NationalInstruments.Design.PlacementViewModel.ShowDragDropTooltipMessage(NationalInstruments.Core.UIPosition,System.String)">ShowDragDropTooltipMessage(UIPosition, String)</h4>
+  <div class="markdown level1 summary"><p>Shows a message in a tooltip at the given position during a drag/drop operation</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ShowDragDropTooltipMessage(UIPosition position, string message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.UIPosition</span></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>The position to show the message</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The actual message</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Design_PlacementViewModel_ShowDragDropTooltipMessage_NationalInstruments_Core_UIPosition_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>A message should be displayed when the dragged itemViewModel cannot be dropped on a target.
+The message should give a short explanation as to why the itemViewModel is not valid on the target.</p>
+</div>
+  <h3 id="events">Events
+  </h3>
+  
+  
+  <h4 id="NationalInstruments_Design_PlacementViewModel_PlacementToolRelease" data-uid="NationalInstruments.Design.PlacementViewModel.PlacementToolRelease">PlacementToolRelease</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event RoutedEventHandler PlacementToolRelease</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Windows.RoutedEventHandler</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.Windows.IWeakEventListener</span>
+  </div>
+  <div>
+      <span class="xref">NationalInstruments.Core.IServiceAggregator</span>
+  </div>
+  <div>
+      <span class="xref">NationalInstruments.Core.IColorResolver</span>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.IDesignerToolViewModel.html">IDesignerToolViewModel</a>
+  </div>
+  <div>
+      <span class="xref">NationalInstruments.Core.IViewModel</span>
+  </div>
+  <div>
+      <span class="xref">NationalInstruments.Core.IQueryService</span>
+  </div>
+  <div>
+      <span class="xref">System.ComponentModel.INotifyPropertyChanged</span>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.IInteractiveTransactionOwner.html">IInteractiveTransactionOwner</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.ContextualHelp.HelpCommonHelpers.html#NationalInstruments_ContextualHelp_HelpCommonHelpers_InitializeContextHelpIfNecessary__1_NationalInstruments_Core_ViewModelBase_">HelpCommonHelpers.InitializeContextHelpIfNecessary&lt;T&gt;(ViewModelBase)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.PaletteContextHelpers.html#NationalInstruments_Design_PaletteContextHelpers_GetPaletteContextKeywords_NationalInstruments_Core_IQueryService_">PaletteContextHelpers.GetPaletteContextKeywords(IQueryService)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.ChildDataContextProviderHelpers.html#NationalInstruments_Design_ChildDataContextProviderHelpers_GetDataContextProvider_NationalInstruments_Core_IViewModel_">ChildDataContextProviderHelpers.GetDataContextProvider(IViewModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ElementLocalizationHelpers.html#NationalInstruments_SourceModel_ElementLocalizationHelpers_GetLocalizedValue_NationalInstruments_Core_IViewModel_NationalInstruments_DynamicProperties_PropertySymbol_System_Object_">ElementLocalizationHelpers.GetLocalizedValue(IViewModel, PropertySymbol, Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ElementLocalizationHelpers.html#NationalInstruments_SourceModel_ElementLocalizationHelpers_CreateLocalizedDisplayBinding_NationalInstruments_Core_IViewModel_System_String_NationalInstruments_DynamicProperties_PropertySymbol_">ElementLocalizationHelpers.CreateLocalizedDisplayBinding(IViewModel, String, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ElementLocalizationHelpers.html#NationalInstruments_SourceModel_ElementLocalizationHelpers_CreateLocalizedDisplayBinding_NationalInstruments_Core_IViewModel_System_String_NationalInstruments_DynamicProperties_PropertySymbol_NationalInstruments_Core_PlatformBindingMode_">ElementLocalizationHelpers.CreateLocalizedDisplayBinding(IViewModel, String, PropertySymbol, PlatformBindingMode)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

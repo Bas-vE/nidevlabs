@@ -1,0 +1,925 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ExportsChangedData
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ExportsChangedData
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.SourceModel.ExportsChangedData">
+  
+  
+  <h1 id="NationalInstruments_SourceModel_ExportsChangedData" data-uid="NationalInstruments.SourceModel.ExportsChangedData" class="text-break">Class ExportsChangedData
+  </h1>
+  <div class="markdown level0 summary"><p>Contains all the necessary information required for processing an <see cref="!:IDependencyTargetExportChanged.OnExportsChanged"></see> notification.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ExportsChangedData</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">NationalInstruments.Core.IServiceAggregator</span></div>
+    <div><span class="xref">NationalInstruments.Core.IQueryService</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.SourceModel.html">NationalInstruments.SourceModel</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_SourceModel_ExportsChangedData_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class ExportsChangedData : IServiceAggregator, IQueryService</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_ExportsChangedData_ChangedProperties_" data-uid="NationalInstruments.SourceModel.ExportsChangedData.ChangedProperties*"></a>
+  <h4 id="NationalInstruments_SourceModel_ExportsChangedData_ChangedProperties" data-uid="NationalInstruments.SourceModel.ExportsChangedData.ChangedProperties">ChangedProperties</h4>
+  <div class="markdown level1 summary"><p>Gets the properties that changed.  This property is only valid if <a class="xref" href="NationalInstruments.SourceModel.ExportsChangedData.html#NationalInstruments_SourceModel_ExportsChangedData_Reason">Reason</a> is <a class="xref" href="NationalInstruments.SourceModel.ExportsChangeReason.html#NationalInstruments_SourceModel_ExportsChangeReason_PropertyChange">PropertyChange</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;string&gt; ChangedProperties { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ExportsChangedData_ChangedPropertiesCore_" data-uid="NationalInstruments.SourceModel.ExportsChangedData.ChangedPropertiesCore*"></a>
+  <h4 id="NationalInstruments_SourceModel_ExportsChangedData_ChangedPropertiesCore" data-uid="NationalInstruments.SourceModel.ExportsChangedData.ChangedPropertiesCore">ChangedPropertiesCore</h4>
+  <div class="markdown level1 summary"><p>Gets the list of strings underlying the <a class="xref" href="NationalInstruments.SourceModel.ExportsChangedData.html#NationalInstruments_SourceModel_ExportsChangedData_ChangedProperties">ChangedProperties</a> collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract List&lt;string&gt; ChangedPropertiesCore { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ExportsChangedData_CurrentName_" data-uid="NationalInstruments.SourceModel.ExportsChangedData.CurrentName*"></a>
+  <h4 id="NationalInstruments_SourceModel_ExportsChangedData_CurrentName" data-uid="NationalInstruments.SourceModel.ExportsChangedData.CurrentName">CurrentName</h4>
+  <div class="markdown level1 summary"><p>Gets the current name being used by the dependency and corresponds to the 
+<a class="xref" href="NationalInstruments.Linking.IQualifiedDependency.html#NationalInstruments_Linking_IQualifiedDependency_TargetName">TargetName</a> property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual QualifiedName CurrentName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.QualifiedName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ExportsChangedData_IsForPropertyChange_" data-uid="NationalInstruments.SourceModel.ExportsChangedData.IsForPropertyChange*"></a>
+  <h4 id="NationalInstruments_SourceModel_ExportsChangedData_IsForPropertyChange" data-uid="NationalInstruments.SourceModel.ExportsChangedData.IsForPropertyChange">IsForPropertyChange</h4>
+  <div class="markdown level1 summary"><p>Gets a value indiating whether this data is for <a class="xref" href="NationalInstruments.SourceModel.ExportsChangeReason.html#NationalInstruments_SourceModel_ExportsChangeReason_PropertyChange">PropertyChange</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsForPropertyChange { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ExportsChangedData_IsForRename_" data-uid="NationalInstruments.SourceModel.ExportsChangedData.IsForRename*"></a>
+  <h4 id="NationalInstruments_SourceModel_ExportsChangedData_IsForRename" data-uid="NationalInstruments.SourceModel.ExportsChangedData.IsForRename">IsForRename</h4>
+  <div class="markdown level1 summary"><p>Gets a value indiating whether this data is for <a class="xref" href="NationalInstruments.SourceModel.ExportsChangeReason.html#NationalInstruments_SourceModel_ExportsChangeReason_Rename">Rename</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsForRename { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ExportsChangedData_IsForResolve_" data-uid="NationalInstruments.SourceModel.ExportsChangedData.IsForResolve*"></a>
+  <h4 id="NationalInstruments_SourceModel_ExportsChangedData_IsForResolve" data-uid="NationalInstruments.SourceModel.ExportsChangedData.IsForResolve">IsForResolve</h4>
+  <div class="markdown level1 summary"><p>Gets a value indiating whether this data is for <a class="xref" href="NationalInstruments.SourceModel.ExportsChangeReason.html#NationalInstruments_SourceModel_ExportsChangeReason_Resolve">Resolve</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsForResolve { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ExportsChangedData_IsForUnresolve_" data-uid="NationalInstruments.SourceModel.ExportsChangedData.IsForUnresolve*"></a>
+  <h4 id="NationalInstruments_SourceModel_ExportsChangedData_IsForUnresolve" data-uid="NationalInstruments.SourceModel.ExportsChangedData.IsForUnresolve">IsForUnresolve</h4>
+  <div class="markdown level1 summary"><p>Gets a value indiating whether this data is for <a class="xref" href="NationalInstruments.SourceModel.ExportsChangeReason.html#NationalInstruments_SourceModel_ExportsChangeReason_Unresolve">Unresolve</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsForUnresolve { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ExportsChangedData_OldName_" data-uid="NationalInstruments.SourceModel.ExportsChangedData.OldName*"></a>
+  <h4 id="NationalInstruments_SourceModel_ExportsChangedData_OldName" data-uid="NationalInstruments.SourceModel.ExportsChangedData.OldName">OldName</h4>
+  <div class="markdown level1 summary"><p>Gets the name of the Envoy this dependency was last resolved to.  For a dependency that has never
+resolved, this will match the <a class="xref" href="NationalInstruments.Linking.IQualifiedDependency.html#NationalInstruments_Linking_IQualifiedDependency_TargetName">TargetName</a> property of the 
+dependency.  If <a class="xref" href="NationalInstruments.Linking.IQualifiedDependency.html#NationalInstruments_Linking_IQualifiedDependency_TargetName">TargetName</a> is an absolute name, this property 
+will return the absolute qualified name the dependency was last resolved to.  Otherwise, the property
+will return the name returned by calling <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyExtensions.html#NationalInstruments_SourceModel_Envoys_EnvoyExtensions_MakeRelativeDependencyName_NationalInstruments_SourceModel_Envoys_Envoy_">MakeRelativeDependencyName(Envoy)</a> 
+on the envoy the dependency was last resolved to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual QualifiedName OldName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.QualifiedName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ExportsChangedData_Reason_" data-uid="NationalInstruments.SourceModel.ExportsChangedData.Reason*"></a>
+  <h4 id="NationalInstruments_SourceModel_ExportsChangedData_Reason" data-uid="NationalInstruments.SourceModel.ExportsChangedData.Reason">Reason</h4>
+  <div class="markdown level1 summary"><p>Gets the reason for the <see cref="!:IDependencyTargetExportChanged.OnExportsChanged"></see> notification.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract ExportsChangeReason Reason { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ExportsChangeReason.html">ExportsChangeReason</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_ExportsChangedData_AttachService_" data-uid="NationalInstruments.SourceModel.ExportsChangedData.AttachService*"></a>
+  <h4 id="NationalInstruments_SourceModel_ExportsChangedData_AttachService_System_Object_" data-uid="NationalInstruments.SourceModel.ExportsChangedData.AttachService(System.Object)">AttachService(Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AttachService(object service)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">service</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ExportsChangedData_CreateForPropertyChange_" data-uid="NationalInstruments.SourceModel.ExportsChangedData.CreateForPropertyChange*"></a>
+  <h4 id="NationalInstruments_SourceModel_ExportsChangedData_CreateForPropertyChange_System_Collections_Generic_IEnumerable_System_String__" data-uid="NationalInstruments.SourceModel.ExportsChangedData.CreateForPropertyChange(System.Collections.Generic.IEnumerable{System.String})">CreateForPropertyChange(IEnumerable&lt;String&gt;)</h4>
+  <div class="markdown level1 summary"><p>Constructs a new <a class="xref" href="NationalInstruments.SourceModel.ExportsChangedData.html">ExportsChangedData</a> for the <a class="xref" href="NationalInstruments.SourceModel.ExportsChangeReason.html#NationalInstruments_SourceModel_ExportsChangeReason_PropertyChange">PropertyChange</a> reason.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ExportsChangedData CreateForPropertyChange(IEnumerable&lt;string&gt; changedProperties)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">changedProperties</span></td>
+        <td><p>The properties that changed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ExportsChangedData.html">ExportsChangedData</a></td>
+        <td><p>The constructed <a class="xref" href="NationalInstruments.SourceModel.ExportsChangedData.html">ExportsChangedData</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ExportsChangedData_CreateForRename_" data-uid="NationalInstruments.SourceModel.ExportsChangedData.CreateForRename*"></a>
+  <h4 id="NationalInstruments_SourceModel_ExportsChangedData_CreateForRename_NationalInstruments_Core_QualifiedName_NationalInstruments_Core_QualifiedName_" data-uid="NationalInstruments.SourceModel.ExportsChangedData.CreateForRename(NationalInstruments.Core.QualifiedName,NationalInstruments.Core.QualifiedName)">CreateForRename(QualifiedName, QualifiedName)</h4>
+  <div class="markdown level1 summary"><p>Constructs a new <a class="xref" href="NationalInstruments.SourceModel.ExportsChangedData.html">ExportsChangedData</a> for the <a class="xref" href="NationalInstruments.SourceModel.ExportsChangeReason.html#NationalInstruments_SourceModel_ExportsChangeReason_Rename">Rename</a> reason.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ExportsChangedData CreateForRename(QualifiedName currentName, QualifiedName oldName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.QualifiedName</span></td>
+        <td><span class="parametername">currentName</span></td>
+        <td><p>The current target name being used by the dependency.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.QualifiedName</span></td>
+        <td><span class="parametername">oldName</span></td>
+        <td><p>The old name of the <see cref="!:Envoy"></see>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ExportsChangedData.html">ExportsChangedData</a></td>
+        <td><p>The constructed <a class="xref" href="NationalInstruments.SourceModel.ExportsChangedData.html">ExportsChangedData</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ExportsChangedData_CreateForResolve_" data-uid="NationalInstruments.SourceModel.ExportsChangedData.CreateForResolve*"></a>
+  <h4 id="NationalInstruments_SourceModel_ExportsChangedData_CreateForResolve_NationalInstruments_Core_QualifiedName_NationalInstruments_Core_QualifiedName_" data-uid="NationalInstruments.SourceModel.ExportsChangedData.CreateForResolve(NationalInstruments.Core.QualifiedName,NationalInstruments.Core.QualifiedName)">CreateForResolve(QualifiedName, QualifiedName)</h4>
+  <div class="markdown level1 summary"><p>Constructs a new <a class="xref" href="NationalInstruments.SourceModel.ExportsChangedData.html">ExportsChangedData</a> for the <a class="xref" href="NationalInstruments.SourceModel.ExportsChangeReason.html#NationalInstruments_SourceModel_ExportsChangeReason_Resolve">Resolve</a> reason.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ExportsChangedData CreateForResolve(QualifiedName currentName, QualifiedName previouslyResolvedName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.QualifiedName</span></td>
+        <td><span class="parametername">currentName</span></td>
+        <td><p>The current target name being used by the dependency.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.QualifiedName</span></td>
+        <td><span class="parametername">previouslyResolvedName</span></td>
+        <td><p>The <span class="xref">NationalInstruments.Core.QualifiedName</span> to which the dependency associated with this change data was previously 
+resolved, if any.  See <a class="xref" href="NationalInstruments.SourceModel.ExportsChangedData.html#NationalInstruments_SourceModel_ExportsChangedData_OldName">OldName</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ExportsChangedData.html">ExportsChangedData</a></td>
+        <td><p>The constructed <a class="xref" href="NationalInstruments.SourceModel.ExportsChangedData.html">ExportsChangedData</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ExportsChangedData_CreateForUnresolve_" data-uid="NationalInstruments.SourceModel.ExportsChangedData.CreateForUnresolve*"></a>
+  <h4 id="NationalInstruments_SourceModel_ExportsChangedData_CreateForUnresolve" data-uid="NationalInstruments.SourceModel.ExportsChangedData.CreateForUnresolve">CreateForUnresolve()</h4>
+  <div class="markdown level1 summary"><p>Constructs a new <a class="xref" href="NationalInstruments.SourceModel.ExportsChangedData.html">ExportsChangedData</a> for the <a class="xref" href="NationalInstruments.SourceModel.ExportsChangeReason.html#NationalInstruments_SourceModel_ExportsChangeReason_Unresolve">Unresolve</a> reason.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ExportsChangedData CreateForUnresolve()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ExportsChangedData.html">ExportsChangedData</a></td>
+        <td><p>The constructed <a class="xref" href="NationalInstruments.SourceModel.ExportsChangedData.html">ExportsChangedData</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ExportsChangedData_HasAnyChangedProperty_" data-uid="NationalInstruments.SourceModel.ExportsChangedData.HasAnyChangedProperty*"></a>
+  <h4 id="NationalInstruments_SourceModel_ExportsChangedData_HasAnyChangedProperty_System_Collections_Generic_IEnumerable_System_String__" data-uid="NationalInstruments.SourceModel.ExportsChangedData.HasAnyChangedProperty(System.Collections.Generic.IEnumerable{System.String})">HasAnyChangedProperty(IEnumerable&lt;String&gt;)</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether any of the given property names are found in the <a class="xref" href="NationalInstruments.SourceModel.ExportsChangedData.html#NationalInstruments_SourceModel_ExportsChangedData_ChangedProperties">ChangedProperties</a> collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasAnyChangedProperty(IEnumerable&lt;string&gt; propertyNames)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">propertyNames</span></td>
+        <td><p>The names of the properties to check for.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if any of the given property names are found in the <a class="xref" href="NationalInstruments.SourceModel.ExportsChangedData.html#NationalInstruments_SourceModel_ExportsChangedData_ChangedProperties">ChangedProperties</a> collection.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ExportsChangedData_HasAnyChangedProperty_" data-uid="NationalInstruments.SourceModel.ExportsChangedData.HasAnyChangedProperty*"></a>
+  <h4 id="NationalInstruments_SourceModel_ExportsChangedData_HasAnyChangedProperty_System_String___" data-uid="NationalInstruments.SourceModel.ExportsChangedData.HasAnyChangedProperty(System.String[])">HasAnyChangedProperty(String[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasAnyChangedProperty(params string[] propertyNames)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">propertyNames</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ExportsChangedData_HasChangedProperty_" data-uid="NationalInstruments.SourceModel.ExportsChangedData.HasChangedProperty*"></a>
+  <h4 id="NationalInstruments_SourceModel_ExportsChangedData_HasChangedProperty_System_String_" data-uid="NationalInstruments.SourceModel.ExportsChangedData.HasChangedProperty(System.String)">HasChangedProperty(String)</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether the <a class="xref" href="NationalInstruments.SourceModel.ExportsChangedData.html#NationalInstruments_SourceModel_ExportsChangedData_ChangedProperties">ChangedProperties</a> collection contains the given string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasChangedProperty(string propertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>The name of the property to check for.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if the given property name is int he <a class="xref" href="NationalInstruments.SourceModel.ExportsChangedData.html#NationalInstruments_SourceModel_ExportsChangedData_ChangedProperties">ChangedProperties</a> collection.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ExportsChangedData_QueryService_" data-uid="NationalInstruments.SourceModel.ExportsChangedData.QueryService*"></a>
+  <h4 id="NationalInstruments_SourceModel_ExportsChangedData_QueryService__1" data-uid="NationalInstruments.SourceModel.ExportsChangedData.QueryService``1">QueryService&lt;T&gt;()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public QueryResult&lt;T&gt; QueryService&lt;T&gt;()where T : class</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.QueryResult</span>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ExportsChangedData_RemoveAll_" data-uid="NationalInstruments.SourceModel.ExportsChangedData.RemoveAll*"></a>
+  <h4 id="NationalInstruments_SourceModel_ExportsChangedData_RemoveAll_System_Predicate_System_Object__" data-uid="NationalInstruments.SourceModel.ExportsChangedData.RemoveAll(System.Predicate{System.Object})">RemoveAll(Predicate&lt;Object&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int RemoveAll(Predicate&lt;object&gt; match)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Predicate</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><span class="parametername">match</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ExportsChangedData_RemoveService_" data-uid="NationalInstruments.SourceModel.ExportsChangedData.RemoveService*"></a>
+  <h4 id="NationalInstruments_SourceModel_ExportsChangedData_RemoveService_System_Object_" data-uid="NationalInstruments.SourceModel.ExportsChangedData.RemoveService(System.Object)">RemoveService(Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemoveService(object service)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">service</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ExportsChangedData_SetService_" data-uid="NationalInstruments.SourceModel.ExportsChangedData.SetService*"></a>
+  <h4 id="NationalInstruments_SourceModel_ExportsChangedData_SetService__1_System_Object_" data-uid="NationalInstruments.SourceModel.ExportsChangedData.SetService``1(System.Object)">SetService&lt;T&gt;(Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetService&lt;T&gt;(object service)where T : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">service</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">NationalInstruments.Core.IServiceAggregator</span>
+  </div>
+  <div>
+      <span class="xref">NationalInstruments.Core.IQueryService</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.PaletteContextHelpers.html#NationalInstruments_Design_PaletteContextHelpers_GetPaletteContextKeywords_NationalInstruments_Core_IQueryService_">PaletteContextHelpers.GetPaletteContextKeywords(IQueryService)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>The Persistence System&quot; </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="The Persistence System&quot; ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="the-persistence-system">The Persistence System&quot;</h1>
+
+<p>The Diagram SDK persistence system is responsible for saving and loading the end user&#39;s documents. The design of the Diagram SDK persistence system differs from many persistence frameworks, which typically provide an interface or base class that implements a Save operation and a Load operation. Instead, the Diagram SDK uses a parser/generator system to decouple the file format from the in-memory object model, which confers the following advantages:</p>
+<ul>
+<li>Decoupling the persistence format from the model</li>
+<li>Enabling support for a range of file formats</li>
+</ul>
+<h2 id="persistence-system-architecture">Persistence System Architecture</h2>
+<p>The following diagram illustrates the high-level architecture of the persistence system.</p>
+<p><img src="../../images/concepts/PersistenceSystemRelationships.png" alt="PersistenceSystemRelationships"></p>
+<h2 id="persistence-system-theory-of-operation">Persistence System Theory of Operation</h2>
+<p>The persistence system uses parsers and generators to convert back and forth between XML source files on disk and <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_SourceFile.htm">SourceFiles</a>, which represent persisted source files within the <a href="diagram-object-model.html">Diagram Object Model (DiOM)</a> in memory.</p>
+<p><img src="../../images/concepts/Parse_Generate.png" alt="Parse_Generate"></p>
+<p>The persistence system provides a framework that you plug into by creating three components:</p>
+<ol>
+<li><strong>Parser</strong>—A parser reads persisted source file and instantiates a SourceFile in memory. A parser consumes a stream of XML data from a persisted source file, instantiates a SourceFile in memory, and populates it with a hierarchy of DiOM Elements. In most cases, you should derive your parsers from <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_Persistence_XmlModelParser.htm">XmlModelParser</a>.</li>
+<li><strong>Generator</strong>—A generator serializes the model Elements of a SourceFile into a persisted XML file on disk. In most cases, you should derive your generators from <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_Persistence_XmlModelGenerator.htm">XmlModelGenerator</a>.</li>
+<li><strong>XML Schema (Optional)</strong>—To define a valid XML persistence format for a DocumentType</li>
+</ol>
+<p>Generally, for each <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Shell_IDocumentType.htm">IDocumentType</a> you define, you will need to write both a parser and a generator. Ideally, the generator you write for a DocumentType produces a stream of data that can be parsed by the parser you write for the same DocumentType. However, the parser should be robust enough to handle any input and produce a partial model and a list of errors that can be delivered to the end user.</p>
+<h3 id="parsing-and-generating-plugged-in-types">Parsing and Generating Plugged-In Types</h3>
+<p>The Diagram SDK <a href="plugins.html">plug-in framework</a> requires that your parsers and generators detect plug-in types and attempt to route operations to the appropriate plug-in parser or generator.</p>
+<h2 id="primary-types-that-participate-in-the-persistence-system">Primary Types that Participate in the Persistence System</h2>
+<p>The following types form the backbone of the persistence system. For more information about the persistence system API, see the documentation for the <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/N_NationalInstruments_SourceModel_Modeling_Persistence.htm">NationalInstruments.SourceModel.Modeling.Persistence Namespace</a>.</p>
+<h3 id="sourcefile">SourceFile</h3>
+<p>A <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_SourceFile.htm">SourceFile</a> represents a persisted source file within the <a href="diagram-object-model.html">DiOM</a>. SourceFiles invoke parsers and generators for persistence.</p>
+<h3 id="imodelparser">IModelParser</h3>
+<p>The <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_IModelParser.htm">IModelParser</a> interface defines the minimal set of API members required for model parsers to operate within the Diagram SDK persistence system.</p>
+<h3 id="basemodelparser">BaseModelParser</h3>
+<p><a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_Persistence_BaseModelParser.htm">BaseModelParser</a> is an abstract base class from which you can derive model parsers to handle arbitrary storage file formats.</p>
+<h3 id="xmlmodelparser">XmlModelParser</h3>
+<p><a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_Persistence_XmlModelParser.htm">XmlModelParser</a> derives from BaseModelParser and serves as a base class for XML model parsers. In most cases, you should derive your parsers from XmlModelParser.</p>
+<p>When the end user loads a saved XML document in a <a href="shell.html">shell application</a>, the Diagram SDK passes the XML file to the <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/M_NationalInstruments_SourceModel_Modeling_SourceFile_Load.htm">SourceFile.Load</a> method. The SourceFile then parses the elements of the XML file until it comes across an element it doesn’t know how to parse. The SourceFile then queries the <a href="https://msdn.microsoft.com/en-us/library/system.componentmodel.composition.hosting.compositioncontainer.catalog">CompositionHost.CompositionContainer.Catalog</a> for a parser plug-in that satisfies the appropriate export contract. If the query succeeds, the SourceFile instantiates the appropriate parser and passes the XML element to the plug-in parser&#39;s <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/M_NationalInstruments_SourceModel_Modeling_Persistence_XmlModelParser_Parse.htm">Parse</a> method.</p>
+<h3 id="imodelgenerator">IModelGenerator</h3>
+<p>The <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_IModelGenerator.htm">IModelGenerator</a> interface defines the minimal set of API members required for model generators to operate within the Diagram SDK persistence system.</p>
+<h2 id="xmlmodelgenerator">XmlModelGenerator</h2>
+<p><a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_Persistence_XmlModelGenerator.htm">XmlModelGenerator</a> implements the IModelGenerator interface and serves as a base class for XML model generators. In most cases, you should derive your generators from XmlModelGenerator.</p>
+<p>The generation of an XML file from an in-memory SourceFile is very similar to the parsing process. However, in the case of generating, the user already has a SourceFile in memory, which they either loaded or constructed from scratch. When the user invokes the shell application&#39;s save operation, the Diagram SDK inspects the model to determine which generator to use. The SourceFile instantiates the appropriate generator, if found, and passes the <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_RootDiagram.htm">RootDiagram</a> to the generator.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

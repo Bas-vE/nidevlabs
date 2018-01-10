@@ -1,0 +1,1490 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ZipStorageManager
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ZipStorageManager
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.SourceModel.ZipStorageManager">
+  
+  
+  <h1 id="NationalInstruments_SourceModel_ZipStorageManager" data-uid="NationalInstruments.SourceModel.ZipStorageManager" class="text-break">Class ZipStorageManager
+  </h1>
+  <div class="markdown level0 summary"><p>Storage manager which uses Zip technology to save everything in a project to a single zip file, typically with .lvprojectx extension
+Currently the only implementer is InMemoryZipStorageManagerBase which loads and manipulates the entire zip in memory, but additional
+derivations/strategies could be implemented as needed.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="NationalInstruments.SourceModel.StorageManager.html">StorageManager</a></div>
+    <div class="level2"><span class="xref">ZipStorageManager</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="NationalInstruments.SourceModel.Envoys.IStorageManager.html">IStorageManager</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_Host">StorageManager.Host</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_ScheduledActivityManager">StorageManager.ScheduledActivityManager</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_DefaultScheme">StorageManager.DefaultScheme</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_StorageType">StorageManager.StorageType</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_ProjectSourceFile">StorageManager.ProjectSourceFile</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_SingleFileZipFilename">StorageManager.SingleFileZipFilename</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_Initialize_NationalInstruments_SourceModel_ProjectSourceFile_">StorageManager.Initialize(ProjectSourceFile)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_InitializeStorage_NationalInstruments_Core_PlatformDispatcher_System_Action_System_Exception__">StorageManager.InitializeStorage(PlatformDispatcher, Action&lt;Exception&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_InitializeStorageAsync_NationalInstruments_Core_PlatformDispatcher_">StorageManager.InitializeStorageAsync(PlatformDispatcher)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_AttemptIncreaseReadStreamPriority_System_String_NationalInstruments_Core_AsyncTaskPriority_">StorageManager.AttemptIncreaseReadStreamPriority(String, AsyncTaskPriority)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_OpenReadStream_System_String_NationalInstruments_Core_AsyncTaskPriorityToken_NationalInstruments_Core_PlatformDispatcher_NationalInstruments_SourceModel_Envoys_OpenStreamComplete_">StorageManager.OpenReadStream(String, AsyncTaskPriorityToken, PlatformDispatcher, OpenStreamComplete)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_OpenReadStreamAsync_System_String_NationalInstruments_Core_AsyncTaskPriorityToken_System_Threading_CancellationToken_">StorageManager.OpenReadStreamAsync(String, AsyncTaskPriorityToken, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_OpenReadStreams_System_Collections_Generic_IEnumerable_System_String__NationalInstruments_Core_AsyncTaskPriorityToken_NationalInstruments_Core_PlatformDispatcher_NationalInstruments_SourceModel_Envoys_OpenStreamsComplete_">StorageManager.OpenReadStreams(IEnumerable&lt;String&gt;, AsyncTaskPriorityToken, PlatformDispatcher, OpenStreamsComplete)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_BeginSave_NationalInstruments_SourceModel_Element_System_String_">StorageManager.BeginSave(Element, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_EndSave_System_IO_Stream_NationalInstruments_Core_PlatformDispatcher_NationalInstruments_SourceModel_Envoys_SaveComplete_NationalInstruments_SourceModel_Envoys_SaveComplete_">StorageManager.EndSave(Stream, PlatformDispatcher, SaveComplete, SaveComplete)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_InternalOpenReadStream_System_String_NationalInstruments_SourceModel_Envoys_OpenStreamComplete_">StorageManager.InternalOpenReadStream(String, OpenStreamComplete)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_DeleteEnvoy_NationalInstruments_SourceModel_Envoys_Envoy_NationalInstruments_Core_PlatformDispatcher_NationalInstruments_SourceModel_Envoys_SaveComplete_">StorageManager.DeleteEnvoy(Envoy, PlatformDispatcher, SaveComplete)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_HandleError_System_String_System_Exception_">StorageManager.HandleError(String, Exception)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_CanSeeLocationOwnedByAnotherStorageManager_NationalInstruments_SourceModel_Envoys_IStorageType_System_String_">StorageManager.CanSeeLocationOwnedByAnotherStorageManager(IStorageType, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_GetDirectory_System_String_">StorageManager.GetDirectory(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_CreateDirectory_System_String_">StorageManager.CreateDirectory(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_Move_System_String_System_String_">StorageManager.Move(String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_GetFileName_System_String_">StorageManager.GetFileName(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_IsReadOnly_System_String_">StorageManager.IsReadOnly(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_FileExists_System_String_System_String_">StorageManager.FileExists(String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_DirectoryExists_System_String_">StorageManager.DirectoryExists(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_DeleteFile_System_String_NationalInstruments_SourceModel_Envoys_RecycleOption_">StorageManager.DeleteFile(String, RecycleOption)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_DeleteDirectory_System_String_System_Boolean_NationalInstruments_SourceModel_Envoys_RecycleOption_">StorageManager.DeleteDirectory(String, Boolean, RecycleOption)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_LastWriteTime_System_String_">StorageManager.LastWriteTime(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_SetLastWriteTime_System_String_System_DateTime_">StorageManager.SetLastWriteTime(String, DateTime)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_GetFiles_System_String_System_String_System_Boolean_">StorageManager.GetFiles(String, String, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_GetDirectories_System_String_System_String_System_Boolean_">StorageManager.GetDirectories(String, String, Boolean)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.SourceModel.html">NationalInstruments.SourceModel</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_SourceModel_ZipStorageManager_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class ZipStorageManager : StorageManager, IStorageManager</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_ZipStorageManager_BackingStorageFilename_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.BackingStorageFilename*"></a>
+  <h4 id="NationalInstruments_SourceModel_ZipStorageManager_BackingStorageFilename" data-uid="NationalInstruments.SourceModel.ZipStorageManager.BackingStorageFilename">BackingStorageFilename</h4>
+  <div class="markdown level1 summary"><p>The filename of this ZIP when writing to backing storage.</p>
+<p>If this and BackingStorageManager are not set, the ZIP will be in-memory only,
+and can be cloned by calling CopyZipToStream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string BackingStorageFilename { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ZipStorageManager_BackingStorageManager_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.BackingStorageManager*"></a>
+  <h4 id="NationalInstruments_SourceModel_ZipStorageManager_BackingStorageManager" data-uid="NationalInstruments.SourceModel.ZipStorageManager.BackingStorageManager">BackingStorageManager</h4>
+  <div class="markdown level1 summary"><p>The storage manager which backs this ZIP storage manager.
+(e.g. where does this ZIP save to - file system, web, etc.)</p>
+<p>If this and BackingStorageFilename are not set, the ZIP will be in-memory only,
+and can be cloned by calling CopyZipToStream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IStorageManager BackingStorageManager { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.IStorageManager.html">IStorageManager</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ZipStorageManager_BackingStorageManagerOrSelf_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.BackingStorageManagerOrSelf*"></a>
+  <h4 id="NationalInstruments_SourceModel_ZipStorageManager_BackingStorageManagerOrSelf" data-uid="NationalInstruments.SourceModel.ZipStorageManager.BackingStorageManagerOrSelf">BackingStorageManagerOrSelf</h4>
+  <div class="markdown level1 summary"><p>Returns the IStorageManager that is used for actually storing the content of the storage manager. This is the storage manager that
+needs to be queried for raw files on &quot;disk&quot;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IStorageManager BackingStorageManagerOrSelf { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.IStorageManager.html">IStorageManager</a></td>
+        <td><p>The actual backing IStorageManager that is used for &quot;disk&quot; queries.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_BackingStorageManagerOrSelf">StorageManager.BackingStorageManagerOrSelf</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_ZipStorageManager_Filenames_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.Filenames*"></a>
+  <h4 id="NationalInstruments_SourceModel_ZipStorageManager_Filenames" data-uid="NationalInstruments.SourceModel.ZipStorageManager.Filenames">Filenames</h4>
+  <div class="markdown level1 summary"><p>All file names currently stored in this in-memory ZIP. This up-to-date ZIP may not
+necessarily be saved to backing storage yet.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract IEnumerable&lt;string&gt; Filenames { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p>If SetZipStorage or InitializeStorage has not been called on this ZipStorageManager yet.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ZipStorageManager_LogicalDrives_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.LogicalDrives*"></a>
+  <h4 id="NationalInstruments_SourceModel_ZipStorageManager_LogicalDrives" data-uid="NationalInstruments.SourceModel.ZipStorageManager.LogicalDrives">LogicalDrives</h4>
+  <div class="markdown level1 summary"><p>Get the logical drives available on the computer</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IEnumerable&lt;string&gt; LogicalDrives { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><p>The logical drives</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_LogicalDrives">StorageManager.LogicalDrives</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_ZipStorageManager_SupportsFileBrowsing_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.SupportsFileBrowsing*"></a>
+  <h4 id="NationalInstruments_SourceModel_ZipStorageManager_SupportsFileBrowsing" data-uid="NationalInstruments.SourceModel.ZipStorageManager.SupportsFileBrowsing">SupportsFileBrowsing</h4>
+  <div class="markdown level1 summary"><p>Determines if this project backing storage supports browsing for file names.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool SupportsFileBrowsing { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_SupportsFileBrowsing">StorageManager.SupportsFileBrowsing</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_ZipStorageManager_ZipFileRequiresPassword_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.ZipFileRequiresPassword*"></a>
+  <h4 id="NationalInstruments_SourceModel_ZipStorageManager_ZipFileRequiresPassword" data-uid="NationalInstruments.SourceModel.ZipStorageManager.ZipFileRequiresPassword">ZipFileRequiresPassword</h4>
+  <div class="markdown level1 summary"><p>Gets whether the zip file requires a password.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool ZipFileRequiresPassword { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_ZipStorageManager_BackingFilePath_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.BackingFilePath*"></a>
+  <h4 id="NationalInstruments_SourceModel_ZipStorageManager_BackingFilePath_System_String_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.BackingFilePath(System.String)">BackingFilePath(String)</h4>
+  <div class="markdown level1 summary"><p>Returns a path to the actual file on disk for the given storage path. 
+ex: When the path refers to a file in a zip file, the backing file is the zip file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string BackingFilePath(string storagePath)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">storagePath</span></td>
+        <td><p>The storage path to the file.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The full path to the backing file.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_BackingFilePath_System_String_">StorageManager.BackingFilePath(String)</a></div>
+  <h5 id="NationalInstruments_SourceModel_ZipStorageManager_BackingFilePath_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the path returned is different from the given storage path, interact with the file via <a class="xref" href="NationalInstruments.SourceModel.Envoys.IStorageManager.html#NationalInstruments_SourceModel_Envoys_IStorageManager_BackingStorageManagerOrSelf">BackingStorageManagerOrSelf</a>.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_SourceModel_ZipStorageManager_BeginBatchSave_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.BeginBatchSave*"></a>
+  <h4 id="NationalInstruments_SourceModel_ZipStorageManager_BeginBatchSave" data-uid="NationalInstruments.SourceModel.ZipStorageManager.BeginBatchSave">BeginBatchSave()</h4>
+  <div class="markdown level1 summary"><p>Called to begin a batch save operation. This can be used when calling BeginSave/ EndSave in a row for
+multiple items, so they can be committed to backing storage all at once.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void BeginBatchSave()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_BeginBatchSave">StorageManager.BeginBatchSave()</a></div>
+  <h5 id="NationalInstruments_SourceModel_ZipStorageManager_BeginBatchSave_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>May not be supported by the storage manager - in this case, BeginBatchSave is a no-op, and each
+save commits individually
+.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_SourceModel_ZipStorageManager_Close_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.Close*"></a>
+  <h4 id="NationalInstruments_SourceModel_ZipStorageManager_Close" data-uid="NationalInstruments.SourceModel.ZipStorageManager.Close">Close()</h4>
+  <div class="markdown level1 summary"><p>Close any in-memory ZIP associated with this ZipStorageManager,
+without disposing this object. This manager can be re-associated with
+another ZIP by calling SetZipStream again.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void Close()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_SourceModel_ZipStorageManager_Combine_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.Combine*"></a>
+  <h4 id="NationalInstruments_SourceModel_ZipStorageManager_Combine_System_String_System_String_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.Combine(System.String,System.String)">Combine(String, String)</h4>
+  <div class="markdown level1 summary"><p>Combines two strings into a path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string Combine(string path1, string path2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">path1</span></td>
+        <td><p>the first path</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">path2</span></td>
+        <td><p>the second path</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>the combined path</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_Combine_System_String_System_String_">StorageManager.Combine(String, String)</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_ZipStorageManager_CopyZipToStream_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.CopyZipToStream*"></a>
+  <h4 id="NationalInstruments_SourceModel_ZipStorageManager_CopyZipToStream_System_IO_Stream_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.CopyZipToStream(System.IO.Stream)">CopyZipToStream(Stream)</h4>
+  <div class="markdown level1 summary"><p>Copy the ZIP to a given stream. The input stream is not closed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract bool CopyZipToStream(Stream stream)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IO.Stream</span></td>
+        <td><span class="parametername">stream</span></td>
+        <td><p>The stream to copy the ZIP to. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the ZIP successfully copied. False if this ZipStorageManager has never had SetZipStorage called on it (so no ZIP exists).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ZipStorageManager_CreateBackingStorageManager_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.CreateBackingStorageManager*"></a>
+  <h4 id="NationalInstruments_SourceModel_ZipStorageManager_CreateBackingStorageManager" data-uid="NationalInstruments.SourceModel.ZipStorageManager.CreateBackingStorageManager">CreateBackingStorageManager()</h4>
+  <div class="markdown level1 summary"><p>Create a backing storage manager of the correct type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract IStorageManager CreateBackingStorageManager()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.IStorageManager.html">IStorageManager</a></td>
+        <td><p>The newly created storage manager</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ZipStorageManager_CreateRelativeStoragePath_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.CreateRelativeStoragePath*"></a>
+  <h4 id="NationalInstruments_SourceModel_ZipStorageManager_CreateRelativeStoragePath_System_String_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.CreateRelativeStoragePath(System.String)">CreateRelativeStoragePath(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string CreateRelativeStoragePath(string fullStoragePath)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">fullStoragePath</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_CreateRelativeStoragePath_System_String_">StorageManager.CreateRelativeStoragePath(String)</a></div>
+  <h5 id="NationalInstruments_SourceModel_ZipStorageManager_CreateRelativeStoragePath_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The returned path will be relative to the storage path of the project file.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_SourceModel_ZipStorageManager_CreateRelativeStoragePath_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.CreateRelativeStoragePath*"></a>
+  <h4 id="NationalInstruments_SourceModel_ZipStorageManager_CreateRelativeStoragePath_System_String_System_String_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.CreateRelativeStoragePath(System.String,System.String)">CreateRelativeStoragePath(String, String)</h4>
+  <div class="markdown level1 summary"><p>Returns a path based on the provided full path that is relative to the provided base directory.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string CreateRelativeStoragePath(string fullStoragePath, string baseDirectory)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">fullStoragePath</span></td>
+        <td><p>The full path to convert to a relative path</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">baseDirectory</span></td>
+        <td><p>The base directory for the relative path</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The relative storage path</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_CreateRelativeStoragePath_System_String_System_String_">StorageManager.CreateRelativeStoragePath(String, String)</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_ZipStorageManager_EndBatchSave_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.EndBatchSave*"></a>
+  <h4 id="NationalInstruments_SourceModel_ZipStorageManager_EndBatchSave_NationalInstruments_Core_PlatformDispatcher_NationalInstruments_SourceModel_Envoys_SaveComplete_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.EndBatchSave(NationalInstruments.Core.PlatformDispatcher,NationalInstruments.SourceModel.Envoys.SaveComplete)">EndBatchSave(PlatformDispatcher, SaveComplete)</h4>
+  <div class="markdown level1 summary"><p>Called to end a batch save operation. This can be used when calling BeginSave/ EndSave in a row for
+multiple items, so they can be committed to backing storage all at once.</p>
+<p>When the commit is complete, the commitComplete delegates provided for each EndSave since the batch save
+began will also be called (on their respective Dispatchers).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void EndBatchSave(PlatformDispatcher dispatcher, SaveComplete commitComplete)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.PlatformDispatcher</span></td>
+        <td><span class="parametername">dispatcher</span></td>
+        <td><p>Dispatcher to invoke this commitComplete on.  <span class="xref">NationalInstruments.Core.PlatformDispatcher.EmptyDispatcher</span> for calling thread.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.SaveComplete.html">SaveComplete</a></td>
+        <td><span class="parametername">commitComplete</span></td>
+        <td><p>Delegate to call when the final commit to storage is complete. May be null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_EndBatchSave_NationalInstruments_Core_PlatformDispatcher_NationalInstruments_SourceModel_Envoys_SaveComplete_">StorageManager.EndBatchSave(PlatformDispatcher, SaveComplete)</a></div>
+  <h5 id="NationalInstruments_SourceModel_ZipStorageManager_EndBatchSave_NationalInstruments_Core_PlatformDispatcher_NationalInstruments_SourceModel_Envoys_SaveComplete__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>May not be supported by the storage manager - in this case, EndBatchSave is a no-op - each
+save has already committed individually. </p>
+</div>
+  
+  
+  <a id="NationalInstruments_SourceModel_ZipStorageManager_EndSaveAsync_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.EndSaveAsync*"></a>
+  <h4 id="NationalInstruments_SourceModel_ZipStorageManager_EndSaveAsync_System_IO_Stream_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.EndSaveAsync(System.IO.Stream)">EndSaveAsync(Stream)</h4>
+  <div class="markdown level1 summary"><p>Called to finish writing the stream to the storage manager.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task EndSaveAsync(Stream saveStream)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IO.Stream</span></td>
+        <td><span class="parametername">saveStream</span></td>
+        <td><p>The saveStream used, returned from BeginSave</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A task representing the work of ending the save operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_EndSaveAsync_System_IO_Stream_">StorageManager.EndSaveAsync(Stream)</a></div>
+  <h5 id="NationalInstruments_SourceModel_ZipStorageManager_EndSaveAsync_System_IO_Stream__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Zip storage manager never calls &apos;commit complete&apos;.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_SourceModel_ZipStorageManager_GetAbsolutePath_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.GetAbsolutePath*"></a>
+  <h4 id="NationalInstruments_SourceModel_ZipStorageManager_GetAbsolutePath_System_String_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.GetAbsolutePath(System.String)">GetAbsolutePath(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string GetAbsolutePath(string storagePath)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">storagePath</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_GetAbsolutePath_System_String_">StorageManager.GetAbsolutePath(String)</a></div>
+  <h5 id="NationalInstruments_SourceModel_ZipStorageManager_GetAbsolutePath_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The given path is assumed to be relative to the project file.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_SourceModel_ZipStorageManager_GetAbsolutePath_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.GetAbsolutePath*"></a>
+  <h4 id="NationalInstruments_SourceModel_ZipStorageManager_GetAbsolutePath_System_String_System_String_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.GetAbsolutePath(System.String,System.String)">GetAbsolutePath(String, String)</h4>
+  <div class="markdown level1 summary"><p>Gets the fully qualified path to a storage item.
+For zip storage, this will be the zip file path with the internal path appended (separated by the directory character).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string GetAbsolutePath(string storagePath, string baseDirectory)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">storagePath</span></td>
+        <td><p>Path to convert to a full path</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">baseDirectory</span></td>
+        <td><p>The base directory for the relative path</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>the full path</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_GetAbsolutePath_System_String_System_String_">StorageManager.GetAbsolutePath(String, String)</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_ZipStorageManager_MakeFullStoragePath_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.MakeFullStoragePath*"></a>
+  <h4 id="NationalInstruments_SourceModel_ZipStorageManager_MakeFullStoragePath_System_String_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.MakeFullStoragePath(System.String)">MakeFullStoragePath(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string MakeFullStoragePath(string storagePath)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">storagePath</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_MakeFullStoragePath_System_String_">StorageManager.MakeFullStoragePath(String)</a></div>
+  <h5 id="NationalInstruments_SourceModel_ZipStorageManager_MakeFullStoragePath_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The given path is assumed to be relative to the project file.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_SourceModel_ZipStorageManager_MakeFullStoragePath_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.MakeFullStoragePath*"></a>
+  <h4 id="NationalInstruments_SourceModel_ZipStorageManager_MakeFullStoragePath_System_String_System_String_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.MakeFullStoragePath(System.String,System.String)">MakeFullStoragePath(String, String)</h4>
+  <div class="markdown level1 summary"><p>Converts a relative path, relative to the given base directory, and returns the full path.  If the specified path is a
+full path the path is not modified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string MakeFullStoragePath(string storagePath, string baseDirectory)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">storagePath</span></td>
+        <td><p>Path to convert to a full path</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">baseDirectory</span></td>
+        <td><p>The base directory for the relative path</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>the full path</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_MakeFullStoragePath_System_String_System_String_">StorageManager.MakeFullStoragePath(String, String)</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_ZipStorageManager_OperationComplete_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.OperationComplete*"></a>
+  <h4 id="NationalInstruments_SourceModel_ZipStorageManager_OperationComplete_System_Exception_NationalInstruments_Core_PlatformDispatcher_NationalInstruments_SourceModel_Envoys_SaveComplete_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.OperationComplete(System.Exception,NationalInstruments.Core.PlatformDispatcher,NationalInstruments.SourceModel.Envoys.SaveComplete)">OperationComplete(Exception, PlatformDispatcher, SaveComplete)</h4>
+  <div class="markdown level1 summary"><p>Called at the end of a zipstoragemanager operation to save the zip and optionally call other delegates</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool OperationComplete(Exception error, PlatformDispatcher dispatcher, SaveComplete onComplete)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Exception</span></td>
+        <td><span class="parametername">error</span></td>
+        <td><p>The exception that may have occured</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.PlatformDispatcher</span></td>
+        <td><span class="parametername">dispatcher</span></td>
+        <td><p>The platform dispatcher</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.SaveComplete.html">SaveComplete</a></td>
+        <td><span class="parametername">onComplete</span></td>
+        <td><p>Optional delegate to call after saving the zip</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if there was no error</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ZipStorageManager_PromptForStorageName_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.PromptForStorageName*"></a>
+  <h4 id="NationalInstruments_SourceModel_ZipStorageManager_PromptForStorageName_NationalInstruments_SourceModel_Envoys_PromptForStorageNameOptions_NationalInstruments_Core_PlatformDispatcher_NationalInstruments_SourceModel_Envoys_PromptForStorageNameComplete_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.PromptForStorageName(NationalInstruments.SourceModel.Envoys.PromptForStorageNameOptions,NationalInstruments.Core.PlatformDispatcher,NationalInstruments.SourceModel.Envoys.PromptForStorageNameComplete)">PromptForStorageName(PromptForStorageNameOptions, PlatformDispatcher, PromptForStorageNameComplete)</h4>
+  <div class="markdown level1 summary"><p>Called to prompt the user for the save location of an item in the project.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void PromptForStorageName(PromptForStorageNameOptions options, PlatformDispatcher dispatcher, PromptForStorageNameComplete promptComplete)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.PromptForStorageNameOptions.html">PromptForStorageNameOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The prompt options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.PlatformDispatcher</span></td>
+        <td><span class="parametername">dispatcher</span></td>
+        <td><p>The dispatcher to call the prompt complete on, <span class="xref">NationalInstruments.Core.PlatformDispatcher.EmptyDispatcher</span> for any thread.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.PromptForStorageNameComplete.html">PromptForStorageNameComplete</a></td>
+        <td><span class="parametername">promptComplete</span></td>
+        <td><p>delegate to call when the prompting is complete</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_PromptForStorageName_NationalInstruments_SourceModel_Envoys_PromptForStorageNameOptions_NationalInstruments_Core_PlatformDispatcher_NationalInstruments_SourceModel_Envoys_PromptForStorageNameComplete_">StorageManager.PromptForStorageName(PromptForStorageNameOptions, PlatformDispatcher, PromptForStorageNameComplete)</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_ZipStorageManager_ResolveLocation_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.ResolveLocation*"></a>
+  <h4 id="NationalInstruments_SourceModel_ZipStorageManager_ResolveLocation_System_String_System_String_System_String_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.ResolveLocation(System.String,System.String,System.String)">ResolveLocation(String, String, String)</h4>
+  <div class="markdown level1 summary"><p>Returns the path to use to load a document based on the relative path of the document, the path of the project
+and the default save path of the document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ResolveLocation(string fullStoragePath, string relativePath, string baseDirectory)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">fullStoragePath</span></td>
+        <td><p>The last full path of the document</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">relativePath</span></td>
+        <td><p>The relative path of the document</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">baseDirectory</span></td>
+        <td><p>The base directory for the relative path. If null or empty, the location will be resolved relative to the path of the project file.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The full path to load the project from</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_ResolveLocation_System_String_System_String_System_String_">StorageManager.ResolveLocation(String, String, String)</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_ZipStorageManager_SetZipStorage_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.SetZipStorage*"></a>
+  <h4 id="NationalInstruments_SourceModel_ZipStorageManager_SetZipStorage_System_IO_Stream_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.SetZipStorage(System.IO.Stream)">SetZipStorage(Stream)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void SetZipStorage(Stream zipStream)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IO.Stream</span></td>
+        <td><span class="parametername">zipStream</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ZipStorageManager_ValidateFileOrFolderName_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.ValidateFileOrFolderName*"></a>
+  <h4 id="NationalInstruments_SourceModel_ZipStorageManager_ValidateFileOrFolderName_System_String_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.ValidateFileOrFolderName(System.String)">ValidateFileOrFolderName(String)</h4>
+  <div class="markdown level1 summary"><p>Validate a file or folder name. This includes disallowing invalid characters for names of this storage type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override StoragePathValidationResult ValidateFileOrFolderName(string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The file or folder name to validate</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.StoragePathValidationResult.html">StoragePathValidationResult</a></td>
+        <td><p>The validation result</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_ValidateFileOrFolderName_System_String_">StorageManager.ValidateFileOrFolderName(String)</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_ZipStorageManager_ValidateStoragePath_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.ValidateStoragePath*"></a>
+  <h4 id="NationalInstruments_SourceModel_ZipStorageManager_ValidateStoragePath_System_String_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.ValidateStoragePath(System.String)">ValidateStoragePath(String)</h4>
+  <div class="markdown level1 summary"><p>Validate a storage path in the context of this storage type. This includes disallowing invalid characters for
+paths of this storage type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override StoragePathValidationResult ValidateStoragePath(string storagePath)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">storagePath</span></td>
+        <td><p>The storage path to the file.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.StoragePathValidationResult.html">StoragePathValidationResult</a></td>
+        <td><p>The validation result</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_ValidateStoragePath_System_String_">StorageManager.ValidateStoragePath(String)</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_ZipStorageManager_ValidateStoragePath_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.ValidateStoragePath*"></a>
+  <h4 id="NationalInstruments_SourceModel_ZipStorageManager_ValidateStoragePath_System_String_System_String_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.ValidateStoragePath(System.String,System.String)">ValidateStoragePath(String, String)</h4>
+  <div class="markdown level1 summary"><p>Validate a storage path in the context of this storage type. This includes disallowing invalid characters for
+paths of this storage type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override StoragePathValidationResult ValidateStoragePath(string projectDirectoryPath, string relativePathFromProjectDirectory)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">projectDirectoryPath</span></td>
+        <td><p>The storage path to the directory that contains the project</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">relativePathFromProjectDirectory</span></td>
+        <td><p>The relative path from the project directory to the item to validate</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.StoragePathValidationResult.html">StoragePathValidationResult</a></td>
+        <td><p>The validation result</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_ValidateStoragePath_System_String_System_String_">StorageManager.ValidateStoragePath(String, String)</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_ZipStorageManager_ValidateStoragePermissions_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.ValidateStoragePermissions*"></a>
+  <h4 id="NationalInstruments_SourceModel_ZipStorageManager_ValidateStoragePermissions_System_String_" data-uid="NationalInstruments.SourceModel.ZipStorageManager.ValidateStoragePermissions(System.String)">ValidateStoragePermissions(String)</h4>
+  <div class="markdown level1 summary"><p>Validate access is allowed to the specified storage path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Todo(&quot;bhealy&quot;, &quot;Validate permissions to read/write to/from the zip file.&quot;)]
+public override StoragePathPermissions ValidateStoragePermissions(string storagePath)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">storagePath</span></td>
+        <td><p>Path to validate.  This should be a directory.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.StoragePathPermissions.html">StoragePathPermissions</a></td>
+        <td><p>The validation result.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.StorageManager.html#NationalInstruments_SourceModel_StorageManager_ValidateStoragePermissions_System_String_">StorageManager.ValidateStoragePermissions(String)</a></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.IStorageManager.html">IStorageManager</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.StorageManagerHelpers.html#NationalInstruments_SourceModel_StorageManagerHelpers_DoesPathContainSpecialInvalidName_NationalInstruments_SourceModel_Envoys_IStorageManager_System_String_">StorageManagerHelpers.DoesPathContainSpecialInvalidName(IStorageManager, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.StorageManagerHelpers.html#NationalInstruments_SourceModel_StorageManagerHelpers_GetLastWriteTime_NationalInstruments_SourceModel_Envoys_IStorageManager_System_String_">StorageManagerHelpers.GetLastWriteTime(IStorageManager, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.StorageManagerExtensions.html#NationalInstruments_SourceModel_StorageManagerExtensions_Combine_NationalInstruments_SourceModel_Envoys_IStorageManager_System_String___">StorageManagerExtensions.Combine(IStorageManager, String[])</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.StorageManagerExtensions.html#NationalInstruments_SourceModel_StorageManagerExtensions_Combine_NationalInstruments_SourceModel_Envoys_IStorageManager_System_Collections_Generic_IEnumerable_System_String__">StorageManagerExtensions.Combine(IStorageManager, IEnumerable&lt;String&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

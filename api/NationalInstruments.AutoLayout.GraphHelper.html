@@ -1,0 +1,917 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class GraphHelper
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class GraphHelper
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.AutoLayout.GraphHelper">
+  
+  
+  <h1 id="NationalInstruments_AutoLayout_GraphHelper" data-uid="NationalInstruments.AutoLayout.GraphHelper" class="text-break">Class GraphHelper
+  </h1>
+  <div class="markdown level0 summary"><p>Helper methods for SimpleGraph</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">GraphHelper</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.AutoLayout.html">NationalInstruments.AutoLayout</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_AutoLayout_GraphHelper_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class GraphHelper</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_AutoLayout_GraphHelper_ComputeEuclideanDistance_" data-uid="NationalInstruments.AutoLayout.GraphHelper.ComputeEuclideanDistance*"></a>
+  <h4 id="NationalInstruments_AutoLayout_GraphHelper_ComputeEuclideanDistance_NationalInstruments_AutoLayout_INode_NationalInstruments_AutoLayout_INode_" data-uid="NationalInstruments.AutoLayout.GraphHelper.ComputeEuclideanDistance(NationalInstruments.AutoLayout.INode,NationalInstruments.AutoLayout.INode)">ComputeEuclideanDistance(INode, INode)</h4>
+  <div class="markdown level1 summary"><p>Computes the euclidean distance between the given source node and destination node. The distance between the center of the source node and center of the destination node is calculated and the distance from center of nodes to their boudaries is subtracted.
+This provides the exact distance between the rectangles and thus the nodes are considered as rectangular objects and not just pointed particles.
+Note - ( To-do ) - Have to check what happens when rectangles overlap.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector ComputeEuclideanDistance(INode sourceNode, INode destinationNode)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.AutoLayout.INode.html">INode</a></td>
+        <td><span class="parametername">sourceNode</span></td>
+        <td><p>Source Node</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.AutoLayout.INode.html">INode</a></td>
+        <td><span class="parametername">destinationNode</span></td>
+        <td><p>Destination Node</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Windows.Vector</span></td>
+        <td><p>euclidean distance</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_AutoLayout_GraphHelper_ComputeEuclideanDistance_" data-uid="NationalInstruments.AutoLayout.GraphHelper.ComputeEuclideanDistance*"></a>
+  <h4 id="NationalInstruments_AutoLayout_GraphHelper_ComputeEuclideanDistance_NationalInstruments_AutoLayout_TerminalEdge_" data-uid="NationalInstruments.AutoLayout.GraphHelper.ComputeEuclideanDistance(NationalInstruments.AutoLayout.TerminalEdge)">ComputeEuclideanDistance(TerminalEdge)</h4>
+  <div class="markdown level1 summary"><p>Computes the euclidean distance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector ComputeEuclideanDistance(TerminalEdge edge)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.AutoLayout.TerminalEdge.html">TerminalEdge</a></td>
+        <td><span class="parametername">edge</span></td>
+        <td><p>The edge.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Windows.Vector</span></td>
+        <td><p>euclidean distance</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_AutoLayout_GraphHelper_ComputeRectangleOverlap_" data-uid="NationalInstruments.AutoLayout.GraphHelper.ComputeRectangleOverlap*"></a>
+  <h4 id="NationalInstruments_AutoLayout_GraphHelper_ComputeRectangleOverlap_NationalInstruments_Core_SMRect_NationalInstruments_Core_SMRect_System_Windows_Vector__" data-uid="NationalInstruments.AutoLayout.GraphHelper.ComputeRectangleOverlap(NationalInstruments.Core.SMRect,NationalInstruments.Core.SMRect,System.Windows.Vector@)">ComputeRectangleOverlap(SMRect, SMRect, out Vector)</h4>
+  <div class="markdown level1 summary"><p>Computes the overlap for rectangles.
+If there is a complete overlap of one over another, a (0,0) vector is returned.
+If there is no complete overlap and if there is a partial overlap, the overlap distance is returned
+If there is no overlap, None is returned with a (0,0) vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RectangleOverlap ComputeRectangleOverlap(SMRect rectA, SMRect rectB, out Vector overlap)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMRect</span></td>
+        <td><span class="parametername">rectA</span></td>
+        <td><p>First Bounds</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMRect</span></td>
+        <td><span class="parametername">rectB</span></td>
+        <td><p>Other Bounds</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Windows.Vector</span></td>
+        <td><span class="parametername">overlap</span></td>
+        <td><p>The overlap distance is returned through this method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.AutoLayout.RectangleOverlap.html">RectangleOverlap</a></td>
+        <td><p>The type of overlap</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_AutoLayout_GraphHelper_DoLinesIntersect_" data-uid="NationalInstruments.AutoLayout.GraphHelper.DoLinesIntersect*"></a>
+  <h4 id="NationalInstruments_AutoLayout_GraphHelper_DoLinesIntersect_NationalInstruments_Core_SMPoint_NationalInstruments_Core_SMPoint_NationalInstruments_Core_SMPoint_NationalInstruments_Core_SMPoint_NationalInstruments_Core_SMPoint__" data-uid="NationalInstruments.AutoLayout.GraphHelper.DoLinesIntersect(NationalInstruments.Core.SMPoint,NationalInstruments.Core.SMPoint,NationalInstruments.Core.SMPoint,NationalInstruments.Core.SMPoint,NationalInstruments.Core.SMPoint@)">DoLinesIntersect(SMPoint, SMPoint, SMPoint, SMPoint, out SMPoint)</h4>
+  <div class="markdown level1 summary"><p>A private method which helps ComputeEuclideanDistance method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool DoLinesIntersect(SMPoint sourceStart, SMPoint sourceEnd, SMPoint destinationStart, SMPoint destinationEnd, out SMPoint intersection)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMPoint</span></td>
+        <td><span class="parametername">sourceStart</span></td>
+        <td><p>The starting point of the source line</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMPoint</span></td>
+        <td><span class="parametername">sourceEnd</span></td>
+        <td><p>The ending point of the source line</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMPoint</span></td>
+        <td><span class="parametername">destinationStart</span></td>
+        <td><p>The starting point of the destination line</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMPoint</span></td>
+        <td><span class="parametername">destinationEnd</span></td>
+        <td><p>The destination point of the destination line</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMPoint</span></td>
+        <td><span class="parametername">intersection</span></td>
+        <td><p>The point of intersection of the two given lines</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>Returns the true if given lines intersect, false if otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_AutoLayout_GraphHelper_FindCommonAncestor_" data-uid="NationalInstruments.AutoLayout.GraphHelper.FindCommonAncestor*"></a>
+  <h4 id="NationalInstruments_AutoLayout_GraphHelper_FindCommonAncestor_NationalInstruments_AutoLayout_IGraph_NationalInstruments_AutoLayout_IGraph_System_Collections_Generic_List_NationalInstruments_AutoLayout_IGraph___System_Collections_Generic_List_NationalInstruments_AutoLayout_IGraph___" data-uid="NationalInstruments.AutoLayout.GraphHelper.FindCommonAncestor(NationalInstruments.AutoLayout.IGraph,NationalInstruments.AutoLayout.IGraph,System.Collections.Generic.List{NationalInstruments.AutoLayout.IGraph}@,System.Collections.Generic.List{NationalInstruments.AutoLayout.IGraph}@)">FindCommonAncestor(IGraph, IGraph, ref List&lt;IGraph&gt;, ref List&lt;IGraph&gt;)</h4>
+  <div class="markdown level1 summary"><p>Finds the common ancestor diagram.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IGraph FindCommonAncestor(IGraph graph1, IGraph graph2, ref List&lt;IGraph&gt; graph1ToCommonAncestor, ref List&lt;IGraph&gt; graph2ToCommonAncestor)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.AutoLayout.IGraph.html">IGraph</a></td>
+        <td><span class="parametername">graph1</span></td>
+        <td><p>The graph1.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.AutoLayout.IGraph.html">IGraph</a></td>
+        <td><span class="parametername">graph2</span></td>
+        <td><p>The graph2.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="NationalInstruments.AutoLayout.IGraph.html">IGraph</a>&gt;</td>
+        <td><span class="parametername">graph1ToCommonAncestor</span></td>
+        <td><p>The graph1 to common ancestor.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="NationalInstruments.AutoLayout.IGraph.html">IGraph</a>&gt;</td>
+        <td><span class="parametername">graph2ToCommonAncestor</span></td>
+        <td><p>The graph2 to common ancestor.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.AutoLayout.IGraph.html">IGraph</a></td>
+        <td><p>The common ancestor graph</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_AutoLayout_GraphHelper_GetBoundary_" data-uid="NationalInstruments.AutoLayout.GraphHelper.GetBoundary*"></a>
+  <h4 id="NationalInstruments_AutoLayout_GraphHelper_GetBoundary_NationalInstruments_AutoLayout_ContainerNode_System_Collections_Generic_ICollection_NationalInstruments_AutoLayout_INode__" data-uid="NationalInstruments.AutoLayout.GraphHelper.GetBoundary(NationalInstruments.AutoLayout.ContainerNode,System.Collections.Generic.ICollection{NationalInstruments.AutoLayout.INode})">GetBoundary(ContainerNode, ICollection&lt;INode&gt;)</h4>
+  <div class="markdown level1 summary"><p>Gets the boundary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SMRect GetBoundary(ContainerNode containerNode, ICollection&lt;INode&gt; nodes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.AutoLayout.ContainerNode.html">ContainerNode</a></td>
+        <td><span class="parametername">containerNode</span></td>
+        <td><p>The container node.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<a class="xref" href="NationalInstruments.AutoLayout.INode.html">INode</a>&gt;</td>
+        <td><span class="parametername">nodes</span></td>
+        <td><p>The nodes.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMRect</span></td>
+        <td><p>Boundary</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_AutoLayout_GraphHelper_GetCenter_" data-uid="NationalInstruments.AutoLayout.GraphHelper.GetCenter*"></a>
+  <h4 id="NationalInstruments_AutoLayout_GraphHelper_GetCenter_NationalInstruments_Core_SMRect_" data-uid="NationalInstruments.AutoLayout.GraphHelper.GetCenter(NationalInstruments.Core.SMRect)">GetCenter(SMRect)</h4>
+  <div class="markdown level1 summary"><p>Gets the center.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SMPoint GetCenter(SMRect rect)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMRect</span></td>
+        <td><span class="parametername">rect</span></td>
+        <td><p>The rect.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMPoint</span></td>
+        <td><p>center</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_AutoLayout_GraphHelper_GetDestinationPoint_" data-uid="NationalInstruments.AutoLayout.GraphHelper.GetDestinationPoint*"></a>
+  <h4 id="NationalInstruments_AutoLayout_GraphHelper_GetDestinationPoint_NationalInstruments_AutoLayout_TerminalEdge_" data-uid="NationalInstruments.AutoLayout.GraphHelper.GetDestinationPoint(NationalInstruments.AutoLayout.TerminalEdge)">GetDestinationPoint(TerminalEdge)</h4>
+  <div class="markdown level1 summary"><p>Gets the destination point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SMPoint GetDestinationPoint(TerminalEdge edge)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.AutoLayout.TerminalEdge.html">TerminalEdge</a></td>
+        <td><span class="parametername">edge</span></td>
+        <td><p>The edge.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMPoint</span></td>
+        <td><p>Destination Point</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_AutoLayout_GraphHelper_GetEdgeIntersectionPoint_" data-uid="NationalInstruments.AutoLayout.GraphHelper.GetEdgeIntersectionPoint*"></a>
+  <h4 id="NationalInstruments_AutoLayout_GraphHelper_GetEdgeIntersectionPoint_NationalInstruments_Core_SMRect_NationalInstruments_Core_SMPoint_NationalInstruments_Core_SMPoint_NationalInstruments_Core_SMPoint__" data-uid="NationalInstruments.AutoLayout.GraphHelper.GetEdgeIntersectionPoint(NationalInstruments.Core.SMRect,NationalInstruments.Core.SMPoint,NationalInstruments.Core.SMPoint,NationalInstruments.Core.SMPoint@)">GetEdgeIntersectionPoint(SMRect, SMPoint, SMPoint, out SMPoint)</h4>
+  <div class="markdown level1 summary"><p>Gets the edge intersection point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool GetEdgeIntersectionPoint(SMRect connectorSourceBounds, SMPoint connectorSource, SMPoint connectorDestination, out SMPoint intersectionPoint)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMRect</span></td>
+        <td><span class="parametername">connectorSourceBounds</span></td>
+        <td><p>The connector source bounds.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMPoint</span></td>
+        <td><span class="parametername">connectorSource</span></td>
+        <td><p>The connector source.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMPoint</span></td>
+        <td><span class="parametername">connectorDestination</span></td>
+        <td><p>The connector destination.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMPoint</span></td>
+        <td><span class="parametername">intersectionPoint</span></td>
+        <td><p>The intersection point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>If they intersect</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_AutoLayout_GraphHelper_GetEuclideanDistance_" data-uid="NationalInstruments.AutoLayout.GraphHelper.GetEuclideanDistance*"></a>
+  <h4 id="NationalInstruments_AutoLayout_GraphHelper_GetEuclideanDistance_NationalInstruments_Core_SMPoint_NationalInstruments_Core_SMPoint_" data-uid="NationalInstruments.AutoLayout.GraphHelper.GetEuclideanDistance(NationalInstruments.Core.SMPoint,NationalInstruments.Core.SMPoint)">GetEuclideanDistance(SMPoint, SMPoint)</h4>
+  <div class="markdown level1 summary"><p>Gets the euclidean distance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector GetEuclideanDistance(SMPoint point1, SMPoint point2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMPoint</span></td>
+        <td><span class="parametername">point1</span></td>
+        <td><p>The point1.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMPoint</span></td>
+        <td><span class="parametername">point2</span></td>
+        <td><p>The point2.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Windows.Vector</span></td>
+        <td><p>euclidean distance</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_AutoLayout_GraphHelper_GetOrientation_" data-uid="NationalInstruments.AutoLayout.GraphHelper.GetOrientation*"></a>
+  <h4 id="NationalInstruments_AutoLayout_GraphHelper_GetOrientation_NationalInstruments_AutoLayout_BendPoint_NationalInstruments_AutoLayout_BendPoint_" data-uid="NationalInstruments.AutoLayout.GraphHelper.GetOrientation(NationalInstruments.AutoLayout.BendPoint,NationalInstruments.AutoLayout.BendPoint)">GetOrientation(BendPoint, BendPoint)</h4>
+  <div class="markdown level1 summary"><p>Gets the orientation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ManhattanSegmentOrientation GetOrientation(BendPoint start, BendPoint end)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.AutoLayout.BendPoint.html">BendPoint</a></td>
+        <td><span class="parametername">start</span></td>
+        <td><p>The start.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.AutoLayout.BendPoint.html">BendPoint</a></td>
+        <td><span class="parametername">end</span></td>
+        <td><p>The end.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.AutoLayout.ManhattanSegmentOrientation.html">ManhattanSegmentOrientation</a></td>
+        <td><p>Orientation of segment</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>Bend points are not orthogonal</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_AutoLayout_GraphHelper_GetSourcePoint_" data-uid="NationalInstruments.AutoLayout.GraphHelper.GetSourcePoint*"></a>
+  <h4 id="NationalInstruments_AutoLayout_GraphHelper_GetSourcePoint_NationalInstruments_AutoLayout_TerminalEdge_" data-uid="NationalInstruments.AutoLayout.GraphHelper.GetSourcePoint(NationalInstruments.AutoLayout.TerminalEdge)">GetSourcePoint(TerminalEdge)</h4>
+  <div class="markdown level1 summary"><p>Gets the source point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SMPoint GetSourcePoint(TerminalEdge edge)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.AutoLayout.TerminalEdge.html">TerminalEdge</a></td>
+        <td><span class="parametername">edge</span></td>
+        <td><p>The edge.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMPoint</span></td>
+        <td><p>Source Point</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_AutoLayout_GraphHelper_SubtractPoints_" data-uid="NationalInstruments.AutoLayout.GraphHelper.SubtractPoints*"></a>
+  <h4 id="NationalInstruments_AutoLayout_GraphHelper_SubtractPoints_NationalInstruments_Core_SMPoint_NationalInstruments_Core_SMPoint_" data-uid="NationalInstruments.AutoLayout.GraphHelper.SubtractPoints(NationalInstruments.Core.SMPoint,NationalInstruments.Core.SMPoint)">SubtractPoints(SMPoint, SMPoint)</h4>
+  <div class="markdown level1 summary"><p>Subtracts the points.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SMPoint SubtractPoints(SMPoint minuend, SMPoint subtrahend)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMPoint</span></td>
+        <td><span class="parametername">minuend</span></td>
+        <td><p>The minuend.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMPoint</span></td>
+        <td><span class="parametername">subtrahend</span></td>
+        <td><p>The subtrahend.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMPoint</span></td>
+        <td><p>subtracted value</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_AutoLayout_GraphHelper_TransformPoint_" data-uid="NationalInstruments.AutoLayout.GraphHelper.TransformPoint*"></a>
+  <h4 id="NationalInstruments_AutoLayout_GraphHelper_TransformPoint_NationalInstruments_AutoLayout_IGraph_NationalInstruments_AutoLayout_IGraph_NationalInstruments_Core_SMPoint_" data-uid="NationalInstruments.AutoLayout.GraphHelper.TransformPoint(NationalInstruments.AutoLayout.IGraph,NationalInstruments.AutoLayout.IGraph,NationalInstruments.Core.SMPoint)">TransformPoint(IGraph, IGraph, SMPoint)</h4>
+  <div class="markdown level1 summary"><p>Transforms the point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SMPoint TransformPoint(IGraph fromGraph, IGraph toGraph, SMPoint point)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.AutoLayout.IGraph.html">IGraph</a></td>
+        <td><span class="parametername">fromGraph</span></td>
+        <td><p>From graph.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.AutoLayout.IGraph.html">IGraph</a></td>
+        <td><span class="parametername">toGraph</span></td>
+        <td><p>To graph.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMPoint</span></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMPoint</span></td>
+        <td><p>transformed point</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

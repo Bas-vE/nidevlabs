@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>The Shell </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="The Shell ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="the-shell">The Shell</h1>
+
+<p>The Shell serves as the foundation of your application&#39;s graphical user interface and manages relationships between projects, documents, and user interface elements.</p>
+<h2 id="shell-architecture">Shell Architecture</h2>
+<p>The following diagram illustrates the high-level architecture of the Shell.</p>
+<p><img src="../../images/concepts/ShellRelationships.png" alt="ShellRelationships"></p>
+<h2 id="shell-theory-of-operation">Shell Theory of Operation</h2>
+<p>The Shell is the foundation of the Diagram SDK&#39;s graphical user interface infrastructure. It is designed to serve as an <a href="plugins.html">extensible</a>, user-friendly basis for your application&#39;s graphical user interface. The Shell provides both a rich, configurable application window full of built-in features and a powerful set of <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/N_NationalInstruments_ShellControls.htm">controls</a> and a robust set of <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/N_NationalInstruments_Shell.htm">APIs</a> upon which to build your own custom GUI.</p>
+<h3 id="built-in-shellapplication-features">Built-In ShellApplication Features</h3>
+<p><a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_Shell_Restricted_ShellApplication.htm">ShellApplication</a> base type to serve as the basis for your main application window. When you start developing your application, your will begin by inheriting from ShellApplication, which provides basic features such as:</p>
+<ul>
+<li><a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_Shell_StudioWindow.htm">StudioWindow</a></li>
+<li><a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_Shell_DocumentManager.htm">DocumentManager</a></li>
+<li><a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_Shell_StudioRibbonQuickAccessToolBar.htm">Quick Access Toolbar</a></li>
+<li><a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_Shell_StudioRibbonApplicationMenu.htm">Application Menu</a></li>
+<li><a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_ShellControls_Ribbon_Ribbon.htm">Ribbon</a></li>
+<li><a href="..\InProgress.html">DocumentWindow</a></li>
+<li>Plug-in Tool Window</li>
+<li>Property Editor</li>
+<li>StudioWindow Status Bar</li>
+<li>Hierarchy Bar</li>
+<li>Document View Selector</li>
+<li>Zoom Control</li>
+</ul>
+<h3 id="shellapplication-visual-tree-hierarchy">ShellApplication Visual Tree Hierarchy</h3>
+<p>The following diagram shows the Shell components in context and illustrates how the Shell&#39;s <a href="http://msdn.microsoft.com/en-us/library/ms753391.aspx#two_trees">visual tree hierarchy</a> maps to the visuals you see in the StudioWindow<a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_Shell_StudioWindow.htm">StudioWindowRef</a>, from DocumentWindow down to <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Designer_DiagramCanvas.htm">DiagramCanvas</a>. Note that some of the types in the visual tree hierarchy are invisible.</p>
+<p><img src="../../images/concepts/ShellUIHierarchy.png" alt="ShellUIHierarcy"></p>
+<h3 id="abstract-structure-of-the-shellapplication">Abstract Structure of the ShellApplication</h3>
+<p>The following diagram presents a simplified, abstract view that highlights how the Shell&#39;s primary components fit together.</p>
+<p><img src="../../images/concepts/ShellStructure.png" alt="ShellStructure"></p>
+<h2 id="primary-shell-api-types">Primary Shell API Types</h2>
+<p>The following classes form the backbone of the Shell API. However, these types represent only a only a small fraction of the full API. For more information about the Shell API, see the <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/N_NationalInstruments_Shell.htm">NationalInstruments.Shell</a> namespace documentation. For more information about the Shell View Controls, see the <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/N_NationalInstruments_ShellControls.htm">NationalInstruments.ShellControls</a> namespace documentation.</p>
+<h3 id="shellapplication">ShellApplication</h3>
+<p>The <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_Shell_Restricted_ShellApplication.htm">ShellApplication</a> is a base type from which you can derive your own application. ShellApplication instantiates a StudioWindow to host the application&#39;s graphical user interface.</p>
+<h3 id="studiowindow">StudioWindow</h3>
+<p>The <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_Shell_StudioWindow.htm">StudioWindow</a> is the root visual object of the Shell. The StudioWindow is a <a href="http://msdn.microsoft.com/en-us/library/system.windows.window.aspx">Window</a> on WPF and a <a href="http://msdn.microsoft.com/en-us/library/system.windows.forms.usercontrol.aspx">UserControl</a> on Silverlight. The StudioWindow creates the StudioWindowEditSite and implements the functionality that it provides.</p>
+<h3 id="documentmanager">DocumentManager</h3>
+<p>The <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_Shell_DocumentManager.htm">DocumentManager</a> tracks open <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Shell_Document.htm">Documents</a>. A Document encapsulates a Model and provides commands and a <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Shell_DocumentEditControl.htm">DocumentEditControl</a> to manipulate the model.</p>
+<h3 id="ribbon">Ribbon</h3>
+<p>The <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_ShellControls_Ribbon_Ribbon.htm">Ribbon</a> is the swath of GUI Controls that occupies the top section of the StudioWindow. The Ribbon is the primary means of exposing configuration options and commands for the ShellApplication, Document, and RootDiagram.</p>
+<h3 id="ribbontab">RibbonTab</h3>
+<p>A <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_ShellControls_Ribbon_RibbonTab.htm">RibbonTab</a> is a collection of RibbonGroups that displays as a selectable tab in the Ribbon.</p>
+<h3 id="ribbongroup">RibbonGroup</h3>
+<p>The <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_ShellControls_Ribbon_RibbonGroup.htm">RibbonGroup</a> class allows you to define a collection of Ribbon controls to add to a RibbonTab.</p>
+<h3 id="ipushribboncontent">IPushRibbonContent</h3>
+<p><a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Shell_IPushRibbonContent.htm">IPushRibbonContent</a> is an interface you can implement to provide custom RibbonGroups and Commands to the default RibbonTabs.</p>
+<h3 id="iapplicationfeatureset">IApplicationFeatureSet</h3>
+<p><a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Common_IApplicationFeatureSet.htm">IApplicationFeatureSet</a> is an interface you can implement to customize your ShellApplication.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

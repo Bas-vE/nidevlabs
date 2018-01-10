@@ -1,0 +1,785 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SourceModelToAutoLayoutMapperVisitor
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SourceModelToAutoLayoutMapperVisitor
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.SourceModel.SourceModelToAutoLayoutMapperVisitor">
+  
+  
+  <h1 id="NationalInstruments_SourceModel_SourceModelToAutoLayoutMapperVisitor" data-uid="NationalInstruments.SourceModel.SourceModelToAutoLayoutMapperVisitor" class="text-break">Class SourceModelToAutoLayoutMapperVisitor
+  </h1>
+  <div class="markdown level0 summary"><p>Visitor to convert SourceModel to Layout Graph</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="NationalInstruments.SourceModel.BaseElementVisitor.html">BaseElementVisitor</a></div>
+    <div class="level2"><a class="xref" href="NationalInstruments.SourceModel.SourceModelAutoLayoutVisitor.html">SourceModelAutoLayoutVisitor</a></div>
+    <div class="level3"><span class="xref">SourceModelToAutoLayoutMapperVisitor</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="NationalInstruments.SourceModel.IElementVisitor.html">IElementVisitor</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.SourceModelAutoLayoutVisitor.html#NationalInstruments_SourceModel_SourceModelAutoLayoutVisitor_Context">SourceModelAutoLayoutVisitor.Context</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.SourceModelAutoLayoutVisitor.html#NationalInstruments_SourceModel_SourceModelAutoLayoutVisitor_CurrentLayoutDiagram">SourceModelAutoLayoutVisitor.CurrentLayoutDiagram</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.SourceModelAutoLayoutVisitor.html#NationalInstruments_SourceModel_SourceModelAutoLayoutVisitor_CurrentLayoutStructure">SourceModelAutoLayoutVisitor.CurrentLayoutStructure</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.SourceModelAutoLayoutVisitor.html#NationalInstruments_SourceModel_SourceModelAutoLayoutVisitor_CurrentModelStructure">SourceModelAutoLayoutVisitor.CurrentModelStructure</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.SourceModelAutoLayoutVisitor.html#NationalInstruments_SourceModel_SourceModelAutoLayoutVisitor_CurrentModelDiagram">SourceModelAutoLayoutVisitor.CurrentModelDiagram</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.SourceModelAutoLayoutVisitor.html#NationalInstruments_SourceModel_SourceModelAutoLayoutVisitor_LastCreatedDiagramNode">SourceModelAutoLayoutVisitor.LastCreatedDiagramNode</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.SourceModelAutoLayoutVisitor.html#NationalInstruments_SourceModel_SourceModelAutoLayoutVisitor_ObjectId">SourceModelAutoLayoutVisitor.ObjectId</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.SourceModelAutoLayoutVisitor.html#NationalInstruments_SourceModel_SourceModelAutoLayoutVisitor_VisitContent_NationalInstruments_SourceModel_Content_">SourceModelAutoLayoutVisitor.VisitContent(Content)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.SourceModelAutoLayoutVisitor.html#NationalInstruments_SourceModel_SourceModelAutoLayoutVisitor_VisitTunnel_NationalInstruments_SourceModel_Tunnel_">SourceModelAutoLayoutVisitor.VisitTunnel(Tunnel)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.SourceModelAutoLayoutVisitor.html#NationalInstruments_SourceModel_SourceModelAutoLayoutVisitor_VisitSimpleTunnel_NationalInstruments_SourceModel_SimpleTunnel_">SourceModelAutoLayoutVisitor.VisitSimpleTunnel(SimpleTunnel)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.SourceModelAutoLayoutVisitor.html#NationalInstruments_SourceModel_SourceModelAutoLayoutVisitor_VisitSimpleStructure_NationalInstruments_SourceModel_SimpleStructure_">SourceModelAutoLayoutVisitor.VisitSimpleStructure(SimpleStructure)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.SourceModelAutoLayoutVisitor.html#NationalInstruments_SourceModel_SourceModelAutoLayoutVisitor_BaseCalling">SourceModelAutoLayoutVisitor.BaseCalling</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.SourceModelAutoLayoutVisitor.html#NationalInstruments_SourceModel_SourceModelAutoLayoutVisitor_DoMapping_NationalInstruments_SourceModel_SourceModelDiagramAutoLayoutContext_">SourceModelAutoLayoutVisitor.DoMapping(SourceModelDiagramAutoLayoutContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.BaseElementVisitor.html#NationalInstruments_SourceModel_BaseElementVisitor_VisitElement_NationalInstruments_SourceModel_Element_">BaseElementVisitor.VisitElement(Element)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.BaseElementVisitor.html#NationalInstruments_SourceModel_BaseElementVisitor_VisitMergeScript_NationalInstruments_SourceModel_MergeScript_">BaseElementVisitor.VisitMergeScript(MergeScript)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.BaseElementVisitor.html#NationalInstruments_SourceModel_BaseElementVisitor_VisitConfigurableNode_NationalInstruments_SourceModel_ConfigurableNode_">BaseElementVisitor.VisitConfigurableNode(ConfigurableNode)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.BaseElementVisitor.html#NationalInstruments_SourceModel_BaseElementVisitor_VisitSourceFile_NationalInstruments_SourceModel_SourceFileBase_">BaseElementVisitor.VisitSourceFile(SourceFileBase)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.BaseElementVisitor.html#NationalInstruments_SourceModel_BaseElementVisitor_VisitDefinition_NationalInstruments_SourceModel_Definition_">BaseElementVisitor.VisitDefinition(Definition)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.BaseElementVisitor.html#NationalInstruments_SourceModel_BaseElementVisitor_VisitTargetScope_NationalInstruments_SourceModel_ITargetScope_">BaseElementVisitor.VisitTargetScope(ITargetScope)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.BaseElementVisitor.html#NationalInstruments_SourceModel_BaseElementVisitor_VisitWireJoint_NationalInstruments_SourceModel_WireJoint_">BaseElementVisitor.VisitWireJoint(WireJoint)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.BaseElementVisitor.html#NationalInstruments_SourceModel_BaseElementVisitor_VisitManhattanWireJoint_NationalInstruments_SourceModel_ManhattanWireJoint_">BaseElementVisitor.VisitManhattanWireJoint(ManhattanWireJoint)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.BaseElementVisitor.html#NationalInstruments_SourceModel_BaseElementVisitor_VisitWireSegment_NationalInstruments_SourceModel_WireSegment_">BaseElementVisitor.VisitWireSegment(WireSegment)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.BaseElementVisitor.html#NationalInstruments_SourceModel_BaseElementVisitor_VisitTerminal_NationalInstruments_SourceModel_Terminal_">BaseElementVisitor.VisitTerminal(Terminal)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.BaseElementVisitor.html#NationalInstruments_SourceModel_BaseElementVisitor_VisitWireable_NationalInstruments_SourceModel_Wireable_">BaseElementVisitor.VisitWireable(Wireable)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.BaseElementVisitor.html#NationalInstruments_SourceModel_BaseElementVisitor_VisitConnectable_NationalInstruments_SourceModel_Connectable_">BaseElementVisitor.VisitConnectable(Connectable)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.BaseElementVisitor.html#NationalInstruments_SourceModel_BaseElementVisitor_VisitWireableTerminal_NationalInstruments_SourceModel_WireableTerminal_">BaseElementVisitor.VisitWireableTerminal(WireableTerminal)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.BaseElementVisitor.html#NationalInstruments_SourceModel_BaseElementVisitor_VisitWireTerminal_NationalInstruments_SourceModel_WireTerminal_">BaseElementVisitor.VisitWireTerminal(WireTerminal)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.BaseElementVisitor.html#NationalInstruments_SourceModel_BaseElementVisitor_VisitBorderNodeTerminal_NationalInstruments_SourceModel_BorderNodeTerminal_">BaseElementVisitor.VisitBorderNodeTerminal(BorderNodeTerminal)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.BaseElementVisitor.html#NationalInstruments_SourceModel_BaseElementVisitor_VisitNodeTerminal_NationalInstruments_SourceModel_NodeTerminal_">BaseElementVisitor.VisitNodeTerminal(NodeTerminal)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.BaseElementVisitor.html#NationalInstruments_SourceModel_BaseElementVisitor_VisitConfigurableTerminal_NationalInstruments_SourceModel_ConfigurableTerminal_">BaseElementVisitor.VisitConfigurableTerminal(ConfigurableTerminal)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.BaseElementVisitor.html#NationalInstruments_SourceModel_BaseElementVisitor_VisitIcon_NationalInstruments_SourceModel_Icon_">BaseElementVisitor.VisitIcon(Icon)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.SourceModel.html">NationalInstruments.SourceModel</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_SourceModel_SourceModelToAutoLayoutMapperVisitor_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SourceModelToAutoLayoutMapperVisitor : SourceModelAutoLayoutVisitor, IElementVisitor</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_SourceModelToAutoLayoutMapperVisitor_RootGraphForNestedDiagram_" data-uid="NationalInstruments.SourceModel.SourceModelToAutoLayoutMapperVisitor.RootGraphForNestedDiagram*"></a>
+  <h4 id="NationalInstruments_SourceModel_SourceModelToAutoLayoutMapperVisitor_RootGraphForNestedDiagram" data-uid="NationalInstruments.SourceModel.SourceModelToAutoLayoutMapperVisitor.RootGraphForNestedDiagram">RootGraphForNestedDiagram</h4>
+  <div class="markdown level1 summary"><p>Gets the Root Graph to begin mappers for a Nested Diagram.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override SimpleGraph RootGraphForNestedDiagram { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.AutoLayout.SimpleGraph.html">SimpleGraph</a></td>
+        <td><p>Root Graph.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.SourceModelAutoLayoutVisitor.html#NationalInstruments_SourceModel_SourceModelAutoLayoutVisitor_RootGraphForNestedDiagram">SourceModelAutoLayoutVisitor.RootGraphForNestedDiagram</a></div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_SourceModelToAutoLayoutMapperVisitor_CreateOrGetMappedGraph_" data-uid="NationalInstruments.SourceModel.SourceModelToAutoLayoutMapperVisitor.CreateOrGetMappedGraph*"></a>
+  <h4 id="NationalInstruments_SourceModel_SourceModelToAutoLayoutMapperVisitor_CreateOrGetMappedGraph_NationalInstruments_SourceModel_Diagram_" data-uid="NationalInstruments.SourceModel.SourceModelToAutoLayoutMapperVisitor.CreateOrGetMappedGraph(NationalInstruments.SourceModel.Diagram)">CreateOrGetMappedGraph(Diagram)</h4>
+  <div class="markdown level1 summary"><p>Creates the or get mapped graph.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected SimpleGraph CreateOrGetMappedGraph(Diagram diagram)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Diagram.html">Diagram</a></td>
+        <td><span class="parametername">diagram</span></td>
+        <td><p>The diagram.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.AutoLayout.SimpleGraph.html">SimpleGraph</a></td>
+        <td><p>Graph corresponding to the Diagram.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_SourceModelToAutoLayoutMapperVisitor_GetSourceJoints_" data-uid="NationalInstruments.SourceModel.SourceModelToAutoLayoutMapperVisitor.GetSourceJoints*"></a>
+  <h4 id="NationalInstruments_SourceModel_SourceModelToAutoLayoutMapperVisitor_GetSourceJoints_NationalInstruments_SourceModel_Wire_" data-uid="NationalInstruments.SourceModel.SourceModelToAutoLayoutMapperVisitor.GetSourceJoints(NationalInstruments.SourceModel.Wire)">GetSourceJoints(Wire)</h4>
+  <div class="markdown level1 summary"><p>Get the source joints in the wire.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IEnumerable&lt;WireJoint&gt; GetSourceJoints(Wire wire)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Wire.html">Wire</a></td>
+        <td><span class="parametername">wire</span></td>
+        <td><p>Wire.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.WireJoint.html">WireJoint</a>&gt;</td>
+        <td><p>List of source joints.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_SourceModelToAutoLayoutMapperVisitor_MapConstraints_" data-uid="NationalInstruments.SourceModel.SourceModelToAutoLayoutMapperVisitor.MapConstraints*"></a>
+  <h4 id="NationalInstruments_SourceModel_SourceModelToAutoLayoutMapperVisitor_MapConstraints" data-uid="NationalInstruments.SourceModel.SourceModelToAutoLayoutMapperVisitor.MapConstraints">MapConstraints()</h4>
+  <div class="markdown level1 summary"><p>Map Constraint &lt;SourceModel.Node&gt; to Constraint &lt;TerminalNode&gt;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void MapConstraints()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_SourceModel_SourceModelToAutoLayoutMapperVisitor_PreVisitNestedDiagram_" data-uid="NationalInstruments.SourceModel.SourceModelToAutoLayoutMapperVisitor.PreVisitNestedDiagram*"></a>
+  <h4 id="NationalInstruments_SourceModel_SourceModelToAutoLayoutMapperVisitor_PreVisitNestedDiagram_NationalInstruments_SourceModel_Diagram_" data-uid="NationalInstruments.SourceModel.SourceModelToAutoLayoutMapperVisitor.PreVisitNestedDiagram(NationalInstruments.SourceModel.Diagram)">PreVisitNestedDiagram(Diagram)</h4>
+  <div class="markdown level1 summary"><p>Do any additional computation before visiting the diagram.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void PreVisitNestedDiagram(Diagram diagram)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Diagram.html">Diagram</a></td>
+        <td><span class="parametername">diagram</span></td>
+        <td><p>The diagram.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.SourceModelAutoLayoutVisitor.html#NationalInstruments_SourceModel_SourceModelAutoLayoutVisitor_PreVisitNestedDiagram_NationalInstruments_SourceModel_Diagram_">SourceModelAutoLayoutVisitor.PreVisitNestedDiagram(Diagram)</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_SourceModelToAutoLayoutMapperVisitor_ToLayoutRect_" data-uid="NationalInstruments.SourceModel.SourceModelToAutoLayoutMapperVisitor.ToLayoutRect*"></a>
+  <h4 id="NationalInstruments_SourceModel_SourceModelToAutoLayoutMapperVisitor_ToLayoutRect_NationalInstruments_Core_SMRect_" data-uid="NationalInstruments.SourceModel.SourceModelToAutoLayoutMapperVisitor.ToLayoutRect(NationalInstruments.Core.SMRect)">ToLayoutRect(SMRect)</h4>
+  <div class="markdown level1 summary"><p>Transform bound rect if required</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected SMRect ToLayoutRect(SMRect rect)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMRect</span></td>
+        <td><span class="parametername">rect</span></td>
+        <td><p>current bounds</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.SMRect</span></td>
+        <td><p>transformed bound if necessary else same bounding rect</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_SourceModelToAutoLayoutMapperVisitor_ToLayoutTerminalSense_" data-uid="NationalInstruments.SourceModel.SourceModelToAutoLayoutMapperVisitor.ToLayoutTerminalSense*"></a>
+  <h4 id="NationalInstruments_SourceModel_SourceModelToAutoLayoutMapperVisitor_ToLayoutTerminalSense_NationalInstruments_SourceModel_Terminal_" data-uid="NationalInstruments.SourceModel.SourceModelToAutoLayoutMapperVisitor.ToLayoutTerminalSense(NationalInstruments.SourceModel.Terminal)">ToLayoutTerminalSense(Terminal)</h4>
+  <div class="markdown level1 summary"><p>Based on terminal direction, returns terminal sense(source/sink)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected TerminalSense ToLayoutTerminalSense(Terminal terminal)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Terminal.html">Terminal</a></td>
+        <td><span class="parametername">terminal</span></td>
+        <td><p>Terminal</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.AutoLayout.TerminalSense.html">TerminalSense</a></td>
+        <td><p>Terminalsense</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_SourceModelToAutoLayoutMapperVisitor_VisitBorderNode_" data-uid="NationalInstruments.SourceModel.SourceModelToAutoLayoutMapperVisitor.VisitBorderNode*"></a>
+  <h4 id="NationalInstruments_SourceModel_SourceModelToAutoLayoutMapperVisitor_VisitBorderNode_NationalInstruments_SourceModel_BorderNode_" data-uid="NationalInstruments.SourceModel.SourceModelToAutoLayoutMapperVisitor.VisitBorderNode(NationalInstruments.SourceModel.BorderNode)">VisitBorderNode(BorderNode)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitBorderNode(BorderNode borderNode)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.BorderNode.html">BorderNode</a></td>
+        <td><span class="parametername">borderNode</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.BaseElementVisitor.html#NationalInstruments_SourceModel_BaseElementVisitor_VisitBorderNode_NationalInstruments_SourceModel_BorderNode_">BaseElementVisitor.VisitBorderNode(BorderNode)</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_SourceModelToAutoLayoutMapperVisitor_VisitDiagram_" data-uid="NationalInstruments.SourceModel.SourceModelToAutoLayoutMapperVisitor.VisitDiagram*"></a>
+  <h4 id="NationalInstruments_SourceModel_SourceModelToAutoLayoutMapperVisitor_VisitDiagram_NationalInstruments_SourceModel_Diagram_" data-uid="NationalInstruments.SourceModel.SourceModelToAutoLayoutMapperVisitor.VisitDiagram(NationalInstruments.SourceModel.Diagram)">VisitDiagram(Diagram)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitDiagram(Diagram diagram)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Diagram.html">Diagram</a></td>
+        <td><span class="parametername">diagram</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.SourceModelAutoLayoutVisitor.html#NationalInstruments_SourceModel_SourceModelAutoLayoutVisitor_VisitDiagram_NationalInstruments_SourceModel_Diagram_">SourceModelAutoLayoutVisitor.VisitDiagram(Diagram)</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_SourceModelToAutoLayoutMapperVisitor_VisitDiagramDecoration_" data-uid="NationalInstruments.SourceModel.SourceModelToAutoLayoutMapperVisitor.VisitDiagramDecoration*"></a>
+  <h4 id="NationalInstruments_SourceModel_SourceModelToAutoLayoutMapperVisitor_VisitDiagramDecoration_NationalInstruments_SourceModel_DiagramDecoration_" data-uid="NationalInstruments.SourceModel.SourceModelToAutoLayoutMapperVisitor.VisitDiagramDecoration(NationalInstruments.SourceModel.DiagramDecoration)">VisitDiagramDecoration(DiagramDecoration)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitDiagramDecoration(DiagramDecoration decoration)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.DiagramDecoration.html">DiagramDecoration</a></td>
+        <td><span class="parametername">decoration</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.BaseElementVisitor.html#NationalInstruments_SourceModel_BaseElementVisitor_VisitDiagramDecoration_NationalInstruments_SourceModel_DiagramDecoration_">BaseElementVisitor.VisitDiagramDecoration(DiagramDecoration)</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_SourceModelToAutoLayoutMapperVisitor_VisitManhattanWire_" data-uid="NationalInstruments.SourceModel.SourceModelToAutoLayoutMapperVisitor.VisitManhattanWire*"></a>
+  <h4 id="NationalInstruments_SourceModel_SourceModelToAutoLayoutMapperVisitor_VisitManhattanWire_NationalInstruments_SourceModel_ManhattanWire_" data-uid="NationalInstruments.SourceModel.SourceModelToAutoLayoutMapperVisitor.VisitManhattanWire(NationalInstruments.SourceModel.ManhattanWire)">VisitManhattanWire(ManhattanWire)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitManhattanWire(ManhattanWire manhattanWire)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ManhattanWire.html">ManhattanWire</a></td>
+        <td><span class="parametername">manhattanWire</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.BaseElementVisitor.html#NationalInstruments_SourceModel_BaseElementVisitor_VisitManhattanWire_NationalInstruments_SourceModel_ManhattanWire_">BaseElementVisitor.VisitManhattanWire(ManhattanWire)</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_SourceModelToAutoLayoutMapperVisitor_VisitNestedDiagram_" data-uid="NationalInstruments.SourceModel.SourceModelToAutoLayoutMapperVisitor.VisitNestedDiagram*"></a>
+  <h4 id="NationalInstruments_SourceModel_SourceModelToAutoLayoutMapperVisitor_VisitNestedDiagram_NationalInstruments_SourceModel_NestedDiagram_" data-uid="NationalInstruments.SourceModel.SourceModelToAutoLayoutMapperVisitor.VisitNestedDiagram(NationalInstruments.SourceModel.NestedDiagram)">VisitNestedDiagram(NestedDiagram)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitNestedDiagram(NestedDiagram nestedDiagram)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.NestedDiagram.html">NestedDiagram</a></td>
+        <td><span class="parametername">nestedDiagram</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.BaseElementVisitor.html#NationalInstruments_SourceModel_BaseElementVisitor_VisitNestedDiagram_NationalInstruments_SourceModel_NestedDiagram_">BaseElementVisitor.VisitNestedDiagram(NestedDiagram)</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_SourceModelToAutoLayoutMapperVisitor_VisitNode_" data-uid="NationalInstruments.SourceModel.SourceModelToAutoLayoutMapperVisitor.VisitNode*"></a>
+  <h4 id="NationalInstruments_SourceModel_SourceModelToAutoLayoutMapperVisitor_VisitNode_NationalInstruments_SourceModel_Node_" data-uid="NationalInstruments.SourceModel.SourceModelToAutoLayoutMapperVisitor.VisitNode(NationalInstruments.SourceModel.Node)">VisitNode(Node)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitNode(Node node)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Node.html">Node</a></td>
+        <td><span class="parametername">node</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.BaseElementVisitor.html#NationalInstruments_SourceModel_BaseElementVisitor_VisitNode_NationalInstruments_SourceModel_Node_">BaseElementVisitor.VisitNode(Node)</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_SourceModelToAutoLayoutMapperVisitor_VisitRootDiagram_" data-uid="NationalInstruments.SourceModel.SourceModelToAutoLayoutMapperVisitor.VisitRootDiagram*"></a>
+  <h4 id="NationalInstruments_SourceModel_SourceModelToAutoLayoutMapperVisitor_VisitRootDiagram_NationalInstruments_SourceModel_RootDiagram_" data-uid="NationalInstruments.SourceModel.SourceModelToAutoLayoutMapperVisitor.VisitRootDiagram(NationalInstruments.SourceModel.RootDiagram)">VisitRootDiagram(RootDiagram)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitRootDiagram(RootDiagram rootDiagram)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.RootDiagram.html">RootDiagram</a></td>
+        <td><span class="parametername">rootDiagram</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.BaseElementVisitor.html#NationalInstruments_SourceModel_BaseElementVisitor_VisitRootDiagram_NationalInstruments_SourceModel_RootDiagram_">BaseElementVisitor.VisitRootDiagram(RootDiagram)</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_SourceModelToAutoLayoutMapperVisitor_VisitStructure_" data-uid="NationalInstruments.SourceModel.SourceModelToAutoLayoutMapperVisitor.VisitStructure*"></a>
+  <h4 id="NationalInstruments_SourceModel_SourceModelToAutoLayoutMapperVisitor_VisitStructure_NationalInstruments_SourceModel_Structure_" data-uid="NationalInstruments.SourceModel.SourceModelToAutoLayoutMapperVisitor.VisitStructure(NationalInstruments.SourceModel.Structure)">VisitStructure(Structure)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitStructure(Structure structure)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Structure.html">Structure</a></td>
+        <td><span class="parametername">structure</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.SourceModelAutoLayoutVisitor.html#NationalInstruments_SourceModel_SourceModelAutoLayoutVisitor_VisitStructure_NationalInstruments_SourceModel_Structure_">SourceModelAutoLayoutVisitor.VisitStructure(Structure)</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_SourceModelToAutoLayoutMapperVisitor_VisitWire_" data-uid="NationalInstruments.SourceModel.SourceModelToAutoLayoutMapperVisitor.VisitWire*"></a>
+  <h4 id="NationalInstruments_SourceModel_SourceModelToAutoLayoutMapperVisitor_VisitWire_NationalInstruments_SourceModel_Wire_" data-uid="NationalInstruments.SourceModel.SourceModelToAutoLayoutMapperVisitor.VisitWire(NationalInstruments.SourceModel.Wire)">VisitWire(Wire)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitWire(Wire wire)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Wire.html">Wire</a></td>
+        <td><span class="parametername">wire</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.BaseElementVisitor.html#NationalInstruments_SourceModel_BaseElementVisitor_VisitWire_NationalInstruments_SourceModel_Wire_">BaseElementVisitor.VisitWire(Wire)</a></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.IElementVisitor.html">IElementVisitor</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

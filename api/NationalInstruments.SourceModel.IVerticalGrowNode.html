@@ -1,0 +1,525 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IVerticalGrowNode
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IVerticalGrowNode
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.SourceModel.IVerticalGrowNode">
+  
+  
+  <h1 id="NationalInstruments_SourceModel_IVerticalGrowNode" data-uid="NationalInstruments.SourceModel.IVerticalGrowNode" class="text-break">Interface IVerticalGrowNode
+  </h1>
+  <div class="markdown level0 summary"><p>Implement this interface to make a node that can grow by vertical chunks (a chunk is a group of terminals).
+The VerticalChunkCount can be set directly through the interface, or, if the <a class="xref" href="NationalInstruments.SourceModel.VerticalGrowNodeBoundsRule.html">VerticalGrowNodeBoundsRule</a> is
+registered as a <a class="xref" href="NationalInstruments.SourceModel.ModelBatchRule.html">ModelBatchRule</a>, it will be set when the node height is changed</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.IGrowNode.html#NationalInstruments_SourceModel_IGrowNode_FixedTerminalCount">IGrowNode.FixedTerminalCount</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.SourceModel.html">NationalInstruments.SourceModel</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_SourceModel_IVerticalGrowNode_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IVerticalGrowNode : IGrowNode</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_IVerticalGrowNode_MinimumVerticalChunkCount_" data-uid="NationalInstruments.SourceModel.IVerticalGrowNode.MinimumVerticalChunkCount*"></a>
+  <h4 id="NationalInstruments_SourceModel_IVerticalGrowNode_MinimumVerticalChunkCount" data-uid="NationalInstruments.SourceModel.IVerticalGrowNode.MinimumVerticalChunkCount">MinimumVerticalChunkCount</h4>
+  <div class="markdown level1 summary"><p>Smallest possible value of VerticalChunkCount if all of the terminals were unwired.
+Usually equal to 1, or sometimes 0.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int MinimumVerticalChunkCount { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_IVerticalGrowNode_UsesFixedSizeVerticalChunks_" data-uid="NationalInstruments.SourceModel.IVerticalGrowNode.UsesFixedSizeVerticalChunks*"></a>
+  <h4 id="NationalInstruments_SourceModel_IVerticalGrowNode_UsesFixedSizeVerticalChunks" data-uid="NationalInstruments.SourceModel.IVerticalGrowNode.UsesFixedSizeVerticalChunks">UsesFixedSizeVerticalChunks</h4>
+  <div class="markdown level1 summary"><p>Whether the node uses fixed-sized terminal chunks</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool UsesFixedSizeVerticalChunks { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_IVerticalGrowNode_VerticalChunkCount_" data-uid="NationalInstruments.SourceModel.IVerticalGrowNode.VerticalChunkCount*"></a>
+  <h4 id="NationalInstruments_SourceModel_IVerticalGrowNode_VerticalChunkCount" data-uid="NationalInstruments.SourceModel.IVerticalGrowNode.VerticalChunkCount">VerticalChunkCount</h4>
+  <div class="markdown level1 summary"><p>Number of chunks in the grow node.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int VerticalChunkCount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_SourceModel_IVerticalGrowNode_VerticalChunkCount_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This property must enlist a property item when this value changes. The implementing class must provide both the Get and Set
+methods, but the preferred method for setting this property is by calling the <a class="xref" href="NationalInstruments.SourceModel.VerticalGrowNodeExtensions.html#NationalInstruments_SourceModel_VerticalGrowNodeExtensions_SetVerticalChunkCount_NationalInstruments_SourceModel_IVerticalGrowNode_System_Int32_NationalInstruments_SourceModel_GrowNodeResizeDirection_">SetVerticalChunkCount(IVerticalGrowNode, Int32, GrowNodeResizeDirection)</a> extension
+method, as this provides additional checks that ensure it is okay to add or remove the desired chunks, and it adds and removes
+the chunk terminals when the chunk count changes.</p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_IVerticalGrowNode_CoerceVerticalChunkCount_" data-uid="NationalInstruments.SourceModel.IVerticalGrowNode.CoerceVerticalChunkCount*"></a>
+  <h4 id="NationalInstruments_SourceModel_IVerticalGrowNode_CoerceVerticalChunkCount_System_Int32_NationalInstruments_SourceModel_GrowNodeResizeDirection_" data-uid="NationalInstruments.SourceModel.IVerticalGrowNode.CoerceVerticalChunkCount(System.Int32,NationalInstruments.SourceModel.GrowNodeResizeDirection)">CoerceVerticalChunkCount(Int32, GrowNodeResizeDirection)</h4>
+  <div class="markdown level1 summary"><p>Coerce the passed in chunk count to what this node allows.  This method only has to
+consider node-specific additional restrictions (i.e. not wired terminals or MinimumVerticalChunkCount)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int CoerceVerticalChunkCount(int desiredChunkCount, GrowNodeResizeDirection direction)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">desiredChunkCount</span></td>
+        <td><p>The desired chunk count</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.GrowNodeResizeDirection.html">GrowNodeResizeDirection</a></td>
+        <td><span class="parametername">direction</span></td>
+        <td><p>The direction that the node is growing/shrinking</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The allowable chunk count</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_IVerticalGrowNode_CreateTerminalsForVerticalChunk_" data-uid="NationalInstruments.SourceModel.IVerticalGrowNode.CreateTerminalsForVerticalChunk*"></a>
+  <h4 id="NationalInstruments_SourceModel_IVerticalGrowNode_CreateTerminalsForVerticalChunk_System_Int32_" data-uid="NationalInstruments.SourceModel.IVerticalGrowNode.CreateTerminalsForVerticalChunk(System.Int32)">CreateTerminalsForVerticalChunk(Int32)</h4>
+  <div class="markdown level1 summary"><p>Creates a new chunk of terminals for a given chunk.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IList&lt;WireableTerminal&gt; CreateTerminalsForVerticalChunk(int chunkIndex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">chunkIndex</span></td>
+        <td><p>the chunk index (useful for dynamic chunk nodes; you can pass -1 if it&apos;s not a dynamic chunk node)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.WireableTerminal.html">WireableTerminal</a>&gt;</td>
+        <td><p>new terminals created by this function</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_IVerticalGrowNode_GetNumberOfTerminalsInVerticalChunk_" data-uid="NationalInstruments.SourceModel.IVerticalGrowNode.GetNumberOfTerminalsInVerticalChunk*"></a>
+  <h4 id="NationalInstruments_SourceModel_IVerticalGrowNode_GetNumberOfTerminalsInVerticalChunk_System_Int32_" data-uid="NationalInstruments.SourceModel.IVerticalGrowNode.GetNumberOfTerminalsInVerticalChunk(System.Int32)">GetNumberOfTerminalsInVerticalChunk(Int32)</h4>
+  <div class="markdown level1 summary"><p>The number of terminals in a chunk.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int GetNumberOfTerminalsInVerticalChunk(int chunkIndex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">chunkIndex</span></td>
+        <td><p>the chunk index (useful for dynamic chunk nodes; you can pass -1 if it&apos;s not a dynamic chunk node)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>the number of terminals</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_IVerticalGrowNode_GetTerminalIdentifierForVerticalChunk_" data-uid="NationalInstruments.SourceModel.IVerticalGrowNode.GetTerminalIdentifierForVerticalChunk*"></a>
+  <h4 id="NationalInstruments_SourceModel_IVerticalGrowNode_GetTerminalIdentifierForVerticalChunk_NationalInstruments_SourceModel_Terminal_System_Int32_System_Int32_" data-uid="NationalInstruments.SourceModel.IVerticalGrowNode.GetTerminalIdentifierForVerticalChunk(NationalInstruments.SourceModel.Terminal,System.Int32,System.Int32)">GetTerminalIdentifierForVerticalChunk(Terminal, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Calls into the specific node to get what it thinks the terminal names should be</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GetTerminalIdentifierForVerticalChunk(Terminal terminal, int chunkIndex, int newTerminalIndex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Terminal.html">Terminal</a></td>
+        <td><span class="parametername">terminal</span></td>
+        <td><p>Terminal that we are getting the name of</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">chunkIndex</span></td>
+        <td><p>chunk we are in</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">newTerminalIndex</span></td>
+        <td><p>index within the chunk</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The name of the terminal at the specified chunk and index</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_IVerticalGrowNode_InsertTerminals_" data-uid="NationalInstruments.SourceModel.IVerticalGrowNode.InsertTerminals*"></a>
+  <h4 id="NationalInstruments_SourceModel_IVerticalGrowNode_InsertTerminals_System_Collections_Generic_IEnumerable_NationalInstruments_SourceModel_WireableTerminal__System_Int32_" data-uid="NationalInstruments.SourceModel.IVerticalGrowNode.InsertTerminals(System.Collections.Generic.IEnumerable{NationalInstruments.SourceModel.WireableTerminal},System.Int32)">InsertTerminals(IEnumerable&lt;WireableTerminal&gt;, Int32)</h4>
+  <div class="markdown level1 summary"><p>Inserts terminals to this node at the specified index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void InsertTerminals(IEnumerable&lt;WireableTerminal&gt; terminalsToAdd, int startingTerminalIndex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.WireableTerminal.html">WireableTerminal</a>&gt;</td>
+        <td><span class="parametername">terminalsToAdd</span></td>
+        <td><p>The terminals to add to the node</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">startingTerminalIndex</span></td>
+        <td><p>Where to add the terminals.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.VerticalGrowNodeExtensions.html#NationalInstruments_SourceModel_VerticalGrowNodeExtensions_GetVerticalChunksThatMustRemainBecauseOfWiredTerminals_NationalInstruments_SourceModel_IVerticalGrowNode_NationalInstruments_SourceModel_GrowNodeResizeDirection_">VerticalGrowNodeExtensions.GetVerticalChunksThatMustRemainBecauseOfWiredTerminals(IVerticalGrowNode, GrowNodeResizeDirection)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.VerticalGrowNodeExtensions.html#NationalInstruments_SourceModel_VerticalGrowNodeExtensions_EnsureVerticalChunkCount_NationalInstruments_SourceModel_IVerticalGrowNode_System_Int32_NationalInstruments_SourceModel_GrowNodeResizeDirection_">VerticalGrowNodeExtensions.EnsureVerticalChunkCount(IVerticalGrowNode, Int32, GrowNodeResizeDirection)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.VerticalGrowNodeExtensions.html#NationalInstruments_SourceModel_VerticalGrowNodeExtensions_GetSmallestWiredVerticalChunk_NationalInstruments_SourceModel_IVerticalGrowNode_">VerticalGrowNodeExtensions.GetSmallestWiredVerticalChunk(IVerticalGrowNode)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.VerticalGrowNodeExtensions.html#NationalInstruments_SourceModel_VerticalGrowNodeExtensions_GetLargestWiredVerticalChunk_NationalInstruments_SourceModel_IVerticalGrowNode_">VerticalGrowNodeExtensions.GetLargestWiredVerticalChunk(IVerticalGrowNode)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.VerticalGrowNodeExtensions.html#NationalInstruments_SourceModel_VerticalGrowNodeExtensions_IsVerticalChunkWired_NationalInstruments_SourceModel_IVerticalGrowNode_System_Int32_">VerticalGrowNodeExtensions.IsVerticalChunkWired(IVerticalGrowNode, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.VerticalGrowNodeExtensions.html#NationalInstruments_SourceModel_VerticalGrowNodeExtensions_SetVerticalChunkCount_NationalInstruments_SourceModel_IVerticalGrowNode_System_Int32_NationalInstruments_SourceModel_GrowNodeResizeDirection_">VerticalGrowNodeExtensions.SetVerticalChunkCount(IVerticalGrowNode, Int32, GrowNodeResizeDirection)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.VerticalGrowNodeExtensions.html#NationalInstruments_SourceModel_VerticalGrowNodeExtensions_InsertVerticalChunk_NationalInstruments_SourceModel_IVerticalGrowNode_System_Int32_">VerticalGrowNodeExtensions.InsertVerticalChunk(IVerticalGrowNode, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.VerticalGrowNodeExtensions.html#NationalInstruments_SourceModel_VerticalGrowNodeExtensions_AppendTerminalsToVerticalChunk_NationalInstruments_SourceModel_IVerticalGrowNode_System_Int32_System_Collections_Generic_IEnumerable_NationalInstruments_SourceModel_WireableTerminal__">VerticalGrowNodeExtensions.AppendTerminalsToVerticalChunk(IVerticalGrowNode, Int32, IEnumerable&lt;WireableTerminal&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.VerticalGrowNodeExtensions.html#NationalInstruments_SourceModel_VerticalGrowNodeExtensions_RemoveTerminalsFromVerticalChunk_NationalInstruments_SourceModel_IVerticalGrowNode_System_Int32_System_Collections_Generic_IEnumerable_NationalInstruments_SourceModel_WireableTerminal__">VerticalGrowNodeExtensions.RemoveTerminalsFromVerticalChunk(IVerticalGrowNode, Int32, IEnumerable&lt;WireableTerminal&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.VerticalGrowNodeExtensions.html#NationalInstruments_SourceModel_VerticalGrowNodeExtensions_DeleteVerticalChunk_NationalInstruments_SourceModel_IVerticalGrowNode_System_Int32_System_Int32_">VerticalGrowNodeExtensions.DeleteVerticalChunk(IVerticalGrowNode, Int32, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.VerticalGrowNodeExtensions.html#NationalInstruments_SourceModel_VerticalGrowNodeExtensions_DeleteVerticalChunk_NationalInstruments_SourceModel_IVerticalGrowNode_System_Int32_">VerticalGrowNodeExtensions.DeleteVerticalChunk(IVerticalGrowNode, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.VerticalGrowNodeExtensions.html#NationalInstruments_SourceModel_VerticalGrowNodeExtensions_GetIndexOfFirstTerminalInVerticalChunk_NationalInstruments_SourceModel_IVerticalGrowNode_System_Int32_">VerticalGrowNodeExtensions.GetIndexOfFirstTerminalInVerticalChunk(IVerticalGrowNode, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.VerticalGrowNodeExtensions.html#NationalInstruments_SourceModel_VerticalGrowNodeExtensions_GetVerticalChunkCountFromTerminalCount_NationalInstruments_SourceModel_IVerticalGrowNode_System_Int32_">VerticalGrowNodeExtensions.GetVerticalChunkCountFromTerminalCount(IVerticalGrowNode, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.VerticalGrowNodeExtensions.html#NationalInstruments_SourceModel_VerticalGrowNodeExtensions_GetVerticalChunkIndexFromTerminalIndex_NationalInstruments_SourceModel_IVerticalGrowNode_System_Int32_">VerticalGrowNodeExtensions.GetVerticalChunkIndexFromTerminalIndex(IVerticalGrowNode, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.VerticalGrowNodeExtensions.html#NationalInstruments_SourceModel_VerticalGrowNodeExtensions_FixTerminalIdentifiersAfterReorder_NationalInstruments_SourceModel_IVerticalGrowNode_System_Int32_">VerticalGrowNodeExtensions.FixTerminalIdentifiersAfterReorder(IVerticalGrowNode, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.VerticalGrowNodeExtensions.html#NationalInstruments_SourceModel_VerticalGrowNodeExtensions_TerminalsInVerticalVisualOrder_NationalInstruments_SourceModel_IVerticalGrowNode_">VerticalGrowNodeExtensions.TerminalsInVerticalVisualOrder(IVerticalGrowNode)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.VerticalGrowNodeExtensions.html#NationalInstruments_SourceModel_VerticalGrowNodeExtensions_GrowableTerminalsInVisualOrder_NationalInstruments_SourceModel_IVerticalGrowNode_">VerticalGrowNodeExtensions.GrowableTerminalsInVisualOrder(IVerticalGrowNode)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.VerticalGrowNodeExtensions.html#NationalInstruments_SourceModel_VerticalGrowNodeExtensions_GetNumberOfTerminalsForFixedSizeVerticalChunk_NationalInstruments_SourceModel_IVerticalGrowNode_">VerticalGrowNodeExtensions.GetNumberOfTerminalsForFixedSizeVerticalChunk(IVerticalGrowNode)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.VerticalGrowNodeExtensions.html#NationalInstruments_SourceModel_VerticalGrowNodeExtensions_CreateTerminalsForFixedSizeVerticalChunk_NationalInstruments_SourceModel_IVerticalGrowNode_">VerticalGrowNodeExtensions.CreateTerminalsForFixedSizeVerticalChunk(IVerticalGrowNode)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

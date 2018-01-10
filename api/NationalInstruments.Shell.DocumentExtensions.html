@@ -1,0 +1,1344 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DocumentExtensions
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DocumentExtensions
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.Shell.DocumentExtensions">
+  
+  
+  <h1 id="NationalInstruments_Shell_DocumentExtensions" data-uid="NationalInstruments.Shell.DocumentExtensions" class="text-break">Class DocumentExtensions
+  </h1>
+  <div class="markdown level0 summary"><p>Extension methods related to documents</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">DocumentExtensions</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.Shell.html">NationalInstruments.Shell</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_Shell_DocumentExtensions_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class DocumentExtensions</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_Shell_DocumentExtensions_AddDocumentsToProjectAndCreateMethodCallsAsync_" data-uid="NationalInstruments.Shell.DocumentExtensions.AddDocumentsToProjectAndCreateMethodCallsAsync*"></a>
+  <h4 id="NationalInstruments_Shell_DocumentExtensions_AddDocumentsToProjectAndCreateMethodCallsAsync_System_Collections_Generic_IEnumerable_System_String__NationalInstruments_Shell_DocumentEditSite_NationalInstruments_Core_UIPosition_" data-uid="NationalInstruments.Shell.DocumentExtensions.AddDocumentsToProjectAndCreateMethodCallsAsync(System.Collections.Generic.IEnumerable{System.String},NationalInstruments.Shell.DocumentEditSite,NationalInstruments.Core.UIPosition)">AddDocumentsToProjectAndCreateMethodCallsAsync(IEnumerable&lt;String&gt;, DocumentEditSite, UIPosition)</h4>
+  <div class="markdown level1 summary"><p>Adds files to the active project and drops method calls to those files to the active document editor if its designer supports method calls.
+If there is no active document, add the files to the project. No method calls will be created in this case.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task AddDocumentsToProjectAndCreateMethodCallsAsync(IEnumerable&lt;string&gt; filePaths, DocumentEditSite site, UIPosition uiPosition)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">filePaths</span></td>
+        <td><p>The paths to the files to add</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Shell.DocumentEditSite.html">DocumentEditSite</a></td>
+        <td><span class="parametername">site</span></td>
+        <td><p>The document edit site</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.UIPosition</span></td>
+        <td><span class="parametername">uiPosition</span></td>
+        <td><p>The position to start adding the method calls</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>Task to await on.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Shell_DocumentExtensions_AddDocumentsToProjectAndCreateMethodCallsAsync_System_Collections_Generic_IEnumerable_System_String__NationalInstruments_Shell_DocumentEditSite_NationalInstruments_Core_UIPosition__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>An example use case of this method is dragging files from Windows Explorer onto a diagram.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_Shell_DocumentExtensions_AttachItemToCursor_" data-uid="NationalInstruments.Shell.DocumentExtensions.AttachItemToCursor*"></a>
+  <h4 id="NationalInstruments_Shell_DocumentExtensions_AttachItemToCursor_NationalInstruments_Shell_DocumentEditSite_System_Collections_Generic_IEnumerable_NationalInstruments_SourceModel_MergeScriptData__System_Action_System_Boolean__" data-uid="NationalInstruments.Shell.DocumentExtensions.AttachItemToCursor(NationalInstruments.Shell.DocumentEditSite,System.Collections.Generic.IEnumerable{NationalInstruments.SourceModel.MergeScriptData},System.Action{System.Boolean})">AttachItemToCursor(DocumentEditSite, IEnumerable&lt;MergeScriptData&gt;, Action&lt;Boolean&gt;)</h4>
+  <div class="markdown level1 summary"><p>Attach the itemViewModel(s) specified by the mergeScriptData to the cursor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AttachItemToCursor(DocumentEditSite site, IEnumerable&lt;MergeScriptData&gt; mergeScriptData, Action&lt;bool&gt; operationComplete)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Shell.DocumentEditSite.html">DocumentEditSite</a></td>
+        <td><span class="parametername">site</span></td>
+        <td><p>The DocumentEditSite</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.MergeScriptData.html">MergeScriptData</a>&gt;</td>
+        <td><span class="parametername">mergeScriptData</span></td>
+        <td><p>The merge script data</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">operationComplete</span></td>
+        <td><p>Optional callback for when the drop is complete. The boolean parameter will be true if the itemViewModel
+was successfully dropped and false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Shell_DocumentExtensions_AttachMethodCallToCursor_" data-uid="NationalInstruments.Shell.DocumentExtensions.AttachMethodCallToCursor*"></a>
+  <h4 id="NationalInstruments_Shell_DocumentExtensions_AttachMethodCallToCursor_NationalInstruments_Shell_DocumentEditSite_NationalInstruments_SourceModel_Envoys_Envoy_System_Action_System_Boolean__" data-uid="NationalInstruments.Shell.DocumentExtensions.AttachMethodCallToCursor(NationalInstruments.Shell.DocumentEditSite,NationalInstruments.SourceModel.Envoys.Envoy,System.Action{System.Boolean})">AttachMethodCallToCursor(DocumentEditSite, Envoy, Action&lt;Boolean&gt;)</h4>
+  <div class="markdown level1 summary"><p>Attach a <a class="xref" href="NationalInstruments.SourceModel.MethodCall.html">MethodCall</a> to the cursor that targets the given envoy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AttachMethodCallToCursor(DocumentEditSite site, Envoy targetEnvoy, Action&lt;bool&gt; operationComplete)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Shell.DocumentEditSite.html">DocumentEditSite</a></td>
+        <td><span class="parametername">site</span></td>
+        <td><p>The DocumentEditSite</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">targetEnvoy</span></td>
+        <td><p>The method call target</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">operationComplete</span></td>
+        <td><p>Optional callback for when the drop is complete. The boolean parameter will be true if the method call
+was successfully dropped and false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Shell_DocumentExtensions_BindDocument_" data-uid="NationalInstruments.Shell.DocumentExtensions.BindDocument*"></a>
+  <h4 id="NationalInstruments_Shell_DocumentExtensions_BindDocument_NationalInstruments_Shell_IDocumentManager_NationalInstruments_SourceModel_Envoys_Envoy_NationalInstruments_Shell_PreferredEditLocation_System_Action_NationalInstruments_Shell_Document_System_Exception__" data-uid="NationalInstruments.Shell.DocumentExtensions.BindDocument(NationalInstruments.Shell.IDocumentManager,NationalInstruments.SourceModel.Envoys.Envoy,NationalInstruments.Shell.PreferredEditLocation,System.Action{NationalInstruments.Shell.Document,System.Exception})">BindDocument(IDocumentManager, Envoy, PreferredEditLocation, Action&lt;Document, Exception&gt;)</h4>
+  <div class="markdown level1 summary"><p>Attempts to create a document for a given envoy possibly finding a preferable envoy.
+If the envoy already has a document bound to it, that already bound document is returned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Consider using DocumentExtensions.Edit/EditAsync or interact directly with the DocumentManager instead(11/2/2016)&quot;, false)]
+public static void BindDocument(this IDocumentManager documentManager, Envoy envoy, PreferredEditLocation preferredEditLocation, Action&lt;Document, Exception&gt; operationComplete)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Shell.IDocumentManager.html">IDocumentManager</a></td>
+        <td><span class="parametername">documentManager</span></td>
+        <td><p>The document manager</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">envoy</span></td>
+        <td><p>The envoy to bind a document or the envoy used to find a preferable envoy</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Shell.PreferredEditLocation.html">PreferredEditLocation</a></td>
+        <td><span class="parametername">preferredEditLocation</span></td>
+        <td><p>PreferredDocumentMode.SearchForPreferred if the document manager should look for a preferable envoy to bind the document to
+PreferredDocumentMode.UseCurrentScope to specify binding to the given envoy even if there is a preferable envoy</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="NationalInstruments.Shell.Document.html">Document</a>, <span class="xref">System.Exception</span>&gt;</td>
+        <td><span class="parametername">operationComplete</span></td>
+        <td><p>Callback for when the bind operation is complete. When PreferredEditLocation.SearchForPreferred is passed in, the
+Document returned in the callback might be attached to an envoy that differs from the envoy passed into this method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Shell_DocumentExtensions_CreateNewMethodCall_" data-uid="NationalInstruments.Shell.DocumentExtensions.CreateNewMethodCall*"></a>
+  <h4 id="NationalInstruments_Shell_DocumentExtensions_CreateNewMethodCall_NationalInstruments_Shell_DocumentEditSite_NationalInstruments_Core_UIPosition_NationalInstruments_Core_BindingKeyword_" data-uid="NationalInstruments.Shell.DocumentExtensions.CreateNewMethodCall(NationalInstruments.Shell.DocumentEditSite,NationalInstruments.Core.UIPosition,NationalInstruments.Core.BindingKeyword)">CreateNewMethodCall(DocumentEditSite, UIPosition, BindingKeyword)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="NationalInstruments.SourceModel.MethodCall.html">MethodCall</a> to a newly created document at the current mouse position</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CreateNewMethodCall(DocumentEditSite site, UIPosition position, BindingKeyword documentTypeName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Shell.DocumentEditSite.html">DocumentEditSite</a></td>
+        <td><span class="parametername">site</span></td>
+        <td><p>The DocumentEditSite</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.UIPosition</span></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>The position where the method call will be added</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.BindingKeyword</span></td>
+        <td><span class="parametername">documentTypeName</span></td>
+        <td><p>The type of the document to create</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Shell_DocumentExtensions_Edit_" data-uid="NationalInstruments.Shell.DocumentExtensions.Edit*"></a>
+  <h4 id="NationalInstruments_Shell_DocumentExtensions_Edit_NationalInstruments_SourceModel_Envoys_Envoy_" data-uid="NationalInstruments.Shell.DocumentExtensions.Edit(NationalInstruments.SourceModel.Envoys.Envoy)">Edit(Envoy)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Edit(this Envoy envoy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">envoy</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Shell_DocumentExtensions_Edit_" data-uid="NationalInstruments.Shell.DocumentExtensions.Edit*"></a>
+  <h4 id="NationalInstruments_Shell_DocumentExtensions_Edit_NationalInstruments_SourceModel_Envoys_Envoy_NationalInstruments_Shell_EditDocumentInfo_" data-uid="NationalInstruments.Shell.DocumentExtensions.Edit(NationalInstruments.SourceModel.Envoys.Envoy,NationalInstruments.Shell.EditDocumentInfo)">Edit(Envoy, EditDocumentInfo)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Edit(this Envoy envoy, EditDocumentInfo editDocumentInfo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">envoy</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Shell.EditDocumentInfo.html">EditDocumentInfo</a></td>
+        <td><span class="parametername">editDocumentInfo</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Shell_DocumentExtensions_Edit_" data-uid="NationalInstruments.Shell.DocumentExtensions.Edit*"></a>
+  <h4 id="NationalInstruments_Shell_DocumentExtensions_Edit_NationalInstruments_SourceModel_Envoys_Envoy_NationalInstruments_Shell_EditDocumentInfo_NationalInstruments_Core_PlatformDispatcher_System_Action_NationalInstruments_SourceModel_Envoys_Envoy_System_Exception__" data-uid="NationalInstruments.Shell.DocumentExtensions.Edit(NationalInstruments.SourceModel.Envoys.Envoy,NationalInstruments.Shell.EditDocumentInfo,NationalInstruments.Core.PlatformDispatcher,System.Action{NationalInstruments.SourceModel.Envoys.Envoy,System.Exception})">Edit(Envoy, EditDocumentInfo, PlatformDispatcher, Action&lt;Envoy, Exception&gt;)</h4>
+  <div class="markdown level1 summary"><p>Called to edit the associated envoy in the active user interface and will open the itemViewModel in the editor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Edit(this Envoy envoy, EditDocumentInfo editDocumentInfo, PlatformDispatcher dispatcher, Action&lt;Envoy, Exception&gt; editComplete)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">envoy</span></td>
+        <td><p>The definition reference</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Shell.EditDocumentInfo.html">EditDocumentInfo</a></td>
+        <td><span class="parametername">editDocumentInfo</span></td>
+        <td><p>Editing Parameters</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.PlatformDispatcher</span></td>
+        <td><span class="parametername">dispatcher</span></td>
+        <td><p>Dispatcher to use to call the getComplete callback on.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a>, <span class="xref">System.Exception</span>&gt;</td>
+        <td><span class="parametername">editComplete</span></td>
+        <td><p>Optional callback for when the load and edit operation has completed. When PreferredEditLocation.SearchForPreferred
+is passed in via the editDocumentInfo, the envoy returned in the callback might differ from the one
+passed into this method. This callback will be called after the itemViewModel has been loaded, the document created, and
+EditDocument has been called. This does not guarantee the editor is visible and ready for edit.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Shell_DocumentExtensions_EditAsync_" data-uid="NationalInstruments.Shell.DocumentExtensions.EditAsync*"></a>
+  <h4 id="NationalInstruments_Shell_DocumentExtensions_EditAsync_NationalInstruments_SourceModel_Envoys_Envoy_NationalInstruments_Shell_EditDocumentInfo_" data-uid="NationalInstruments.Shell.DocumentExtensions.EditAsync(NationalInstruments.SourceModel.Envoys.Envoy,NationalInstruments.Shell.EditDocumentInfo)">EditAsync(Envoy, EditDocumentInfo)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;Envoy&gt; EditAsync(this Envoy envoy, EditDocumentInfo editDocumentInfo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">envoy</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Shell.EditDocumentInfo.html">EditDocumentInfo</a></td>
+        <td><span class="parametername">editDocumentInfo</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Shell_DocumentExtensions_EditAsync_NationalInstruments_SourceModel_Envoys_Envoy_NationalInstruments_Shell_EditDocumentInfo__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Will handle <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyLoadException.html">EnvoyLoadException</a>s with a modal dialog, and rethrow all exceptions 
+caught during envoy load (including EnvoyLoadExceptions).</p>
+</div>
+  
+  
+  <a id="NationalInstruments_Shell_DocumentExtensions_EditDocument_" data-uid="NationalInstruments.Shell.DocumentExtensions.EditDocument*"></a>
+  <h4 id="NationalInstruments_Shell_DocumentExtensions_EditDocument_NationalInstruments_SourceModel_Envoys_Envoy_" data-uid="NationalInstruments.Shell.DocumentExtensions.EditDocument(NationalInstruments.SourceModel.Envoys.Envoy)">EditDocument(Envoy)</h4>
+  <div class="markdown level1 summary"><p>Called to edit the associated envoy document in the active user interface and will open it in the editor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Document EditDocument(this Envoy envoy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">envoy</span></td>
+        <td><p>The envoy.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Shell.Document.html">Document</a></td>
+        <td><p>The opened document.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Shell_DocumentExtensions_EditDocumentUnderNullTarget_" data-uid="NationalInstruments.Shell.DocumentExtensions.EditDocumentUnderNullTarget*"></a>
+  <h4 id="NationalInstruments_Shell_DocumentExtensions_EditDocumentUnderNullTarget_NationalInstruments_SourceModel_Envoys_Envoy_NationalInstruments_Shell_EditDocumentInfo_System_Action_NationalInstruments_SourceModel_Envoys_Envoy_System_Exception__" data-uid="NationalInstruments.Shell.DocumentExtensions.EditDocumentUnderNullTarget(NationalInstruments.SourceModel.Envoys.Envoy,NationalInstruments.Shell.EditDocumentInfo,System.Action{NationalInstruments.SourceModel.Envoys.Envoy,System.Exception})">EditDocumentUnderNullTarget(Envoy, EditDocumentInfo, Action&lt;Envoy, Exception&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void EditDocumentUnderNullTarget(Envoy envoy, EditDocumentInfo editDocumentInfo, Action&lt;Envoy, Exception&gt; editComplete)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">envoy</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Shell.EditDocumentInfo.html">EditDocumentInfo</a></td>
+        <td><span class="parametername">editDocumentInfo</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a>, <span class="xref">System.Exception</span>&gt;</td>
+        <td><span class="parametername">editComplete</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Shell_DocumentExtensions_EditDocumentUnderNullTarget_" data-uid="NationalInstruments.Shell.DocumentExtensions.EditDocumentUnderNullTarget*"></a>
+  <h4 id="NationalInstruments_Shell_DocumentExtensions_EditDocumentUnderNullTarget_NationalInstruments_SourceModel_Envoys_Envoy_NationalInstruments_SourceModel_ITargetScopeService_NationalInstruments_Shell_EditDocumentInfo_System_Action_NationalInstruments_SourceModel_Envoys_Envoy_System_Exception__" data-uid="NationalInstruments.Shell.DocumentExtensions.EditDocumentUnderNullTarget(NationalInstruments.SourceModel.Envoys.Envoy,NationalInstruments.SourceModel.ITargetScopeService,NationalInstruments.Shell.EditDocumentInfo,System.Action{NationalInstruments.SourceModel.Envoys.Envoy,System.Exception})">EditDocumentUnderNullTarget(Envoy, ITargetScopeService, EditDocumentInfo, Action&lt;Envoy, Exception&gt;)</h4>
+  <div class="markdown level1 summary"><p>Documents cannot be edited under the null target. When attempting to edit a document that is under a null target,
+find a more appropriate target. Refer remarks and parameter documentation for detailed explanation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void EditDocumentUnderNullTarget(Envoy envoy, ITargetScopeService preferredTarget, EditDocumentInfo editDocumentInfo, Action&lt;Envoy, Exception&gt; editComplete)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">envoy</span></td>
+        <td><p>A given <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ITargetScopeService.html">ITargetScopeService</a></td>
+        <td><span class="parametername">preferredTarget</span></td>
+        <td><p><a class="xref" href="NationalInstruments.SourceModel.ITargetScopeService.html">ITargetScopeService</a> to edit document under specified target only if target specified supports editing
+of this type of document using <span class="xref">NationalInstruments.Shell.DocumentExtensions.CanEditUnderScope(NationalInstruments.SourceModel.Envoys.Envoy,NationalInstruments.SourceModel.ITargetScopeService)</span>. If preferredTarget is null, user input target selection dialog
+is popped up when there are more than one possible targets for envoy. If preferredTarget is not null and <span class="xref">NationalInstruments.Shell.DocumentExtensions.CanEditUnderScope(NationalInstruments.SourceModel.Envoys.Envoy,NationalInstruments.SourceModel.ITargetScopeService)</span>
+returns false, then call to this method will fail and no document will be opened.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Shell.EditDocumentInfo.html">EditDocumentInfo</a></td>
+        <td><span class="parametername">editDocumentInfo</span></td>
+        <td><p>EditDocumentInfo to use when editing this document</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a>, <span class="xref">System.Exception</span>&gt;</td>
+        <td><span class="parametername">editComplete</span></td>
+        <td><p>Optional callback for when the load and edit operation has completed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Shell_DocumentExtensions_EditDocumentUnderNullTarget_NationalInstruments_SourceModel_Envoys_Envoy_NationalInstruments_SourceModel_ITargetScopeService_NationalInstruments_Shell_EditDocumentInfo_System_Action_NationalInstruments_SourceModel_Envoys_Envoy_System_Exception___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <see cref="!:preferredTarget"></see> is null, this method may create a default target to perform the edit and may prompt the user
+to select the target in which to open document.
+If <see cref="!:preferredTarget"></see> is not null, this will not prompt user to select target and tries to open document in specified
+target, if possible, else does not open document.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_Shell_DocumentExtensions_FindPreferredEnvoys_" data-uid="NationalInstruments.Shell.DocumentExtensions.FindPreferredEnvoys*"></a>
+  <h4 id="NationalInstruments_Shell_DocumentExtensions_FindPreferredEnvoys_NationalInstruments_SourceModel_Envoys_Envoy_" data-uid="NationalInstruments.Shell.DocumentExtensions.FindPreferredEnvoys(NationalInstruments.SourceModel.Envoys.Envoy)">FindPreferredEnvoys(Envoy)</h4>
+  <div class="markdown level1 summary"><p>Find the preferred envoy typically for editing purposes. This will look at the provided envoy and its links when determining
+which envoys should be considered preferable. This will divide the envoys into tiers of preference and will return the
+most preferred tier. </p>
+<p>Envoys in a tier are also ordered. In a given tier, the original envoy is first (assuming it belongs in the tier), followed
+by envoys referencing loaded files, followed finally by the rest of the envoys in the tier.</p>
+<p>Tiers are created giving preference to:</p>
+<ul>
+<li>Envoys with already open documents</li>
+<li>Envoys under supported targets (<a class="xref" href="NationalInstruments.SourceModel.Envoys.CreateItemsInScopeRulesHelper.html#NationalInstruments_SourceModel_Envoys_CreateItemsInScopeRulesHelper_IsSupportedUnderScope_NationalInstruments_SourceModel_Envoys_Envoy_">IsSupportedUnderScope(Envoy)</a>)</li>
+<li>Envoys in the last active target</li>
+</ul>
+<p>The actual preference algorithm can be seen in <span class="xref">NationalInstruments.Shell.DocumentExtensions.PreferredEnvoysTier.CalculateRank(NationalInstruments.Shell.IDocumentManager,System.Collections.Generic.HashSet{NationalInstruments.SourceModel.Envoys.EnvoyManager},System.Collections.Generic.HashSet{NationalInstruments.SourceModel.ITargetScopeService},NationalInstruments.SourceModel.Envoys.Envoy)</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;Envoy&gt; FindPreferredEnvoys(Envoy envoy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">envoy</span></td>
+        <td><p>The envoy</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Shell_DocumentExtensions_FindViewModelForModelElementAsync_" data-uid="NationalInstruments.Shell.DocumentExtensions.FindViewModelForModelElementAsync*"></a>
+  <h4 id="NationalInstruments_Shell_DocumentExtensions_FindViewModelForModelElementAsync_NationalInstruments_Shell_DocumentEditSite_NationalInstruments_Linking_ExtendedQualifiedName_NationalInstruments_Shell_FindViewModelOptions_" data-uid="NationalInstruments.Shell.DocumentExtensions.FindViewModelForModelElementAsync(NationalInstruments.Shell.DocumentEditSite,NationalInstruments.Linking.ExtendedQualifiedName,NationalInstruments.Shell.FindViewModelOptions)">FindViewModelForModelElementAsync(DocumentEditSite, ExtendedQualifiedName, FindViewModelOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;IViewModel&gt; FindViewModelForModelElementAsync(this DocumentEditSite site, ExtendedQualifiedName name, FindViewModelOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Shell.DocumentEditSite.html">DocumentEditSite</a></td>
+        <td><span class="parametername">site</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Linking.ExtendedQualifiedName.html">ExtendedQualifiedName</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The <a class="xref" href="NationalInstruments.Linking.ExtendedQualifiedName.html">ExtendedQualifiedName</a> fully describing the model to be found.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Shell.FindViewModelOptions.html">FindViewModelOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">NationalInstruments.Core.IViewModel</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Shell_DocumentExtensions_FindViewModelForModelElementAsync_NationalInstruments_Shell_DocumentEditSite_NationalInstruments_Linking_ExtendedQualifiedName_NationalInstruments_Shell_FindViewModelOptions__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This overload will resolve <a class="xref" href="NationalInstruments.Linking.ExtendedQualifiedName.html#NationalInstruments_Linking_ExtendedQualifiedName_Name">Name</a> against the project, so the name should be fully qualified.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_Shell_DocumentExtensions_FindViewModelForModelElementAsync_" data-uid="NationalInstruments.Shell.DocumentExtensions.FindViewModelForModelElementAsync*"></a>
+  <h4 id="NationalInstruments_Shell_DocumentExtensions_FindViewModelForModelElementAsync_NationalInstruments_Shell_DocumentEditSite_NationalInstruments_Linking_IQualifiedScope_NationalInstruments_Core_QualifiedName_NationalInstruments_Linking_ContentId_NationalInstruments_Shell_FindViewModelOptions_" data-uid="NationalInstruments.Shell.DocumentExtensions.FindViewModelForModelElementAsync(NationalInstruments.Shell.DocumentEditSite,NationalInstruments.Linking.IQualifiedScope,NationalInstruments.Core.QualifiedName,NationalInstruments.Linking.ContentId,NationalInstruments.Shell.FindViewModelOptions)">FindViewModelForModelElementAsync(DocumentEditSite, IQualifiedScope, QualifiedName, ContentId, FindViewModelOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;IViewModel&gt; FindViewModelForModelElementAsync(this DocumentEditSite site, IQualifiedScope resolveScope, QualifiedName name, ContentId id, FindViewModelOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Shell.DocumentEditSite.html">DocumentEditSite</a></td>
+        <td><span class="parametername">site</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Linking.IQualifiedScope.html">IQualifiedScope</a></td>
+        <td><span class="parametername">resolveScope</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.QualifiedName</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Linking.ContentId.html">ContentId</a></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The <a class="xref" href="NationalInstruments.Linking.ContentId.html">ContentId</a> of the model element that should be found.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Shell.FindViewModelOptions.html">FindViewModelOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">NationalInstruments.Core.IViewModel</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Shell_DocumentExtensions_FindViewModelForModelElementAsync_" data-uid="NationalInstruments.Shell.DocumentExtensions.FindViewModelForModelElementAsync*"></a>
+  <h4 id="NationalInstruments_Shell_DocumentExtensions_FindViewModelForModelElementAsync_NationalInstruments_Shell_DocumentEditSite_NationalInstruments_Linking_IQualifiedScope_NationalInstruments_Core_QualifiedName_System_Func_NationalInstruments_SourceModel_Envoys_Envoy_NationalInstruments_SourceModel_Element__NationalInstruments_Shell_FindViewModelOptions_" data-uid="NationalInstruments.Shell.DocumentExtensions.FindViewModelForModelElementAsync(NationalInstruments.Shell.DocumentEditSite,NationalInstruments.Linking.IQualifiedScope,NationalInstruments.Core.QualifiedName,System.Func{NationalInstruments.SourceModel.Envoys.Envoy,NationalInstruments.SourceModel.Element},NationalInstruments.Shell.FindViewModelOptions)">FindViewModelForModelElementAsync(DocumentEditSite, IQualifiedScope, QualifiedName, Func&lt;Envoy, Element&gt;, FindViewModelOptions)</h4>
+  <div class="markdown level1 summary"><p>Finds an <span class="xref">NationalInstruments.Core.IViewModel</span> that corresponds to the item described by the given <a class="xref" href="NationalInstruments.Linking.ExtendedQualifiedName.html">ExtendedQualifiedName</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;IViewModel&gt; FindViewModelForModelElementAsync(this DocumentEditSite site, IQualifiedScope resolveScope, QualifiedName name, Func&lt;Envoy, Element&gt; selectElement, FindViewModelOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Shell.DocumentEditSite.html">DocumentEditSite</a></td>
+        <td><span class="parametername">site</span></td>
+        <td><p>The <a class="xref" href="NationalInstruments.Shell.DocumentEditSite.html">DocumentEditSite</a> in which to find the view model.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Linking.IQualifiedScope.html">IQualifiedScope</a></td>
+        <td><span class="parametername">resolveScope</span></td>
+        <td><p>The <a class="xref" href="NationalInstruments.Linking.IQualifiedScope.html">IQualifiedScope</a> used to resolve the given name.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">NationalInstruments.Core.QualifiedName</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The <span class="xref">NationalInstruments.Core.QualifiedName</span> for the <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a> to which a <a class="xref" href="NationalInstruments.Shell.Document.html">Document</a> will be bound to display the element.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a>, <a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a>&gt;</td>
+        <td><span class="parametername">selectElement</span></td>
+        <td><p>A delegate used to find the modeling element for which to find a view model once the owning Envoy have been found.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Shell.FindViewModelOptions.html">FindViewModelOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The <a class="xref" href="NationalInstruments.Shell.FindViewModelOptions.html">FindViewModelOptions</a> containing information how the view model should be found.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">NationalInstruments.Core.IViewModel</span>&gt;</td>
+        <td><p>A <span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span> correponding to the asynchronous work of finding the view model.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Shell_DocumentExtensions_GetDocument_" data-uid="NationalInstruments.Shell.DocumentExtensions.GetDocument*"></a>
+  <h4 id="NationalInstruments_Shell_DocumentExtensions_GetDocument_NationalInstruments_SourceModel_Envoys_Envoy_" data-uid="NationalInstruments.Shell.DocumentExtensions.GetDocument(NationalInstruments.SourceModel.Envoys.Envoy)">GetDocument(Envoy)</h4>
+  <div class="markdown level1 summary"><p>Gets the document for the specified envoy, forcing creation if it does not currently exist.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Document GetDocument(Envoy envoy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">envoy</span></td>
+        <td><p>The envoy of interest.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Shell.Document.html">Document</a></td>
+        <td><p>The Document for the envoy.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Shell_DocumentExtensions_GetDocument_" data-uid="NationalInstruments.Shell.DocumentExtensions.GetDocument*"></a>
+  <h4 id="NationalInstruments_Shell_DocumentExtensions_GetDocument_NationalInstruments_SourceModel_Envoys_Project_NationalInstruments_SourceModel_Envoys_Envoy_" data-uid="NationalInstruments.Shell.DocumentExtensions.GetDocument(NationalInstruments.SourceModel.Envoys.Project,NationalInstruments.SourceModel.Envoys.Envoy)">GetDocument(Project, Envoy)</h4>
+  <div class="markdown level1 summary"><p>Gets the document for the specified envoy, forcing creation if it does not currently exist.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use DocumentExtensions.GetDocument(Envoy) instead (11/2/2016)&quot;, false)]
+public static Document GetDocument(this Project project, Envoy envoy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Project.html">Project</a></td>
+        <td><span class="parametername">project</span></td>
+        <td><p>The project.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">envoy</span></td>
+        <td><p>The envoy of interest.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Shell.Document.html">Document</a></td>
+        <td><p>The Document for the envoy.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Shell_DocumentExtensions_GetPreferredEnvoyToEdit_" data-uid="NationalInstruments.Shell.DocumentExtensions.GetPreferredEnvoyToEdit*"></a>
+  <h4 id="NationalInstruments_Shell_DocumentExtensions_GetPreferredEnvoyToEdit_NationalInstruments_SourceModel_Envoys_Envoy_NationalInstruments_Shell_DocumentEditSite_System_Boolean_" data-uid="NationalInstruments.Shell.DocumentExtensions.GetPreferredEnvoyToEdit(NationalInstruments.SourceModel.Envoys.Envoy,NationalInstruments.Shell.DocumentEditSite,System.Boolean)">GetPreferredEnvoyToEdit(Envoy, DocumentEditSite, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Given an envoy, search for an envoy that is preferable to edit.
+If allowPrompt is true, the user will be prompted to pick the envoy when there are multiple choices.
+If allowPrompt is false, the user will not be prompted but instead preferred envoy will be picked automatically.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Envoy GetPreferredEnvoyToEdit(this Envoy envoy, DocumentEditSite editSite, bool allowPrompt)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">envoy</span></td>
+        <td><p>The envoy.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Shell.DocumentEditSite.html">DocumentEditSite</a></td>
+        <td><span class="parametername">editSite</span></td>
+        <td><p>Optional parameter for the document edit site associated with this operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">allowPrompt</span></td>
+        <td><p>True if prompting the user is allowed in order to determine the correct preferred envoy.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><p>The envoy that should be bound to and edited. It is valid for null to be returned.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Shell_DocumentExtensions_GetPreferredEnvoyToEditAndTargetIfNecessary_" data-uid="NationalInstruments.Shell.DocumentExtensions.GetPreferredEnvoyToEditAndTargetIfNecessary*"></a>
+  <h4 id="NationalInstruments_Shell_DocumentExtensions_GetPreferredEnvoyToEditAndTargetIfNecessary_NationalInstruments_SourceModel_Envoys_Envoy_NationalInstruments_SourceModel_ITargetScopeService_NationalInstruments_Shell_GetPreferredEnvoyTargetComplete_" data-uid="NationalInstruments.Shell.DocumentExtensions.GetPreferredEnvoyToEditAndTargetIfNecessary(NationalInstruments.SourceModel.Envoys.Envoy,NationalInstruments.SourceModel.ITargetScopeService,NationalInstruments.Shell.GetPreferredEnvoyTargetComplete)">GetPreferredEnvoyToEditAndTargetIfNecessary(Envoy, ITargetScopeService, GetPreferredEnvoyTargetComplete)</h4>
+  <div class="markdown level1 summary"><p>Gets the preferred envoy for editing <code data-dev-comment-type="paramref" class="paramref">envoy</code>.
+If one does not exist, find a target on which the passed envoy can be edited and return envoy targeted on the new target.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void GetPreferredEnvoyToEditAndTargetIfNecessary(Envoy envoy, ITargetScopeService preferredTarget, GetPreferredEnvoyTargetComplete operationComplete)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">envoy</span></td>
+        <td><p>The envoy.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ITargetScopeService.html">ITargetScopeService</a></td>
+        <td><span class="parametername">preferredTarget</span></td>
+        <td><p>If passed, we will check if <code data-dev-comment-type="paramref" class="paramref">envoy</code> can be edited on this target.
+ If this target does support editing the envoy return Envoy instance on this target, return null otherwise.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Shell.GetPreferredEnvoyTargetComplete.html">GetPreferredEnvoyTargetComplete</a></td>
+        <td><span class="parametername">operationComplete</span></td>
+        <td><p>Callback for when the load and edit operation has completed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Shell_DocumentExtensions_GetPreferredEnvoyToEditAndTargetIfNecessaryAsync_" data-uid="NationalInstruments.Shell.DocumentExtensions.GetPreferredEnvoyToEditAndTargetIfNecessaryAsync*"></a>
+  <h4 id="NationalInstruments_Shell_DocumentExtensions_GetPreferredEnvoyToEditAndTargetIfNecessaryAsync_NationalInstruments_SourceModel_Envoys_Envoy_NationalInstruments_SourceModel_ITargetScopeService_" data-uid="NationalInstruments.Shell.DocumentExtensions.GetPreferredEnvoyToEditAndTargetIfNecessaryAsync(NationalInstruments.SourceModel.Envoys.Envoy,NationalInstruments.SourceModel.ITargetScopeService)">GetPreferredEnvoyToEditAndTargetIfNecessaryAsync(Envoy, ITargetScopeService)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;PreferredEnvoyToEditInfo&gt; GetPreferredEnvoyToEditAndTargetIfNecessaryAsync(Envoy envoy, ITargetScopeService preferredTarget)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">envoy</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ITargetScopeService.html">ITargetScopeService</a></td>
+        <td><span class="parametername">preferredTarget</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="NationalInstruments.Shell.PreferredEnvoyToEditInfo.html">PreferredEnvoyToEditInfo</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Shell_DocumentExtensions_GetSmallIcon_" data-uid="NationalInstruments.Shell.DocumentExtensions.GetSmallIcon*"></a>
+  <h4 id="NationalInstruments_Shell_DocumentExtensions_GetSmallIcon_NationalInstruments_SourceModel_Element_System_Action_NationalInstruments_Core_PlatformVisual__" data-uid="NationalInstruments.Shell.DocumentExtensions.GetSmallIcon(NationalInstruments.SourceModel.Element,System.Action{NationalInstruments.Core.PlatformVisual})">GetSmallIcon(Element, Action&lt;PlatformVisual&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get a Small Icon view for a given element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void GetSmallIcon(this Element forElement, Action&lt;PlatformVisual&gt; loadComplete)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td><span class="parametername">forElement</span></td>
+        <td><p>The element</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">NationalInstruments.Core.PlatformVisual</span>&gt;</td>
+        <td><span class="parametername">loadComplete</span></td>
+        <td><p>Callback for when the operation completes</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Shell_DocumentExtensions_ShowLoadErrorHelper_" data-uid="NationalInstruments.Shell.DocumentExtensions.ShowLoadErrorHelper*"></a>
+  <h4 id="NationalInstruments_Shell_DocumentExtensions_ShowLoadErrorHelper_NationalInstruments_Composition_ICompositionHost_System_Exception_System_Boolean_System_String_System_Object___" data-uid="NationalInstruments.Shell.DocumentExtensions.ShowLoadErrorHelper(NationalInstruments.Composition.ICompositionHost,System.Exception,System.Boolean,System.String,System.Object[])">ShowLoadErrorHelper(ICompositionHost, Exception, Boolean, String, Object[])</h4>
+  <div class="markdown level1 summary"><p>Displays a dialog box that reports an error that occurred when loading a document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ShowLoadErrorHelper(ICompositionHost host, Exception exception, bool showExceptionDetails, string errorFormatString, params object[] formatArgs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Composition.ICompositionHost</span></td>
+        <td><span class="parametername">host</span></td>
+        <td><p>The host.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Exception</span></td>
+        <td><span class="parametername">exception</span></td>
+        <td><p>Exception that caused load error. Can be null. </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">showExceptionDetails</span></td>
+        <td><p>True to include the exception information in the load error</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">errorFormatString</span></td>
+        <td><p>Specifies the format string used to present the error message.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">formatArgs</span></td>
+        <td><p>The arguments for the format string to display the final error message.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Shell_DocumentExtensions_ShowUnableToEditDocumentError_" data-uid="NationalInstruments.Shell.DocumentExtensions.ShowUnableToEditDocumentError*"></a>
+  <h4 id="NationalInstruments_Shell_DocumentExtensions_ShowUnableToEditDocumentError_NationalInstruments_SourceModel_Envoys_Envoy_" data-uid="NationalInstruments.Shell.DocumentExtensions.ShowUnableToEditDocumentError(NationalInstruments.SourceModel.Envoys.Envoy)">ShowUnableToEditDocumentError(Envoy)</h4>
+  <div class="markdown level1 summary"><p>Displays a dialog box that reports an error that occurred when editing a document (without reference to the target).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ShowUnableToEditDocumentError(Envoy envoy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">envoy</span></td>
+        <td><p>File name(s).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Shell_DocumentExtensions_TryEditAsync_" data-uid="NationalInstruments.Shell.DocumentExtensions.TryEditAsync*"></a>
+  <h4 id="NationalInstruments_Shell_DocumentExtensions_TryEditAsync_NationalInstruments_SourceModel_Envoys_Envoy_NationalInstruments_Shell_EditDocumentInfo_" data-uid="NationalInstruments.Shell.DocumentExtensions.TryEditAsync(NationalInstruments.SourceModel.Envoys.Envoy,NationalInstruments.Shell.EditDocumentInfo)">TryEditAsync(Envoy, EditDocumentInfo)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;Envoy&gt; TryEditAsync(this Envoy envoy, EditDocumentInfo info)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">envoy</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Shell.EditDocumentInfo.html">EditDocumentInfo</a></td>
+        <td><span class="parametername">info</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Shell_DocumentExtensions_TryEditAsync_NationalInstruments_SourceModel_Envoys_Envoy_NationalInstruments_Shell_EditDocumentInfo__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Will silently consume the non-programming errors <see cref="!:IsExceptedException(Exception)"></see>.</p>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

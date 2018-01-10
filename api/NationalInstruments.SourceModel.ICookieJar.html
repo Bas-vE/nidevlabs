@@ -1,0 +1,568 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface ICookieJar
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface ICookieJar
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.SourceModel.ICookieJar">
+  
+  
+  <h1 id="NationalInstruments_SourceModel_ICookieJar" data-uid="NationalInstruments.SourceModel.ICookieJar" class="text-break">Interface ICookieJar
+  </h1>
+  <div class="markdown level0 summary"><p>Interface to the current cookie management entity.  Cookies are reference counted IDisposables.
+The CookieJar reference counts the Cookies.
+The CookieJar is a singleton in the MEF export system.  Use GetSharedExportedValue
+or [Import] to get the document manager from MEF. </p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.SourceModel.html">NationalInstruments.SourceModel</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_SourceModel_ICookieJar_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface ICookieJar</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_ICookieJar_CookieJarId_" data-uid="NationalInstruments.SourceModel.ICookieJar.CookieJarId*"></a>
+  <h4 id="NationalInstruments_SourceModel_ICookieJar_CookieJarId" data-uid="NationalInstruments.SourceModel.ICookieJar.CookieJarId">CookieJarId</h4>
+  <div class="markdown level1 summary"><p>Returns a unique ID that can be used to differentiate one cookie jar from another cookie jar.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Guid CookieJarId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Guid</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_ICookieJar_Contains_" data-uid="NationalInstruments.SourceModel.ICookieJar.Contains*"></a>
+  <h4 id="NationalInstruments_SourceModel_ICookieJar_Contains_NationalInstruments_SourceModel_Cookie_" data-uid="NationalInstruments.SourceModel.ICookieJar.Contains(NationalInstruments.SourceModel.Cookie)">Contains(Cookie)</h4>
+  <div class="markdown level1 summary"><p>Check to see if a <a class="xref" href="NationalInstruments.SourceModel.Cookie.html">Cookie</a> is in the <a class="xref" href="NationalInstruments.SourceModel.CookieJar.html">CookieJar</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool Contains(Cookie cookie)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Cookie.html">Cookie</a></td>
+        <td><span class="parametername">cookie</span></td>
+        <td><p>The cookie to check for</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the cookie is in the <a class="xref" href="NationalInstruments.SourceModel.CookieJar.html">CookieJar</a>, false otherwise</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ICookieJar_Contains_" data-uid="NationalInstruments.SourceModel.ICookieJar.Contains*"></a>
+  <h4 id="NationalInstruments_SourceModel_ICookieJar_Contains_System_Object_" data-uid="NationalInstruments.SourceModel.ICookieJar.Contains(System.Object)">Contains(Object)</h4>
+  <div class="markdown level1 summary"><p>Check to see if a given object is in the cookie jar</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool Contains(object thing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">thing</span></td>
+        <td><p>object to look for</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the object is in the <a class="xref" href="NationalInstruments.SourceModel.CookieJar.html">CookieJar</a>, false otherwise</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ICookieJar_GetCookie_" data-uid="NationalInstruments.SourceModel.ICookieJar.GetCookie*"></a>
+  <h4 id="NationalInstruments_SourceModel_ICookieJar_GetCookie_System_Object_" data-uid="NationalInstruments.SourceModel.ICookieJar.GetCookie(System.Object)">GetCookie(Object)</h4>
+  <div class="markdown level1 summary"><p>Returns the corresponding <a class="xref" href="NationalInstruments.SourceModel.Cookie.html">Cookie</a> for an object</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Cookie GetCookie(object thing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">thing</span></td>
+        <td><p>object to find</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Cookie.html">Cookie</a></td>
+        <td><p>The <a class="xref" href="NationalInstruments.SourceModel.Cookie.html">Cookie</a> for the object, or null</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ICookieJar_GetCookie_" data-uid="NationalInstruments.SourceModel.ICookieJar.GetCookie*"></a>
+  <h4 id="NationalInstruments_SourceModel_ICookieJar_GetCookie_System_String_" data-uid="NationalInstruments.SourceModel.ICookieJar.GetCookie(System.String)">GetCookie(String)</h4>
+  <div class="markdown level1 summary"><p>Given a cookie identifier, get the cookie</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Cookie GetCookie(string identifier)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">identifier</span></td>
+        <td><p>Identifier of the requested cookie</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Cookie.html">Cookie</a></td>
+        <td><p>The cookie for the given identifier</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ICookieJar_GetCookiesInCategory_" data-uid="NationalInstruments.SourceModel.ICookieJar.GetCookiesInCategory*"></a>
+  <h4 id="NationalInstruments_SourceModel_ICookieJar_GetCookiesInCategory_System_String_" data-uid="NationalInstruments.SourceModel.ICookieJar.GetCookiesInCategory(System.String)">GetCookiesInCategory(String)</h4>
+  <div class="markdown level1 summary"><p>Get a list of <a class="xref" href="NationalInstruments.SourceModel.Cookie.html">Cookie</a> associated with a string category</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">List&lt;Cookie&gt; GetCookiesInCategory(string category)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">category</span></td>
+        <td><p>The category name, the namespace is this <a class="xref" href="NationalInstruments.SourceModel.CookieJar.html">CookieJar</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Cookie.html">Cookie</a>&gt;</td>
+        <td><p>A list of cookies associated with the category, may be an empty list but is not null</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ICookieJar_PutCookieInCategory_" data-uid="NationalInstruments.SourceModel.ICookieJar.PutCookieInCategory*"></a>
+  <h4 id="NationalInstruments_SourceModel_ICookieJar_PutCookieInCategory_NationalInstruments_SourceModel_Cookie_System_String_" data-uid="NationalInstruments.SourceModel.ICookieJar.PutCookieInCategory(NationalInstruments.SourceModel.Cookie,System.String)">PutCookieInCategory(Cookie, String)</h4>
+  <div class="markdown level1 summary"><p>Associates a <a class="xref" href="NationalInstruments.SourceModel.Cookie.html">Cookie</a> with a string category. This facilitates cookie lifetime management by allowing developers to group cookies 
+and retrieve or clear them statically. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void PutCookieInCategory(Cookie cookie, string category)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Cookie.html">Cookie</a></td>
+        <td><span class="parametername">cookie</span></td>
+        <td><p>The <a class="xref" href="NationalInstruments.SourceModel.Cookie.html">Cookie</a> to associate</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">category</span></td>
+        <td><p>A string name for the group, the namespace is this <a class="xref" href="NationalInstruments.SourceModel.CookieJar.html">CookieJar</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ICookieJar_PutObject_" data-uid="NationalInstruments.SourceModel.ICookieJar.PutObject*"></a>
+  <h4 id="NationalInstruments_SourceModel_ICookieJar_PutObject_System_Object_" data-uid="NationalInstruments.SourceModel.ICookieJar.PutObject(System.Object)">PutObject(Object)</h4>
+  <div class="markdown level1 summary"><p>Put something in the cookie jar and get back the non-reference counting cookie for it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Cookie PutObject(object thing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">thing</span></td>
+        <td><p>object to put in the cookie jar.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Cookie.html">Cookie</a></td>
+        <td><p>the <a class="xref" href="NationalInstruments.SourceModel.Cookie.html">Cookie</a> for the thing</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ICookieJar_TryClearCookie_" data-uid="NationalInstruments.SourceModel.ICookieJar.TryClearCookie*"></a>
+  <h4 id="NationalInstruments_SourceModel_ICookieJar_TryClearCookie_NationalInstruments_SourceModel_Cookie_" data-uid="NationalInstruments.SourceModel.ICookieJar.TryClearCookie(NationalInstruments.SourceModel.Cookie)">TryClearCookie(Cookie)</h4>
+  <div class="markdown level1 summary"><p>If the cookie is in the cookie jar, decrement it&apos;s reference count.  Dispose it and remove references to it from internal
+data structures when reference count drops to zero.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool TryClearCookie(Cookie cookie)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Cookie.html">Cookie</a></td>
+        <td><span class="parametername">cookie</span></td>
+        <td><p>The cookie to clear</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the cookie was disposed, false otherwise</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ICookieJar_TryClearCookiesInCategory_" data-uid="NationalInstruments.SourceModel.ICookieJar.TryClearCookiesInCategory*"></a>
+  <h4 id="NationalInstruments_SourceModel_ICookieJar_TryClearCookiesInCategory_System_String_" data-uid="NationalInstruments.SourceModel.ICookieJar.TryClearCookiesInCategory(System.String)">TryClearCookiesInCategory(String)</h4>
+  <div class="markdown level1 summary"><p>Clears all cookies associated with a category. The cookie may remain in the cookie jar if its ref count is still &gt; 0 
+but will no longer be associated with the category.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool TryClearCookiesInCategory(string category)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">category</span></td>
+        <td><p>The category name, the namespace is this <a class="xref" href="NationalInstruments.SourceModel.CookieJar.html">CookieJar</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if all cookies were disposed, false otherwise</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

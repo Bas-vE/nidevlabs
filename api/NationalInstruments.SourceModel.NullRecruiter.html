@@ -1,0 +1,585 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class NullRecruiter
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class NullRecruiter
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.SourceModel.NullRecruiter">
+  
+  
+  <h1 id="NationalInstruments_SourceModel_NullRecruiter" data-uid="NationalInstruments.SourceModel.NullRecruiter" class="text-break">Class NullRecruiter
+  </h1>
+  <div class="markdown level0 summary"><p>The NullRecruiter is type of recruiter that will throw away all recorded transaction items, and as a consequence won&apos;t notify
+observers of any changes as a result of the transaction items.  It is primarily intended for use cases such as loading a source
+model, merging within a source model, or constructing a new object where any transactions are considered side effects and aren&apos;t
+meaningful changes in and of themselves.  While the NullRecruiter doesn&apos;t record transaction items, it will still accumulate and
+track content Ids within its IdentifierDictionary as needed.  It is up to the user of this class to clear out the dictionary where
+appropriate.  We create one NullRecruiter per thread on an as needed basis through the use the static member NullRecruiter.Current.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">NullRecruiter</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="NationalInstruments.SourceModel.ITransactionRecruiter.html">ITransactionRecruiter</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.SourceModel.html">NationalInstruments.SourceModel</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_SourceModel_NullRecruiter_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class NullRecruiter : ITransactionRecruiter</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_NullRecruiter_Current_" data-uid="NationalInstruments.SourceModel.NullRecruiter.Current*"></a>
+  <h4 id="NationalInstruments_SourceModel_NullRecruiter_Current" data-uid="NationalInstruments.SourceModel.NullRecruiter.Current">Current</h4>
+  <div class="markdown level1 summary"><p>The NullRecruiter used for this thread.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static NullRecruiter Current { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.NullRecruiter.html">NullRecruiter</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_NullRecruiter_CurrentManager_" data-uid="NationalInstruments.SourceModel.NullRecruiter.CurrentManager*"></a>
+  <h4 id="NationalInstruments_SourceModel_NullRecruiter_CurrentManager" data-uid="NationalInstruments.SourceModel.NullRecruiter.CurrentManager">CurrentManager</h4>
+  <div class="markdown level1 summary"><p>Manager that controls when NullRecruiters are created in various threads.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static NullRecruiterManager CurrentManager { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.NullRecruiterManager.html">NullRecruiterManager</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_NullRecruiter_IdentifierDictionary_" data-uid="NationalInstruments.SourceModel.NullRecruiter.IdentifierDictionary*"></a>
+  <h4 id="NationalInstruments_SourceModel_NullRecruiter_IdentifierDictionary" data-uid="NationalInstruments.SourceModel.NullRecruiter.IdentifierDictionary">IdentifierDictionary</h4>
+  <div class="markdown level1 summary"><p>Get the dictionary that contains the mappings of diagram objects to their unique IDs</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IdentifierDictionary IdentifierDictionary { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.IdentifierDictionary.html">IdentifierDictionary</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_NullRecruiter_IsRecordingTransactions_" data-uid="NationalInstruments.SourceModel.NullRecruiter.IsRecordingTransactions*"></a>
+  <h4 id="NationalInstruments_SourceModel_NullRecruiter_IsRecordingTransactions" data-uid="NationalInstruments.SourceModel.NullRecruiter.IsRecordingTransactions">IsRecordingTransactions</h4>
+  <div class="markdown level1 summary"><p>Indicates whether the TransactionRecruiter is currently recording transactions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsRecordingTransactions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_NullRecruiter_CheckReadAccess_" data-uid="NationalInstruments.SourceModel.NullRecruiter.CheckReadAccess*"></a>
+  <h4 id="NationalInstruments_SourceModel_NullRecruiter_CheckReadAccess" data-uid="NationalInstruments.SourceModel.NullRecruiter.CheckReadAccess">CheckReadAccess()</h4>
+  <div class="markdown level1 summary"><p>Determines if the current thread can read the model.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CheckReadAccess()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the current thread can read from the model.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_NullRecruiter_CheckWriteAccess_" data-uid="NationalInstruments.SourceModel.NullRecruiter.CheckWriteAccess*"></a>
+  <h4 id="NationalInstruments_SourceModel_NullRecruiter_CheckWriteAccess" data-uid="NationalInstruments.SourceModel.NullRecruiter.CheckWriteAccess">CheckWriteAccess()</h4>
+  <div class="markdown level1 summary"><p>Determines if the current thread can modify the model.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CheckWriteAccess()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the current thread can modify the model</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_NullRecruiter_DisableTransactionRecording_" data-uid="NationalInstruments.SourceModel.NullRecruiter.DisableTransactionRecording*"></a>
+  <h4 id="NationalInstruments_SourceModel_NullRecruiter_DisableTransactionRecording" data-uid="NationalInstruments.SourceModel.NullRecruiter.DisableTransactionRecording">DisableTransactionRecording()</h4>
+  <div class="markdown level1 summary"><p>Temporarily disables recording of transactions until the returned IDisposable is disposed.  If called multiple times,
+all IDisposables must be disposed before transaction recording will resume.  This function isn&apos;t thread safe.  If callers
+dispose from a different thread than the IDisposable was created from, it&apos;s up to the caller to ensure proper usage
+and synchronization.  </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDisposable DisableTransactionRecording()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IDisposable</span></td>
+        <td><p>An IDisposable that when disposed will resume recording of transactions or Null if disabling of transaction
+recording isn&apos;t supported.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_NullRecruiter_FindRecordedTransaction_" data-uid="NationalInstruments.SourceModel.NullRecruiter.FindRecordedTransaction*"></a>
+  <h4 id="NationalInstruments_SourceModel_NullRecruiter_FindRecordedTransaction_System_Object_System_String_" data-uid="NationalInstruments.SourceModel.NullRecruiter.FindRecordedTransaction(System.Object,System.String)">FindRecordedTransaction(Object, String)</h4>
+  <div class="markdown level1 summary"><p>Finds a transaction item which was previously recoreded using RecordReplaceableTransaction</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransactionItem FindRecordedTransaction(object target, string propertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">target</span></td>
+        <td><p>The target element of the transaction item</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>The property name of the affected property</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TransactionItem.html">TransactionItem</a></td>
+        <td><p>The previously recorded transaction or null if not found</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_NullRecruiter_RecordReplaceableTransaction_" data-uid="NationalInstruments.SourceModel.NullRecruiter.RecordReplaceableTransaction*"></a>
+  <h4 id="NationalInstruments_SourceModel_NullRecruiter_RecordReplaceableTransaction_NationalInstruments_SourceModel_TransactionItem_" data-uid="NationalInstruments.SourceModel.NullRecruiter.RecordReplaceableTransaction(NationalInstruments.SourceModel.TransactionItem)">RecordReplaceableTransaction(TransactionItem)</h4>
+  <div class="markdown level1 summary"><p>Records a transaction item which can be found and updated in the future using FindRecordedTransaction and RecordUpdatedTransaction</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RecordReplaceableTransaction(TransactionItem item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TransactionItem.html">TransactionItem</a></td>
+        <td><span class="parametername">item</span></td>
+        <td><p>the item encapsulating the change</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_NullRecruiter_RecordTransaction_" data-uid="NationalInstruments.SourceModel.NullRecruiter.RecordTransaction*"></a>
+  <h4 id="NationalInstruments_SourceModel_NullRecruiter_RecordTransaction_NationalInstruments_SourceModel_TransactionItem_" data-uid="NationalInstruments.SourceModel.NullRecruiter.RecordTransaction(NationalInstruments.SourceModel.TransactionItem)">RecordTransaction(TransactionItem)</h4>
+  <div class="markdown level1 summary"><p>Records a change with the transaction system</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RecordTransaction(TransactionItem item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TransactionItem.html">TransactionItem</a></td>
+        <td><span class="parametername">item</span></td>
+        <td><p>the item encapsulating the change</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_NullRecruiter_RecordUpdatedTransaction_" data-uid="NationalInstruments.SourceModel.NullRecruiter.RecordUpdatedTransaction*"></a>
+  <h4 id="NationalInstruments_SourceModel_NullRecruiter_RecordUpdatedTransaction_NationalInstruments_SourceModel_TransactionItem_" data-uid="NationalInstruments.SourceModel.NullRecruiter.RecordUpdatedTransaction(NationalInstruments.SourceModel.TransactionItem)">RecordUpdatedTransaction(TransactionItem)</h4>
+  <div class="markdown level1 summary"><p>Records that a previously recorded transaction using RecordReplaceableTransaction was updated</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RecordUpdatedTransaction(TransactionItem item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TransactionItem.html">TransactionItem</a></td>
+        <td><span class="parametername">item</span></td>
+        <td><p>The transaction that was updated an originally enlisted using RecordReplaceableTransaction</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_NullRecruiter_SwitchToScratchIdentifierDictionary_" data-uid="NationalInstruments.SourceModel.NullRecruiter.SwitchToScratchIdentifierDictionary*"></a>
+  <h4 id="NationalInstruments_SourceModel_NullRecruiter_SwitchToScratchIdentifierDictionary" data-uid="NationalInstruments.SourceModel.NullRecruiter.SwitchToScratchIdentifierDictionary">SwitchToScratchIdentifierDictionary()</h4>
+  <div class="markdown level1 summary"><p>Creates a new scratch identifier dictionary that is used by the recruiter until the returned IDisposable is disposed
+or a new scratch dictionary is created on the stack.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDisposable SwitchToScratchIdentifierDictionary()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IDisposable</span></td>
+        <td><p>An IDisposable that will switch back to the previous dictionary when disposed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_SourceModel_NullRecruiter_SwitchToScratchIdentifierDictionary_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Switching to a scratch dictionary is only useful if you are creating elements via a parsing operation and you don&apos;t 
+want any identifiers assigned as part of the parsing operation to interfere with or conflict with any other parsing 
+operations that are already in progress on the current thread.   </p>
+</div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ITransactionRecruiter.html">ITransactionRecruiter</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ValueListTransactionRecruiterExtensions.html#NationalInstruments_SourceModel_ValueListTransactionRecruiterExtensions_EnlistValueListItem_NationalInstruments_SourceModel_ITransactionRecruiter_NationalInstruments_SourceModel_Element_System_String_System_Func_NationalInstruments_SourceModel_Element_System_Collections_IList__NationalInstruments_SourceModel_ListChangeType_System_Object_System_Object_System_Int32_NationalInstruments_SourceModel_TransactionHints_">ValueListTransactionRecruiterExtensions.EnlistValueListItem(ITransactionRecruiter, Element, String, Func&lt;Element, IList&gt;, ListChangeType, Object, Object, Int32, TransactionHints)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.OwnerComponentCollectionTransactionRecruiterExtensions.html#NationalInstruments_SourceModel_OwnerComponentCollectionTransactionRecruiterExtensions_EnlistOwnerComponentItem_NationalInstruments_SourceModel_ITransactionRecruiter_NationalInstruments_SourceModel_Element_NationalInstruments_SourceModel_Element_System_Int32_NationalInstruments_SourceModel_Element_System_Int32_NationalInstruments_SourceModel_InsertComponent_NationalInstruments_SourceModel_InsertComponent_NationalInstruments_SourceModel_RemoveComponent_NationalInstruments_SourceModel_RemoveComponent_NationalInstruments_SourceModel_TransactionHints_">OwnerComponentCollectionTransactionRecruiterExtensions.EnlistOwnerComponentItem(ITransactionRecruiter, Element, Element, Int32, Element, Int32, InsertComponent, InsertComponent, RemoveComponent, RemoveComponent, TransactionHints)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.DictionaryTransactionRecruiterExtensions.html#NationalInstruments_SourceModel_DictionaryTransactionRecruiterExtensions_EnlistDictionaryItem__2_NationalInstruments_SourceModel_ITransactionRecruiter_NationalInstruments_SourceModel_Element_System_Func_NationalInstruments_SourceModel_Element_System_Collections_Generic_IDictionary___0___1___NationalInstruments_SourceModel_DictionaryChangeType___1___1___0_NationalInstruments_SourceModel_TransactionHints_">DictionaryTransactionRecruiterExtensions.EnlistDictionaryItem&lt;TKey, TValue&gt;(ITransactionRecruiter, Element, Func&lt;Element, IDictionary&lt;TKey, TValue&gt;&gt;, DictionaryChangeType, TValue, TValue, TKey, TransactionHints)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.DictionaryTransactionRecruiterExtensions.html#NationalInstruments_SourceModel_DictionaryTransactionRecruiterExtensions_EnlistObservableDictionaryItem__2_NationalInstruments_SourceModel_ITransactionRecruiter_NationalInstruments_SourceModel_Element_System_String_System_Func_NationalInstruments_SourceModel_Element_System_Collections_Generic_IDictionary___0___1___NationalInstruments_SourceModel_DictionaryChangeType___1___1___0_NationalInstruments_SourceModel_TransactionHints_">DictionaryTransactionRecruiterExtensions.EnlistObservableDictionaryItem&lt;TKey, TValue&gt;(ITransactionRecruiter, Element, String, Func&lt;Element, IDictionary&lt;TKey, TValue&gt;&gt;, DictionaryChangeType, TValue, TValue, TKey, TransactionHints)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ListTransactionRecruiterExtensions.html#NationalInstruments_SourceModel_ListTransactionRecruiterExtensions_EnlistListItem__1_NationalInstruments_SourceModel_ITransactionRecruiter_NationalInstruments_SourceModel_Element_System_String_System_Func_NationalInstruments_SourceModel_Element_System_Collections_Generic_IList___0___NationalInstruments_SourceModel_ListChangeType___0___0_System_Int32_NationalInstruments_SourceModel_TransactionHints_">ListTransactionRecruiterExtensions.EnlistListItem&lt;T&gt;(ITransactionRecruiter, Element, String, Func&lt;Element, IList&lt;T&gt;&gt;, ListChangeType, T, T, Int32, TransactionHints)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.TransactionRecruiterExtensions.html#NationalInstruments_SourceModel_TransactionRecruiterExtensions_EnlistPropertyItem__1_NationalInstruments_SourceModel_ITransactionRecruiter_NationalInstruments_SourceModel_Element_System_String___0___0_NationalInstruments_SourceModel_PropertySetter___0__NationalInstruments_SourceModel_TransactionHints_">TransactionRecruiterExtensions.EnlistPropertyItem&lt;T&gt;(ITransactionRecruiter, Element, String, T, T, PropertySetter&lt;T&gt;, TransactionHints)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.TransactionRecruiterExtensions.html#NationalInstruments_SourceModel_TransactionRecruiterExtensions_EnlistNonPersistedElementChange__1_NationalInstruments_SourceModel_ITransactionRecruiter_NationalInstruments_SourceModel_Element_System_String___0___0_NationalInstruments_SourceModel_PropertySetter___0__NationalInstruments_SourceModel_TransactionHints_">TransactionRecruiterExtensions.EnlistNonPersistedElementChange&lt;T&gt;(ITransactionRecruiter, Element, String, T, T, PropertySetter&lt;T&gt;, TransactionHints)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.TransactionRecruiterExtensions.html#NationalInstruments_SourceModel_TransactionRecruiterExtensions_EnlistSubPropertyItem__2_NationalInstruments_SourceModel_ITransactionRecruiter___1_System_String_NationalInstruments_SourceModel_Element_System_String_System_Double___0___0_NationalInstruments_SourceModel_PropertySetter___0__NationalInstruments_SourceModel_TransactionHints_">TransactionRecruiterExtensions.EnlistSubPropertyItem&lt;T, TTarget&gt;(ITransactionRecruiter, TTarget, String, Element, String, Double, T, T, PropertySetter&lt;T&gt;, TransactionHints)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.TransactionRecruiterExtensions.html#NationalInstruments_SourceModel_TransactionRecruiterExtensions_EnlistOrReplacePropertyItem__1_NationalInstruments_SourceModel_ITransactionRecruiter_NationalInstruments_SourceModel_Element_System_String___0___0_NationalInstruments_SourceModel_PropertySetter___0__NationalInstruments_SourceModel_TransactionHints_">TransactionRecruiterExtensions.EnlistOrReplacePropertyItem&lt;T&gt;(ITransactionRecruiter, Element, String, T, T, PropertySetter&lt;T&gt;, TransactionHints)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.TransactionRecruiterExtensions.html#NationalInstruments_SourceModel_TransactionRecruiterExtensions_EnlistOrReplacePropertyChanged__1_NationalInstruments_SourceModel_ITransactionRecruiter___0_System_String_">TransactionRecruiterExtensions.EnlistOrReplacePropertyChanged&lt;TTarget&gt;(ITransactionRecruiter, TTarget, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.TransactionRecruiterExtensions.html#NationalInstruments_SourceModel_TransactionRecruiterExtensions_EnlistNonPersistedEditorChange__1_NationalInstruments_SourceModel_ITransactionRecruiter_System_String___0___0_NationalInstruments_SourceModel_PropertySetter___0__NationalInstruments_SourceModel_TransactionHints_">TransactionRecruiterExtensions.EnlistNonPersistedEditorChange&lt;T&gt;(ITransactionRecruiter, String, T, T, PropertySetter&lt;T&gt;, TransactionHints)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.TransactionRecruiterExtensions.html#NationalInstruments_SourceModel_TransactionRecruiterExtensions_EnlistToTriggerSemanticAnalysis_NationalInstruments_SourceModel_ITransactionRecruiter_NationalInstruments_SourceModel_Element_System_String_">TransactionRecruiterExtensions.EnlistToTriggerSemanticAnalysis(ITransactionRecruiter, Element, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.TransactionRecruiterExtensions.html#NationalInstruments_SourceModel_TransactionRecruiterExtensions_EnlistPropertyChanged_NationalInstruments_SourceModel_ITransactionRecruiter_NationalInstruments_SourceModel_Element_System_String_">TransactionRecruiterExtensions.EnlistPropertyChanged(ITransactionRecruiter, Element, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.CollectionTransactionItemExtensions.html#NationalInstruments_SourceModel_CollectionTransactionItemExtensions_EnlistCollectionItem__1_NationalInstruments_SourceModel_ITransactionRecruiter_NationalInstruments_SourceModel_Element_System_String_System_Func_NationalInstruments_SourceModel_Element_System_Collections_Generic_ICollection___0___NationalInstruments_SourceModel_CollectionChangeTypes___0_NationalInstruments_SourceModel_TransactionHints_">CollectionTransactionItemExtensions.EnlistCollectionItem&lt;T&gt;(ITransactionRecruiter, Element, String, Func&lt;Element, ICollection&lt;T&gt;&gt;, CollectionChangeTypes, T, TransactionHints)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

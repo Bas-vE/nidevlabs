@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>The Name Resolution System </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="The Name Resolution System ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="the-name-resolution-system">The Name Resolution System</h1>
+
+<p>The Diagram SDK name resolution system is responsible for linking items across scopes, allowing diagrams to use external resources, such as classes and methods defined in a separate assembly.</p>
+<h2 id="name-resolution-system-architecture">Name Resolution System Architecture</h2>
+<p>The following diagram illustrates the high-level architecture of the name resolution system.</p>
+<p><img src="../../images/concepts/NamingRelationships.png" alt="NamingRelationships"></p>
+<h2 id="name-resolution-system-theory-of-operation">Name Resolution System Theory of Operation</h2>
+<p>The name resolution system allows you to assign <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Naming_QualifiedName.htm">QualifiedNames</a> to <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_Element.htm">Elements</a> so that they can be found by other Elements. The name resolution system comes into play when one Element needs to find another Element that is not part of its <a href="name-resolution-system.html">Components</a> collection. The process of looking up a QualifiedName to find an Element, known as resolving, is the only mechanism the Diagram SDK supports for lazily referring to Elements.</p>
+<h3 id="example">Example</h3>
+<p>Suppose you have a diagram, MyDiagram, that belongs to a SourceFile, MySourceFile. MyDiagram needs to call a diagram, ExternalDiagram, defined in another SourceFile, ExternalSourceFile. In this case, MyDiagram is an IQualifiedSource that depends on an IQualifiedObject, ExternalDiagram, by way of an IQualifiedDependency. As an IQualifiedSource, MyDiagram must use the name resolution system to locate an IQualifiedScope named <code>ExternalSourceFile</code>, then within that scope, it must locate an Element with the IQualifiedName <code>ExternalDiagram</code>, as shown in the following illustration.</p>
+<p><img src="../../images/concepts/NamingProcess.png" alt="NamingProcess"></p>
+<h2 id="primary-types-that-participate-in-the-name-resolution-system">Primary Types that Participate in the Name Resolution System</h2>
+<p>The Diagram SDK naming resolution system is woven throughout the <a href="diagram-object-model.html">DiOM</a>. The majority of the functionality is implemented as interfaces to ensure flexibility and to allow objects outside of the DiOM to be resolved by name. The following table describes the core naming classes.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Class</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">QualifiedName</td>
+<td style="text-align:left">A fully-qualified name for an IQualifiedTarget, including a path to the IQualifiedTarget through IQualifiedScopes, separated by &quot; : &quot; delimiters.</td>
+</tr>
+<tr>
+<td style="text-align:left">IQualifiedTarget</td>
+<td style="text-align:left">An object with a QualifiedName in an IQualifiedScope</td>
+</tr>
+<tr>
+<td style="text-align:left">IQualifiedScope</td>
+<td style="text-align:left">Interface implemented by objects that contain IQualifiedTargets and resolve QualifiedNames into IQualifiedTargets</td>
+</tr>
+<tr>
+<td style="text-align:left">IQualifiedDependent</td>
+<td style="text-align:left">An object that depends on an IQualifiedTarget by name</td>
+</tr>
+<tr>
+<td style="text-align:left">Envoy</td>
+<td style="text-align:left">Represents a QualifiedTarget in a Project</td>
+</tr>
+<tr>
+<td style="text-align:left">Definition</td>
+<td style="text-align:left">An abstract class for specifying named objects</td>
+</tr>
+</tbody>
+</table>
+<h3 id="qualifiedname">QualifiedName</h3>
+<p><a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Naming_QualifiedName.htm">QualifiedName</a> is a sealed class that represents a name for an object or a path to a named object through a hierarchy of <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Naming_IQualifiedScope.htm">IQualifiedScopes</a>. A QualifiedName consists of a sequence of one or more parts. The first part in the sequence is called the Head and the remaing parts are called the Tail. A part is a string that can contain any character. A QualifiedName used as a path can be relative or absolute. An absolute QualifiedName starts with a zero-length root part, otherwise the QualifiedName is relative.</p>
+<p>During <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/Tutorial_EnableSave.html">parsing and generating</a>, a QualifiedName is converted to an XML string and back. The syntax for a QualifiedName written and read between an XML attribute is:</p>
+<pre><code class="lang-C#">    QualifiedName := RootPart? Parts
+    RootPart := Separator
+    Parts := Part | QualifiedName Separator Part
+    Part := ([a-zA-Z0-9_\\.])+
+    Separator := &#39;:&#39; | &#39;.&#39;
+</code></pre><p>The syntax of a QualifiedName when generating and parsing into a large block of text is different because there is no fixed delimiter. An example of such a syntax usage would be for parsing and generating the DataType names within an inline cluster DataType definition.</p>
+<pre><code class="lang-C#">    QualifiedName := RootPart? Parts
+    RootPart := Separator
+    Parts := Part | QualifiedName Separator Part
+    Part := ([a-zA-Z0-9_\\.])+
+    Separator := &#39;:&#39; | &#39;.&#39;
+</code></pre><p>The QualifiedName class includes <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/AllMembers_T_NationalInstruments_SourceModel_Naming_QualifiedName.htm">properties and methods</a> to inspect the parts of a name, compare, and match subsets of one qualified name with another.</p>
+<h3 id="iqualifiedobject">IQualifiedObject</h3>
+<p><a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Naming_IQualifiedObject.htm">IQualifiedObject</a> is an interface implemented by objects that are named within a scope. Some examples of objects that implement IQualifiedObject are <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_Namespace.htm">Namespace</a> and <a href="http://xgen.amer.corp.natinst.com/DiagramSDK/html/T_NationalInstruments_SourceModel_Modeling_Definition.htm">Definition</a>. The name of an IQualifiedObject is generally a leaf name, but this is not a requirement.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
