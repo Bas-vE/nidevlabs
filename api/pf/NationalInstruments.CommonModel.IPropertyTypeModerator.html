@@ -1,0 +1,517 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IPropertyTypeModerator
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IPropertyTypeModerator
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.CommonModel.IPropertyTypeModerator">
+  
+  
+  <h1 id="NationalInstruments_CommonModel_IPropertyTypeModerator" data-uid="NationalInstruments.CommonModel.IPropertyTypeModerator" class="text-break">Interface IPropertyTypeModerator
+  </h1>
+  <div class="markdown level0 summary"><p>Controls wishing to adapt at all during type prop must present an object implementing this interface
+through the interface IProvidePropertyBindingBehavior below.  The set of queries in this interface 
+is all the information type prop needs to know from controls that have adapting-type properties.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.CommonModel.html">NationalInstruments.CommonModel</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_CommonModel_IPropertyTypeModerator_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IPropertyTypeModerator</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_CommonModel_IPropertyTypeModerator_DefaultProperty_" data-uid="NationalInstruments.CommonModel.IPropertyTypeModerator.DefaultProperty*"></a>
+  <h4 id="NationalInstruments_CommonModel_IPropertyTypeModerator_DefaultProperty" data-uid="NationalInstruments.CommonModel.IPropertyTypeModerator.DefaultProperty">DefaultProperty</h4>
+  <div class="markdown level1 summary"><p>Gets the name of the default property for this control</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string DefaultProperty { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_CommonModel_IPropertyTypeModerator_GetControlTypeBasedOnDataType_" data-uid="NationalInstruments.CommonModel.IPropertyTypeModerator.GetControlTypeBasedOnDataType*"></a>
+  <h4 id="NationalInstruments_CommonModel_IPropertyTypeModerator_GetControlTypeBasedOnDataType_NationalInstruments_DataTypes_NIType_" data-uid="NationalInstruments.CommonModel.IPropertyTypeModerator.GetControlTypeBasedOnDataType(NationalInstruments.DataTypes.NIType)">GetControlTypeBasedOnDataType(NIType)</h4>
+  <div class="markdown level1 summary"><p>Gets the type of control based on DataType.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Type GetControlTypeBasedOnDataType(NIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.DataTypes.NIType.html">NIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>Type of associated dataItem</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><p>Type of control</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_CommonModel_IPropertyTypeModerator_GetEntangledProperties_" data-uid="NationalInstruments.CommonModel.IPropertyTypeModerator.GetEntangledProperties*"></a>
+  <h4 id="NationalInstruments_CommonModel_IPropertyTypeModerator_GetEntangledProperties_System_String_" data-uid="NationalInstruments.CommonModel.IPropertyTypeModerator.GetEntangledProperties(System.String)">GetEntangledProperties(String)</h4>
+  <div class="markdown level1 summary"><p>Given a property, returns a list of other properties on the same control whose types &quot;depend&quot; on the first&apos;s, i.e.
+if the first property changes type and the control adapts to it, what other properties would have their types changed.
+Non-adapting and non-entangled properties can simply return null or an empty collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;string&gt; GetEntangledProperties(string propertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>Name of property changing type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><p>An enumerable of entangled properties</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_CommonModel_IPropertyTypeModerator_GetEntangledPropertyType_" data-uid="NationalInstruments.CommonModel.IPropertyTypeModerator.GetEntangledPropertyType*"></a>
+  <h4 id="NationalInstruments_CommonModel_IPropertyTypeModerator_GetEntangledPropertyType_System_String_NationalInstruments_CommonModel_PropertyBindingBehavior_System_String_" data-uid="NationalInstruments.CommonModel.IPropertyTypeModerator.GetEntangledPropertyType(System.String,NationalInstruments.CommonModel.PropertyBindingBehavior,System.String)">GetEntangledPropertyType(String, PropertyBindingBehavior, String)</h4>
+  <div class="markdown level1 summary"><p>Given a property bound to a data item that is changing to a given new behavior, return what the given
+entangled property must change its type to.  Controls with no adapting or entangled properties can simply
+throw a NotSupportedException().</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Type GetEntangledPropertyType(string propertyName, PropertyBindingBehavior newBehavior, string entangledPropertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>Name of property changing type</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.CommonModel.PropertyBindingBehavior.html">PropertyBindingBehavior</a></td>
+        <td><span class="parametername">newBehavior</span></td>
+        <td><p>New behavior of the first property&apos;s data item</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">entangledPropertyName</span></td>
+        <td><p>Name of the entangled property whose new computed type we want</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><p>The new computed type of the entangled property</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_CommonModel_IPropertyTypeModerator_GetPreferredBehavior_" data-uid="NationalInstruments.CommonModel.IPropertyTypeModerator.GetPreferredBehavior*"></a>
+  <h4 id="NationalInstruments_CommonModel_IPropertyTypeModerator_GetPreferredBehavior_System_String_" data-uid="NationalInstruments.CommonModel.IPropertyTypeModerator.GetPreferredBehavior(System.String)">GetPreferredBehavior(String)</h4>
+  <div class="markdown level1 summary"><p>The preferred default behavior a data item being bound to this property on this control should have, i.e.
+if a control is dropped and a data item created for this property, what should it default to.  Null indicates
+no adaption, no buffering, and just use the property&apos;s stated type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">PropertyBindingBehavior GetPreferredBehavior(string propertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>Property name the data item would be bound to</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.CommonModel.PropertyBindingBehavior.html">PropertyBindingBehavior</a></td>
+        <td><p>The data item&apos;s PropertyBindingBehavior or null (in the default case)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_CommonModel_IPropertyTypeModerator_GetPropertyTypeDescriber_" data-uid="NationalInstruments.CommonModel.IPropertyTypeModerator.GetPropertyTypeDescriber*"></a>
+  <h4 id="NationalInstruments_CommonModel_IPropertyTypeModerator_GetPropertyTypeDescriber_System_Type_NationalInstruments_DataTypes_NIType_" data-uid="NationalInstruments.CommonModel.IPropertyTypeModerator.GetPropertyTypeDescriber(System.Type,NationalInstruments.DataTypes.NIType)">GetPropertyTypeDescriber(Type, NIType)</h4>
+  <div class="markdown level1 summary"><p>Get PropertyDescriber for creating new ProxyNIType for ControlReference node.
+This will be called from TypeProp to create ProxyNIType for new DataItem type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IDescribePropertyType GetPropertyTypeDescriber(Type controlProxyType, NIType newPropertyType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">controlProxyType</span></td>
+        <td><p>ProxyType for control</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.DataTypes.NIType.html">NIType</a></td>
+        <td><span class="parametername">newPropertyType</span></td>
+        <td><p>new NIType of adapting controls</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.IDescribePropertyType.html">IDescribePropertyType</a></td>
+        <td><p>PropertyDescriber for new DataItem type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_CommonModel_IPropertyTypeModerator_IsCompatibleBehavior_" data-uid="NationalInstruments.CommonModel.IPropertyTypeModerator.IsCompatibleBehavior*"></a>
+  <h4 id="NationalInstruments_CommonModel_IPropertyTypeModerator_IsCompatibleBehavior_System_String_NationalInstruments_CommonModel_PropertyBindingBehavior_" data-uid="NationalInstruments.CommonModel.IPropertyTypeModerator.IsCompatibleBehavior(System.String,NationalInstruments.CommonModel.PropertyBindingBehavior)">IsCompatibleBehavior(String, PropertyBindingBehavior)</h4>
+  <div class="markdown level1 summary"><p>Whether the property will accept the new behavior, even if other properties will need to change type then.
+All non-adapting properties can simply return PropertyTypeCompatibility.UseCurrentPropertyType</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">PropertyTypeCompatibilityResult IsCompatibleBehavior(string propertyName, PropertyBindingBehavior newBehavior)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>Property name bound to this data item</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.CommonModel.PropertyBindingBehavior.html">PropertyBindingBehavior</a></td>
+        <td><span class="parametername">newBehavior</span></td>
+        <td><p>New, proposed data item behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.CommonModel.PropertyTypeCompatibilityResult.html">PropertyTypeCompatibilityResult</a></td>
+        <td><p>Whether the new behavior is acceptable, unacceptable, or not determined as not adaptable, and the type
+the data item should change to (if applicable)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_CommonModel_IPropertyTypeModerator_SupportsNativeDataWrapper_" data-uid="NationalInstruments.CommonModel.IPropertyTypeModerator.SupportsNativeDataWrapper*"></a>
+  <h4 id="NationalInstruments_CommonModel_IPropertyTypeModerator_SupportsNativeDataWrapper_System_Type_" data-uid="NationalInstruments.CommonModel.IPropertyTypeModerator.SupportsNativeDataWrapper(System.Type)">SupportsNativeDataWrapper(Type)</h4>
+  <div class="markdown level1 summary"><p>Gets whether <see cref="!:NativeDataWrapper"></see> is supported for the specified type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool SupportsNativeDataWrapper(Type clrType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">clrType</span></td>
+        <td><p>The .NET (CLR) type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>Returns whether <see cref="!:NativeDataWrapper"></see> is supported for the specified type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

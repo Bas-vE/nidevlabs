@@ -1,0 +1,561 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Struct EnvoyAndLoadResult
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Struct EnvoyAndLoadResult
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.SourceModel.Envoys.EnvoyAndLoadResult">
+  
+  
+  <h1 id="NationalInstruments_SourceModel_Envoys_EnvoyAndLoadResult" data-uid="NationalInstruments.SourceModel.Envoys.EnvoyAndLoadResult" class="text-break">Struct EnvoyAndLoadResult
+  </h1>
+  <div class="markdown level0 summary"><p>A custom result returned from APIs that synchronously add an Envoy to a project, and then immediately begin the load
+of that <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a>.  This result contains the Envoy that was added synchronously, and a Task representing
+the load of that Envoy.  This enables callers of APIs that do this type of work to transact around the add of the Envoy, 
+but not around the load of the <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a>.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyAndLoadResult.html">EnvoyAndLoadResult</a>&gt;</div>
+    <div><a class="xref" href="../core/NationalInstruments.Core.IResultWithSideEffects-2.html">IResultWithSideEffects</a>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a>, <a class="xref" href="NationalInstruments.SourceModel.Envoys.ILockedSourceFile.html">ILockedSourceFile</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.ValueType.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.SourceModel.Envoys.html">NationalInstruments.SourceModel.Envoys</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_SourceModel_Envoys_EnvoyAndLoadResult_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public struct EnvoyAndLoadResult : IEquatable&lt;EnvoyAndLoadResult&gt;, IResultWithSideEffects&lt;Envoy, ILockedSourceFile&gt;</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_EnvoyAndLoadResult__ctor_" data-uid="NationalInstruments.SourceModel.Envoys.EnvoyAndLoadResult.#ctor*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_EnvoyAndLoadResult__ctor_NationalInstruments_SourceModel_Envoys_Envoy_" data-uid="NationalInstruments.SourceModel.Envoys.EnvoyAndLoadResult.#ctor(NationalInstruments.SourceModel.Envoys.Envoy)">EnvoyAndLoadResult(Envoy)</h4>
+  <div class="markdown level1 summary"><p>Constructs a new instance of the <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyAndLoadResult.html">EnvoyAndLoadResult</a> struct.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EnvoyAndLoadResult(Envoy newEnvoy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">newEnvoy</span></td>
+        <td><p>The new <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a> that was created.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_SourceModel_Envoys_EnvoyAndLoadResult__ctor_NationalInstruments_SourceModel_Envoys_Envoy__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html#NationalInstruments_SourceModel_Envoys_Envoy_LoadAsync">LoadAsync()</a> is immediately called on <code data-dev-comment-type="paramref" class="paramref">newEnvoy</code>.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_EnvoyAndLoadResult__ctor_" data-uid="NationalInstruments.SourceModel.Envoys.EnvoyAndLoadResult.#ctor*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_EnvoyAndLoadResult__ctor_NationalInstruments_SourceModel_Envoys_Envoy_System_Threading_Tasks_Task_NationalInstruments_SourceModel_Envoys_ILockedSourceFile__" data-uid="NationalInstruments.SourceModel.Envoys.EnvoyAndLoadResult.#ctor(NationalInstruments.SourceModel.Envoys.Envoy,System.Threading.Tasks.Task{NationalInstruments.SourceModel.Envoys.ILockedSourceFile})">EnvoyAndLoadResult(Envoy, Task&lt;ILockedSourceFile&gt;)</h4>
+  <div class="markdown level1 summary"><p>Constructs a new instance of the <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyAndLoadResult.html">EnvoyAndLoadResult</a> struct.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EnvoyAndLoadResult(Envoy newEnvoy, Task&lt;ILockedSourceFile&gt; loadTask)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">newEnvoy</span></td>
+        <td><p>The new <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a> that was created.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.ILockedSourceFile.html">ILockedSourceFile</a>&gt;</td>
+        <td><span class="parametername">loadTask</span></td>
+        <td><p>The <span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span> that represents the load of the new Envoy from stream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_EnvoyAndLoadResult_Envoy_" data-uid="NationalInstruments.SourceModel.Envoys.EnvoyAndLoadResult.Envoy*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_EnvoyAndLoadResult_Envoy" data-uid="NationalInstruments.SourceModel.Envoys.EnvoyAndLoadResult.Envoy">Envoy</h4>
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a> that was synchronously created and added to the project.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Envoy Envoy { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_EnvoyAndLoadResult_LoadTask_" data-uid="NationalInstruments.SourceModel.Envoys.EnvoyAndLoadResult.LoadTask*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_EnvoyAndLoadResult_LoadTask" data-uid="NationalInstruments.SourceModel.Envoys.EnvoyAndLoadResult.LoadTask">LoadTask</h4>
+  <div class="markdown level1 summary"><p>Gets the <span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span> that represents the work of loading the <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ILockedSourceFile&gt; LoadTask { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.ILockedSourceFile.html">ILockedSourceFile</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_EnvoyAndLoadResult_Equals_" data-uid="NationalInstruments.SourceModel.Envoys.EnvoyAndLoadResult.Equals*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_EnvoyAndLoadResult_Equals_NationalInstruments_SourceModel_Envoys_EnvoyAndLoadResult_" data-uid="NationalInstruments.SourceModel.Envoys.EnvoyAndLoadResult.Equals(NationalInstruments.SourceModel.Envoys.EnvoyAndLoadResult)">Equals(EnvoyAndLoadResult)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(EnvoyAndLoadResult other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyAndLoadResult.html">EnvoyAndLoadResult</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_EnvoyAndLoadResult_Equals_" data-uid="NationalInstruments.SourceModel.Envoys.EnvoyAndLoadResult.Equals*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_EnvoyAndLoadResult_Equals_System_Object_" data-uid="NationalInstruments.SourceModel.Envoys.EnvoyAndLoadResult.Equals(System.Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.ValueType.Equals(System.Object)</span></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_EnvoyAndLoadResult_GetHashCode_" data-uid="NationalInstruments.SourceModel.Envoys.EnvoyAndLoadResult.GetHashCode*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_EnvoyAndLoadResult_GetHashCode" data-uid="NationalInstruments.SourceModel.Envoys.EnvoyAndLoadResult.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.ValueType.GetHashCode()</span></div>
+  <h3 id="operators">Operators
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_EnvoyAndLoadResult_op_Equality_" data-uid="NationalInstruments.SourceModel.Envoys.EnvoyAndLoadResult.op_Equality*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_EnvoyAndLoadResult_op_Equality_NationalInstruments_SourceModel_Envoys_EnvoyAndLoadResult_NationalInstruments_SourceModel_Envoys_EnvoyAndLoadResult_" data-uid="NationalInstruments.SourceModel.Envoys.EnvoyAndLoadResult.op_Equality(NationalInstruments.SourceModel.Envoys.EnvoyAndLoadResult,NationalInstruments.SourceModel.Envoys.EnvoyAndLoadResult)">Equality(EnvoyAndLoadResult, EnvoyAndLoadResult)</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether the two <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyAndLoadResult.html">EnvoyAndLoadResult</a>s are equal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(EnvoyAndLoadResult first, EnvoyAndLoadResult second)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyAndLoadResult.html">EnvoyAndLoadResult</a></td>
+        <td><span class="parametername">first</span></td>
+        <td><p>The first <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyAndLoadResult.html">EnvoyAndLoadResult</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyAndLoadResult.html">EnvoyAndLoadResult</a></td>
+        <td><span class="parametername">second</span></td>
+        <td><p>The second <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyAndLoadResult.html">EnvoyAndLoadResult</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if the two results are equal.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_EnvoyAndLoadResult_op_Inequality_" data-uid="NationalInstruments.SourceModel.Envoys.EnvoyAndLoadResult.op_Inequality*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_EnvoyAndLoadResult_op_Inequality_NationalInstruments_SourceModel_Envoys_EnvoyAndLoadResult_NationalInstruments_SourceModel_Envoys_EnvoyAndLoadResult_" data-uid="NationalInstruments.SourceModel.Envoys.EnvoyAndLoadResult.op_Inequality(NationalInstruments.SourceModel.Envoys.EnvoyAndLoadResult,NationalInstruments.SourceModel.Envoys.EnvoyAndLoadResult)">Inequality(EnvoyAndLoadResult, EnvoyAndLoadResult)</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether the two <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyAndLoadResult.html">EnvoyAndLoadResult</a>s are not equal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(EnvoyAndLoadResult first, EnvoyAndLoadResult second)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyAndLoadResult.html">EnvoyAndLoadResult</a></td>
+        <td><span class="parametername">first</span></td>
+        <td><p>The first <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyAndLoadResult.html">EnvoyAndLoadResult</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyAndLoadResult.html">EnvoyAndLoadResult</a></td>
+        <td><span class="parametername">second</span></td>
+        <td><p>The second <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyAndLoadResult.html">EnvoyAndLoadResult</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if the two results are not equal.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_EnvoyAndLoadResult_NationalInstruments_Core_IResultWithSideEffects_NationalInstruments_SourceModel_Envoys_Envoy_NationalInstruments_SourceModel_Envoys_ILockedSourceFile__Result_" data-uid="NationalInstruments.SourceModel.Envoys.EnvoyAndLoadResult.NationalInstruments#Core#IResultWithSideEffects{NationalInstruments#SourceModel#Envoys#Envoy,NationalInstruments#SourceModel#Envoys#ILockedSourceFile}#Result*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_EnvoyAndLoadResult_NationalInstruments_Core_IResultWithSideEffects_NationalInstruments_SourceModel_Envoys_Envoy_NationalInstruments_SourceModel_Envoys_ILockedSourceFile__Result" data-uid="NationalInstruments.SourceModel.Envoys.EnvoyAndLoadResult.NationalInstruments#Core#IResultWithSideEffects{NationalInstruments#SourceModel#Envoys#Envoy,NationalInstruments#SourceModel#Envoys#ILockedSourceFile}#Result">IResultWithSideEffects&lt;Envoy, ILockedSourceFile&gt;.Result</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Envoy IResultWithSideEffects&lt;Envoy, ILockedSourceFile&gt;.Result { get; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_EnvoyAndLoadResult_NationalInstruments_Core_IResultWithSideEffects_NationalInstruments_SourceModel_Envoys_Envoy_NationalInstruments_SourceModel_Envoys_ILockedSourceFile__SideEffectWork_" data-uid="NationalInstruments.SourceModel.Envoys.EnvoyAndLoadResult.NationalInstruments#Core#IResultWithSideEffects{NationalInstruments#SourceModel#Envoys#Envoy,NationalInstruments#SourceModel#Envoys#ILockedSourceFile}#SideEffectWork*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_EnvoyAndLoadResult_NationalInstruments_Core_IResultWithSideEffects_NationalInstruments_SourceModel_Envoys_Envoy_NationalInstruments_SourceModel_Envoys_ILockedSourceFile__SideEffectWork" data-uid="NationalInstruments.SourceModel.Envoys.EnvoyAndLoadResult.NationalInstruments#Core#IResultWithSideEffects{NationalInstruments#SourceModel#Envoys#Envoy,NationalInstruments#SourceModel#Envoys#ILockedSourceFile}#SideEffectWork">IResultWithSideEffects&lt;Envoy, ILockedSourceFile&gt;.SideEffectWork</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;ILockedSourceFile&gt; IResultWithSideEffects&lt;Envoy, ILockedSourceFile&gt;.SideEffectWork { get; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.ILockedSourceFile.html">ILockedSourceFile</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
+  </div>
+  <div>
+      <a class="xref" href="../core/NationalInstruments.Core.IResultWithSideEffects-2.html">IResultWithSideEffects&lt;TResult, TSideEffectResult&gt;</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

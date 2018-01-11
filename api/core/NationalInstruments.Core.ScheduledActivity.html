@@ -1,0 +1,837 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ScheduledActivity
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ScheduledActivity
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.Core.ScheduledActivity">
+  
+  
+  <h1 id="NationalInstruments_Core_ScheduledActivity" data-uid="NationalInstruments.Core.ScheduledActivity" class="text-break">Class ScheduledActivity
+  </h1>
+  <div class="markdown level0 summary"><p>Base implementation for an activity that can be run through the <a class="xref" href="NationalInstruments.Core.ScheduledActivityManager.html">ScheduledActivityManager</a>.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">ScheduledActivity</span></div>
+      <div class="level2"><a class="xref" href="NationalInstruments.Core.BasicAsyncFuncActivity.html">BasicAsyncFuncActivity</a></div>
+      <div class="level2"><a class="xref" href="NationalInstruments.Core.BasicFuncActivity.html">BasicFuncActivity</a></div>
+      <div class="level2"><a class="xref" href="NationalInstruments.Core.EnumerableActivity.html">EnumerableActivity</a></div>
+      <div class="level2"><a class="xref" href="NationalInstruments.Core.ScheduledActivity-1.html">ScheduledActivity&lt;TResult&gt;</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="../pf/NationalInstruments.Core.html">NationalInstruments.Core</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.Core.dll</h6>
+  <h5 id="NationalInstruments_Core_ScheduledActivity_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class ScheduledActivity</code></pre>
+  </div>
+  <h5 id="NationalInstruments_Core_ScheduledActivity_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><ul>
+<li>There are a number of existing concrete implementations that can be useful including:<ul>
+<li><a class="xref" href="NationalInstruments.Core.BasicActivity.html">BasicActivity</a></li>
+<li><a class="xref" href="NationalInstruments.Core.BasicFuncActivity.html">BasicFuncActivity</a></li>
+<li><a class="xref" href="NationalInstruments.Core.EnumerableActivity.html">EnumerableActivity</a>
+Consider using one of these, or inheriting from one of these, before creating a new activity class.</li>
+</ul>
+</li>
+</ul>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="NationalInstruments_Core_ScheduledActivity__ctor_" data-uid="NationalInstruments.Core.ScheduledActivity.#ctor*"></a>
+  <h4 id="NationalInstruments_Core_ScheduledActivity__ctor_NationalInstruments_Core_ActivityResourceAffinities_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_" data-uid="NationalInstruments.Core.ScheduledActivity.#ctor(NationalInstruments.Core.ActivityResourceAffinities,NationalInstruments.Core.AsyncTaskPriorityToken,System.String)">ScheduledActivity(ActivityResourceAffinities, AsyncTaskPriorityToken, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ScheduledActivity(ActivityResourceAffinities affinities, AsyncTaskPriorityToken priority, string description)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.ActivityResourceAffinities.html">ActivityResourceAffinities</a></td>
+        <td><span class="parametername">affinities</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.AsyncTaskPriorityToken.html">AsyncTaskPriorityToken</a></td>
+        <td><span class="parametername">priority</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">description</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ScheduledActivity__ctor_" data-uid="NationalInstruments.Core.ScheduledActivity.#ctor*"></a>
+  <h4 id="NationalInstruments_Core_ScheduledActivity__ctor_NationalInstruments_Core_ActivityResourceAffinities_NationalInstruments_Core_AsyncTaskPriorityToken_System_Threading_CancellationToken_System_String_" data-uid="NationalInstruments.Core.ScheduledActivity.#ctor(NationalInstruments.Core.ActivityResourceAffinities,NationalInstruments.Core.AsyncTaskPriorityToken,System.Threading.CancellationToken,System.String)">ScheduledActivity(ActivityResourceAffinities, AsyncTaskPriorityToken, CancellationToken, String)</h4>
+  <div class="markdown level1 summary"><p>Constructor for the base Activity</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ScheduledActivity(ActivityResourceAffinities affinities, AsyncTaskPriorityToken priority, CancellationToken cancellationToken, string description)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.ActivityResourceAffinities.html">ActivityResourceAffinities</a></td>
+        <td><span class="parametername">affinities</span></td>
+        <td><p>The ActivityResourceAffinities to use for this activity</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.AsyncTaskPriorityToken.html">AsyncTaskPriorityToken</a></td>
+        <td><span class="parametername">priority</span></td>
+        <td><p>The priority for this activity</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A <a class="xref" href="NationalInstruments.Core.ScheduledActivity.html#NationalInstruments_Core_ScheduledActivity_CancellationToken">CancellationToken</a> used to signal cancellation for this activity.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>The description for this activity</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_Core_ScheduledActivity_CancellationToken_" data-uid="NationalInstruments.Core.ScheduledActivity.CancellationToken*"></a>
+  <h4 id="NationalInstruments_Core_ScheduledActivity_CancellationToken" data-uid="NationalInstruments.Core.ScheduledActivity.CancellationToken">CancellationToken</h4>
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a> used to cancel this <a class="xref" href="NationalInstruments.Core.ScheduledActivity.html">ScheduledActivity</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected CancellationToken CancellationToken { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></td>
+        <td><p>Thrown if this property is accessed before the activity is registered with the <a class="xref" href="NationalInstruments.Core.ScheduledActivityManager.html">ScheduledActivityManager</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ScheduledActivity_Description_" data-uid="NationalInstruments.Core.ScheduledActivity.Description*"></a>
+  <h4 id="NationalInstruments_Core_ScheduledActivity_Description" data-uid="NationalInstruments.Core.ScheduledActivity.Description">Description</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Description { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ScheduledActivity_Id_" data-uid="NationalInstruments.Core.ScheduledActivity.Id*"></a>
+  <h4 id="NationalInstruments_Core_ScheduledActivity_Id" data-uid="NationalInstruments.Core.ScheduledActivity.Id">Id</h4>
+  <div class="markdown level1 summary"><p>Gets an integer that can be used to uniquely identify this <a class="xref" href="NationalInstruments.Core.ScheduledActivity.html">ScheduledActivity</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Id { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ScheduledActivity_IsBusy_" data-uid="NationalInstruments.Core.ScheduledActivity.IsBusy*"></a>
+  <h4 id="NationalInstruments_Core_ScheduledActivity_IsBusy" data-uid="NationalInstruments.Core.ScheduledActivity.IsBusy">IsBusy</h4>
+  <div class="markdown level1 summary"><p>True if the activity is currently running. Running means a call to <a class="xref" href="NationalInstruments.Core.ScheduledActivity.html#NationalInstruments_Core_ScheduledActivity_DoWorkAsync">DoWorkAsync()</a> is
+currently in progress. The value will be false in between calls to <a class="xref" href="NationalInstruments.Core.ScheduledActivity.html#NationalInstruments_Core_ScheduledActivity_DoWorkAsync">DoWorkAsync()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsBusy { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ScheduledActivity_IsCancelled_" data-uid="NationalInstruments.Core.ScheduledActivity.IsCancelled*"></a>
+  <h4 id="NationalInstruments_Core_ScheduledActivity_IsCancelled" data-uid="NationalInstruments.Core.ScheduledActivity.IsCancelled">IsCancelled</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this activity has been requested to cancel, and the activity manager has seen 
+this request and fully processed the cancellation.  Before this value will return true, we will transition through
+<span class="xref">NationalInstruments.Core.ScheduledActivity.IsCancelledPending</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsCancelled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ScheduledActivity_IsComplete_" data-uid="NationalInstruments.Core.ScheduledActivity.IsComplete*"></a>
+  <h4 id="NationalInstruments_Core_ScheduledActivity_IsComplete" data-uid="NationalInstruments.Core.ScheduledActivity.IsComplete">IsComplete</h4>
+  <div class="markdown level1 summary"><p>True if this activity has run and completed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsComplete { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ScheduledActivity_IsFaulted_" data-uid="NationalInstruments.Core.ScheduledActivity.IsFaulted*"></a>
+  <h4 id="NationalInstruments_Core_ScheduledActivity_IsFaulted" data-uid="NationalInstruments.Core.ScheduledActivity.IsFaulted">IsFaulted</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this activity has encountered an exception.  If the activity was cancelled and no
+exception besides <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a> were thrown, this property will return <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsFaulted { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ScheduledActivity_IsOwnedByActivityManager_" data-uid="NationalInstruments.Core.ScheduledActivity.IsOwnedByActivityManager*"></a>
+  <h4 id="NationalInstruments_Core_ScheduledActivity_IsOwnedByActivityManager" data-uid="NationalInstruments.Core.ScheduledActivity.IsOwnedByActivityManager">IsOwnedByActivityManager</h4>
+  <div class="markdown level1 summary"><p>True if the activity is currently owned by the <a class="xref" href="NationalInstruments.Core.ScheduledActivityManager.html">ScheduledActivityManager</a>.
+An activity is owned by the scheduled activity manager if it has be passed to 
+<a class="xref" href="NationalInstruments.Core.ScheduledActivityManager.html#NationalInstruments_Core_ScheduledActivityManager_RunActivityAsync_NationalInstruments_Core_ScheduledActivity_">RunActivityAsync(ScheduledActivity)</a> and has 
+not yet completed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool IsOwnedByActivityManager { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ScheduledActivity_Priority_" data-uid="NationalInstruments.Core.ScheduledActivity.Priority*"></a>
+  <h4 id="NationalInstruments_Core_ScheduledActivity_Priority" data-uid="NationalInstruments.Core.ScheduledActivity.Priority">Priority</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AsyncTaskPriorityToken Priority { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.AsyncTaskPriorityToken.html">AsyncTaskPriorityToken</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ScheduledActivity_ResourceAffinities_" data-uid="NationalInstruments.Core.ScheduledActivity.ResourceAffinities*"></a>
+  <h4 id="NationalInstruments_Core_ScheduledActivity_ResourceAffinities" data-uid="NationalInstruments.Core.ScheduledActivity.ResourceAffinities">ResourceAffinities</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ActivityResourceAffinities ResourceAffinities { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.ActivityResourceAffinities.html">ActivityResourceAffinities</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_Core_ScheduledActivity_Cancel_" data-uid="NationalInstruments.Core.ScheduledActivity.Cancel*"></a>
+  <h4 id="NationalInstruments_Core_ScheduledActivity_Cancel" data-uid="NationalInstruments.Core.ScheduledActivity.Cancel">Cancel()</h4>
+  <div class="markdown level1 summary"><p>Cancels this <a class="xref" href="NationalInstruments.Core.ScheduledActivity.html">ScheduledActivity</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Cancel()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Core_ScheduledActivity_DoWorkAsync_" data-uid="NationalInstruments.Core.ScheduledActivity.DoWorkAsync*"></a>
+  <h4 id="NationalInstruments_Core_ScheduledActivity_DoWorkAsync" data-uid="NationalInstruments.Core.ScheduledActivity.DoWorkAsync">DoWorkAsync()</h4>
+  <div class="markdown level1 summary"><p>The work that needs to be run asynchronously. If false is returned, DoWork will automatically be
+scheduled to run again.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; DoWorkAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><p>True when the work is complete</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Core_ScheduledActivity_DoWorkAsync_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><ul>
+<li>For UI thread activities, a call to DoWork should complete rather quickly. This will help the environment
+stay responsive. The activity manager will report UI thread activities that run for longer than
+<see cref="!:ScheduledActivityManager.MaxUIActivityDoWorkTime"></see>.</li>
+<li>DoWork is not guaranteed to be called from the same thread each time unless that is specified
+by <a class="xref" href="NationalInstruments.Core.ActivityResourceAffinities.html">ActivityResourceAffinities</a>.</li>
+<li>Only one call to DoWork for a specific instance of Activity will be made at a time.</li>
+</ul>
+</div>
+  
+  
+  <a id="NationalInstruments_Core_ScheduledActivity_IsValid_" data-uid="NationalInstruments.Core.ScheduledActivity.IsValid*"></a>
+  <h4 id="NationalInstruments_Core_ScheduledActivity_IsValid" data-uid="NationalInstruments.Core.ScheduledActivity.IsValid">IsValid()</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether it is valid to call the <a class="xref" href="NationalInstruments.Core.ScheduledActivity.html#NationalInstruments_Core_ScheduledActivity_DoWorkAsync">DoWorkAsync()</a> method for this activity. If false is returned,
+this activity will be considered done and will not be run again.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract bool IsValid()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if the activity is in a state where it can be run.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Core_ScheduledActivity_IsValid_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This function will be called on the same thread as <a class="xref" href="NationalInstruments.Core.ScheduledActivity.html#NationalInstruments_Core_ScheduledActivity_DoWorkAsync">DoWorkAsync()</a>, before each call to DoWorkAsync.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_Core_ScheduledActivity_OnCancelled_" data-uid="NationalInstruments.Core.ScheduledActivity.OnCancelled*"></a>
+  <h4 id="NationalInstruments_Core_ScheduledActivity_OnCancelled" data-uid="NationalInstruments.Core.ScheduledActivity.OnCancelled">OnCancelled()</h4>
+  <div class="markdown level1 summary"><p>Called when the activity has been cancelled. A cancelled activity will no longer be scheduled to call DoWork. 
+The user should do whatever cleanup is necessary at this time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnCancelled()</code></pre>
+  </div>
+  <h5 id="NationalInstruments_Core_ScheduledActivity_OnCancelled_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><ul>
+<li>A call to OnCancelled should complete rather quickly. This will help the environment stay responsive.</li>
+<li>OnCancelled will NOT be called while a call to DoWorkAsync is in progress.</li>
+</ul>
+</div>
+  
+  
+  <a id="NationalInstruments_Core_ScheduledActivity_OnCancelling_" data-uid="NationalInstruments.Core.ScheduledActivity.OnCancelling*"></a>
+  <h4 id="NationalInstruments_Core_ScheduledActivity_OnCancelling" data-uid="NationalInstruments.Core.ScheduledActivity.OnCancelling">OnCancelling()</h4>
+  <div class="markdown level1 summary"><p>Called when activity cancellation is started. This happens when <a class="xref" href="NationalInstruments.Core.ScheduledActivity.html#NationalInstruments_Core_ScheduledActivity_Cancel">Cancel()</a> is called on this activity, 
+or when the <a class="xref" href="NationalInstruments.Core.ScheduledActivity.html#NationalInstruments_Core_ScheduledActivity_CancellationToken">CancellationToken</a> associated with this activity is signaled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnCancelling()</code></pre>
+  </div>
+  <h5 id="NationalInstruments_Core_ScheduledActivity_OnCancelling_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><ul>
+<li>Users can override this if they need the ability to notify their activity it has been cancelled instead of
+requiring the activity to poll the <a class="xref" href="NationalInstruments.Core.ScheduledActivity.html#NationalInstruments_Core_ScheduledActivity_IsCancelled">IsCancelled</a>.</li>
+<li>This differs from the <a class="xref" href="NationalInstruments.Core.ScheduledActivity.html#NationalInstruments_Core_ScheduledActivity_OnCancelled">OnCancelled()</a> method which is only called after the cancellation is complete
+and the async activity is not running and will not be run again.</li>
+<li>This can be called from any thread. It is up to the user to implement this in a thread-safe manner.</li>
+<li>When this is called, it is possible that OnDoWork is currently being called. It is also possible that OnDoWork is
+not currently being called.</li>
+</ul>
+</div>
+  
+  
+  <a id="NationalInstruments_Core_ScheduledActivity_OnComplete_" data-uid="NationalInstruments.Core.ScheduledActivity.OnComplete*"></a>
+  <h4 id="NationalInstruments_Core_ScheduledActivity_OnComplete" data-uid="NationalInstruments.Core.ScheduledActivity.OnComplete">OnComplete()</h4>
+  <div class="markdown level1 summary"><p>This function is the equivalent of a &quot;finally&quot; block for Activities. Derived classes
+should override this to do any operation that they need to unconditionally do at the
+end of OnDoWork. This function will be called in the same thread as OnDoWork. It will
+be called if the work completes successfully, or is cancelled, or throws an error.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnComplete()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Core_ScheduledActivity_OnDoWork_" data-uid="NationalInstruments.Core.ScheduledActivity.OnDoWork*"></a>
+  <h4 id="NationalInstruments_Core_ScheduledActivity_OnDoWork" data-uid="NationalInstruments.Core.ScheduledActivity.OnDoWork">OnDoWork()</h4>
+  <div class="markdown level1 summary"><p>Automatically called by <a class="xref" href="NationalInstruments.Core.ScheduledActivity.html#NationalInstruments_Core_ScheduledActivity_OnDoWorkAsync">OnDoWorkAsync()</a> to do the actual user work.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool OnDoWork()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True when the work is complete</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ScheduledActivity_OnDoWorkAsync_" data-uid="NationalInstruments.Core.ScheduledActivity.OnDoWorkAsync*"></a>
+  <h4 id="NationalInstruments_Core_ScheduledActivity_OnDoWorkAsync" data-uid="NationalInstruments.Core.ScheduledActivity.OnDoWorkAsync">OnDoWorkAsync()</h4>
+  <div class="markdown level1 summary"><p>Automatically called by <a class="xref" href="NationalInstruments.Core.ScheduledActivity.html#NationalInstruments_Core_ScheduledActivity_DoWorkAsync">DoWorkAsync()</a> to do the actual user work.
+This override allows the use of await</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual Task&lt;bool&gt; OnDoWorkAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><p>True when the work is complete</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ScheduledActivity_ToString_" data-uid="NationalInstruments.Core.ScheduledActivity.ToString*"></a>
+  <h4 id="NationalInstruments_Core_ScheduledActivity_ToString" data-uid="NationalInstruments.Core.ScheduledActivity.ToString">ToString()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.ToString()</span></div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_ToEnumerable__1___0_">EnumerableHelper.ToEnumerable&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_Repeat__1___0_System_Int32_">EnumerableHelper.Repeat&lt;T&gt;(T, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyNothing__1___0_">Verifier.VerifyNothing&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Func___0_System_Boolean__System_Action_System_String__System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Func___0_System_Boolean__System_Action_System_String_System_String__System_String_System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Boolean_System_Action_System_String__System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Boolean, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Boolean_System_Action_System_String_System_String__System_String_System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Boolean, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Func___0_System_Boolean__System_Action_System_String__System_String_">Verifier.Verify&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Func___0_System_Boolean__System_Action_System_String_System_String__System_String_System_String_">Verifier.Verify&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Boolean_System_Action_System_String__System_String_">Verifier.Verify&lt;T&gt;(T, Boolean, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Boolean_System_Action_System_String_System_String__System_String_System_String_">Verifier.Verify&lt;T&gt;(T, Boolean, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentIsNotNull__1___0_System_String_">Verifier.VerifyArgumentIsNotNull&lt;T&gt;(T, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyValueIsNotNull__1___0_System_String_">Verifier.VerifyValueIsNotNull&lt;T&gt;(T, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentNotReferenceEqualsTo_System_Object_System_Object_System_String_">Verifier.VerifyArgumentNotReferenceEqualsTo(Object, Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyValueNotReferenceEqualsTo_System_Object_System_Object_System_String_">Verifier.VerifyValueNotReferenceEqualsTo(Object, Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentIsOfType__1_System_Object_System_String_">Verifier.VerifyArgumentIsOfType&lt;T&gt;(Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyValueIsOfType__1_System_Object_System_String_">Verifier.VerifyValueIsOfType&lt;T&gt;(Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.QueryServiceExtensions.html#NationalInstruments_Core_QueryServiceExtensions_QueryService__1_System_Object_">QueryServiceExtensions.QueryService&lt;T&gt;(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_FindClosestMatchingContainerForResource_System_Object_System_Func_System_Object_System_Globalization_CultureInfo_System_Object__System_Globalization_CultureInfo_">LocalizationHelpers.FindClosestMatchingContainerForResource(Object, Func&lt;Object, CultureInfo, Object&gt;, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_FindClosestMatchingContainerForResource_System_Object_System_Func_System_Object_System_Globalization_CultureInfo_System_Object__System_Globalization_CultureInfo_System_Func_System_Object_System_Object__">LocalizationHelpers.FindClosestMatchingContainerForResource(Object, Func&lt;Object, CultureInfo, Object&gt;, CultureInfo, Func&lt;Object, Object&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedEnumString__1___0_">LocalizationHelpers.GetLocalizedEnumString&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedString_System_Object_System_String_System_Globalization_CultureInfo_">LocalizationHelpers.GetLocalizedString(Object, String, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedString_System_Object_System_String_System_Boolean_System_Globalization_CultureInfo_">LocalizationHelpers.GetLocalizedString(Object, String, Boolean, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_SetPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_System_Object_">DynamicPropertyExtensions.SetPropertyValue(Object, PropertySymbol, Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.GetPropertyValue(Object, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_ClearPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.ClearPropertyValue(Object, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_IsPropertySet_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.IsPropertySet(Object, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetAllSetProperties_System_Object_">DynamicPropertyExtensions.GetAllSetProperties(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetAllProperties_System_Object_">DynamicPropertyExtensions.GetAllProperties(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

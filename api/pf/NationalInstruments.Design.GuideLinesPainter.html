@@ -1,0 +1,464 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class GuideLinesPainter
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class GuideLinesPainter
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.Design.GuideLinesPainter">
+  
+  
+  <h1 id="NationalInstruments_Design_GuideLinesPainter" data-uid="NationalInstruments.Design.GuideLinesPainter" class="text-break">Class GuideLinesPainter
+  </h1>
+  <div class="markdown level0 summary"><p>A class used to draw the guidelines (snap lines and arrangement lines) relevant between elements on the
+front panel and the diagram. The painter handles both the drawing of the lines as well as the choice of 
+whether to actually draw the lines. </p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">GuideLinesPainter</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="../core/NationalInstruments.Design.html">NationalInstruments.Design</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_Design_GuideLinesPainter_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class GuideLinesPainter</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="NationalInstruments_Design_GuideLinesPainter__ctor_" data-uid="NationalInstruments.Design.GuideLinesPainter.#ctor*"></a>
+  <h4 id="NationalInstruments_Design_GuideLinesPainter__ctor" data-uid="NationalInstruments.Design.GuideLinesPainter.#ctor">GuideLinesPainter()</h4>
+  <div class="markdown level1 summary"><p>Initializes a painter with nothing on which to draw. Clients will need to use UpdateCache to give it 
+a PlatformVisual before any guidelines can be drawn.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GuideLinesPainter()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_GuideLinesPainter__ctor_" data-uid="NationalInstruments.Design.GuideLinesPainter.#ctor*"></a>
+  <h4 id="NationalInstruments_Design_GuideLinesPainter__ctor_NationalInstruments_Core_PlatformVisual_" data-uid="NationalInstruments.Design.GuideLinesPainter.#ctor(NationalInstruments.Core.PlatformVisual)">GuideLinesPainter(PlatformVisual)</h4>
+  <div class="markdown level1 summary"><p>Initializes a painter with a surface immediately.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GuideLinesPainter(PlatformVisual drawingSurface)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">drawingSurface</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_Design_GuideLinesPainter_ClearAdorner_" data-uid="NationalInstruments.Design.GuideLinesPainter.ClearAdorner*"></a>
+  <h4 id="NationalInstruments_Design_GuideLinesPainter_ClearAdorner" data-uid="NationalInstruments.Design.GuideLinesPainter.ClearAdorner">ClearAdorner()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClearAdorner()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_GuideLinesPainter_ClearLines_" data-uid="NationalInstruments.Design.GuideLinesPainter.ClearLines*"></a>
+  <h4 id="NationalInstruments_Design_GuideLinesPainter_ClearLines" data-uid="NationalInstruments.Design.GuideLinesPainter.ClearLines">ClearLines()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClearLines()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_GuideLinesPainter_EnsureSnapAdorner_" data-uid="NationalInstruments.Design.GuideLinesPainter.EnsureSnapAdorner*"></a>
+  <h4 id="NationalInstruments_Design_GuideLinesPainter_EnsureSnapAdorner_NationalInstruments_Core_PlatformVisual_" data-uid="NationalInstruments.Design.GuideLinesPainter.EnsureSnapAdorner(NationalInstruments.Core.PlatformVisual)">EnsureSnapAdorner(PlatformVisual)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void EnsureSnapAdorner(PlatformVisual parent)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">parent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_GuideLinesPainter_LoadArrangementLines_" data-uid="NationalInstruments.Design.GuideLinesPainter.LoadArrangementLines*"></a>
+  <h4 id="NationalInstruments_Design_GuideLinesPainter_LoadArrangementLines_NationalInstruments_Core_PlatformVisual_NationalInstruments_Core_SMRect_NationalInstruments_Core_SMRect_NationalInstruments_Core_SMRect_NationalInstruments_Restricted_Design_ArrangeType_" data-uid="NationalInstruments.Design.GuideLinesPainter.LoadArrangementLines(NationalInstruments.Core.PlatformVisual,NationalInstruments.Core.SMRect,NationalInstruments.Core.SMRect,NationalInstruments.Core.SMRect,NationalInstruments.Restricted.Design.ArrangeType)">LoadArrangementLines(PlatformVisual, SMRect, SMRect, SMRect, ArrangeType)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LoadArrangementLines(PlatformVisual parent, SMRect snapRect, SMRect elementRectOne, SMRect elementRectTwo, ArrangeType arrange)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">parent</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.SMRect.html">SMRect</a></td>
+        <td><span class="parametername">snapRect</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.SMRect.html">SMRect</a></td>
+        <td><span class="parametername">elementRectOne</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.SMRect.html">SMRect</a></td>
+        <td><span class="parametername">elementRectTwo</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Restricted.Design.ArrangeType.html">ArrangeType</a></td>
+        <td><span class="parametername">arrange</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_GuideLinesPainter_LoadSnapLines_" data-uid="NationalInstruments.Design.GuideLinesPainter.LoadSnapLines*"></a>
+  <h4 id="NationalInstruments_Design_GuideLinesPainter_LoadSnapLines_NationalInstruments_Core_PlatformVisual_NationalInstruments_Core_SMRect_NationalInstruments_Core_SMRect_NationalInstruments_Restricted_Design_AlignTypes_" data-uid="NationalInstruments.Design.GuideLinesPainter.LoadSnapLines(NationalInstruments.Core.PlatformVisual,NationalInstruments.Core.SMRect,NationalInstruments.Core.SMRect,NationalInstruments.Restricted.Design.AlignTypes)">LoadSnapLines(PlatformVisual, SMRect, SMRect, AlignTypes)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LoadSnapLines(PlatformVisual parent, SMRect rectOne, SMRect rectTwo, AlignTypes alignToIllustrate)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">parent</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.SMRect.html">SMRect</a></td>
+        <td><span class="parametername">rectOne</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.SMRect.html">SMRect</a></td>
+        <td><span class="parametername">rectTwo</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Restricted.Design.AlignTypes.html">AlignTypes</a></td>
+        <td><span class="parametername">alignToIllustrate</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_GuideLinesPainter_LoadSnapLines_" data-uid="NationalInstruments.Design.GuideLinesPainter.LoadSnapLines*"></a>
+  <h4 id="NationalInstruments_Design_GuideLinesPainter_LoadSnapLines_NationalInstruments_Core_SMRect_NationalInstruments_Core_SMRect_NationalInstruments_Restricted_Design_AlignTypes_" data-uid="NationalInstruments.Design.GuideLinesPainter.LoadSnapLines(NationalInstruments.Core.SMRect,NationalInstruments.Core.SMRect,NationalInstruments.Restricted.Design.AlignTypes)">LoadSnapLines(SMRect, SMRect, AlignTypes)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LoadSnapLines(SMRect rectOne, SMRect rectTwo, AlignTypes alignToIllustrate)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.SMRect.html">SMRect</a></td>
+        <td><span class="parametername">rectOne</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.SMRect.html">SMRect</a></td>
+        <td><span class="parametername">rectTwo</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Restricted.Design.AlignTypes.html">AlignTypes</a></td>
+        <td><span class="parametername">alignToIllustrate</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_GuideLinesPainter_ShowGuideLinesForItem_" data-uid="NationalInstruments.Design.GuideLinesPainter.ShowGuideLinesForItem*"></a>
+  <h4 id="NationalInstruments_Design_GuideLinesPainter_ShowGuideLinesForItem_NationalInstruments_Design_IViewElementViewModel_NationalInstruments_Design_GuideLinesDrawingContext_" data-uid="NationalInstruments.Design.GuideLinesPainter.ShowGuideLinesForItem(NationalInstruments.Design.IViewElementViewModel,NationalInstruments.Design.GuideLinesDrawingContext)">ShowGuideLinesForItem(IViewElementViewModel, GuideLinesDrawingContext)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ShowGuideLinesForItem(IViewElementViewModel item, GuideLinesDrawingContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.IViewElementViewModel.html">IViewElementViewModel</a></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.GuideLinesDrawingContext.html">GuideLinesDrawingContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_GuideLinesPainter_ShowGuideLinesForRect_" data-uid="NationalInstruments.Design.GuideLinesPainter.ShowGuideLinesForRect*"></a>
+  <h4 id="NationalInstruments_Design_GuideLinesPainter_ShowGuideLinesForRect_NationalInstruments_Core_SMRect_System_Collections_Generic_List_NationalInstruments_Core_SMRect__NationalInstruments_Core_PlatformVisual_NationalInstruments_Core_PlatformVisual_NationalInstruments_Design_GuideLinesDrawingContext_" data-uid="NationalInstruments.Design.GuideLinesPainter.ShowGuideLinesForRect(NationalInstruments.Core.SMRect,System.Collections.Generic.List{NationalInstruments.Core.SMRect},NationalInstruments.Core.PlatformVisual,NationalInstruments.Core.PlatformVisual,NationalInstruments.Design.GuideLinesDrawingContext)">ShowGuideLinesForRect(SMRect, List&lt;SMRect&gt;, PlatformVisual, PlatformVisual, GuideLinesDrawingContext)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ShowGuideLinesForRect(SMRect elementRect, List&lt;SMRect&gt; otherRects, PlatformVisual logicalTreeParent, PlatformVisual visualTreeParent, GuideLinesDrawingContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.SMRect.html">SMRect</a></td>
+        <td><span class="parametername">elementRect</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="../core/NationalInstruments.Core.SMRect.html">SMRect</a>&gt;</td>
+        <td><span class="parametername">otherRects</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">logicalTreeParent</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">visualTreeParent</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.GuideLinesDrawingContext.html">GuideLinesDrawingContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1225 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface ILinker
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface ILinker
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.SourceModel.ILinker">
+  
+  
+  <h1 id="NationalInstruments_SourceModel_ILinker" data-uid="NationalInstruments.SourceModel.ILinker" class="text-break">Interface ILinker
+  </h1>
+  <div class="markdown level0 summary"><p>Interface that provides Name resolution services for a given Tree</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.SourceModel.html">NationalInstruments.SourceModel</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_SourceModel_ILinker_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface ILinker</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_ILinker_AllQualifiedDependencies_" data-uid="NationalInstruments.SourceModel.ILinker.AllQualifiedDependencies*"></a>
+  <h4 id="NationalInstruments_SourceModel_ILinker_AllQualifiedDependencies" data-uid="NationalInstruments.SourceModel.ILinker.AllQualifiedDependencies">AllQualifiedDependencies</h4>
+  <div class="markdown level1 summary"><p>Gets all <a class="xref" href="NationalInstruments.Linking.IQualifiedDependency.html">IQualifiedDependency</a>s that can depend on <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a>s.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;IQualifiedDependency&gt; AllQualifiedDependencies { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.Linking.IQualifiedDependency.html">IQualifiedDependency</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ILinker_AllQualifiedTargets_" data-uid="NationalInstruments.SourceModel.ILinker.AllQualifiedTargets*"></a>
+  <h4 id="NationalInstruments_SourceModel_ILinker_AllQualifiedTargets" data-uid="NationalInstruments.SourceModel.ILinker.AllQualifiedTargets">AllQualifiedTargets</h4>
+  <div class="markdown level1 summary"><p>Gets all <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a>s that can be resolved.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;Envoy&gt; AllQualifiedTargets { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ILinker_EnableUserInitiatedOnExportsChanged_" data-uid="NationalInstruments.SourceModel.ILinker.EnableUserInitiatedOnExportsChanged*"></a>
+  <h4 id="NationalInstruments_SourceModel_ILinker_EnableUserInitiatedOnExportsChanged" data-uid="NationalInstruments.SourceModel.ILinker.EnableUserInitiatedOnExportsChanged">EnableUserInitiatedOnExportsChanged</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether handling on OnExportsChanged should be completely
+deferred.  Manual calls to ProcessDeferredOnExportsChanged are required to process things like
+typedef updates.  This is generally used in TestApps today.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool EnableUserInitiatedOnExportsChanged { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ILinker_ProcessingOnExportsChanged_" data-uid="NationalInstruments.SourceModel.ILinker.ProcessingOnExportsChanged*"></a>
+  <h4 id="NationalInstruments_SourceModel_ILinker_ProcessingOnExportsChanged" data-uid="NationalInstruments.SourceModel.ILinker.ProcessingOnExportsChanged">ProcessingOnExportsChanged</h4>
+  <div class="markdown level1 summary"><p>True if Deferred OnExportsChanged events are current being processed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ProcessingOnExportsChanged { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ILinker_ShouldDeferOnExportsChangedHandling_" data-uid="NationalInstruments.SourceModel.ILinker.ShouldDeferOnExportsChangedHandling*"></a>
+  <h4 id="NationalInstruments_SourceModel_ILinker_ShouldDeferOnExportsChangedHandling" data-uid="NationalInstruments.SourceModel.ILinker.ShouldDeferOnExportsChangedHandling">ShouldDeferOnExportsChangedHandling</h4>
+  <div class="markdown level1 summary"><p>Called by OnExportsChanged handlers to determine if they should process the notification or
+defer it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ShouldDeferOnExportsChangedHandling { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_ILinker_AddQualifiedDependency_" data-uid="NationalInstruments.SourceModel.ILinker.AddQualifiedDependency*"></a>
+  <h4 id="NationalInstruments_SourceModel_ILinker_AddQualifiedDependency_NationalInstruments_Linking_IQualifiedDependency_" data-uid="NationalInstruments.SourceModel.ILinker.AddQualifiedDependency(NationalInstruments.Linking.IQualifiedDependency)">AddQualifiedDependency(IQualifiedDependency)</h4>
+  <div class="markdown level1 summary"><p>IQualifiedDependency is added to the scope</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void AddQualifiedDependency(IQualifiedDependency dependency)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Linking.IQualifiedDependency.html">IQualifiedDependency</a></td>
+        <td><span class="parametername">dependency</span></td>
+        <td><p>IQualifiedDependency that is added under a scope</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_SourceModel_ILinker_AddQualifiedDependency_NationalInstruments_Linking_IQualifiedDependency__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>It may get resolved</p>
+</div>
+  
+  
+  <a id="NationalInstruments_SourceModel_ILinker_AddQualifiedItems_" data-uid="NationalInstruments.SourceModel.ILinker.AddQualifiedItems*"></a>
+  <h4 id="NationalInstruments_SourceModel_ILinker_AddQualifiedItems_System_Collections_Generic_IEnumerable_NationalInstruments_SourceModel_Envoys_Envoy__System_Collections_Generic_IEnumerable_NationalInstruments_Linking_IQualifiedDependency__" data-uid="NationalInstruments.SourceModel.ILinker.AddQualifiedItems(System.Collections.Generic.IEnumerable{NationalInstruments.SourceModel.Envoys.Envoy},System.Collections.Generic.IEnumerable{NationalInstruments.Linking.IQualifiedDependency})">AddQualifiedItems(IEnumerable&lt;Envoy&gt;, IEnumerable&lt;IQualifiedDependency&gt;)</h4>
+  <div class="markdown level1 summary"><p>Batch interface for adding multiple qualified targets and dependencies at once.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void AddQualifiedItems(IEnumerable&lt;Envoy&gt; targets, IEnumerable&lt;IQualifiedDependency&gt; dependencies)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a>&gt;</td>
+        <td><span class="parametername">targets</span></td>
+        <td><p>list of qualified targets to add</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.Linking.IQualifiedDependency.html">IQualifiedDependency</a>&gt;</td>
+        <td><span class="parametername">dependencies</span></td>
+        <td><p>list of qualified dependencies to add</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ILinker_AddQualifiedTarget_" data-uid="NationalInstruments.SourceModel.ILinker.AddQualifiedTarget*"></a>
+  <h4 id="NationalInstruments_SourceModel_ILinker_AddQualifiedTarget_NationalInstruments_SourceModel_Envoys_Envoy_" data-uid="NationalInstruments.SourceModel.ILinker.AddQualifiedTarget(NationalInstruments.SourceModel.Envoys.Envoy)">AddQualifiedTarget(Envoy)</h4>
+  <div class="markdown level1 summary"><p>Envoy is added to the scope</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void AddQualifiedTarget(Envoy target)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">target</span></td>
+        <td><p>Envoy that is added under a scope</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_SourceModel_ILinker_AddQualifiedTarget_NationalInstruments_SourceModel_Envoys_Envoy__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the target resolves any resolved dependencies will be notified.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_SourceModel_ILinker_BeginBatchDeferExportsChanged_" data-uid="NationalInstruments.SourceModel.ILinker.BeginBatchDeferExportsChanged*"></a>
+  <h4 id="NationalInstruments_SourceModel_ILinker_BeginBatchDeferExportsChanged" data-uid="NationalInstruments.SourceModel.ILinker.BeginBatchDeferExportsChanged">BeginBatchDeferExportsChanged()</h4>
+  <div class="markdown level1 summary"><p>Called when signaling OnExportsChanged to cause all processing to be handled in a batch.
+You must call EndBatchDeferExportsChangedAsync to commit the batch.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void BeginBatchDeferExportsChanged()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_SourceModel_ILinker_BeginLinkerUpdates_" data-uid="NationalInstruments.SourceModel.ILinker.BeginLinkerUpdates*"></a>
+  <h4 id="NationalInstruments_SourceModel_ILinker_BeginLinkerUpdates" data-uid="NationalInstruments.SourceModel.ILinker.BeginLinkerUpdates">BeginLinkerUpdates()</h4>
+  <div class="markdown level1 summary"><p>Called when linking changes (add / remove) are about to begin in order to batch the operations.
+The batching is reference counted where the batched linker operations will be processed when
+the last disposable is disposed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IDisposable BeginLinkerUpdates()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></td>
+        <td><p>object to dispose to end updates</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ILinker_EndBatchDeferExportsChangedAsync_" data-uid="NationalInstruments.SourceModel.ILinker.EndBatchDeferExportsChangedAsync*"></a>
+  <h4 id="NationalInstruments_SourceModel_ILinker_EndBatchDeferExportsChangedAsync" data-uid="NationalInstruments.SourceModel.ILinker.EndBatchDeferExportsChangedAsync">EndBatchDeferExportsChangedAsync()</h4>
+  <div class="markdown level1 summary"><p>Ends the batch defer exports changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task EndBatchDeferExportsChangedAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>Task to await on which will signal that all propagation has completed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ILinker_EndBatchDeferExportsChangedAsync_" data-uid="NationalInstruments.SourceModel.ILinker.EndBatchDeferExportsChangedAsync*"></a>
+  <h4 id="NationalInstruments_SourceModel_ILinker_EndBatchDeferExportsChangedAsync_System_IProgress_System_Int32__" data-uid="NationalInstruments.SourceModel.ILinker.EndBatchDeferExportsChangedAsync(System.IProgress{System.Int32})">EndBatchDeferExportsChangedAsync(IProgress&lt;Int32&gt;)</h4>
+  <div class="markdown level1 summary"><p>Ends the batch defer exports changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task EndBatchDeferExportsChangedAsync(IProgress&lt;int&gt; progress)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IProgress</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">progress</span></td>
+        <td><p>Optional progress token that progress will be reported on.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>Task to await on which will signal that all propagation has completed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ILinker_GetDependenciesResolvedTo_" data-uid="NationalInstruments.SourceModel.ILinker.GetDependenciesResolvedTo*"></a>
+  <h4 id="NationalInstruments_SourceModel_ILinker_GetDependenciesResolvedTo_NationalInstruments_SourceModel_Envoys_Envoy_" data-uid="NationalInstruments.SourceModel.ILinker.GetDependenciesResolvedTo(NationalInstruments.SourceModel.Envoys.Envoy)">GetDependenciesResolvedTo(Envoy)</h4>
+  <div class="markdown level1 summary"><p>Returns all IQualifiedDependency that are resolved to given Envoy</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;IQualifiedDependency&gt; GetDependenciesResolvedTo(Envoy target)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">target</span></td>
+        <td><p>The Envoy to which dependencies are resolved to</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.Linking.IQualifiedDependency.html">IQualifiedDependency</a>&gt;</td>
+        <td><p>Dependencies that are resolved to given qualified target</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ILinker_GetResolvedDependencyTargets_" data-uid="NationalInstruments.SourceModel.ILinker.GetResolvedDependencyTargets*"></a>
+  <h4 id="NationalInstruments_SourceModel_ILinker_GetResolvedDependencyTargets_NationalInstruments_Linking_IQualifiedDependency_" data-uid="NationalInstruments.SourceModel.ILinker.GetResolvedDependencyTargets(NationalInstruments.Linking.IQualifiedDependency)">GetResolvedDependencyTargets(IQualifiedDependency)</h4>
+  <div class="markdown level1 summary"><p>Dependents of a given dependency</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;Envoy&gt; GetResolvedDependencyTargets(IQualifiedDependency dependency)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Linking.IQualifiedDependency.html">IQualifiedDependency</a></td>
+        <td><span class="parametername">dependency</span></td>
+        <td><p>The dependency</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a>&gt;</td>
+        <td><p>QualifiedTargets that given dependency is resolved to</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ILinker_HasPendingDeferredExports_" data-uid="NationalInstruments.SourceModel.ILinker.HasPendingDeferredExports*"></a>
+  <h4 id="NationalInstruments_SourceModel_ILinker_HasPendingDeferredExports__1___0_" data-uid="NationalInstruments.SourceModel.ILinker.HasPendingDeferredExports``1(``0)">HasPendingDeferredExports&lt;T&gt;(T)</h4>
+  <div class="markdown level1 summary"><p>Determines if there are any pending exports changed notifications that match the criteria 
+defined by the <code data-dev-comment-type="paramref" class="paramref">queryData</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool HasPendingDeferredExports&lt;T&gt;(T queryData)where T : IPendingDeferredExportsQueryData</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">queryData</span></td>
+        <td><p>An implementation of <a class="xref" href="NationalInstruments.SourceModel.IPendingDeferredExportsQueryData.html">IPendingDeferredExportsQueryData</a> the sets the criteria used
+to determine if there are any pending exports changed notifications.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if there are any pending exports changed notifications that match the criteria
+defined by the <code data-dev-comment-type="paramref" class="paramref">queryData</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of the <a class="xref" href="NationalInstruments.SourceModel.IPendingDeferredExportsQueryData.html">IPendingDeferredExportsQueryData</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ILinker_ProcessDeferredOnExportsChangedAsync_" data-uid="NationalInstruments.SourceModel.ILinker.ProcessDeferredOnExportsChangedAsync*"></a>
+  <h4 id="NationalInstruments_SourceModel_ILinker_ProcessDeferredOnExportsChangedAsync" data-uid="NationalInstruments.SourceModel.ILinker.ProcessDeferredOnExportsChangedAsync">ProcessDeferredOnExportsChangedAsync()</h4>
+  <div class="markdown level1 summary"><p>Call to force the processing of deferred on exports changed events.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task ProcessDeferredOnExportsChangedAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>Task to await on</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ILinker_ProcessDeferredOnExportsChangedAsync_" data-uid="NationalInstruments.SourceModel.ILinker.ProcessDeferredOnExportsChangedAsync*"></a>
+  <h4 id="NationalInstruments_SourceModel_ILinker_ProcessDeferredOnExportsChangedAsync_System_Boolean_" data-uid="NationalInstruments.SourceModel.ILinker.ProcessDeferredOnExportsChangedAsync(System.Boolean)">ProcessDeferredOnExportsChangedAsync(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Call to force the processing of deferred on exports changed events.
+TODO: This method should be removed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task ProcessDeferredOnExportsChangedAsync(bool allowBackground)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">allowBackground</span></td>
+        <td><p>True to enable background processing</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>Task to await on</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ILinker_RegisterAbsoluteNameChangedCallback_" data-uid="NationalInstruments.SourceModel.ILinker.RegisterAbsoluteNameChangedCallback*"></a>
+  <h4 id="NationalInstruments_SourceModel_ILinker_RegisterAbsoluteNameChangedCallback_NationalInstruments_SourceModel_Envoys_Envoy_System_EventHandler_NationalInstruments_SourceModel_Envoys_EnvoyNameChangeEventArgs__" data-uid="NationalInstruments.SourceModel.ILinker.RegisterAbsoluteNameChangedCallback(NationalInstruments.SourceModel.Envoys.Envoy,System.EventHandler{NationalInstruments.SourceModel.Envoys.EnvoyNameChangeEventArgs})">RegisterAbsoluteNameChangedCallback(Envoy, EventHandler&lt;EnvoyNameChangeEventArgs&gt;)</h4>
+  <div class="markdown level1 summary"><p>Registers a callback that will be invoked anytime the absolute qualified name for the Envoy
+changes.  This can occur when the name of the Envoy changes, the names of any ParentScopes change,
+or ParentScopes the Envoy is under are added/removed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void RegisterAbsoluteNameChangedCallback(Envoy target, EventHandler&lt;EnvoyNameChangeEventArgs&gt; callback)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">target</span></td>
+        <td><p>The Envoy to observe for absolute qualified name changes.  The <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a> passed in
+the event args will match this Envoy.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyNameChangeEventArgs.html">EnvoyNameChangeEventArgs</a>&gt;</td>
+        <td><span class="parametername">callback</span></td>
+        <td><p>The callback to invoke when the absolute qualified name changes</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ILinker_RegisterAbsoluteNameChangedCallback_" data-uid="NationalInstruments.SourceModel.ILinker.RegisterAbsoluteNameChangedCallback*"></a>
+  <h4 id="NationalInstruments_SourceModel_ILinker_RegisterAbsoluteNameChangedCallback_NationalInstruments_SourceModel_Envoys_EnvoyManager_System_EventHandler_NationalInstruments_SourceModel_Envoys_EnvoyNameChangeEventArgs__" data-uid="NationalInstruments.SourceModel.ILinker.RegisterAbsoluteNameChangedCallback(NationalInstruments.SourceModel.Envoys.EnvoyManager,System.EventHandler{NationalInstruments.SourceModel.Envoys.EnvoyNameChangeEventArgs})">RegisterAbsoluteNameChangedCallback(EnvoyManager, EventHandler&lt;EnvoyNameChangeEventArgs&gt;)</h4>
+  <div class="markdown level1 summary"><p>Registers a callback that will be invoked anytime the absolute qualified name for an Envoy owned 
+by the given EnvoyManager changes.  This can occur when the name of the Envoy changes, the names 
+of any ParentScopes change, or ParentScopes the Envoy is under are added/removed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void RegisterAbsoluteNameChangedCallback(EnvoyManager envoyManager, EventHandler&lt;EnvoyNameChangeEventArgs&gt; callback)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyManager.html">EnvoyManager</a></td>
+        <td><span class="parametername">envoyManager</span></td>
+        <td><p>The EnvoyManager to observe for absolute qualified name changes in its contained Envoys.  This EnvoyManger
+will own any Envoy passed in the event args.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyNameChangeEventArgs.html">EnvoyNameChangeEventArgs</a>&gt;</td>
+        <td><span class="parametername">callback</span></td>
+        <td><p>The callback to invoke when an Envoy in the given EnvoyManager changes.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ILinker_RemoveQualifiedDependency_" data-uid="NationalInstruments.SourceModel.ILinker.RemoveQualifiedDependency*"></a>
+  <h4 id="NationalInstruments_SourceModel_ILinker_RemoveQualifiedDependency_NationalInstruments_Linking_IQualifiedDependency_" data-uid="NationalInstruments.SourceModel.ILinker.RemoveQualifiedDependency(NationalInstruments.Linking.IQualifiedDependency)">RemoveQualifiedDependency(IQualifiedDependency)</h4>
+  <div class="markdown level1 summary"><p><a class="xref" href="NationalInstruments.Linking.IQualifiedDependency.html">IQualifiedDependency</a> is removed from the scope</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void RemoveQualifiedDependency(IQualifiedDependency dependency)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Linking.IQualifiedDependency.html">IQualifiedDependency</a></td>
+        <td><span class="parametername">dependency</span></td>
+        <td><p>The dependency to be removed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ILinker_RemoveQualifiedItems_" data-uid="NationalInstruments.SourceModel.ILinker.RemoveQualifiedItems*"></a>
+  <h4 id="NationalInstruments_SourceModel_ILinker_RemoveQualifiedItems_System_Collections_Generic_IEnumerable_NationalInstruments_SourceModel_Envoys_Envoy__System_Collections_Generic_IEnumerable_NationalInstruments_Linking_IQualifiedDependency__" data-uid="NationalInstruments.SourceModel.ILinker.RemoveQualifiedItems(System.Collections.Generic.IEnumerable{NationalInstruments.SourceModel.Envoys.Envoy},System.Collections.Generic.IEnumerable{NationalInstruments.Linking.IQualifiedDependency})">RemoveQualifiedItems(IEnumerable&lt;Envoy&gt;, IEnumerable&lt;IQualifiedDependency&gt;)</h4>
+  <div class="markdown level1 summary"><p>Batch interface for removing multiple qualified targets and dependencies at once.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void RemoveQualifiedItems(IEnumerable&lt;Envoy&gt; targets, IEnumerable&lt;IQualifiedDependency&gt; dependencies)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a>&gt;</td>
+        <td><span class="parametername">targets</span></td>
+        <td><p>list of qualified targets to remove</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.Linking.IQualifiedDependency.html">IQualifiedDependency</a>&gt;</td>
+        <td><span class="parametername">dependencies</span></td>
+        <td><p>list of qualified dependencies to remove</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ILinker_RemoveQualifiedTarget_" data-uid="NationalInstruments.SourceModel.ILinker.RemoveQualifiedTarget*"></a>
+  <h4 id="NationalInstruments_SourceModel_ILinker_RemoveQualifiedTarget_NationalInstruments_SourceModel_Envoys_Envoy_" data-uid="NationalInstruments.SourceModel.ILinker.RemoveQualifiedTarget(NationalInstruments.SourceModel.Envoys.Envoy)">RemoveQualifiedTarget(Envoy)</h4>
+  <div class="markdown level1 summary"><p><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a> is removed from the scope</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void RemoveQualifiedTarget(Envoy target)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">target</span></td>
+        <td><p>The object to be removed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_SourceModel_ILinker_RemoveQualifiedTarget_NationalInstruments_SourceModel_Envoys_Envoy__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If removing the target will break any existing dependency 
+relationships the dependencies will be notified.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_SourceModel_ILinker_Resolve_" data-uid="NationalInstruments.SourceModel.ILinker.Resolve*"></a>
+  <h4 id="NationalInstruments_SourceModel_ILinker_Resolve_NationalInstruments_Linking_IQualifiedScope_NationalInstruments_Core_QualifiedName_" data-uid="NationalInstruments.SourceModel.ILinker.Resolve(NationalInstruments.Linking.IQualifiedScope,NationalInstruments.Core.QualifiedName)">Resolve(IQualifiedScope, QualifiedName)</h4>
+  <div class="markdown level1 summary"><p>Resolve a <a class="xref" href="../core/NationalInstruments.Core.QualifiedName.html">QualifiedName</a> into an object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;Envoy&gt; Resolve(IQualifiedScope dependencyScope, QualifiedName targetName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Linking.IQualifiedScope.html">IQualifiedScope</a></td>
+        <td><span class="parametername">dependencyScope</span></td>
+        <td><p>The scope of the dependency</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td><span class="parametername">targetName</span></td>
+        <td><p>The name to be resolved.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a>&gt;</td>
+        <td><p>The set of objects that match the qualified name.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ILinker_Resolve_" data-uid="NationalInstruments.SourceModel.ILinker.Resolve*"></a>
+  <h4 id="NationalInstruments_SourceModel_ILinker_Resolve_NationalInstruments_Linking_IQualifiedScope_NationalInstruments_Core_QualifiedName_NationalInstruments_Linking_ResolveOptions_" data-uid="NationalInstruments.SourceModel.ILinker.Resolve(NationalInstruments.Linking.IQualifiedScope,NationalInstruments.Core.QualifiedName,NationalInstruments.Linking.ResolveOptions)">Resolve(IQualifiedScope, QualifiedName, ResolveOptions)</h4>
+  <div class="markdown level1 summary"><p>Resolve a <a class="xref" href="../core/NationalInstruments.Core.QualifiedName.html">QualifiedName</a> into an object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;Envoy&gt; Resolve(IQualifiedScope dependencyScope, QualifiedName targetName, ResolveOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Linking.IQualifiedScope.html">IQualifiedScope</a></td>
+        <td><span class="parametername">dependencyScope</span></td>
+        <td><p>The scope of the dependency</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td><span class="parametername">targetName</span></td>
+        <td><p>The name to be resolved.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Linking.ResolveOptions.html">ResolveOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The resolve options to use.  This contains the resolve modes and priority</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a>&gt;</td>
+        <td><p>The set of objects that match the qualified name.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ILinker_ResolveAsync_" data-uid="NationalInstruments.SourceModel.ILinker.ResolveAsync*"></a>
+  <h4 id="NationalInstruments_SourceModel_ILinker_ResolveAsync_NationalInstruments_Linking_IQualifiedScope_NationalInstruments_Core_QualifiedName_NationalInstruments_Linking_ResolveOptions_" data-uid="NationalInstruments.SourceModel.ILinker.ResolveAsync(NationalInstruments.Linking.IQualifiedScope,NationalInstruments.Core.QualifiedName,NationalInstruments.Linking.ResolveOptions)">ResolveAsync(IQualifiedScope, QualifiedName, ResolveOptions)</h4>
+  <div class="markdown level1 summary"><p>Awaitable resolves a qualified name into objects. 
+This operation will not complete until any resolve failure handlers, for the <code data-dev-comment-type="paramref" class="paramref">options</code>.AutoResolveMode, have completed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IEnumerable&lt;Envoy&gt;&gt; ResolveAsync(IQualifiedScope dependencyScope, QualifiedName targetName, ResolveOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Linking.IQualifiedScope.html">IQualifiedScope</a></td>
+        <td><span class="parametername">dependencyScope</span></td>
+        <td><p>The scope to resolve on</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td><span class="parametername">targetName</span></td>
+        <td><p>The name to be resolved.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Linking.ResolveOptions.html">ResolveOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The resolve options to use.  This contains the resolve modes and priority</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a>&gt;&gt;</td>
+        <td><p>The sequence of objects with the name within the scoping requirements.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ILinker_UnregisterAbsoluteNameChangedCallback_" data-uid="NationalInstruments.SourceModel.ILinker.UnregisterAbsoluteNameChangedCallback*"></a>
+  <h4 id="NationalInstruments_SourceModel_ILinker_UnregisterAbsoluteNameChangedCallback_NationalInstruments_SourceModel_Envoys_Envoy_System_EventHandler_NationalInstruments_SourceModel_Envoys_EnvoyNameChangeEventArgs__" data-uid="NationalInstruments.SourceModel.ILinker.UnregisterAbsoluteNameChangedCallback(NationalInstruments.SourceModel.Envoys.Envoy,System.EventHandler{NationalInstruments.SourceModel.Envoys.EnvoyNameChangeEventArgs})">UnregisterAbsoluteNameChangedCallback(Envoy, EventHandler&lt;EnvoyNameChangeEventArgs&gt;)</h4>
+  <div class="markdown level1 summary"><p>Unregisters the callback for when the Envoy&apos;s absolute qualified name changes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void UnregisterAbsoluteNameChangedCallback(Envoy target, EventHandler&lt;EnvoyNameChangeEventArgs&gt; callback)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">target</span></td>
+        <td><p>The Envoy to stop observing for absolute qualified name changes</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyNameChangeEventArgs.html">EnvoyNameChangeEventArgs</a>&gt;</td>
+        <td><span class="parametername">callback</span></td>
+        <td><p>The callback to remove</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ILinker_UnregisterAbsoluteNameChangedCallback_" data-uid="NationalInstruments.SourceModel.ILinker.UnregisterAbsoluteNameChangedCallback*"></a>
+  <h4 id="NationalInstruments_SourceModel_ILinker_UnregisterAbsoluteNameChangedCallback_NationalInstruments_SourceModel_Envoys_EnvoyManager_System_EventHandler_NationalInstruments_SourceModel_Envoys_EnvoyNameChangeEventArgs__" data-uid="NationalInstruments.SourceModel.ILinker.UnregisterAbsoluteNameChangedCallback(NationalInstruments.SourceModel.Envoys.EnvoyManager,System.EventHandler{NationalInstruments.SourceModel.Envoys.EnvoyNameChangeEventArgs})">UnregisterAbsoluteNameChangedCallback(EnvoyManager, EventHandler&lt;EnvoyNameChangeEventArgs&gt;)</h4>
+  <div class="markdown level1 summary"><p>Unregisters the callback for when an Envoy owned by the given EnvoyManager&apos;s name changes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void UnregisterAbsoluteNameChangedCallback(EnvoyManager envoyManager, EventHandler&lt;EnvoyNameChangeEventArgs&gt; callback)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyManager.html">EnvoyManager</a></td>
+        <td><span class="parametername">envoyManager</span></td>
+        <td><p>The EnvoyManager to stop observing for absolute qualified name changes.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyNameChangeEventArgs.html">EnvoyNameChangeEventArgs</a>&gt;</td>
+        <td><span class="parametername">callback</span></td>
+        <td><p>The callback to remove.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ILinker_UpdateQualifiedDependencyTargetName_" data-uid="NationalInstruments.SourceModel.ILinker.UpdateQualifiedDependencyTargetName*"></a>
+  <h4 id="NationalInstruments_SourceModel_ILinker_UpdateQualifiedDependencyTargetName_NationalInstruments_Linking_IQualifiedDependency_NationalInstruments_Core_QualifiedName_" data-uid="NationalInstruments.SourceModel.ILinker.UpdateQualifiedDependencyTargetName(NationalInstruments.Linking.IQualifiedDependency,NationalInstruments.Core.QualifiedName)">UpdateQualifiedDependencyTargetName(IQualifiedDependency, QualifiedName)</h4>
+  <div class="markdown level1 summary"><p>Given dependency has updated it&apos;s target name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void UpdateQualifiedDependencyTargetName(IQualifiedDependency dependency, QualifiedName oldTargetName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Linking.IQualifiedDependency.html">IQualifiedDependency</a></td>
+        <td><span class="parametername">dependency</span></td>
+        <td><p>Dependency whose Target is renamed</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td><span class="parametername">oldTargetName</span></td>
+        <td><p>Name of the old dependency target</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ILinker_UpdateQualifiedTargetName_" data-uid="NationalInstruments.SourceModel.ILinker.UpdateQualifiedTargetName*"></a>
+  <h4 id="NationalInstruments_SourceModel_ILinker_UpdateQualifiedTargetName_NationalInstruments_SourceModel_Envoys_Envoy_NationalInstruments_Core_QualifiedName_" data-uid="NationalInstruments.SourceModel.ILinker.UpdateQualifiedTargetName(NationalInstruments.SourceModel.Envoys.Envoy,NationalInstruments.Core.QualifiedName)">UpdateQualifiedTargetName(Envoy, QualifiedName)</h4>
+  <div class="markdown level1 summary"><p><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a> has updated it&apos;s name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void UpdateQualifiedTargetName(Envoy target, QualifiedName oldName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">target</span></td>
+        <td><p>The qualified object that was renamed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td><span class="parametername">oldName</span></td>
+        <td><p>Old name of the object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="events">Events
+  </h3>
+  
+  
+  <h4 id="NationalInstruments_SourceModel_ILinker_BatchedExportsChangedComplete" data-uid="NationalInstruments.SourceModel.ILinker.BatchedExportsChangedComplete">BatchedExportsChangedComplete</h4>
+  <div class="markdown level1 summary"><p>Occurs when a deferred OnExportsChanged batch is complete</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event EventHandler&lt;EventArgs&gt; BatchedExportsChangedComplete</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventargs">EventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.LinkerExtension.html#NationalInstruments_SourceModel_LinkerExtension_AddQualifiedSource_NationalInstruments_SourceModel_ILinker_NationalInstruments_Linking_IQualifiedSource_">LinkerExtension.AddQualifiedSource(ILinker, IQualifiedSource)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.LinkerExtension.html#NationalInstruments_SourceModel_LinkerExtension_RemoveQualifiedSource_NationalInstruments_SourceModel_ILinker_NationalInstruments_Linking_IQualifiedSource_">LinkerExtension.RemoveQualifiedSource(ILinker, IQualifiedSource)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

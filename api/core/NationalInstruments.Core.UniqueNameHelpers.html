@@ -1,0 +1,725 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class UniqueNameHelpers
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class UniqueNameHelpers
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.Core.UniqueNameHelpers">
+  
+  
+  <h1 id="NationalInstruments_Core_UniqueNameHelpers" data-uid="NationalInstruments.Core.UniqueNameHelpers" class="text-break">Class UniqueNameHelpers
+  </h1>
+  <div class="markdown level0 summary"><p>Helper methods for creating unique names.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">UniqueNameHelpers</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="../pf/NationalInstruments.Core.html">NationalInstruments.Core</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.Core.dll</h6>
+  <h5 id="NationalInstruments_Core_UniqueNameHelpers_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class UniqueNameHelpers</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="NationalInstruments_Core_UniqueNameHelpers_SuffixSeparatorChar" data-uid="NationalInstruments.Core.UniqueNameHelpers.SuffixSeparatorChar">SuffixSeparatorChar</h4>
+  <div class="markdown level1 summary"><p>The character that separates the base name and the numeric uniquification. If you change this,
+there is a regular expression in <see cref="!:EmbeddedQualifiedScope"></see> that doesn&apos;t use this, but
+would need to be updated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const char SuffixSeparatorChar = '_'</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_Core_UniqueNameHelpers_CreateUniqueName_" data-uid="NationalInstruments.Core.UniqueNameHelpers.CreateUniqueName*"></a>
+  <h4 id="NationalInstruments_Core_UniqueNameHelpers_CreateUniqueName_System_Collections_Generic_IEnumerable_System_String__System_String_" data-uid="NationalInstruments.Core.UniqueNameHelpers.CreateUniqueName(System.Collections.Generic.IEnumerable{System.String},System.String)">CreateUniqueName(IEnumerable&lt;String&gt;, String)</h4>
+  <div class="markdown level1 summary"><p>Given a list of unique names, this function will check to see if the desiredName conflicts with any existing names
+in the collection.  If it does conflict, it will produce a new unique name that is derived from the desired name.
+If it doesn&apos;t conflict, the original desired name will be returned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string CreateUniqueName(this IEnumerable&lt;string&gt; uniqueNames, string desiredName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="parametername">uniqueNames</span></td>
+        <td><p>The list of unique names that currently exist for a given collection</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">desiredName</span></td>
+        <td><p>The desired to name to add to the collection if it doesn&apos;t conflict with any existing names</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>A name that can be added to the collection such that all names in the collection will continue to be unique</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_UniqueNameHelpers_CreateUniqueName_" data-uid="NationalInstruments.Core.UniqueNameHelpers.CreateUniqueName*"></a>
+  <h4 id="NationalInstruments_Core_UniqueNameHelpers_CreateUniqueName_System_Collections_Generic_IEnumerable_System_String__System_String_System_String_" data-uid="NationalInstruments.Core.UniqueNameHelpers.CreateUniqueName(System.Collections.Generic.IEnumerable{System.String},System.String,System.String)">CreateUniqueName(IEnumerable&lt;String&gt;, String, String)</h4>
+  <div class="markdown level1 summary"><p>Given a list of unique names, this function will check to see if the desired name conflicts with any existing names
+in the collection.</p>
+<p>If it does conflict, it will product a new unique name that is derived from the desired name, appended with the
+specified uniquification, appended with the specified postfix.</p>
+<p>If it doesn&apos;t conflict, the original desired name is returned with the postfix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string CreateUniqueName(this IEnumerable&lt;string&gt; uniqueNames, string desiredName, string postfix)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="parametername">uniqueNames</span></td>
+        <td><p>The possible names. These names should include the postfix.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">desiredName</span></td>
+        <td><p>The desired name, without the postfix.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">postfix</span></td>
+        <td><p>The post fix to add to the end of the name.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>A new unique name.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_UniqueNameHelpers_CreateUniqueName_" data-uid="NationalInstruments.Core.UniqueNameHelpers.CreateUniqueName*"></a>
+  <h4 id="NationalInstruments_Core_UniqueNameHelpers_CreateUniqueName_System_String_" data-uid="NationalInstruments.Core.UniqueNameHelpers.CreateUniqueName(System.String)">CreateUniqueName(String)</h4>
+  <div class="markdown level1 summary"><p>Given a string name, create a UniqueName that breaks out the base name separately from a trailing numeric uniqufication.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static UniqueName CreateUniqueName(string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>A string name. Any numeric uniquification should already have been removed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.UniqueName.html">UniqueName</a></td>
+        <td><p>A UniqueName object that can be used to access the base name and numeric uniquification of the name separately</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_UniqueNameHelpers_CreateUniqueName_" data-uid="NationalInstruments.Core.UniqueNameHelpers.CreateUniqueName*"></a>
+  <h4 id="NationalInstruments_Core_UniqueNameHelpers_CreateUniqueName_System_String_System_String_" data-uid="NationalInstruments.Core.UniqueNameHelpers.CreateUniqueName(System.String,System.String)">CreateUniqueName(String, String)</h4>
+  <div class="markdown level1 summary"><p>Given a string name, create a UniqueName that breaks out the base name separately from a trailing numeric uniqufication.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static UniqueName CreateUniqueName(string name, string postfix)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>A string name. Any postfix should already have been removed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">postfix</span></td>
+        <td><p>A postfix for the name. The unique name will have the postfix appended at the end.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.UniqueName.html">UniqueName</a></td>
+        <td><p>A UniqueName object that can be used to access the base name and numeric uniqification and postfix of the name separately</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_UniqueNameHelpers_CreateUniqueNameForSortedCollection_" data-uid="NationalInstruments.Core.UniqueNameHelpers.CreateUniqueNameForSortedCollection*"></a>
+  <h4 id="NationalInstruments_Core_UniqueNameHelpers_CreateUniqueNameForSortedCollection_System_Collections_Generic_List_NationalInstruments_Core_UniqueName__NationalInstruments_Core_UniqueName_System_Int32__" data-uid="NationalInstruments.Core.UniqueNameHelpers.CreateUniqueNameForSortedCollection(System.Collections.Generic.List{NationalInstruments.Core.UniqueName},NationalInstruments.Core.UniqueName,System.Int32@)">CreateUniqueNameForSortedCollection(List&lt;UniqueName&gt;, UniqueName, out Int32)</h4>
+  <div class="markdown level1 summary"><p>Given a list of unique names, this function will check to see if the desiredName conflicts with any existing names
+in the collection.  If it does conflict, it will produce a new unique name that is derived from the desired name.
+If it doesn&apos;t conflict, the original desired name will be returned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static UniqueName CreateUniqueNameForSortedCollection(this List&lt;UniqueName&gt; uniqueNames, UniqueName desiredName, out int insertLocation)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="NationalInstruments.Core.UniqueName.html">UniqueName</a>&gt;</td>
+        <td><span class="parametername">uniqueNames</span></td>
+        <td><p>The list of unique names that currently exist for a given collection</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.UniqueName.html">UniqueName</a></td>
+        <td><span class="parametername">desiredName</span></td>
+        <td><p>The desired to name to add to the collection if it doesn&apos;t conflict with any existing names</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">insertLocation</span></td>
+        <td><p>The index where the unique name should be inserted for the collection to remain sorted</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.UniqueName.html">UniqueName</a></td>
+        <td><p>A name that can be added to the collection such that all names in the collection will continue to be unique</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_UniqueNameHelpers_FindUniqueName_" data-uid="NationalInstruments.Core.UniqueNameHelpers.FindUniqueName*"></a>
+  <h4 id="NationalInstruments_Core_UniqueNameHelpers_FindUniqueName_System_String_System_Func_System_String_System_Boolean__" data-uid="NationalInstruments.Core.UniqueNameHelpers.FindUniqueName(System.String,System.Func{System.String,System.Boolean})">FindUniqueName(String, Func&lt;String, Boolean&gt;)</h4>
+  <div class="markdown level1 summary"><p>Given a desired name, try to find a unique name. This uses a custom function to test whether the name is
+unique.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string FindUniqueName(string desiredName, Func&lt;string, bool&gt; isUnique)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">desiredName</span></td>
+        <td><p>The name to use to form the unique name</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">isUnique</span></td>
+        <td><p>A function to test if the name is unique.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>A name that is unique.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_UniqueNameHelpers_GetNextUniqueValue_" data-uid="NationalInstruments.Core.UniqueNameHelpers.GetNextUniqueValue*"></a>
+  <h4 id="NationalInstruments_Core_UniqueNameHelpers_GetNextUniqueValue_System_Collections_Generic_IEnumerable_System_String__System_String_" data-uid="NationalInstruments.Core.UniqueNameHelpers.GetNextUniqueValue(System.Collections.Generic.IEnumerable{System.String},System.String)">GetNextUniqueValue(IEnumerable&lt;String&gt;, String)</h4>
+  <div class="markdown level1 summary"><p>Gets the next integer which can be appended onto baseName and form a unique string within a sequence of strings.
+The integer returned will be the maximum for the set of matching base names such that N unique names can be 
+constructed simply by incrementing the number returned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int GetNextUniqueValue(this IEnumerable&lt;string&gt; names, string baseName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="parametername">names</span></td>
+        <td><p>a sequence of strings from which to find a numeric uniquification.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">baseName</span></td>
+        <td><p>the base name to find the next unique value for</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>The next unique value</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_UniqueNameHelpers_GetUniqueNamesFromNumber_" data-uid="NationalInstruments.Core.UniqueNameHelpers.GetUniqueNamesFromNumber*"></a>
+  <h4 id="NationalInstruments_Core_UniqueNameHelpers_GetUniqueNamesFromNumber_System_String_System_Nullable_System_Int32__System_Int32_" data-uid="NationalInstruments.Core.UniqueNameHelpers.GetUniqueNamesFromNumber(System.String,System.Nullable{System.Int32},System.Int32)">GetUniqueNamesFromNumber(String, Nullable&lt;Int32&gt;, Int32)</h4>
+  <div class="markdown level1 summary"><p>Generates a number of string names, all beginning with a base name and with a underscore-plus-integer uniqification.</p>
+<p>This function creates names without a string postfix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;string&gt; GetUniqueNamesFromNumber(string baseName, int ? startUniqueNumber, int nameCount)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">baseName</span></td>
+        <td><p>The base name with which all generated names will start.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">startUniqueNumber</span></td>
+        <td><p>The first numeric uniquification for the generated names. Null will start just basename and then _2</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">nameCount</span></td>
+        <td><p>The number of names to generate./</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><p>An ordered sequences of unique names all generated from the same base name.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Core_UniqueNameHelpers_GetUniqueNamesFromNumber_System_String_System_Nullable_System_Int32__System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the first uniquification that would be appended in a generated name is 1, then the resulting name is just the base name. 
+E.g., &quot;Foo&quot;, not &quot;Foo 1&quot;.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_Core_UniqueNameHelpers_UniqueName_" data-uid="NationalInstruments.Core.UniqueNameHelpers.UniqueName*"></a>
+  <h4 id="NationalInstruments_Core_UniqueNameHelpers_UniqueName_System_String_System_Nullable_System_Int32__" data-uid="NationalInstruments.Core.UniqueNameHelpers.UniqueName(System.String,System.Nullable{System.Int32})">UniqueName(String, Nullable&lt;Int32&gt;)</h4>
+  <div class="markdown level1 summary"><p>Given a base name and a unique numeric uniqufication, create a uniquified name (without a postfix)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string UniqueName(string baseName, int ? uniqueNumber)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">baseName</span></td>
+        <td><p>The base name without any numeric uniquification.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">uniqueNumber</span></td>
+        <td><p>The numeric uniqification to use. Null means no number will be appended.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>A uniquified name.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_UniqueNameHelpers_UniqueName_" data-uid="NationalInstruments.Core.UniqueNameHelpers.UniqueName*"></a>
+  <h4 id="NationalInstruments_Core_UniqueNameHelpers_UniqueName_System_String_System_Nullable_System_Int32__System_String_" data-uid="NationalInstruments.Core.UniqueNameHelpers.UniqueName(System.String,System.Nullable{System.Int32},System.String)">UniqueName(String, Nullable&lt;Int32&gt;, String)</h4>
+  <div class="markdown level1 summary"><p>Given a base name and a unique numeric uniqufication and postfix, create a uniquified name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string UniqueName(string baseName, int ? uniqueNumber, string postfix)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">baseName</span></td>
+        <td><p>The base name without any numeric uniqification.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">uniqueNumber</span></td>
+        <td><p>The unique numeric to use. Null means no number will be appended.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">postfix</span></td>
+        <td><p>The postfix to use. May be null or empty.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>A uniquified name.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

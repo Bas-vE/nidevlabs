@@ -1,0 +1,1051 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class BlackBoxViewModel
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class BlackBoxViewModel
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.Restricted.Design.BlackBoxViewModel">
+  
+  
+  <h1 id="NationalInstruments_Restricted_Design_BlackBoxViewModel" data-uid="NationalInstruments.Restricted.Design.BlackBoxViewModel" class="text-break">Class BlackBoxViewModel
+  </h1>
+  <div class="markdown level0 summary"><p>BlackBox Node ViewModel. Assists with binding, transacting changes and other helper methods.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html">ViewModelBase</a></div>
+    <div class="level2"><a class="xref" href="NationalInstruments.Design.ElementViewModel.html">ElementViewModel</a></div>
+    <div class="level3"><a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html">ViewElementViewModel</a></div>
+    <div class="level4"><a class="xref" href="NationalInstruments.Design.TerminalOwnerViewModel.html">TerminalOwnerViewModel</a></div>
+    <div class="level5"><a class="xref" href="NationalInstruments.Design.NodeViewModel.html">NodeViewModel</a></div>
+    <div class="level6"><span class="xref">BlackBoxViewModel</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.iweakeventlistener">IWeakEventListener</a></div>
+    <div><a class="xref" href="../core/NationalInstruments.Core.IColorResolver.html">IColorResolver</a></div>
+    <div><a class="xref" href="NationalInstruments.Shell.IProvideCommandContent.html">IProvideCommandContent</a></div>
+    <div><a class="xref" href="NationalInstruments.Design.IContextPaletteContentProvider.html">IContextPaletteContentProvider</a></div>
+    <div><a class="xref" href="NationalInstruments.Design.IViewElementViewModel.html">IViewElementViewModel</a></div>
+    <div><a class="xref" href="NationalInstruments.Design.IElementViewModel.html">IElementViewModel</a></div>
+    <div><a class="xref" href="../core/NationalInstruments.Core.IViewModel.html">IViewModel</a></div>
+    <div><a class="xref" href="../core/NationalInstruments.Core.IServiceAggregator.html">IServiceAggregator</a></div>
+    <div><a class="xref" href="../core/NationalInstruments.Core.IQueryService.html">IQueryService</a></div>
+    <div><a class="xref" href="NationalInstruments.Design.ISelectableItem.html">ISelectableItem</a></div>
+    <div><a class="xref" href="NationalInstruments.SourceModel.IModelObserver.html">IModelObserver</a></div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
+    <div><a class="xref" href="../core/NationalInstruments.Core.IVirtualChild.html">IVirtualChild</a></div>
+    <div><a class="xref" href="NationalInstruments.Design.IPlacementNotify.html">IPlacementNotify</a></div>
+    <div><a class="xref" href="NationalInstruments.Design.IDiagramViewTemplateViewModel.html">IDiagramViewTemplateViewModel</a></div>
+    <div><a class="xref" href="NationalInstruments.Design.IProvideIconData.html">IProvideIconData</a></div>
+    <div><a class="xref" href="NationalInstruments.SourceModel.IResizableItem.html">IResizableItem</a></div>
+    <div><a class="xref" href="../core/NationalInstruments.Core.IChainedService.html">IChainedService</a></div>
+    <div><a class="xref" href="../core/NationalInstruments.Core.IWeightedService.html">IWeightedService</a></div>
+    <div><a class="xref" href="NationalInstruments.Design.INodeBehavior.html">INodeBehavior</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_DefaultNodeContext">NodeViewModel.DefaultNodeContext</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_SwapListViewTerminalCommand">NodeViewModel.SwapListViewTerminalCommand</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_HideTerminalCommand">NodeViewModel.HideTerminalCommand</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_Model">NodeViewModel.Model</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_IsIconView">NodeViewModel.IsIconView</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_Label">NodeViewModel.Label</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_LabelVisible">NodeViewModel.LabelVisible</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_Rebind_NationalInstruments_SourceModel_Element_NationalInstruments_SourceModel_Element_">NodeViewModel.Rebind(Element, Element)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_OnBoundViewChanged_NationalInstruments_Core_PlatformVisual_">NodeViewModel.OnBoundViewChanged(PlatformVisual)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_BackgroundImageData">NodeViewModel.BackgroundImageData</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_ListViewIconDataSource">NodeViewModel.ListViewIconDataSource</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_InvalidateRender">NodeViewModel.InvalidateRender()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_CreateGlyphData_NationalInstruments_Core_RenderDataCollection_">NodeViewModel.CreateGlyphData(RenderDataCollection)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_Resizable">NodeViewModel.Resizable</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_ViewSizeMode">NodeViewModel.ViewSizeMode</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_Bounds">NodeViewModel.Bounds</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_ModelPropertyChanged_NationalInstruments_SourceModel_Element_System_String_NationalInstruments_SourceModel_TransactionItem_">NodeViewModel.ModelPropertyChanged(Element, String, TransactionItem)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_CreateVisualControl_NationalInstruments_Core_PlatformVisual_">NodeViewModel.CreateVisualControl(PlatformVisual)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_StyleView">NodeViewModel.StyleView()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_OnCreateContextMenu_NationalInstruments_Core_CreateContextMenuRoutedEventArgs_">NodeViewModel.OnCreateContextMenu(CreateContextMenuRoutedEventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_CanChangeTemplate">NodeViewModel.CanChangeTemplate</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_CanChangeLabelLocation">NodeViewModel.CanChangeLabelLocation</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_CanShowLabel">NodeViewModel.CanShowLabel</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_ListViewBackgroundBrush">NodeViewModel.ListViewBackgroundBrush</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_ContextPaletteElements">NodeViewModel.ContextPaletteElements</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_PaletteType">NodeViewModel.PaletteType</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_DropElementAsync_NationalInstruments_Design_IPaletteItemViewModel_NationalInstruments_Core_UIPosition_">NodeViewModel.DropElementAsync(IPaletteItemViewModel, UIPosition)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_SupportsTerminalConfiguration">NodeViewModel.SupportsTerminalConfiguration</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_ConfigurableInputTerminals">NodeViewModel.ConfigurableInputTerminals</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_ConfigurableOutputTerminals">NodeViewModel.ConfigurableOutputTerminals</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_AddTerminal_NationalInstruments_SourceModel_Terminal_">NodeViewModel.AddTerminal(Terminal)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_RemoveTerminal_NationalInstruments_SourceModel_Terminal_">NodeViewModel.RemoveTerminal(Terminal)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_ListViewTerminals">NodeViewModel.ListViewTerminals</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_FilterTerminalForListView_NationalInstruments_SourceModel_Terminal_">NodeViewModel.FilterTerminalForListView(Terminal)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_TerminalPropertyChanged_NationalInstruments_SourceModel_Terminal_System_String_NationalInstruments_SourceModel_TransactionItem_">NodeViewModel.TerminalPropertyChanged(Terminal, String, TransactionItem)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_UpdateVisibleTerminal_NationalInstruments_SourceModel_Terminal_">NodeViewModel.UpdateVisibleTerminal(Terminal)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_SwapListViewTerminals_NationalInstruments_Design_SwapItemsInfo_">NodeViewModel.SwapListViewTerminals(SwapItemsInfo)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_HideListViewTerminal_NationalInstruments_SourceModel_NodeTerminal_">NodeViewModel.HideListViewTerminal(NodeTerminal)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_Removed">NodeViewModel.Removed()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_ResizeDirections">NodeViewModel.ResizeDirections</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_CreateResizeAdorner_System_Boolean_">NodeViewModel.CreateResizeAdorner(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_OutermostTransactionComplete">NodeViewModel.OutermostTransactionComplete()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_NotifyPropertyChanged_System_String_">NodeViewModel.NotifyPropertyChanged(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_ComponentRemoved_NationalInstruments_SourceModel_Element_NationalInstruments_SourceModel_Element_NationalInstruments_SourceModel_TransactionItem_">NodeViewModel.ComponentRemoved(Element, Element, TransactionItem)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_SetCommandInformationForTerminal_NationalInstruments_Controls_Shell_ShellSelectionCommand_NationalInstruments_SourceModel_Terminal_">NodeViewModel.SetCommandInformationForTerminal(ShellSelectionCommand, Terminal)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_SortedInputTerminals">NodeViewModel.SortedInputTerminals</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_SortedOutputTerminals">NodeViewModel.SortedOutputTerminals</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_CommonlyConstantTerminals">NodeViewModel.CommonlyConstantTerminals</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_GetNodeProperty_NationalInstruments_DynamicProperties_PropertySymbol_">NodeViewModel.GetNodeProperty(PropertySymbol)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_SetNodeProperty_NationalInstruments_DynamicProperties_PropertySymbol_System_Object_">NodeViewModel.SetNodeProperty(PropertySymbol, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_CreateCommandContent_NationalInstruments_Core_ICommandPresentationContext_">NodeViewModel.CreateCommandContent(ICommandPresentationContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_AddConfigurationPanelHeaderContent_NationalInstruments_Core_ICommandPresentationContext_">NodeViewModel.AddConfigurationPanelHeaderContent(ICommandPresentationContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_CanReorderListViewChunks">NodeViewModel.CanReorderListViewChunks</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_GetModesCommands_System_String_">NodeViewModel.GetModesCommands(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_QueryService__1">NodeViewModel.QueryService&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_CreateContextHelpServices">NodeViewModel.CreateContextHelpServices()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_CreateContextHelpServicesForTerminal_NationalInstruments_Design_TerminalViewModel_">NodeViewModel.CreateContextHelpServicesForTerminal(TerminalViewModel)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.NodeViewModel.html#NationalInstruments_Design_NodeViewModel_OpenPopupMenuCommand">NodeViewModel.OpenPopupMenuCommand</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.TerminalOwnerViewModel.html#NationalInstruments_Design_TerminalOwnerViewModel_Terminals">TerminalOwnerViewModel.Terminals</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.TerminalOwnerViewModel.html#NationalInstruments_Design_TerminalOwnerViewModel_ComponentAdded_NationalInstruments_SourceModel_Element_NationalInstruments_SourceModel_Element_System_Int32_NationalInstruments_SourceModel_TransactionItem_">TerminalOwnerViewModel.ComponentAdded(Element, Element, Int32, TransactionItem)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_OnInitialized">ViewElementViewModel.OnInitialized()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_RemoveElement_NationalInstruments_SourceModel_Element_">ViewElementViewModel.RemoveElement(Element)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_FindResourceContext">ViewElementViewModel.FindResourceContext()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_Content">ViewElementViewModel.Content</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_CreateTextBlockContent_System_String_">ViewElementViewModel.CreateTextBlockContent(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_CreatedWithFacade">ViewElementViewModel.CreatedWithFacade</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_DynamicGlyphs">ViewElementViewModel.DynamicGlyphs</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_VirtualParent">ViewElementViewModel.VirtualParent</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_OnBoundsChanged">ViewElementViewModel.OnBoundsChanged()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_OnViewSizeChanged">ViewElementViewModel.OnViewSizeChanged()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_CanAnchorMovement">ViewElementViewModel.CanAnchorMovement</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_VisualTransforms">ViewElementViewModel.VisualTransforms</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_PositionTransform">ViewElementViewModel.PositionTransform</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_UpdateScaleTransform">ViewElementViewModel.UpdateScaleTransform()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_VisualTransformsConstructed">ViewElementViewModel.VisualTransformsConstructed()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_UpdateVisualTransforms">ViewElementViewModel.UpdateVisualTransforms()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_OnParentViewModelChanged">ViewElementViewModel.OnParentViewModelChanged()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_OnViewLoaded">ViewElementViewModel.OnViewLoaded()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_OnViewUnloaded">ViewElementViewModel.OnViewUnloaded()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_Width">ViewElementViewModel.Width</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_Height">ViewElementViewModel.Height</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_Left">ViewElementViewModel.Left</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_Top">ViewElementViewModel.Top</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_ViewElement">ViewElementViewModel.ViewElement</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_View">ViewElementViewModel.View</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_BoundView">ViewElementViewModel.BoundView</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_SetDataContextOnBoundView_NationalInstruments_Core_PlatformVisual_">ViewElementViewModel.SetDataContextOnBoundView(PlatformVisual)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_BackgroundUri">ViewElementViewModel.BackgroundUri</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_DataSourcePropertyName">ViewElementViewModel.DataSourcePropertyName</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_RenderData">ViewElementViewModel.RenderData</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_DataSource">ViewElementViewModel.DataSource</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_GlyphDataPropertyName">ViewElementViewModel.GlyphDataPropertyName</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_GlyphData">ViewElementViewModel.GlyphData</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_IconDataPropertyName">ViewElementViewModel.IconDataPropertyName</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_DefaultGlyphWeight">ViewElementViewModel.DefaultGlyphWeight</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_IconDataSource">ViewElementViewModel.IconDataSource</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_IconData">ViewElementViewModel.IconData</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_ForegroundImageData">ViewElementViewModel.ForegroundImageData</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_SupportedImageResolutions">ViewElementViewModel.SupportedImageResolutions</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_GetSelfAndAncestors">ViewElementViewModel.GetSelfAndAncestors()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_ParentView">ViewElementViewModel.ParentView</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_ContentPresenter">ViewElementViewModel.ContentPresenter</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_Alignable">ViewElementViewModel.Alignable</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_Moveable">ViewElementViewModel.Moveable</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_Reparentable">ViewElementViewModel.Reparentable</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_SnapToGridOffset">ViewElementViewModel.SnapToGridOffset</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_SnapTo">ViewElementViewModel.SnapTo</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_SnapToIgnoreChildren">ViewElementViewModel.SnapToIgnoreChildren</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_BeginInteractiveOperation_NationalInstruments_SourceModel_InteractiveOperationKind_">ViewElementViewModel.BeginInteractiveOperation(InteractiveOperationKind)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_EndInteractiveOperation_NationalInstruments_SourceModel_InteractiveOperationKind_">ViewElementViewModel.EndInteractiveOperation(InteractiveOperationKind)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_AnimatePropertyChanges">ViewElementViewModel.AnimatePropertyChanges</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_IsAnimatingPropertyChanges">ViewElementViewModel.IsAnimatingPropertyChanges</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_ViewTemplate">ViewElementViewModel.ViewTemplate</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_IsSelectable_NationalInstruments_Core_PlatformVisual_">ViewElementViewModel.IsSelectable(PlatformVisual)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_Select_NationalInstruments_Shell_DesignerSelectionMode_NationalInstruments_Core_PlatformVisual_NationalInstruments_SourceModel_ElementSelection_NationalInstruments_Core_UIPosition_">ViewElementViewModel.Select(DesignerSelectionMode, PlatformVisual, ElementSelection, UIPosition)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_MinimumSize">ViewElementViewModel.MinimumSize</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_PlacementCursor">ViewElementViewModel.PlacementCursor</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_PlacementPosition">ViewElementViewModel.PlacementPosition</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_AspectRatioBehavior">ViewElementViewModel.AspectRatioBehavior</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_GetResizeAdornerOptions_System_Boolean_">ViewElementViewModel.GetResizeAdornerOptions(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_UpdatePositionTransform_System_Boolean_System_Boolean_">ViewElementViewModel.UpdatePositionTransform(Boolean, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_UserModificationComplete">ViewElementViewModel.UserModificationComplete()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_NotifyBoundsChanged_System_Boolean_">ViewElementViewModel.NotifyBoundsChanged(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_AddTopAnimation_NationalInstruments_Core_SMRect_">ViewElementViewModel.AddTopAnimation(SMRect)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_AddLeftAnimation_NationalInstruments_Core_SMRect_">ViewElementViewModel.AddLeftAnimation(SMRect)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_AddHeightAnimation_NationalInstruments_Core_SMRect_">ViewElementViewModel.AddHeightAnimation(SMRect)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_AddWidthAnimation_NationalInstruments_Core_SMRect_">ViewElementViewModel.AddWidthAnimation(SMRect)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_CreateView_NationalInstruments_Core_PlatformVisual_">ViewElementViewModel.CreateView(PlatformVisual)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_CreateIconView">ViewElementViewModel.CreateIconView()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_BindToView_NationalInstruments_Core_PlatformVisual_">ViewElementViewModel.BindToView(PlatformVisual)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_ForceDisposeView">ViewElementViewModel.ForceDisposeView()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_BindToOpacity">ViewElementViewModel.BindToOpacity()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_GetViewModel_NationalInstruments_Core_PlatformVisual_">ViewElementViewModel.GetViewModel(PlatformVisual)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_PostAddedToVisualTree">ViewElementViewModel.PostAddedToVisualTree()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_PreRemovedFromVisualTree">ViewElementViewModel.PreRemovedFromVisualTree()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_DisposeView">ViewElementViewModel.DisposeView()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_AnimateDelete_System_Boolean_">ViewElementViewModel.AnimateDelete(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_DiagramZoomChanged_System_Double_System_Double_">ViewElementViewModel.DiagramZoomChanged(Double, Double)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_AnimateDeleteWithFade">ViewElementViewModel.AnimateDeleteWithFade()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_AddToAtomicAnimation_System_Windows_Media_Animation_AnimationTimeline_System_Windows_DependencyObject_System_Windows_DependencyProperty_">ViewElementViewModel.AddToAtomicAnimation(AnimationTimeline, DependencyObject, DependencyProperty)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_AtomicAnimationComplete_System_Object_System_EventArgs_">ViewElementViewModel.AtomicAnimationComplete(Object, EventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_OnZoomChanged_NationalInstruments_Core_PlatformVisual_System_Double_">ViewElementViewModel.OnZoomChanged(PlatformVisual, Double)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_CreateVisualForModel_NationalInstruments_SourceModel_Element_">ViewElementViewModel.CreateVisualForModel(Element)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_Placed_NationalInstruments_Design_PlacementReleaseEventArgs_">ViewElementViewModel.Placed(PlacementReleaseEventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_BeginFocusEdit_System_Func_NationalInstruments_Core_PlatformVisual__System_Action_">ViewElementViewModel.BeginFocusEdit(Func&lt;PlatformVisual&gt;, Action)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_ModeCommand">ElementViewModel.ModeCommand</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_ModeLabel">ElementViewModel.ModeLabel</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_HeaderInstanceNameCommand">ElementViewModel.HeaderInstanceNameCommand</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_CanExecuteHeaderInstanceNameFromFilteredSelection_NationalInstruments_Core_ICommandParameter_System_Collections_Generic_IEnumerable_NationalInstruments_Core_IViewModel__NationalInstruments_Composition_ICompositionHost_NationalInstruments_Shell_DocumentEditSite_">ElementViewModel.CanExecuteHeaderInstanceNameFromFilteredSelection(ICommandParameter, IEnumerable&lt;IViewModel&gt;, ICompositionHost, DocumentEditSite)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_TypeNameCommand">ElementViewModel.TypeNameCommand</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_CanExecuteTypeNameFromFilteredSelection_NationalInstruments_Core_ICommandParameter_System_Collections_Generic_IEnumerable_NationalInstruments_Core_IViewModel__NationalInstruments_Composition_ICompositionHost_NationalInstruments_Shell_DocumentEditSite_">ElementViewModel.CanExecuteTypeNameFromFilteredSelection(ICommandParameter, IEnumerable&lt;IViewModel&gt;, ICompositionHost, DocumentEditSite)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_IconGroupCommand">ElementViewModel.IconGroupCommand</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_IconCommand">ElementViewModel.IconCommand</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_TopLabelPlaceholderCommand">ElementViewModel.TopLabelPlaceholderCommand</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_BottomLabelPlaceholderCommand">ElementViewModel.BottomLabelPlaceholderCommand</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_CanExecuteIconFromFilteredSelection_NationalInstruments_Core_ICommandParameter_System_Collections_Generic_IEnumerable_NationalInstruments_Core_IViewModel__NationalInstruments_Composition_ICompositionHost_NationalInstruments_Shell_DocumentEditSite_">ElementViewModel.CanExecuteIconFromFilteredSelection(ICommandParameter, IEnumerable&lt;IViewModel&gt;, ICompositionHost, DocumentEditSite)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_Host">ElementViewModel.Host</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_NotificationManager">ElementViewModel.NotificationManager</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_Elements">ElementViewModel.Elements</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_HasMessages">ElementViewModel.HasMessages</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_IsMultiViewModel">ElementViewModel.IsMultiViewModel</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_IsSingleViewModel">ElementViewModel.IsSingleViewModel</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_TransactionManager">ElementViewModel.TransactionManager</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_EditControl">ElementViewModel.EditControl</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_DocumentEditor">ElementViewModel.DocumentEditor</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_DocumentLanguageName">ElementViewModel.DocumentLanguageName</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_Name">ElementViewModel.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_CanCopy">ElementViewModel.CanCopy</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_CanDelete">ElementViewModel.CanDelete</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_Delete_NationalInstruments_Design_IDeleteContext_">ElementViewModel.Delete(IDeleteContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_GetNonInheritedViewModel_NationalInstruments_Core_PlatformVisual_">ElementViewModel.GetNonInheritedViewModel(PlatformVisual)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_ModelsAreValid">ElementViewModel.ModelsAreValid()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_ModelsAreValid_System_Collections_Generic_IEnumerable_NationalInstruments_Design_IElementViewModel__">ElementViewModel.ModelsAreValid(IEnumerable&lt;IElementViewModel&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_TryFindResource_System_Object_">ElementViewModel.TryFindResource(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_EditSite">ElementViewModel.EditSite</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_Selection">ElementViewModel.Selection</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_IsSelected">ElementViewModel.IsSelected</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_IsSingleSelected">ElementViewModel.IsSingleSelected</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_Reselect">ElementViewModel.Reselect()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_Element">ElementViewModel.Element</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_CanRebind_NationalInstruments_SourceModel_Element_">ElementViewModel.CanRebind(Element)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_ViewChanged">ElementViewModel.ViewChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_OnViewChanged_NationalInstruments_Design_ViewChangedArgs_">ElementViewModel.OnViewChanged(ViewChangedArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_FindOrCreateChildViewModel_NationalInstruments_SourceModel_Element_">ElementViewModel.FindOrCreateChildViewModel(Element)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_Opacity">ElementViewModel.Opacity</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_InUserModification">ElementViewModel.InUserModification</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_Visible">ElementViewModel.Visible</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_IsNeedUserModificationCompletePending">ElementViewModel.IsNeedUserModificationCompletePending</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_NeedUserModificationComplete">ElementViewModel.NeedUserModificationComplete()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_ModelDetached_NationalInstruments_SourceModel_Element_">ElementViewModel.ModelDetached(Element)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_AddElement_NationalInstruments_SourceModel_Element_">ElementViewModel.AddElement(Element)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_ConvertToDefault_System_Nullable_System_Boolean__">ElementViewModel.ConvertToDefault(Nullable&lt;Boolean&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_ConvertToDefault_System_Nullable_System_Single__">ElementViewModel.ConvertToDefault(Nullable&lt;Single&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_ConvertToDefault_System_Nullable_System_Double__">ElementViewModel.ConvertToDefault(Nullable&lt;Double&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_GetProperty__1_System_Func___0_System_Object__">ElementViewModel.GetProperty&lt;T&gt;(Func&lt;T, Object&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_Execute__1_System_Action___0__">ElementViewModel.Execute&lt;T&gt;(Action&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_ReceiveWeakEvent_System_Type_System_Object_System_EventArgs_">ElementViewModel.ReceiveWeakEvent(Type, Object, EventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_HandleAtomicActionComplete_System_Object_NationalInstruments_SourceModel_AtomicActionCompleteEventArgs_">ElementViewModel.HandleAtomicActionComplete(Object, AtomicActionCompleteEventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_HandleStateChanged_System_Object_NationalInstruments_SourceModel_TransactionEventArgs_">ElementViewModel.HandleStateChanged(Object, TransactionEventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_CreateFullHelpIdForElement_NationalInstruments_Design_ElementViewModel_">ElementViewModel.CreateFullHelpIdForElement(ElementViewModel)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_GetWeight__1">ElementViewModel.GetWeight&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_GetHandled__1">ElementViewModel.GetHandled&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_EditingContext">ElementViewModel.EditingContext</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_AddModeGroupContent_NationalInstruments_Core_ICommandPresentationContext_">ElementViewModel.AddModeGroupContent(ICommandPresentationContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_ModeKey">ElementViewModel.ModeKey</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_ShowModeSelectorOnDrop">ElementViewModel.ShowModeSelectorOnDrop</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_BuildParentModesCommands_NationalInstruments_SourceModel_PaletteElementCategory_NationalInstruments_SourceModel_PaletteElement_NationalInstruments_SourceModel_PaletteElement_System_Func_NationalInstruments_SourceModel_PaletteElement_NationalInstruments_Core_PlatformImage__System_Collections_Generic_Stack_NationalInstruments_Core_ShellCommandInstance__">ElementViewModel.BuildParentModesCommands(PaletteElementCategory, PaletteElement, PaletteElement, Func&lt;PaletteElement, PlatformImage&gt;, Stack&lt;ShellCommandInstance&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_CreateModeCommandFromPalette_NationalInstruments_SourceModel_PaletteElementCategory_NationalInstruments_SourceModel_PaletteElement_System_Func_NationalInstruments_SourceModel_PaletteElement_NationalInstruments_Core_PlatformImage__NationalInstruments_SourceModel_PaletteElement_">ElementViewModel.CreateModeCommandFromPalette(PaletteElementCategory, PaletteElement, Func&lt;PaletteElement, PlatformImage&gt;, PaletteElement)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_CreateModeCommandFromPalette_NationalInstruments_SourceModel_PaletteElementCategory_System_Collections_Generic_IEnumerable_NationalInstruments_SourceModel_PaletteElement__NationalInstruments_SourceModel_PaletteElement_System_Func_NationalInstruments_SourceModel_PaletteElement_NationalInstruments_Core_PlatformImage__NationalInstruments_SourceModel_PaletteElement_">ElementViewModel.CreateModeCommandFromPalette(PaletteElementCategory, IEnumerable&lt;PaletteElement&gt;, PaletteElement, Func&lt;PaletteElement, PlatformImage&gt;, PaletteElement)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_NotifyModelVisualAdded_NationalInstruments_SourceModel_Element_">ElementViewModel.NotifyModelVisualAdded(Element)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_NotifyModelVisualRemoving_System_Boolean_System_Boolean_">ElementViewModel.NotifyModelVisualRemoving(Boolean, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_Deselect_System_Boolean_System_Boolean_">ElementViewModel.Deselect(Boolean, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_ShowStandardSelectionAdorner">ElementViewModel.ShowStandardSelectionAdorner</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_GetSelectionVisual">ElementViewModel.GetSelectionVisual()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_GetSoftSelectAdorners">ElementViewModel.GetSoftSelectAdorners()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_GetHardSelectAdorners">ElementViewModel.GetHardSelectAdorners()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_FavorChildSelection">ElementViewModel.FavorChildSelection</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_DropTarget">ElementViewModel.DropTarget</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_ViewModelProperty">ViewModelBase.ViewModelProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_GetNearestViewModel_NationalInstruments_Core_PlatformVisual_">ViewModelBase.GetNearestViewModel(PlatformVisual)</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_SetViewModel_NationalInstruments_Core_PlatformVisual_NationalInstruments_Core_IViewModel_">ViewModelBase.SetViewModel(PlatformVisual, IViewModel)</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_CreateViewHandler">ViewModelBase.CreateViewHandler</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_ParentViewModel">ViewModelBase.ParentViewModel</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_AddCommandBindings_NationalInstruments_Core_PlatformVisual_">ViewModelBase.AddCommandBindings(PlatformVisual)</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_CommandBindings">ViewModelBase.CommandBindings</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_AttachService_System_Object_">ViewModelBase.AttachService(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_RemoveService_System_Object_">ViewModelBase.RemoveService(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_RemoveAll_System_Predicate_System_Object__">ViewModelBase.RemoveAll(Predicate&lt;Object&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_SetService__1_System_Object_">ViewModelBase.SetService&lt;T&gt;(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_PropertyChanged">ViewModelBase.PropertyChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_HandlePropertyChanged_System_Object_System_ComponentModel_PropertyChangedEventArgs_">ViewModelBase.HandlePropertyChanged(Object, PropertyChangedEventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_ContextHelpServicesCreated">ViewModelBase.ContextHelpServicesCreated</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_ResolveBrush_System_String_">ViewModelBase.ResolveBrush(String)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.Restricted.Design.html">NationalInstruments.Restricted.Design</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_Restricted_Design_BlackBoxViewModel_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class BlackBoxViewModel : NodeViewModel, IWeakEventListener, IColorResolver, IProvideCommandContent, IContextPaletteContentProvider, IViewElementViewModel, IElementViewModel, IViewModel, IServiceAggregator, IQueryService, ISelectableItem, IModelObserver, INotifyPropertyChanged, IVirtualChild, IPlacementNotify, IDiagramViewTemplateViewModel, IProvideIconData, IResizableItem, IChainedService, IWeightedService, INodeBehavior</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="NationalInstruments_Restricted_Design_BlackBoxViewModel__ctor_" data-uid="NationalInstruments.Restricted.Design.BlackBoxViewModel.#ctor*"></a>
+  <h4 id="NationalInstruments_Restricted_Design_BlackBoxViewModel__ctor_NationalInstruments_SourceModel_Node_" data-uid="NationalInstruments.Restricted.Design.BlackBoxViewModel.#ctor(NationalInstruments.SourceModel.Node)">BlackBoxViewModel(Node)</h4>
+  <div class="markdown level1 summary"><p>Constructor for Node types</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BlackBoxViewModel(Node viewElement)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Node.html">Node</a></td>
+        <td><span class="parametername">viewElement</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_Restricted_Design_BlackBoxViewModel_ForegroundUri_" data-uid="NationalInstruments.Restricted.Design.BlackBoxViewModel.ForegroundUri*"></a>
+  <h4 id="NationalInstruments_Restricted_Design_BlackBoxViewModel_ForegroundUri" data-uid="NationalInstruments.Restricted.Design.BlackBoxViewModel.ForegroundUri">ForegroundUri</h4>
+  <div class="markdown level1 summary"><p>OBSOLETE - use RenderData
+A Uri that shows us where to load your object. We use this in conjunction with common suffixes (see ZoomFidelity or ForegroundIconImage)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override ResourceUri ForegroundUri { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ResourceUri.html">ResourceUri</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_ForegroundUri">ViewElementViewModel.ForegroundUri</a></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.iweakeventlistener">System.Windows.IWeakEventListener</a>
+  </div>
+  <div>
+      <a class="xref" href="../core/NationalInstruments.Core.IColorResolver.html">IColorResolver</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Shell.IProvideCommandContent.html">IProvideCommandContent</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.IContextPaletteContentProvider.html">IContextPaletteContentProvider</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.IViewElementViewModel.html">IViewElementViewModel</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.IElementViewModel.html">IElementViewModel</a>
+  </div>
+  <div>
+      <a class="xref" href="../core/NationalInstruments.Core.IViewModel.html">IViewModel</a>
+  </div>
+  <div>
+      <a class="xref" href="../core/NationalInstruments.Core.IServiceAggregator.html">IServiceAggregator</a>
+  </div>
+  <div>
+      <a class="xref" href="../core/NationalInstruments.Core.IQueryService.html">IQueryService</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.ISelectableItem.html">ISelectableItem</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.IModelObserver.html">IModelObserver</a>
+  </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">System.ComponentModel.INotifyPropertyChanged</a>
+  </div>
+  <div>
+      <a class="xref" href="../core/NationalInstruments.Core.IVirtualChild.html">IVirtualChild</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.IPlacementNotify.html">IPlacementNotify</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.IDiagramViewTemplateViewModel.html">IDiagramViewTemplateViewModel</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.IProvideIconData.html">IProvideIconData</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.IResizableItem.html">IResizableItem</a>
+  </div>
+  <div>
+      <a class="xref" href="../core/NationalInstruments.Core.IChainedService.html">IChainedService</a>
+  </div>
+  <div>
+      <a class="xref" href="../core/NationalInstruments.Core.IWeightedService.html">IWeightedService</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.INodeBehavior.html">INodeBehavior</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.ContextualHelp.HelpCommonHelpers.html#NationalInstruments_ContextualHelp_HelpCommonHelpers_InitializeContextHelpIfNecessary__1_NationalInstruments_Core_ViewModelBase_">HelpCommonHelpers.InitializeContextHelpIfNecessary&lt;T&gt;(ViewModelBase)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.LayoutViewExtensions.html#NationalInstruments_Design_LayoutViewExtensions_SetLayoutViewSelection_NationalInstruments_Design_IViewElementViewModel_System_Boolean_System_Boolean_">LayoutViewExtensions.SetLayoutViewSelection(IViewElementViewModel, Boolean, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.LayoutViewExtensions.html#NationalInstruments_Design_LayoutViewExtensions_SetLabelAttachedToGuideline_NationalInstruments_Design_IViewElementViewModel_NationalInstruments_Design_IViewElementViewModel_">LayoutViewExtensions.SetLabelAttachedToGuideline(IViewElementViewModel, IViewElementViewModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.LayoutViewExtensions.html#NationalInstruments_Design_LayoutViewExtensions_SetControlAndLabelAttachedToGuideline_NationalInstruments_Design_IViewElementViewModel_System_Object_NationalInstruments_SourceModel_VisualModel_">LayoutViewExtensions.SetControlAndLabelAttachedToGuideline(IViewElementViewModel, Object, VisualModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.PaletteContextHelpers.html#NationalInstruments_Design_PaletteContextHelpers_GetPaletteContextKeywords_NationalInstruments_Core_IQueryService_">PaletteContextHelpers.GetPaletteContextKeywords(IQueryService)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.ChildDataContextProviderHelpers.html#NationalInstruments_Design_ChildDataContextProviderHelpers_GetDataContextProvider_NationalInstruments_Core_IViewModel_">ChildDataContextProviderHelpers.GetDataContextProvider(IViewModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerNodeHelpers.html#NationalInstruments_Design_DesignerNodeHelpers_GetCreatedWithFacade_NationalInstruments_Design_IElementViewModel_">DesignerNodeHelpers.GetCreatedWithFacade(IElementViewModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerNodeHelpers.html#NationalInstruments_Design_DesignerNodeHelpers_EnsureVisual_NationalInstruments_Design_IViewElementViewModel_">DesignerNodeHelpers.EnsureVisual(IViewElementViewModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerExtensions.html#NationalInstruments_Design_DesignerExtensions_QueryTypeService__1_NationalInstruments_Design_IElementViewModel_NationalInstruments_DataTypes_NIType_">DesignerExtensions.QueryTypeService&lt;T&gt;(IElementViewModel, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ElementLocalizationHelpers.html#NationalInstruments_SourceModel_ElementLocalizationHelpers_GetLocalizedValue_NationalInstruments_Core_IViewModel_NationalInstruments_DynamicProperties_PropertySymbol_System_Object_">ElementLocalizationHelpers.GetLocalizedValue(IViewModel, PropertySymbol, Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ElementLocalizationHelpers.html#NationalInstruments_SourceModel_ElementLocalizationHelpers_CreateLocalizedDisplayBinding_NationalInstruments_Core_IViewModel_System_String_NationalInstruments_DynamicProperties_PropertySymbol_">ElementLocalizationHelpers.CreateLocalizedDisplayBinding(IViewModel, String, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ElementLocalizationHelpers.html#NationalInstruments_SourceModel_ElementLocalizationHelpers_CreateLocalizedDisplayBinding_NationalInstruments_Core_IViewModel_System_String_NationalInstruments_DynamicProperties_PropertySymbol_NationalInstruments_Core_PlatformBindingMode_">ElementLocalizationHelpers.CreateLocalizedDisplayBinding(IViewModel, String, PropertySymbol, PlatformBindingMode)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

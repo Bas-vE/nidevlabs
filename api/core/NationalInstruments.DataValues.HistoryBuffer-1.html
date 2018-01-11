@@ -1,0 +1,1401 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class HistoryBuffer&lt;T&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class HistoryBuffer&lt;T&gt;
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.DataValues.HistoryBuffer`1">
+  
+  
+  <h1 id="NationalInstruments_DataValues_HistoryBuffer_1" data-uid="NationalInstruments.DataValues.HistoryBuffer`1" class="text-break">Class HistoryBuffer&lt;T&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>Represents a collection of historic data.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">HistoryBuffer&lt;T&gt;</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="NationalInstruments.DataValues.IHistoryBuffer-1.html">IHistoryBuffer</a>&lt;T&gt;</div>
+    <div><span class="xref">System.Collections.Generic.IList</span>&lt;T&gt;</div>
+    <div><span class="xref">System.Collections.Generic.ICollection</span>&lt;T&gt;</div>
+    <div><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</div>
+    <div><a class="xref" href="NationalInstruments.DataValues.IHistoryBuffer.html">IHistoryBuffer</a></div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></div>
+    <div><a class="xref" href="NationalInstruments.DataValues.IDeepCopyData.html">IDeepCopyData</a></div>
+    <div><a class="xref" href="NationalInstruments.DataValues.IHistoryBufferChanged.html">IHistoryBufferChanged</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.DataValues.html">NationalInstruments.DataValues</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.Core.dll</h6>
+  <h5 id="NationalInstruments_DataValues_HistoryBuffer_1_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataTypeDescriptor(typeof (HistoryBuffer1DDescriptor&lt;&gt;))]
+public sealed class HistoryBuffer&lt;T&gt; : IHistoryBuffer&lt;T&gt;, IList&lt;T&gt;, ICollection&lt;T&gt;, IEnumerable&lt;T&gt;, ICommonHistoryBufferState, IHistoryBuffer, IEnumerable, IDeepCopyData, IHistoryBufferChanged</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of data stored in the collection.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="NationalInstruments_DataValues_HistoryBuffer_1__ctor_" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.#ctor*"></a>
+  <h4 id="NationalInstruments_DataValues_HistoryBuffer_1__ctor_System_Int32_" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.#ctor(System.Int32)">HistoryBuffer(Int32)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the class with the specified capacity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public HistoryBuffer(int capacity)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">capacity</span></td>
+        <td><p>The maximum amount of history to save.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataValues_HistoryBuffer_1__ctor_" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.#ctor*"></a>
+  <h4 id="NationalInstruments_DataValues_HistoryBuffer_1__ctor_System_Int32_System_Int32__0___" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.#ctor(System.Int32,System.Int32,`0[])">HistoryBuffer(Int32, Int32, T[])</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the class with the specified capacity, total count, and data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public HistoryBuffer(int capacity, int totalCount, T[] data)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">capacity</span></td>
+        <td><p>The maximum amount of history to save.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">totalCount</span></td>
+        <td><p>The total amount of history represented by the buffer.</p>
+</td>
+      </tr>
+      <tr>
+        <td>T[]</td>
+        <td><span class="parametername">data</span></td>
+        <td><p>The data used to initialize the history.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_DataValues_HistoryBuffer_1_Capacity_" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.Capacity*"></a>
+  <h4 id="NationalInstruments_DataValues_HistoryBuffer_1_Capacity" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.Capacity">Capacity</h4>
+  <div class="markdown level1 summary"><p>The maximum amount of current data that can be stored in the buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Capacity { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataValues_HistoryBuffer_1_Count_" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.Count*"></a>
+  <h4 id="NationalInstruments_DataValues_HistoryBuffer_1_Count" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.Count">Count</h4>
+  <div class="markdown level1 summary"><p>The number of data elements currently in the buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Count { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataValues_HistoryBuffer_1_Item_" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.Item*"></a>
+  <h4 id="NationalInstruments_DataValues_HistoryBuffer_1_Item_System_Int32_" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.Item(System.Int32)">Item[Int32]</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T this[int index] { get; }</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataValues_HistoryBuffer_1_TotalCount_" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.TotalCount*"></a>
+  <h4 id="NationalInstruments_DataValues_HistoryBuffer_1_TotalCount" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.TotalCount">TotalCount</h4>
+  <div class="markdown level1 summary"><p>The total number of elements ever added to the buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int TotalCount { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_DataValues_HistoryBuffer_1_TotalCount_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If this exceeds int.MaxValue it will reset to Capacity.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_DataValues_HistoryBuffer_1_Verifier_" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.Verifier*"></a>
+  <h4 id="NationalInstruments_DataValues_HistoryBuffer_1_Verifier" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.Verifier">Verifier</h4>
+  <div class="markdown level1 summary"><p>A verifier that can be used by clients to tell if previous data value are
+unchanged. When code inspects a buffer it can record the verifier. The next
+time it gets a buffer, if the verifier is unchanged then it is safe to assume
+all data up to the previous total count is unchanged. If the verifier is different,
+then the entire buffer should be treated as new.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Verifier { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_DataValues_HistoryBuffer_1_Append_" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.Append*"></a>
+  <h4 id="NationalInstruments_DataValues_HistoryBuffer_1_Append__0_" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.Append(`0)">Append(T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Append(T value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataValues_HistoryBuffer_1_Append_" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.Append*"></a>
+  <h4 id="NationalInstruments_DataValues_HistoryBuffer_1_Append__0___" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.Append(`0[])">Append(T[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Append(T[] values)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>T[]</td>
+        <td><span class="parametername">values</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataValues_HistoryBuffer_1_Append_" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.Append*"></a>
+  <h4 id="NationalInstruments_DataValues_HistoryBuffer_1_Append__0___System_Int32_" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.Append(`0[],System.Int32)">Append(T[], Int32)</h4>
+  <div class="markdown level1 summary"><p>Append a list of values, specifying the total number of elements to append. If totalNewElements is larger than
+the length of values there must be enough data in values to fill the history buffer capacity. Otherwise
+totalNewElements must equal values.Count.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Append(T[] values, int totalNewElements)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>T[]</td>
+        <td><span class="parametername">values</span></td>
+        <td><p>The values to append.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">totalNewElements</span></td>
+        <td><p>The total number of elements to add. Must equal values.Count, or be greater than the history buffer capacity as long as values.Count is at least the capacity.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td><p>Not enough data provided for the given totalNewElements.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataValues_HistoryBuffer_1_Clone_" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.Clone*"></a>
+  <h4 id="NationalInstruments_DataValues_HistoryBuffer_1_Clone" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.Clone">Clone()</h4>
+  <div class="markdown level1 summary"><p>Creates a new history buffer with the same verifiers and data as this buffer. This should only be used when
+you can guarantee that one of the buffers will never have more data added to it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public HistoryBuffer&lt;T&gt; Clone()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.HistoryBuffer-1.html">HistoryBuffer</a>&lt;T&gt;</td>
+        <td><p>new history buffer with the data copied from this one</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataValues_HistoryBuffer_1_CloneWithNewCapacity_" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.CloneWithNewCapacity*"></a>
+  <h4 id="NationalInstruments_DataValues_HistoryBuffer_1_CloneWithNewCapacity_System_Int32_" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.CloneWithNewCapacity(System.Int32)">CloneWithNewCapacity(Int32)</h4>
+  <div class="markdown level1 summary"><p>Creates a new history buffer with the specified capacity and copies as much data as possible from the
+current history buffer.  The verifiers from the original history buffer are not preserved with the copy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IHistoryBuffer CloneWithNewCapacity(int newCapacity)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">newCapacity</span></td>
+        <td><p>The capacity of the cloned history buffer.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.IHistoryBuffer.html">IHistoryBuffer</a></td>
+        <td><p>new history buffer with the data copied from this one</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataValues_HistoryBuffer_1_GetEnumerator_" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.GetEnumerator*"></a>
+  <h4 id="NationalInstruments_DataValues_HistoryBuffer_1_GetEnumerator" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.GetEnumerator">GetEnumerator()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerator&lt;T&gt; GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataValues_HistoryBuffer_1_ToString_" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.ToString*"></a>
+  <h4 id="NationalInstruments_DataValues_HistoryBuffer_1_ToString" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.ToString">ToString()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.ToString()</span></div>
+  
+  
+  <a id="NationalInstruments_DataValues_HistoryBuffer_1_UpdateFrom_" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.UpdateFrom*"></a>
+  <h4 id="NationalInstruments_DataValues_HistoryBuffer_1_UpdateFrom_NationalInstruments_DataValues_IHistoryBuffer__0__" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.UpdateFrom(NationalInstruments.DataValues.IHistoryBuffer{`0})">UpdateFrom(IHistoryBuffer&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateFrom(IHistoryBuffer&lt;T&gt; source)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.IHistoryBuffer-1.html">IHistoryBuffer</a>&lt;T&gt;</td>
+        <td><span class="parametername">source</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  
+  
+  <a id="NationalInstruments_DataValues_HistoryBuffer_1_NationalInstruments_DataValues_IDeepCopyData_DeepCopy_" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.NationalInstruments#DataValues#IDeepCopyData#DeepCopy*"></a>
+  <h4 id="NationalInstruments_DataValues_HistoryBuffer_1_NationalInstruments_DataValues_IDeepCopyData_DeepCopy" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.NationalInstruments#DataValues#IDeepCopyData#DeepCopy">IDeepCopyData.DeepCopy()</h4>
+  <div class="markdown level1 summary"><p>Deep-copy this object in a way that preserves LabVIEW&apos;s value semantics.
+The returned object is promised to be the same type as the implementing object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">object IDeepCopyData.DeepCopy()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><p>A deep-copy of this object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_DataValues_HistoryBuffer_1_NationalInstruments_DataValues_IHistoryBufferChanged_DataChanged" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.NationalInstruments#DataValues#IHistoryBufferChanged#DataChanged">IHistoryBufferChanged.DataChanged</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event EventHandler IHistoryBufferChanged.DataChanged</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler">EventHandler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataValues_HistoryBuffer_1_NationalInstruments_DataValues_IHistoryBufferChanged_GetDataBuffers_" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.NationalInstruments#DataValues#IHistoryBufferChanged#GetDataBuffers*"></a>
+  <h4 id="NationalInstruments_DataValues_HistoryBuffer_1_NationalInstruments_DataValues_IHistoryBufferChanged_GetDataBuffers_NationalInstruments_DataInfrastructure_Trait_" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.NationalInstruments#DataValues#IHistoryBufferChanged#GetDataBuffers(NationalInstruments.DataInfrastructure.Trait)">IHistoryBufferChanged.GetDataBuffers(Trait)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IBuffer[] IHistoryBufferChanged.GetDataBuffers(Trait decomposeOption)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataInfrastructure.Trait</span></td>
+        <td><span class="parametername">decomposeOption</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataInfrastructure.IBuffer</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataValues_HistoryBuffer_1_NationalInstruments_DataValues_IHistoryBufferChanged_GetDataTypes_" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.NationalInstruments#DataValues#IHistoryBufferChanged#GetDataTypes*"></a>
+  <h4 id="NationalInstruments_DataValues_HistoryBuffer_1_NationalInstruments_DataValues_IHistoryBufferChanged_GetDataTypes" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.NationalInstruments#DataValues#IHistoryBufferChanged#GetDataTypes">IHistoryBufferChanged.GetDataTypes()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ReadOnlyCollection&lt;Type&gt; IHistoryBufferChanged.GetDataTypes()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.ObjectModel.ReadOnlyCollection</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataValues_HistoryBuffer_1_NationalInstruments_DataValues_IHistoryBufferChanged_IncludeNewSamplesCountTrait_" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.NationalInstruments#DataValues#IHistoryBufferChanged#IncludeNewSamplesCountTrait*"></a>
+  <h4 id="NationalInstruments_DataValues_HistoryBuffer_1_NationalInstruments_DataValues_IHistoryBufferChanged_IncludeNewSamplesCountTrait" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.NationalInstruments#DataValues#IHistoryBufferChanged#IncludeNewSamplesCountTrait">IHistoryBufferChanged.IncludeNewSamplesCountTrait()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void IHistoryBufferChanged.IncludeNewSamplesCountTrait()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_DataValues_HistoryBuffer_1_System_Collections_Generic_ICollection_T__Add_" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.System#Collections#Generic#ICollection{T}#Add*"></a>
+  <h4 id="NationalInstruments_DataValues_HistoryBuffer_1_System_Collections_Generic_ICollection_T__Add__0_" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.System#Collections#Generic#ICollection{T}#Add(`0)">ICollection&lt;T&gt;.Add(T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ICollection&lt;T&gt;.Add(T item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataValues_HistoryBuffer_1_System_Collections_Generic_ICollection_T__Clear_" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.System#Collections#Generic#ICollection{T}#Clear*"></a>
+  <h4 id="NationalInstruments_DataValues_HistoryBuffer_1_System_Collections_Generic_ICollection_T__Clear" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.System#Collections#Generic#ICollection{T}#Clear">ICollection&lt;T&gt;.Clear()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ICollection&lt;T&gt;.Clear()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_DataValues_HistoryBuffer_1_System_Collections_Generic_ICollection_T__Contains_" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.System#Collections#Generic#ICollection{T}#Contains*"></a>
+  <h4 id="NationalInstruments_DataValues_HistoryBuffer_1_System_Collections_Generic_ICollection_T__Contains__0_" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.System#Collections#Generic#ICollection{T}#Contains(`0)">ICollection&lt;T&gt;.Contains(T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ICollection&lt;T&gt;.Contains(T item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataValues_HistoryBuffer_1_System_Collections_Generic_ICollection_T__CopyTo_" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.System#Collections#Generic#ICollection{T}#CopyTo*"></a>
+  <h4 id="NationalInstruments_DataValues_HistoryBuffer_1_System_Collections_Generic_ICollection_T__CopyTo__0___System_Int32_" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.System#Collections#Generic#ICollection{T}#CopyTo(`0[],System.Int32)">ICollection&lt;T&gt;.CopyTo(T[], Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ICollection&lt;T&gt;.CopyTo(T[] array, int arrayIndex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>T[]</td>
+        <td><span class="parametername">array</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">arrayIndex</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataValues_HistoryBuffer_1_System_Collections_Generic_ICollection_T__IsReadOnly_" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.System#Collections#Generic#ICollection{T}#IsReadOnly*"></a>
+  <h4 id="NationalInstruments_DataValues_HistoryBuffer_1_System_Collections_Generic_ICollection_T__IsReadOnly" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.System#Collections#Generic#ICollection{T}#IsReadOnly">ICollection&lt;T&gt;.IsReadOnly</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ICollection&lt;T&gt;.IsReadOnly { get; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataValues_HistoryBuffer_1_System_Collections_Generic_ICollection_T__Remove_" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.System#Collections#Generic#ICollection{T}#Remove*"></a>
+  <h4 id="NationalInstruments_DataValues_HistoryBuffer_1_System_Collections_Generic_ICollection_T__Remove__0_" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.System#Collections#Generic#ICollection{T}#Remove(`0)">ICollection&lt;T&gt;.Remove(T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ICollection&lt;T&gt;.Remove(T item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataValues_HistoryBuffer_1_System_Collections_Generic_IList_T__IndexOf_" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.System#Collections#Generic#IList{T}#IndexOf*"></a>
+  <h4 id="NationalInstruments_DataValues_HistoryBuffer_1_System_Collections_Generic_IList_T__IndexOf__0_" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.System#Collections#Generic#IList{T}#IndexOf(`0)">IList&lt;T&gt;.IndexOf(T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int IList&lt;T&gt;.IndexOf(T item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataValues_HistoryBuffer_1_System_Collections_Generic_IList_T__Insert_" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.System#Collections#Generic#IList{T}#Insert*"></a>
+  <h4 id="NationalInstruments_DataValues_HistoryBuffer_1_System_Collections_Generic_IList_T__Insert_System_Int32__0_" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.System#Collections#Generic#IList{T}#Insert(System.Int32,`0)">IList&lt;T&gt;.Insert(Int32, T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void IList&lt;T&gt;.Insert(int index, T item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataValues_HistoryBuffer_1_System_Collections_Generic_IList_T__Item_" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.System#Collections#Generic#IList{T}#Item*"></a>
+  <h4 id="NationalInstruments_DataValues_HistoryBuffer_1_System_Collections_Generic_IList_T__Item_System_Int32_" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.System#Collections#Generic#IList{T}#Item(System.Int32)">IList&lt;T&gt;.Item[Int32]</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">T IList&lt;T&gt;.this[int index] { get; set; }</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataValues_HistoryBuffer_1_System_Collections_Generic_IList_T__RemoveAt_" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.System#Collections#Generic#IList{T}#RemoveAt*"></a>
+  <h4 id="NationalInstruments_DataValues_HistoryBuffer_1_System_Collections_Generic_IList_T__RemoveAt_System_Int32_" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.System#Collections#Generic#IList{T}#RemoveAt(System.Int32)">IList&lt;T&gt;.RemoveAt(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void IList&lt;T&gt;.RemoveAt(int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataValues_HistoryBuffer_1_System_Collections_IEnumerable_GetEnumerator_" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.System#Collections#IEnumerable#GetEnumerator*"></a>
+  <h4 id="NationalInstruments_DataValues_HistoryBuffer_1_System_Collections_IEnumerable_GetEnumerator" data-uid="NationalInstruments.DataValues.HistoryBuffer`1.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerator IEnumerable.GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataValues.IHistoryBuffer-1.html">IHistoryBuffer&lt;T&gt;</a>
+  </div>
+  <div>
+      <span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataValues.IHistoryBuffer.html">IHistoryBuffer</a>
+  </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerable">System.Collections.IEnumerable</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataValues.IDeepCopyData.html">IDeepCopyData</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataValues.IHistoryBufferChanged.html">IHistoryBufferChanged</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_ToEnumerable__1___0_">EnumerableHelper.ToEnumerable&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_ForEach__1_System_Collections_Generic_IEnumerable___0__System_Action___0__">EnumerableHelper.ForEach&lt;T&gt;(IEnumerable&lt;T&gt;, Action&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_ForEachAsync__1_System_Collections_Generic_IEnumerable___0__System_Func___0_System_Threading_Tasks_Task__">EnumerableHelper.ForEachAsync&lt;T&gt;(IEnumerable&lt;T&gt;, Func&lt;T, Task&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_SelectAsync__2_System_Collections_Generic_IEnumerable___0__System_Func___0_System_Threading_Tasks_Task___1___">EnumerableHelper.SelectAsync&lt;T, TResult&gt;(IEnumerable&lt;T&gt;, Func&lt;T, Task&lt;TResult&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_AnyAsync__1_System_Collections_Generic_IEnumerable___0__System_Func___0_System_Threading_Tasks_Task_System_Boolean___">EnumerableHelper.AnyAsync&lt;T&gt;(IEnumerable&lt;T&gt;, Func&lt;T, Task&lt;Boolean&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_ForEach__1_System_Collections_Generic_IEnumerable___0__System_Action___0_System_Int32__">EnumerableHelper.ForEach&lt;T&gt;(IEnumerable&lt;T&gt;, Action&lt;T, Int32&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_NotOfType__2_System_Collections_Generic_IEnumerable___1__">EnumerableHelper.NotOfType&lt;TFilter, TResult&gt;(IEnumerable&lt;TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_Unless__1_System_Collections_Generic_IEnumerable___0__System_Func___0_System_Boolean__">EnumerableHelper.Unless&lt;T&gt;(IEnumerable&lt;T&gt;, Func&lt;T, Boolean&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_Except__2_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___1__System_Func___0___1__">EnumerableHelper.Except&lt;TSource, TExclude&gt;(IEnumerable&lt;TSource&gt;, IEnumerable&lt;TExclude&gt;, Func&lt;TSource, TExclude&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_AddRange__1_System_Collections_Generic_ICollection___0__System_Collections_Generic_IEnumerable___0__">EnumerableHelper.AddRange&lt;T&gt;(ICollection&lt;T&gt;, IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_ConcatIfNotNull__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___0__">EnumerableHelper.ConcatIfNotNull&lt;T&gt;(IEnumerable&lt;T&gt;, IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_Zip__2_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___1__">EnumerableHelper.Zip&lt;T0, T1&gt;(IEnumerable&lt;T0&gt;, IEnumerable&lt;T1&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_CartesianProduct__2_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___1__">EnumerableHelper.CartesianProduct&lt;TFirst, TSecond&gt;(IEnumerable&lt;TFirst&gt;, IEnumerable&lt;TSecond&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_ToHashSet__1_System_Collections_Generic_IEnumerable___0__">EnumerableHelper.ToHashSet&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_HasExactly__1_System_Collections_Generic_IEnumerable___0__System_Int32_">EnumerableHelper.HasExactly&lt;T&gt;(IEnumerable&lt;T&gt;, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_HasMoreThan__1_System_Collections_Generic_IEnumerable___0__System_Int32_">EnumerableHelper.HasMoreThan&lt;T&gt;(IEnumerable&lt;T&gt;, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_HasMoreThanOrExactly__1_System_Collections_Generic_IEnumerable___0__System_Int32_">EnumerableHelper.HasMoreThanOrExactly&lt;T&gt;(IEnumerable&lt;T&gt;, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_HasFewerThan__1_System_Collections_Generic_IEnumerable___0__System_Int32_">EnumerableHelper.HasFewerThan&lt;T&gt;(IEnumerable&lt;T&gt;, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_HasFewerThanOrExactly__1_System_Collections_Generic_IEnumerable___0__System_Int32_">EnumerableHelper.HasFewerThanOrExactly&lt;T&gt;(IEnumerable&lt;T&gt;, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_Repeat__1___0_System_Int32_">EnumerableHelper.Repeat&lt;T&gt;(T, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_ToSafeEnumerable__1_System_Collections_Generic_IEnumerable___0__">EnumerableHelper.ToSafeEnumerable&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_TryGetCommonValue__1_System_Collections_Generic_IEnumerable___0____0__">EnumerableHelper.TryGetCommonValue&lt;T&gt;(IEnumerable&lt;T&gt;, out T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_TryGetCommonValue__1_System_Collections_Generic_IEnumerable___0____0__System_Collections_Generic_IEqualityComparer___0__">EnumerableHelper.TryGetCommonValue&lt;T&gt;(IEnumerable&lt;T&gt;, out T, IEqualityComparer&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_Split__1_System_Collections_Generic_IEnumerable___0__System_Func___0___0_System_Boolean__">EnumerableHelper.Split&lt;T&gt;(IEnumerable&lt;T&gt;, Func&lt;T, T, Boolean&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_Split__1_System_Collections_Generic_IEnumerable___0__System_Int32_System_Collections_Generic_IEnumerable___0___System_Collections_Generic_IEnumerable___0___">EnumerableHelper.Split&lt;T&gt;(IEnumerable&lt;T&gt;, Int32, out IEnumerable&lt;T&gt;, out IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_SkipTo__1_System_Collections_Generic_IEnumerable___0____0_">EnumerableHelper.SkipTo&lt;T&gt;(IEnumerable&lt;T&gt;, T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_TryGetSingleElement__1_System_Collections_Generic_IEnumerable___0____0__">EnumerableHelper.TryGetSingleElement&lt;T&gt;(IEnumerable&lt;T&gt;, out T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_AllAndNotEmpty__1_System_Collections_Generic_IEnumerable___0__System_Func___0_System_Boolean__">EnumerableHelper.AllAndNotEmpty&lt;T&gt;(IEnumerable&lt;T&gt;, Func&lt;T, Boolean&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_Prepend__1_System_Collections_Generic_IEnumerable___0____0_">EnumerableHelper.Prepend&lt;T&gt;(IEnumerable&lt;T&gt;, T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_Append__1_System_Collections_Generic_IEnumerable___0____0_">EnumerableHelper.Append&lt;T&gt;(IEnumerable&lt;T&gt;, T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_MaxOrDefault__1_System_Collections_Generic_IEnumerable___0____0_">EnumerableHelper.MaxOrDefault&lt;T&gt;(IEnumerable&lt;T&gt;, T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_MaxByOrDefault__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__">EnumerableHelper.MaxByOrDefault&lt;TSource, TKey&gt;(IEnumerable&lt;TSource&gt;, Func&lt;TSource, TKey&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_MaxByOrDefault__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__System_Collections_Generic_IComparer___1__">EnumerableHelper.MaxByOrDefault&lt;TSource, TKey&gt;(IEnumerable&lt;TSource&gt;, Func&lt;TSource, TKey&gt;, IComparer&lt;TKey&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_MinOrDefault__1_System_Collections_Generic_IEnumerable___0____0_">EnumerableHelper.MinOrDefault&lt;T&gt;(IEnumerable&lt;T&gt;, T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_NullSafeSequenceEqual__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___0__">EnumerableHelper.NullSafeSequenceEqual&lt;T&gt;(IEnumerable&lt;T&gt;, IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_NullSafeUnorderedEquals__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___0__">EnumerableHelper.NullSafeUnorderedEquals&lt;T&gt;(IEnumerable&lt;T&gt;, IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_UnorderedEquals__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___0__">EnumerableHelper.UnorderedEquals&lt;T&gt;(IEnumerable&lt;T&gt;, IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_UnorderedReferenceEquals__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___0__">EnumerableHelper.UnorderedReferenceEquals&lt;T&gt;(IEnumerable&lt;T&gt;, IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_OrderedDeepEquals_System_Collections_IEnumerable_System_Collections_IEnumerable_">EnumerableHelper.OrderedDeepEquals(IEnumerable, IEnumerable)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ListHelper.html#NationalInstruments_ListHelper_RemoveWhere__1_System_Collections_Generic_IList___0__System_Func___0_System_Boolean__">ListHelper.RemoveWhere&lt;T&gt;(IList&lt;T&gt;, Func&lt;T, Boolean&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ListHelper.html#NationalInstruments_ListHelper_RemoveFromEndWhere__1_System_Collections_Generic_IList___0__System_Func___0_System_Boolean__">ListHelper.RemoveFromEndWhere&lt;T&gt;(IList&lt;T&gt;, Func&lt;T, Boolean&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ListHelper.html#NationalInstruments_ListHelper_Find__1_System_Collections_Generic_IList___0__System_Predicate___0__">ListHelper.Find&lt;T&gt;(IList&lt;T&gt;, Predicate&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ListHelper.html#NationalInstruments_ListHelper_FindIndex__1_System_Collections_Generic_IList___0__System_Predicate___0__">ListHelper.FindIndex&lt;T&gt;(IList&lt;T&gt;, Predicate&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ListHelper.html#NationalInstruments_ListHelper_FindIndex__1_System_Collections_Generic_IList___0__System_Int32_System_Predicate___0__">ListHelper.FindIndex&lt;T&gt;(IList&lt;T&gt;, Int32, Predicate&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ListHelper.html#NationalInstruments_ListHelper_FindIndex__1_System_Collections_Generic_IList___0__System_Int32_System_Int32_System_Predicate___0__">ListHelper.FindIndex&lt;T&gt;(IList&lt;T&gt;, Int32, Int32, Predicate&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ListHelper.html#NationalInstruments_ListHelper_IndexOf__1_System_Collections_Generic_IEnumerable___0____0_">ListHelper.IndexOf&lt;T&gt;(IEnumerable&lt;T&gt;, T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyNothing__1___0_">Verifier.VerifyNothing&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Func___0_System_Boolean__System_Action_System_String__System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Func___0_System_Boolean__System_Action_System_String_System_String__System_String_System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Boolean_System_Action_System_String__System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Boolean, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Boolean_System_Action_System_String_System_String__System_String_System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Boolean, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Func___0_System_Boolean__System_Action_System_String__System_String_">Verifier.Verify&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Func___0_System_Boolean__System_Action_System_String_System_String__System_String_System_String_">Verifier.Verify&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Boolean_System_Action_System_String__System_String_">Verifier.Verify&lt;T&gt;(T, Boolean, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Boolean_System_Action_System_String_System_String__System_String_System_String_">Verifier.Verify&lt;T&gt;(T, Boolean, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentIsNotNull__1___0_System_String_">Verifier.VerifyArgumentIsNotNull&lt;T&gt;(T, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyValueIsNotNull__1___0_System_String_">Verifier.VerifyValueIsNotNull&lt;T&gt;(T, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentIsNotNullOrEmpty__1_System_Collections_Generic_IEnumerable___0__System_String_">Verifier.VerifyArgumentIsNotNullOrEmpty&lt;T&gt;(IEnumerable&lt;T&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentNotReferenceEqualsTo_System_Object_System_Object_System_String_">Verifier.VerifyArgumentNotReferenceEqualsTo(Object, Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyValueNotReferenceEqualsTo_System_Object_System_Object_System_String_">Verifier.VerifyValueNotReferenceEqualsTo(Object, Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentIsOfType__1_System_Object_System_String_">Verifier.VerifyArgumentIsOfType&lt;T&gt;(Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyValueIsOfType__1_System_Object_System_String_">Verifier.VerifyValueIsOfType&lt;T&gt;(Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.CollectionExtensions.html#NationalInstruments_Core_CollectionExtensions_AddNew__2_System_Collections_Generic_ICollection___1__">CollectionExtensions.AddNew&lt;TDerived, TBase&gt;(ICollection&lt;TBase&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.CollectionExtensions.html#NationalInstruments_Core_CollectionExtensions_InsertNew__2_System_Collections_Generic_IList___1__System_Int32_">CollectionExtensions.InsertNew&lt;TDerived, TBase&gt;(IList&lt;TBase&gt;, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.MostDerivedComparer.html#NationalInstruments_Core_MostDerivedComparer_OrderByMostDerived__1_System_Collections_Generic_IEnumerable___0__System_Func___0_System_Type__">MostDerivedComparer.OrderByMostDerived&lt;T&gt;(IEnumerable&lt;T&gt;, Func&lt;T, Type&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.QueryServiceExtensions.html#NationalInstruments_Core_QueryServiceExtensions_QueryService__1_System_Object_">QueryServiceExtensions.QueryService&lt;T&gt;(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_FindClosestMatchingContainerForResource_System_Object_System_Func_System_Object_System_Globalization_CultureInfo_System_Object__System_Globalization_CultureInfo_">LocalizationHelpers.FindClosestMatchingContainerForResource(Object, Func&lt;Object, CultureInfo, Object&gt;, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_FindClosestMatchingContainerForResource_System_Object_System_Func_System_Object_System_Globalization_CultureInfo_System_Object__System_Globalization_CultureInfo_System_Func_System_Object_System_Object__">LocalizationHelpers.FindClosestMatchingContainerForResource(Object, Func&lt;Object, CultureInfo, Object&gt;, CultureInfo, Func&lt;Object, Object&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedEnumString__1___0_">LocalizationHelpers.GetLocalizedEnumString&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedString_System_Object_System_String_System_Globalization_CultureInfo_">LocalizationHelpers.GetLocalizedString(Object, String, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedString_System_Object_System_String_System_Boolean_System_Globalization_CultureInfo_">LocalizationHelpers.GetLocalizedString(Object, String, Boolean, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.TopologicalSortExtensions.html#NationalInstruments_Core_TopologicalSortExtensions_TopologicalSort__1_System_Collections_Generic_IEnumerable___0__System_Func___0___0_System_Boolean__">TopologicalSortExtensions.TopologicalSort&lt;T&gt;(IEnumerable&lt;T&gt;, Func&lt;T, T, Boolean&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_SetPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_System_Object_">DynamicPropertyExtensions.SetPropertyValue(Object, PropertySymbol, Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.GetPropertyValue(Object, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_ClearPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.ClearPropertyValue(Object, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_IsPropertySet_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.IsPropertySet(Object, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetAllSetProperties_System_Object_">DynamicPropertyExtensions.GetAllSetProperties(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetAllProperties_System_Object_">DynamicPropertyExtensions.GetAllProperties(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

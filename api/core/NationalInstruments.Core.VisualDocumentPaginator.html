@@ -1,0 +1,771 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class VisualDocumentPaginator
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class VisualDocumentPaginator
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.Core.VisualDocumentPaginator">
+  
+  
+  <h1 id="NationalInstruments_Core_VisualDocumentPaginator" data-uid="NationalInstruments.Core.VisualDocumentPaginator" class="text-break">Class VisualDocumentPaginator
+  </h1>
+  <div class="markdown level0 summary"><p>Default paginator for a WPF Visual. Not sure why WPF doesn&apos;t provide one by default, but I suppose they want you to think about where your page breaks are.
+To use, you create with pagesize and margins (see comments in constructor on how to get from PrintDialog). Then set Content = Drawing of your visual. 
+A drawing can easily be created from any visual with UIHelpers.CreateDrawingVisual</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.documents.documentpaginator">DocumentPaginator</a></div>
+    <div class="level2"><span class="xref">VisualDocumentPaginator</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Windows.Documents.DocumentPaginator.GetPageAsync(System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Documents.DocumentPaginator.GetPageAsync(System.Int32, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Documents.DocumentPaginator.ComputePageCount()</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Documents.DocumentPaginator.ComputePageCountAsync()</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Documents.DocumentPaginator.ComputePageCountAsync(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Documents.DocumentPaginator.CancelAsync(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Documents.DocumentPaginator.OnGetPageCompleted(System.Windows.Documents.GetPageCompletedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Documents.DocumentPaginator.OnComputePageCountCompleted(System.ComponentModel.AsyncCompletedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Documents.DocumentPaginator.OnPagesChanged(System.Windows.Documents.PagesChangedEventArgs)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.documents.documentpaginator.getpagecompleted">DocumentPaginator.GetPageCompleted</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.documents.documentpaginator.computepagecountcompleted">DocumentPaginator.ComputePageCountCompleted</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.documents.documentpaginator.pageschanged">DocumentPaginator.PagesChanged</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="../pf/NationalInstruments.Core.html">NationalInstruments.Core</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.Core.dll</h6>
+  <h5 id="NationalInstruments_Core_VisualDocumentPaginator_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class VisualDocumentPaginator : DocumentPaginator</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="NationalInstruments_Core_VisualDocumentPaginator__ctor_" data-uid="NationalInstruments.Core.VisualDocumentPaginator.#ctor*"></a>
+  <h4 id="NationalInstruments_Core_VisualDocumentPaginator__ctor_System_Windows_Size_System_Windows_Thickness_" data-uid="NationalInstruments.Core.VisualDocumentPaginator.#ctor(System.Windows.Size,System.Windows.Thickness)">VisualDocumentPaginator(Size, Thickness)</h4>
+  <div class="markdown level1 summary"><p>Default constructor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VisualDocumentPaginator(Size pageSize, Thickness margin)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.size">Size</a></td>
+        <td><span class="parametername">pageSize</span></td>
+        <td><p>size of page. Should probably correspond to PrintableAreaWidth/Height</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.thickness">Thickness</a></td>
+        <td><span class="parametername">margin</span></td>
+        <td><p>print margins of page. Should probably correspond to
+printDialog.PrintQueue.GetPrintCapabilities(printDialog.PrintTicket).PageImageableArea.OriginWidth/Height + any user defined margins or printer option margins</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_Core_VisualDocumentPaginator_Content_" data-uid="NationalInstruments.Core.VisualDocumentPaginator.Content*"></a>
+  <h4 id="NationalInstruments_Core_VisualDocumentPaginator_Content" data-uid="NationalInstruments.Core.VisualDocumentPaginator.Content">Content</h4>
+  <div class="markdown level1 summary"><p>Get/Set the visual to print.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Drawing Content { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.media.drawing">Drawing</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_VisualDocumentPaginator_ContentRect_" data-uid="NationalInstruments.Core.VisualDocumentPaginator.ContentRect*"></a>
+  <h4 id="NationalInstruments_Core_VisualDocumentPaginator_ContentRect" data-uid="NationalInstruments.Core.VisualDocumentPaginator.ContentRect">ContentRect</h4>
+  <div class="markdown level1 summary"><p>Our content rect. Calculated using PageSize, removing margins and then subtracting header.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Rect ContentRect { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.rect">Rect</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_VisualDocumentPaginator_Header_" data-uid="NationalInstruments.Core.VisualDocumentPaginator.Header*"></a>
+  <h4 id="NationalInstruments_Core_VisualDocumentPaginator_Header" data-uid="NationalInstruments.Core.VisualDocumentPaginator.Header">Header</h4>
+  <div class="markdown level1 summary"><p>A function to draw our header.
+If unset, we will default to a simple page number.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PrintHeader Header { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PrintHeader.html">PrintHeader</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_VisualDocumentPaginator_IncludeHeader_" data-uid="NationalInstruments.Core.VisualDocumentPaginator.IncludeHeader*"></a>
+  <h4 id="NationalInstruments_Core_VisualDocumentPaginator_IncludeHeader" data-uid="NationalInstruments.Core.VisualDocumentPaginator.IncludeHeader">IncludeHeader</h4>
+  <div class="markdown level1 summary"><p>Whether or not we want to include the header on the printed page</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IncludeHeader { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_VisualDocumentPaginator_IsPageCountValid_" data-uid="NationalInstruments.Core.VisualDocumentPaginator.IsPageCountValid*"></a>
+  <h4 id="NationalInstruments_Core_VisualDocumentPaginator_IsPageCountValid" data-uid="NationalInstruments.Core.VisualDocumentPaginator.IsPageCountValid">IsPageCountValid</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsPageCountValid { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.documents.documentpaginator.ispagecountvalid#System_Windows_Documents_DocumentPaginator_IsPageCountValid">DocumentPaginator.IsPageCountValid</a></div>
+  
+  
+  <a id="NationalInstruments_Core_VisualDocumentPaginator_Margin_" data-uid="NationalInstruments.Core.VisualDocumentPaginator.Margin*"></a>
+  <h4 id="NationalInstruments_Core_VisualDocumentPaginator_Margin" data-uid="NationalInstruments.Core.VisualDocumentPaginator.Margin">Margin</h4>
+  <div class="markdown level1 summary"><p>Margin. PageSize - Margin = content area for rendering</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Thickness Margin { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.thickness">Thickness</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_VisualDocumentPaginator_PageCount_" data-uid="NationalInstruments.Core.VisualDocumentPaginator.PageCount*"></a>
+  <h4 id="NationalInstruments_Core_VisualDocumentPaginator_PageCount" data-uid="NationalInstruments.Core.VisualDocumentPaginator.PageCount">PageCount</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int PageCount { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.documents.documentpaginator.pagecount#System_Windows_Documents_DocumentPaginator_PageCount">DocumentPaginator.PageCount</a></div>
+  
+  
+  <a id="NationalInstruments_Core_VisualDocumentPaginator_PageCountX_" data-uid="NationalInstruments.Core.VisualDocumentPaginator.PageCountX*"></a>
+  <h4 id="NationalInstruments_Core_VisualDocumentPaginator_PageCountX" data-uid="NationalInstruments.Core.VisualDocumentPaginator.PageCountX">PageCountX</h4>
+  <div class="markdown level1 summary"><p>Page count in X axis</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int PageCountX { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_VisualDocumentPaginator_PageCountY_" data-uid="NationalInstruments.Core.VisualDocumentPaginator.PageCountY*"></a>
+  <h4 id="NationalInstruments_Core_VisualDocumentPaginator_PageCountY" data-uid="NationalInstruments.Core.VisualDocumentPaginator.PageCountY">PageCountY</h4>
+  <div class="markdown level1 summary"><p>Page count in Y axis</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int PageCountY { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_VisualDocumentPaginator_PageSize_" data-uid="NationalInstruments.Core.VisualDocumentPaginator.PageSize*"></a>
+  <h4 id="NationalInstruments_Core_VisualDocumentPaginator_PageSize" data-uid="NationalInstruments.Core.VisualDocumentPaginator.PageSize">PageSize</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Size PageSize { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.size">Size</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.documents.documentpaginator.pagesize#System_Windows_Documents_DocumentPaginator_PageSize">DocumentPaginator.PageSize</a></div>
+  
+  
+  <a id="NationalInstruments_Core_VisualDocumentPaginator_Source_" data-uid="NationalInstruments.Core.VisualDocumentPaginator.Source*"></a>
+  <h4 id="NationalInstruments_Core_VisualDocumentPaginator_Source" data-uid="NationalInstruments.Core.VisualDocumentPaginator.Source">Source</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IDocumentPaginatorSource Source { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.documents.idocumentpaginatorsource">IDocumentPaginatorSource</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.documents.documentpaginator.source#System_Windows_Documents_DocumentPaginator_Source">DocumentPaginator.Source</a></div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_Core_VisualDocumentPaginator_Create_" data-uid="NationalInstruments.Core.VisualDocumentPaginator.Create*"></a>
+  <h4 id="NationalInstruments_Core_VisualDocumentPaginator_Create_System_Windows_Controls_PrintDialog_System_Windows_FrameworkElement_System_Windows_Rect_System_Single_NationalInstruments_Core_PrintHeader_" data-uid="NationalInstruments.Core.VisualDocumentPaginator.Create(System.Windows.Controls.PrintDialog,System.Windows.FrameworkElement,System.Windows.Rect,System.Single,NationalInstruments.Core.PrintHeader)">Create(PrintDialog, FrameworkElement, Rect, Single, PrintHeader)</h4>
+  <div class="markdown level1 summary"><p>Create a VisualDocumentPaginator for printing a visual</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static VisualDocumentPaginator Create(PrintDialog printDialog, FrameworkElement visual, Rect visualRect, float scaleFactor, PrintHeader header)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.printdialog">PrintDialog</a></td>
+        <td><span class="parametername">printDialog</span></td>
+        <td><p>print dialog</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement">FrameworkElement</a></td>
+        <td><span class="parametername">visual</span></td>
+        <td><p>visual</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.rect">Rect</a></td>
+        <td><span class="parametername">visualRect</span></td>
+        <td><p>sub rect for visual. Can just return entire visual rect.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">scaleFactor</span></td>
+        <td><p>Scale factor</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PrintHeader.html">PrintHeader</a></td>
+        <td><span class="parametername">header</span></td>
+        <td><p>function to print the header, or null for default behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.VisualDocumentPaginator.html">VisualDocumentPaginator</a></td>
+        <td><p>a newly created paginator</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_VisualDocumentPaginator_GetPage_" data-uid="NationalInstruments.Core.VisualDocumentPaginator.GetPage*"></a>
+  <h4 id="NationalInstruments_Core_VisualDocumentPaginator_GetPage_System_Int32_" data-uid="NationalInstruments.Core.VisualDocumentPaginator.GetPage(System.Int32)">GetPage(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override DocumentPage GetPage(int pageNumber)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">pageNumber</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.documents.documentpage">DocumentPage</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Windows.Documents.DocumentPaginator.GetPage(System.Int32)</span></div>
+  
+  
+  <a id="NationalInstruments_Core_VisualDocumentPaginator_SetVisualToPrint_" data-uid="NationalInstruments.Core.VisualDocumentPaginator.SetVisualToPrint*"></a>
+  <h4 id="NationalInstruments_Core_VisualDocumentPaginator_SetVisualToPrint_System_Windows_FrameworkElement_System_Windows_Rect_System_Printing_PageImageableArea_System_Boolean_" data-uid="NationalInstruments.Core.VisualDocumentPaginator.SetVisualToPrint(System.Windows.FrameworkElement,System.Windows.Rect,System.Printing.PageImageableArea,System.Boolean)">SetVisualToPrint(FrameworkElement, Rect, PageImageableArea, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Set the visual to be printed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetVisualToPrint(FrameworkElement visualToPrint, Rect customVisualRect, PageImageableArea printableArea, bool scaleToFit)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement">FrameworkElement</a></td>
+        <td><span class="parametername">visualToPrint</span></td>
+        <td><p>The visual to be print.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.rect">Rect</a></td>
+        <td><span class="parametername">customVisualRect</span></td>
+        <td><p>Customized visual rect to be printed, if the vlaue is Rect.Empty, 
+this method will take the full area of the visual to be printed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.printing.pageimageablearea">PageImageableArea</a></td>
+        <td><span class="parametername">printableArea</span></td>
+        <td><p>The area of a page that the printer can use.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">scaleToFit</span></td>
+        <td><p>Indicate if need to be fit into one page.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_ToEnumerable__1___0_">EnumerableHelper.ToEnumerable&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_Repeat__1___0_System_Int32_">EnumerableHelper.Repeat&lt;T&gt;(T, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyNothing__1___0_">Verifier.VerifyNothing&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Func___0_System_Boolean__System_Action_System_String__System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Func___0_System_Boolean__System_Action_System_String_System_String__System_String_System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Boolean_System_Action_System_String__System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Boolean, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Boolean_System_Action_System_String_System_String__System_String_System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Boolean, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Func___0_System_Boolean__System_Action_System_String__System_String_">Verifier.Verify&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Func___0_System_Boolean__System_Action_System_String_System_String__System_String_System_String_">Verifier.Verify&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Boolean_System_Action_System_String__System_String_">Verifier.Verify&lt;T&gt;(T, Boolean, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Boolean_System_Action_System_String_System_String__System_String_System_String_">Verifier.Verify&lt;T&gt;(T, Boolean, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentIsNotNull__1___0_System_String_">Verifier.VerifyArgumentIsNotNull&lt;T&gt;(T, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyValueIsNotNull__1___0_System_String_">Verifier.VerifyValueIsNotNull&lt;T&gt;(T, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentNotReferenceEqualsTo_System_Object_System_Object_System_String_">Verifier.VerifyArgumentNotReferenceEqualsTo(Object, Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyValueNotReferenceEqualsTo_System_Object_System_Object_System_String_">Verifier.VerifyValueNotReferenceEqualsTo(Object, Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentIsOfType__1_System_Object_System_String_">Verifier.VerifyArgumentIsOfType&lt;T&gt;(Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyValueIsOfType__1_System_Object_System_String_">Verifier.VerifyValueIsOfType&lt;T&gt;(Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.QueryServiceExtensions.html#NationalInstruments_Core_QueryServiceExtensions_QueryService__1_System_Object_">QueryServiceExtensions.QueryService&lt;T&gt;(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_FindClosestMatchingContainerForResource_System_Object_System_Func_System_Object_System_Globalization_CultureInfo_System_Object__System_Globalization_CultureInfo_">LocalizationHelpers.FindClosestMatchingContainerForResource(Object, Func&lt;Object, CultureInfo, Object&gt;, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_FindClosestMatchingContainerForResource_System_Object_System_Func_System_Object_System_Globalization_CultureInfo_System_Object__System_Globalization_CultureInfo_System_Func_System_Object_System_Object__">LocalizationHelpers.FindClosestMatchingContainerForResource(Object, Func&lt;Object, CultureInfo, Object&gt;, CultureInfo, Func&lt;Object, Object&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedEnumString__1___0_">LocalizationHelpers.GetLocalizedEnumString&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedString_System_Object_System_String_System_Globalization_CultureInfo_">LocalizationHelpers.GetLocalizedString(Object, String, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedString_System_Object_System_String_System_Boolean_System_Globalization_CultureInfo_">LocalizationHelpers.GetLocalizedString(Object, String, Boolean, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_SetPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_System_Object_">DynamicPropertyExtensions.SetPropertyValue(Object, PropertySymbol, Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.GetPropertyValue(Object, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_ClearPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.ClearPropertyValue(Object, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_IsPropertySet_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.IsPropertySet(Object, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetAllSetProperties_System_Object_">DynamicPropertyExtensions.GetAllSetProperties(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetAllProperties_System_Object_">DynamicPropertyExtensions.GetAllProperties(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

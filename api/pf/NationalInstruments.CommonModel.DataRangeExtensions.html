@@ -1,0 +1,455 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DataRangeExtensions
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DataRangeExtensions
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.CommonModel.DataRangeExtensions">
+  
+  
+  <h1 id="NationalInstruments_CommonModel_DataRangeExtensions" data-uid="NationalInstruments.CommonModel.DataRangeExtensions" class="text-break">Class DataRangeExtensions
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">DataRangeExtensions</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.CommonModel.html">NationalInstruments.CommonModel</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_CommonModel_DataRangeExtensions_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class DataRangeExtensions</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_CommonModel_DataRangeExtensions_AggregateOverlappingOrBorderingDataRanges_" data-uid="NationalInstruments.CommonModel.DataRangeExtensions.AggregateOverlappingOrBorderingDataRanges*"></a>
+  <h4 id="NationalInstruments_CommonModel_DataRangeExtensions_AggregateOverlappingOrBorderingDataRanges_NationalInstruments_CommonModel_DataRange_NationalInstruments_CommonModel_DataRange_System_StringComparison_" data-uid="NationalInstruments.CommonModel.DataRangeExtensions.AggregateOverlappingOrBorderingDataRanges(NationalInstruments.CommonModel.DataRange,NationalInstruments.CommonModel.DataRange,System.StringComparison)">AggregateOverlappingOrBorderingDataRanges(DataRange, DataRange, StringComparison)</h4>
+  <div class="markdown level1 summary"><p>Aggregates two DataRanges into their superset.
+Precondition: low.CompareTo(high) &lt;= 0 &amp;&amp; (low.IsBordering(high) || low.IsOverlapping(high))</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DataRange AggregateOverlappingOrBorderingDataRanges(this DataRange low, DataRange high, StringComparison comparisonType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.CommonModel.DataRange.html">DataRange</a></td>
+        <td><span class="parametername">low</span></td>
+        <td><p>The lower of the two ranges to aggregate into a single range</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.CommonModel.DataRange.html">DataRange</a></td>
+        <td><span class="parametername">high</span></td>
+        <td><p>The higher of the two ranges to aggregate into a single range</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.stringcomparison">StringComparison</a></td>
+        <td><span class="parametername">comparisonType</span></td>
+        <td><p>The comparison type to use for string data ranges</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.CommonModel.DataRange.html">DataRange</a></td>
+        <td><p>A DataRange that includes both low and high.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_CommonModel_DataRangeExtensions_CompareTo_" data-uid="NationalInstruments.CommonModel.DataRangeExtensions.CompareTo*"></a>
+  <h4 id="NationalInstruments_CommonModel_DataRangeExtensions_CompareTo_NationalInstruments_CommonModel_DataRange_NationalInstruments_CommonModel_DataRange_System_StringComparison_" data-uid="NationalInstruments.CommonModel.DataRangeExtensions.CompareTo(NationalInstruments.CommonModel.DataRange,NationalInstruments.CommonModel.DataRange,System.StringComparison)">CompareTo(DataRange, DataRange, StringComparison)</h4>
+  <div class="markdown level1 summary"><p>Compares two DataRanges.  Sorts first based on LowValue, then on HighValue.  NegativeInfinity is
+considered less than any other value, and PositiveInfinity is considered greater than any other value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int CompareTo(this DataRange one, DataRange two, StringComparison comparisonType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.CommonModel.DataRange.html">DataRange</a></td>
+        <td><span class="parametername">one</span></td>
+        <td><p>The first DataRange to use in the comparison</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.CommonModel.DataRange.html">DataRange</a></td>
+        <td><span class="parametername">two</span></td>
+        <td><p>The second DataRange to use in the comparison</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.stringcomparison">StringComparison</a></td>
+        <td><span class="parametername">comparisonType</span></td>
+        <td><p>The comparison type to use for string DataRanges</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>An integer: 0 if one == two, &lt;0 if one &lt; two, &gt;0 if one &gt; two</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_CommonModel_DataRangeExtensions_IsBordering_" data-uid="NationalInstruments.CommonModel.DataRangeExtensions.IsBordering*"></a>
+  <h4 id="NationalInstruments_CommonModel_DataRangeExtensions_IsBordering__1_NationalInstruments_CommonModel_DataRange_NationalInstruments_CommonModel_DataRange_System_Func_System_IComparable___0__" data-uid="NationalInstruments.CommonModel.DataRangeExtensions.IsBordering``1(NationalInstruments.CommonModel.DataRange,NationalInstruments.CommonModel.DataRange,System.Func{System.IComparable,``0})">IsBordering&lt;T&gt;(DataRange, DataRange, Func&lt;IComparable, T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Determines whether two DataRanges border.  They border if low.HighValue + 1 == high.LowValue
+Precondition: low.CompareTo(high) &lt;=0</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsBordering&lt;T&gt;(this DataRange low, DataRange high, Func&lt;IComparable, T&gt; increment)where T : IComparable</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.CommonModel.DataRange.html">DataRange</a></td>
+        <td><span class="parametername">low</span></td>
+        <td><p>The lower of the two ranges to check if they border</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.CommonModel.DataRange.html">DataRange</a></td>
+        <td><span class="parametername">high</span></td>
+        <td><p>The higher of the two ranges to check if they border</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.icomparable">IComparable</a>, T&gt;</td>
+        <td><span class="parametername">increment</span></td>
+        <td><p>A function that can be used to increment the DataType of the range by 1.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if low and high border each other and False otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_CommonModel_DataRangeExtensions_IsOverlapping_" data-uid="NationalInstruments.CommonModel.DataRangeExtensions.IsOverlapping*"></a>
+  <h4 id="NationalInstruments_CommonModel_DataRangeExtensions_IsOverlapping_NationalInstruments_CommonModel_DataRange_NationalInstruments_CommonModel_DataRange_System_StringComparison_" data-uid="NationalInstruments.CommonModel.DataRangeExtensions.IsOverlapping(NationalInstruments.CommonModel.DataRange,NationalInstruments.CommonModel.DataRange,System.StringComparison)">IsOverlapping(DataRange, DataRange, StringComparison)</h4>
+  <div class="markdown level1 summary"><p>Determines whether two DataRanges overlap. Includes whether one range is entirely within the 
+other.  Ranges are always treated as inclusive.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsOverlapping(this DataRange one, DataRange two, StringComparison comparisonType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.CommonModel.DataRange.html">DataRange</a></td>
+        <td><span class="parametername">one</span></td>
+        <td><p>The first range to use in the check for overlap</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.CommonModel.DataRange.html">DataRange</a></td>
+        <td><span class="parametername">two</span></td>
+        <td><p>The second range to use in the check for overlap</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.stringcomparison">StringComparison</a></td>
+        <td><span class="parametername">comparisonType</span></td>
+        <td><p>The comparison type to use for string DataRanges</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if one and two overlap and False otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_CommonModel_DataRangeExtensions_ValueInRange_" data-uid="NationalInstruments.CommonModel.DataRangeExtensions.ValueInRange*"></a>
+  <h4 id="NationalInstruments_CommonModel_DataRangeExtensions_ValueInRange_NationalInstruments_CommonModel_DataRange_System_IComparable_System_StringComparison_" data-uid="NationalInstruments.CommonModel.DataRangeExtensions.ValueInRange(NationalInstruments.CommonModel.DataRange,System.IComparable,System.StringComparison)">ValueInRange(DataRange, IComparable, StringComparison)</h4>
+  <div class="markdown level1 summary"><p>Determines whether value is within range.  Range is always inclusive.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ValueInRange(this DataRange range, IComparable value, StringComparison comparisonType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.CommonModel.DataRange.html">DataRange</a></td>
+        <td><span class="parametername">range</span></td>
+        <td><p>The range to check against</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.icomparable">IComparable</a></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value to check to see if it falls within the specified range</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.stringcomparison">StringComparison</a></td>
+        <td><span class="parametername">comparisonType</span></td>
+        <td><p>The comparison type to use for string DataRanges</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if the value is in range and False otherwise</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

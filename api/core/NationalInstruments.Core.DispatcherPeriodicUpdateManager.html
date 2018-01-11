@@ -1,0 +1,270 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DispatcherPeriodicUpdateManager
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DispatcherPeriodicUpdateManager
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.Core.DispatcherPeriodicUpdateManager">
+  
+  
+  <h1 id="NationalInstruments_Core_DispatcherPeriodicUpdateManager" data-uid="NationalInstruments.Core.DispatcherPeriodicUpdateManager" class="text-break">Class DispatcherPeriodicUpdateManager
+  </h1>
+  <div class="markdown level0 summary"><p>This class manages a list of IPeriodicUpdateListener and makes sure these listeners are told to send
+change notifications. Two timers are used to perform the updates.  The first fast timer runs at a high
+rate with a background priority.  This timer will usually perform the notifications / update of the UI when it is not busy.
+When the UI is busy the fast timer will starve so we also use a slow timer which attempts to keep some updates going
+while leaving enough headroom in the UI thread to allow other operations.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">DispatcherPeriodicUpdateManager</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="../pf/NationalInstruments.Core.html">NationalInstruments.Core</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.Core.dll</h6>
+  <h5 id="NationalInstruments_Core_DispatcherPeriodicUpdateManager_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class DispatcherPeriodicUpdateManager</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_Core_DispatcherPeriodicUpdateManager_ClearListeners_" data-uid="NationalInstruments.Core.DispatcherPeriodicUpdateManager.ClearListeners*"></a>
+  <h4 id="NationalInstruments_Core_DispatcherPeriodicUpdateManager_ClearListeners" data-uid="NationalInstruments.Core.DispatcherPeriodicUpdateManager.ClearListeners">ClearListeners()</h4>
+  <div class="markdown level1 summary"><p>Removes all currently monitored listeners</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ClearListeners()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Core_DispatcherPeriodicUpdateManager_Register_" data-uid="NationalInstruments.Core.DispatcherPeriodicUpdateManager.Register*"></a>
+  <h4 id="NationalInstruments_Core_DispatcherPeriodicUpdateManager_Register_NationalInstruments_Core_IPeriodicUpdateListener_" data-uid="NationalInstruments.Core.DispatcherPeriodicUpdateManager.Register(NationalInstruments.Core.IPeriodicUpdateListener)">Register(IPeriodicUpdateListener)</h4>
+  <div class="markdown level1 summary"><p>Registers a listener with the manager.  This will cause the manager to start
+periodic updating of the registered listener.  A listener
+must be unregistered when it is no longer running so that the manager will stop updating.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Register(IPeriodicUpdateListener listener)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.IPeriodicUpdateListener.html">IPeriodicUpdateListener</a></td>
+        <td><span class="parametername">listener</span></td>
+        <td><p>The listener to update periodically</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_DispatcherPeriodicUpdateManager_SwitchToTestMode_" data-uid="NationalInstruments.Core.DispatcherPeriodicUpdateManager.SwitchToTestMode*"></a>
+  <h4 id="NationalInstruments_Core_DispatcherPeriodicUpdateManager_SwitchToTestMode" data-uid="NationalInstruments.Core.DispatcherPeriodicUpdateManager.SwitchToTestMode">SwitchToTestMode()</h4>
+  <div class="markdown level1 summary"><p>Deprecated call that helped tests get value updates for data items. We have improved our test utilities
+such that it is no longer needed. All calls should be deleted and tests should use IDeployAndRunTest
+interfaces to access data item values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Test mode is no longer needed. You should delete this call.&quot;, true)]
+public static void SwitchToTestMode()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Core_DispatcherPeriodicUpdateManager_Unregister_" data-uid="NationalInstruments.Core.DispatcherPeriodicUpdateManager.Unregister*"></a>
+  <h4 id="NationalInstruments_Core_DispatcherPeriodicUpdateManager_Unregister_NationalInstruments_Core_IPeriodicUpdateListener_" data-uid="NationalInstruments.Core.DispatcherPeriodicUpdateManager.Unregister(NationalInstruments.Core.IPeriodicUpdateListener)">Unregister(IPeriodicUpdateListener)</h4>
+  <div class="markdown level1 summary"><p>Unregisters a listener that was previously registered with a call to Register</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Unregister(IPeriodicUpdateListener listener)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.IPeriodicUpdateListener.html">IPeriodicUpdateListener</a></td>
+        <td><span class="parametername">listener</span></td>
+        <td><p>The listener to stop monitoring</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_DispatcherPeriodicUpdateManager_UpdateNonBoundForRegisteredListener_" data-uid="NationalInstruments.Core.DispatcherPeriodicUpdateManager.UpdateNonBoundForRegisteredListener*"></a>
+  <h4 id="NationalInstruments_Core_DispatcherPeriodicUpdateManager_UpdateNonBoundForRegisteredListener_NationalInstruments_Core_IPeriodicUpdateListener_" data-uid="NationalInstruments.Core.DispatcherPeriodicUpdateManager.UpdateNonBoundForRegisteredListener(NationalInstruments.Core.IPeriodicUpdateListener)">UpdateNonBoundForRegisteredListener(IPeriodicUpdateListener)</h4>
+  <div class="markdown level1 summary"><p>Changes a previously registered listener to request updates for both bound and non-bound.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void UpdateNonBoundForRegisteredListener(IPeriodicUpdateListener listener)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.IPeriodicUpdateListener.html">IPeriodicUpdateListener</a></td>
+        <td><span class="parametername">listener</span></td>
+        <td><p>A listener that is already being monitored</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

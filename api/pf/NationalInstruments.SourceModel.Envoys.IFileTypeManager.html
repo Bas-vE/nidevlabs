@@ -1,0 +1,1278 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IFileTypeManager
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IFileTypeManager
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager">
+  
+  
+  <h1 id="NationalInstruments_SourceModel_Envoys_IFileTypeManager" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager" class="text-break">Interface IFileTypeManager
+  </h1>
+  <div class="markdown level0 summary"><p>Describes an object responsible for managing all exported file types in the system.  Is able to
+find <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a> and <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a> implementations for all 
+exported file types in the system.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.SourceModel.Envoys.html">NationalInstruments.SourceModel.Envoys</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IFileTypeManager</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_ExportedFileTypes_" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.ExportedFileTypes*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_ExportedFileTypes" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.ExportedFileTypes">ExportedFileTypes</h4>
+  <div class="markdown level1 summary"><p>Gets all of the file types that have been exported.  This collection is ordered by the stated 
+<a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html#NationalInstruments_SourceModel_Envoys_IFileTypeInfo_RelativeImportance">RelativeImportance</a> for each document type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;Lazy&lt;IFileType, IFileTypeInfo&gt;&gt; ExportedFileTypes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Lazy</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a>, <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileType_" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileType*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileType_NationalInstruments_Core_BindingKeyword_" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileType(NationalInstruments.Core.BindingKeyword)">GetFileType(BindingKeyword)</h4>
+  <div class="markdown level1 summary"><p>Finds and returns the first <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a> that binds to the given model definition type string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IFileType GetFileType(BindingKeyword modelDefinitionType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.BindingKeyword.html">BindingKeyword</a></td>
+        <td><span class="parametername">modelDefinitionType</span></td>
+        <td><p>The model definition type of the document type to find.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a></td>
+        <td><p>The first <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a> that matches the given model definition type string, or <code>null</code> if none match.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileType_" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileType*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileType_NationalInstruments_SourceModel_Envoys_Envoy_" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileType(NationalInstruments.SourceModel.Envoys.Envoy)">GetFileType(Envoy)</h4>
+  <div class="markdown level1 summary"><p>Finds and returns the first <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a> that corresponds to the given <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IFileType GetFileType(Envoy envoy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">envoy</span></td>
+        <td><p>The <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a> for which to find a matching <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a></td>
+        <td><p>The first <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a> that matches the given Envoy, or <code>null</code> if none match.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileType_" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileType*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileType_System_Predicate_NationalInstruments_SourceModel_Envoys_IFileTypeInfo__" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileType(System.Predicate{NationalInstruments.SourceModel.Envoys.IFileTypeInfo})">GetFileType(Predicate&lt;IFileTypeInfo&gt;)</h4>
+  <div class="markdown level1 summary"><p>Finds and returns the first <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a> that matches on the given match predicate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IFileType GetFileType(Predicate&lt;IFileTypeInfo&gt; isMatch)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Predicate</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a>&gt;</td>
+        <td><span class="parametername">isMatch</span></td>
+        <td><p>The predicate used to determine the matching document type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a></td>
+        <td><p>The first <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a> that matches the given predicate, or <code>null</code> if none match.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileTypeAndInfo_" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileTypeAndInfo*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileTypeAndInfo_NationalInstruments_Core_BindingKeyword_" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileTypeAndInfo(NationalInstruments.Core.BindingKeyword)">GetFileTypeAndInfo(BindingKeyword)</h4>
+  <div class="markdown level1 summary"><p>Finds and returns the first <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a> and <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a> that binds to the given model definition type string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Lazy&lt;IFileType, IFileTypeInfo&gt; GetFileTypeAndInfo(BindingKeyword modelDefinitionType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.BindingKeyword.html">BindingKeyword</a></td>
+        <td><span class="parametername">modelDefinitionType</span></td>
+        <td><p>The model definition type of the document type to find.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Lazy</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a>, <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a>&gt;</td>
+        <td><p>The first <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a> and <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a> that matches the given model definition type string, or <code>null</code> if none match.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileTypeAndInfo_" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileTypeAndInfo*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileTypeAndInfo_NationalInstruments_SourceModel_Envoys_Envoy_" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileTypeAndInfo(NationalInstruments.SourceModel.Envoys.Envoy)">GetFileTypeAndInfo(Envoy)</h4>
+  <div class="markdown level1 summary"><p>Finds and returns the first <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a> and <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a> that corresponds to the given <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Lazy&lt;IFileType, IFileTypeInfo&gt; GetFileTypeAndInfo(Envoy envoy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">envoy</span></td>
+        <td><p>The <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a> for which to find a matching <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Lazy</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a>, <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a>&gt;</td>
+        <td><p>The first <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a> and <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a> that matches the given Envoy, or <code>null</code> if none match.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileTypeAndInfo_" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileTypeAndInfo*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileTypeAndInfo_System_Predicate_NationalInstruments_SourceModel_Envoys_IFileTypeInfo__" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileTypeAndInfo(System.Predicate{NationalInstruments.SourceModel.Envoys.IFileTypeInfo})">GetFileTypeAndInfo(Predicate&lt;IFileTypeInfo&gt;)</h4>
+  <div class="markdown level1 summary"><p>Finds and returns the first <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a> and <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a> that matches on the given match predicate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Lazy&lt;IFileType, IFileTypeInfo&gt; GetFileTypeAndInfo(Predicate&lt;IFileTypeInfo&gt; isMatch)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Predicate</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a>&gt;</td>
+        <td><span class="parametername">isMatch</span></td>
+        <td><p>The predicate used to determine the matching document type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Lazy</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a>, <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a>&gt;</td>
+        <td><p>The first <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a> and <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a> that matches the given predicate, or <code>null</code> if none match.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileTypeAndInfoForExtension_" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileTypeAndInfoForExtension*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileTypeAndInfoForExtension_System_String_" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileTypeAndInfoForExtension(System.String)">GetFileTypeAndInfoForExtension(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Lazy&lt;IFileType, IFileTypeInfo&gt; GetFileTypeAndInfoForExtension(string extension)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">extension</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Lazy</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a>, <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileTypeAndInfoForExtension_" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileTypeAndInfoForExtension*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileTypeAndInfoForExtension_System_String_System_IO_Stream_" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileTypeAndInfoForExtension(System.String,System.IO.Stream)">GetFileTypeAndInfoForExtension(String, Stream)</h4>
+  <div class="markdown level1 summary"><p>Finds and returns the first <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a> and <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a>  that binds to thge given model definition type string.
+Uses the file extension and the stream to find the appropriate file type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Lazy&lt;IFileType, IFileTypeInfo&gt; GetFileTypeAndInfoForExtension(string extension, Stream stream)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">extension</span></td>
+        <td><p>The extension of the file associated with the stream.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
+        <td><span class="parametername">stream</span></td>
+        <td><p>The stream associated with the file.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Lazy</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a>, <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a>&gt;</td>
+        <td><p>The first <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a> and <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a> that matches the given file extension and stream, or <code>null</code> if none match.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileTypeForExtension_" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileTypeForExtension*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileTypeForExtension_System_String_" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileTypeForExtension(System.String)">GetFileTypeForExtension(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IFileType GetFileTypeForExtension(string extension)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">extension</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileTypeForExtension_" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileTypeForExtension*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileTypeForExtension_System_String_System_IO_Stream_" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileTypeForExtension(System.String,System.IO.Stream)">GetFileTypeForExtension(String, Stream)</h4>
+  <div class="markdown level1 summary"><p>Finds and returns the first <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a> that binds to the given model definition type string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IFileType GetFileTypeForExtension(string extension, Stream stream)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">extension</span></td>
+        <td><p>The extension of the file associated with the stream.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
+        <td><span class="parametername">stream</span></td>
+        <td><p>The stream associated with the file.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a></td>
+        <td><p>The first <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a> that matches the given file extension and stream, or <code>null</code> if none match.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileTypeInfo_" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileTypeInfo*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileTypeInfo_NationalInstruments_Core_BindingKeyword_" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileTypeInfo(NationalInstruments.Core.BindingKeyword)">GetFileTypeInfo(BindingKeyword)</h4>
+  <div class="markdown level1 summary"><p>Finds and returns the first <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a> that binds to the given model definition type string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IFileTypeInfo GetFileTypeInfo(BindingKeyword modelDefinitionType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.BindingKeyword.html">BindingKeyword</a></td>
+        <td><span class="parametername">modelDefinitionType</span></td>
+        <td><p>The model definition type of the document type to find.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a></td>
+        <td><p>The first <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a> that matches the given model definition type string, or <code>null</code> if none match.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileTypeInfo_" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileTypeInfo*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileTypeInfo_NationalInstruments_SourceModel_Envoys_Envoy_" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileTypeInfo(NationalInstruments.SourceModel.Envoys.Envoy)">GetFileTypeInfo(Envoy)</h4>
+  <div class="markdown level1 summary"><p>Finds and returns the first <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a> that corresponds to the given <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IFileTypeInfo GetFileTypeInfo(Envoy envoy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">envoy</span></td>
+        <td><p>The <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a> for which to find a matching <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a></td>
+        <td><p>The first <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a> that matches the given Envoy, or <code>null</code> if none match.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileTypeInfo_" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileTypeInfo*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileTypeInfo_System_Predicate_NationalInstruments_SourceModel_Envoys_IFileTypeInfo__" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileTypeInfo(System.Predicate{NationalInstruments.SourceModel.Envoys.IFileTypeInfo})">GetFileTypeInfo(Predicate&lt;IFileTypeInfo&gt;)</h4>
+  <div class="markdown level1 summary"><p>Finds and returns the first <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a> that matches on the given match predicate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IFileTypeInfo GetFileTypeInfo(Predicate&lt;IFileTypeInfo&gt; isMatch)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Predicate</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a>&gt;</td>
+        <td><span class="parametername">isMatch</span></td>
+        <td><p>The predicate used to determine the matching document type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a></td>
+        <td><p>The first <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a> that matches the given predicate, or <code>null</code> if none match.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileTypeInfoForExtension_" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileTypeInfoForExtension*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileTypeInfoForExtension_System_String_" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileTypeInfoForExtension(System.String)">GetFileTypeInfoForExtension(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IFileTypeInfo GetFileTypeInfoForExtension(string extension)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">extension</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileTypeInfoForExtension_" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileTypeInfoForExtension*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileTypeInfoForExtension_System_String_System_IO_Stream_" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileTypeInfoForExtension(System.String,System.IO.Stream)">GetFileTypeInfoForExtension(String, Stream)</h4>
+  <div class="markdown level1 summary"><p>Finds and returns the first <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a> that binds to the given model definition type string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IFileTypeInfo GetFileTypeInfoForExtension(string extension, Stream stream)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">extension</span></td>
+        <td><p>The extension of the file associated with the stream.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
+        <td><span class="parametername">stream</span></td>
+        <td><p>The stream associated with the file.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a></td>
+        <td><p>The first <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a> that matches the given file extension and stream, or <code>null</code> if none match.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileTypeInfos_" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileTypeInfos*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileTypeInfos_System_Predicate_NationalInstruments_SourceModel_Envoys_IFileTypeInfo__" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileTypeInfos(System.Predicate{NationalInstruments.SourceModel.Envoys.IFileTypeInfo})">GetFileTypeInfos(Predicate&lt;IFileTypeInfo&gt;)</h4>
+  <div class="markdown level1 summary"><p>Finds and returns all  <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a>s that match on the given match predicate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;IFileTypeInfo&gt; GetFileTypeInfos(Predicate&lt;IFileTypeInfo&gt; isMatch)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Predicate</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a>&gt;</td>
+        <td><span class="parametername">isMatch</span></td>
+        <td><p>The predicate used to determine the matching document type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a>&gt;</td>
+        <td><p>All <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a>s that matched the predicate, or an empty enumerable if none matched.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileTypeInfosForExtension_" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileTypeInfosForExtension*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileTypeInfosForExtension_System_String_" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileTypeInfosForExtension(System.String)">GetFileTypeInfosForExtension(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;IFileTypeInfo&gt; GetFileTypeInfosForExtension(string extension)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">extension</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a>&gt;</td>
+        <td><p>All the <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a>s that match the given file extension and stream, or <code>null</code> if none match.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileTypeInfosForExtension_" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileTypeInfosForExtension*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileTypeInfosForExtension_System_String_System_IO_Stream_" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileTypeInfosForExtension(System.String,System.IO.Stream)">GetFileTypeInfosForExtension(String, Stream)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;IFileTypeInfo&gt; GetFileTypeInfosForExtension(string extension, Stream stream)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">extension</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
+        <td><span class="parametername">stream</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a>&gt;</td>
+        <td><p>All the <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a>s that match the given file extension and stream, or <code>null</code> if none match.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileTypes_" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileTypes*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileTypes_System_Predicate_NationalInstruments_SourceModel_Envoys_IFileTypeInfo__" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileTypes(System.Predicate{NationalInstruments.SourceModel.Envoys.IFileTypeInfo})">GetFileTypes(Predicate&lt;IFileTypeInfo&gt;)</h4>
+  <div class="markdown level1 summary"><p>Finds and returns all  <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a>s that match on the given match predicate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;IFileType&gt; GetFileTypes(Predicate&lt;IFileTypeInfo&gt; isMatch)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Predicate</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a>&gt;</td>
+        <td><span class="parametername">isMatch</span></td>
+        <td><p>The predicate used to determine the matching document type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a>&gt;</td>
+        <td><p>All <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a>s that matched the predicate, or an empty enumerable if none matched.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileTypesAndInfos_" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileTypesAndInfos*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileTypesAndInfos_System_Predicate_NationalInstruments_SourceModel_Envoys_IFileTypeInfo__" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileTypesAndInfos(System.Predicate{NationalInstruments.SourceModel.Envoys.IFileTypeInfo})">GetFileTypesAndInfos(Predicate&lt;IFileTypeInfo&gt;)</h4>
+  <div class="markdown level1 summary"><p>Finds and returns all <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a> and <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a>s that match on the given match predicate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;Lazy&lt;IFileType, IFileTypeInfo&gt;&gt; GetFileTypesAndInfos(Predicate&lt;IFileTypeInfo&gt; isMatch)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Predicate</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a>&gt;</td>
+        <td><span class="parametername">isMatch</span></td>
+        <td><p>The predicate used to determine the matching document type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Lazy</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a>, <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a>&gt;&gt;</td>
+        <td><p>All <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a>s and <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a>s that matched the predicate, or an empty enumerable if none matched.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileTypesAndInfosForExtension_" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileTypesAndInfosForExtension*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileTypesAndInfosForExtension_System_String_" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileTypesAndInfosForExtension(System.String)">GetFileTypesAndInfosForExtension(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;Lazy&lt;IFileType, IFileTypeInfo&gt;&gt; GetFileTypesAndInfosForExtension(string extension)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">extension</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Lazy</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a>, <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a>&gt;&gt;</td>
+        <td><p>All the <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a>s and <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a>s that match the given file extension and stream, or <code>null</code> if none match.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileTypesAndInfosForExtension_" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileTypesAndInfosForExtension*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileTypesAndInfosForExtension_System_String_System_IO_Stream_" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileTypesAndInfosForExtension(System.String,System.IO.Stream)">GetFileTypesAndInfosForExtension(String, Stream)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;Lazy&lt;IFileType, IFileTypeInfo&gt;&gt; GetFileTypesAndInfosForExtension(string extension, Stream stream)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">extension</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
+        <td><span class="parametername">stream</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Lazy</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a>, <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a>&gt;&gt;</td>
+        <td><p>All the <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a>s and <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileTypeInfo.html">IFileTypeInfo</a>s that match the given file extension and stream, or <code>null</code> if none match.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileTypesForExtension_" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileTypesForExtension*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileTypesForExtension_System_String_" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileTypesForExtension(System.String)">GetFileTypesForExtension(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;IFileType&gt; GetFileTypesForExtension(string extension)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">extension</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a>&gt;</td>
+        <td><p>All of the <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a>s that match the given file extension and stream, or <code>null</code> if none match.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileTypesForExtension_" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileTypesForExtension*"></a>
+  <h4 id="NationalInstruments_SourceModel_Envoys_IFileTypeManager_GetFileTypesForExtension_System_String_System_IO_Stream_" data-uid="NationalInstruments.SourceModel.Envoys.IFileTypeManager.GetFileTypesForExtension(System.String,System.IO.Stream)">GetFileTypesForExtension(String, Stream)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;IFileType&gt; GetFileTypesForExtension(string extension, Stream stream)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">extension</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
+        <td><span class="parametername">stream</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a>&gt;</td>
+        <td><p>All of the <a class="xref" href="NationalInstruments.SourceModel.Envoys.IFileType.html">IFileType</a>s that match the given file extension and stream, or <code>null</code> if none match.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.FileTypeManagerExtensions.html#NationalInstruments_SourceModel_Envoys_FileTypeManagerExtensions_TryGetModelDefinitionTypeForFile_NationalInstruments_SourceModel_Envoys_IFileTypeManager_System_String_">FileTypeManagerExtensions.TryGetModelDefinitionTypeForFile(IFileTypeManager, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.FileTypeManagerExtensions.html#NationalInstruments_SourceModel_Envoys_FileTypeManagerExtensions_GetModelDefinitionTypeForFile_NationalInstruments_SourceModel_Envoys_IFileTypeManager_System_String_">FileTypeManagerExtensions.GetModelDefinitionTypeForFile(IFileTypeManager, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.FileTypeManagerExtensions.html#NationalInstruments_SourceModel_Envoys_FileTypeManagerExtensions_GetModelDefinitionTypeForFileStream_NationalInstruments_SourceModel_Envoys_IFileTypeManager_NationalInstruments_SourceModel_Envoys_FileStreamInfo_">FileTypeManagerExtensions.GetModelDefinitionTypeForFileStream(IFileTypeManager, FileStreamInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.FileTypeManagerExtensions.html#NationalInstruments_SourceModel_Envoys_FileTypeManagerExtensions_TryGetModelDefinitionTypeForFileStream_NationalInstruments_SourceModel_Envoys_IFileTypeManager_NationalInstruments_SourceModel_Envoys_FileStreamInfo_">FileTypeManagerExtensions.TryGetModelDefinitionTypeForFileStream(IFileTypeManager, FileStreamInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.FileTypeManagerExtensions.html#NationalInstruments_SourceModel_Envoys_FileTypeManagerExtensions_GetModelDefinitionTypesForFiles_NationalInstruments_SourceModel_Envoys_IFileTypeManager_System_Collections_Generic_IEnumerable_NationalInstruments_SourceModel_Envoys_FileStreamInfo__">FileTypeManagerExtensions.GetModelDefinitionTypesForFiles(IFileTypeManager, IEnumerable&lt;FileStreamInfo&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

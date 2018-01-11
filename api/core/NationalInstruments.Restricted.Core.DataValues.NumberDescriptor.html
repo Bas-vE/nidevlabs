@@ -1,0 +1,1675 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Struct NumberDescriptor
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Struct NumberDescriptor
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor">
+  
+  
+  <h1 id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor" class="text-break">Struct NumberDescriptor
+  </h1>
+  <div class="markdown level0 summary"><p>Provides descriptor support for Number, including FixedPoint implementations.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">NationalInstruments.DataInfrastructure.Descriptors.IOpComparison</span>&lt;<a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a>&gt;</div>
+    <div><span class="xref">NationalInstruments.DataInfrastructure.Descriptors.IOpFormat</span>&lt;<a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a>&gt;</div>
+    <div><span class="xref">NationalInstruments.DataInfrastructure.Descriptors.IOpConversion</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a>&gt;</div>
+    <div><span class="xref">NationalInstruments.DataInfrastructure.Descriptors.IOpNumeric</span>&lt;<a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a>&gt;</div>
+    <div><span class="xref">NationalInstruments.DataInfrastructure.Descriptors.IOpAddition</span>&lt;<a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a>, <a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a>&gt;</div>
+    <div><span class="xref">NationalInstruments.DataInfrastructure.Descriptors.IOpSubtraction</span>&lt;<a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a>, <a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a>&gt;</div>
+    <div><span class="xref">NationalInstruments.DataInfrastructure.Descriptors.IOpMultiplication</span>&lt;<a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a>, <a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a>&gt;</div>
+    <div><span class="xref">NationalInstruments.DataInfrastructure.Descriptors.IOpScalarMultiplication</span>&lt;<a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a>&gt;</div>
+    <div><span class="xref">NationalInstruments.DataInfrastructure.Descriptors.IOpDivision</span>&lt;<a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a>, <a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a>&gt;</div>
+    <div><span class="xref">NationalInstruments.DataInfrastructure.Descriptors.IOpRatio</span>&lt;<a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a>&gt;</div>
+    <div><span class="xref">NationalInstruments.DataInfrastructure.Descriptors.IOpInfinity</span>&lt;<a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a>&gt;</div>
+    <div><span class="xref">NationalInstruments.DataInfrastructure.Descriptors.IOpSigned</span>&lt;<a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a>&gt;</div>
+    <div><span class="xref">NationalInstruments.DataInfrastructure.Descriptors.IOpConversion</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a>, <a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a>&gt;</div>
+    <div><span class="xref">NationalInstruments.DataInfrastructure.Descriptors.IOpConversion</span>&lt;<a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a>&gt;</div>
+    <div><span class="xref">NationalInstruments.DataInfrastructure.Descriptors.IOpContinuous</span>&lt;<a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a>&gt;</div>
+    <div><span class="xref">NationalInstruments.DataInfrastructure.Descriptors.IDataTypeDescriptor</span>&lt;<a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.ValueType.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.ValueType.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.ValueType.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.Restricted.Core.DataValues.html">NationalInstruments.Restricted.Core.DataValues</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.Core.dll</h6>
+  <h5 id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public struct NumberDescriptor : IOpComparison&lt;Number&gt;, IOpFormat&lt;Number&gt;, IOpConversion&lt;string, Number&gt;, IOpNumeric&lt;Number&gt;, IOpAddition&lt;Number, Number&gt;, IOpSubtraction&lt;Number, Number&gt;, IOpMultiplication&lt;Number, Number&gt;, IOpScalarMultiplication&lt;Number&gt;, IOpDivision&lt;Number, Number&gt;, IOpRatio&lt;Number&gt;, IOpInfinity&lt;Number&gt;, IOpSigned&lt;Number&gt;, IOpConversion&lt;double, Number&gt;, IOpConversion&lt;Number, double&gt;, IOpContinuous&lt;Number&gt;, IDataTypeDescriptor&lt;Number&gt;</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_Infinity_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.Infinity*"></a>
+  <h4 id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_Infinity" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.Infinity">Infinity</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Number Infinity { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_MaximumRoundDigits_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.MaximumRoundDigits*"></a>
+  <h4 id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_MaximumRoundDigits" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.MaximumRoundDigits">MaximumRoundDigits</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MaximumRoundDigits { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_NegativeOne_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.NegativeOne*"></a>
+  <h4 id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_NegativeOne" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.NegativeOne">NegativeOne</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Number NegativeOne { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_One_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.One*"></a>
+  <h4 id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_One" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.One">One</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Number One { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_RoundTripFormat_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.RoundTripFormat*"></a>
+  <h4 id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_RoundTripFormat" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.RoundTripFormat">RoundTripFormat</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string RoundTripFormat { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_Zero_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.Zero*"></a>
+  <h4 id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_Zero" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.Zero">Zero</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Number Zero { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_AbsoluteValue_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.AbsoluteValue*"></a>
+  <h4 id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_AbsoluteValue_NationalInstruments_DataValues_Number_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.AbsoluteValue(NationalInstruments.DataValues.Number)">AbsoluteValue(Number)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Number AbsoluteValue(Number value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_Add_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.Add*"></a>
+  <h4 id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_Add_NationalInstruments_DataValues_Number_NationalInstruments_DataValues_Number_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.Add(NationalInstruments.DataValues.Number,NationalInstruments.DataValues.Number)">Add(Number, Number)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Number Add(Number value, Number offset)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td><span class="parametername">offset</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_Ceiling_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.Ceiling*"></a>
+  <h4 id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_Ceiling_NationalInstruments_DataValues_Number_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.Ceiling(NationalInstruments.DataValues.Number)">Ceiling(Number)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Number Ceiling(Number value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_Compare_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.Compare*"></a>
+  <h4 id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_Compare_NationalInstruments_DataValues_Number_NationalInstruments_DataValues_Number_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.Compare(NationalInstruments.DataValues.Number,NationalInstruments.DataValues.Number)">Compare(Number, Number)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Compare(Number left, Number right)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td><span class="parametername">left</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td><span class="parametername">right</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_Difference_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.Difference*"></a>
+  <h4 id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_Difference_NationalInstruments_DataValues_Number_NationalInstruments_DataValues_Number_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.Difference(NationalInstruments.DataValues.Number,NationalInstruments.DataValues.Number)">Difference(Number, Number)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Number Difference(Number left, Number right)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td><span class="parametername">left</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td><span class="parametername">right</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_Divide_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.Divide*"></a>
+  <h4 id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_Divide_NationalInstruments_DataValues_Number_NationalInstruments_DataValues_Number_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.Divide(NationalInstruments.DataValues.Number,NationalInstruments.DataValues.Number)">Divide(Number, Number)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Number Divide(Number value, Number factor)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td><span class="parametername">factor</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_Floor_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.Floor*"></a>
+  <h4 id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_Floor_NationalInstruments_DataValues_Number_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.Floor(NationalInstruments.DataValues.Number)">Floor(Number)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Number Floor(Number value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_IsDefined_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.IsDefined*"></a>
+  <h4 id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_IsDefined_NationalInstruments_DataValues_Number_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.IsDefined(NationalInstruments.DataValues.Number)">IsDefined(Number)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsDefined(Number value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_IsInfinite_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.IsInfinite*"></a>
+  <h4 id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_IsInfinite_NationalInstruments_DataValues_Number_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.IsInfinite(NationalInstruments.DataValues.Number)">IsInfinite(Number)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInfinite(Number value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_Multiply_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.Multiply*"></a>
+  <h4 id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_Multiply_NationalInstruments_DataValues_Number_NationalInstruments_DataValues_Number_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.Multiply(NationalInstruments.DataValues.Number,NationalInstruments.DataValues.Number)">Multiply(Number, Number)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Number Multiply(Number value, Number factor)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td><span class="parametername">factor</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_Multiply_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.Multiply*"></a>
+  <h4 id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_Multiply_NationalInstruments_DataValues_Number_System_Double_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.Multiply(NationalInstruments.DataValues.Number,System.Double)">Multiply(Number, Double)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Number Multiply(Number value, double factor)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td><span class="parametername">factor</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_Negate_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.Negate*"></a>
+  <h4 id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_Negate_NationalInstruments_DataValues_Number_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.Negate(NationalInstruments.DataValues.Number)">Negate(Number)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Number Negate(Number value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_Parse_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.Parse*"></a>
+  <h4 id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_Parse_System_String_System_String_System_IFormatProvider_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.Parse(System.String,System.String,System.IFormatProvider)">Parse(String, String, IFormatProvider)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Number Parse(string input, string format, IFormatProvider formatProvider)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">input</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">format</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iformatprovider">IFormatProvider</a></td>
+        <td><span class="parametername">formatProvider</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_Ratio_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.Ratio*"></a>
+  <h4 id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_Ratio_NationalInstruments_DataValues_Number_NationalInstruments_DataValues_Number_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.Ratio(NationalInstruments.DataValues.Number,NationalInstruments.DataValues.Number)">Ratio(Number, Number)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double Ratio(Number left, Number right)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td><span class="parametername">left</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td><span class="parametername">right</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_Remainder_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.Remainder*"></a>
+  <h4 id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_Remainder_NationalInstruments_DataValues_Number_NationalInstruments_DataValues_Number_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.Remainder(NationalInstruments.DataValues.Number,NationalInstruments.DataValues.Number)">Remainder(Number, Number)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Number Remainder(Number value, Number factor)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td><span class="parametername">factor</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_Round_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.Round*"></a>
+  <h4 id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_Round_NationalInstruments_DataValues_Number_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.Round(NationalInstruments.DataValues.Number)">Round(Number)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Number Round(Number value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_Round_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.Round*"></a>
+  <h4 id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_Round_NationalInstruments_DataValues_Number_System_Int32_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.Round(NationalInstruments.DataValues.Number,System.Int32)">Round(Number, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Number Round(Number value, int digits)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">digits</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_Sign_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.Sign*"></a>
+  <h4 id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_Sign_NationalInstruments_DataValues_Number_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.Sign(NationalInstruments.DataValues.Number)">Sign(Number)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Sign(Number value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_Subtract_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.Subtract*"></a>
+  <h4 id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_Subtract_NationalInstruments_DataValues_Number_NationalInstruments_DataValues_Number_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.Subtract(NationalInstruments.DataValues.Number,NationalInstruments.DataValues.Number)">Subtract(Number, Number)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Number Subtract(Number value, Number offset)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td><span class="parametername">offset</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_ToString_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.ToString*"></a>
+  <h4 id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_ToString_NationalInstruments_DataValues_Number_System_String_System_IFormatProvider_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.ToString(NationalInstruments.DataValues.Number,System.String,System.IFormatProvider)">ToString(Number, String, IFormatProvider)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ToString(Number value, string format, IFormatProvider formatProvider)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">format</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iformatprovider">IFormatProvider</a></td>
+        <td><span class="parametername">formatProvider</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_Truncate_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.Truncate*"></a>
+  <h4 id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_Truncate_NationalInstruments_DataValues_Number_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.Truncate(NationalInstruments.DataValues.Number)">Truncate(Number)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Number Truncate(Number value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_TryConvert_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.TryConvert*"></a>
+  <h4 id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_TryConvert_NationalInstruments_DataValues_Number_System_Double__" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.TryConvert(NationalInstruments.DataValues.Number,System.Double@)">TryConvert(Number, out Double)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConversionResult TryConvert(Number value, out double result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td><span class="parametername">result</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataInfrastructure.Descriptors.ConversionResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_TryConvert_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.TryConvert*"></a>
+  <h4 id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_TryConvert_System_Double_NationalInstruments_DataValues_Number__" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.TryConvert(System.Double,NationalInstruments.DataValues.Number@)">TryConvert(Double, out Number)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConversionResult TryConvert(double value, out Number result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td><span class="parametername">result</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataInfrastructure.Descriptors.ConversionResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_TryConvert_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.TryConvert*"></a>
+  <h4 id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_TryConvert_System_String_NationalInstruments_DataValues_Number__" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.TryConvert(System.String,NationalInstruments.DataValues.Number@)">TryConvert(String, out Number)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConversionResult TryConvert(string value, out Number result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td><span class="parametername">result</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataInfrastructure.Descriptors.ConversionResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_TryMultiply_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.TryMultiply*"></a>
+  <h4 id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_TryMultiply_NationalInstruments_DataValues_Number_System_Double_NationalInstruments_DataValues_Number__" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.TryMultiply(NationalInstruments.DataValues.Number,System.Double,NationalInstruments.DataValues.Number@)">TryMultiply(Number, Double, out Number)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConversionResult TryMultiply(Number value, double factor, out Number product)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td><span class="parametername">factor</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td><span class="parametername">product</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.DataInfrastructure.Descriptors.ConversionResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_TryParse_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.TryParse*"></a>
+  <h4 id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_TryParse_System_String_System_String_System_IFormatProvider_NationalInstruments_DataValues_Number__" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.TryParse(System.String,System.String,System.IFormatProvider,NationalInstruments.DataValues.Number@)">TryParse(String, String, IFormatProvider, out Number)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryParse(string input, string format, IFormatProvider formatProvider, out Number result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">input</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">format</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iformatprovider">IFormatProvider</a></td>
+        <td><span class="parametername">formatProvider</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td><span class="parametername">result</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  
+  
+  <a id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_NationalInstruments_DataInfrastructure_Descriptors_IOpNumeric_NationalInstruments_DataValues_Number__SmallestPositiveValue_" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.NationalInstruments#DataInfrastructure#Descriptors#IOpNumeric{NationalInstruments#DataValues#Number}#SmallestPositiveValue*"></a>
+  <h4 id="NationalInstruments_Restricted_Core_DataValues_NumberDescriptor_NationalInstruments_DataInfrastructure_Descriptors_IOpNumeric_NationalInstruments_DataValues_Number__SmallestPositiveValue" data-uid="NationalInstruments.Restricted.Core.DataValues.NumberDescriptor.NationalInstruments#DataInfrastructure#Descriptors#IOpNumeric{NationalInstruments#DataValues#Number}#SmallestPositiveValue">IOpNumeric&lt;Number&gt;.SmallestPositiveValue</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Number IOpNumeric&lt;Number&gt;.SmallestPositiveValue { get; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataValues.Number.html">Number</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">NationalInstruments.DataInfrastructure.Descriptors.IOpComparison&lt;TData&gt;</span>
+  </div>
+  <div>
+      <span class="xref">NationalInstruments.DataInfrastructure.Descriptors.IOpFormat&lt;TData&gt;</span>
+  </div>
+  <div>
+      <span class="xref">NationalInstruments.DataInfrastructure.Descriptors.IOpConversion&lt;TData, TResult&gt;</span>
+  </div>
+  <div>
+      <span class="xref">NationalInstruments.DataInfrastructure.Descriptors.IOpNumeric&lt;TData&gt;</span>
+  </div>
+  <div>
+      <span class="xref">NationalInstruments.DataInfrastructure.Descriptors.IOpAddition&lt;TData, TOffset&gt;</span>
+  </div>
+  <div>
+      <span class="xref">NationalInstruments.DataInfrastructure.Descriptors.IOpSubtraction&lt;TData, TOffset&gt;</span>
+  </div>
+  <div>
+      <span class="xref">NationalInstruments.DataInfrastructure.Descriptors.IOpMultiplication&lt;TData, TFactor&gt;</span>
+  </div>
+  <div>
+      <span class="xref">NationalInstruments.DataInfrastructure.Descriptors.IOpScalarMultiplication&lt;TData&gt;</span>
+  </div>
+  <div>
+      <span class="xref">NationalInstruments.DataInfrastructure.Descriptors.IOpDivision&lt;TData, TFactor&gt;</span>
+  </div>
+  <div>
+      <span class="xref">NationalInstruments.DataInfrastructure.Descriptors.IOpRatio&lt;TData&gt;</span>
+  </div>
+  <div>
+      <span class="xref">NationalInstruments.DataInfrastructure.Descriptors.IOpInfinity&lt;TData&gt;</span>
+  </div>
+  <div>
+      <span class="xref">NationalInstruments.DataInfrastructure.Descriptors.IOpSigned&lt;TData&gt;</span>
+  </div>
+  <div>
+      <span class="xref">NationalInstruments.DataInfrastructure.Descriptors.IOpConversion&lt;TData, TResult&gt;</span>
+  </div>
+  <div>
+      <span class="xref">NationalInstruments.DataInfrastructure.Descriptors.IOpConversion&lt;TData, TResult&gt;</span>
+  </div>
+  <div>
+      <span class="xref">NationalInstruments.DataInfrastructure.Descriptors.IOpContinuous&lt;TData&gt;</span>
+  </div>
+  <div>
+      <span class="xref">NationalInstruments.DataInfrastructure.Descriptors.IDataTypeDescriptor&lt;TData&gt;</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_ToEnumerable__1___0_">EnumerableHelper.ToEnumerable&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_Repeat__1___0_System_Int32_">EnumerableHelper.Repeat&lt;T&gt;(T, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyNothing__1___0_">Verifier.VerifyNothing&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Func___0_System_Boolean__System_Action_System_String__System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Func___0_System_Boolean__System_Action_System_String_System_String__System_String_System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Boolean_System_Action_System_String__System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Boolean, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Boolean_System_Action_System_String_System_String__System_String_System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Boolean, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Func___0_System_Boolean__System_Action_System_String__System_String_">Verifier.Verify&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Func___0_System_Boolean__System_Action_System_String_System_String__System_String_System_String_">Verifier.Verify&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Boolean_System_Action_System_String__System_String_">Verifier.Verify&lt;T&gt;(T, Boolean, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Boolean_System_Action_System_String_System_String__System_String_System_String_">Verifier.Verify&lt;T&gt;(T, Boolean, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentNotReferenceEqualsTo_System_Object_System_Object_System_String_">Verifier.VerifyArgumentNotReferenceEqualsTo(Object, Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyValueNotReferenceEqualsTo_System_Object_System_Object_System_String_">Verifier.VerifyValueNotReferenceEqualsTo(Object, Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentIsOfType__1_System_Object_System_String_">Verifier.VerifyArgumentIsOfType&lt;T&gt;(Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyValueIsOfType__1_System_Object_System_String_">Verifier.VerifyValueIsOfType&lt;T&gt;(Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.QueryServiceExtensions.html#NationalInstruments_Core_QueryServiceExtensions_QueryService__1_System_Object_">QueryServiceExtensions.QueryService&lt;T&gt;(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_FindClosestMatchingContainerForResource_System_Object_System_Func_System_Object_System_Globalization_CultureInfo_System_Object__System_Globalization_CultureInfo_">LocalizationHelpers.FindClosestMatchingContainerForResource(Object, Func&lt;Object, CultureInfo, Object&gt;, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_FindClosestMatchingContainerForResource_System_Object_System_Func_System_Object_System_Globalization_CultureInfo_System_Object__System_Globalization_CultureInfo_System_Func_System_Object_System_Object__">LocalizationHelpers.FindClosestMatchingContainerForResource(Object, Func&lt;Object, CultureInfo, Object&gt;, CultureInfo, Func&lt;Object, Object&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedEnumString__1___0_">LocalizationHelpers.GetLocalizedEnumString&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedString_System_Object_System_String_System_Globalization_CultureInfo_">LocalizationHelpers.GetLocalizedString(Object, String, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedString_System_Object_System_String_System_Boolean_System_Globalization_CultureInfo_">LocalizationHelpers.GetLocalizedString(Object, String, Boolean, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_SetPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_System_Object_">DynamicPropertyExtensions.SetPropertyValue(Object, PropertySymbol, Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.GetPropertyValue(Object, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_ClearPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.ClearPropertyValue(Object, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_IsPropertySet_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.IsPropertySet(Object, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetAllSetProperties_System_Object_">DynamicPropertyExtensions.GetAllSetProperties(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetAllProperties_System_Object_">DynamicPropertyExtensions.GetAllProperties(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,3449 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ViewElementViewModel
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ViewElementViewModel
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.Design.ViewElementViewModel">
+  
+  
+  <h1 id="NationalInstruments_Design_ViewElementViewModel" data-uid="NationalInstruments.Design.ViewElementViewModel" class="text-break">Class ViewElementViewModel
+  </h1>
+  <div class="markdown level0 summary"><p>View model with Virtual Canvas implementation</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html">ViewModelBase</a></div>
+    <div class="level2"><a class="xref" href="NationalInstruments.Design.ElementViewModel.html">ElementViewModel</a></div>
+    <div class="level3"><span class="xref">ViewElementViewModel</span></div>
+      <div class="level4"><a class="xref" href="NationalInstruments.Design.DiagramLabelViewModel.html">DiagramLabelViewModel</a></div>
+      <div class="level4"><a class="xref" href="NationalInstruments.Design.DiagramTextViewModel.html">DiagramTextViewModel</a></div>
+      <div class="level4"><a class="xref" href="NationalInstruments.Design.DragDropPlaceholderViewModel.html">DragDropPlaceholderViewModel</a></div>
+      <div class="level4"><a class="xref" href="NationalInstruments.Design.StructureViewModel.html">StructureViewModel</a></div>
+      <div class="level4"><a class="xref" href="NationalInstruments.Design.TerminalOwnerViewModel.html">TerminalOwnerViewModel</a></div>
+      <div class="level4"><a class="xref" href="NationalInstruments.Design.ViewElementParentViewModel.html">ViewElementParentViewModel</a></div>
+      <div class="level4"><a class="xref" href="NationalInstruments.Design.VisualViewModel.html">VisualViewModel</a></div>
+      <div class="level4"><a class="xref" href="NationalInstruments.Design.WireCommentViewModel.html">WireCommentViewModel</a></div>
+      <div class="level4"><a class="xref" href="NationalInstruments.Design.WireViewModel.html">WireViewModel</a></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.iweakeventlistener">IWeakEventListener</a></div>
+    <div><a class="xref" href="../core/NationalInstruments.Core.IColorResolver.html">IColorResolver</a></div>
+    <div><a class="xref" href="NationalInstruments.Shell.IProvideCommandContent.html">IProvideCommandContent</a></div>
+    <div><a class="xref" href="NationalInstruments.Design.IContextPaletteContentProvider.html">IContextPaletteContentProvider</a></div>
+    <div><a class="xref" href="NationalInstruments.Design.IViewElementViewModel.html">IViewElementViewModel</a></div>
+    <div><a class="xref" href="NationalInstruments.Design.IElementViewModel.html">IElementViewModel</a></div>
+    <div><a class="xref" href="../core/NationalInstruments.Core.IViewModel.html">IViewModel</a></div>
+    <div><a class="xref" href="../core/NationalInstruments.Core.IServiceAggregator.html">IServiceAggregator</a></div>
+    <div><a class="xref" href="../core/NationalInstruments.Core.IQueryService.html">IQueryService</a></div>
+    <div><a class="xref" href="NationalInstruments.Design.ISelectableItem.html">ISelectableItem</a></div>
+    <div><a class="xref" href="NationalInstruments.SourceModel.IModelObserver.html">IModelObserver</a></div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
+    <div><a class="xref" href="../core/NationalInstruments.Core.IVirtualChild.html">IVirtualChild</a></div>
+    <div><a class="xref" href="NationalInstruments.Design.IPlacementNotify.html">IPlacementNotify</a></div>
+    <div><a class="xref" href="NationalInstruments.Design.IDiagramViewTemplateViewModel.html">IDiagramViewTemplateViewModel</a></div>
+    <div><a class="xref" href="NationalInstruments.Design.IProvideIconData.html">IProvideIconData</a></div>
+    <div><a class="xref" href="NationalInstruments.SourceModel.IResizableItem.html">IResizableItem</a></div>
+    <div><a class="xref" href="../core/NationalInstruments.Core.IChainedService.html">IChainedService</a></div>
+    <div><a class="xref" href="../core/NationalInstruments.Core.IWeightedService.html">IWeightedService</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_ModeCommand">ElementViewModel.ModeCommand</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_ModeLabel">ElementViewModel.ModeLabel</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_HeaderInstanceNameCommand">ElementViewModel.HeaderInstanceNameCommand</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_CanExecuteHeaderInstanceNameFromFilteredSelection_NationalInstruments_Core_ICommandParameter_System_Collections_Generic_IEnumerable_NationalInstruments_Core_IViewModel__NationalInstruments_Composition_ICompositionHost_NationalInstruments_Shell_DocumentEditSite_">ElementViewModel.CanExecuteHeaderInstanceNameFromFilteredSelection(ICommandParameter, IEnumerable&lt;IViewModel&gt;, ICompositionHost, DocumentEditSite)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_TypeNameCommand">ElementViewModel.TypeNameCommand</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_CanExecuteTypeNameFromFilteredSelection_NationalInstruments_Core_ICommandParameter_System_Collections_Generic_IEnumerable_NationalInstruments_Core_IViewModel__NationalInstruments_Composition_ICompositionHost_NationalInstruments_Shell_DocumentEditSite_">ElementViewModel.CanExecuteTypeNameFromFilteredSelection(ICommandParameter, IEnumerable&lt;IViewModel&gt;, ICompositionHost, DocumentEditSite)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_IconGroupCommand">ElementViewModel.IconGroupCommand</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_IconCommand">ElementViewModel.IconCommand</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_TopLabelPlaceholderCommand">ElementViewModel.TopLabelPlaceholderCommand</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_BottomLabelPlaceholderCommand">ElementViewModel.BottomLabelPlaceholderCommand</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_CanExecuteIconFromFilteredSelection_NationalInstruments_Core_ICommandParameter_System_Collections_Generic_IEnumerable_NationalInstruments_Core_IViewModel__NationalInstruments_Composition_ICompositionHost_NationalInstruments_Shell_DocumentEditSite_">ElementViewModel.CanExecuteIconFromFilteredSelection(ICommandParameter, IEnumerable&lt;IViewModel&gt;, ICompositionHost, DocumentEditSite)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_Host">ElementViewModel.Host</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_NotificationManager">ElementViewModel.NotificationManager</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_Elements">ElementViewModel.Elements</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_HasMessages">ElementViewModel.HasMessages</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_IsMultiViewModel">ElementViewModel.IsMultiViewModel</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_IsSingleViewModel">ElementViewModel.IsSingleViewModel</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_TransactionManager">ElementViewModel.TransactionManager</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_EditControl">ElementViewModel.EditControl</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_DocumentEditor">ElementViewModel.DocumentEditor</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_DocumentLanguageName">ElementViewModel.DocumentLanguageName</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_Name">ElementViewModel.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_CanCopy">ElementViewModel.CanCopy</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_CanDelete">ElementViewModel.CanDelete</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_Delete_NationalInstruments_Design_IDeleteContext_">ElementViewModel.Delete(IDeleteContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_GetNonInheritedViewModel_NationalInstruments_Core_PlatformVisual_">ElementViewModel.GetNonInheritedViewModel(PlatformVisual)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_ModelsAreValid">ElementViewModel.ModelsAreValid()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_ModelsAreValid_System_Collections_Generic_IEnumerable_NationalInstruments_Design_IElementViewModel__">ElementViewModel.ModelsAreValid(IEnumerable&lt;IElementViewModel&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_TryFindResource_System_Object_">ElementViewModel.TryFindResource(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_EditSite">ElementViewModel.EditSite</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_Selection">ElementViewModel.Selection</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_IsSelected">ElementViewModel.IsSelected</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_IsSingleSelected">ElementViewModel.IsSingleSelected</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_Reselect">ElementViewModel.Reselect()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_Element">ElementViewModel.Element</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_CanRebind_NationalInstruments_SourceModel_Element_">ElementViewModel.CanRebind(Element)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_ViewChanged">ElementViewModel.ViewChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_OnViewChanged_NationalInstruments_Design_ViewChangedArgs_">ElementViewModel.OnViewChanged(ViewChangedArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_FindOrCreateChildViewModel_NationalInstruments_SourceModel_Element_">ElementViewModel.FindOrCreateChildViewModel(Element)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_Opacity">ElementViewModel.Opacity</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_Removed">ElementViewModel.Removed()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_InUserModification">ElementViewModel.InUserModification</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_Visible">ElementViewModel.Visible</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_IsNeedUserModificationCompletePending">ElementViewModel.IsNeedUserModificationCompletePending</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_NeedUserModificationComplete">ElementViewModel.NeedUserModificationComplete()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_ComponentAdded_NationalInstruments_SourceModel_Element_NationalInstruments_SourceModel_Element_System_Int32_NationalInstruments_SourceModel_TransactionItem_">ElementViewModel.ComponentAdded(Element, Element, Int32, TransactionItem)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_ComponentRemoved_NationalInstruments_SourceModel_Element_NationalInstruments_SourceModel_Element_NationalInstruments_SourceModel_TransactionItem_">ElementViewModel.ComponentRemoved(Element, Element, TransactionItem)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_ModelDetached_NationalInstruments_SourceModel_Element_">ElementViewModel.ModelDetached(Element)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_AddElement_NationalInstruments_SourceModel_Element_">ElementViewModel.AddElement(Element)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_ConvertToDefault_System_Nullable_System_Boolean__">ElementViewModel.ConvertToDefault(Nullable&lt;Boolean&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_ConvertToDefault_System_Nullable_System_Single__">ElementViewModel.ConvertToDefault(Nullable&lt;Single&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_ConvertToDefault_System_Nullable_System_Double__">ElementViewModel.ConvertToDefault(Nullable&lt;Double&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_GetProperty__1_System_Func___0_System_Object__">ElementViewModel.GetProperty&lt;T&gt;(Func&lt;T, Object&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_Execute__1_System_Action___0__">ElementViewModel.Execute&lt;T&gt;(Action&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_ReceiveWeakEvent_System_Type_System_Object_System_EventArgs_">ElementViewModel.ReceiveWeakEvent(Type, Object, EventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_HandleAtomicActionComplete_System_Object_NationalInstruments_SourceModel_AtomicActionCompleteEventArgs_">ElementViewModel.HandleAtomicActionComplete(Object, AtomicActionCompleteEventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_HandleStateChanged_System_Object_NationalInstruments_SourceModel_TransactionEventArgs_">ElementViewModel.HandleStateChanged(Object, TransactionEventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_QueryService__1">ElementViewModel.QueryService&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_CreateContextHelpServices">ElementViewModel.CreateContextHelpServices()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_CreateContextHelpServicesForTerminal_NationalInstruments_Design_TerminalViewModel_">ElementViewModel.CreateContextHelpServicesForTerminal(TerminalViewModel)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_CreateFullHelpIdForElement_NationalInstruments_Design_ElementViewModel_">ElementViewModel.CreateFullHelpIdForElement(ElementViewModel)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_GetWeight__1">ElementViewModel.GetWeight&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_GetHandled__1">ElementViewModel.GetHandled&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_EditingContext">ElementViewModel.EditingContext</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_CreateCommandContent_NationalInstruments_Core_ICommandPresentationContext_">ElementViewModel.CreateCommandContent(ICommandPresentationContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_AddModeGroupContent_NationalInstruments_Core_ICommandPresentationContext_">ElementViewModel.AddModeGroupContent(ICommandPresentationContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_ModeKey">ElementViewModel.ModeKey</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_GetModesCommands_System_String_">ElementViewModel.GetModesCommands(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_ShowModeSelectorOnDrop">ElementViewModel.ShowModeSelectorOnDrop</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_BuildParentModesCommands_NationalInstruments_SourceModel_PaletteElementCategory_NationalInstruments_SourceModel_PaletteElement_NationalInstruments_SourceModel_PaletteElement_System_Func_NationalInstruments_SourceModel_PaletteElement_NationalInstruments_Core_PlatformImage__System_Collections_Generic_Stack_NationalInstruments_Core_ShellCommandInstance__">ElementViewModel.BuildParentModesCommands(PaletteElementCategory, PaletteElement, PaletteElement, Func&lt;PaletteElement, PlatformImage&gt;, Stack&lt;ShellCommandInstance&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_CreateModeCommandFromPalette_NationalInstruments_SourceModel_PaletteElementCategory_NationalInstruments_SourceModel_PaletteElement_System_Func_NationalInstruments_SourceModel_PaletteElement_NationalInstruments_Core_PlatformImage__NationalInstruments_SourceModel_PaletteElement_">ElementViewModel.CreateModeCommandFromPalette(PaletteElementCategory, PaletteElement, Func&lt;PaletteElement, PlatformImage&gt;, PaletteElement)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_CreateModeCommandFromPalette_NationalInstruments_SourceModel_PaletteElementCategory_System_Collections_Generic_IEnumerable_NationalInstruments_SourceModel_PaletteElement__NationalInstruments_SourceModel_PaletteElement_System_Func_NationalInstruments_SourceModel_PaletteElement_NationalInstruments_Core_PlatformImage__NationalInstruments_SourceModel_PaletteElement_">ElementViewModel.CreateModeCommandFromPalette(PaletteElementCategory, IEnumerable&lt;PaletteElement&gt;, PaletteElement, Func&lt;PaletteElement, PlatformImage&gt;, PaletteElement)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_AddConfigurationPanelHeaderContent_NationalInstruments_Core_ICommandPresentationContext_">ElementViewModel.AddConfigurationPanelHeaderContent(ICommandPresentationContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_NotifyModelVisualAdded_NationalInstruments_SourceModel_Element_">ElementViewModel.NotifyModelVisualAdded(Element)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_NotifyModelVisualRemoving_System_Boolean_System_Boolean_">ElementViewModel.NotifyModelVisualRemoving(Boolean, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_Deselect_System_Boolean_System_Boolean_">ElementViewModel.Deselect(Boolean, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_ShowStandardSelectionAdorner">ElementViewModel.ShowStandardSelectionAdorner</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_GetSelectionVisual">ElementViewModel.GetSelectionVisual()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_GetSoftSelectAdorners">ElementViewModel.GetSoftSelectAdorners()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_GetHardSelectAdorners">ElementViewModel.GetHardSelectAdorners()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_FavorChildSelection">ElementViewModel.FavorChildSelection</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_DropElementAsync_NationalInstruments_Design_IPaletteItemViewModel_NationalInstruments_Core_UIPosition_">ElementViewModel.DropElementAsync(IPaletteItemViewModel, UIPosition)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_DropTarget">ElementViewModel.DropTarget</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_ViewModelProperty">ViewModelBase.ViewModelProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_GetNearestViewModel_NationalInstruments_Core_PlatformVisual_">ViewModelBase.GetNearestViewModel(PlatformVisual)</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_SetViewModel_NationalInstruments_Core_PlatformVisual_NationalInstruments_Core_IViewModel_">ViewModelBase.SetViewModel(PlatformVisual, IViewModel)</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_Model">ViewModelBase.Model</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_CreateViewHandler">ViewModelBase.CreateViewHandler</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_ParentViewModel">ViewModelBase.ParentViewModel</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_AddCommandBindings_NationalInstruments_Core_PlatformVisual_">ViewModelBase.AddCommandBindings(PlatformVisual)</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_CommandBindings">ViewModelBase.CommandBindings</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_AttachService_System_Object_">ViewModelBase.AttachService(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_RemoveService_System_Object_">ViewModelBase.RemoveService(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_RemoveAll_System_Predicate_System_Object__">ViewModelBase.RemoveAll(Predicate&lt;Object&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_SetService__1_System_Object_">ViewModelBase.SetService&lt;T&gt;(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_PropertyChanged">ViewModelBase.PropertyChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_HandlePropertyChanged_System_Object_System_ComponentModel_PropertyChangedEventArgs_">ViewModelBase.HandlePropertyChanged(Object, PropertyChangedEventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_ContextHelpServicesCreated">ViewModelBase.ContextHelpServicesCreated</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_ResolveBrush_System_String_">ViewModelBase.ResolveBrush(String)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="../core/NationalInstruments.Design.html">NationalInstruments.Design</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_Design_ViewElementViewModel_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ViewElementViewModel : ElementViewModel, IWeakEventListener, IColorResolver, IProvideCommandContent, IContextPaletteContentProvider, IViewElementViewModel, IElementViewModel, IViewModel, IServiceAggregator, IQueryService, ISelectableItem, IModelObserver, INotifyPropertyChanged, IVirtualChild, IPlacementNotify, IDiagramViewTemplateViewModel, IProvideIconData, IResizableItem, IChainedService, IWeightedService</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel__ctor_" data-uid="NationalInstruments.Design.ViewElementViewModel.#ctor*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel__ctor_NationalInstruments_SourceModel_Element_" data-uid="NationalInstruments.Design.ViewElementViewModel.#ctor(NationalInstruments.SourceModel.Element)">ViewElementViewModel(Element)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ViewElementViewModel(Element viewElement)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td><span class="parametername">viewElement</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_DataSourcePropertyName" data-uid="NationalInstruments.Design.ViewElementViewModel.DataSourcePropertyName">DataSourcePropertyName</h4>
+  <div class="markdown level1 summary"><p>String name of notified property for DataSource. This and GlyphData are the only two that should be bound directly.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly string DataSourcePropertyName</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_DefaultGlyphWeight" data-uid="NationalInstruments.Design.ViewElementViewModel.DefaultGlyphWeight">DefaultGlyphWeight</h4>
+  <div class="markdown level1 summary"><p>Default weight for glyphs</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const double DefaultGlyphWeight = 0.6</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_GlyphDataPropertyName" data-uid="NationalInstruments.Design.ViewElementViewModel.GlyphDataPropertyName">GlyphDataPropertyName</h4>
+  <div class="markdown level1 summary"><p>Our glyph data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string GlyphDataPropertyName = &quot;GlyphData&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_IconDataPropertyName" data-uid="NationalInstruments.Design.ViewElementViewModel.IconDataPropertyName">IconDataPropertyName</h4>
+  <div class="markdown level1 summary"><p>Our icon data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string IconDataPropertyName = &quot;IconDataSource&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_Alignable_" data-uid="NationalInstruments.Design.ViewElementViewModel.Alignable*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_Alignable" data-uid="NationalInstruments.Design.ViewElementViewModel.Alignable">Alignable</h4>
+  <div class="markdown level1 summary"><p>Whether this object can be aligned by the user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool Alignable { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_AnimatePropertyChanges_" data-uid="NationalInstruments.Design.ViewElementViewModel.AnimatePropertyChanges*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_AnimatePropertyChanges" data-uid="NationalInstruments.Design.ViewElementViewModel.AnimatePropertyChanges">AnimatePropertyChanges</h4>
+  <div class="markdown level1 summary"><p>Determines if the view model should animate property changes for the
+state of the system.  This value will change based on user preference
+and the state of the transaction system.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool AnimatePropertyChanges { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_AspectRatioBehavior_" data-uid="NationalInstruments.Design.ViewElementViewModel.AspectRatioBehavior*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_AspectRatioBehavior" data-uid="NationalInstruments.Design.ViewElementViewModel.AspectRatioBehavior">AspectRatioBehavior</h4>
+  <div class="markdown level1 summary"><p>How to treat the aspect ratio of this item during resizing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AspectRatioBehavior AspectRatioBehavior { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.AspectRatioBehavior.html">AspectRatioBehavior</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Design_ViewElementViewModel_AspectRatioBehavior_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>What to do with aspect ratio when resizing.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_BackgroundImageData_" data-uid="NationalInstruments.Design.ViewElementViewModel.BackgroundImageData*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_BackgroundImageData" data-uid="NationalInstruments.Design.ViewElementViewModel.BackgroundImageData">BackgroundImageData</h4>
+  <div class="markdown level1 summary"><p>Our background info.
+PJC DEPRECATED - use RenderData</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual NineGridData BackgroundImageData { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.NineGridData.html">NineGridData</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_BackgroundUri_" data-uid="NationalInstruments.Design.ViewElementViewModel.BackgroundUri*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_BackgroundUri" data-uid="NationalInstruments.Design.ViewElementViewModel.BackgroundUri">BackgroundUri</h4>
+  <div class="markdown level1 summary"><p>OBSOLETE - use RenderData
+A Uri that shows us where to load your object. We use this in conjunction with common suffixes (see ZoomFidelity or BackgroundIconImage)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual ResourceUri BackgroundUri { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ResourceUri.html">ResourceUri</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_Bounds_" data-uid="NationalInstruments.Design.ViewElementViewModel.Bounds*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_Bounds" data-uid="NationalInstruments.Design.ViewElementViewModel.Bounds">Bounds</h4>
+  <div class="markdown level1 summary"><p>Our Bounds. Override if you want to provide alternative to IViewElement based bounds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual SMRect Bounds { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.SMRect.html">SMRect</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_BoundView_" data-uid="NationalInstruments.Design.ViewElementViewModel.BoundView*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_BoundView" data-uid="NationalInstruments.Design.ViewElementViewModel.BoundView">BoundView</h4>
+  <div class="markdown level1 summary"><p>This is the View we are bound to. Stays valid even when we are not in visual tree (While View property will be nulled out).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected PlatformVisual BoundView { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_CanAnchorMovement_" data-uid="NationalInstruments.Design.ViewElementViewModel.CanAnchorMovement*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_CanAnchorMovement" data-uid="NationalInstruments.Design.ViewElementViewModel.CanAnchorMovement">CanAnchorMovement</h4>
+  <div class="markdown level1 summary"><p>Whether the Model(Element) can act as an anchor during multi select movement.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool CanAnchorMovement { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_Content_" data-uid="NationalInstruments.Design.ViewElementViewModel.Content*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_Content" data-uid="NationalInstruments.Design.ViewElementViewModel.Content">Content</h4>
+  <div class="markdown level1 summary"><p>Our visual content. You can override this to provide content within your ViewTemplate (textbox/block, control, etc)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual object Content { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_ContentPresenter_" data-uid="NationalInstruments.Design.ViewElementViewModel.ContentPresenter*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_ContentPresenter" data-uid="NationalInstruments.Design.ViewElementViewModel.ContentPresenter">ContentPresenter</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual PlatformVisual ContentPresenter { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_ContextPaletteElements_" data-uid="NationalInstruments.Design.ViewElementViewModel.ContextPaletteElements*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_ContextPaletteElements" data-uid="NationalInstruments.Design.ViewElementViewModel.ContextPaletteElements">ContextPaletteElements</h4>
+  <div class="markdown level1 summary"><p>Get the palette parent of this element</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IEnumerable&lt;IPaletteItemViewModel&gt; ContextPaletteElements { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.Design.IPaletteItemViewModel.html">IPaletteItemViewModel</a>&gt;</td>
+        <td><p>Either an IEnumerable with the palette parent IPaletteItemViewModel or Enumerable Empty</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_ContextPaletteElements">ElementViewModel.ContextPaletteElements</a></div>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_CreatedWithFacade_" data-uid="NationalInstruments.Design.ViewElementViewModel.CreatedWithFacade*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_CreatedWithFacade" data-uid="NationalInstruments.Design.ViewElementViewModel.CreatedWithFacade">CreatedWithFacade</h4>
+  <div class="markdown level1 summary"><p>The Facade that we were created with.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected string CreatedWithFacade { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_DataSource_" data-uid="NationalInstruments.Design.ViewElementViewModel.DataSource*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_DataSource" data-uid="NationalInstruments.Design.ViewElementViewModel.DataSource">DataSource</h4>
+  <div class="markdown level1 summary"><p>Property which supplies render data for the viewmodel&apos;s view.
+Use this property for xaml bindings
+Use RenderData or GlyphData to supply viewmodel-specific data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RenderDataCollection DataSource { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.RenderDataCollection.html">RenderDataCollection</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_DynamicGlyphs_" data-uid="NationalInstruments.Design.ViewElementViewModel.DynamicGlyphs*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_DynamicGlyphs" data-uid="NationalInstruments.Design.ViewElementViewModel.DynamicGlyphs">DynamicGlyphs</h4>
+  <div class="markdown level1 summary"><p>Dynamic glyphs collection</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ObservableCollection&lt;RenderData&gt; DynamicGlyphs { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.ObjectModel.ObservableCollection</span>&lt;<a class="xref" href="../core/NationalInstruments.Core.RenderData.html">RenderData</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_ForegroundImageData_" data-uid="NationalInstruments.Design.ViewElementViewModel.ForegroundImageData*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_ForegroundImageData" data-uid="NationalInstruments.Design.ViewElementViewModel.ForegroundImageData">ForegroundImageData</h4>
+  <div class="markdown level1 summary"><p>Gets the foreground image info for the visual.  The foreground image sits above
+all other template parts.   This is a NineGrid image.
+PJC DEPRECATED - use RenderData</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual NineGridData ForegroundImageData { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.NineGridData.html">NineGridData</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_ForegroundUri_" data-uid="NationalInstruments.Design.ViewElementViewModel.ForegroundUri*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_ForegroundUri" data-uid="NationalInstruments.Design.ViewElementViewModel.ForegroundUri">ForegroundUri</h4>
+  <div class="markdown level1 summary"><p>OBSOLETE - use RenderData
+A Uri that shows us where to load your object. We use this in conjunction with common suffixes (see ZoomFidelity or ForegroundIconImage)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual ResourceUri ForegroundUri { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ResourceUri.html">ResourceUri</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_GlyphData_" data-uid="NationalInstruments.Design.ViewElementViewModel.GlyphData*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_GlyphData" data-uid="NationalInstruments.Design.ViewElementViewModel.GlyphData">GlyphData</h4>
+  <div class="markdown level1 summary"><p>Gets a list of &quot;configuration&quot; NineGridGlyphData for the viewmodel&apos;s view.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RenderDataCollection GlyphData { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.RenderDataCollection.html">RenderDataCollection</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_Height_" data-uid="NationalInstruments.Design.ViewElementViewModel.Height*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_Height" data-uid="NationalInstruments.Design.ViewElementViewModel.Height">Height</h4>
+  <div class="markdown level1 summary"><p>Our Height</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual double Height { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_IconData_" data-uid="NationalInstruments.Design.ViewElementViewModel.IconData*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_IconData" data-uid="NationalInstruments.Design.ViewElementViewModel.IconData">IconData</h4>
+  <div class="markdown level1 summary"><p>Rendering information for this ViewModel when shown in a square or iconic representation. Usually this will match palette data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IEnumerable&lt;NineGridData&gt; IconData { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="../core/NationalInstruments.Core.NineGridData.html">NineGridData</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_IconDataSource_" data-uid="NationalInstruments.Design.ViewElementViewModel.IconDataSource*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_IconDataSource" data-uid="NationalInstruments.Design.ViewElementViewModel.IconDataSource">IconDataSource</h4>
+  <div class="markdown level1 summary"><p>Our icon render data as a bindable property.
+This will be outdated until InvalidateRender is called.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RenderDataCollection IconDataSource { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.RenderDataCollection.html">RenderDataCollection</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_IsAnimatingPropertyChanges_" data-uid="NationalInstruments.Design.ViewElementViewModel.IsAnimatingPropertyChanges*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_IsAnimatingPropertyChanges" data-uid="NationalInstruments.Design.ViewElementViewModel.IsAnimatingPropertyChanges">IsAnimatingPropertyChanges</h4>
+  <div class="markdown level1 summary"><p>Determines if this view model is currently animating any property changes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool IsAnimatingPropertyChanges { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_Left_" data-uid="NationalInstruments.Design.ViewElementViewModel.Left*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_Left" data-uid="NationalInstruments.Design.ViewElementViewModel.Left">Left</h4>
+  <div class="markdown level1 summary"><p>Gets the left position of the visual</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual double Left { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_MinimumSize_" data-uid="NationalInstruments.Design.ViewElementViewModel.MinimumSize*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_MinimumSize" data-uid="NationalInstruments.Design.ViewElementViewModel.MinimumSize">MinimumSize</h4>
+  <div class="markdown level1 summary"><p>The minimum size supported by our view.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual SMSize MinimumSize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.SMSize.html">SMSize</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_Moveable_" data-uid="NationalInstruments.Design.ViewElementViewModel.Moveable*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_Moveable" data-uid="NationalInstruments.Design.ViewElementViewModel.Moveable">Moveable</h4>
+  <div class="markdown level1 summary"><p>Whether this object can be moved by the user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Moveable { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_Moveable">ElementViewModel.Moveable</a></div>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_PaletteType_" data-uid="NationalInstruments.Design.ViewElementViewModel.PaletteType*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_PaletteType" data-uid="NationalInstruments.Design.ViewElementViewModel.PaletteType">PaletteType</h4>
+  <div class="markdown level1 summary"><p>Return the Element Context Palette Type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override ContextPaletteType PaletteType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.ContextPaletteType.html">ContextPaletteType</a></td>
+        <td><p>The Element Context Palette Type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_PaletteType">ElementViewModel.PaletteType</a></div>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_ParentView_" data-uid="NationalInstruments.Design.ViewElementViewModel.ParentView*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_ParentView" data-uid="NationalInstruments.Design.ViewElementViewModel.ParentView">ParentView</h4>
+  <div class="markdown level1 summary"><p>Our Parent&apos;s View</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override PlatformVisual ParentView { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_ParentView">ElementViewModel.ParentView</a></div>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_PlacementCursor_" data-uid="NationalInstruments.Design.ViewElementViewModel.PlacementCursor*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_PlacementCursor" data-uid="NationalInstruments.Design.ViewElementViewModel.PlacementCursor">PlacementCursor</h4>
+  <div class="markdown level1 summary"><p>Your placement Cursor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual PlatformCursor PlacementCursor { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformCursor.html">PlatformCursor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Design_ViewElementViewModel_PlacementCursor_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Empty cursor - Placement Tool will default based on PlacementPosition</p>
+</div>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_PlacementPosition_" data-uid="NationalInstruments.Design.ViewElementViewModel.PlacementPosition*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_PlacementPosition" data-uid="NationalInstruments.Design.ViewElementViewModel.PlacementPosition">PlacementPosition</h4>
+  <div class="markdown level1 summary"><p>Gets the preferred placement position of this node</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual PlacementPosition PlacementPosition { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.PlacementPosition.html">PlacementPosition</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_PositionTransform_" data-uid="NationalInstruments.Design.ViewElementViewModel.PositionTransform*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_PositionTransform" data-uid="NationalInstruments.Design.ViewElementViewModel.PositionTransform">PositionTransform</h4>
+  <div class="markdown level1 summary"><p>Transform used to position the view in the virtual canvas.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected TranslateTransform PositionTransform { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.media.translatetransform">TranslateTransform</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_RenderData_" data-uid="NationalInstruments.Design.ViewElementViewModel.RenderData*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_RenderData" data-uid="NationalInstruments.Design.ViewElementViewModel.RenderData">RenderData</h4>
+  <div class="markdown level1 summary"><p>The render data for this viewmodel. By convention, we will try to pull this from your assembly with name Resources/ElementName. 
+If you put elsewhere, you should override and provide.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IEnumerable&lt;RenderData&gt; RenderData { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="../core/NationalInstruments.Core.RenderData.html">RenderData</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_Reparentable_" data-uid="NationalInstruments.Design.ViewElementViewModel.Reparentable*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_Reparentable" data-uid="NationalInstruments.Design.ViewElementViewModel.Reparentable">Reparentable</h4>
+  <div class="markdown level1 summary"><p>Default elements to false.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Reparentable { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_Reparentable">ElementViewModel.Reparentable</a></div>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_Resizable_" data-uid="NationalInstruments.Design.ViewElementViewModel.Resizable*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_Resizable" data-uid="NationalInstruments.Design.ViewElementViewModel.Resizable">Resizable</h4>
+  <div class="markdown level1 summary"><p>Whether this object can be moved by the user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool Resizable { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_ResizeDirections_" data-uid="NationalInstruments.Design.ViewElementViewModel.ResizeDirections*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_ResizeDirections" data-uid="NationalInstruments.Design.ViewElementViewModel.ResizeDirections">ResizeDirections</h4>
+  <div class="markdown level1 summary"><p>Gets the resize directions that this element allows</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ResizeDirections ResizeDirections { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ResizeDirections.html">ResizeDirections</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Design_ViewElementViewModel_ResizeDirections_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>What directions you support resize.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_SnapTo_" data-uid="NationalInstruments.Design.ViewElementViewModel.SnapTo*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_SnapTo" data-uid="NationalInstruments.Design.ViewElementViewModel.SnapTo">SnapTo</h4>
+  <div class="markdown level1 summary"><p>Whether other objects should snap to this one.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool SnapTo { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_SnapToGridOffset_" data-uid="NationalInstruments.Design.ViewElementViewModel.SnapToGridOffset*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_SnapToGridOffset" data-uid="NationalInstruments.Design.ViewElementViewModel.SnapToGridOffset">SnapToGridOffset</h4>
+  <div class="markdown level1 summary"><p>When snapping to grid, how much to offset. Useful for items like ForLoop with nonstandard with borders, to make contents line up.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual SMPoint SnapToGridOffset { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_SnapToIgnoreChildren_" data-uid="NationalInstruments.Design.ViewElementViewModel.SnapToIgnoreChildren*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_SnapToIgnoreChildren" data-uid="NationalInstruments.Design.ViewElementViewModel.SnapToIgnoreChildren">SnapToIgnoreChildren</h4>
+  <div class="markdown level1 summary"><p>Determines whether any child elements contained by this element are examined by the snapped movement algorithm. Enables alignment guides which operate on the contents of subdiagrams.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool SnapToIgnoreChildren { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_SupportedImageResolutions_" data-uid="NationalInstruments.Design.ViewElementViewModel.SupportedImageResolutions*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_SupportedImageResolutions" data-uid="NationalInstruments.Design.ViewElementViewModel.SupportedImageResolutions">SupportedImageResolutions</h4>
+  <div class="markdown level1 summary"><p>The resolutions that your images support. This affects what ZoomFidelity will try to load.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ImageDpi SupportedImageResolutions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.ImageDpi.html">ImageDpi</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_Top_" data-uid="NationalInstruments.Design.ViewElementViewModel.Top*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_Top" data-uid="NationalInstruments.Design.ViewElementViewModel.Top">Top</h4>
+  <div class="markdown level1 summary"><p>Gets the top position of the visual</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual double Top { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_View_" data-uid="NationalInstruments.Design.ViewElementViewModel.View*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_View" data-uid="NationalInstruments.Design.ViewElementViewModel.View">View</h4>
+  <div class="markdown level1 summary"><p>Resolving ambiguity between IElementViewModel.View and IVirtualChild.View</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override PlatformVisual View { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_View">ViewModelBase.View</a></div>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_ViewElement_" data-uid="NationalInstruments.Design.ViewElementViewModel.ViewElement*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_ViewElement" data-uid="NationalInstruments.Design.ViewElementViewModel.ViewElement">ViewElement</h4>
+  <div class="markdown level1 summary"><p>Our element as a view element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IViewElement ViewElement { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.IViewElement.html">IViewElement</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_ViewSizeMode_" data-uid="NationalInstruments.Design.ViewElementViewModel.ViewSizeMode*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_ViewSizeMode" data-uid="NationalInstruments.Design.ViewElementViewModel.ViewSizeMode">ViewSizeMode</h4>
+  <div class="markdown level1 summary"><p>The SizeMode of our Visual</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ViewSizeMode ViewSizeMode { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.ViewSizeMode.html">ViewSizeMode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_ViewTemplate_" data-uid="NationalInstruments.Design.ViewElementViewModel.ViewTemplate*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_ViewTemplate" data-uid="NationalInstruments.Design.ViewElementViewModel.ViewTemplate">ViewTemplate</h4>
+  <div class="markdown level1 summary"><p>Your ViewTemplate. Used as String lookup for Style to apply to your control.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string ViewTemplate { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_VirtualParent_" data-uid="NationalInstruments.Design.ViewElementViewModel.VirtualParent*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_VirtualParent" data-uid="NationalInstruments.Design.ViewElementViewModel.VirtualParent">VirtualParent</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IVirtualParent VirtualParent { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.IVirtualParent.html">IVirtualParent</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_VisualTransforms_" data-uid="NationalInstruments.Design.ViewElementViewModel.VisualTransforms*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_VisualTransforms" data-uid="NationalInstruments.Design.ViewElementViewModel.VisualTransforms">VisualTransforms</h4>
+  <div class="markdown level1 summary"><p>Gets the render transform group attached to the associated view</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransformGroup VisualTransforms { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.media.transformgroup">TransformGroup</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_Width_" data-uid="NationalInstruments.Design.ViewElementViewModel.Width*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_Width" data-uid="NationalInstruments.Design.ViewElementViewModel.Width">Width</h4>
+  <div class="markdown level1 summary"><p>Our width</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual double Width { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_AddHeightAnimation_" data-uid="NationalInstruments.Design.ViewElementViewModel.AddHeightAnimation*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_AddHeightAnimation_NationalInstruments_Core_SMRect_" data-uid="NationalInstruments.Design.ViewElementViewModel.AddHeightAnimation(NationalInstruments.Core.SMRect)">AddHeightAnimation(SMRect)</h4>
+  <div class="markdown level1 summary"><p>Creates animations for height changes that have just happened. 
+Override this to change animation behavior. 
+An implementation or override of this should involve a call to <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_AddToAtomicAnimation_System_Windows_Media_Animation_AnimationTimeline_System_Windows_DependencyObject_System_Windows_DependencyProperty_">AddToAtomicAnimation(AnimationTimeline, DependencyObject, DependencyProperty)</a>.
+An implementation or override of this method may also call <a class="xref" href="NationalInstruments.Shell.DocumentEditControl.html#NationalInstruments_Shell_DocumentEditControl_CreateDoubleAnimation_NationalInstruments_Design_ElementViewModel_NationalInstruments_Core_PlatformVisual_System_String_System_Double_System_Double_">CreateDoubleAnimation(ElementViewModel, PlatformVisual, String, Double, Double)</a> to set up the animation that needs to be added.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void AddHeightAnimation(SMRect lastBounds)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.SMRect.html">SMRect</a></td>
+        <td><span class="parametername">lastBounds</span></td>
+        <td><p>The last finalized value of <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_Bounds">Bounds</a>, 
+which is basically the value of Bounds at the beginning of any animations that are created by this method. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_AddLeftAnimation_" data-uid="NationalInstruments.Design.ViewElementViewModel.AddLeftAnimation*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_AddLeftAnimation_NationalInstruments_Core_SMRect_" data-uid="NationalInstruments.Design.ViewElementViewModel.AddLeftAnimation(NationalInstruments.Core.SMRect)">AddLeftAnimation(SMRect)</h4>
+  <div class="markdown level1 summary"><p>Creates animations for changes to the x coordinate that have just happened. 
+Override this to change animation behavior. 
+An implementation or override of this should involve a call to <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_AddToAtomicAnimation_System_Windows_Media_Animation_AnimationTimeline_System_Windows_DependencyObject_System_Windows_DependencyProperty_">AddToAtomicAnimation(AnimationTimeline, DependencyObject, DependencyProperty)</a>.
+An implementation or override of this method may also call <a class="xref" href="NationalInstruments.Shell.DocumentEditControl.html#NationalInstruments_Shell_DocumentEditControl_CreateDoubleAnimation_NationalInstruments_Design_ElementViewModel_NationalInstruments_Core_PlatformVisual_System_String_System_Double_System_Double_">CreateDoubleAnimation(ElementViewModel, PlatformVisual, String, Double, Double)</a> to set up the animation that needs to be added.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void AddLeftAnimation(SMRect lastBounds)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.SMRect.html">SMRect</a></td>
+        <td><span class="parametername">lastBounds</span></td>
+        <td><p>The last finalized value of <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_Bounds">Bounds</a>, 
+which is basically the value of Bounds at the beginning of any animations that are created by this method. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_AddToAtomicAnimation_" data-uid="NationalInstruments.Design.ViewElementViewModel.AddToAtomicAnimation*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_AddToAtomicAnimation_System_Windows_Media_Animation_AnimationTimeline_System_Windows_DependencyObject_System_Windows_DependencyProperty_" data-uid="NationalInstruments.Design.ViewElementViewModel.AddToAtomicAnimation(System.Windows.Media.Animation.AnimationTimeline,System.Windows.DependencyObject,System.Windows.DependencyProperty)">AddToAtomicAnimation(AnimationTimeline, DependencyObject, DependencyProperty)</h4>
+  <div class="markdown level1 summary"><p>Adds an animation to the current atomic animation</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void AddToAtomicAnimation(AnimationTimeline animation, DependencyObject target, DependencyProperty targetProperty)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.media.animation.animationtimeline">AnimationTimeline</a></td>
+        <td><span class="parametername">animation</span></td>
+        <td><p>the animation to add</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.dependencyobject">DependencyObject</a></td>
+        <td><span class="parametername">target</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.dependencyproperty">DependencyProperty</a></td>
+        <td><span class="parametername">targetProperty</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_AddTopAnimation_" data-uid="NationalInstruments.Design.ViewElementViewModel.AddTopAnimation*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_AddTopAnimation_NationalInstruments_Core_SMRect_" data-uid="NationalInstruments.Design.ViewElementViewModel.AddTopAnimation(NationalInstruments.Core.SMRect)">AddTopAnimation(SMRect)</h4>
+  <div class="markdown level1 summary"><p>Creates animations for changes to the y coordinate that have just happened. 
+Override this to change animation behavior. 
+An implementation or override of this should involve a call to <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_AddToAtomicAnimation_System_Windows_Media_Animation_AnimationTimeline_System_Windows_DependencyObject_System_Windows_DependencyProperty_">AddToAtomicAnimation(AnimationTimeline, DependencyObject, DependencyProperty)</a>.
+An implementation or override of this method may also call <a class="xref" href="NationalInstruments.Shell.DocumentEditControl.html#NationalInstruments_Shell_DocumentEditControl_CreateDoubleAnimation_NationalInstruments_Design_ElementViewModel_NationalInstruments_Core_PlatformVisual_System_String_System_Double_System_Double_">CreateDoubleAnimation(ElementViewModel, PlatformVisual, String, Double, Double)</a> to set up the animation that needs to be added.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void AddTopAnimation(SMRect lastBounds)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.SMRect.html">SMRect</a></td>
+        <td><span class="parametername">lastBounds</span></td>
+        <td><p>The last finalized value of <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_Bounds">Bounds</a>, 
+which is basically the value of Bounds at the beginning of any animations that are created by this method. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_AddWidthAnimation_" data-uid="NationalInstruments.Design.ViewElementViewModel.AddWidthAnimation*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_AddWidthAnimation_NationalInstruments_Core_SMRect_" data-uid="NationalInstruments.Design.ViewElementViewModel.AddWidthAnimation(NationalInstruments.Core.SMRect)">AddWidthAnimation(SMRect)</h4>
+  <div class="markdown level1 summary"><p>Creates animations for width changes that have just happened. 
+Override this to change animation behavior. 
+An implementation or override of this should involve a call to <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_AddToAtomicAnimation_System_Windows_Media_Animation_AnimationTimeline_System_Windows_DependencyObject_System_Windows_DependencyProperty_">AddToAtomicAnimation(AnimationTimeline, DependencyObject, DependencyProperty)</a>.
+An implementation or override of this method may also call <a class="xref" href="NationalInstruments.Shell.DocumentEditControl.html#NationalInstruments_Shell_DocumentEditControl_CreateDoubleAnimation_NationalInstruments_Design_ElementViewModel_NationalInstruments_Core_PlatformVisual_System_String_System_Double_System_Double_">CreateDoubleAnimation(ElementViewModel, PlatformVisual, String, Double, Double)</a> to set up the animation that needs to be added.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void AddWidthAnimation(SMRect lastBounds)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.SMRect.html">SMRect</a></td>
+        <td><span class="parametername">lastBounds</span></td>
+        <td><p>The last finalized value of <a class="xref" href="NationalInstruments.Design.ViewElementViewModel.html#NationalInstruments_Design_ViewElementViewModel_Bounds">Bounds</a>, 
+which is basically the value of Bounds at the beginning of any animations that are created by this method. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_AnimateDelete_" data-uid="NationalInstruments.Design.ViewElementViewModel.AnimateDelete*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_AnimateDelete_System_Boolean_" data-uid="NationalInstruments.Design.ViewElementViewModel.AnimateDelete(System.Boolean)">AnimateDelete(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool AnimateDelete(bool multiDelete)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">multiDelete</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_AnimateDeleteWithFade_" data-uid="NationalInstruments.Design.ViewElementViewModel.AnimateDeleteWithFade*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_AnimateDeleteWithFade" data-uid="NationalInstruments.Design.ViewElementViewModel.AnimateDeleteWithFade">AnimateDeleteWithFade()</h4>
+  <div class="markdown level1 summary"><p>Animates the visual deletion with a fade out</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void AnimateDeleteWithFade()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_AtomicAnimationComplete_" data-uid="NationalInstruments.Design.ViewElementViewModel.AtomicAnimationComplete*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_AtomicAnimationComplete_System_Object_System_EventArgs_" data-uid="NationalInstruments.Design.ViewElementViewModel.AtomicAnimationComplete(System.Object,System.EventArgs)">AtomicAnimationComplete(Object, EventArgs)</h4>
+  <div class="markdown level1 summary"><p>Called when an atomic animation is completed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void AtomicAnimationComplete(object sender, EventArgs e)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">sender</span></td>
+        <td><p>standard event arguments</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></td>
+        <td><span class="parametername">e</span></td>
+        <td><p>standard event arguments</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_BeginFocusEdit_" data-uid="NationalInstruments.Design.ViewElementViewModel.BeginFocusEdit*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_BeginFocusEdit_System_Func_NationalInstruments_Core_PlatformVisual__System_Action_" data-uid="NationalInstruments.Design.ViewElementViewModel.BeginFocusEdit(System.Func{NationalInstruments.Core.PlatformVisual},System.Action)">BeginFocusEdit(Func&lt;PlatformVisual&gt;, Action)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void BeginFocusEdit(Func&lt;PlatformVisual&gt; getVisualAction, Action focusAction)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="../core/NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a>&gt;</td>
+        <td><span class="parametername">getVisualAction</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td><span class="parametername">focusAction</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_BeginInteractiveOperation_" data-uid="NationalInstruments.Design.ViewElementViewModel.BeginInteractiveOperation*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_BeginInteractiveOperation_NationalInstruments_SourceModel_InteractiveOperationKind_" data-uid="NationalInstruments.Design.ViewElementViewModel.BeginInteractiveOperation(NationalInstruments.SourceModel.InteractiveOperationKind)">BeginInteractiveOperation(InteractiveOperationKind)</h4>
+  <div class="markdown level1 summary"><p>Called when the view model is involved in an interactive operation that is starting</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void BeginInteractiveOperation(InteractiveOperationKind kind)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.InteractiveOperationKind.html">InteractiveOperationKind</a></td>
+        <td><span class="parametername">kind</span></td>
+        <td><p>The kind of interactive operation</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_BeginInteractiveOperation_NationalInstruments_SourceModel_InteractiveOperationKind_">ElementViewModel.BeginInteractiveOperation(InteractiveOperationKind)</a></div>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_BindToOpacity_" data-uid="NationalInstruments.Design.ViewElementViewModel.BindToOpacity*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_BindToOpacity" data-uid="NationalInstruments.Design.ViewElementViewModel.BindToOpacity">BindToOpacity()</h4>
+  <div class="markdown level1 summary"><p>Setup default Opacity Binding
+PJC Deprecate post 1.0 and just support in DiagramControl</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void BindToOpacity()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_BindToView_" data-uid="NationalInstruments.Design.ViewElementViewModel.BindToView*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_BindToView_NationalInstruments_Core_PlatformVisual_" data-uid="NationalInstruments.Design.ViewElementViewModel.BindToView(NationalInstruments.Core.PlatformVisual)">BindToView(PlatformVisual)</h4>
+  <div class="markdown level1 summary"><p>Bind this View Model to the given view.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void BindToView(PlatformVisual view)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">view</span></td>
+        <td><p>the view</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_BindToView_NationalInstruments_Core_PlatformVisual_">ElementViewModel.BindToView(PlatformVisual)</a></div>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_CreateGlyphData_" data-uid="NationalInstruments.Design.ViewElementViewModel.CreateGlyphData*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_CreateGlyphData_NationalInstruments_Core_RenderDataCollection_" data-uid="NationalInstruments.Design.ViewElementViewModel.CreateGlyphData(NationalInstruments.Core.RenderDataCollection)">CreateGlyphData(RenderDataCollection)</h4>
+  <div class="markdown level1 summary"><p>Gets a list of &quot;configuration&quot; NineGridGlyphData for the viewmodel&apos;s view.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void CreateGlyphData(RenderDataCollection renderDataCollection)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.RenderDataCollection.html">RenderDataCollection</a></td>
+        <td><span class="parametername">renderDataCollection</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_CreateIconView_" data-uid="NationalInstruments.Design.ViewElementViewModel.CreateIconView*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_CreateIconView" data-uid="NationalInstruments.Design.ViewElementViewModel.CreateIconView">CreateIconView()</h4>
+  <div class="markdown level1 summary"><p>Create Iconic view for viewmodel</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual PlatformVisual CreateIconView()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><p>Icon view</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_CreateResizeAdorner_" data-uid="NationalInstruments.Design.ViewElementViewModel.CreateResizeAdorner*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_CreateResizeAdorner_System_Boolean_" data-uid="NationalInstruments.Design.ViewElementViewModel.CreateResizeAdorner(System.Boolean)">CreateResizeAdorner(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Creates the resize adorner</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ResizeAdorner CreateResizeAdorner(bool softSelect)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">softSelect</span></td>
+        <td><p>Whether this is soft or hard select</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.ResizeAdorner.html">ResizeAdorner</a></td>
+        <td><p>The resize adorner</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_CreateTextBlockContent_" data-uid="NationalInstruments.Design.ViewElementViewModel.CreateTextBlockContent*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_CreateTextBlockContent_System_String_" data-uid="NationalInstruments.Design.ViewElementViewModel.CreateTextBlockContent(System.String)">CreateTextBlockContent(String)</h4>
+  <div class="markdown level1 summary"><p>Creates a default control to present content.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected static TextBlock CreateTextBlockContent(string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">text</span></td>
+        <td><p>The text to display.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.textblock">TextBlock</a></td>
+        <td><p>The text block in which to display the text.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_CreateView_" data-uid="NationalInstruments.Design.ViewElementViewModel.CreateView*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_CreateView_NationalInstruments_Core_PlatformVisual_" data-uid="NationalInstruments.Design.ViewElementViewModel.CreateView(NationalInstruments.Core.PlatformVisual)">CreateView(PlatformVisual)</h4>
+  <div class="markdown level1 summary"><p>Create the visual for this object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual PlatformVisual CreateView(PlatformVisual parent)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">parent</span></td>
+        <td><p>The canvas that is calling this method</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><p>The view that can be displayed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_CreateVisualControl_" data-uid="NationalInstruments.Design.ViewElementViewModel.CreateVisualControl*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_CreateVisualControl_NationalInstruments_Core_PlatformVisual_" data-uid="NationalInstruments.Design.ViewElementViewModel.CreateVisualControl(NationalInstruments.Core.PlatformVisual)">CreateVisualControl(PlatformVisual)</h4>
+  <div class="markdown level1 summary"><p>Create our View. Defaults to DiagramControl which supports rendering our RenderData collections. If you provide alternate visual, you still need to render appropriate object (like GlyphData)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual PlatformVisual CreateVisualControl(PlatformVisual parent)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">parent</span></td>
+        <td><p>parent visual</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><p>your new View</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_CreateVisualForModel_" data-uid="NationalInstruments.Design.ViewElementViewModel.CreateVisualForModel*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_CreateVisualForModel_NationalInstruments_SourceModel_Element_" data-uid="NationalInstruments.Design.ViewElementViewModel.CreateVisualForModel(NationalInstruments.SourceModel.Element)">CreateVisualForModel(Element)</h4>
+  <div class="markdown level1 summary"><p>Find the appropriate DataTemplate mapping for the given element and create its visual.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected PlatformVisual CreateVisualForModel(Element modelElement)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td><span class="parametername">modelElement</span></td>
+        <td><p>The model element to create a visual for.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><p>The visual, or none if an appropriate DataTemplate could not be found.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_DiagramZoomChanged_" data-uid="NationalInstruments.Design.ViewElementViewModel.DiagramZoomChanged*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_DiagramZoomChanged_System_Double_System_Double_" data-uid="NationalInstruments.Design.ViewElementViewModel.DiagramZoomChanged(System.Double,System.Double)">DiagramZoomChanged(Double, Double)</h4>
+  <div class="markdown level1 summary"><p>Called when the current fidelity of the diagram changes</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DiagramZoomChanged(double oldZoom, double newZoom)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td><span class="parametername">oldZoom</span></td>
+        <td><p>old zoom level</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td><span class="parametername">newZoom</span></td>
+        <td><p>new zoom level</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_DisposeView_" data-uid="NationalInstruments.Design.ViewElementViewModel.DisposeView*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_DisposeView" data-uid="NationalInstruments.Design.ViewElementViewModel.DisposeView">DisposeView()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void DisposeView()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_EndInteractiveOperation_" data-uid="NationalInstruments.Design.ViewElementViewModel.EndInteractiveOperation*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_EndInteractiveOperation_NationalInstruments_SourceModel_InteractiveOperationKind_" data-uid="NationalInstruments.Design.ViewElementViewModel.EndInteractiveOperation(NationalInstruments.SourceModel.InteractiveOperationKind)">EndInteractiveOperation(InteractiveOperationKind)</h4>
+  <div class="markdown level1 summary"><p>Called when the view model is involved in an interactive operation that is ending</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void EndInteractiveOperation(InteractiveOperationKind kind)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.InteractiveOperationKind.html">InteractiveOperationKind</a></td>
+        <td><span class="parametername">kind</span></td>
+        <td><p>The kind of interactive operation</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_EndInteractiveOperation_NationalInstruments_SourceModel_InteractiveOperationKind_">ElementViewModel.EndInteractiveOperation(InteractiveOperationKind)</a></div>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_FindResourceContext_" data-uid="NationalInstruments.Design.ViewElementViewModel.FindResourceContext*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_FindResourceContext" data-uid="NationalInstruments.Design.ViewElementViewModel.FindResourceContext">FindResourceContext()</h4>
+  <div class="markdown level1 summary"><p>Gets the &quot;resource context&quot; for this and descendent view models.  The resource context is usually the root document editor
+but certain view models can override this and return themselves. This indicates that they override TryFindResource and provide
+alternate resources, usually via</p>
+<!-- Host.GetSharedExportedValue<PresentationProviderController>().GetResource(ContextKey, key); -->
+<p>Then they provide that resource via a PresentationResourceProvider exported with that same ContextKey</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IViewModel FindResourceContext()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.IViewModel.html">IViewModel</a></td>
+        <td><p>viewmodel that provides resources.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_ForceDisposeView_" data-uid="NationalInstruments.Design.ViewElementViewModel.ForceDisposeView*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_ForceDisposeView" data-uid="NationalInstruments.Design.ViewElementViewModel.ForceDisposeView">ForceDisposeView()</h4>
+  <div class="markdown level1 summary"><p>Force the disposal of the view.  Used by arrays to disassociate template generated visuals.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ForceDisposeView()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_GetResizeAdornerOptions_" data-uid="NationalInstruments.Design.ViewElementViewModel.GetResizeAdornerOptions*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_GetResizeAdornerOptions_System_Boolean_" data-uid="NationalInstruments.Design.ViewElementViewModel.GetResizeAdornerOptions(System.Boolean)">GetResizeAdornerOptions(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Options for resize adorner</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ResizeAdornerOptions GetResizeAdornerOptions(bool softSelect)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">softSelect</span></td>
+        <td><p>True if soft select</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.ResizeAdornerOptions.html">ResizeAdornerOptions</a></td>
+        <td><p>Options for resize adorner</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_GetSelfAndAncestors_" data-uid="NationalInstruments.Design.ViewElementViewModel.GetSelfAndAncestors*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_GetSelfAndAncestors" data-uid="NationalInstruments.Design.ViewElementViewModel.GetSelfAndAncestors">GetSelfAndAncestors()</h4>
+  <div class="markdown level1 summary"><p>Get our ViewModel hierarchy</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;IViewModel&gt; GetSelfAndAncestors()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="../core/NationalInstruments.Core.IViewModel.html">IViewModel</a>&gt;</td>
+        <td><p>This view model and all ancestors</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_GetViewModel_" data-uid="NationalInstruments.Design.ViewElementViewModel.GetViewModel*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_GetViewModel_NationalInstruments_Core_PlatformVisual_" data-uid="NationalInstruments.Design.ViewElementViewModel.GetViewModel(NationalInstruments.Core.PlatformVisual)">GetViewModel(PlatformVisual)</h4>
+  <div class="markdown level1 summary"><p>Gets the attached view model for a visual</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IViewElementViewModel GetViewModel(PlatformVisual d)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">d</span></td>
+        <td><p>Target</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.IViewElementViewModel.html">IViewElementViewModel</a></td>
+        <td><p>The view model or null</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_InvalidateRender_" data-uid="NationalInstruments.Design.ViewElementViewModel.InvalidateRender*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_InvalidateRender" data-uid="NationalInstruments.Design.ViewElementViewModel.InvalidateRender">InvalidateRender()</h4>
+  <div class="markdown level1 summary"><p>Invalidates our visuals Render</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void InvalidateRender()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_IsSelectable_" data-uid="NationalInstruments.Design.ViewElementViewModel.IsSelectable*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_IsSelectable_NationalInstruments_Core_PlatformVisual_" data-uid="NationalInstruments.Design.ViewElementViewModel.IsSelectable(NationalInstruments.Core.PlatformVisual)">IsSelectable(PlatformVisual)</h4>
+  <div class="markdown level1 summary"><p>Whether we are selectable</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsSelectable(PlatformVisual source)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>Visual source of the selection interaction</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>true if the item can be selected from the specified source</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_IsSelectable_NationalInstruments_Core_PlatformVisual_">ElementViewModel.IsSelectable(PlatformVisual)</a></div>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_ModelPropertyChanged_" data-uid="NationalInstruments.Design.ViewElementViewModel.ModelPropertyChanged*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_ModelPropertyChanged_NationalInstruments_SourceModel_Element_System_String_NationalInstruments_SourceModel_TransactionItem_" data-uid="NationalInstruments.Design.ViewElementViewModel.ModelPropertyChanged(NationalInstruments.SourceModel.Element,System.String,NationalInstruments.SourceModel.TransactionItem)">ModelPropertyChanged(Element, String, TransactionItem)</h4>
+  <div class="markdown level1 summary"><p>Called when a property changes on the associated model element. Causes the
+view models to fire a NotifyPropertyChanged event when the model changes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void ModelPropertyChanged(Element modelElement, string propertyName, TransactionItem transactionItem)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td><span class="parametername">modelElement</span></td>
+        <td><p>The element whose property changed</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>Name of the property that changed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TransactionItem.html">TransactionItem</a></td>
+        <td><span class="parametername">transactionItem</span></td>
+        <td><p>The transaction in which the property changed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_ModelPropertyChanged_NationalInstruments_SourceModel_Element_System_String_NationalInstruments_SourceModel_TransactionItem_">ElementViewModel.ModelPropertyChanged(Element, String, TransactionItem)</a></div>
+  <h5 id="NationalInstruments_Design_ViewElementViewModel_ModelPropertyChanged_NationalInstruments_SourceModel_Element_System_String_NationalInstruments_SourceModel_TransactionItem__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>All derived classes must override this method and check for model element
+property changes and then map those names to the property names that should
+be changed in the view model and then fire the appropriate NotifyPropertyChanged.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_NotifyBoundsChanged_" data-uid="NationalInstruments.Design.ViewElementViewModel.NotifyBoundsChanged*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_NotifyBoundsChanged_System_Boolean_" data-uid="NationalInstruments.Design.ViewElementViewModel.NotifyBoundsChanged(System.Boolean)">NotifyBoundsChanged(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Check if any of our bounds fields changed and notify.
+Left/Top/Width/Height were all inlined specifically because we kept having bugs of not notifying virtual canvas of the bounds change.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void NotifyBoundsChanged(bool finalizing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">finalizing</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_NotifyPropertyChanged_" data-uid="NationalInstruments.Design.ViewElementViewModel.NotifyPropertyChanged*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_NotifyPropertyChanged_System_String_" data-uid="NationalInstruments.Design.ViewElementViewModel.NotifyPropertyChanged(System.String)">NotifyPropertyChanged(String)</h4>
+  <div class="markdown level1 summary"><p>Override default behavior to queue up notifications.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void NotifyPropertyChanged(string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_NotifyPropertyChanged_System_String_">ElementViewModel.NotifyPropertyChanged(String)</a></div>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_OnBoundsChanged_" data-uid="NationalInstruments.Design.ViewElementViewModel.OnBoundsChanged*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_OnBoundsChanged" data-uid="NationalInstruments.Design.ViewElementViewModel.OnBoundsChanged">OnBoundsChanged()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnBoundsChanged()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_OnBoundViewChanged_" data-uid="NationalInstruments.Design.ViewElementViewModel.OnBoundViewChanged*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_OnBoundViewChanged_NationalInstruments_Core_PlatformVisual_" data-uid="NationalInstruments.Design.ViewElementViewModel.OnBoundViewChanged(NationalInstruments.Core.PlatformVisual)">OnBoundViewChanged(PlatformVisual)</h4>
+  <div class="markdown level1 summary"><p>Called whenever we are bound to a new View.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnBoundViewChanged(PlatformVisual oldView)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">oldView</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_OnCreateContextMenu_" data-uid="NationalInstruments.Design.ViewElementViewModel.OnCreateContextMenu*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_OnCreateContextMenu_NationalInstruments_Core_CreateContextMenuRoutedEventArgs_" data-uid="NationalInstruments.Design.ViewElementViewModel.OnCreateContextMenu(NationalInstruments.Core.CreateContextMenuRoutedEventArgs)">OnCreateContextMenu(CreateContextMenuRoutedEventArgs)</h4>
+  <div class="markdown level1 summary"><p>Override in your class to add items to your (or your descendants) context menu.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnCreateContextMenu(CreateContextMenuRoutedEventArgs args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.CreateContextMenuRoutedEventArgs.html">CreateContextMenuRoutedEventArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>CreateContextMenu args</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_OnInitialized_" data-uid="NationalInstruments.Design.ViewElementViewModel.OnInitialized*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_OnInitialized" data-uid="NationalInstruments.Design.ViewElementViewModel.OnInitialized">OnInitialized()</h4>
+  <div class="markdown level1 summary"><p>Called when your DesignerEditControl is set.
+A good time to create sub-viewmodels.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnInitialized()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_OnInitialized">ElementViewModel.OnInitialized()</a></div>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_OnParentViewModelChanged_" data-uid="NationalInstruments.Design.ViewElementViewModel.OnParentViewModelChanged*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_OnParentViewModelChanged" data-uid="NationalInstruments.Design.ViewElementViewModel.OnParentViewModelChanged">OnParentViewModelChanged()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnParentViewModelChanged()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_OnParentViewModelChanged">ViewModelBase.OnParentViewModelChanged()</a></div>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_OnViewLoaded_" data-uid="NationalInstruments.Design.ViewElementViewModel.OnViewLoaded*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_OnViewLoaded" data-uid="NationalInstruments.Design.ViewElementViewModel.OnViewLoaded">OnViewLoaded()</h4>
+  <div class="markdown level1 summary"><p>Called asynchronously after the view has been loaded and styled</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnViewLoaded()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_OnViewSizeChanged_" data-uid="NationalInstruments.Design.ViewElementViewModel.OnViewSizeChanged*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_OnViewSizeChanged" data-uid="NationalInstruments.Design.ViewElementViewModel.OnViewSizeChanged">OnViewSizeChanged()</h4>
+  <div class="markdown level1 summary"><p>Called on view size changed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnViewSizeChanged()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_OnViewUnloaded_" data-uid="NationalInstruments.Design.ViewElementViewModel.OnViewUnloaded*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_OnViewUnloaded" data-uid="NationalInstruments.Design.ViewElementViewModel.OnViewUnloaded">OnViewUnloaded()</h4>
+  <div class="markdown level1 summary"><p>Called asynchronously after the view has been unloaded.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnViewUnloaded()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_OnZoomChanged_" data-uid="NationalInstruments.Design.ViewElementViewModel.OnZoomChanged*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_OnZoomChanged_NationalInstruments_Core_PlatformVisual_System_Double_" data-uid="NationalInstruments.Design.ViewElementViewModel.OnZoomChanged(NationalInstruments.Core.PlatformVisual,System.Double)">OnZoomChanged(PlatformVisual, Double)</h4>
+  <div class="markdown level1 summary"><p>Changes the view properties based on the new fidelity of the diagram</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnZoomChanged(PlatformVisual view, double zoomLevel)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">view</span></td>
+        <td><p>Current view</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td><span class="parametername">zoomLevel</span></td>
+        <td><p>zoom level</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_OutermostTransactionComplete_" data-uid="NationalInstruments.Design.ViewElementViewModel.OutermostTransactionComplete*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_OutermostTransactionComplete" data-uid="NationalInstruments.Design.ViewElementViewModel.OutermostTransactionComplete">OutermostTransactionComplete()</h4>
+  <div class="markdown level1 summary"><p>Called when a transaction completes which involves this visual</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OutermostTransactionComplete()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_OutermostTransactionComplete">ElementViewModel.OutermostTransactionComplete()</a></div>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_Placed_" data-uid="NationalInstruments.Design.ViewElementViewModel.Placed*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_Placed_NationalInstruments_Design_PlacementReleaseEventArgs_" data-uid="NationalInstruments.Design.ViewElementViewModel.Placed(NationalInstruments.Design.PlacementReleaseEventArgs)">Placed(PlacementReleaseEventArgs)</h4>
+  <div class="markdown level1 summary"><p>You have been placed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Placed(PlacementReleaseEventArgs args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.PlacementReleaseEventArgs.html">PlacementReleaseEventArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>additional info. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_PostAddedToVisualTree_" data-uid="NationalInstruments.Design.ViewElementViewModel.PostAddedToVisualTree*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_PostAddedToVisualTree" data-uid="NationalInstruments.Design.ViewElementViewModel.PostAddedToVisualTree">PostAddedToVisualTree()</h4>
+  <div class="markdown level1 summary"><p>Your View has been added to the visual tree.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void PostAddedToVisualTree()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_PreRemovedFromVisualTree_" data-uid="NationalInstruments.Design.ViewElementViewModel.PreRemovedFromVisualTree*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_PreRemovedFromVisualTree" data-uid="NationalInstruments.Design.ViewElementViewModel.PreRemovedFromVisualTree">PreRemovedFromVisualTree()</h4>
+  <div class="markdown level1 summary"><p>Called right before the view is going to be removed from the virtual canvas&apos; visual tree.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void PreRemovedFromVisualTree()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_Rebind_" data-uid="NationalInstruments.Design.ViewElementViewModel.Rebind*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_Rebind_NationalInstruments_SourceModel_Element_NationalInstruments_SourceModel_Element_" data-uid="NationalInstruments.Design.ViewElementViewModel.Rebind(NationalInstruments.SourceModel.Element,NationalInstruments.SourceModel.Element)">Rebind(Element, Element)</h4>
+  <div class="markdown level1 summary"><p>Called during the editing process, particularly dragging from the palette
+and other temporary transactions, to indicate that this view model
+is changing from binding to one model element to binding to another
+model element. It is no longer required to override to notify all properties changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Rebind(Element oldElement, Element newElement)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td><span class="parametername">oldElement</span></td>
+        <td><p>Old model element</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td><span class="parametername">newElement</span></td>
+        <td><p>New model element</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_Rebind_NationalInstruments_SourceModel_Element_NationalInstruments_SourceModel_Element_">ElementViewModel.Rebind(Element, Element)</a></div>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_RemoveElement_" data-uid="NationalInstruments.Design.ViewElementViewModel.RemoveElement*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_RemoveElement_NationalInstruments_SourceModel_Element_" data-uid="NationalInstruments.Design.ViewElementViewModel.RemoveElement(NationalInstruments.SourceModel.Element)">RemoveElement(Element)</h4>
+  <div class="markdown level1 summary"><p>Remove an element from list we are observing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void RemoveElement(Element element)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td><span class="parametername">element</span></td>
+        <td><p>element to remove</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_RemoveElement_NationalInstruments_SourceModel_Element_">ElementViewModel.RemoveElement(Element)</a></div>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_Select_" data-uid="NationalInstruments.Design.ViewElementViewModel.Select*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_Select_NationalInstruments_Shell_DesignerSelectionMode_NationalInstruments_Core_PlatformVisual_NationalInstruments_SourceModel_ElementSelection_NationalInstruments_Core_UIPosition_" data-uid="NationalInstruments.Design.ViewElementViewModel.Select(NationalInstruments.Shell.DesignerSelectionMode,NationalInstruments.Core.PlatformVisual,NationalInstruments.SourceModel.ElementSelection,NationalInstruments.Core.UIPosition)">Select(DesignerSelectionMode, PlatformVisual, ElementSelection, UIPosition)</h4>
+  <div class="markdown level1 summary"><p>Called when the item is selected, either by itself or as part of a group of selected items.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Select(DesignerSelectionMode mode, PlatformVisual source, ElementSelection elementSelection, UIPosition position)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Shell.DesignerSelectionMode.html">DesignerSelectionMode</a></td>
+        <td><span class="parametername">mode</span></td>
+        <td><p>Selection flags: Hard/Soft, Normal/Alternate (Right Click)</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>The element (or sub-element) that was selected.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ElementSelection.html">ElementSelection</a></td>
+        <td><span class="parametername">elementSelection</span></td>
+        <td><p>The element selection.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.UIPosition.html">UIPosition</a></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>The position.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>Whether the Element was selected</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_Select_NationalInstruments_Shell_DesignerSelectionMode_NationalInstruments_Core_PlatformVisual_NationalInstruments_SourceModel_ElementSelection_NationalInstruments_Core_UIPosition_">ElementViewModel.Select(DesignerSelectionMode, PlatformVisual, ElementSelection, UIPosition)</a></div>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_SetDataContextOnBoundView_" data-uid="NationalInstruments.Design.ViewElementViewModel.SetDataContextOnBoundView*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_SetDataContextOnBoundView_NationalInstruments_Core_PlatformVisual_" data-uid="NationalInstruments.Design.ViewElementViewModel.SetDataContextOnBoundView(NationalInstruments.Core.PlatformVisual)">SetDataContextOnBoundView(PlatformVisual)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void SetDataContextOnBoundView(PlatformVisual newView)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">newView</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_StyleView_" data-uid="NationalInstruments.Design.ViewElementViewModel.StyleView*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_StyleView" data-uid="NationalInstruments.Design.ViewElementViewModel.StyleView">StyleView()</h4>
+  <div class="markdown level1 summary"><p>Sets the style on a view of this view model</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void StyleView()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_UpdatePositionTransform_" data-uid="NationalInstruments.Design.ViewElementViewModel.UpdatePositionTransform*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_UpdatePositionTransform_System_Boolean_System_Boolean_" data-uid="NationalInstruments.Design.ViewElementViewModel.UpdatePositionTransform(System.Boolean,System.Boolean)">UpdatePositionTransform(Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void UpdatePositionTransform(bool doLeft, bool doTop)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">doLeft</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">doTop</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_UpdateScaleTransform_" data-uid="NationalInstruments.Design.ViewElementViewModel.UpdateScaleTransform*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_UpdateScaleTransform" data-uid="NationalInstruments.Design.ViewElementViewModel.UpdateScaleTransform">UpdateScaleTransform()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void UpdateScaleTransform()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_UpdateVisualTransforms_" data-uid="NationalInstruments.Design.ViewElementViewModel.UpdateVisualTransforms*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_UpdateVisualTransforms" data-uid="NationalInstruments.Design.ViewElementViewModel.UpdateVisualTransforms">UpdateVisualTransforms()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void UpdateVisualTransforms()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_UserModificationComplete_" data-uid="NationalInstruments.Design.ViewElementViewModel.UserModificationComplete*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_UserModificationComplete" data-uid="NationalInstruments.Design.ViewElementViewModel.UserModificationComplete">UserModificationComplete()</h4>
+  <div class="markdown level1 summary"><p>Called when the current user modification completes.  Delayed notifications
+should be sent from this method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void UserModificationComplete()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.Design.ElementViewModel.html#NationalInstruments_Design_ElementViewModel_UserModificationComplete">ElementViewModel.UserModificationComplete()</a></div>
+  
+  
+  <a id="NationalInstruments_Design_ViewElementViewModel_VisualTransformsConstructed_" data-uid="NationalInstruments.Design.ViewElementViewModel.VisualTransformsConstructed*"></a>
+  <h4 id="NationalInstruments_Design_ViewElementViewModel_VisualTransformsConstructed" data-uid="NationalInstruments.Design.ViewElementViewModel.VisualTransformsConstructed">VisualTransformsConstructed()</h4>
+  <div class="markdown level1 summary"><p>Callback when the VisualTransforms is constructed so we can add PositionTransform to it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void VisualTransformsConstructed()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.iweakeventlistener">System.Windows.IWeakEventListener</a>
+  </div>
+  <div>
+      <a class="xref" href="../core/NationalInstruments.Core.IColorResolver.html">IColorResolver</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Shell.IProvideCommandContent.html">IProvideCommandContent</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.IContextPaletteContentProvider.html">IContextPaletteContentProvider</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.IViewElementViewModel.html">IViewElementViewModel</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.IElementViewModel.html">IElementViewModel</a>
+  </div>
+  <div>
+      <a class="xref" href="../core/NationalInstruments.Core.IViewModel.html">IViewModel</a>
+  </div>
+  <div>
+      <a class="xref" href="../core/NationalInstruments.Core.IServiceAggregator.html">IServiceAggregator</a>
+  </div>
+  <div>
+      <a class="xref" href="../core/NationalInstruments.Core.IQueryService.html">IQueryService</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.ISelectableItem.html">ISelectableItem</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.IModelObserver.html">IModelObserver</a>
+  </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">System.ComponentModel.INotifyPropertyChanged</a>
+  </div>
+  <div>
+      <a class="xref" href="../core/NationalInstruments.Core.IVirtualChild.html">IVirtualChild</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.IPlacementNotify.html">IPlacementNotify</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.IDiagramViewTemplateViewModel.html">IDiagramViewTemplateViewModel</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.IProvideIconData.html">IProvideIconData</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.IResizableItem.html">IResizableItem</a>
+  </div>
+  <div>
+      <a class="xref" href="../core/NationalInstruments.Core.IChainedService.html">IChainedService</a>
+  </div>
+  <div>
+      <a class="xref" href="../core/NationalInstruments.Core.IWeightedService.html">IWeightedService</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.ContextualHelp.HelpCommonHelpers.html#NationalInstruments_ContextualHelp_HelpCommonHelpers_InitializeContextHelpIfNecessary__1_NationalInstruments_Core_ViewModelBase_">HelpCommonHelpers.InitializeContextHelpIfNecessary&lt;T&gt;(ViewModelBase)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.LayoutViewExtensions.html#NationalInstruments_Design_LayoutViewExtensions_SetLayoutViewSelection_NationalInstruments_Design_IViewElementViewModel_System_Boolean_System_Boolean_">LayoutViewExtensions.SetLayoutViewSelection(IViewElementViewModel, Boolean, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.LayoutViewExtensions.html#NationalInstruments_Design_LayoutViewExtensions_SetLabelAttachedToGuideline_NationalInstruments_Design_IViewElementViewModel_NationalInstruments_Design_IViewElementViewModel_">LayoutViewExtensions.SetLabelAttachedToGuideline(IViewElementViewModel, IViewElementViewModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.LayoutViewExtensions.html#NationalInstruments_Design_LayoutViewExtensions_SetControlAndLabelAttachedToGuideline_NationalInstruments_Design_IViewElementViewModel_System_Object_NationalInstruments_SourceModel_VisualModel_">LayoutViewExtensions.SetControlAndLabelAttachedToGuideline(IViewElementViewModel, Object, VisualModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.PaletteContextHelpers.html#NationalInstruments_Design_PaletteContextHelpers_GetPaletteContextKeywords_NationalInstruments_Core_IQueryService_">PaletteContextHelpers.GetPaletteContextKeywords(IQueryService)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.ChildDataContextProviderHelpers.html#NationalInstruments_Design_ChildDataContextProviderHelpers_GetDataContextProvider_NationalInstruments_Core_IViewModel_">ChildDataContextProviderHelpers.GetDataContextProvider(IViewModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerNodeHelpers.html#NationalInstruments_Design_DesignerNodeHelpers_GetCreatedWithFacade_NationalInstruments_Design_IElementViewModel_">DesignerNodeHelpers.GetCreatedWithFacade(IElementViewModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerNodeHelpers.html#NationalInstruments_Design_DesignerNodeHelpers_EnsureVisual_NationalInstruments_Design_IViewElementViewModel_">DesignerNodeHelpers.EnsureVisual(IViewElementViewModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerExtensions.html#NationalInstruments_Design_DesignerExtensions_QueryTypeService__1_NationalInstruments_Design_IElementViewModel_NationalInstruments_DataTypes_NIType_">DesignerExtensions.QueryTypeService&lt;T&gt;(IElementViewModel, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ElementLocalizationHelpers.html#NationalInstruments_SourceModel_ElementLocalizationHelpers_GetLocalizedValue_NationalInstruments_Core_IViewModel_NationalInstruments_DynamicProperties_PropertySymbol_System_Object_">ElementLocalizationHelpers.GetLocalizedValue(IViewModel, PropertySymbol, Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ElementLocalizationHelpers.html#NationalInstruments_SourceModel_ElementLocalizationHelpers_CreateLocalizedDisplayBinding_NationalInstruments_Core_IViewModel_System_String_NationalInstruments_DynamicProperties_PropertySymbol_">ElementLocalizationHelpers.CreateLocalizedDisplayBinding(IViewModel, String, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ElementLocalizationHelpers.html#NationalInstruments_SourceModel_ElementLocalizationHelpers_CreateLocalizedDisplayBinding_NationalInstruments_Core_IViewModel_System_String_NationalInstruments_DynamicProperties_PropertySymbol_NationalInstruments_Core_PlatformBindingMode_">ElementLocalizationHelpers.CreateLocalizedDisplayBinding(IViewModel, String, PropertySymbol, PlatformBindingMode)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

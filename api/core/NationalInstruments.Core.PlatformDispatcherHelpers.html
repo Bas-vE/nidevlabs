@@ -1,0 +1,620 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class PlatformDispatcherHelpers
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class PlatformDispatcherHelpers
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.Core.PlatformDispatcherHelpers">
+  
+  
+  <h1 id="NationalInstruments_Core_PlatformDispatcherHelpers" data-uid="NationalInstruments.Core.PlatformDispatcherHelpers" class="text-break">Class PlatformDispatcherHelpers
+  </h1>
+  <div class="markdown level0 summary"><p>A collection of dispatcher helpers.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">PlatformDispatcherHelpers</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="../pf/NationalInstruments.Core.html">NationalInstruments.Core</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.Core.dll</h6>
+  <h5 id="NationalInstruments_Core_PlatformDispatcherHelpers_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class PlatformDispatcherHelpers</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_Core_PlatformDispatcherHelpers_PushFrameUntilComplete_" data-uid="NationalInstruments.Core.PlatformDispatcherHelpers.PushFrameUntilComplete*"></a>
+  <h4 id="NationalInstruments_Core_PlatformDispatcherHelpers_PushFrameUntilComplete_NationalInstruments_Core_PlatformDispatcher_System_Threading_Tasks_Task_System_Threading_CancellationToken_" data-uid="NationalInstruments.Core.PlatformDispatcherHelpers.PushFrameUntilComplete(NationalInstruments.Core.PlatformDispatcher,System.Threading.Tasks.Task,System.Threading.CancellationToken)">PushFrameUntilComplete(PlatformDispatcher, Task, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Used to synchronously wait on a task without blocking the thread.
+This is risky and is not intended for widespread use. If you need something along these lines,
+discuss your use case with the PF team first</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool PushFrameUntilComplete(this PlatformDispatcher dispatcher, Task task, CancellationToken token)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformDispatcher.html">PlatformDispatcher</a></td>
+        <td><span class="parametername">dispatcher</span></td>
+        <td><p>Dispatcher to use for the waiting action</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><span class="parametername">task</span></td>
+        <td><p>The task to wait on</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">token</span></td>
+        <td><p>Cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if the task completed, false if a) the token is cancelled before the task completes or
+b) if an exception occurs that cannot be rethrown.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PlatformDispatcherHelpers_PushFrameUntilComplete_" data-uid="NationalInstruments.Core.PlatformDispatcherHelpers.PushFrameUntilComplete*"></a>
+  <h4 id="NationalInstruments_Core_PlatformDispatcherHelpers_PushFrameUntilComplete_NationalInstruments_Core_PlatformDispatcher_System_Threading_Tasks_Task_System_Threading_CancellationToken_System_TimeSpan_" data-uid="NationalInstruments.Core.PlatformDispatcherHelpers.PushFrameUntilComplete(NationalInstruments.Core.PlatformDispatcher,System.Threading.Tasks.Task,System.Threading.CancellationToken,System.TimeSpan)">PushFrameUntilComplete(PlatformDispatcher, Task, CancellationToken, TimeSpan)</h4>
+  <div class="markdown level1 summary"><p>Used to synchronously wait on a task without blocking the thread.
+This is risky and is not intended for widespread use. If you need something along these lines,
+discuss your use case with the PF team first</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool PushFrameUntilComplete(this PlatformDispatcher dispatcher, Task task, CancellationToken token, TimeSpan timeout)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformDispatcher.html">PlatformDispatcher</a></td>
+        <td><span class="parametername">dispatcher</span></td>
+        <td><p>Dispatcher to use for the waiting action</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><span class="parametername">task</span></td>
+        <td><p>The task to wait on</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">token</span></td>
+        <td><p>Cancellation token</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>The amount of time in milliseconds to wait</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if the task completed, false if a) the token is cancelled before the task completes,
+b) if the task does not complete before the timeout, or c) if an exception occurs that cannot be rethrown.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PlatformDispatcherHelpers_PushFrameUntilComplete_" data-uid="NationalInstruments.Core.PlatformDispatcherHelpers.PushFrameUntilComplete*"></a>
+  <h4 id="NationalInstruments_Core_PlatformDispatcherHelpers_PushFrameUntilComplete_NationalInstruments_Core_PlatformDispatcher_System_Threading_Tasks_Task_System_Threading_CancellationToken_System_TimeSpan_System_TimeSpan_" data-uid="NationalInstruments.Core.PlatformDispatcherHelpers.PushFrameUntilComplete(NationalInstruments.Core.PlatformDispatcher,System.Threading.Tasks.Task,System.Threading.CancellationToken,System.TimeSpan,System.TimeSpan)">PushFrameUntilComplete(PlatformDispatcher, Task, CancellationToken, TimeSpan, TimeSpan)</h4>
+  <div class="markdown level1 summary"><p>Used to synchronously wait on a task without blocking the thread.
+This is risky and is not intended for widespread use. If you need something along these lines,
+discuss your use case with the PF team first</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool PushFrameUntilComplete(this PlatformDispatcher dispatcher, Task task, CancellationToken token, TimeSpan timeout, TimeSpan blockingTimeout)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformDispatcher.html">PlatformDispatcher</a></td>
+        <td><span class="parametername">dispatcher</span></td>
+        <td><p>Dispatcher to use for the waiting action</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><span class="parametername">task</span></td>
+        <td><p>The task to wait on</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">token</span></td>
+        <td><p>Cancellation token</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>The amount of time in milliseconds to wait</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td><span class="parametername">blockingTimeout</span></td>
+        <td><p>Amount to wait on a preliminary blocking wait, before giving up and entering the more expensive non-blocking wait</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if the task completed, false if a) the token is cancelled before the task completes,
+b) if the task does not complete before the timeout, or c) if an exception occurs that cannot be rethrown.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PlatformDispatcherHelpers_PushFrameUntilComplete_" data-uid="NationalInstruments.Core.PlatformDispatcherHelpers.PushFrameUntilComplete*"></a>
+  <h4 id="NationalInstruments_Core_PlatformDispatcherHelpers_PushFrameUntilComplete__1_NationalInstruments_Core_PlatformDispatcher_System_Threading_Tasks_Task___0__System_Threading_CancellationToken___0__" data-uid="NationalInstruments.Core.PlatformDispatcherHelpers.PushFrameUntilComplete``1(NationalInstruments.Core.PlatformDispatcher,System.Threading.Tasks.Task{``0},System.Threading.CancellationToken,``0@)">PushFrameUntilComplete&lt;T&gt;(PlatformDispatcher, Task&lt;T&gt;, CancellationToken, out T)</h4>
+  <div class="markdown level1 summary"><p>Used to synchronously wait on a task without blocking the thread.
+This is risky and is not intended for widespread use. If you need something along these lines,
+discuss your use case with the PF team first</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool PushFrameUntilComplete&lt;T&gt;(this PlatformDispatcher dispatcher, Task&lt;T&gt; task, CancellationToken token, out T result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformDispatcher.html">PlatformDispatcher</a></td>
+        <td><span class="parametername">dispatcher</span></td>
+        <td><p>Dispatcher to use for the waiting action</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;T&gt;</td>
+        <td><span class="parametername">task</span></td>
+        <td><p>The task to wait on</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">token</span></td>
+        <td><p>Cancellation token</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The result of the task</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>true if the task completed, false if a) the token is cancelled before the task completes or
+b) if an exception occurs that cannot be rethrown.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Return type of the task</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PlatformDispatcherHelpers_PushFrameUntilComplete_" data-uid="NationalInstruments.Core.PlatformDispatcherHelpers.PushFrameUntilComplete*"></a>
+  <h4 id="NationalInstruments_Core_PlatformDispatcherHelpers_PushFrameUntilComplete__1_NationalInstruments_Core_PlatformDispatcher_System_Threading_Tasks_Task___0__System_Threading_CancellationToken_System_TimeSpan___0__" data-uid="NationalInstruments.Core.PlatformDispatcherHelpers.PushFrameUntilComplete``1(NationalInstruments.Core.PlatformDispatcher,System.Threading.Tasks.Task{``0},System.Threading.CancellationToken,System.TimeSpan,``0@)">PushFrameUntilComplete&lt;T&gt;(PlatformDispatcher, Task&lt;T&gt;, CancellationToken, TimeSpan, out T)</h4>
+  <div class="markdown level1 summary"><p>Used to synchronously wait on a task without blocking the thread.
+This is risky and is not intended for widespread use. If you need something along these lines,
+discuss your use case with the PF team first</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool PushFrameUntilComplete&lt;T&gt;(this PlatformDispatcher dispatcher, Task&lt;T&gt; task, CancellationToken token, TimeSpan timeout, out T result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformDispatcher.html">PlatformDispatcher</a></td>
+        <td><span class="parametername">dispatcher</span></td>
+        <td><p>Dispatcher to use for the waiting action</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;T&gt;</td>
+        <td><span class="parametername">task</span></td>
+        <td><p>The task to wait on</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">token</span></td>
+        <td><p>Cancellation token</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>The amount of time in milliseconds to wait</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The result of the task</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>true if the task completed, false if a) the token is cancelled before the task completes or
+b) if an exception occurs that cannot be rethrown.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Return type of the task</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PlatformDispatcherHelpers_PushFrameUntilComplete_" data-uid="NationalInstruments.Core.PlatformDispatcherHelpers.PushFrameUntilComplete*"></a>
+  <h4 id="NationalInstruments_Core_PlatformDispatcherHelpers_PushFrameUntilComplete__1_NationalInstruments_Core_PlatformDispatcher_System_Threading_Tasks_Task___0__System_Threading_CancellationToken_System_TimeSpan_System_TimeSpan_NationalInstruments_Core_PushFrameFlags___0__" data-uid="NationalInstruments.Core.PlatformDispatcherHelpers.PushFrameUntilComplete``1(NationalInstruments.Core.PlatformDispatcher,System.Threading.Tasks.Task{``0},System.Threading.CancellationToken,System.TimeSpan,System.TimeSpan,NationalInstruments.Core.PushFrameFlags,``0@)">PushFrameUntilComplete&lt;T&gt;(PlatformDispatcher, Task&lt;T&gt;, CancellationToken, TimeSpan, TimeSpan, PushFrameFlags, out T)</h4>
+  <div class="markdown level1 summary"><p>Used to synchronously wait on a task without blocking the thread.
+This is risky and is not intended for widespread use. If you need something along these lines,
+discuss your use case with the PF team first</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool PushFrameUntilComplete&lt;T&gt;(this PlatformDispatcher dispatcher, Task&lt;T&gt; task, CancellationToken token, TimeSpan timeout, TimeSpan blockingTimeout, PushFrameFlags flags, out T result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformDispatcher.html">PlatformDispatcher</a></td>
+        <td><span class="parametername">dispatcher</span></td>
+        <td><p>Dispatcher to use for the waiting action</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;T&gt;</td>
+        <td><span class="parametername">task</span></td>
+        <td><p>The task to wait on</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">token</span></td>
+        <td><p>Cancellation token</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>The amount of time in milliseconds to wait</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td><span class="parametername">blockingTimeout</span></td>
+        <td><p>Amount to wait on a preliminary blocking wait, before giving up and entering the more expensive non-blocking wait</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PushFrameFlags.html">PushFrameFlags</a></td>
+        <td><span class="parametername">flags</span></td>
+        <td><p>Options for the call</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The result of the task</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if the task completed, false if a) the token is cancelled before the task completes,
+b) if the task does not complete before the timeout, or c) if an exception occurs that cannot be rethrown.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Return type of the task</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

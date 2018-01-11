@@ -1,0 +1,1949 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class XamlGenerationHelper
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class XamlGenerationHelper
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper">
+  
+  
+  <h1 id="NationalInstruments_SourceModel_XamlGenerationHelper" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper" class="text-break">Class XamlGenerationHelper
+  </h1>
+  <div class="markdown level0 summary"><p>Base class for helper objects that generate XAML for UIModels. Includes helper methods and a generic XAML-generating algorithm.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">XamlGenerationHelper</span></div>
+      <div class="level2"><a class="xref" href="NationalInstruments.SourceModel.CanvasModel.CanvasXamlHelper.html">CanvasModel.CanvasXamlHelper</a></div>
+      <div class="level2"><a class="xref" href="NationalInstruments.SourceModel.GridModel.GridXamlHelper.html">GridModel.GridXamlHelper</a></div>
+      <div class="level2"><a class="xref" href="NationalInstruments.SourceModel.ShapeModel.ShapeXamlHelper.html">ShapeModel.ShapeXamlHelper</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.SourceModel.html">NationalInstruments.SourceModel</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_SourceModel_XamlGenerationHelper_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[AllowThisNonLocalizedLiteral(&quot;clr-namespace:NationalInstruments.PanelRuntime;assembly=NationalInstruments.LabVIEW.FrontPanelRuntime&quot;, Justification = &quot;Namespace name.&quot;)]
+public abstract class XamlGenerationHelper</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="NationalInstruments_SourceModel_XamlGenerationHelper_CoreControlsNamespace" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.CoreControlsNamespace">CoreControlsNamespace</h4>
+  <div class="markdown level1 summary"><p>Namespace of our Core controls (Core Assembly)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string CoreControlsNamespace = &quot;clr-namespace:NationalInstruments.Controls;assembly=NationalInstruments.Core&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_SourceModel_XamlGenerationHelper_DefaultHelperFactory" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.DefaultHelperFactory">DefaultHelperFactory</h4>
+  <div class="markdown level1 summary"><p>A default implementation for the <a class="xref" href="NationalInstruments.SourceModel.XamlHelperFactory.html">XamlHelperFactory</a> delegate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly XamlHelperFactory DefaultHelperFactory</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.XamlHelperFactory.html">XamlHelperFactory</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_SourceModel_XamlGenerationHelper_FPRuntimeNamespace" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.FPRuntimeNamespace">FPRuntimeNamespace</h4>
+  <div class="markdown level1 summary"><p>The XML Namespace nmae of the Front Panel Runtime assembly
+TODO Cifra - This should not be hard coded here, we need a way to make the parent control the XAML names and not assume any kind of canvas</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string FPRuntimeNamespace = &quot;clr-namespace:NationalInstruments.PanelRuntime;assembly=NationalInstruments.LabVIEW.FrontPanelRuntime&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_SourceModel_XamlGenerationHelper_WpfNamespace" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.WpfNamespace">WpfNamespace</h4>
+  <div class="markdown level1 summary"><p>Namespace of standard WPF elements</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string WpfNamespace = &quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_SourceModel_XamlGenerationHelper_XamlNamespace" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.XamlNamespace">XamlNamespace</h4>
+  <div class="markdown level1 summary"><p>Namespace of standard XAML elements</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string XamlNamespace = &quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_SourceModel_XamlGenerationHelper_XmlNamespace" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.XmlNamespace">XmlNamespace</h4>
+  <div class="markdown level1 summary"><p>Namespace for standard XML attributes, et. al.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string XmlNamespace = &quot;http://www.w3.org/XML/1998/namespace&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_XamlGenerationHelper_ControlType_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.ControlType*"></a>
+  <h4 id="NationalInstruments_SourceModel_XamlGenerationHelper_ControlType" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.ControlType">ControlType</h4>
+  <div class="markdown level1 summary"><p>The .NET type of the view which we will generate XAML for.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract Type ControlType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_XamlGenerationHelper_HasSkins_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.HasSkins*"></a>
+  <h4 id="NationalInstruments_SourceModel_XamlGenerationHelper_HasSkins" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.HasSkins">HasSkins</h4>
+  <div class="markdown level1 summary"><p>Whether or not the view we&apos;re generating XAML for can be skinned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool HasSkins { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_XamlGenerationHelper_AddFontAttributesToXaml_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.AddFontAttributesToXaml*"></a>
+  <h4 id="NationalInstruments_SourceModel_XamlGenerationHelper_AddFontAttributesToXaml_NationalInstruments_SourceModel_TypelessXamlElement_NationalInstruments_Core_SMFont_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.AddFontAttributesToXaml(NationalInstruments.SourceModel.TypelessXamlElement,NationalInstruments.Core.SMFont)">AddFontAttributesToXaml(TypelessXamlElement, SMFont)</h4>
+  <div class="markdown level1 summary"><p>Add the <see cref="!:font"></see> attributes to the <see cref="!:elementXaml"></see>. The <see cref="!:font"></see> attributes include FontFamily, FontSize, FontStyle and FontWeight.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddFontAttributesToXaml(TypelessXamlElement elementXaml, SMFont font)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TypelessXamlElement.html">TypelessXamlElement</a></td>
+        <td><span class="parametername">elementXaml</span></td>
+        <td><p>the xaml which the font attributes are added to</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.SMFont.html">SMFont</a></td>
+        <td><span class="parametername">font</span></td>
+        <td><p>font to add</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_XamlGenerationHelper_AttributeName_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.AttributeName*"></a>
+  <h4 id="NationalInstruments_SourceModel_XamlGenerationHelper_AttributeName_NationalInstruments_SourceModel_UIModel_NationalInstruments_DynamicProperties_PropertySymbol_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.AttributeName(NationalInstruments.SourceModel.UIModel,NationalInstruments.DynamicProperties.PropertySymbol)">AttributeName(UIModel, PropertySymbol)</h4>
+  <div class="markdown level1 summary"><p>The default implementation of VisitProperty uses this method to determine the XAML attribute for a particular PropertySymbol. By default, only Left, Top, Width, and Height are
+supported; derived classes can override this to map attributes for models that they care about. Returning null from this method means writing a particular PropertySymbol
+as a XAML attribute is not supported.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual NameWithNamespace AttributeName(UIModel model, PropertySymbol propertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.UIModel.html">UIModel</a></td>
+        <td><span class="parametername">model</span></td>
+        <td><p>The model element we are getting the property for</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.DynamicProperties.PropertySymbol.html">PropertySymbol</a></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>The model property symbol that we are mapping into a control/XAML name.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.NameWithNamespace.html">NameWithNamespace</a></td>
+        <td><p>A NameWithNamespace representing a XAML attribute name valid for the given PropertySymbol, or null if the PropertySymbol cannot be written as an attribute.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_XamlGenerationHelper_CreateAncestorDataBindingExtension_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.CreateAncestorDataBindingExtension*"></a>
+  <h4 id="NationalInstruments_SourceModel_XamlGenerationHelper_CreateAncestorDataBindingExtension_System_String_System_Type_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.CreateAncestorDataBindingExtension(System.String,System.Type)">CreateAncestorDataBindingExtension(String, Type)</h4>
+  <div class="markdown level1 summary"><p>Creates a markup extension object representing a WPF data binding to a particular property path on the first ancestor of a given type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MarkupExtension CreateAncestorDataBindingExtension(string propertyPath, Type ancestorType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">propertyPath</span></td>
+        <td><p>The property path used in the binding.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">ancestorType</span></td>
+        <td><p>The ancestory type to be used as the source of the binding.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.MarkupExtension.html">MarkupExtension</a></td>
+        <td><p>A markup extension object representing the binding.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_XamlGenerationHelper_CreateDataBindingExtension_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.CreateDataBindingExtension*"></a>
+  <h4 id="NationalInstruments_SourceModel_XamlGenerationHelper_CreateDataBindingExtension_System_String_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.CreateDataBindingExtension(System.String)">CreateDataBindingExtension(String)</h4>
+  <div class="markdown level1 summary"><p>Creates a markup extension object representing a WPF data binding to a particular property path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MarkupExtension CreateDataBindingExtension(string propertyPath)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">propertyPath</span></td>
+        <td><p>The property path used in the binding.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.MarkupExtension.html">MarkupExtension</a></td>
+        <td><p>A markup extension object representing the binding.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_XamlGenerationHelper_CreateElementNameBindingElement_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.CreateElementNameBindingElement*"></a>
+  <h4 id="NationalInstruments_SourceModel_XamlGenerationHelper_CreateElementNameBindingElement_NationalInstruments_SourceModel_UIModel_System_String_System_String_System_Boolean_NationalInstruments_SourceModel_XamlGenerationContext_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.CreateElementNameBindingElement(NationalInstruments.SourceModel.UIModel,System.String,System.String,System.Boolean,NationalInstruments.SourceModel.XamlGenerationContext)">CreateElementNameBindingElement(UIModel, String, String, Boolean, XamlGenerationContext)</h4>
+  <div class="markdown level1 summary"><p>Creates a Binding element to the given property on a given model.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected static TypelessXamlElement CreateElementNameBindingElement(UIModel sourceModel, string property, string propertyNamespace, bool isAttached, XamlGenerationContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.UIModel.html">UIModel</a></td>
+        <td><span class="parametername">sourceModel</span></td>
+        <td><p>The model to use in the binding.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">property</span></td>
+        <td><p>The property to bind.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">propertyNamespace</span></td>
+        <td><p>The namespace for the property.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">isAttached</span></td>
+        <td><p>Flag to determine if the property to bind to is an attached property or not.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.XamlGenerationContext.html">XamlGenerationContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The generation context.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TypelessXamlElement.html">TypelessXamlElement</a></td>
+        <td><p>The TypelessXamlElement that represents the binding.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_XamlGenerationHelper_CreateElementNameBindingExpression_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.CreateElementNameBindingExpression*"></a>
+  <h4 id="NationalInstruments_SourceModel_XamlGenerationHelper_CreateElementNameBindingExpression_NationalInstruments_SourceModel_UIModel_System_String_System_String_System_Boolean_NationalInstruments_SourceModel_XamlGenerationContext_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.CreateElementNameBindingExpression(NationalInstruments.SourceModel.UIModel,System.String,System.String,System.Boolean,NationalInstruments.SourceModel.XamlGenerationContext)">CreateElementNameBindingExpression(UIModel, String, String, Boolean, XamlGenerationContext)</h4>
+  <div class="markdown level1 summary"><p>Creates an ElementName binding expression to the given property on a given model.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected static MarkupExtension CreateElementNameBindingExpression(UIModel element, string property, string propertyNamespace, bool isAttached, XamlGenerationContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.UIModel.html">UIModel</a></td>
+        <td><span class="parametername">element</span></td>
+        <td><p>The model to use as Element in the binding.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">property</span></td>
+        <td><p>The property to bind.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">propertyNamespace</span></td>
+        <td><p>The namespace for the property.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">isAttached</span></td>
+        <td><p>Flag to determine if the property to bind to is an attached property or not.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.XamlGenerationContext.html">XamlGenerationContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The generation context.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.MarkupExtension.html">MarkupExtension</a></td>
+        <td><p>The MarkupExtension expression that represents the binding.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_XamlGenerationHelper_CreateLabelDataTemplate_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.CreateLabelDataTemplate*"></a>
+  <h4 id="NationalInstruments_SourceModel_XamlGenerationHelper_CreateLabelDataTemplate_NationalInstruments_SourceModel_UIModel_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.CreateLabelDataTemplate(NationalInstruments.SourceModel.UIModel)">CreateLabelDataTemplate(UIModel)</h4>
+  <div class="markdown level1 summary"><p>Create a xaml DataTemplate with font for visualizing the label.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected static TypelessXamlElement CreateLabelDataTemplate(UIModel forModel)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.UIModel.html">UIModel</a></td>
+        <td><span class="parametername">forModel</span></td>
+        <td><p>The source model which contains the <a class="xref" href="../core/NationalInstruments.Core.SMFont.html">SMFont</a> information</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TypelessXamlElement.html">TypelessXamlElement</a></td>
+        <td><p>A <a class="xref" href="NationalInstruments.SourceModel.TypelessXamlElement.html">TypelessXamlElement</a> that represents a <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.datatemplate">DataTemplate</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_XamlGenerationHelper_CreateLocalizedStringExtension_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.CreateLocalizedStringExtension*"></a>
+  <h4 id="NationalInstruments_SourceModel_XamlGenerationHelper_CreateLocalizedStringExtension_System_String_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.CreateLocalizedStringExtension(System.String)">CreateLocalizedStringExtension(String)</h4>
+  <div class="markdown level1 summary"><p>Creates a markup extension object for LocalizedString, which will display a localized string value from a LocalizedStringsDictionary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MarkupExtension CreateLocalizedStringExtension(string key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The key to the localized strings dictionary as well as the static fallback (default) value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.MarkupExtension.html">MarkupExtension</a></td>
+        <td><p>A markup extension object representing the Localizer.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_XamlGenerationHelper_CreateMultiBindingElement_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.CreateMultiBindingElement*"></a>
+  <h4 id="NationalInstruments_SourceModel_XamlGenerationHelper_CreateMultiBindingElement_System_Type_NationalInstruments_SourceModel_XamlGenerationContext_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.CreateMultiBindingElement(System.Type,NationalInstruments.SourceModel.XamlGenerationContext)">CreateMultiBindingElement(Type, XamlGenerationContext)</h4>
+  <div class="markdown level1 summary"><p>Creates a TypelessXamlElement for a Multi-Binding using the specified converter (which will be added to the resources)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected static TypelessXamlElement CreateMultiBindingElement(Type converterType, XamlGenerationContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">converterType</span></td>
+        <td><p>The converter required for the MultiBinding (must be an implmentation of IMultiValueConverter)</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.XamlGenerationContext.html">XamlGenerationContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The XAML-generation context</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TypelessXamlElement.html">TypelessXamlElement</a></td>
+        <td><p>The TypelessXamlElement that represents the MultiBinding</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_XamlGenerationHelper_CreateStaticExtension_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.CreateStaticExtension*"></a>
+  <h4 id="NationalInstruments_SourceModel_XamlGenerationHelper_CreateStaticExtension_System_String_System_String_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.CreateStaticExtension(System.String,System.String)">CreateStaticExtension(String, String)</h4>
+  <div class="markdown level1 summary"><p>Creates a markup extension object representing any static-by-value code entity that is defined in a CLS-compliant way.
+The static property that is referenced can be used to provide the value of a property in XAML.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MarkupExtension CreateStaticExtension(string prefixNamespace, string staticValueMemberExpression)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">prefixNamespace</span></td>
+        <td><p>A prefix that refers to a mapped, non-default XAML namespace.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">staticValueMemberExpression</span></td>
+        <td><p>The name of static value member (a constant, a static property, a field, or an enumeration value).
+This should follow the pattern of &quot;typeName.staticMemberName&quot;.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.MarkupExtension.html">MarkupExtension</a></td>
+        <td><p>A markup extension object representing the static property.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_XamlGenerationHelper_CreateTypelessElementForType_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.CreateTypelessElementForType*"></a>
+  <h4 id="NationalInstruments_SourceModel_XamlGenerationHelper_CreateTypelessElementForType_System_Type_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.CreateTypelessElementForType(System.Type)">CreateTypelessElementForType(Type)</h4>
+  <div class="markdown level1 summary"><p>Creates an empty TypelessXamlElement representing an object of a particular .NET type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TypelessXamlElement CreateTypelessElementForType(Type type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The .NET type to represent.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TypelessXamlElement.html">TypelessXamlElement</a></td>
+        <td><p>An empty TypelessXamlElement with the appropriate type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_XamlGenerationHelper_DefaultAttributeName_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.DefaultAttributeName*"></a>
+  <h4 id="NationalInstruments_SourceModel_XamlGenerationHelper_DefaultAttributeName_NationalInstruments_DynamicProperties_PropertySymbol_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.DefaultAttributeName(NationalInstruments.DynamicProperties.PropertySymbol)">DefaultAttributeName(PropertySymbol)</h4>
+  <div class="markdown level1 summary"><p>Returns a default attribute NameWithNamespace for a PropertySymbol, consisting of the symbol&apos;s name and an empty namespace.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected NameWithNamespace DefaultAttributeName(PropertySymbol propertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.DynamicProperties.PropertySymbol.html">PropertySymbol</a></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>The model property symbol to translate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.NameWithNamespace.html">NameWithNamespace</a></td>
+        <td><p>A translated NameWithNamespace.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_XamlGenerationHelper_GenerateAdditionalData_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.GenerateAdditionalData*"></a>
+  <h4 id="NationalInstruments_SourceModel_XamlGenerationHelper_GenerateAdditionalData_NationalInstruments_SourceModel_UIModel_NationalInstruments_SourceModel_TypelessXamlElement_NationalInstruments_SourceModel_XamlGenerationContext_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.GenerateAdditionalData(NationalInstruments.SourceModel.UIModel,NationalInstruments.SourceModel.TypelessXamlElement,NationalInstruments.SourceModel.XamlGenerationContext)">GenerateAdditionalData(UIModel, TypelessXamlElement, XamlGenerationContext)</h4>
+  <div class="markdown level1 summary"><p>Allows a derived class to generate any additional data into the XAML for its control that was not covered by a call to VisitProperty or VisitComponent.</p>
+<p>Will be called after all calls to VisitProperty and VisitComponent for a particular model.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void GenerateAdditionalData(UIModel model, TypelessXamlElement xaml, XamlGenerationContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.UIModel.html">UIModel</a></td>
+        <td><span class="parametername">model</span></td>
+        <td><p>The UIModel for which we are generating additional data.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TypelessXamlElement.html">TypelessXamlElement</a></td>
+        <td><span class="parametername">xaml</span></td>
+        <td><p>The XAML tree element for the specified model, to which any additional XAML data should be added.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.XamlGenerationContext.html">XamlGenerationContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_XamlGenerationHelper_GenerateConverterOnBinding_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.GenerateConverterOnBinding*"></a>
+  <h4 id="NationalInstruments_SourceModel_XamlGenerationHelper_GenerateConverterOnBinding_NationalInstruments_SourceModel_MarkupExtension_System_String_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.GenerateConverterOnBinding(NationalInstruments.SourceModel.MarkupExtension,System.String)">GenerateConverterOnBinding(MarkupExtension, String)</h4>
+  <div class="markdown level1 summary"><p>Creates and adds a given converter to a given binding.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected static void GenerateConverterOnBinding(MarkupExtension binding, string converterResourceKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.MarkupExtension.html">MarkupExtension</a></td>
+        <td><span class="parametername">binding</span></td>
+        <td><p>The binding to add the converter on.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">converterResourceKey</span></td>
+        <td><p>The converter key in the resource.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_XamlGenerationHelper_GenerateConverterOnBinding_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.GenerateConverterOnBinding*"></a>
+  <h4 id="NationalInstruments_SourceModel_XamlGenerationHelper_GenerateConverterOnBinding_NationalInstruments_SourceModel_TypelessXamlElement_System_String_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.GenerateConverterOnBinding(NationalInstruments.SourceModel.TypelessXamlElement,System.String)">GenerateConverterOnBinding(TypelessXamlElement, String)</h4>
+  <div class="markdown level1 summary"><p>Creates and adds a given converter to a given binding.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void GenerateConverterOnBinding(TypelessXamlElement binding, string converterResourceName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TypelessXamlElement.html">TypelessXamlElement</a></td>
+        <td><span class="parametername">binding</span></td>
+        <td><p>The binding to add the converter on.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">converterResourceName</span></td>
+        <td><p>The converter resourceName to add.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_XamlGenerationHelper_GenerateImageForModel_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.GenerateImageForModel*"></a>
+  <h4 id="NationalInstruments_SourceModel_XamlGenerationHelper_GenerateImageForModel_NationalInstruments_SourceModel_UIModel_System_Single_System_Single_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.GenerateImageForModel(NationalInstruments.SourceModel.UIModel,System.Single,System.Single)">GenerateImageForModel(UIModel, Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Create a PlatformImage for a given model, by first converting to XAML and then rendering the result.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PlatformImage GenerateImageForModel(UIModel model, float width, float height)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.UIModel.html">UIModel</a></td>
+        <td><span class="parametername">model</span></td>
+        <td><p>The UIModel to create a PlatformImage for.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>The desired width of the image.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">height</span></td>
+        <td><p>The desired height of the image.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformImage.html">PlatformImage</a></td>
+        <td><p>A PlatformImage rendered from the view of the given control model.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_XamlGenerationHelper_GenerateRelativeSourceSelfOnBinding_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.GenerateRelativeSourceSelfOnBinding*"></a>
+  <h4 id="NationalInstruments_SourceModel_XamlGenerationHelper_GenerateRelativeSourceSelfOnBinding_NationalInstruments_SourceModel_TypelessXamlElement_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.GenerateRelativeSourceSelfOnBinding(NationalInstruments.SourceModel.TypelessXamlElement)">GenerateRelativeSourceSelfOnBinding(TypelessXamlElement)</h4>
+  <div class="markdown level1 summary"><p>Adds a RelativeSourceSelf property to a given binding. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void GenerateRelativeSourceSelfOnBinding(TypelessXamlElement binding)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TypelessXamlElement.html">TypelessXamlElement</a></td>
+        <td><span class="parametername">binding</span></td>
+        <td><p>The binding to add a RelativeSource.Self value to.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_XamlGenerationHelper_GenerateTextDecorationsToXaml_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.GenerateTextDecorationsToXaml*"></a>
+  <h4 id="NationalInstruments_SourceModel_XamlGenerationHelper_GenerateTextDecorationsToXaml_NationalInstruments_SourceModel_TypelessXamlElement_NationalInstruments_Core_SMFont_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.GenerateTextDecorationsToXaml(NationalInstruments.SourceModel.TypelessXamlElement,NationalInstruments.Core.SMFont)">GenerateTextDecorationsToXaml(TypelessXamlElement, SMFont)</h4>
+  <div class="markdown level1 summary"><p>Generate Text Decorations (like underline, strikethrough) to xaml</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void GenerateTextDecorationsToXaml(TypelessXamlElement xaml, SMFont font)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TypelessXamlElement.html">TypelessXamlElement</a></td>
+        <td><span class="parametername">xaml</span></td>
+        <td><p>the xaml which the text decorations are added to</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.SMFont.html">SMFont</a></td>
+        <td><span class="parametername">font</span></td>
+        <td><p>font that contains text decoration info</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_XamlGenerationHelper_GenerateVisualForModel_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.GenerateVisualForModel*"></a>
+  <h4 id="NationalInstruments_SourceModel_XamlGenerationHelper_GenerateVisualForModel_NationalInstruments_SourceModel_UIModel_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.GenerateVisualForModel(NationalInstruments.SourceModel.UIModel)">GenerateVisualForModel(UIModel)</h4>
+  <div class="markdown level1 summary"><p>Create a PlatformVisual for a given model, by first converting to XAML and then rendering the result.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PlatformVisual GenerateVisualForModel(UIModel model)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.UIModel.html">UIModel</a></td>
+        <td><span class="parametername">model</span></td>
+        <td><p>The UIModel to create a PlatformVisual for.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><p>A PlatformVisual created from the view of the given control model.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_XamlGenerationHelper_GenerateXamlForModel_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.GenerateXamlForModel*"></a>
+  <h4 id="NationalInstruments_SourceModel_XamlGenerationHelper_GenerateXamlForModel_NationalInstruments_SourceModel_UIModel_NationalInstruments_SourceModel_XamlGenerationContext_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.GenerateXamlForModel(NationalInstruments.SourceModel.UIModel,NationalInstruments.SourceModel.XamlGenerationContext)">GenerateXamlForModel(UIModel, XamlGenerationContext)</h4>
+  <div class="markdown level1 summary"><p>General algorithm for generating a complete XAML tree element for a UIModel. Will generally recurse through helper methods like VisitProperty and VisitComponent.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected static TypelessXamlElement GenerateXamlForModel(UIModel model, XamlGenerationContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.UIModel.html">UIModel</a></td>
+        <td><span class="parametername">model</span></td>
+        <td><p>The UIModel for which we are generating XAML.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.XamlGenerationContext.html">XamlGenerationContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The XAML generation context.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TypelessXamlElement.html">TypelessXamlElement</a></td>
+        <td><p>A TypelessXamlElement that contains a representation of all property data and components of the given UIModel.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_XamlGenerationHelper_GenerateXamlForModelInXamlElement_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.GenerateXamlForModelInXamlElement*"></a>
+  <h4 id="NationalInstruments_SourceModel_XamlGenerationHelper_GenerateXamlForModelInXamlElement_NationalInstruments_SourceModel_TypelessXamlElement_NationalInstruments_SourceModel_UIModel_NationalInstruments_SourceModel_XamlGenerationContext_NationalInstruments_SourceModel_XamlCreatedForElement_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.GenerateXamlForModelInXamlElement(NationalInstruments.SourceModel.TypelessXamlElement,NationalInstruments.SourceModel.UIModel,NationalInstruments.SourceModel.XamlGenerationContext,NationalInstruments.SourceModel.XamlCreatedForElement)">GenerateXamlForModelInXamlElement(TypelessXamlElement, UIModel, XamlGenerationContext, XamlCreatedForElement)</h4>
+  <div class="markdown level1 summary"><p>Generates a complete XAML tree element for a UIModel within the given root element. Will generally recurse through helper methods like VisitProperty and VisitComponent.
+This is useful for things like DataTemplate generation (provides full resource support).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TypelessXamlElement GenerateXamlForModelInXamlElement(TypelessXamlElement rootXamlElement, UIModel model, XamlGenerationContext context, XamlCreatedForElement xamlCreatedForElement)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TypelessXamlElement.html">TypelessXamlElement</a></td>
+        <td><span class="parametername">rootXamlElement</span></td>
+        <td><p>The root xaml element</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.UIModel.html">UIModel</a></td>
+        <td><span class="parametername">model</span></td>
+        <td><p>The UIModel for which we are generating XAML.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.XamlGenerationContext.html">XamlGenerationContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The XAML generation context.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.XamlCreatedForElement.html">XamlCreatedForElement</a></td>
+        <td><span class="parametername">xamlCreatedForElement</span></td>
+        <td><p>Called when the xaml is generated for the model</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TypelessXamlElement.html">TypelessXamlElement</a></td>
+        <td><p>A TypelessXamlElement that contains a representation of all property data and components of the given UIModel within the given root.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_XamlGenerationHelper_GenerateXamlForRootModel_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.GenerateXamlForRootModel*"></a>
+  <h4 id="NationalInstruments_SourceModel_XamlGenerationHelper_GenerateXamlForRootModel_NationalInstruments_SourceModel_UIModel_NationalInstruments_SourceModel_XamlGenerationContext_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.GenerateXamlForRootModel(NationalInstruments.SourceModel.UIModel,NationalInstruments.SourceModel.XamlGenerationContext)">GenerateXamlForRootModel(UIModel, XamlGenerationContext)</h4>
+  <div class="markdown level1 summary"><p>General algorithm for generating a complete XAML tree element for a UIModel. Will generally recurse through helper methods like VisitProperty and VisitComponent.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TypelessXamlElement GenerateXamlForRootModel(UIModel model, XamlGenerationContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.UIModel.html">UIModel</a></td>
+        <td><span class="parametername">model</span></td>
+        <td><p>The UIModel for which we are generating XAML.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.XamlGenerationContext.html">XamlGenerationContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The XAML generation context.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TypelessXamlElement.html">TypelessXamlElement</a></td>
+        <td><p>A TypelessXamlElement that contains a representation of all property data and components of the given UIModel.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_XamlGenerationHelper_GenerateXamlForRootType_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.GenerateXamlForRootType*"></a>
+  <h4 id="NationalInstruments_SourceModel_XamlGenerationHelper_GenerateXamlForRootType_System_Type_System_Collections_Generic_IEnumerable_NationalInstruments_SourceModel_UIModel__NationalInstruments_SourceModel_XamlGenerationContext_NationalInstruments_SourceModel_XamlPopulator_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.GenerateXamlForRootType(System.Type,System.Collections.Generic.IEnumerable{NationalInstruments.SourceModel.UIModel},NationalInstruments.SourceModel.XamlGenerationContext,NationalInstruments.SourceModel.XamlPopulator)">GenerateXamlForRootType(Type, IEnumerable&lt;UIModel&gt;, XamlGenerationContext, XamlPopulator)</h4>
+  <div class="markdown level1 summary"><p>General algorithm for generating a root element for specified type of control. It helps to re-organize the hierarchy instead of UIModel hierarchy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TypelessXamlElement GenerateXamlForRootType(Type type, IEnumerable&lt;UIModel&gt; models, XamlGenerationContext context, XamlPopulator xamlPopulator)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The element control type will be generate by this function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.UIModel.html">UIModel</a>&gt;</td>
+        <td><span class="parametername">models</span></td>
+        <td><p>The UIModels will be generate by this function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.XamlGenerationContext.html">XamlGenerationContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The XAML generation context.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.XamlPopulator.html">XamlPopulator</a></td>
+        <td><span class="parametername">xamlPopulator</span></td>
+        <td><p>Fix up the xaml hierarchy callback.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TypelessXamlElement.html">TypelessXamlElement</a></td>
+        <td><p>A TypelessXamlElement that contains a fixed xaml element.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_XamlGenerationHelper_GetAttachedPropertyNameWithNamespace_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.GetAttachedPropertyNameWithNamespace*"></a>
+  <h4 id="NationalInstruments_SourceModel_XamlGenerationHelper_GetAttachedPropertyNameWithNamespace_System_Windows_DependencyProperty_System_String_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.GetAttachedPropertyNameWithNamespace(System.Windows.DependencyProperty,System.String)">GetAttachedPropertyNameWithNamespace(DependencyProperty, String)</h4>
+  <div class="markdown level1 summary"><p>Gets the NameWithNamespace of a given attached property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static NameWithNamespace GetAttachedPropertyNameWithNamespace(DependencyProperty attachedProperty, string namespace)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.dependencyproperty">DependencyProperty</a></td>
+        <td><span class="parametername">attachedProperty</span></td>
+        <td><p>The attached property.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">namespace</span></td>
+        <td><p>The namespace to use.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.NameWithNamespace.html">NameWithNamespace</a></td>
+        <td><p>Attached property NameWithNamespace</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_XamlGenerationHelper_GetLocalizablePropertyXamlAttributeValue_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.GetLocalizablePropertyXamlAttributeValue*"></a>
+  <h4 id="NationalInstruments_SourceModel_XamlGenerationHelper_GetLocalizablePropertyXamlAttributeValue_NationalInstruments_SourceModel_UIModel_NationalInstruments_DynamicProperties_PropertySymbol_System_Object_System_Object_NationalInstruments_SourceModel_XamlGenerationContext_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.GetLocalizablePropertyXamlAttributeValue(NationalInstruments.SourceModel.UIModel,NationalInstruments.DynamicProperties.PropertySymbol,System.Object,System.Object,NationalInstruments.SourceModel.XamlGenerationContext)">GetLocalizablePropertyXamlAttributeValue(UIModel, PropertySymbol, Object, Object, XamlGenerationContext)</h4>
+  <div class="markdown level1 summary"><p>Generates an appropriate value to use for a localizable attribute in our <a class="xref" href="NationalInstruments.SourceModel.TypelessXamlElement.html">TypelessXamlElement</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object GetLocalizablePropertyXamlAttributeValue(UIModel model, PropertySymbol symbol, object value, object alreadyLocalizedValue, XamlGenerationContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.UIModel.html">UIModel</a></td>
+        <td><span class="parametername">model</span></td>
+        <td><p>The UIModel containing the property value.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.DynamicProperties.PropertySymbol.html">PropertySymbol</a></td>
+        <td><span class="parametername">symbol</span></td>
+        <td><p>The symbol representing the property in the model.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The current value in the model to use for the XAML attribute</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">alreadyLocalizedValue</span></td>
+        <td><p>A &apos;pre-localized&apos; value to use</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.XamlGenerationContext.html">XamlGenerationContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The generator context.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><p>The value to place into AttributePropertyValues.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_XamlGenerationHelper_OnAddingToDataTemplate_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.OnAddingToDataTemplate*"></a>
+  <h4 id="NationalInstruments_SourceModel_XamlGenerationHelper_OnAddingToDataTemplate_NationalInstruments_SourceModel_UIModel_NationalInstruments_SourceModel_TypelessXamlElement_NationalInstruments_SourceModel_XamlGenerationContext_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.OnAddingToDataTemplate(NationalInstruments.SourceModel.UIModel,NationalInstruments.SourceModel.TypelessXamlElement,NationalInstruments.SourceModel.XamlGenerationContext)">OnAddingToDataTemplate(UIModel, TypelessXamlElement, XamlGenerationContext)</h4>
+  <div class="markdown level1 summary"><p>Gives xaml generators the opportunity to perform custom actions when being used in a data template</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void OnAddingToDataTemplate(UIModel model, TypelessXamlElement xaml, XamlGenerationContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.UIModel.html">UIModel</a></td>
+        <td><span class="parametername">model</span></td>
+        <td><p>The model</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TypelessXamlElement.html">TypelessXamlElement</a></td>
+        <td><span class="parametername">xaml</span></td>
+        <td><p>The XAML tree for the data template</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.XamlGenerationContext.html">XamlGenerationContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_SourceModel_XamlGenerationHelper_OnAddingToDataTemplate_NationalInstruments_SourceModel_UIModel_NationalInstruments_SourceModel_TypelessXamlElement_NationalInstruments_SourceModel_XamlGenerationContext__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This is still a bit of a hack.  It might be better to know that we are generating for a data template,
+instead of cleaning up after the fact.  It would also be better if this wasn&apos;t public.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_SourceModel_XamlGenerationHelper_ShouldGenerateModel_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.ShouldGenerateModel*"></a>
+  <h4 id="NationalInstruments_SourceModel_XamlGenerationHelper_ShouldGenerateModel_NationalInstruments_SourceModel_UIModel_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.ShouldGenerateModel(NationalInstruments.SourceModel.UIModel)">ShouldGenerateModel(UIModel)</h4>
+  <div class="markdown level1 summary"><p>Determines if the model should be generated as part of the XAML
+For example we may not generate objects that are currently hidden</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool ShouldGenerateModel(UIModel component)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.UIModel.html">UIModel</a></td>
+        <td><span class="parametername">component</span></td>
+        <td><p>The component of interest</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>true to generate the component, false to skip it</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_XamlGenerationHelper_ShouldGenerateModel_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.ShouldGenerateModel*"></a>
+  <h4 id="NationalInstruments_SourceModel_XamlGenerationHelper_ShouldGenerateModel_NationalInstruments_SourceModel_UIModel_NationalInstruments_SourceModel_XamlGenerationContext_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.ShouldGenerateModel(NationalInstruments.SourceModel.UIModel,NationalInstruments.SourceModel.XamlGenerationContext)">ShouldGenerateModel(UIModel, XamlGenerationContext)</h4>
+  <div class="markdown level1 summary"><p>Determines if the model should be generated as part of the XAML
+For example we may not generate objects that are currently hidden</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ShouldGenerateModel(UIModel component, XamlGenerationContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.UIModel.html">UIModel</a></td>
+        <td><span class="parametername">component</span></td>
+        <td><p>The component of interest</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.XamlGenerationContext.html">XamlGenerationContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The current XAML generation context</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>true to generate the component, false to skip it</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_XamlGenerationHelper_VisitComponent_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.VisitComponent*"></a>
+  <h4 id="NationalInstruments_SourceModel_XamlGenerationHelper_VisitComponent_NationalInstruments_SourceModel_UIModel_NationalInstruments_SourceModel_UIModel_NationalInstruments_SourceModel_TypelessXamlElement_NationalInstruments_SourceModel_XamlGenerationContext_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.VisitComponent(NationalInstruments.SourceModel.UIModel,NationalInstruments.SourceModel.UIModel,NationalInstruments.SourceModel.TypelessXamlElement,NationalInstruments.SourceModel.XamlGenerationContext)">VisitComponent(UIModel, UIModel, TypelessXamlElement, XamlGenerationContext)</h4>
+  <div class="markdown level1 summary"><p>Visit a component of a UIModel in order to represent the component in XAML, usually by recursively invoking a XAML generation helper.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitComponent(UIModel model, UIModel component, TypelessXamlElement xaml, XamlGenerationContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.UIModel.html">UIModel</a></td>
+        <td><span class="parametername">model</span></td>
+        <td><p>The UIModel that owns the component.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.UIModel.html">UIModel</a></td>
+        <td><span class="parametername">component</span></td>
+        <td><p>The component UIModel.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TypelessXamlElement.html">TypelessXamlElement</a></td>
+        <td><span class="parametername">xaml</span></td>
+        <td><p>The XAML tree element representing the owner UIModel, to which XAML for the component should be added as a child.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.XamlGenerationContext.html">XamlGenerationContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_XamlGenerationHelper_VisitProperties_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.VisitProperties*"></a>
+  <h4 id="NationalInstruments_SourceModel_XamlGenerationHelper_VisitProperties_NationalInstruments_SourceModel_UIModel_NationalInstruments_SourceModel_TypelessXamlElement_NationalInstruments_SourceModel_XamlGenerationContext_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.VisitProperties(NationalInstruments.SourceModel.UIModel,NationalInstruments.SourceModel.TypelessXamlElement,NationalInstruments.SourceModel.XamlGenerationContext)">VisitProperties(UIModel, TypelessXamlElement, XamlGenerationContext)</h4>
+  <div class="markdown level1 summary"><p>An opportunity to generate a set of properties holistically, or just enumerate through each and write via VisitProperty</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitProperties(UIModel model, TypelessXamlElement modelXaml, XamlGenerationContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.UIModel.html">UIModel</a></td>
+        <td><span class="parametername">model</span></td>
+        <td><p>The UIModel whose properties we are generating.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TypelessXamlElement.html">TypelessXamlElement</a></td>
+        <td><span class="parametername">modelXaml</span></td>
+        <td><p>The XAML tree element into which we are generating property values.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.XamlGenerationContext.html">XamlGenerationContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_XamlGenerationHelper_VisitProperty_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.VisitProperty*"></a>
+  <h4 id="NationalInstruments_SourceModel_XamlGenerationHelper_VisitProperty_NationalInstruments_SourceModel_UIModel_NationalInstruments_DynamicProperties_PropertySymbol_NationalInstruments_SourceModel_PropertyExpression_NationalInstruments_SourceModel_TypelessXamlElement_NationalInstruments_SourceModel_XamlGenerationContext_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.VisitProperty(NationalInstruments.SourceModel.UIModel,NationalInstruments.DynamicProperties.PropertySymbol,NationalInstruments.SourceModel.PropertyExpression,NationalInstruments.SourceModel.TypelessXamlElement,NationalInstruments.SourceModel.XamlGenerationContext)">VisitProperty(UIModel, PropertySymbol, PropertyExpression, TypelessXamlElement, XamlGenerationContext)</h4>
+  <div class="markdown level1 summary"><p>Visit a property set on a UIModel in order to represent the property value in XAML.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitProperty(UIModel model, PropertySymbol propertyName, PropertyExpression propertyValue, TypelessXamlElement xaml, XamlGenerationContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.UIModel.html">UIModel</a></td>
+        <td><span class="parametername">model</span></td>
+        <td><p>The UIModel containing the property value.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.DynamicProperties.PropertySymbol.html">PropertySymbol</a></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>The symbol representing the property in the model.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.PropertyExpression.html">PropertyExpression</a></td>
+        <td><span class="parametername">propertyValue</span></td>
+        <td><p>An expression representing the property value in the model.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TypelessXamlElement.html">TypelessXamlElement</a></td>
+        <td><span class="parametername">xaml</span></td>
+        <td><p>An object representing the XAML tree element into which to add any new XAML property values.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.XamlGenerationContext.html">XamlGenerationContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_XamlGenerationHelper_VisitUnsetProperty_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.VisitUnsetProperty*"></a>
+  <h4 id="NationalInstruments_SourceModel_XamlGenerationHelper_VisitUnsetProperty_NationalInstruments_SourceModel_UIModel_NationalInstruments_DynamicProperties_PropertySymbol_System_Object_NationalInstruments_SourceModel_TypelessXamlElement_NationalInstruments_SourceModel_XamlGenerationContext_" data-uid="NationalInstruments.SourceModel.XamlGenerationHelper.VisitUnsetProperty(NationalInstruments.SourceModel.UIModel,NationalInstruments.DynamicProperties.PropertySymbol,System.Object,NationalInstruments.SourceModel.TypelessXamlElement,NationalInstruments.SourceModel.XamlGenerationContext)">VisitUnsetProperty(UIModel, PropertySymbol, Object, TypelessXamlElement, XamlGenerationContext)</h4>
+  <div class="markdown level1 summary"><p>Generate a property value that is not set (i.e., has a default value) in the given model.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void VisitUnsetProperty(UIModel model, PropertySymbol symbol, object value, TypelessXamlElement xaml, XamlGenerationContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.UIModel.html">UIModel</a></td>
+        <td><span class="parametername">model</span></td>
+        <td><p>The model with the default value.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.DynamicProperties.PropertySymbol.html">PropertySymbol</a></td>
+        <td><span class="parametername">symbol</span></td>
+        <td><p>The property with the default value.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value of the property.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TypelessXamlElement.html">TypelessXamlElement</a></td>
+        <td><span class="parametername">xaml</span></td>
+        <td><p>The XAML tree element into which we are generating the value.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.XamlGenerationContext.html">XamlGenerationContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

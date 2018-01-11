@@ -1,0 +1,1268 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class RecursiveTypeBuilderWalker
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class RecursiveTypeBuilderWalker
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker">
+  
+  
+  <h1 id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker" class="text-break">Class RecursiveTypeBuilderWalker
+  </h1>
+  <div class="markdown level0 summary"><p>Provides the functionality to walk an NITypeBuilder. The walk involves visiting the NITypeBuilder and
+all of its properties that have a data type builder that is NITypeBuilder or a sequence of NITypeBuilder. </p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html">BaseNITypeWalker</a></div>
+    <div class="level2"><a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html">RecursiveTypeSafeWalker</a></div>
+    <div class="level3"><span class="xref">RecursiveTypeBuilderWalker</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="NationalInstruments.DataTypes.INITypeVisitor.html">INITypeVisitor</a></div>
+    <div><a class="xref" href="NationalInstruments.DataTypes.INITypeBuilderVisitor.html">INITypeBuilderVisitor</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitUnknown_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.VisitUnknown(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitIncorrect_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.VisitIncorrect(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitBoolean_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.VisitBoolean(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitUnicodeChar_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.VisitUnicodeChar(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitBit_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.VisitBit(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitInt8_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.VisitInt8(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitInt16_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.VisitInt16(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitInt32_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.VisitInt32(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitInt64_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.VisitInt64(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitUInt8_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.VisitUInt8(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitUInt16_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.VisitUInt16(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitUInt32_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.VisitUInt32(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitUInt64_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.VisitUInt64(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitSingle_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.VisitSingle(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitDouble_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.VisitDouble(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitExtended_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.VisitExtended(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitComplexSingle_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.VisitComplexSingle(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitComplexDouble_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.VisitComplexDouble(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitComplexExtended_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.VisitComplexExtended(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitVoid_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.VisitVoid(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitString_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.VisitString(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitPointer_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.VisitPointer(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitVariableArray_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.VisitVariableArray(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitSizedArray_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.VisitSizedArray(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitEnumeration_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.VisitEnumeration(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitField_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.VisitField(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitProperty_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.VisitProperty(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitParameter_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.VisitParameter(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitFunction_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.VisitFunction(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitEvent_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.VisitEvent(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitEnumerationMember_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.VisitEnumerationMember(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitComposite_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.VisitComposite(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitUnion_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.VisitUnion(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitSignedFixedPoint_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.VisitSignedFixedPoint(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitSignedComplexFixedPoint_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.VisitSignedComplexFixedPoint(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitBigFixedPoint_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.VisitBigFixedPoint(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitBigComplexFixedPoint_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.VisitBigComplexFixedPoint(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitUnsignedFixedPoint_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.VisitUnsignedFixedPoint(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitUnsignedComplexFixedPoint_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.VisitUnsignedComplexFixedPoint(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitSizedInt_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.VisitSizedInt(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitBigInt_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.VisitBigInt(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitSizedUInt_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.VisitSizedUInt(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitGeneric_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.VisitGeneric(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitTypedef_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.VisitTypedef(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitAttributed_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.VisitAttributed(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_PreWalk_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.PreWalk(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_PostWalk_NationalInstruments_DataTypes_VisitedNIType_">RecursiveTypeSafeWalker.PostWalk(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_IsRecursiveType_NationalInstruments_DataTypes_NIType_">RecursiveTypeSafeWalker.IsRecursiveType(NIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html#NationalInstruments_DataTypes_RecursiveTypeSafeWalker_IsRecursiveBuilder_NationalInstruments_DataTypes_NITypeBuilder_">RecursiveTypeSafeWalker.IsRecursiveBuilder(NITypeBuilder)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitAttributedTypeProperty_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitAttributedTypeProperty(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitBaseTypeProperty_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitBaseTypeProperty(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitConstraintsProperty_System_Collections_Generic_IReadOnlyCollection_NationalInstruments_DataTypes_NIType__">BaseNITypeWalker.VisitConstraintsProperty(IReadOnlyCollection&lt;NIType&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitDataTypeProperty_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitDataTypeProperty(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitDeclaringTypeProperty_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitDeclaringTypeProperty(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitDereferenceTypeProperty_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitDereferenceTypeProperty(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitGenericParametersProperty_System_Collections_Generic_IReadOnlyCollection_NationalInstruments_DataTypes_NIType__System_Boolean_">BaseNITypeWalker.VisitGenericParametersProperty(IReadOnlyCollection&lt;NIType&gt;, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitGenericTypeDefinitionProperty_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitGenericTypeDefinitionProperty(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitInterfacesProperty_System_Collections_Generic_IReadOnlyCollection_NationalInstruments_DataTypes_NIType__">BaseNITypeWalker.VisitInterfacesProperty(IReadOnlyCollection&lt;NIType&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitMembersProperty_System_Collections_Generic_IReadOnlyCollection_NationalInstruments_DataTypes_NIType__">BaseNITypeWalker.VisitMembersProperty(IReadOnlyCollection&lt;NIType&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitParametersProperty_System_Collections_Generic_IReadOnlyCollection_NationalInstruments_DataTypes_NIType__">BaseNITypeWalker.VisitParametersProperty(IReadOnlyCollection&lt;NIType&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitReturnTypeProperty_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitReturnTypeProperty(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitUnderlyingTypeProperty_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitUnderlyingTypeProperty(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitKindWithNoTypeProperties_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitKindWithNoTypeProperties(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_DispatchToType_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.DispatchToType(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_ShouldStopIteratingOverPropertyItems">BaseNITypeWalker.ShouldStopIteratingOverPropertyItems</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitPropertyItems_System_Collections_Generic_IReadOnlyCollection_NationalInstruments_DataTypes_NIType__">BaseNITypeWalker.VisitPropertyItems(IReadOnlyCollection&lt;NIType&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitAttributeValuesProperty_System_Collections_Generic_IEnumerable_NationalInstruments_DataTypes_AttributeValue__">BaseNITypeWalker.VisitAttributeValuesProperty(IEnumerable&lt;AttributeValue&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.DataTypes.html">NationalInstruments.DataTypes</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.Core.dll</h6>
+  <h5 id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class RecursiveTypeBuilderWalker : RecursiveTypeSafeWalker, INITypeVisitor, INITypeBuilderVisitor</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_DispatchToTypeBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.DispatchToTypeBuilder*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_DispatchToTypeBuilder_NationalInstruments_DataTypes_NITypeBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.DispatchToTypeBuilder(NationalInstruments.DataTypes.NITypeBuilder)">DispatchToTypeBuilder(NITypeBuilder)</h4>
+  <div class="markdown level1 summary"><p>Dispatch to the given typebuilder.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void DispatchToTypeBuilder(NITypeBuilder builder)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.NITypeBuilder.html">NITypeBuilder</a></td>
+        <td><span class="parametername">builder</span></td>
+        <td><p>the builder to dispatch to.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitAttributedBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitAttributedBuilder*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitAttributedBuilder_NationalInstruments_DataTypes_NIAttributedBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitAttributedBuilder(NationalInstruments.DataTypes.NIAttributedBuilder)">VisitAttributedBuilder(NIAttributedBuilder)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a typebuilder of the attributed kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitAttributedBuilder(NIAttributedBuilder attributedBuilder)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.NIAttributedBuilder.html">NIAttributedBuilder</a></td>
+        <td><span class="parametername">attributedBuilder</span></td>
+        <td><p>the typebuilder being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitBaseTypeBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitBaseTypeBuilder*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitBaseTypeBuilder_NationalInstruments_DataTypes_NIAttributedBaseBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitBaseTypeBuilder(NationalInstruments.DataTypes.NIAttributedBaseBuilder)">VisitBaseTypeBuilder(NIAttributedBaseBuilder)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a typebuilder of the basetype kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitBaseTypeBuilder(NIAttributedBaseBuilder builder)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.NIAttributedBaseBuilder.html">NIAttributedBaseBuilder</a></td>
+        <td><span class="parametername">builder</span></td>
+        <td><p>the typebuilder being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitBuilders_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitBuilders*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitBuilders_System_Collections_Generic_IReadOnlyCollection_NationalInstruments_DataTypes_NITypeBuilder__" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitBuilders(System.Collections.Generic.IReadOnlyCollection{NationalInstruments.DataTypes.NITypeBuilder})">VisitBuilders(IReadOnlyCollection&lt;NITypeBuilder&gt;)</h4>
+  <div class="markdown level1 summary"><p>Dispatches to the items.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitBuilders(IReadOnlyCollection&lt;NITypeBuilder&gt; builders)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyCollection</span>&lt;<a class="xref" href="NationalInstruments.DataTypes.NITypeBuilder.html">NITypeBuilder</a>&gt;</td>
+        <td><span class="parametername">builders</span></td>
+        <td><p>builders to be dispatched</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitClassBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitClassBuilder*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitClassBuilder_NationalInstruments_DataTypes_NIClassBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitClassBuilder(NationalInstruments.DataTypes.NIClassBuilder)">VisitClassBuilder(NIClassBuilder)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a typebuilder of the class kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitClassBuilder(NIClassBuilder classBuilder)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.NIClassBuilder.html">NIClassBuilder</a></td>
+        <td><span class="parametername">classBuilder</span></td>
+        <td><p>the typebuilder being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitClusterBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitClusterBuilder*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitClusterBuilder_NationalInstruments_DataTypes_NIClusterBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitClusterBuilder(NationalInstruments.DataTypes.NIClusterBuilder)">VisitClusterBuilder(NIClusterBuilder)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a typebuilder of the cluster kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitClusterBuilder(NIClusterBuilder clusterBuilder)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.NIClusterBuilder.html">NIClusterBuilder</a></td>
+        <td><span class="parametername">clusterBuilder</span></td>
+        <td><p>the typebuilder being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitConstraintsBuilders_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitConstraintsBuilders*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitConstraintsBuilders_System_Collections_Generic_IReadOnlyCollection_NationalInstruments_DataTypes_NITypeBuilder__" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitConstraintsBuilders(System.Collections.Generic.IReadOnlyCollection{NationalInstruments.DataTypes.NITypeBuilder})">VisitConstraintsBuilders(IReadOnlyCollection&lt;NITypeBuilder&gt;)</h4>
+  <div class="markdown level1 summary"><p>The function to visit constraints of the generic kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitConstraintsBuilders(IReadOnlyCollection&lt;NITypeBuilder&gt; builders)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyCollection</span>&lt;<a class="xref" href="NationalInstruments.DataTypes.NITypeBuilder.html">NITypeBuilder</a>&gt;</td>
+        <td><span class="parametername">builders</span></td>
+        <td><p>the typebuilder being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitDataTypeBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitDataTypeBuilder*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitDataTypeBuilder_NationalInstruments_DataTypes_NITypeBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitDataTypeBuilder(NationalInstruments.DataTypes.NITypeBuilder)">VisitDataTypeBuilder(NITypeBuilder)</h4>
+  <div class="markdown level1 summary"><p>The function to visit data type builder</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitDataTypeBuilder(NITypeBuilder typeBuilder)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.NITypeBuilder.html">NITypeBuilder</a></td>
+        <td><span class="parametername">typeBuilder</span></td>
+        <td><p>type builder being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitDeclaringTypeBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitDeclaringTypeBuilder*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitDeclaringTypeBuilder_NationalInstruments_DataTypes_NIClassBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitDeclaringTypeBuilder(NationalInstruments.DataTypes.NIClassBuilder)">VisitDeclaringTypeBuilder(NIClassBuilder)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a typebuilder of the declaringtype kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitDeclaringTypeBuilder(NIClassBuilder builder)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.NIClassBuilder.html">NIClassBuilder</a></td>
+        <td><span class="parametername">builder</span></td>
+        <td><p>the typebuilder being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitDereferenceTypeBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitDereferenceTypeBuilder*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitDereferenceTypeBuilder_NationalInstruments_DataTypes_NITypeBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitDereferenceTypeBuilder(NationalInstruments.DataTypes.NITypeBuilder)">VisitDereferenceTypeBuilder(NITypeBuilder)</h4>
+  <div class="markdown level1 summary"><p>function to visit dereference type of array/collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitDereferenceTypeBuilder(NITypeBuilder typeBuilder)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.NITypeBuilder.html">NITypeBuilder</a></td>
+        <td><span class="parametername">typeBuilder</span></td>
+        <td><p>type builder being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitEventBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitEventBuilder*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitEventBuilder_NationalInstruments_DataTypes_NIEventBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitEventBuilder(NationalInstruments.DataTypes.NIEventBuilder)">VisitEventBuilder(NIEventBuilder)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a typebuilder of the event kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitEventBuilder(NIEventBuilder eventBuilder)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.NIEventBuilder.html">NIEventBuilder</a></td>
+        <td><span class="parametername">eventBuilder</span></td>
+        <td><p>the typebuilder being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitFieldBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitFieldBuilder*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitFieldBuilder_NationalInstruments_DataTypes_NIFieldBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitFieldBuilder(NationalInstruments.DataTypes.NIFieldBuilder)">VisitFieldBuilder(NIFieldBuilder)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a typebuilder of the field kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitFieldBuilder(NIFieldBuilder fieldBuilder)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.NIFieldBuilder.html">NIFieldBuilder</a></td>
+        <td><span class="parametername">fieldBuilder</span></td>
+        <td><p>the typebuilder being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitFieldsBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitFieldsBuilder*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitFieldsBuilder_System_Collections_Generic_IReadOnlyCollection_NationalInstruments_DataTypes_NITypeBuilder__" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitFieldsBuilder(System.Collections.Generic.IReadOnlyCollection{NationalInstruments.DataTypes.NITypeBuilder})">VisitFieldsBuilder(IReadOnlyCollection&lt;NITypeBuilder&gt;)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a typebuilder of the fields kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitFieldsBuilder(IReadOnlyCollection&lt;NITypeBuilder&gt; builders)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyCollection</span>&lt;<a class="xref" href="NationalInstruments.DataTypes.NITypeBuilder.html">NITypeBuilder</a>&gt;</td>
+        <td><span class="parametername">builders</span></td>
+        <td><p>the typebuilder being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitFunctionBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitFunctionBuilder*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitFunctionBuilder_NationalInstruments_DataTypes_NIFunctionBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitFunctionBuilder(NationalInstruments.DataTypes.NIFunctionBuilder)">VisitFunctionBuilder(NIFunctionBuilder)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a typebuilder of the function kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitFunctionBuilder(NIFunctionBuilder functionBuilder)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.NIFunctionBuilder.html">NIFunctionBuilder</a></td>
+        <td><span class="parametername">functionBuilder</span></td>
+        <td><p>the typebuilder being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitGenericParametersBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitGenericParametersBuilder*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitGenericParametersBuilder_System_Collections_Generic_IReadOnlyCollection_NationalInstruments_DataTypes_NITypeBuilder__" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitGenericParametersBuilder(System.Collections.Generic.IReadOnlyCollection{NationalInstruments.DataTypes.NITypeBuilder})">VisitGenericParametersBuilder(IReadOnlyCollection&lt;NITypeBuilder&gt;)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a typebuilder of the genericparameters kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitGenericParametersBuilder(IReadOnlyCollection&lt;NITypeBuilder&gt; builders)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyCollection</span>&lt;<a class="xref" href="NationalInstruments.DataTypes.NITypeBuilder.html">NITypeBuilder</a>&gt;</td>
+        <td><span class="parametername">builders</span></td>
+        <td><p>the typebuilder being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitGenericTypeBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitGenericTypeBuilder*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitGenericTypeBuilder_NationalInstruments_DataTypes_NIGenericTypeBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitGenericTypeBuilder(NationalInstruments.DataTypes.NIGenericTypeBuilder)">VisitGenericTypeBuilder(NIGenericTypeBuilder)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a typebuilder of the generic kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitGenericTypeBuilder(NIGenericTypeBuilder genericBuilder)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.NIGenericTypeBuilder.html">NIGenericTypeBuilder</a></td>
+        <td><span class="parametername">genericBuilder</span></td>
+        <td><p>the typebuilder being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitGenericTypeDefinitionBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitGenericTypeDefinitionBuilder*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitGenericTypeDefinitionBuilder_NationalInstruments_DataTypes_NITypeBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitGenericTypeDefinitionBuilder(NationalInstruments.DataTypes.NITypeBuilder)">VisitGenericTypeDefinitionBuilder(NITypeBuilder)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a typebuilder of the GenericTypeDefinition kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitGenericTypeDefinitionBuilder(NITypeBuilder builder)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.NITypeBuilder.html">NITypeBuilder</a></td>
+        <td><span class="parametername">builder</span></td>
+        <td><p>the typebuilder being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitInterfacesBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitInterfacesBuilder*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitInterfacesBuilder_System_Collections_Generic_IReadOnlyCollection_NationalInstruments_DataTypes_NITypeBuilder__" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitInterfacesBuilder(System.Collections.Generic.IReadOnlyCollection{NationalInstruments.DataTypes.NITypeBuilder})">VisitInterfacesBuilder(IReadOnlyCollection&lt;NITypeBuilder&gt;)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a typebuilder of the interface kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitInterfacesBuilder(IReadOnlyCollection&lt;NITypeBuilder&gt; builders)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyCollection</span>&lt;<a class="xref" href="NationalInstruments.DataTypes.NITypeBuilder.html">NITypeBuilder</a>&gt;</td>
+        <td><span class="parametername">builders</span></td>
+        <td><p>the typebuilders being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitMembersBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitMembersBuilder*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitMembersBuilder_System_Collections_Generic_IReadOnlyCollection_NationalInstruments_DataTypes_NITypeBuilder__" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitMembersBuilder(System.Collections.Generic.IReadOnlyCollection{NationalInstruments.DataTypes.NITypeBuilder})">VisitMembersBuilder(IReadOnlyCollection&lt;NITypeBuilder&gt;)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a typebuilder of the members kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitMembersBuilder(IReadOnlyCollection&lt;NITypeBuilder&gt; builders)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyCollection</span>&lt;<a class="xref" href="NationalInstruments.DataTypes.NITypeBuilder.html">NITypeBuilder</a>&gt;</td>
+        <td><span class="parametername">builders</span></td>
+        <td><p>the typebuilder being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitParameterBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitParameterBuilder*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitParameterBuilder_NationalInstruments_DataTypes_NIParameterBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitParameterBuilder(NationalInstruments.DataTypes.NIParameterBuilder)">VisitParameterBuilder(NIParameterBuilder)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a typebuilder of the parameter kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitParameterBuilder(NIParameterBuilder parameterBuilder)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.NIParameterBuilder.html">NIParameterBuilder</a></td>
+        <td><span class="parametername">parameterBuilder</span></td>
+        <td><p>the typebuilder being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitParametersBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitParametersBuilder*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitParametersBuilder_System_Collections_Generic_IReadOnlyCollection_NationalInstruments_DataTypes_NITypeBuilder__" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitParametersBuilder(System.Collections.Generic.IReadOnlyCollection{NationalInstruments.DataTypes.NITypeBuilder})">VisitParametersBuilder(IReadOnlyCollection&lt;NITypeBuilder&gt;)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a typebuilder of the parameters kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitParametersBuilder(IReadOnlyCollection&lt;NITypeBuilder&gt; builders)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyCollection</span>&lt;<a class="xref" href="NationalInstruments.DataTypes.NITypeBuilder.html">NITypeBuilder</a>&gt;</td>
+        <td><span class="parametername">builders</span></td>
+        <td><p>the typebuilder being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitPointerBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitPointerBuilder*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitPointerBuilder_NationalInstruments_DataTypes_NIPointerBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitPointerBuilder(NationalInstruments.DataTypes.NIPointerBuilder)">VisitPointerBuilder(NIPointerBuilder)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a typebuilder of the Pointer kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitPointerBuilder(NIPointerBuilder pointerBuilder)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.NIPointerBuilder.html">NIPointerBuilder</a></td>
+        <td><span class="parametername">pointerBuilder</span></td>
+        <td><p>the typebuilder being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitPropertyBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitPropertyBuilder*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitPropertyBuilder_NationalInstruments_DataTypes_NIPropertyBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitPropertyBuilder(NationalInstruments.DataTypes.NIPropertyBuilder)">VisitPropertyBuilder(NIPropertyBuilder)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a typebuilder of the property kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitPropertyBuilder(NIPropertyBuilder propertyBuilder)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.NIPropertyBuilder.html">NIPropertyBuilder</a></td>
+        <td><span class="parametername">propertyBuilder</span></td>
+        <td><p>the typebuilder being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitReturnTypeBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitReturnTypeBuilder*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitReturnTypeBuilder_NationalInstruments_DataTypes_NITypeBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitReturnTypeBuilder(NationalInstruments.DataTypes.NITypeBuilder)">VisitReturnTypeBuilder(NITypeBuilder)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a typebuilder of the return type kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitReturnTypeBuilder(NITypeBuilder builder)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.NITypeBuilder.html">NITypeBuilder</a></td>
+        <td><span class="parametername">builder</span></td>
+        <td><p>the typebuilder being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitSizedArrayBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitSizedArrayBuilder*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitSizedArrayBuilder_NationalInstruments_DataTypes_NISizedArrayBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitSizedArrayBuilder(NationalInstruments.DataTypes.NISizedArrayBuilder)">VisitSizedArrayBuilder(NISizedArrayBuilder)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a typebuilder of the izedarray kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitSizedArrayBuilder(NISizedArrayBuilder sizedArrayBuilder)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.NISizedArrayBuilder.html">NISizedArrayBuilder</a></td>
+        <td><span class="parametername">sizedArrayBuilder</span></td>
+        <td><p>the typebuilder being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitTypedefBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitTypedefBuilder*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitTypedefBuilder_NationalInstruments_DataTypes_NITypedefBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitTypedefBuilder(NationalInstruments.DataTypes.NITypedefBuilder)">VisitTypedefBuilder(NITypedefBuilder)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a typebuilder of the typedef kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitTypedefBuilder(NITypedefBuilder typedefBuilder)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.NITypedefBuilder.html">NITypedefBuilder</a></td>
+        <td><span class="parametername">typedefBuilder</span></td>
+        <td><p>the typebuilder being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitUnionBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitUnionBuilder*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitUnionBuilder_NationalInstruments_DataTypes_NIUnionBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitUnionBuilder(NationalInstruments.DataTypes.NIUnionBuilder)">VisitUnionBuilder(NIUnionBuilder)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a typebuilder of the union kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitUnionBuilder(NIUnionBuilder unionBuilder)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.NIUnionBuilder.html">NIUnionBuilder</a></td>
+        <td><span class="parametername">unionBuilder</span></td>
+        <td><p>the typebuilder being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitVariableArrayBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitVariableArrayBuilder*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeBuilderWalker_VisitVariableArrayBuilder_NationalInstruments_DataTypes_NIVariableArrayBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.VisitVariableArrayBuilder(NationalInstruments.DataTypes.NIVariableArrayBuilder)">VisitVariableArrayBuilder(NIVariableArrayBuilder)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a typebuilder of the variablearray kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitVariableArrayBuilder(NIVariableArrayBuilder variableArrayBuilder)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.NIVariableArrayBuilder.html">NIVariableArrayBuilder</a></td>
+        <td><span class="parametername">variableArrayBuilder</span></td>
+        <td><p>the typebuilder being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.INITypeVisitor.html">INITypeVisitor</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.INITypeBuilderVisitor.html">INITypeBuilderVisitor</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_ToEnumerable__1___0_">EnumerableHelper.ToEnumerable&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_Repeat__1___0_System_Int32_">EnumerableHelper.Repeat&lt;T&gt;(T, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyNothing__1___0_">Verifier.VerifyNothing&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Func___0_System_Boolean__System_Action_System_String__System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Func___0_System_Boolean__System_Action_System_String_System_String__System_String_System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Boolean_System_Action_System_String__System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Boolean, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Boolean_System_Action_System_String_System_String__System_String_System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Boolean, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Func___0_System_Boolean__System_Action_System_String__System_String_">Verifier.Verify&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Func___0_System_Boolean__System_Action_System_String_System_String__System_String_System_String_">Verifier.Verify&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Boolean_System_Action_System_String__System_String_">Verifier.Verify&lt;T&gt;(T, Boolean, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Boolean_System_Action_System_String_System_String__System_String_System_String_">Verifier.Verify&lt;T&gt;(T, Boolean, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentIsNotNull__1___0_System_String_">Verifier.VerifyArgumentIsNotNull&lt;T&gt;(T, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyValueIsNotNull__1___0_System_String_">Verifier.VerifyValueIsNotNull&lt;T&gt;(T, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentNotReferenceEqualsTo_System_Object_System_Object_System_String_">Verifier.VerifyArgumentNotReferenceEqualsTo(Object, Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyValueNotReferenceEqualsTo_System_Object_System_Object_System_String_">Verifier.VerifyValueNotReferenceEqualsTo(Object, Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentIsOfType__1_System_Object_System_String_">Verifier.VerifyArgumentIsOfType&lt;T&gt;(Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyValueIsOfType__1_System_Object_System_String_">Verifier.VerifyValueIsOfType&lt;T&gt;(Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.QueryServiceExtensions.html#NationalInstruments_Core_QueryServiceExtensions_QueryService__1_System_Object_">QueryServiceExtensions.QueryService&lt;T&gt;(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_FindClosestMatchingContainerForResource_System_Object_System_Func_System_Object_System_Globalization_CultureInfo_System_Object__System_Globalization_CultureInfo_">LocalizationHelpers.FindClosestMatchingContainerForResource(Object, Func&lt;Object, CultureInfo, Object&gt;, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_FindClosestMatchingContainerForResource_System_Object_System_Func_System_Object_System_Globalization_CultureInfo_System_Object__System_Globalization_CultureInfo_System_Func_System_Object_System_Object__">LocalizationHelpers.FindClosestMatchingContainerForResource(Object, Func&lt;Object, CultureInfo, Object&gt;, CultureInfo, Func&lt;Object, Object&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedEnumString__1___0_">LocalizationHelpers.GetLocalizedEnumString&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedString_System_Object_System_String_System_Globalization_CultureInfo_">LocalizationHelpers.GetLocalizedString(Object, String, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedString_System_Object_System_String_System_Boolean_System_Globalization_CultureInfo_">LocalizationHelpers.GetLocalizedString(Object, String, Boolean, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_SetPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_System_Object_">DynamicPropertyExtensions.SetPropertyValue(Object, PropertySymbol, Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.GetPropertyValue(Object, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_ClearPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.ClearPropertyValue(Object, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_IsPropertySet_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.IsPropertySet(Object, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetAllSetProperties_System_Object_">DynamicPropertyExtensions.GetAllSetProperties(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetAllProperties_System_Object_">DynamicPropertyExtensions.GetAllProperties(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

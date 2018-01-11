@@ -1,0 +1,3361 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class TransactionManager
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class TransactionManager
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.SourceModel.TransactionManager">
+  
+  
+  <h1 id="NationalInstruments_SourceModel_TransactionManager" data-uid="NationalInstruments.SourceModel.TransactionManager" class="text-break">Class TransactionManager
+  </h1>
+  <div class="markdown level0 summary"><p>The default implementation for the ITransactionManager interface; clients should use this class
+for their ITransactionManager unless they have a very good reason to create their own implementation.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">TransactionManager</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="NationalInstruments.SourceModel.ITransactionManager.html">ITransactionManager</a></div>
+    <div><a class="xref" href="NationalInstruments.SourceModel.ITransactionRecruiter.html">ITransactionRecruiter</a></div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.SourceModel.html">NationalInstruments.SourceModel</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_SourceModel_TransactionManager_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class TransactionManager : ITransactionManager, ITransactionRecruiter, INotifyPropertyChanged, ITransactionReporter</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_ActiveCompositeTransaction_" data-uid="NationalInstruments.SourceModel.TransactionManager.ActiveCompositeTransaction*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_ActiveCompositeTransaction" data-uid="NationalInstruments.SourceModel.TransactionManager.ActiveCompositeTransaction">ActiveCompositeTransaction</h4>
+  <div class="markdown level1 summary"><p>Gets the active composite transaction, if one exists; this composite transaction is the most nested
+one and the one under which new transactions will be added</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ITransactionInfo ActiveCompositeTransaction { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ITransactionInfo.html">ITransactionInfo</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_ActiveTransactionContainedItems_" data-uid="NationalInstruments.SourceModel.TransactionManager.ActiveTransactionContainedItems*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_ActiveTransactionContainedItems" data-uid="NationalInstruments.SourceModel.TransactionManager.ActiveTransactionContainedItems">ActiveTransactionContainedItems</h4>
+  <div class="markdown level1 summary"><p>Does the active transaction, if any, contain nested transactions or individual items?</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ContainedItemCategory ActiveTransactionContainedItems { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ContainedItemCategory.html">ContainedItemCategory</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_BackgroundEditsAllowed_" data-uid="NationalInstruments.SourceModel.TransactionManager.BackgroundEditsAllowed*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_BackgroundEditsAllowed" data-uid="NationalInstruments.SourceModel.TransactionManager.BackgroundEditsAllowed">BackgroundEditsAllowed</h4>
+  <div class="markdown level1 summary"><p>True if new transactions can be created and committed in any thread and False if transactions can only be
+created and committed in the UI thread.
+TODO: Remove in favor of using lock directly</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool BackgroundEditsAllowed { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_Canceling_" data-uid="NationalInstruments.SourceModel.TransactionManager.Canceling*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_Canceling" data-uid="NationalInstruments.SourceModel.TransactionManager.Canceling">Canceling</h4>
+  <div class="markdown level1 summary"><p>Gets or sets whether we are canceling a transaction</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool Canceling { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_DefaultDirtyState_" data-uid="NationalInstruments.SourceModel.TransactionManager.DefaultDirtyState*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_DefaultDirtyState" data-uid="NationalInstruments.SourceModel.TransactionManager.DefaultDirtyState">DefaultDirtyState</h4>
+  <div class="markdown level1 summary"><p>Sets and Gets the default dirty state of the source file this transaction manager is for.
+By default source files are not dirty when they have not been modified.  Setting the Default
+Dirty State to be true makes the source file dirty when it has not been changed. This is
+useful in cases where we import a document. In this case, it has not been saved and has not
+been modified but we still want to mark the document as dirty.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DefaultDirtyState { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_DiscardTransactionsOnCommit_" data-uid="NationalInstruments.SourceModel.TransactionManager.DiscardTransactionsOnCommit*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_DiscardTransactionsOnCommit" data-uid="NationalInstruments.SourceModel.TransactionManager.DiscardTransactionsOnCommit">DiscardTransactionsOnCommit</h4>
+  <div class="markdown level1 summary"><p>Automatically discard all transactions on commit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DiscardTransactionsOnCommit { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_EmptyCommittedTransactionSaveMarker_" data-uid="NationalInstruments.SourceModel.TransactionManager.EmptyCommittedTransactionSaveMarker*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_EmptyCommittedTransactionSaveMarker" data-uid="NationalInstruments.SourceModel.TransactionManager.EmptyCommittedTransactionSaveMarker">EmptyCommittedTransactionSaveMarker</h4>
+  <div class="markdown level1 summary"><p>true if we have no committed User transactions (but could have rolled back ones) AND the user did a save</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool EmptyCommittedTransactionSaveMarker { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_HasRedoableTransactions_" data-uid="NationalInstruments.SourceModel.TransactionManager.HasRedoableTransactions*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_HasRedoableTransactions" data-uid="NationalInstruments.SourceModel.TransactionManager.HasRedoableTransactions">HasRedoableTransactions</h4>
+  <div class="markdown level1 summary"><p>Are there any re-doable user transactions?</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasRedoableTransactions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_HasUnappliedChangesForLinkedContext_" data-uid="NationalInstruments.SourceModel.TransactionManager.HasUnappliedChangesForLinkedContext*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_HasUnappliedChangesForLinkedContext" data-uid="NationalInstruments.SourceModel.TransactionManager.HasUnappliedChangesForLinkedContext">HasUnappliedChangesForLinkedContext</h4>
+  <div class="markdown level1 summary"><p>Indicates whether or not any edits have been made to any transaction system in the context for this transaction manager 
+that haven&apos;t been applied to other transaction systems.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasUnappliedChangesForLinkedContext { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_HasUnappliedChangesForLinkedManagers_" data-uid="NationalInstruments.SourceModel.TransactionManager.HasUnappliedChangesForLinkedManagers*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_HasUnappliedChangesForLinkedManagers" data-uid="NationalInstruments.SourceModel.TransactionManager.HasUnappliedChangesForLinkedManagers">HasUnappliedChangesForLinkedManagers</h4>
+  <div class="markdown level1 summary"><p>Indicates whether or not this transaction manager has user changes that haven&apos;t been applied to a linked transaction manager.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasUnappliedChangesForLinkedManagers { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_HasUndoableTransactions_" data-uid="NationalInstruments.SourceModel.TransactionManager.HasUndoableTransactions*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_HasUndoableTransactions" data-uid="NationalInstruments.SourceModel.TransactionManager.HasUndoableTransactions">HasUndoableTransactions</h4>
+  <div class="markdown level1 summary"><p>Are there any undoable user transactions?</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasUndoableTransactions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_Host_" data-uid="NationalInstruments.SourceModel.TransactionManager.Host*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_Host" data-uid="NationalInstruments.SourceModel.TransactionManager.Host">Host</h4>
+  <div class="markdown level1 summary"><p>Gets the currently active <a class="xref" href="../core/NationalInstruments.Composition.ICompositionHost.html">ICompositionHost</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICompositionHost Host { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Composition.ICompositionHost.html">ICompositionHost</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_IdentifierDictionary_" data-uid="NationalInstruments.SourceModel.TransactionManager.IdentifierDictionary*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_IdentifierDictionary" data-uid="NationalInstruments.SourceModel.TransactionManager.IdentifierDictionary">IdentifierDictionary</h4>
+  <div class="markdown level1 summary"><p>Get the dictionary that contains the mappings of diagram objects to their unique IDs</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IdentifierDictionary IdentifierDictionary { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.IdentifierDictionary.html">IdentifierDictionary</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_InAtomicAction_" data-uid="NationalInstruments.SourceModel.TransactionManager.InAtomicAction*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_InAtomicAction" data-uid="NationalInstruments.SourceModel.TransactionManager.InAtomicAction">InAtomicAction</h4>
+  <div class="markdown level1 summary"><p>Determines if a atomic action is currently active
+True if there is a single atomic action, false if we are not</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool InAtomicAction { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_InAtomicActionOrNotification_" data-uid="NationalInstruments.SourceModel.TransactionManager.InAtomicActionOrNotification*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_InAtomicActionOrNotification" data-uid="NationalInstruments.SourceModel.TransactionManager.InAtomicActionOrNotification">InAtomicActionOrNotification</h4>
+  <div class="markdown level1 summary"><p>Determines if an atomic action is currently active or the action completed but
+notifications are still in progress
+True if InAtomicAction or ActionAction Complete(2) notifications are in progress.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool InAtomicActionOrNotification { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_InteractiveTransactionOwner_" data-uid="NationalInstruments.SourceModel.TransactionManager.InteractiveTransactionOwner*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_InteractiveTransactionOwner" data-uid="NationalInstruments.SourceModel.TransactionManager.InteractiveTransactionOwner">InteractiveTransactionOwner</h4>
+  <div class="markdown level1 summary"><p>The owner of the current interactive transaction, if there is one.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IInteractiveTransactionOwner InteractiveTransactionOwner { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.IInteractiveTransactionOwner.html">IInteractiveTransactionOwner</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_IsDirty_" data-uid="NationalInstruments.SourceModel.TransactionManager.IsDirty*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_IsDirty" data-uid="NationalInstruments.SourceModel.TransactionManager.IsDirty">IsDirty</h4>
+  <div class="markdown level1 summary"><p>Gets whether there are any committed transactions in the list</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsDirty { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_IsExecutingDelayedRules_" data-uid="NationalInstruments.SourceModel.TransactionManager.IsExecutingDelayedRules*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_IsExecutingDelayedRules" data-uid="NationalInstruments.SourceModel.TransactionManager.IsExecutingDelayedRules">IsExecutingDelayedRules</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsExecutingDelayedRules { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_IsInRecommit_" data-uid="NationalInstruments.SourceModel.TransactionManager.IsInRecommit*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_IsInRecommit" data-uid="NationalInstruments.SourceModel.TransactionManager.IsInRecommit">IsInRecommit</h4>
+  <div class="markdown level1 summary"><p>Returns true if we are in the middle of a recommit. This state will not change until the entire call to
+RecommitThroughTransaction is complete.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInRecommit { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_IsInRollback_" data-uid="NationalInstruments.SourceModel.TransactionManager.IsInRollback*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_IsInRollback" data-uid="NationalInstruments.SourceModel.TransactionManager.IsInRollback">IsInRollback</h4>
+  <div class="markdown level1 summary"><p>Returns true if we are in the middle of a rollback. This state will not change until the entire call to
+RollbackThroughTransaction is complete.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInRollback { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_IsLastUserTransactionASaveMarker_" data-uid="NationalInstruments.SourceModel.TransactionManager.IsLastUserTransactionASaveMarker*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_IsLastUserTransactionASaveMarker" data-uid="NationalInstruments.SourceModel.TransactionManager.IsLastUserTransactionASaveMarker">IsLastUserTransactionASaveMarker</h4>
+  <div class="markdown level1 summary"><p>Is the last committed TransactionPurpose.User transaction marked as being a saved point? Can also return true
+if there are no committed User transactions but the DefaultDirtyState is false (meaning clean). Can return
+false if there are no committed User transactions but DefaultDirtyState is false OR there are undone transactions
+which are save markers</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsLastUserTransactionASaveMarker { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_IsOuterTransactionAUser_" data-uid="NationalInstruments.SourceModel.TransactionManager.IsOuterTransactionAUser*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_IsOuterTransactionAUser" data-uid="NationalInstruments.SourceModel.TransactionManager.IsOuterTransactionAUser">IsOuterTransactionAUser</h4>
+  <div class="markdown level1 summary"><p>Gets whether an outermost transaction has been started and if it is TransactionPurpose.User</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsOuterTransactionAUser { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_IsRecordingTransactions_" data-uid="NationalInstruments.SourceModel.TransactionManager.IsRecordingTransactions*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_IsRecordingTransactions" data-uid="NationalInstruments.SourceModel.TransactionManager.IsRecordingTransactions">IsRecordingTransactions</h4>
+  <div class="markdown level1 summary"><p>Indicates whether the TransactionRecruiter is currently recording transactions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsRecordingTransactions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_IsTransacting_" data-uid="NationalInstruments.SourceModel.TransactionManager.IsTransacting*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_IsTransacting" data-uid="NationalInstruments.SourceModel.TransactionManager.IsTransacting">IsTransacting</h4>
+  <div class="markdown level1 summary"><p>Gets whether we have started a transaction, are rolling back or recommitting, or are cancelling a transaction</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsTransacting { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_IsTransactionStarted_" data-uid="NationalInstruments.SourceModel.TransactionManager.IsTransactionStarted*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_IsTransactionStarted" data-uid="NationalInstruments.SourceModel.TransactionManager.IsTransactionStarted">IsTransactionStarted</h4>
+  <div class="markdown level1 summary"><p>True if an active transaction has begun and hasn&apos;t yet been committed or cancelled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsTransactionStarted { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_Lock_" data-uid="NationalInstruments.SourceModel.TransactionManager.Lock*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_Lock" data-uid="NationalInstruments.SourceModel.TransactionManager.Lock">Lock</h4>
+  <div class="markdown level1 summary"><p>Gets the lock for this transaction manager</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SourceModelLock Lock { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.SourceModelLock.html">SourceModelLock</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_Locked_" data-uid="NationalInstruments.SourceModel.TransactionManager.Locked*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_Locked" data-uid="NationalInstruments.SourceModel.TransactionManager.Locked">Locked</h4>
+  <div class="markdown level1 summary"><p>Indicates whether or not user edits to this transaction manager are allowed.  Each set of the property to True will increment
+a reference count, and each set of the property to False will decrement the reference count.  Only when the reference count is
+zero is the transaction manager considered unlocked.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Locked { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_ModelValidationEnabled_" data-uid="NationalInstruments.SourceModel.TransactionManager.ModelValidationEnabled*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_ModelValidationEnabled" data-uid="NationalInstruments.SourceModel.TransactionManager.ModelValidationEnabled">ModelValidationEnabled</h4>
+  <div class="markdown level1 summary"><p>Determines whether to call CheckModel after transactions.  Default is true for debug and false for release.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ModelValidationEnabled { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_NotificationManager_" data-uid="NationalInstruments.SourceModel.TransactionManager.NotificationManager*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_NotificationManager" data-uid="NationalInstruments.SourceModel.TransactionManager.NotificationManager">NotificationManager</h4>
+  <div class="markdown level1 summary"><p>The manager for watching for changes to the model.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IModelNotificationManager NotificationManager { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.IModelNotificationManager.html">IModelNotificationManager</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_Notifying_" data-uid="NationalInstruments.SourceModel.TransactionManager.Notifying*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_Notifying" data-uid="NationalInstruments.SourceModel.TransactionManager.Notifying">Notifying</h4>
+  <div class="markdown level1 summary"><p>Gets or sets whether we are notifying clients of changes from a transaction that has just been committed, rolled back,
+or recommitted</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool Notifying { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_Owner_" data-uid="NationalInstruments.SourceModel.TransactionManager.Owner*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_Owner" data-uid="NationalInstruments.SourceModel.TransactionManager.Owner">Owner</h4>
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a> that owns this <a class="xref" href="NationalInstruments.SourceModel.ITransactionManager.html">ITransactionManager</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Element Owner { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_RedoStackLastUserTransaction_" data-uid="NationalInstruments.SourceModel.TransactionManager.RedoStackLastUserTransaction*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_RedoStackLastUserTransaction" data-uid="NationalInstruments.SourceModel.TransactionManager.RedoStackLastUserTransaction">RedoStackLastUserTransaction</h4>
+  <div class="markdown level1 summary"><p>Gets the most recently committed <a class="xref" href="NationalInstruments.SourceModel.TransactionPurpose.html#NationalInstruments_SourceModel_TransactionPurpose_User">User</a> transaction on the redo stack.  If no user transactions are on
+the stack, <code>null</code> is returned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICompletedTransaction RedoStackLastUserTransaction { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ICompletedTransaction.html">ICompletedTransaction</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_RequiresUnappliedChangesFromLinkedManagers_" data-uid="NationalInstruments.SourceModel.TransactionManager.RequiresUnappliedChangesFromLinkedManagers*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_RequiresUnappliedChangesFromLinkedManagers" data-uid="NationalInstruments.SourceModel.TransactionManager.RequiresUnappliedChangesFromLinkedManagers">RequiresUnappliedChangesFromLinkedManagers</h4>
+  <div class="markdown level1 summary"><p>Indicates whether or not a linked transaction manager to this transaction manager has unapplied user changes 
+that haven&apos;t been applied to this transaction manager.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RequiresUnappliedChangesFromLinkedManagers { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_RollingBackOrRecommitting_" data-uid="NationalInstruments.SourceModel.TransactionManager.RollingBackOrRecommitting*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_RollingBackOrRecommitting" data-uid="NationalInstruments.SourceModel.TransactionManager.RollingBackOrRecommitting">RollingBackOrRecommitting</h4>
+  <div class="markdown level1 summary"><p>Gets or sets whether we are in the process of rolling back or recommitting a transaction</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool RollingBackOrRecommitting { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_RuleRegistrar_" data-uid="NationalInstruments.SourceModel.TransactionManager.RuleRegistrar*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_RuleRegistrar" data-uid="NationalInstruments.SourceModel.TransactionManager.RuleRegistrar">RuleRegistrar</h4>
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="NationalInstruments.SourceModel.TransactionManager.html#NationalInstruments_SourceModel_TransactionManager_RuleRegistrar">RuleRegistrar</a> used by this <a class="xref" href="NationalInstruments.SourceModel.TransactionManager.html">TransactionManager</a> to run rules on committed transactions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RuleRegistrar RuleRegistrar { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.RuleRegistrar.html">RuleRegistrar</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_ScheduledActivityManager_" data-uid="NationalInstruments.SourceModel.TransactionManager.ScheduledActivityManager*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_ScheduledActivityManager" data-uid="NationalInstruments.SourceModel.TransactionManager.ScheduledActivityManager">ScheduledActivityManager</h4>
+  <div class="markdown level1 summary"><p>Gets the currently active <a class="xref" href="../core/NationalInstruments.Core.IScheduledActivityManager.html">IScheduledActivityManager</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IScheduledActivityManager ScheduledActivityManager { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.IScheduledActivityManager.html">IScheduledActivityManager</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_TransactionLogger_" data-uid="NationalInstruments.SourceModel.TransactionManager.TransactionLogger*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_TransactionLogger" data-uid="NationalInstruments.SourceModel.TransactionManager.TransactionLogger">TransactionLogger</h4>
+  <div class="markdown level1 summary"><p>Gets our currently active <a class="xref" href="NationalInstruments.SourceModel.TransactionLogger.html">TransactionLogger</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransactionLogger TransactionLogger { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TransactionLogger.html">TransactionLogger</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_UndoStackBounds_" data-uid="NationalInstruments.SourceModel.TransactionManager.UndoStackBounds*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_UndoStackBounds" data-uid="NationalInstruments.SourceModel.TransactionManager.UndoStackBounds">UndoStackBounds</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the number of TransactionPurpose.User transactions the undo stack can save before it begins purging the oldest ones</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int UndoStackBounds { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_UndoStackLastUserTransaction_" data-uid="NationalInstruments.SourceModel.TransactionManager.UndoStackLastUserTransaction*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_UndoStackLastUserTransaction" data-uid="NationalInstruments.SourceModel.TransactionManager.UndoStackLastUserTransaction">UndoStackLastUserTransaction</h4>
+  <div class="markdown level1 summary"><p>Gets the most recently committed <a class="xref" href="NationalInstruments.SourceModel.TransactionPurpose.html#NationalInstruments_SourceModel_TransactionPurpose_User">User</a> transaction on the undo stack. If no User transactions are
+on the stack, <code>null</code> is returned</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICompletedTransaction UndoStackLastUserTransaction { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ICompletedTransaction.html">ICompletedTransaction</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_AttachAnonymousPostTransactionSideEffect_" data-uid="NationalInstruments.SourceModel.TransactionManager.AttachAnonymousPostTransactionSideEffect*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_AttachAnonymousPostTransactionSideEffect_System_Object_System_Action_" data-uid="NationalInstruments.SourceModel.TransactionManager.AttachAnonymousPostTransactionSideEffect(System.Object,System.Action)">AttachAnonymousPostTransactionSideEffect(Object, Action)</h4>
+  <div class="markdown level1 summary"><p>Attach an anonymous post transaction side effect which will get attached to the current active Transaction and execute when<br>the transaction is undone.  If the same side effect instance is registered more than once for the same object, it will only 
+get executed once.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AttachAnonymousPostTransactionSideEffect(object registeringObject, Action sideEffect)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">registeringObject</span></td>
+        <td><p>The object registering this side effect.  This is typically the object the side effect will 
+act upon in some way.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td><span class="parametername">sideEffect</span></td>
+        <td><p>The side effect action to reapply when the transaction is undone.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_SourceModel_TransactionManager_AttachAnonymousPostTransactionSideEffect_System_Object_System_Action__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This function behaves the same as <a class="xref" href="NationalInstruments.SourceModel.ITransactionManager.html#NationalInstruments_SourceModel_ITransactionManager_AttachNamedPostTransactionSideEffect_System_Object_System_String_System_Action_">AttachNamedPostTransactionSideEffect(Object, String, Action)</a> except that anonymous side effects always
+remain in effect until the transaction it&apos;s attached to is discarded from the undo stack and can&apos;t be removed manually.  If 
+you need that capability, you should create a named side effect instead.  Named side effects are encouraged over anonymous
+side effects since they provide better control over the lifetime of the side effect and help avoid redoing work that might
+be overwritten by a subsequent anonymous side effect.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_AttachNamedPostTransactionSideEffect_" data-uid="NationalInstruments.SourceModel.TransactionManager.AttachNamedPostTransactionSideEffect*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_AttachNamedPostTransactionSideEffect_System_Object_System_String_System_Action_" data-uid="NationalInstruments.SourceModel.TransactionManager.AttachNamedPostTransactionSideEffect(System.Object,System.String,System.Action)">AttachNamedPostTransactionSideEffect(Object, String, Action)</h4>
+  <div class="markdown level1 summary"><p>Attach a named post transaction side effect which will get attached to the current active Transaction and execute when the 
+transaction is undone.  A named side effect will replace a side effect already registered with the same name for the same object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AttachNamedPostTransactionSideEffect(object registeringObject, string sideEffectName, Action sideEffect)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">registeringObject</span></td>
+        <td><p>The object registering this side effect.  This is typically the object the side effect will act 
+upon in some way.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">sideEffectName</span></td>
+        <td><p>The name the side effect is registered with.  If the same name is registered more than once for the same 
+<see cref="!:registeringObject"></see>, the previously registered side effect will be replaced with the new <see cref="!:sideEffect"></see> 
+provided to this call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td><span class="parametername">sideEffect</span></td>
+        <td><p>The side effect action to reapply when the transaction is undone.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_SourceModel_TransactionManager_AttachNamedPostTransactionSideEffect_System_Object_System_String_System_Action__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Side effects are typically added when a change from another transaction system is driving a side effect change to this 
+transaction manager, and that change needs to remain in effect even across an undo.  If effect, the side effect makes the
+change such that it isn&apos;t undoable.</p>
+<p>Once a side effect is executed from undo, the side effect will get reattached to a new non-user transaction at the end of 
+the undo stack. The side effect will remain there and get executed again only if the non-user transaction is undone.  This
+will happen if either a redo is issued where by all non-user transactions at the end of the stack are rolled back before 
+the user transactions on the redo stack can be recommitted, or another undo is issued causing the non-user transaction to 
+get rolled back.  In either case, the side effect will get reattached to a non-user transaction at the end of the undo stack, 
+and the process repeats.  The side effect will remain in effect until either removed by calling <a class="xref" href="NationalInstruments.SourceModel.ITransactionManager.html#NationalInstruments_SourceModel_ITransactionManager_RemoveNamedPostTransactionSideEffect_System_Object_System_String_">RemoveNamedPostTransactionSideEffect(Object, String)</a> 
+or the transaction the side effect is attached to is discarded from the undo stack.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_BeginAtomicAction_" data-uid="NationalInstruments.SourceModel.TransactionManager.BeginAtomicAction*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_BeginAtomicAction" data-uid="NationalInstruments.SourceModel.TransactionManager.BeginAtomicAction">BeginAtomicAction()</h4>
+  <div class="markdown level1 summary"><p>Called by interactive elements when they begin a single user modification to the modeling system.
+A single user modification usually encompasses 2 transactions.  The first is the revert
+of the previous user modification and then committing the changes of the new user
+modification.
+Think of a drag move where each mouse move is a single user modification</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDisposable BeginAtomicAction()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></td>
+        <td><p>an IDisposable which is automatically disposed when it goes out of scope</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_BeginAtomicActionDelayedUI_" data-uid="NationalInstruments.SourceModel.TransactionManager.BeginAtomicActionDelayedUI*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_BeginAtomicActionDelayedUI" data-uid="NationalInstruments.SourceModel.TransactionManager.BeginAtomicActionDelayedUI">BeginAtomicActionDelayedUI()</h4>
+  <div class="markdown level1 summary"><p>Similar to BeginAtomicAction, but at the end of the action, delayed rule notification is not sent out.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDisposable BeginAtomicActionDelayedUI()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></td>
+        <td><p>an IDisposable which is automatically disposed when it goes out of scope</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_BeginInteractiveTransaction_" data-uid="NationalInstruments.SourceModel.TransactionManager.BeginInteractiveTransaction*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_BeginInteractiveTransaction_System_String_NationalInstruments_SourceModel_IInteractiveTransactionOwner_" data-uid="NationalInstruments.SourceModel.TransactionManager.BeginInteractiveTransaction(System.String,NationalInstruments.SourceModel.IInteractiveTransactionOwner)">BeginInteractiveTransaction(String, IInteractiveTransactionOwner)</h4>
+  <div class="markdown level1 summary"><p>Begin an interactive transaction</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IActiveTransaction BeginInteractiveTransaction(string description, IInteractiveTransactionOwner forWho)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>what is this interactive transaction doing?</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.IInteractiveTransactionOwner.html">IInteractiveTransactionOwner</a></td>
+        <td><span class="parametername">forWho</span></td>
+        <td><p>the owner of the interactive transaction</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.IActiveTransaction.html">IActiveTransaction</a></td>
+        <td><p>The newly created transaction</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_BeginSideEffectAsync_" data-uid="NationalInstruments.SourceModel.TransactionManager.BeginSideEffectAsync*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_BeginSideEffectAsync_System_String_" data-uid="NationalInstruments.SourceModel.TransactionManager.BeginSideEffectAsync(System.String)">BeginSideEffectAsync(String)</h4>
+  <div class="markdown level1 summary"><p>Begins the application of side effects on this transaction system.  When the task is signaled
+and upgradeable read lock will be held on a thread which matches the requirements of this transaction
+system.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ActivityAwaitable BeginSideEffectAsync(string description)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>The description of the side effects</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.ActivityAwaitable.html">ActivityAwaitable</a></td>
+        <td><p>Awaiter which when complete returns the new active composite transaction</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_BeginSideEffectAsync_" data-uid="NationalInstruments.SourceModel.TransactionManager.BeginSideEffectAsync*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_BeginSideEffectAsync_System_String_System_Threading_CancellationToken_" data-uid="NationalInstruments.SourceModel.TransactionManager.BeginSideEffectAsync(System.String,System.Threading.CancellationToken)">BeginSideEffectAsync(String, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Begins the application of side effects on this transaction system.  When the task is signaled
+and upgradeable read lock will be held on a thread which matches the requirements of this transaction
+system.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ActivityAwaitable BeginSideEffectAsync(string description, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>The description of the side effects</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>Cancellation token to observe while waiting for the lock</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.ActivityAwaitable.html">ActivityAwaitable</a></td>
+        <td><p>Awaiter which when complete returns the new active composite transaction</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_BeginTopLevelTransactionAsync_" data-uid="NationalInstruments.SourceModel.TransactionManager.BeginTopLevelTransactionAsync*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_BeginTopLevelTransactionAsync_System_String_NationalInstruments_SourceModel_TransactionPurpose_" data-uid="NationalInstruments.SourceModel.TransactionManager.BeginTopLevelTransactionAsync(System.String,NationalInstruments.SourceModel.TransactionPurpose)">BeginTopLevelTransactionAsync(String, TransactionPurpose)</h4>
+  <div class="markdown level1 summary"><p>Begin a new composite transaction from any thread, which will immediately become the active composite transaction.
+Always await <a class="xref" href="NationalInstruments.SourceModel.IAsyncActiveTransaction.html#NationalInstruments_SourceModel_IAsyncActiveTransaction_CommitAsync">CommitAsync()</a> on returned transaction.
+See remarks for threading details.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ActivityAwaitable&lt;IAsyncActiveTransaction&gt; BeginTopLevelTransactionAsync(string description, TransactionPurpose transactionType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>A human-readable description of what this transaction is doing</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TransactionPurpose.html">TransactionPurpose</a></td>
+        <td><span class="parametername">transactionType</span></td>
+        <td><p>The high-level type of this transaction</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.ActivityAwaitable-1.html">ActivityAwaitable</a>&lt;<a class="xref" href="NationalInstruments.SourceModel.IAsyncActiveTransaction.html">IAsyncActiveTransaction</a>&gt;</td>
+        <td><p><a class="xref" href="../core/NationalInstruments.Core.ActivityAwaitable-1.html">ActivityAwaitable&lt;T&gt;</a>; await it to get the new active composite transaction. Transaction body will execute on appropriate thread as described above.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_SourceModel_TransactionManager_BeginTopLevelTransactionAsync_System_String_NationalInstruments_SourceModel_TransactionPurpose__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method automatically implements background-aware transactions based on which thread calls it and the state of this transaction manager.
+This method waits until the transaction system is idle so that the new transaction is always the outer composite transaction.</p>
+<p>Transaction body may execute on different threads depending on conditions:</p>
+<ol>
+<li><p>Awaiter will continue on UI thread if ANY of these conditions are true:
+1A. Model does not allow background edits
+1B. Caller is on the UI thread</p>
+</li>
+<li><p>Awaiter will continue on background activity thread if ALL of these conditions are true:
+2A. Model allows background edits
+2B. Caller is on a background thread</p>
+</li>
+</ol>
+<p>REMINDER: Always await <a class="xref" href="NationalInstruments.SourceModel.IAsyncActiveTransaction.html#NationalInstruments_SourceModel_IAsyncActiveTransaction_CommitAsync">CommitAsync()</a> on returned transaction!
+Failure to do so could cause the rest of your code in the calling method to execute on an unexpected thread.
+This includes cases where the transaction body throws an exception, which will skip a commit call inside the using block.
+Recommended best practice: encapsulate your using block with Begin and Commit calls in a private async method that contains
+no other code after commit.  The await at the caller level should return your code to that original threading context.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_BeginTopLevelTransactionAsync_" data-uid="NationalInstruments.SourceModel.TransactionManager.BeginTopLevelTransactionAsync*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_BeginTopLevelTransactionAsync_System_String_NationalInstruments_SourceModel_TransactionPurpose_System_Threading_CancellationToken_" data-uid="NationalInstruments.SourceModel.TransactionManager.BeginTopLevelTransactionAsync(System.String,NationalInstruments.SourceModel.TransactionPurpose,System.Threading.CancellationToken)">BeginTopLevelTransactionAsync(String, TransactionPurpose, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Begin a new composite transaction from any thread, which will immediately become the active composite transaction.
+Always await <a class="xref" href="NationalInstruments.SourceModel.IAsyncActiveTransaction.html#NationalInstruments_SourceModel_IAsyncActiveTransaction_CommitAsync">CommitAsync()</a> on returned transaction.
+See remarks for threading details.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ActivityAwaitable&lt;IAsyncActiveTransaction&gt; BeginTopLevelTransactionAsync(string description, TransactionPurpose transactionType, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>a human-readable description of what this transaction is doing</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TransactionPurpose.html">TransactionPurpose</a></td>
+        <td><span class="parametername">transactionType</span></td>
+        <td><p>The high-level type of this transaction</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>Cancellation token to observe while waiting for the lock</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.ActivityAwaitable-1.html">ActivityAwaitable</a>&lt;<a class="xref" href="NationalInstruments.SourceModel.IAsyncActiveTransaction.html">IAsyncActiveTransaction</a>&gt;</td>
+        <td><p><a class="xref" href="../core/NationalInstruments.Core.ActivityAwaitable-1.html">ActivityAwaitable&lt;T&gt;</a>; await it to get the new active composite transaction. Transaction body will execute on appropriate thread as described above.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_SourceModel_TransactionManager_BeginTopLevelTransactionAsync_System_String_NationalInstruments_SourceModel_TransactionPurpose_System_Threading_CancellationToken__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method automatically implements background-aware transactions based on which thread calls it and the state of this transaction manager.
+This method waits until the transaction system is idle so that the new transaction is always the outer composite transaction.</p>
+<p>Transaction body may execute on different threads depending on conditions:</p>
+<ol>
+<li><p>Awaiter will continue on UI thread if ANY of these conditions are true:
+1A. Model does not allow background edits
+1B. Caller is on the UI thread</p>
+</li>
+<li><p>Awaiter will continue on background activity thread if ALL of these conditions are true:
+2A. Model allows background edits
+2B. Caller is on a background thread</p>
+</li>
+</ol>
+<p>REMINDER: Always await <a class="xref" href="NationalInstruments.SourceModel.IAsyncActiveTransaction.html#NationalInstruments_SourceModel_IAsyncActiveTransaction_CommitAsync">CommitAsync()</a> on returned transaction!
+Failure to do so could cause the rest of your code in the calling method to execute on an unexpected thread.
+This includes cases where the transaction body throws an exception, which will skip a commit call inside the using block.
+Recommended best practice: encapsulate your using block with Begin and Commit calls in a private async method that contains
+no other code after commit.  The await at the caller level should return your code to that original threading context.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">cancellationToken</code> has had cancellation requested.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_BeginTopLevelTransactionAsync_" data-uid="NationalInstruments.SourceModel.TransactionManager.BeginTopLevelTransactionAsync*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_BeginTopLevelTransactionAsync_System_String_NationalInstruments_SourceModel_TransactionPurpose_System_Threading_CancellationToken_System_Boolean_" data-uid="NationalInstruments.SourceModel.TransactionManager.BeginTopLevelTransactionAsync(System.String,NationalInstruments.SourceModel.TransactionPurpose,System.Threading.CancellationToken,System.Boolean)">BeginTopLevelTransactionAsync(String, TransactionPurpose, CancellationToken, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Begin a new composite transaction from any thread, which will immediately become the active composite transaction.
+Always await <a class="xref" href="NationalInstruments.SourceModel.IAsyncActiveTransaction.html#NationalInstruments_SourceModel_IAsyncActiveTransaction_CommitAsync">CommitAsync()</a> on returned transaction.
+See remarks for threading details.</p>
+<p>NOTE: This overload intended for temporary, limited usage only.  The extra enable flag is provides flexibility to tie actual threading behavior to a feature toggle while we refactor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ActivityAwaitable&lt;IAsyncActiveTransaction&gt; BeginTopLevelTransactionAsync(string description, TransactionPurpose transactionType, CancellationToken cancellationToken, bool enableBackgroundActivity)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>a human-readable description of what this transaction is doing</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TransactionPurpose.html">TransactionPurpose</a></td>
+        <td><span class="parametername">transactionType</span></td>
+        <td><p>the high-level type of this transaction</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>Cancellation token to observe while waiting for the lock</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">enableBackgroundActivity</span></td>
+        <td><p>Enable transaction body to execute on a background activity thread if the model allows it.
+This pattern allows callers to control which threading behavior they want; e.g. via feature toggles.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.ActivityAwaitable-1.html">ActivityAwaitable</a>&lt;<a class="xref" href="NationalInstruments.SourceModel.IAsyncActiveTransaction.html">IAsyncActiveTransaction</a>&gt;</td>
+        <td><p><a class="xref" href="../core/NationalInstruments.Core.ActivityAwaitable-1.html">ActivityAwaitable&lt;T&gt;</a>; await it to get the new active composite transaction. Transaction body will execute on appropriate thread as described above.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_SourceModel_TransactionManager_BeginTopLevelTransactionAsync_System_String_NationalInstruments_SourceModel_TransactionPurpose_System_Threading_CancellationToken_System_Boolean__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method automatically implements background-aware transactions based on which thread calls it and the state of this transaction manager.
+This method waits until the transaction system is idle so that the new transaction is always the outer composite transaction.</p>
+<p>Transaction body may execute on different threads depending on conditions:</p>
+<ol>
+<li><p>Awaiter will continue on UI thread if ANY of these conditions are true:
+1A. Model does not allow background edits
+1B. Caller is on the UI thread
+1C. <code data-dev-comment-type="paramref" class="paramref">enableBackgroundActivity</code> is FALSE.</p>
+</li>
+<li><p>Awaiter will continue on background activity thread if ALL of these conditions are true:
+2A. Model allows background edits
+2B. Caller is on a background thread
+2C. <code data-dev-comment-type="paramref" class="paramref">enableBackgroundActivity</code> is TRUE.</p>
+</li>
+</ol>
+<p>REMINDER: Always await <a class="xref" href="NationalInstruments.SourceModel.IAsyncActiveTransaction.html#NationalInstruments_SourceModel_IAsyncActiveTransaction_CommitAsync">CommitAsync()</a> on returned transaction!
+Failure to do so could cause the rest of your code in the calling method to execute on an unexpected thread.
+This includes cases where the transaction body throws an exception, which will skip a commit call inside the using block.
+Recommended best practice: encapsulate your using block with Begin and Commit calls in a private async method that contains
+no other code after commit.  The await at the caller level should return your code to that original threading context.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">cancellationToken</code> has had cancellation requested.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_BeginTransaction_" data-uid="NationalInstruments.SourceModel.TransactionManager.BeginTransaction*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_BeginTransaction_System_String_NationalInstruments_SourceModel_TransactionPurpose_" data-uid="NationalInstruments.SourceModel.TransactionManager.BeginTransaction(System.String,NationalInstruments.SourceModel.TransactionPurpose)">BeginTransaction(String, TransactionPurpose)</h4>
+  <div class="markdown level1 summary"><p>Begin a new composite transaction, which will immediately become the active composite transaction</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IActiveTransaction BeginTransaction(string description, TransactionPurpose transactionType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>a human-readable description of what this transaction is doing</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TransactionPurpose.html">TransactionPurpose</a></td>
+        <td><span class="parametername">transactionType</span></td>
+        <td><p>the high-level type of this transaction</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.IActiveTransaction.html">IActiveTransaction</a></td>
+        <td><p>the new active composite transaction</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_BeginTransaction_" data-uid="NationalInstruments.SourceModel.TransactionManager.BeginTransaction*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_BeginTransaction_System_String_NationalInstruments_SourceModel_TransactionPurpose_NationalInstruments_SourceModel_HierarchyLockingStrategy_" data-uid="NationalInstruments.SourceModel.TransactionManager.BeginTransaction(System.String,NationalInstruments.SourceModel.TransactionPurpose,NationalInstruments.SourceModel.HierarchyLockingStrategy)">BeginTransaction(String, TransactionPurpose, HierarchyLockingStrategy)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IActiveTransaction BeginTransaction(string description, TransactionPurpose transactionPurpose, HierarchyLockingStrategy lockingStrategy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>a human-readable description of what this transaction is doing</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TransactionPurpose.html">TransactionPurpose</a></td>
+        <td><span class="parametername">transactionPurpose</span></td>
+        <td><p>the high-level type of this transaction</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.HierarchyLockingStrategy.html">HierarchyLockingStrategy</a></td>
+        <td><span class="parametername">lockingStrategy</span></td>
+        <td><p>The locking strategy to use when acquiring a lock that is part of a source model hierarchy.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.IActiveTransaction.html">IActiveTransaction</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_CancelInteractiveTransactions_" data-uid="NationalInstruments.SourceModel.TransactionManager.CancelInteractiveTransactions*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_CancelInteractiveTransactions" data-uid="NationalInstruments.SourceModel.TransactionManager.CancelInteractiveTransactions">CancelInteractiveTransactions()</h4>
+  <div class="markdown level1 summary"><p>Cancel all nested interactive transactions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CancelInteractiveTransactions()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_CheckReadAccess_" data-uid="NationalInstruments.SourceModel.TransactionManager.CheckReadAccess*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_CheckReadAccess" data-uid="NationalInstruments.SourceModel.TransactionManager.CheckReadAccess">CheckReadAccess()</h4>
+  <div class="markdown level1 summary"><p>Determines if the current thread can read the model.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CheckReadAccess()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>true if the current thread can read from the model.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_CheckWriteAccess_" data-uid="NationalInstruments.SourceModel.TransactionManager.CheckWriteAccess*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_CheckWriteAccess" data-uid="NationalInstruments.SourceModel.TransactionManager.CheckWriteAccess">CheckWriteAccess()</h4>
+  <div class="markdown level1 summary"><p>Determines if the current thread can modify the model.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CheckWriteAccess()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>true if the current thread can modify the model</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_Cleanup_" data-uid="NationalInstruments.SourceModel.TransactionManager.Cleanup*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_Cleanup" data-uid="NationalInstruments.SourceModel.TransactionManager.Cleanup">Cleanup()</h4>
+  <div class="markdown level1 summary"><p>Called to clean up any state in the transaction manager when the owner of the
+transaction manager no longer needs the transaction manager.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Cleanup()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_ClearRedoStack_" data-uid="NationalInstruments.SourceModel.TransactionManager.ClearRedoStack*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_ClearRedoStack" data-uid="NationalInstruments.SourceModel.TransactionManager.ClearRedoStack">ClearRedoStack()</h4>
+  <div class="markdown level1 summary"><p>Removes all rolled back transactions from the redo stack.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClearRedoStack()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_CommitInteractiveTransactions_" data-uid="NationalInstruments.SourceModel.TransactionManager.CommitInteractiveTransactions*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_CommitInteractiveTransactions" data-uid="NationalInstruments.SourceModel.TransactionManager.CommitInteractiveTransactions">CommitInteractiveTransactions()</h4>
+  <div class="markdown level1 summary"><p>Commit all nested interactive transactions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CommitInteractiveTransactions()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_DisableTransactionRecording_" data-uid="NationalInstruments.SourceModel.TransactionManager.DisableTransactionRecording*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_DisableTransactionRecording" data-uid="NationalInstruments.SourceModel.TransactionManager.DisableTransactionRecording">DisableTransactionRecording()</h4>
+  <div class="markdown level1 summary"><p>Temporarily disables recording of transactions until the returned IDisposable is disposed.  If called multiple times,
+all IDisposables must be disposed before transaction recording will resume.  This function isn&apos;t thread safe.  If callers
+dispose from a different thread than the IDisposable was created from, it&apos;s up to the caller to ensure proper usage
+and synchronization.  </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDisposable DisableTransactionRecording()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></td>
+        <td><p>An IDisposable that when disposed will resume recording of transactions or Null if disabling of transaction
+recording isn&apos;t supported.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_DiscardAllTransactions_" data-uid="NationalInstruments.SourceModel.TransactionManager.DiscardAllTransactions*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_DiscardAllTransactions" data-uid="NationalInstruments.SourceModel.TransactionManager.DiscardAllTransactions">DiscardAllTransactions()</h4>
+  <div class="markdown level1 summary"><p>Call to discard all transactions from the undo and redo stacks.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DiscardAllTransactions()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_EndInteractiveTransaction_" data-uid="NationalInstruments.SourceModel.TransactionManager.EndInteractiveTransaction*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_EndInteractiveTransaction_NationalInstruments_SourceModel_IInteractiveTransactionOwner_System_Boolean_" data-uid="NationalInstruments.SourceModel.TransactionManager.EndInteractiveTransaction(NationalInstruments.SourceModel.IInteractiveTransactionOwner,System.Boolean)">EndInteractiveTransaction(IInteractiveTransactionOwner, Boolean)</h4>
+  <div class="markdown level1 summary"><p>End the current interactive transaction created by the owner of it</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICompletedTransaction EndInteractiveTransaction(IInteractiveTransactionOwner owner, bool cancel)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.IInteractiveTransactionOwner.html">IInteractiveTransactionOwner</a></td>
+        <td><span class="parametername">owner</span></td>
+        <td><p>Current transaction owner</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">cancel</span></td>
+        <td><p>true to cancel, false to commit</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ICompletedTransaction.html">ICompletedTransaction</a></td>
+        <td><p>The completed transaction</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_EndSideEffect_" data-uid="NationalInstruments.SourceModel.TransactionManager.EndSideEffect*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_EndSideEffect" data-uid="NationalInstruments.SourceModel.TransactionManager.EndSideEffect">EndSideEffect()</h4>
+  <div class="markdown level1 summary"><p>Ends the application of a side effect.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void EndSideEffect()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_ExecuteWhenIdleAsync_" data-uid="NationalInstruments.SourceModel.TransactionManager.ExecuteWhenIdleAsync*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_ExecuteWhenIdleAsync_System_Action_" data-uid="NationalInstruments.SourceModel.TransactionManager.ExecuteWhenIdleAsync(System.Action)">ExecuteWhenIdleAsync(Action)</h4>
+  <div class="markdown level1 summary"><p>Executes the given action when the transaction system is idle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task ExecuteWhenIdleAsync(Action action)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td><span class="parametername">action</span></td>
+        <td><p>The action to be executed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>A task representing the work of the execution.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_SourceModel_TransactionManager_ExecuteWhenIdleAsync_System_Action__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the system is idle, the action will be immediately executed.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_FindCorrespondingTransaction_" data-uid="NationalInstruments.SourceModel.TransactionManager.FindCorrespondingTransaction*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_FindCorrespondingTransaction_NationalInstruments_SourceModel_ICompletedTransaction_System_Boolean_" data-uid="NationalInstruments.SourceModel.TransactionManager.FindCorrespondingTransaction(NationalInstruments.SourceModel.ICompletedTransaction,System.Boolean)">FindCorrespondingTransaction(ICompletedTransaction, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Finds transaction in this manager&apos;s undo stack that corresponds to the transaction passed in that
+is in a linked definition&apos;s manager&apos;s undo stack</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICompletedTransaction FindCorrespondingTransaction(ICompletedTransaction other, bool useUndoStack)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ICompletedTransaction.html">ICompletedTransaction</a></td>
+        <td><span class="parametername">other</span></td>
+        <td><p>the transaction in the other manager</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">useUndoStack</span></td>
+        <td><p>true to look in the undo stack; false to look in the redo stack</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ICompletedTransaction.html">ICompletedTransaction</a></td>
+        <td><p>the corresponding transaction, if one is found</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_FindRecordedTransaction_" data-uid="NationalInstruments.SourceModel.TransactionManager.FindRecordedTransaction*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_FindRecordedTransaction_System_Object_System_String_" data-uid="NationalInstruments.SourceModel.TransactionManager.FindRecordedTransaction(System.Object,System.String)">FindRecordedTransaction(Object, String)</h4>
+  <div class="markdown level1 summary"><p>Finds a transaction item which was previously recoreded using RecordReplaceableTransaction</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransactionItem FindRecordedTransaction(object target, string propertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">target</span></td>
+        <td><p>The target element of the transaction item</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>The property name of the affected property</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TransactionItem.html">TransactionItem</a></td>
+        <td><p>The previously recorded transaction or null if not found</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_GetFlattenedListOfTransactionItems_" data-uid="NationalInstruments.SourceModel.TransactionManager.GetFlattenedListOfTransactionItems*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_GetFlattenedListOfTransactionItems_NationalInstruments_SourceModel_ITransactionInfo_" data-uid="NationalInstruments.SourceModel.TransactionManager.GetFlattenedListOfTransactionItems(NationalInstruments.SourceModel.ITransactionInfo)">GetFlattenedListOfTransactionItems(ITransactionInfo)</h4>
+  <div class="markdown level1 summary"><p>Gets the list of individual transaction items recursively in transaction without altering transaction</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IList&lt;TransactionItem&gt; GetFlattenedListOfTransactionItems(ITransactionInfo transaction)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ITransactionInfo.html">ITransactionInfo</a></td>
+        <td><span class="parametername">transaction</span></td>
+        <td><p>the composite transaction</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.TransactionItem.html">TransactionItem</a>&gt;</td>
+        <td><p>the flattened list of all items in transaction</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_IsSuccessfulReason_" data-uid="NationalInstruments.SourceModel.TransactionManager.IsSuccessfulReason*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_IsSuccessfulReason_NationalInstruments_SourceModel_TransactionChangeReason_" data-uid="NationalInstruments.SourceModel.TransactionManager.IsSuccessfulReason(NationalInstruments.SourceModel.TransactionChangeReason)">IsSuccessfulReason(TransactionChangeReason)</h4>
+  <div class="markdown level1 summary"><p>Returns true if the reason is not Cancelled nor RuleFailed nor ValidationFailed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsSuccessfulReason(TransactionChangeReason reason)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TransactionChangeReason.html">TransactionChangeReason</a></td>
+        <td><span class="parametername">reason</span></td>
+        <td><p>the reason of the transaction</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>see summary</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_OnTransactionCommitted_" data-uid="NationalInstruments.SourceModel.TransactionManager.OnTransactionCommitted*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_OnTransactionCommitted_NationalInstruments_SourceModel_TransactionEventArgs_" data-uid="NationalInstruments.SourceModel.TransactionManager.OnTransactionCommitted(NationalInstruments.SourceModel.TransactionEventArgs)">OnTransactionCommitted(TransactionEventArgs)</h4>
+  <div class="markdown level1 summary"><p>Called to invoke the TransactionCommitted event</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnTransactionCommitted(TransactionEventArgs e)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TransactionEventArgs.html">TransactionEventArgs</a></td>
+        <td><span class="parametername">e</span></td>
+        <td><p>event args</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_OnTransactionEnded_" data-uid="NationalInstruments.SourceModel.TransactionManager.OnTransactionEnded*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_OnTransactionEnded_NationalInstruments_SourceModel_TransactionEventArgs_" data-uid="NationalInstruments.SourceModel.TransactionManager.OnTransactionEnded(NationalInstruments.SourceModel.TransactionEventArgs)">OnTransactionEnded(TransactionEventArgs)</h4>
+  <div class="markdown level1 summary"><p>Called to invoke the TransactionEnded event</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnTransactionEnded(TransactionEventArgs e)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TransactionEventArgs.html">TransactionEventArgs</a></td>
+        <td><span class="parametername">e</span></td>
+        <td><p>event args</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_OnTransactionStarted_" data-uid="NationalInstruments.SourceModel.TransactionManager.OnTransactionStarted*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_OnTransactionStarted_NationalInstruments_SourceModel_TransactionEventArgs_" data-uid="NationalInstruments.SourceModel.TransactionManager.OnTransactionStarted(NationalInstruments.SourceModel.TransactionEventArgs)">OnTransactionStarted(TransactionEventArgs)</h4>
+  <div class="markdown level1 summary"><p>Called to invoke the TransactionStarted event</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnTransactionStarted(TransactionEventArgs e)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TransactionEventArgs.html">TransactionEventArgs</a></td>
+        <td><span class="parametername">e</span></td>
+        <td><p>event args</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_OnTransactionStateChanged_" data-uid="NationalInstruments.SourceModel.TransactionManager.OnTransactionStateChanged*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_OnTransactionStateChanged_NationalInstruments_SourceModel_TransactionEventArgs_" data-uid="NationalInstruments.SourceModel.TransactionManager.OnTransactionStateChanged(NationalInstruments.SourceModel.TransactionEventArgs)">OnTransactionStateChanged(TransactionEventArgs)</h4>
+  <div class="markdown level1 summary"><p>Helper function to emit the CompositeTransactionCompletedUndoneOrRedone event</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnTransactionStateChanged(TransactionEventArgs eventArgs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TransactionEventArgs.html">TransactionEventArgs</a></td>
+        <td><span class="parametername">eventArgs</span></td>
+        <td><p>the arguments object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_RecommitLastRolledBackUserTransaction_" data-uid="NationalInstruments.SourceModel.TransactionManager.RecommitLastRolledBackUserTransaction*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_RecommitLastRolledBackUserTransaction" data-uid="NationalInstruments.SourceModel.TransactionManager.RecommitLastRolledBackUserTransaction">RecommitLastRolledBackUserTransaction()</h4>
+  <div class="markdown level1 summary"><p>Recommit the last <em>user</em> transaction on the rolledback stack</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICompletedTransaction RecommitLastRolledBackUserTransaction()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ICompletedTransaction.html">ICompletedTransaction</a></td>
+        <td><p>the recommitted transaction if any were on the stack; otherwise null</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_RecommitThroughTransaction_" data-uid="NationalInstruments.SourceModel.TransactionManager.RecommitThroughTransaction*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_RecommitThroughTransaction_NationalInstruments_SourceModel_ICompletedTransaction_" data-uid="NationalInstruments.SourceModel.TransactionManager.RecommitThroughTransaction(NationalInstruments.SourceModel.ICompletedTransaction)">RecommitThroughTransaction(ICompletedTransaction)</h4>
+  <div class="markdown level1 summary"><p>Call to recommit rolled-back transactions down to and including the given composite transaction</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RecommitThroughTransaction(ICompletedTransaction completedTransaction)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ICompletedTransaction.html">ICompletedTransaction</a></td>
+        <td><span class="parametername">completedTransaction</span></td>
+        <td><p>the composite transaction you wish to recommit through</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_RecordReplaceableTransaction_" data-uid="NationalInstruments.SourceModel.TransactionManager.RecordReplaceableTransaction*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_RecordReplaceableTransaction_NationalInstruments_SourceModel_TransactionItem_" data-uid="NationalInstruments.SourceModel.TransactionManager.RecordReplaceableTransaction(NationalInstruments.SourceModel.TransactionItem)">RecordReplaceableTransaction(TransactionItem)</h4>
+  <div class="markdown level1 summary"><p>Records a transaction item which can be found and updated in the future using FindRecordedTransaction and RecordUpdatedTransaction</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RecordReplaceableTransaction(TransactionItem item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TransactionItem.html">TransactionItem</a></td>
+        <td><span class="parametername">item</span></td>
+        <td><p>the item encapsulating the change</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_RecordTransaction_" data-uid="NationalInstruments.SourceModel.TransactionManager.RecordTransaction*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_RecordTransaction_NationalInstruments_SourceModel_TransactionItem_" data-uid="NationalInstruments.SourceModel.TransactionManager.RecordTransaction(NationalInstruments.SourceModel.TransactionItem)">RecordTransaction(TransactionItem)</h4>
+  <div class="markdown level1 summary"><p>Records a change with the transaction system</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RecordTransaction(TransactionItem item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TransactionItem.html">TransactionItem</a></td>
+        <td><span class="parametername">item</span></td>
+        <td><p>the item encapsulating the change</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_RecordUpdatedTransaction_" data-uid="NationalInstruments.SourceModel.TransactionManager.RecordUpdatedTransaction*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_RecordUpdatedTransaction_NationalInstruments_SourceModel_TransactionItem_" data-uid="NationalInstruments.SourceModel.TransactionManager.RecordUpdatedTransaction(NationalInstruments.SourceModel.TransactionItem)">RecordUpdatedTransaction(TransactionItem)</h4>
+  <div class="markdown level1 summary"><p>Records that a previously recorded transaction using RecordReplaceableTransaction was updated</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RecordUpdatedTransaction(TransactionItem item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TransactionItem.html">TransactionItem</a></td>
+        <td><span class="parametername">item</span></td>
+        <td><p>The transaction that was updated an originally enlisted using RecordReplaceableTransaction</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_RemoveNamedPostTransactionSideEffect_" data-uid="NationalInstruments.SourceModel.TransactionManager.RemoveNamedPostTransactionSideEffect*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_RemoveNamedPostTransactionSideEffect_System_Object_System_String_" data-uid="NationalInstruments.SourceModel.TransactionManager.RemoveNamedPostTransactionSideEffect(System.Object,System.String)">RemoveNamedPostTransactionSideEffect(Object, String)</h4>
+  <div class="markdown level1 summary"><p>Removes the named post transaction side effect for the registering object from all committed and active transactions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveNamedPostTransactionSideEffect(object registeringObject, string sideEffectName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">registeringObject</span></td>
+        <td><p>The object that registered this side effect.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">sideEffectName</span></td>
+        <td><p>The name the side effect was registered with for the <see cref="!:registeringObject"></see>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_RollbackLastCommittedTransaction_" data-uid="NationalInstruments.SourceModel.TransactionManager.RollbackLastCommittedTransaction*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_RollbackLastCommittedTransaction" data-uid="NationalInstruments.SourceModel.TransactionManager.RollbackLastCommittedTransaction">RollbackLastCommittedTransaction()</h4>
+  <div class="markdown level1 summary"><p>Roll back the last committed transaction (undo)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICompletedTransaction RollbackLastCommittedTransaction()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ICompletedTransaction.html">ICompletedTransaction</a></td>
+        <td><p>The transaction that was rolled back.  This is the earliest transaction that was
+rolled back.  This may not be a user transaction and instead may be a side effect transaction.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_RollbackLastCommittedUserTransaction_" data-uid="NationalInstruments.SourceModel.TransactionManager.RollbackLastCommittedUserTransaction*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_RollbackLastCommittedUserTransaction" data-uid="NationalInstruments.SourceModel.TransactionManager.RollbackLastCommittedUserTransaction">RollbackLastCommittedUserTransaction()</h4>
+  <div class="markdown level1 summary"><p>Rollback the most recently committed TransactionPurpose.User transaction; this will rollback through non-User
+transactions if any exist on the stack on top of the most recent User one</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICompletedTransaction RollbackLastCommittedUserTransaction()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ICompletedTransaction.html">ICompletedTransaction</a></td>
+        <td><p>the completed User transaction that was rolled back or null if there is no User transaction on
+the committed transactions stack</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_RollbackThroughTransaction_" data-uid="NationalInstruments.SourceModel.TransactionManager.RollbackThroughTransaction*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_RollbackThroughTransaction_NationalInstruments_SourceModel_ICompletedTransaction_" data-uid="NationalInstruments.SourceModel.TransactionManager.RollbackThroughTransaction(NationalInstruments.SourceModel.ICompletedTransaction)">RollbackThroughTransaction(ICompletedTransaction)</h4>
+  <div class="markdown level1 summary"><p>Call to roll back committed transactions down to and including the given composite transaction</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RollbackThroughTransaction(ICompletedTransaction completedTransaction)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ICompletedTransaction.html">ICompletedTransaction</a></td>
+        <td><span class="parametername">completedTransaction</span></td>
+        <td><p>the composite transaction you wish to roll back through</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_SetActiveTransactionContainedItems_" data-uid="NationalInstruments.SourceModel.TransactionManager.SetActiveTransactionContainedItems*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_SetActiveTransactionContainedItems_NationalInstruments_SourceModel_ContainedItemCategory_" data-uid="NationalInstruments.SourceModel.TransactionManager.SetActiveTransactionContainedItems(NationalInstruments.SourceModel.ContainedItemCategory)">SetActiveTransactionContainedItems(ContainedItemCategory)</h4>
+  <div class="markdown level1 summary"><p>Set ActiveTransactionContainedItems if current value is ContainedItemCategory.Unspecified; otherwise throw an exception</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetActiveTransactionContainedItems(ContainedItemCategory category)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ContainedItemCategory.html">ContainedItemCategory</a></td>
+        <td><span class="parametername">category</span></td>
+        <td><p>The category to set for the transaction</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_SetLastUserTransactionAsSaveMarker_" data-uid="NationalInstruments.SourceModel.TransactionManager.SetLastUserTransactionAsSaveMarker*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_SetLastUserTransactionAsSaveMarker" data-uid="NationalInstruments.SourceModel.TransactionManager.SetLastUserTransactionAsSaveMarker">SetLastUserTransactionAsSaveMarker()</h4>
+  <div class="markdown level1 summary"><p>Call to set the last committed user transaction as a save marker; clients can query the state of the
+last user transaction at any time through the property IsLastUserTransactionASaveMarker on this
+ITransactionManager.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetLastUserTransactionAsSaveMarker()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_ShouldBeginTransaction_" data-uid="NationalInstruments.SourceModel.TransactionManager.ShouldBeginTransaction*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_ShouldBeginTransaction" data-uid="NationalInstruments.SourceModel.TransactionManager.ShouldBeginTransaction">ShouldBeginTransaction()</h4>
+  <div class="markdown level1 summary"><p>Ask whether you should begin a transaction or not before enlisting transaction items into this transaction
+manager via the TransactionRecruiter</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual BeginTransactionState ShouldBeginTransaction()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.BeginTransactionState.html">BeginTransactionState</a></td>
+        <td><p>CannotBeginOne if: Canceling, undoing/redoing, notifying state changes for a transaction, or transitioning an Element&apos;s State.
+AddItemsDirectly if: rules are running or a transaction has been begun with items already added to it or
+one has been begun without anything added to it but there is no interactive transaction in progress;
+ShouldBeginTransaction if: the current active transaction has nested transactions in it or if it has no items
+or nested transactions in it but there is an interactive transaction in progress, or if there is no transaction
+that has been begun at all</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_SynchronizeEditsAcrossLinkedContextsAsync_" data-uid="NationalInstruments.SourceModel.TransactionManager.SynchronizeEditsAcrossLinkedContextsAsync*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_SynchronizeEditsAcrossLinkedContextsAsync" data-uid="NationalInstruments.SourceModel.TransactionManager.SynchronizeEditsAcrossLinkedContextsAsync">SynchronizeEditsAcrossLinkedContextsAsync()</h4>
+  <div class="markdown level1 summary"><p>Synchronizes all edits made in one context with all linked contexts where those edits haven&apos;t been applied.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task SynchronizeEditsAcrossLinkedContextsAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>A task that can be used to track when all edits have been synchronized</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_SourceModel_TransactionManager_SynchronizeEditsAcrossLinkedContextsAsync_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This function will synchronize edits across the entire source model hierarchy and not just
+the transaction manager specified.  It will look at all linked transaction managers to the specified
+manager to find which contexts have unapplied edits.  It will then look at all transaction managers
+in those contexts and apply changes as needed.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_TransactBetweenRevertCommit_" data-uid="NationalInstruments.SourceModel.TransactionManager.TransactBetweenRevertCommit*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_TransactBetweenRevertCommit_System_String_NationalInstruments_SourceModel_TransactionPurpose_System_Action_" data-uid="NationalInstruments.SourceModel.TransactionManager.TransactBetweenRevertCommit(System.String,NationalInstruments.SourceModel.TransactionPurpose,System.Action)">TransactBetweenRevertCommit(String, TransactionPurpose, Action)</h4>
+  <div class="markdown level1 summary"><p>Call during an active transaction to transact the action after the next revert and before
+the next corresponding commit. This assumes that a revert-commit pair of nested transactions are
+going to happen. A nested transaction will be begun and then action will be called, and then this
+manager will commit any transaction items enlisted by the action</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void TransactBetweenRevertCommit(string description, TransactionPurpose transactionPurpose, Action action)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>the transaction&apos;s description</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TransactionPurpose.html">TransactionPurpose</a></td>
+        <td><span class="parametername">transactionPurpose</span></td>
+        <td><p>the purpose</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td><span class="parametername">action</span></td>
+        <td><p>the actions which will go in a nested transaction begun by the ITransactionManager</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_SourceModel_TransactionManager_TransactBetweenRevertCommit_System_String_NationalInstruments_SourceModel_TransactionPurpose_System_Action__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>if called when no transaction has even been begun, this function will no-op and your action will not
+be queued; if called in a transaction but one that never reverts a committed nested transaction, the
+action will be queued but then cleared without executing it upon the outer transaction commit</p>
+</div>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_TransactTopLevel_" data-uid="NationalInstruments.SourceModel.TransactionManager.TransactTopLevel*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_TransactTopLevel_System_String_NationalInstruments_SourceModel_TransactionPurpose_NationalInstruments_SourceModel_HierarchyLockingStrategy_System_Boolean_System_Boolean_System_Action_" data-uid="NationalInstruments.SourceModel.TransactionManager.TransactTopLevel(System.String,NationalInstruments.SourceModel.TransactionPurpose,NationalInstruments.SourceModel.HierarchyLockingStrategy,System.Boolean,System.Boolean,System.Action)">TransactTopLevel(String, TransactionPurpose, HierarchyLockingStrategy, Boolean, Boolean, Action)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void TransactTopLevel(string description, TransactionPurpose transactionType, HierarchyLockingStrategy strategy, bool shouldPropagate, bool discard, Action action)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">description</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TransactionPurpose.html">TransactionPurpose</a></td>
+        <td><span class="parametername">transactionType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.HierarchyLockingStrategy.html">HierarchyLockingStrategy</a></td>
+        <td><span class="parametername">strategy</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">shouldPropagate</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">discard</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td><span class="parametername">action</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_TransactTopLevel_" data-uid="NationalInstruments.SourceModel.TransactionManager.TransactTopLevel*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_TransactTopLevel_System_String_NationalInstruments_SourceModel_TransactionPurpose_System_Boolean_System_Boolean_System_Action_" data-uid="NationalInstruments.SourceModel.TransactionManager.TransactTopLevel(System.String,NationalInstruments.SourceModel.TransactionPurpose,System.Boolean,System.Boolean,System.Action)">TransactTopLevel(String, TransactionPurpose, Boolean, Boolean, Action)</h4>
+  <div class="markdown level1 summary"><p>Perform some action from a location that has no idea what the current state of the transaction manager is in
+and don&apos;t own any possible transaction. This is bad, but less bad than ShouldBeginTransaction()</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void TransactTopLevel(string description, TransactionPurpose transactionType, bool shouldPropagate, bool discard, Action action)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>Description for created transaction</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TransactionPurpose.html">TransactionPurpose</a></td>
+        <td><span class="parametername">transactionType</span></td>
+        <td><p>Type for created transaction</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">shouldPropagate</span></td>
+        <td><p>Whether the resulting transaction should propagate</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">discard</span></td>
+        <td><p><code>true</code> to discard the transaction after committing.  If the value is <code>true</code>, the only allowed value
+for <code data-dev-comment-type="paramref" class="paramref">transactionType</code> is <a class="xref" href="NationalInstruments.SourceModel.TransactionPurpose.html#NationalInstruments_SourceModel_TransactionPurpose_NonUser">NonUser</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td><span class="parametername">action</span></td>
+        <td><p>Action to perform</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_TransactWhenPossible_" data-uid="NationalInstruments.SourceModel.TransactionManager.TransactWhenPossible*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_TransactWhenPossible_System_String_NationalInstruments_SourceModel_TransactionPurpose_NationalInstruments_SourceModel_HierarchyLockingStrategy_System_Action_" data-uid="NationalInstruments.SourceModel.TransactionManager.TransactWhenPossible(System.String,NationalInstruments.SourceModel.TransactionPurpose,NationalInstruments.SourceModel.HierarchyLockingStrategy,System.Action)">TransactWhenPossible(String, TransactionPurpose, HierarchyLockingStrategy, Action)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void TransactWhenPossible(string description, TransactionPurpose transactionType, HierarchyLockingStrategy strategy, Action action)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">description</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TransactionPurpose.html">TransactionPurpose</a></td>
+        <td><span class="parametername">transactionType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.HierarchyLockingStrategy.html">HierarchyLockingStrategy</a></td>
+        <td><span class="parametername">strategy</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td><span class="parametername">action</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionManager_TransactWhenPossible_" data-uid="NationalInstruments.SourceModel.TransactionManager.TransactWhenPossible*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_TransactWhenPossible_System_String_NationalInstruments_SourceModel_TransactionPurpose_System_Action_" data-uid="NationalInstruments.SourceModel.TransactionManager.TransactWhenPossible(System.String,NationalInstruments.SourceModel.TransactionPurpose,System.Action)">TransactWhenPossible(String, TransactionPurpose, Action)</h4>
+  <div class="markdown level1 summary"><p>Transact the given action. Use this method when you don&apos;t know the current state of the transaction system. The change will go in as soon as possible,
+as opposed to TransactTopLevel, which will always wait till the end of current outer transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void TransactWhenPossible(string description, TransactionPurpose transactionType, Action action)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>String description of action.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TransactionPurpose.html">TransactionPurpose</a></td>
+        <td><span class="parametername">transactionType</span></td>
+        <td><p>Transaction purpose</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td><span class="parametername">action</span></td>
+        <td><p>Action to perform</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="events">Events
+  </h3>
+  
+  
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_AtomicActionComplete" data-uid="NationalInstruments.SourceModel.TransactionManager.AtomicActionComplete">AtomicActionComplete</h4>
+  <div class="markdown level1 summary"><p>Event for when an atomic operation completes</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;AtomicActionCompleteEventArgs&gt; AtomicActionComplete</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.AtomicActionCompleteEventArgs.html">AtomicActionCompleteEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_PropertyChanged" data-uid="NationalInstruments.SourceModel.TransactionManager.PropertyChanged">PropertyChanged</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event PropertyChangedEventHandler PropertyChanged</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.componentmodel.propertychangedeventhandler">PropertyChangedEventHandler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_TransactionCommitted" data-uid="NationalInstruments.SourceModel.TransactionManager.TransactionCommitted">TransactionCommitted</h4>
+  <div class="markdown level1 summary"><p>Register for this event to be notified when any transaction inner or outer is committed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;TransactionEventArgs&gt; TransactionCommitted</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.TransactionEventArgs.html">TransactionEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_TransactionEnded" data-uid="NationalInstruments.SourceModel.TransactionManager.TransactionEnded">TransactionEnded</h4>
+  <div class="markdown level1 summary"><p>An event fired when a transaction has been canceled because it
+resulted in one or more objects within the transaction having an
+invalid state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;TransactionEventArgs&gt; TransactionEnded</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.TransactionEventArgs.html">TransactionEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_TransactionStarted" data-uid="NationalInstruments.SourceModel.TransactionManager.TransactionStarted">TransactionStarted</h4>
+  <div class="markdown level1 summary"><p>Register for this event to be notified when an outermost composite transaction is started via
+BeginTransaction</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;TransactionEventArgs&gt; TransactionStarted</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.TransactionEventArgs.html">TransactionEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_SourceModel_TransactionManager_TransactionStateChanged" data-uid="NationalInstruments.SourceModel.TransactionManager.TransactionStateChanged">TransactionStateChanged</h4>
+  <div class="markdown level1 summary"><p>Register for this event to be notified when an outermost transaction is committed, undone,
+or redone.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;TransactionEventArgs&gt; TransactionStateChanged</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.TransactionEventArgs.html">TransactionEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_SourceModel_TransactionManager_TransactionStateChanged_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>For undo and redo, multiple outermost transactions can be undone and redone; after all of them
+are undone or redone, this event will be sent out for each one, in the order in which it was processed. This
+could mean that the transaction items in one of the transactions that was not the final one could have
+stale information in them.</p>
+</div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ITransactionManager.html">ITransactionManager</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ITransactionRecruiter.html">ITransactionRecruiter</a>
+  </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">System.ComponentModel.INotifyPropertyChanged</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.ViewControlsSizeBehaviorExtensions.html#NationalInstruments_Design_ViewControlsSizeBehaviorExtensions_TransactViewControlsSizeBehavior_NationalInstruments_SourceModel_ITransactionManager_System_String_System_Action_">ViewControlsSizeBehaviorExtensions.TransactViewControlsSizeBehavior(ITransactionManager, String, Action)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Shell.CustomUndoLabelHelpers.html#NationalInstruments_Shell_CustomUndoLabelHelpers_BeginTransactionWithCustomUndoTag_NationalInstruments_SourceModel_ITransactionManager_System_String_NationalInstruments_SourceModel_TransactionPurpose_NationalInstruments_Shell_UndoLabelType_">CustomUndoLabelHelpers.BeginTransactionWithCustomUndoTag(ITransactionManager, String, TransactionPurpose, UndoLabelType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ModelSideEffects.html#NationalInstruments_SourceModel_ModelSideEffects_ScheduleSideEffectsAsync__1_NationalInstruments_SourceModel_ITransactionManager_NationalInstruments_SourceModel_ITransactionManager_NationalInstruments_SourceModel_InspectForSideEffectsFunc___0__NationalInstruments_SourceModel_ApplySideEffectsFunc___0__System_String_">ModelSideEffects.ScheduleSideEffectsAsync&lt;T&gt;(ITransactionManager, ITransactionManager, InspectForSideEffectsFunc&lt;T&gt;, ApplySideEffectsFunc&lt;T&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ModelSideEffects.html#NationalInstruments_SourceModel_ModelSideEffects_ScheduleSideEffectsAsync__1_NationalInstruments_SourceModel_ITransactionManager_NationalInstruments_SourceModel_ITransactionManager_NationalInstruments_SourceModel_InspectForSideEffectsFunc___0__NationalInstruments_SourceModel_ApplySideEffectsFunc___0__NationalInstruments_SourceModel_ScheduleSideEffectsOptions_System_String_">ModelSideEffects.ScheduleSideEffectsAsync&lt;T&gt;(ITransactionManager, ITransactionManager, InspectForSideEffectsFunc&lt;T&gt;, ApplySideEffectsFunc&lt;T&gt;, ScheduleSideEffectsOptions, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ModelSideEffects.html#NationalInstruments_SourceModel_ModelSideEffects_ScheduleSideEffectsAsync__1_NationalInstruments_SourceModel_ITransactionManager_NationalInstruments_SourceModel_ITransactionManager_System_Func___0__System_String_">ModelSideEffects.ScheduleSideEffectsAsync&lt;T&gt;(ITransactionManager, ITransactionManager, Func&lt;T&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ModelSideEffects.html#NationalInstruments_SourceModel_ModelSideEffects_ScheduleSideEffectsAsync__1_NationalInstruments_SourceModel_ITransactionManager_NationalInstruments_SourceModel_ITransactionManager_NationalInstruments_SourceModel_ApplySideEffectsFunc___0__System_String_">ModelSideEffects.ScheduleSideEffectsAsync&lt;T&gt;(ITransactionManager, ITransactionManager, ApplySideEffectsFunc&lt;T&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ModelSideEffects.html#NationalInstruments_SourceModel_ModelSideEffects_ScheduleSideEffectsAsync_NationalInstruments_SourceModel_ITransactionManager_NationalInstruments_SourceModel_ITransactionManager_System_Action_System_String_">ModelSideEffects.ScheduleSideEffectsAsync(ITransactionManager, ITransactionManager, Action, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ModelSideEffects.html#NationalInstruments_SourceModel_ModelSideEffects_ScheduleSideEffectsAsync_NationalInstruments_SourceModel_ITransactionManager_NationalInstruments_SourceModel_SourceModelLock_System_Action_System_String_">ModelSideEffects.ScheduleSideEffectsAsync(ITransactionManager, SourceModelLock, Action, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ModelSideEffects.html#NationalInstruments_SourceModel_ModelSideEffects_ScheduleSideEffectsAsync_NationalInstruments_SourceModel_ITransactionManager_NationalInstruments_SourceModel_ITransactionManager_System_Action_NationalInstruments_SourceModel_ScheduleSideEffectsOptions_System_String_">ModelSideEffects.ScheduleSideEffectsAsync(ITransactionManager, ITransactionManager, Action, ScheduleSideEffectsOptions, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ModelSideEffects.html#NationalInstruments_SourceModel_ModelSideEffects_ScheduleSideEffectsAsync_NationalInstruments_SourceModel_ITransactionManager_NationalInstruments_SourceModel_ITransactionManager_NationalInstruments_SourceModel_InspectForSideEffectsFunc_System_String_">ModelSideEffects.ScheduleSideEffectsAsync(ITransactionManager, ITransactionManager, InspectForSideEffectsFunc, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ModelSideEffects.html#NationalInstruments_SourceModel_ModelSideEffects_ScheduleSideEffectsAsync_NationalInstruments_SourceModel_ITransactionManager_NationalInstruments_SourceModel_ITransactionManager_NationalInstruments_SourceModel_ModelSideEffectsHandler_System_String_">ModelSideEffects.ScheduleSideEffectsAsync(ITransactionManager, ITransactionManager, ModelSideEffectsHandler, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ModelSideEffects.html#NationalInstruments_SourceModel_ModelSideEffects_ScheduleSideEffectsAsync_NationalInstruments_SourceModel_ITransactionManager_NationalInstruments_SourceModel_SourceModelLock_NationalInstruments_SourceModel_ModelSideEffectsHandler_System_String_">ModelSideEffects.ScheduleSideEffectsAsync(ITransactionManager, SourceModelLock, ModelSideEffectsHandler, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ValueListTransactionRecruiterExtensions.html#NationalInstruments_SourceModel_ValueListTransactionRecruiterExtensions_EnlistValueListItem_NationalInstruments_SourceModel_ITransactionRecruiter_NationalInstruments_SourceModel_Element_System_String_System_Func_NationalInstruments_SourceModel_Element_System_Collections_IList__NationalInstruments_SourceModel_ListChangeType_System_Object_System_Object_System_Int32_NationalInstruments_SourceModel_TransactionHints_">ValueListTransactionRecruiterExtensions.EnlistValueListItem(ITransactionRecruiter, Element, String, Func&lt;Element, IList&gt;, ListChangeType, Object, Object, Int32, TransactionHints)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.OwnerComponentCollectionTransactionRecruiterExtensions.html#NationalInstruments_SourceModel_OwnerComponentCollectionTransactionRecruiterExtensions_EnlistOwnerComponentItem_NationalInstruments_SourceModel_ITransactionRecruiter_NationalInstruments_SourceModel_Element_NationalInstruments_SourceModel_Element_System_Int32_NationalInstruments_SourceModel_Element_System_Int32_NationalInstruments_SourceModel_InsertComponent_NationalInstruments_SourceModel_InsertComponent_NationalInstruments_SourceModel_RemoveComponent_NationalInstruments_SourceModel_RemoveComponent_NationalInstruments_SourceModel_TransactionHints_">OwnerComponentCollectionTransactionRecruiterExtensions.EnlistOwnerComponentItem(ITransactionRecruiter, Element, Element, Int32, Element, Int32, InsertComponent, InsertComponent, RemoveComponent, RemoveComponent, TransactionHints)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.DictionaryTransactionRecruiterExtensions.html#NationalInstruments_SourceModel_DictionaryTransactionRecruiterExtensions_EnlistDictionaryItem__2_NationalInstruments_SourceModel_ITransactionRecruiter_NationalInstruments_SourceModel_Element_System_Func_NationalInstruments_SourceModel_Element_System_Collections_Generic_IDictionary___0___1___NationalInstruments_SourceModel_DictionaryChangeType___1___1___0_NationalInstruments_SourceModel_TransactionHints_">DictionaryTransactionRecruiterExtensions.EnlistDictionaryItem&lt;TKey, TValue&gt;(ITransactionRecruiter, Element, Func&lt;Element, IDictionary&lt;TKey, TValue&gt;&gt;, DictionaryChangeType, TValue, TValue, TKey, TransactionHints)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.DictionaryTransactionRecruiterExtensions.html#NationalInstruments_SourceModel_DictionaryTransactionRecruiterExtensions_EnlistObservableDictionaryItem__2_NationalInstruments_SourceModel_ITransactionRecruiter_NationalInstruments_SourceModel_Element_System_String_System_Func_NationalInstruments_SourceModel_Element_System_Collections_Generic_IDictionary___0___1___NationalInstruments_SourceModel_DictionaryChangeType___1___1___0_NationalInstruments_SourceModel_TransactionHints_">DictionaryTransactionRecruiterExtensions.EnlistObservableDictionaryItem&lt;TKey, TValue&gt;(ITransactionRecruiter, Element, String, Func&lt;Element, IDictionary&lt;TKey, TValue&gt;&gt;, DictionaryChangeType, TValue, TValue, TKey, TransactionHints)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ListTransactionRecruiterExtensions.html#NationalInstruments_SourceModel_ListTransactionRecruiterExtensions_EnlistListItem__1_NationalInstruments_SourceModel_ITransactionRecruiter_NationalInstruments_SourceModel_Element_System_String_System_Func_NationalInstruments_SourceModel_Element_System_Collections_Generic_IList___0___NationalInstruments_SourceModel_ListChangeType___0___0_System_Int32_NationalInstruments_SourceModel_TransactionHints_">ListTransactionRecruiterExtensions.EnlistListItem&lt;T&gt;(ITransactionRecruiter, Element, String, Func&lt;Element, IList&lt;T&gt;&gt;, ListChangeType, T, T, Int32, TransactionHints)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.TransactionRecruiterExtensions.html#NationalInstruments_SourceModel_TransactionRecruiterExtensions_EnlistPropertyItem__1_NationalInstruments_SourceModel_ITransactionRecruiter_NationalInstruments_SourceModel_Element_System_String___0___0_NationalInstruments_SourceModel_PropertySetter___0__NationalInstruments_SourceModel_TransactionHints_">TransactionRecruiterExtensions.EnlistPropertyItem&lt;T&gt;(ITransactionRecruiter, Element, String, T, T, PropertySetter&lt;T&gt;, TransactionHints)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.TransactionRecruiterExtensions.html#NationalInstruments_SourceModel_TransactionRecruiterExtensions_EnlistNonPersistedElementChange__1_NationalInstruments_SourceModel_ITransactionRecruiter_NationalInstruments_SourceModel_Element_System_String___0___0_NationalInstruments_SourceModel_PropertySetter___0__NationalInstruments_SourceModel_TransactionHints_">TransactionRecruiterExtensions.EnlistNonPersistedElementChange&lt;T&gt;(ITransactionRecruiter, Element, String, T, T, PropertySetter&lt;T&gt;, TransactionHints)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.TransactionRecruiterExtensions.html#NationalInstruments_SourceModel_TransactionRecruiterExtensions_EnlistSubPropertyItem__2_NationalInstruments_SourceModel_ITransactionRecruiter___1_System_String_NationalInstruments_SourceModel_Element_System_String_System_Double___0___0_NationalInstruments_SourceModel_PropertySetter___0__NationalInstruments_SourceModel_TransactionHints_">TransactionRecruiterExtensions.EnlistSubPropertyItem&lt;T, TTarget&gt;(ITransactionRecruiter, TTarget, String, Element, String, Double, T, T, PropertySetter&lt;T&gt;, TransactionHints)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.TransactionRecruiterExtensions.html#NationalInstruments_SourceModel_TransactionRecruiterExtensions_EnlistOrReplacePropertyItem__1_NationalInstruments_SourceModel_ITransactionRecruiter_NationalInstruments_SourceModel_Element_System_String___0___0_NationalInstruments_SourceModel_PropertySetter___0__NationalInstruments_SourceModel_TransactionHints_">TransactionRecruiterExtensions.EnlistOrReplacePropertyItem&lt;T&gt;(ITransactionRecruiter, Element, String, T, T, PropertySetter&lt;T&gt;, TransactionHints)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.TransactionRecruiterExtensions.html#NationalInstruments_SourceModel_TransactionRecruiterExtensions_EnlistOrReplacePropertyChanged__1_NationalInstruments_SourceModel_ITransactionRecruiter___0_System_String_">TransactionRecruiterExtensions.EnlistOrReplacePropertyChanged&lt;TTarget&gt;(ITransactionRecruiter, TTarget, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.TransactionRecruiterExtensions.html#NationalInstruments_SourceModel_TransactionRecruiterExtensions_EnlistNonPersistedEditorChange__1_NationalInstruments_SourceModel_ITransactionRecruiter_System_String___0___0_NationalInstruments_SourceModel_PropertySetter___0__NationalInstruments_SourceModel_TransactionHints_">TransactionRecruiterExtensions.EnlistNonPersistedEditorChange&lt;T&gt;(ITransactionRecruiter, String, T, T, PropertySetter&lt;T&gt;, TransactionHints)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.TransactionRecruiterExtensions.html#NationalInstruments_SourceModel_TransactionRecruiterExtensions_EnlistToTriggerSemanticAnalysis_NationalInstruments_SourceModel_ITransactionRecruiter_NationalInstruments_SourceModel_Element_System_String_">TransactionRecruiterExtensions.EnlistToTriggerSemanticAnalysis(ITransactionRecruiter, Element, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.TransactionRecruiterExtensions.html#NationalInstruments_SourceModel_TransactionRecruiterExtensions_EnlistPropertyChanged_NationalInstruments_SourceModel_ITransactionRecruiter_NationalInstruments_SourceModel_Element_System_String_">TransactionRecruiterExtensions.EnlistPropertyChanged(ITransactionRecruiter, Element, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.CollectionTransactionItemExtensions.html#NationalInstruments_SourceModel_CollectionTransactionItemExtensions_EnlistCollectionItem__1_NationalInstruments_SourceModel_ITransactionRecruiter_NationalInstruments_SourceModel_Element_System_String_System_Func_NationalInstruments_SourceModel_Element_System_Collections_Generic_ICollection___0___NationalInstruments_SourceModel_CollectionChangeTypes___0_NationalInstruments_SourceModel_TransactionHints_">CollectionTransactionItemExtensions.EnlistCollectionItem&lt;T&gt;(ITransactionRecruiter, Element, String, Func&lt;Element, ICollection&lt;T&gt;&gt;, CollectionChangeTypes, T, TransactionHints)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ITransactionManagerExtensions.html#NationalInstruments_SourceModel_ITransactionManagerExtensions_CheckNullBeginTransaction_NationalInstruments_SourceModel_ITransactionManager_System_String_NationalInstruments_SourceModel_TransactionPurpose_">ITransactionManagerExtensions.CheckNullBeginTransaction(ITransactionManager, String, TransactionPurpose)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ITransactionManagerExtensions.html#NationalInstruments_SourceModel_ITransactionManagerExtensions_BeginTransaction_NationalInstruments_SourceModel_ITransactionManager_System_String_NationalInstruments_SourceModel_TransactionPurpose_NationalInstruments_SourceModel_HierarchyLockingStrategy_">ITransactionManagerExtensions.BeginTransaction(ITransactionManager, String, TransactionPurpose, HierarchyLockingStrategy)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ITransactionManagerExtensions.html#NationalInstruments_SourceModel_ITransactionManagerExtensions_TransactUser_NationalInstruments_SourceModel_ITransactionManager_System_String_System_Action_">ITransactionManagerExtensions.TransactUser(ITransactionManager, String, Action)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ITransactionManagerExtensions.html#NationalInstruments_SourceModel_ITransactionManagerExtensions_Transact_NationalInstruments_SourceModel_ITransactionManager_System_String_NationalInstruments_SourceModel_TransactionPurpose_System_Action_">ITransactionManagerExtensions.Transact(ITransactionManager, String, TransactionPurpose, Action)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ITransactionManagerExtensions.html#NationalInstruments_SourceModel_ITransactionManagerExtensions_Transact_NationalInstruments_SourceModel_ITransactionManager_System_String_NationalInstruments_SourceModel_TransactionPurpose_NationalInstruments_SourceModel_HierarchyLockingStrategy_System_Action_">ITransactionManagerExtensions.Transact(ITransactionManager, String, TransactionPurpose, HierarchyLockingStrategy, Action)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ITransactionManagerExtensions.html#NationalInstruments_SourceModel_ITransactionManagerExtensions_Transact_NationalInstruments_SourceModel_ITransactionManager_System_String_NationalInstruments_SourceModel_TransactionPurpose_System_Boolean_System_Boolean_System_Action_">ITransactionManagerExtensions.Transact(ITransactionManager, String, TransactionPurpose, Boolean, Boolean, Action)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ITransactionManagerExtensions.html#NationalInstruments_SourceModel_ITransactionManagerExtensions_Transact_NationalInstruments_SourceModel_ITransactionManager_System_String_NationalInstruments_SourceModel_TransactionPurpose_NationalInstruments_SourceModel_HierarchyLockingStrategy_System_Boolean_System_Boolean_System_Action_">ITransactionManagerExtensions.Transact(ITransactionManager, String, TransactionPurpose, HierarchyLockingStrategy, Boolean, Boolean, Action)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ITransactionManagerExtensions.html#NationalInstruments_SourceModel_ITransactionManagerExtensions_BeginTransactionIfNecessary_NationalInstruments_SourceModel_ITransactionManager_System_String_NationalInstruments_SourceModel_TransactionPurpose_">ITransactionManagerExtensions.BeginTransactionIfNecessary(ITransactionManager, String, TransactionPurpose)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ITransactionManagerExtensions.html#NationalInstruments_SourceModel_ITransactionManagerExtensions_TransactTopLevel_NationalInstruments_SourceModel_ITransactionManager_System_String_NationalInstruments_SourceModel_TransactionPurpose_System_Action_">ITransactionManagerExtensions.TransactTopLevel(ITransactionManager, String, TransactionPurpose, Action)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ITransactionManagerExtensions.html#NationalInstruments_SourceModel_ITransactionManagerExtensions_TransactTopLevel_NationalInstruments_SourceModel_ITransactionManager_System_String_NationalInstruments_SourceModel_TransactionPurpose_System_Boolean_System_Action_">ITransactionManagerExtensions.TransactTopLevel(ITransactionManager, String, TransactionPurpose, Boolean, Action)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ITransactionManagerExtensions.html#NationalInstruments_SourceModel_ITransactionManagerExtensions_TransactTopLevelAndDiscard_NationalInstruments_SourceModel_ITransactionManager_System_String_System_Action_">ITransactionManagerExtensions.TransactTopLevelAndDiscard(ITransactionManager, String, Action)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ITransactionManagerExtensions.html#NationalInstruments_SourceModel_ITransactionManagerExtensions_TransactWhenPossibleAndRecommitIfNecessary_NationalInstruments_SourceModel_ITransactionManager_System_String_NationalInstruments_SourceModel_TransactionPurpose_System_Action_">ITransactionManagerExtensions.TransactWhenPossibleAndRecommitIfNecessary(ITransactionManager, String, TransactionPurpose, Action)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ITransactionManagerExtensions.html#NationalInstruments_SourceModel_ITransactionManagerExtensions_TransactTopLevelAndDiscardMarkingDirty_NationalInstruments_SourceModel_ITransactionManager_System_String_System_Action_">ITransactionManagerExtensions.TransactTopLevelAndDiscardMarkingDirty(ITransactionManager, String, Action)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

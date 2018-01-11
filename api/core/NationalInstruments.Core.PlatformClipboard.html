@@ -1,0 +1,832 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class PlatformClipboard
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class PlatformClipboard
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.Core.PlatformClipboard">
+  
+  
+  <h1 id="NationalInstruments_Core_PlatformClipboard" data-uid="NationalInstruments.Core.PlatformClipboard" class="text-break">Class PlatformClipboard
+  </h1>
+  <div class="markdown level0 summary"><p>Wrapper class for clipboard access that accounts for differences in clipboard behavior
+in the browser and better testability. </p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">PlatformClipboard</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="../pf/NationalInstruments.Core.html">NationalInstruments.Core</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.Core.dll</h6>
+  <h5 id="NationalInstruments_Core_PlatformClipboard_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class PlatformClipboard</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="NationalInstruments_Core_PlatformClipboard_ClassicTextFormat" data-uid="NationalInstruments.Core.PlatformClipboard.ClassicTextFormat">ClassicTextFormat</h4>
+  <div class="markdown level1 summary"><p>The format string value for data put on the clipboard by CurrentGen LabVIEW. (Related to CG to NG copy/paste.)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly string ClassicTextFormat</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_Core_PlatformClipboard_ClipboardCannotOpen" data-uid="NationalInstruments.Core.PlatformClipboard.ClipboardCannotOpen">ClipboardCannotOpen</h4>
+  <div class="markdown level1 summary"><p>The COM error code that is returned when the clipboard is locked by another application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int ClipboardCannotOpen = -2147221040</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_Core_PlatformClipboard_UnicodeFileNameFormat" data-uid="NationalInstruments.Core.PlatformClipboard.UnicodeFileNameFormat">UnicodeFileNameFormat</h4>
+  <div class="markdown level1 summary"><p>The format string value for Unicode filenames put on the clipboard by Windows Explorer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly string UnicodeFileNameFormat</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_Core_PlatformClipboard_InternalOnly_" data-uid="NationalInstruments.Core.PlatformClipboard.InternalOnly*"></a>
+  <h4 id="NationalInstruments_Core_PlatformClipboard_InternalOnly" data-uid="NationalInstruments.Core.PlatformClipboard.InternalOnly">InternalOnly</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether to only use our internal clipboard.
+This is useful for tests so they do not impact and are not impacted by
+other processes on the system.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool InternalOnly { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_Core_PlatformClipboard_Clear_" data-uid="NationalInstruments.Core.PlatformClipboard.Clear*"></a>
+  <h4 id="NationalInstruments_Core_PlatformClipboard_Clear" data-uid="NationalInstruments.Core.PlatformClipboard.Clear">Clear()</h4>
+  <div class="markdown level1 summary"><p>Clears any data from the system clipboard</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Clear()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Core_PlatformClipboard_ContainsData_" data-uid="NationalInstruments.Core.PlatformClipboard.ContainsData*"></a>
+  <h4 id="NationalInstruments_Core_PlatformClipboard_ContainsData_System_String_" data-uid="NationalInstruments.Core.PlatformClipboard.ContainsData(System.String)">ContainsData(String)</h4>
+  <div class="markdown level1 summary"><p>Indicates whether there is data on the clipboard that is in the specified format or can be converted to that format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ContainsData(string format)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">format</span></td>
+        <td><p>The format of the data to look for.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>true if there is data on the clipboard that is in the specified format or can be converted to that format; otherwise, false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PlatformClipboard_ContainsImage_" data-uid="NationalInstruments.Core.PlatformClipboard.ContainsImage*"></a>
+  <h4 id="NationalInstruments_Core_PlatformClipboard_ContainsImage" data-uid="NationalInstruments.Core.PlatformClipboard.ContainsImage">ContainsImage()</h4>
+  <div class="markdown level1 summary"><p>Queries the Clipboard for the presence of data in the Bitmap data format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ContainsImage()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>true if the Clipboard contains data in the Bitmap data format; otherwise, false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PlatformClipboard_ContainsText_" data-uid="NationalInstruments.Core.PlatformClipboard.ContainsText*"></a>
+  <h4 id="NationalInstruments_Core_PlatformClipboard_ContainsText" data-uid="NationalInstruments.Core.PlatformClipboard.ContainsText">ContainsText()</h4>
+  <div class="markdown level1 summary"><p>Queries the clipboard for the presence of a string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ContainsText()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>true if the clipboard contains a string, otherwise false</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PlatformClipboard_GetAllData_" data-uid="NationalInstruments.Core.PlatformClipboard.GetAllData*"></a>
+  <h4 id="NationalInstruments_Core_PlatformClipboard_GetAllData_System_String_" data-uid="NationalInstruments.Core.PlatformClipboard.GetAllData(System.String)">GetAllData(String)</h4>
+  <div class="markdown level1 summary"><p>Retrieves data from the clipboard in the specified format. The result is an array of items (usually only one, but some platforms support more).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object[] GetAllData(string format)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">format</span></td>
+        <td><p>The format of the data to retrieve.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>[]</td>
+        <td><p>An array of objects representing the clipboard data or null if the clipboard does not contain any data that is in the specified format or can be converted to that format.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PlatformClipboard_GetData_" data-uid="NationalInstruments.Core.PlatformClipboard.GetData*"></a>
+  <h4 id="NationalInstruments_Core_PlatformClipboard_GetData_System_String_" data-uid="NationalInstruments.Core.PlatformClipboard.GetData(System.String)">GetData(String)</h4>
+  <div class="markdown level1 summary"><p>Retrieves data from the clipboard in the specified format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object GetData(string format)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">format</span></td>
+        <td><p>The format of the data to retrieve.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><p>An object representing the clipboard data or null if the clipboard does not contain any data that is in the specified format or can be converted to that format.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PlatformClipboard_GetImage_" data-uid="NationalInstruments.Core.PlatformClipboard.GetImage*"></a>
+  <h4 id="NationalInstruments_Core_PlatformClipboard_GetImage" data-uid="NationalInstruments.Core.PlatformClipboard.GetImage">GetImage()</h4>
+  <div class="markdown level1 summary"><p>Returns a BitmapSource object from the Clipboard that contains data in the Bitmap format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static BitmapSource GetImage()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.media.imaging.bitmapsource">BitmapSource</a></td>
+        <td><p>A BitmapSource object that contains data in the Bitmap format. or null if the data is unavailable in this format.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PlatformClipboard_GetText_" data-uid="NationalInstruments.Core.PlatformClipboard.GetText*"></a>
+  <h4 id="NationalInstruments_Core_PlatformClipboard_GetText" data-uid="NationalInstruments.Core.PlatformClipboard.GetText">GetText()</h4>
+  <div class="markdown level1 summary"><p>Queries the clipboard for its contents as a string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetText()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>A string containing the string on the clipboard or null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PlatformClipboard_IsSystemClipboardFormat_" data-uid="NationalInstruments.Core.PlatformClipboard.IsSystemClipboardFormat*"></a>
+  <h4 id="NationalInstruments_Core_PlatformClipboard_IsSystemClipboardFormat_System_String_" data-uid="NationalInstruments.Core.PlatformClipboard.IsSystemClipboardFormat(System.String)">IsSystemClipboardFormat(String)</h4>
+  <div class="markdown level1 summary"><p>If the clipboard format is a generic system clipboard format</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsSystemClipboardFormat(string format)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">format</span></td>
+        <td><p>The format of the data to check</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>If the format is a generic system format</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PlatformClipboard_SetData_" data-uid="NationalInstruments.Core.PlatformClipboard.SetData*"></a>
+  <h4 id="NationalInstruments_Core_PlatformClipboard_SetData_System_String_System_Object_System_Action_" data-uid="NationalInstruments.Core.PlatformClipboard.SetData(System.String,System.Object,System.Action)">SetData(String, Object, Action)</h4>
+  <div class="markdown level1 summary"><p>Clears the clipboard and then adds data in the specified format. Data is not persisted when exiting application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int SetData(string format, object data, Action callback)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">format</span></td>
+        <td><p>The format of the data to set.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">data</span></td>
+        <td><p>An object representing the data to add.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td><span class="parametername">callback</span></td>
+        <td><p>An optional callback delegate that&apos;s called when the given data is cleared from the clipboard</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>COM error code or 0</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PlatformClipboard_SetData_" data-uid="NationalInstruments.Core.PlatformClipboard.SetData*"></a>
+  <h4 id="NationalInstruments_Core_PlatformClipboard_SetData_System_String___System_Object___System_Action_" data-uid="NationalInstruments.Core.PlatformClipboard.SetData(System.String[],System.Object[],System.Action)">SetData(String[], Object[], Action)</h4>
+  <div class="markdown level1 summary"><p>Clears the clipboard and then adds the datas in the specified formats. The data is not persisted when exiting application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int SetData(string[] formats, object[] data, Action callback)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td><span class="parametername">formats</span></td>
+        <td><p>An array of formats that correspond to each data in the data array</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>[]</td>
+        <td><span class="parametername">data</span></td>
+        <td><p>An array with all the data to add</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td><span class="parametername">callback</span></td>
+        <td><p>An optional callback delegate that&apos;s called when the given data is cleared from the clipboard</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>COM error code or 0</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Core_PlatformClipboard_SetData_System_String___System_Object___System_Action__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>There should be a one-to-one correspondence between each format and each data. So, the size of the arrays must match</p>
+</div>
+  
+  
+  <a id="NationalInstruments_Core_PlatformClipboard_SetData_" data-uid="NationalInstruments.Core.PlatformClipboard.SetData*"></a>
+  <h4 id="NationalInstruments_Core_PlatformClipboard_SetData_System_String___System_Object___System_Action_NationalInstruments_Core_DataObject_DelayedRenderingFunction_" data-uid="NationalInstruments.Core.PlatformClipboard.SetData(System.String[],System.Object[],System.Action,NationalInstruments.Core.DataObject.DelayedRenderingFunction)">SetData(String[], Object[], Action, DataObject.DelayedRenderingFunction)</h4>
+  <div class="markdown level1 summary"><p>Clears the clipboard and then adds the datas in the specified formats. The data is not persisted when exiting application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int SetData(string[] formats, object[] data, Action callback, DataObject.DelayedRenderingFunction delayedRenderingHandler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td><span class="parametername">formats</span></td>
+        <td><p>An array of formats that correspond to each data in the data array</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>[]</td>
+        <td><span class="parametername">data</span></td>
+        <td><p>An array with all the data to add</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td><span class="parametername">callback</span></td>
+        <td><p>An optional callback delegate</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.DataObject.DelayedRenderingFunction.html">DataObject.DelayedRenderingFunction</a></td>
+        <td><span class="parametername">delayedRenderingHandler</span></td>
+        <td><p>A function to handle delayed rendering for any data that is null</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>COM error code or 0</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Core_PlatformClipboard_SetData_System_String___System_Object___System_Action_NationalInstruments_Core_DataObject_DelayedRenderingFunction__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>There should be a one-to-one correspondence between each format and each data. So, the size of the arrays must match</p>
+</div>
+  
+  
+  <a id="NationalInstruments_Core_PlatformClipboard_SetImage_" data-uid="NationalInstruments.Core.PlatformClipboard.SetImage*"></a>
+  <h4 id="NationalInstruments_Core_PlatformClipboard_SetImage_System_Windows_Media_Imaging_BitmapSource_" data-uid="NationalInstruments.Core.PlatformClipboard.SetImage(System.Windows.Media.Imaging.BitmapSource)">SetImage(BitmapSource)</h4>
+  <div class="markdown level1 summary"><p>Stores Bitmap data on the Clipboard. The image data is specified as a BitmapSource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int SetImage(BitmapSource image)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.media.imaging.bitmapsource">BitmapSource</a></td>
+        <td><span class="parametername">image</span></td>
+        <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.media.imaging.bitmapsource">BitmapSource</a> object that contains the image data to store on the Clipboard.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>COM error code or 0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PlatformClipboard_SetText_" data-uid="NationalInstruments.Core.PlatformClipboard.SetText*"></a>
+  <h4 id="NationalInstruments_Core_PlatformClipboard_SetText_System_String_" data-uid="NationalInstruments.Core.PlatformClipboard.SetText(System.String)">SetText(String)</h4>
+  <div class="markdown level1 summary"><p>Stores the string to the clipboard.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int SetText(string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">text</span></td>
+        <td><p>The string to make available on the clipboard</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>COM error code or 0</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

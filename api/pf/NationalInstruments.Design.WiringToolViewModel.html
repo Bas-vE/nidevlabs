@@ -1,0 +1,3261 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class WiringToolViewModel
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class WiringToolViewModel
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.Design.WiringToolViewModel">
+  
+  
+  <h1 id="NationalInstruments_Design_WiringToolViewModel" data-uid="NationalInstruments.Design.WiringToolViewModel" class="text-break">Class WiringToolViewModel
+  </h1>
+  <div class="markdown level0 summary"><p>View Model for the wiring tool.  Manages wiring between nodes on a diagram</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html">ViewModelBase</a></div>
+    <div class="level2"><a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html">DesignerToolViewModel</a></div>
+    <div class="level3"><span class="xref">WiringToolViewModel</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.iweakeventlistener">IWeakEventListener</a></div>
+    <div><a class="xref" href="../core/NationalInstruments.Core.IServiceAggregator.html">IServiceAggregator</a></div>
+    <div><a class="xref" href="../core/NationalInstruments.Core.IColorResolver.html">IColorResolver</a></div>
+    <div><a class="xref" href="NationalInstruments.Design.IDesignerToolViewModel.html">IDesignerToolViewModel</a></div>
+    <div><a class="xref" href="../core/NationalInstruments.Core.IViewModel.html">IViewModel</a></div>
+    <div><a class="xref" href="../core/NationalInstruments.Core.IQueryService.html">IQueryService</a></div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
+    <div><a class="xref" href="NationalInstruments.SourceModel.IInteractiveTransactionOwner.html">IInteractiveTransactionOwner</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_View">DesignerToolViewModel.View</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_Cleanup">DesignerToolViewModel.Cleanup()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_IsAggregate">DesignerToolViewModel.IsAggregate</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_IsActive">DesignerToolViewModel.IsActive</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_Host">DesignerToolViewModel.Host</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_IsEditTool">DesignerToolViewModel.IsEditTool</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_IsModalTool">DesignerToolViewModel.IsModalTool</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_CancelPendingOperations">DesignerToolViewModel.CancelPendingOperations()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_UseCustomEventRouting">DesignerToolViewModel.UseCustomEventRouting</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_Tool">DesignerToolViewModel.Tool</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_Designer">DesignerToolViewModel.Designer</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_EditSite">DesignerToolViewModel.EditSite</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_ClickSelectionThreshold">DesignerToolViewModel.ClickSelectionThreshold</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_AutoScrollHelper">DesignerToolViewModel.AutoScrollHelper</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_InitializeTool">DesignerToolViewModel.InitializeTool()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_OnDesignerInitialized">DesignerToolViewModel.OnDesignerInitialized()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_GetItemAtPosition_NationalInstruments_Core_UIPosition_">DesignerToolViewModel.GetItemAtPosition(UIPosition)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_GetSelectableItemNearPosition_NationalInstruments_Core_UIPosition_">DesignerToolViewModel.GetSelectableItemNearPosition(UIPosition)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_OnAutoScroll_NationalInstruments_Core_SMPoint_">DesignerToolViewModel.OnAutoScroll(SMPoint)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_OnVisualAdded_NationalInstruments_Core_IViewModel_">DesignerToolViewModel.OnVisualAdded(IViewModel)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_OnVisualRemoved_NationalInstruments_Core_IViewModel_">DesignerToolViewModel.OnVisualRemoved(IViewModel)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_GetAsTool__1_NationalInstruments_Design_IDesignerToolViewModel_">DesignerToolViewModel.GetAsTool&lt;T&gt;(IDesignerToolViewModel)</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_ViewModelProperty">ViewModelBase.ViewModelProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_GetNonInheritedViewModel_NationalInstruments_Core_PlatformVisual_">ViewModelBase.GetNonInheritedViewModel(PlatformVisual)</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_GetNearestViewModel_NationalInstruments_Core_PlatformVisual_">ViewModelBase.GetNearestViewModel(PlatformVisual)</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_SetViewModel_NationalInstruments_Core_PlatformVisual_NationalInstruments_Core_IViewModel_">ViewModelBase.SetViewModel(PlatformVisual, IViewModel)</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_Model">ViewModelBase.Model</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_CreateViewHandler">ViewModelBase.CreateViewHandler</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_ParentViewModel">ViewModelBase.ParentViewModel</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_OnParentViewModelChanged">ViewModelBase.OnParentViewModelChanged()</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_BindToView_NationalInstruments_Core_PlatformVisual_">ViewModelBase.BindToView(PlatformVisual)</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_AddCommandBindings_NationalInstruments_Core_PlatformVisual_">ViewModelBase.AddCommandBindings(PlatformVisual)</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_CommandBindings">ViewModelBase.CommandBindings</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_TryFindResource_System_Object_">ViewModelBase.TryFindResource(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_AttachService_System_Object_">ViewModelBase.AttachService(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_RemoveService_System_Object_">ViewModelBase.RemoveService(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_RemoveAll_System_Predicate_System_Object__">ViewModelBase.RemoveAll(Predicate&lt;Object&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_SetService__1_System_Object_">ViewModelBase.SetService&lt;T&gt;(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_QueryService__1">ViewModelBase.QueryService&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_PropertyChanged">ViewModelBase.PropertyChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_NotifyPropertyChanged_System_String_">ViewModelBase.NotifyPropertyChanged(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_ReceiveWeakEvent_System_Type_System_Object_System_EventArgs_">ViewModelBase.ReceiveWeakEvent(Type, Object, EventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_HandlePropertyChanged_System_Object_System_ComponentModel_PropertyChangedEventArgs_">ViewModelBase.HandlePropertyChanged(Object, PropertyChangedEventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_ContextHelpServicesCreated">ViewModelBase.ContextHelpServicesCreated</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_CreateContextHelpServices">ViewModelBase.CreateContextHelpServices()</a>
+    </div>
+    <div>
+      <a class="xref" href="../core/NationalInstruments.Core.ViewModelBase.html#NationalInstruments_Core_ViewModelBase_ResolveBrush_System_String_">ViewModelBase.ResolveBrush(String)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="../core/NationalInstruments.Design.html">NationalInstruments.Design</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_Design_WiringToolViewModel_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class WiringToolViewModel : DesignerToolViewModel, IWeakEventListener, IServiceAggregator, IColorResolver, IDesignerToolViewModel, IViewModel, IQueryService, INotifyPropertyChanged, IInteractiveTransactionOwner</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel__ctor_" data-uid="NationalInstruments.Design.WiringToolViewModel.#ctor*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel__ctor" data-uid="NationalInstruments.Design.WiringToolViewModel.#ctor">WiringToolViewModel()</h4>
+  <div class="markdown level1 summary"><p>Constructs a new instance</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WiringToolViewModel()</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_HitTestDistance" data-uid="NationalInstruments.Design.WiringToolViewModel.HitTestDistance">HitTestDistance</h4>
+  <div class="markdown level1 summary"><p>The distance from a wireable element that the wiring tool uses when the user left clicks to consider
+it a &quot;hit&quot; and thus begin (or end) a wiring operation</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly double HitTestDistance</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_AutoRoutingWire_" data-uid="NationalInstruments.Design.WiringToolViewModel.AutoRoutingWire*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_AutoRoutingWire" data-uid="NationalInstruments.Design.WiringToolViewModel.AutoRoutingWire">AutoRoutingWire</h4>
+  <div class="markdown level1 summary"><p>Toggle auto routing for the current wiring operation. Does nothing if you are not currently wiring.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AutoRoutingWire { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_BeginElement_" data-uid="NationalInstruments.Design.WiringToolViewModel.BeginElement*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_BeginElement" data-uid="NationalInstruments.Design.WiringToolViewModel.BeginElement">BeginElement</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PlatformVisual BeginElement { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_BeginTerminal_" data-uid="NationalInstruments.Design.WiringToolViewModel.BeginTerminal*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_BeginTerminal" data-uid="NationalInstruments.Design.WiringToolViewModel.BeginTerminal">BeginTerminal</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WireableTerminal BeginTerminal { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireableTerminal.html">WireableTerminal</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_DiagramAutoRoutingEnabled_" data-uid="NationalInstruments.Design.WiringToolViewModel.DiagramAutoRoutingEnabled*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_DiagramAutoRoutingEnabled" data-uid="NationalInstruments.Design.WiringToolViewModel.DiagramAutoRoutingEnabled">DiagramAutoRoutingEnabled</h4>
+  <div class="markdown level1 summary"><p>Stores a preference for whether Auto Routing is enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool DiagramAutoRoutingEnabled { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_HiddenAdornersLock_" data-uid="NationalInstruments.Design.WiringToolViewModel.HiddenAdornersLock*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_HiddenAdornersLock" data-uid="NationalInstruments.Design.WiringToolViewModel.HiddenAdornersLock">HiddenAdornersLock</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the hidden adorners lock.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IDisposable HiddenAdornersLock { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></td>
+        <td><p>The hidden adorners lock.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_InWireOperation_" data-uid="NationalInstruments.Design.WiringToolViewModel.InWireOperation*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_InWireOperation" data-uid="NationalInstruments.Design.WiringToolViewModel.InWireOperation">InWireOperation</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool InWireOperation { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_LastPreview_" data-uid="NationalInstruments.Design.WiringToolViewModel.LastPreview*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_LastPreview" data-uid="NationalInstruments.Design.WiringToolViewModel.LastPreview">LastPreview</h4>
+  <div class="markdown level1 summary"><p>The last extend transaction</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ICompletedTransaction LastPreview { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ICompletedTransaction.html">ICompletedTransaction</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_LastWiringEnd_" data-uid="NationalInstruments.Design.WiringToolViewModel.LastWiringEnd*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_LastWiringEnd" data-uid="NationalInstruments.Design.WiringToolViewModel.LastWiringEnd">LastWiringEnd</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the last wiring end.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IWiringEnd LastWiringEnd { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.IWiringEnd.html">IWiringEnd</a></td>
+        <td><p>The last wiring end.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_LastWiringEndPoint_" data-uid="NationalInstruments.Design.WiringToolViewModel.LastWiringEndPoint*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_LastWiringEndPoint" data-uid="NationalInstruments.Design.WiringToolViewModel.LastWiringEndPoint">LastWiringEndPoint</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the last wiring end point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected DiagramPoint LastWiringEndPoint { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.DiagramPoint.html">DiagramPoint</a></td>
+        <td><p>The last wiring end point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_PreviewWiringEnd_" data-uid="NationalInstruments.Design.WiringToolViewModel.PreviewWiringEnd*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_PreviewWiringEnd" data-uid="NationalInstruments.Design.WiringToolViewModel.PreviewWiringEnd">PreviewWiringEnd</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the preview wiring end.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Terminal PreviewWiringEnd { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Terminal.html">Terminal</a></td>
+        <td><p>The preview wiring end.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_RootDiagram_" data-uid="NationalInstruments.Design.WiringToolViewModel.RootDiagram*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_RootDiagram" data-uid="NationalInstruments.Design.WiringToolViewModel.RootDiagram">RootDiagram</h4>
+  <div class="markdown level1 summary"><p>Property returns the root Diagram of current view model</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected RootDiagram RootDiagram { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.RootDiagram.html">RootDiagram</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_SnapToGrid_" data-uid="NationalInstruments.Design.WiringToolViewModel.SnapToGrid*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_SnapToGrid" data-uid="NationalInstruments.Design.WiringToolViewModel.SnapToGrid">SnapToGrid</h4>
+  <div class="markdown level1 summary"><p>Exposes SnapToGrid to derived classes</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool SnapToGrid { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_StartWiringTransaction_" data-uid="NationalInstruments.Design.WiringToolViewModel.StartWiringTransaction*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_StartWiringTransaction" data-uid="NationalInstruments.Design.WiringToolViewModel.StartWiringTransaction">StartWiringTransaction</h4>
+  <div class="markdown level1 summary"><p>The last Start Wiring Transaction</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ICompletedTransaction StartWiringTransaction { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ICompletedTransaction.html">ICompletedTransaction</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_SupportsTacking_" data-uid="NationalInstruments.Design.WiringToolViewModel.SupportsTacking*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_SupportsTacking" data-uid="NationalInstruments.Design.WiringToolViewModel.SupportsTacking">SupportsTacking</h4>
+  <div class="markdown level1 summary"><p>Stores a preference for whether tacking is enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool SupportsTacking { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_TransactionManager_" data-uid="NationalInstruments.Design.WiringToolViewModel.TransactionManager*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_TransactionManager" data-uid="NationalInstruments.Design.WiringToolViewModel.TransactionManager">TransactionManager</h4>
+  <div class="markdown level1 summary"><p>Get a transaction manager that can be used for asynchronous UI transactions</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ITransactionManager TransactionManager { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ITransactionManager.html">ITransactionManager</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_UserHint_" data-uid="NationalInstruments.Design.WiringToolViewModel.UserHint*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_UserHint" data-uid="NationalInstruments.Design.WiringToolViewModel.UserHint">UserHint</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the user hint.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected WireRouteHint UserHint { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireRouteHint.html">WireRouteHint</a></td>
+        <td><p>The user hint.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_WiringContext_" data-uid="NationalInstruments.Design.WiringToolViewModel.WiringContext*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_WiringContext" data-uid="NationalInstruments.Design.WiringToolViewModel.WiringContext">WiringContext</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WiringContext WiringContext { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WiringContext.html">WiringContext</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_WiringTool_" data-uid="NationalInstruments.Design.WiringToolViewModel.WiringTool*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_WiringTool" data-uid="NationalInstruments.Design.WiringToolViewModel.WiringTool">WiringTool</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WiringTool WiringTool { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.WiringTool.html">WiringTool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_WiringToolClickMode_" data-uid="NationalInstruments.Design.WiringToolViewModel.WiringToolClickMode*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_WiringToolClickMode" data-uid="NationalInstruments.Design.WiringToolViewModel.WiringToolClickMode">WiringToolClickMode</h4>
+  <div class="markdown level1 summary"><p>User preference which controls whether branching from a wire happens on Click on a wire, 
+Ctrl+Click on a wire, or Click near a wire</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static WiringToolBranchMode WiringToolClickMode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.WiringToolBranchMode.html">WiringToolBranchMode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_Activate_" data-uid="NationalInstruments.Design.WiringToolViewModel.Activate*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_Activate_NationalInstruments_Design_DesignerEditControlViewModel_System_Boolean_" data-uid="NationalInstruments.Design.WiringToolViewModel.Activate(NationalInstruments.Design.DesignerEditControlViewModel,System.Boolean)">Activate(DesignerEditControlViewModel, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Called by the DesignerEditControl to activate the tool.  Tools are activated
+when they are first added to the DesignerEditControl and whenever the DesignerEditControl
+itself is activated (made avilable to the user).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Activate(DesignerEditControlViewModel designer, bool isAggregate)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.DesignerEditControlViewModel.html">DesignerEditControlViewModel</a></td>
+        <td><span class="parametername">designer</span></td>
+        <td><p>The DesignerEditContorl that this tool is for</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">isAggregate</span></td>
+        <td><p>True if this tool is part of the auto tool</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_Activate_NationalInstruments_Design_DesignerEditControlViewModel_System_Boolean_">DesignerToolViewModel.Activate(DesignerEditControlViewModel, Boolean)</a></div>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_BeginAtomicAction_" data-uid="NationalInstruments.Design.WiringToolViewModel.BeginAtomicAction*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_BeginAtomicAction_NationalInstruments_SourceModel_ITransactionManager_" data-uid="NationalInstruments.Design.WiringToolViewModel.BeginAtomicAction(NationalInstruments.SourceModel.ITransactionManager)">BeginAtomicAction(ITransactionManager)</h4>
+  <div class="markdown level1 summary"><p>Begins an atomic action.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IDisposable BeginAtomicAction(ITransactionManager transactionManager)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ITransactionManager.html">ITransactionManager</a></td>
+        <td><span class="parametername">transactionManager</span></td>
+        <td><p>The transaction manager.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_CancelWiring_" data-uid="NationalInstruments.Design.WiringToolViewModel.CancelWiring*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_CancelWiring" data-uid="NationalInstruments.Design.WiringToolViewModel.CancelWiring">CancelWiring()</h4>
+  <div class="markdown level1 summary"><p>Cancel the current wiring operation</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CancelWiring()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_CanPreviewMouseMoveOnNearestWire_" data-uid="NationalInstruments.Design.WiringToolViewModel.CanPreviewMouseMoveOnNearestWire*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_CanPreviewMouseMoveOnNearestWire_NationalInstruments_SourceModel_Wire_NationalInstruments_Design_NearestWire_NationalInstruments_Core_UIPosition_" data-uid="NationalInstruments.Design.WiringToolViewModel.CanPreviewMouseMoveOnNearestWire(NationalInstruments.SourceModel.Wire,NationalInstruments.Design.NearestWire,NationalInstruments.Core.UIPosition)">CanPreviewMouseMoveOnNearestWire(Wire, NearestWire, UIPosition)</h4>
+  <div class="markdown level1 summary"><p>Determines if preview mouse move operation is allowed on the nearest wire</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool CanPreviewMouseMoveOnNearestWire(Wire currentWire, NearestWire nearestWire, UIPosition position)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Wire.html">Wire</a></td>
+        <td><span class="parametername">currentWire</span></td>
+        <td><p>The current wire of the wiring operation</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.NearestWire.html">NearestWire</a></td>
+        <td><span class="parametername">nearestWire</span></td>
+        <td><p>The nearest wire</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.UIPosition.html">UIPosition</a></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>Current mouse position</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if preview is allowed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_CanStartWiring_" data-uid="NationalInstruments.Design.WiringToolViewModel.CanStartWiring*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_CanStartWiring" data-uid="NationalInstruments.Design.WiringToolViewModel.CanStartWiring">CanStartWiring()</h4>
+  <div class="markdown level1 summary"><p>Determines whether this instance [can start wiring].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool CanStartWiring()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if Wiring can be started</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_CanWireTo_" data-uid="NationalInstruments.Design.WiringToolViewModel.CanWireTo*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_CanWireTo_NationalInstruments_Design_DesignerEditControlViewModel_NationalInstruments_SourceModel_WireableTerminal_" data-uid="NationalInstruments.Design.WiringToolViewModel.CanWireTo(NationalInstruments.Design.DesignerEditControlViewModel,NationalInstruments.SourceModel.WireableTerminal)">CanWireTo(DesignerEditControlViewModel, WireableTerminal)</h4>
+  <div class="markdown level1 summary"><p>Determins if a terminal can currently be wired to</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool CanWireTo(DesignerEditControlViewModel designer, WireableTerminal terminal)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.DesignerEditControlViewModel.html">DesignerEditControlViewModel</a></td>
+        <td><span class="parametername">designer</span></td>
+        <td><p>designer that the edit operation is taking place in</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireableTerminal.html">WireableTerminal</a></td>
+        <td><span class="parametername">terminal</span></td>
+        <td><p>the terminal of interest</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>true if the terminal can be wired to, false if wiring should be prevented</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_ChangeWiringTargetsIfNecessary_" data-uid="NationalInstruments.Design.WiringToolViewModel.ChangeWiringTargetsIfNecessary*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_ChangeWiringTargetsIfNecessary_NationalInstruments_SourceModel_IWiringEnd_NationalInstruments_SourceModel_DiagramPoint_" data-uid="NationalInstruments.Design.WiringToolViewModel.ChangeWiringTargetsIfNecessary(NationalInstruments.SourceModel.IWiringEnd,NationalInstruments.SourceModel.DiagramPoint)">ChangeWiringTargetsIfNecessary(IWiringEnd, DiagramPoint)</h4>
+  <div class="markdown level1 summary"><p>This method is called right before the final, non-preview, wire is drawn.
+It gives the opportunity to change what things that final wire will connect.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IWiringEnd ChangeWiringTargetsIfNecessary(IWiringEnd wiringEnd, DiagramPoint currentPoint)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.IWiringEnd.html">IWiringEnd</a></td>
+        <td><span class="parametername">wiringEnd</span></td>
+        <td><p>The object that it is suggested we end the wire on</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.DiagramPoint.html">DiagramPoint</a></td>
+        <td><span class="parametername">currentPoint</span></td>
+        <td><p>The current mouse position</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.IWiringEnd.html">IWiringEnd</a></td>
+        <td><p>The object the wire should actually end on</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_CompleteTransaction_" data-uid="NationalInstruments.Design.WiringToolViewModel.CompleteTransaction*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_CompleteTransaction_System_Boolean_" data-uid="NationalInstruments.Design.WiringToolViewModel.CompleteTransaction(System.Boolean)">CompleteTransaction(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Called when an asynchrounous transaction created by this needs to be completed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CompleteTransaction(bool cancel)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">cancel</span></td>
+        <td><p>True if the transaction should be cancelled.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_CreateDiagramPointInRootDiagram_" data-uid="NationalInstruments.Design.WiringToolViewModel.CreateDiagramPointInRootDiagram*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_CreateDiagramPointInRootDiagram_NationalInstruments_Core_UIPosition_System_Boolean_" data-uid="NationalInstruments.Design.WiringToolViewModel.CreateDiagramPointInRootDiagram(NationalInstruments.Core.UIPosition,System.Boolean)">CreateDiagramPointInRootDiagram(UIPosition, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Create a DiagramPoint in the coordinate system of the RootDiagram in the model based on the mouse position.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected DiagramPoint CreateDiagramPointInRootDiagram(UIPosition uiPosition, bool roundToGrid)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.UIPosition.html">UIPosition</a></td>
+        <td><span class="parametername">uiPosition</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">roundToGrid</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.DiagramPoint.html">DiagramPoint</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_CreateInitialStubTransaction_" data-uid="NationalInstruments.Design.WiringToolViewModel.CreateInitialStubTransaction*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_CreateInitialStubTransaction_NationalInstruments_SourceModel_DiagramPoint_NationalInstruments_SourceModel_ITransactionManager_" data-uid="NationalInstruments.Design.WiringToolViewModel.CreateInitialStubTransaction(NationalInstruments.SourceModel.DiagramPoint,NationalInstruments.SourceModel.ITransactionManager)">CreateInitialStubTransaction(DiagramPoint, ITransactionManager)</h4>
+  <div class="markdown level1 summary"><p>Creates the initial stub transaction which extends the wire.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void CreateInitialStubTransaction(DiagramPoint mousePoint, ITransactionManager manager)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.DiagramPoint.html">DiagramPoint</a></td>
+        <td><span class="parametername">mousePoint</span></td>
+        <td><p>The mouse point.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ITransactionManager.html">ITransactionManager</a></td>
+        <td><span class="parametername">manager</span></td>
+        <td><p>The transaction manager.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_CreateInitialWiringTransaction_" data-uid="NationalInstruments.Design.WiringToolViewModel.CreateInitialWiringTransaction*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_CreateInitialWiringTransaction_NationalInstruments_Core_PlatformVisual_NationalInstruments_SourceModel_IWiringStart_NationalInstruments_SourceModel_DiagramPoint__NationalInstruments_SourceModel_DiagramPoint__" data-uid="NationalInstruments.Design.WiringToolViewModel.CreateInitialWiringTransaction(NationalInstruments.Core.PlatformVisual,NationalInstruments.SourceModel.IWiringStart,NationalInstruments.SourceModel.DiagramPoint@,NationalInstruments.SourceModel.DiagramPoint@)">CreateInitialWiringTransaction(PlatformVisual, IWiringStart, ref DiagramPoint, ref DiagramPoint)</h4>
+  <div class="markdown level1 summary"><p>Creates the initial outer wiring transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void CreateInitialWiringTransaction(PlatformVisual presentationElement, IWiringStart start, ref DiagramPoint point, ref DiagramPoint mousePoint)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">presentationElement</span></td>
+        <td><p>The presentation element for the start of the wiring operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.IWiringStart.html">IWiringStart</a></td>
+        <td><span class="parametername">start</span></td>
+        <td><p>The start.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.DiagramPoint.html">DiagramPoint</a></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The point.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.DiagramPoint.html">DiagramPoint</a></td>
+        <td><span class="parametername">mousePoint</span></td>
+        <td><p>The mouse point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_CreateStartWiringTransaction_" data-uid="NationalInstruments.Design.WiringToolViewModel.CreateStartWiringTransaction*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_CreateStartWiringTransaction_NationalInstruments_SourceModel_IWiringStart_NationalInstruments_SourceModel_DiagramPoint_NationalInstruments_SourceModel_ITransactionManager_" data-uid="NationalInstruments.Design.WiringToolViewModel.CreateStartWiringTransaction(NationalInstruments.SourceModel.IWiringStart,NationalInstruments.SourceModel.DiagramPoint,NationalInstruments.SourceModel.ITransactionManager)">CreateStartWiringTransaction(IWiringStart, DiagramPoint, ITransactionManager)</h4>
+  <div class="markdown level1 summary"><p>Creates the start wiring outer transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual ICompletedTransaction CreateStartWiringTransaction(IWiringStart start, DiagramPoint point, ITransactionManager manager)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.IWiringStart.html">IWiringStart</a></td>
+        <td><span class="parametername">start</span></td>
+        <td><p>The wiring start.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.DiagramPoint.html">DiagramPoint</a></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The point.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ITransactionManager.html">ITransactionManager</a></td>
+        <td><span class="parametername">manager</span></td>
+        <td><p>The transaction manager.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ICompletedTransaction.html">ICompletedTransaction</a></td>
+        <td><p>The Completed Wiring Transaction</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_CreateTool_" data-uid="NationalInstruments.Design.WiringToolViewModel.CreateTool*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_CreateTool" data-uid="NationalInstruments.Design.WiringToolViewModel.CreateTool">CreateTool()</h4>
+  <div class="markdown level1 summary"><p>override and create your tool</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override IDesignerTool CreateTool()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.IDesignerTool.html">IDesignerTool</a></td>
+        <td><p>tool (visual) as IDesignerTool</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_CreateTool">DesignerToolViewModel.CreateTool()</a></div>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_CreateWiresBetweenSelection_" data-uid="NationalInstruments.Design.WiringToolViewModel.CreateWiresBetweenSelection*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_CreateWiresBetweenSelection" data-uid="NationalInstruments.Design.WiringToolViewModel.CreateWiresBetweenSelection">CreateWiresBetweenSelection()</h4>
+  <div class="markdown level1 summary"><p>Create wires between the selected nodes. Will attempt to wire left to right with terminals that match up.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CreateWiresBetweenSelection()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_Deactivate_" data-uid="NationalInstruments.Design.WiringToolViewModel.Deactivate*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_Deactivate_NationalInstruments_Design_DesignerEditControlViewModel_System_Boolean_NationalInstruments_Design_IDesignerToolViewModel_" data-uid="NationalInstruments.Design.WiringToolViewModel.Deactivate(NationalInstruments.Design.DesignerEditControlViewModel,System.Boolean,NationalInstruments.Design.IDesignerToolViewModel)">Deactivate(DesignerEditControlViewModel, Boolean, IDesignerToolViewModel)</h4>
+  <div class="markdown level1 summary"><p>Called by the DesignerEditControl when this tool is deactivated.  Tools are Deactivated
+when they are removed from the DesignerEditControl because a new tool is being activated
+or when the DesignerEditControl itself is no longer available to the user</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Deactivate(DesignerEditControlViewModel designer, bool designerDeactivate, IDesignerToolViewModel replacementTool)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.DesignerEditControlViewModel.html">DesignerEditControlViewModel</a></td>
+        <td><span class="parametername">designer</span></td>
+        <td><p>The DesignerEditoControl that owns the tool</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">designerDeactivate</span></td>
+        <td><p>true if the DesignerEditControl is being deactivated, false
+ if the tool is being removed from the designer.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.IDesignerToolViewModel.html">IDesignerToolViewModel</a></td>
+        <td><span class="parametername">replacementTool</span></td>
+        <td><p>The tool that is replacing this tool if there is a replacement tool</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.Design.DesignerToolViewModel.html#NationalInstruments_Design_DesignerToolViewModel_Deactivate_NationalInstruments_Design_DesignerEditControlViewModel_System_Boolean_NationalInstruments_Design_IDesignerToolViewModel_">DesignerToolViewModel.Deactivate(DesignerEditControlViewModel, Boolean, IDesignerToolViewModel)</a></div>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_DisconnectSelection_" data-uid="NationalInstruments.Design.WiringToolViewModel.DisconnectSelection*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_DisconnectSelection" data-uid="NationalInstruments.Design.WiringToolViewModel.DisconnectSelection">DisconnectSelection()</h4>
+  <div class="markdown level1 summary"><p>Disconnect the current selection from the rest of the diagram. Remove wires between selection and outer elements, not wires entirely within selection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DisconnectSelection()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_EndWiring_" data-uid="NationalInstruments.Design.WiringToolViewModel.EndWiring*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_EndWiring_NationalInstruments_SourceModel_IWiringEnd_NationalInstruments_SourceModel_DiagramPoint_" data-uid="NationalInstruments.Design.WiringToolViewModel.EndWiring(NationalInstruments.SourceModel.IWiringEnd,NationalInstruments.SourceModel.DiagramPoint)">EndWiring(IWiringEnd, DiagramPoint)</h4>
+  <div class="markdown level1 summary"><p>End the interactive wiring.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void EndWiring(IWiringEnd wiringEnd, DiagramPoint position)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.IWiringEnd.html">IWiringEnd</a></td>
+        <td><span class="parametername">wiringEnd</span></td>
+        <td><p>The end.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.DiagramPoint.html">DiagramPoint</a></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>The position.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_EndWiringForMouse_" data-uid="NationalInstruments.Design.WiringToolViewModel.EndWiringForMouse*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_EndWiringForMouse_NationalInstruments_Core_UIPosition_" data-uid="NationalInstruments.Design.WiringToolViewModel.EndWiringForMouse(NationalInstruments.Core.UIPosition)">EndWiringForMouse(UIPosition)</h4>
+  <div class="markdown level1 summary"><p>Ends the wiring for mouse. This is called when we double click while wiring</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void EndWiringForMouse(UIPosition position)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.UIPosition.html">UIPosition</a></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>The position.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_EndWiringOnStructure_" data-uid="NationalInstruments.Design.WiringToolViewModel.EndWiringOnStructure*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_EndWiringOnStructure_NationalInstruments_Core_UIPosition_NationalInstruments_SourceModel_Element_" data-uid="NationalInstruments.Design.WiringToolViewModel.EndWiringOnStructure(NationalInstruments.Core.UIPosition,NationalInstruments.SourceModel.Element)">EndWiringOnStructure(UIPosition, Element)</h4>
+  <div class="markdown level1 summary"><p>Ends the wiring on structure.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool EndWiringOnStructure(UIPosition position, Element selectableModel)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.UIPosition.html">UIPosition</a></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>The position.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td><span class="parametername">selectableModel</span></td>
+        <td><p>The selectable model.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_FlipWire_" data-uid="NationalInstruments.Design.WiringToolViewModel.FlipWire*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_FlipWire" data-uid="NationalInstruments.Design.WiringToolViewModel.FlipWire">FlipWire()</h4>
+  <div class="markdown level1 summary"><p>Flip the last two joints of the wire (the last &quot;elbow&quot;) to be the other direction</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void FlipWire()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_GetBranchPoint_" data-uid="NationalInstruments.Design.WiringToolViewModel.GetBranchPoint*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_GetBranchPoint_NationalInstruments_Design_NearestWire_System_Boolean_" data-uid="NationalInstruments.Design.WiringToolViewModel.GetBranchPoint(NationalInstruments.Design.NearestWire,System.Boolean)">GetBranchPoint(NearestWire, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Get branch point of the nearest wire and optionally allign is to grid</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected DiagramPoint GetBranchPoint(NearestWire nearestWire, bool roundToGrid)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.NearestWire.html">NearestWire</a></td>
+        <td><span class="parametername">nearestWire</span></td>
+        <td><p>Nearest Wire</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">roundToGrid</span></td>
+        <td><p>True if rounding to grid</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.DiagramPoint.html">DiagramPoint</a></td>
+        <td><p>Branch point</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_GetDesignerCanvas_" data-uid="NationalInstruments.Design.WiringToolViewModel.GetDesignerCanvas*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_GetDesignerCanvas_NationalInstruments_Core_PlatformVisual_" data-uid="NationalInstruments.Design.WiringToolViewModel.GetDesignerCanvas(NationalInstruments.Core.PlatformVisual)">GetDesignerCanvas(PlatformVisual)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected static DiagramCanvas GetDesignerCanvas(PlatformVisual element)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">element</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.DiagramCanvas.html">DiagramCanvas</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_GetNearestWire_" data-uid="NationalInstruments.Design.WiringToolViewModel.GetNearestWire*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_GetNearestWire_NationalInstruments_Core_UIPosition_NationalInstruments_Design_WiringToolHitBehavior_NationalInstruments_Design_DiagramCanvas_" data-uid="NationalInstruments.Design.WiringToolViewModel.GetNearestWire(NationalInstruments.Core.UIPosition,NationalInstruments.Design.WiringToolHitBehavior,NationalInstruments.Design.DiagramCanvas)">GetNearestWire(UIPosition, WiringToolHitBehavior, DiagramCanvas)</h4>
+  <div class="markdown level1 summary"><p>Get the nearest wire in a diagram at a UIPosition.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected NearestWire GetNearestWire(UIPosition position, WiringToolHitBehavior hitBehavior, DiagramCanvas diagramCanvas)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.UIPosition.html">UIPosition</a></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>A position in a diagram.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.WiringToolHitBehavior.html">WiringToolHitBehavior</a></td>
+        <td><span class="parametername">hitBehavior</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.DiagramCanvas.html">DiagramCanvas</a></td>
+        <td><span class="parametername">diagramCanvas</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.NearestWire.html">NearestWire</a></td>
+        <td><p>The nearest wire to the position.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_GetNearestWireable_" data-uid="NationalInstruments.Design.WiringToolViewModel.GetNearestWireable*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_GetNearestWireable_NationalInstruments_Core_UIPosition_" data-uid="NationalInstruments.Design.WiringToolViewModel.GetNearestWireable(NationalInstruments.Core.UIPosition)">GetNearestWireable(UIPosition)</h4>
+  <div class="markdown level1 summary"><p>Get the nearest WireableTerminal or Wireable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual PlatformVisual GetNearestWireable(UIPosition position)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.UIPosition.html">UIPosition</a></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>The position of interest</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><p>The element that is wirable and near to the position. Null otherwise</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_GetSuitableBorderNodeTerminal_" data-uid="NationalInstruments.Design.WiringToolViewModel.GetSuitableBorderNodeTerminal*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_GetSuitableBorderNodeTerminal_NationalInstruments_SourceModel_Diagram_NationalInstruments_SourceModel_BorderNode_NationalInstruments_SourceModel_DiagramPoint_" data-uid="NationalInstruments.Design.WiringToolViewModel.GetSuitableBorderNodeTerminal(NationalInstruments.SourceModel.Diagram,NationalInstruments.SourceModel.BorderNode,NationalInstruments.SourceModel.DiagramPoint)">GetSuitableBorderNodeTerminal(Diagram, BorderNode, DiagramPoint)</h4>
+  <div class="markdown level1 summary"><p>Gets the suitable border node terminal based on the type of Bordernode.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected BorderNodeTerminal GetSuitableBorderNodeTerminal(Diagram destinationDiagram, BorderNode selectedBorderNode, DiagramPoint currentPoint)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Diagram.html">Diagram</a></td>
+        <td><span class="parametername">destinationDiagram</span></td>
+        <td><p>Destination diagram where the mouse position is present</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.BorderNode.html">BorderNode</a></td>
+        <td><span class="parametername">selectedBorderNode</span></td>
+        <td><p>Thr Bordernode and its terminals on which the mouse is present/clicked.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.DiagramPoint.html">DiagramPoint</a></td>
+        <td><span class="parametername">currentPoint</span></td>
+        <td><p>The current mouse position.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.BorderNodeTerminal.html">BorderNodeTerminal</a></td>
+        <td><p>The correct bordernode terminal based on the type of Bordernode</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_GetWireableTerminalForMouseMove_" data-uid="NationalInstruments.Design.WiringToolViewModel.GetWireableTerminalForMouseMove*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_GetWireableTerminalForMouseMove_NationalInstruments_Core_PlatformVisual_NationalInstruments_SourceModel_DiagramPoint_" data-uid="NationalInstruments.Design.WiringToolViewModel.GetWireableTerminalForMouseMove(NationalInstruments.Core.PlatformVisual,NationalInstruments.SourceModel.DiagramPoint)">GetWireableTerminalForMouseMove(PlatformVisual, DiagramPoint)</h4>
+  <div class="markdown level1 summary"><p>Gets the wireable terminal for mouse move.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual WireableTerminal GetWireableTerminalForMouseMove(PlatformVisual selectableElement, DiagramPoint currentPoint)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">selectableElement</span></td>
+        <td><p>The selectable element.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.DiagramPoint.html">DiagramPoint</a></td>
+        <td><span class="parametername">currentPoint</span></td>
+        <td><p>The current point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireableTerminal.html">WireableTerminal</a></td>
+        <td><p>The wireable terminal</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_GetWiringTool_" data-uid="NationalInstruments.Design.WiringToolViewModel.GetWiringTool*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_GetWiringTool_NationalInstruments_Design_DesignerEditControlViewModel_" data-uid="NationalInstruments.Design.WiringToolViewModel.GetWiringTool(NationalInstruments.Design.DesignerEditControlViewModel)">GetWiringTool(DesignerEditControlViewModel)</h4>
+  <div class="markdown level1 summary"><p>Find the Wiring Tool in the child&apos;s visual tree.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static WiringToolViewModel GetWiringTool(DesignerEditControlViewModel designer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.DesignerEditControlViewModel.html">DesignerEditControlViewModel</a></td>
+        <td><span class="parametername">designer</span></td>
+        <td><p>designer we are trying to get wiring tool for</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.WiringToolViewModel.html">WiringToolViewModel</a></td>
+        <td><p>Associated wiring tool, or null</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_HideAdornersExceptTerminalAdorners_" data-uid="NationalInstruments.Design.WiringToolViewModel.HideAdornersExceptTerminalAdorners*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_HideAdornersExceptTerminalAdorners_NationalInstruments_Design_AdornerManager_" data-uid="NationalInstruments.Design.WiringToolViewModel.HideAdornersExceptTerminalAdorners(NationalInstruments.Design.AdornerManager)">HideAdornersExceptTerminalAdorners(AdornerManager)</h4>
+  <div class="markdown level1 summary"><p>Hides the adorners except terminal adorners.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void HideAdornersExceptTerminalAdorners(AdornerManager adornerManager)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.AdornerManager.html">AdornerManager</a></td>
+        <td><span class="parametername">adornerManager</span></td>
+        <td><p>The adorner manager.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_HitTestFilterCallback_" data-uid="NationalInstruments.Design.WiringToolViewModel.HitTestFilterCallback*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_HitTestFilterCallback_System_Windows_DependencyObject_" data-uid="NationalInstruments.Design.WiringToolViewModel.HitTestFilterCallback(System.Windows.DependencyObject)">HitTestFilterCallback(DependencyObject)</h4>
+  <div class="markdown level1 summary"><p>Gets the Hit Test Behavior for the target</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected HitTestFilterBehavior HitTestFilterCallback(DependencyObject potentialHitTestTarget)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.dependencyobject">DependencyObject</a></td>
+        <td><span class="parametername">potentialHitTestTarget</span></td>
+        <td><p>The potential hit test target.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.media.hittestfilterbehavior">HitTestFilterBehavior</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_IsElementWireable_" data-uid="NationalInstruments.Design.WiringToolViewModel.IsElementWireable*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_IsElementWireable_NationalInstruments_SourceModel_Element_" data-uid="NationalInstruments.Design.WiringToolViewModel.IsElementWireable(NationalInstruments.SourceModel.Element)">IsElementWireable(Element)</h4>
+  <div class="markdown level1 summary"><p>Checks if the wiring operation can end on this element</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool IsElementWireable(Element element)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td><span class="parametername">element</span></td>
+        <td><p>element to end</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if it can end here</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_IsWiringAllowedForTheZoomFactor_" data-uid="NationalInstruments.Design.WiringToolViewModel.IsWiringAllowedForTheZoomFactor*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_IsWiringAllowedForTheZoomFactor" data-uid="NationalInstruments.Design.WiringToolViewModel.IsWiringAllowedForTheZoomFactor">IsWiringAllowedForTheZoomFactor()</h4>
+  <div class="markdown level1 summary"><p>Determines whether wiring is allowed for the current zoom factor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsWiringAllowedForTheZoomFactor()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if wiring is allowed for the zoom factor; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_NewTransactionStarting_" data-uid="NationalInstruments.Design.WiringToolViewModel.NewTransactionStarting*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_NewTransactionStarting_NationalInstruments_SourceModel_IInteractiveTransactionOwner_" data-uid="NationalInstruments.Design.WiringToolViewModel.NewTransactionStarting(NationalInstruments.SourceModel.IInteractiveTransactionOwner)">NewTransactionStarting(IInteractiveTransactionOwner)</h4>
+  <div class="markdown level1 summary"><p>When another creator attempts to start a transaction, lets the manager know what to do with 
+any current transactions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransactionTransferPolicy NewTransactionStarting(IInteractiveTransactionOwner newTransaction)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.IInteractiveTransactionOwner.html">IInteractiveTransactionOwner</a></td>
+        <td><span class="parametername">newTransaction</span></td>
+        <td><p>The creator of the transaction being started</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TransactionTransferPolicy.html">TransactionTransferPolicy</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_PreviewEndOnDiagram_" data-uid="NationalInstruments.Design.WiringToolViewModel.PreviewEndOnDiagram*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_PreviewEndOnDiagram_NationalInstruments_Core_UIPosition_" data-uid="NationalInstruments.Design.WiringToolViewModel.PreviewEndOnDiagram(NationalInstruments.Core.UIPosition)">PreviewEndOnDiagram(UIPosition)</h4>
+  <div class="markdown level1 summary"><p>Ends the current wiring operation on the digram</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool PreviewEndOnDiagram(UIPosition position)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.UIPosition.html">UIPosition</a></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>Position to tack</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True or false</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_PreviewEndOnNearestTerminal_" data-uid="NationalInstruments.Design.WiringToolViewModel.PreviewEndOnNearestTerminal*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_PreviewEndOnNearestTerminal_NationalInstruments_Core_UIPosition_" data-uid="NationalInstruments.Design.WiringToolViewModel.PreviewEndOnNearestTerminal(NationalInstruments.Core.UIPosition)">PreviewEndOnNearestTerminal(UIPosition)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool PreviewEndOnNearestTerminal(UIPosition position)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.UIPosition.html">UIPosition</a></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_PreviewEndOnTerminal_" data-uid="NationalInstruments.Design.WiringToolViewModel.PreviewEndOnTerminal*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_PreviewEndOnTerminal_NationalInstruments_SourceModel_WireRouteHint_NationalInstruments_SourceModel_WireableTerminal_NationalInstruments_SourceModel_DiagramPoint_System_Collections_Generic_List_NationalInstruments_SourceModel_Mapping_NationalInstruments_SourceModel_WireJoint___" data-uid="NationalInstruments.Design.WiringToolViewModel.PreviewEndOnTerminal(NationalInstruments.SourceModel.WireRouteHint,NationalInstruments.SourceModel.WireableTerminal,NationalInstruments.SourceModel.DiagramPoint,System.Collections.Generic.List{NationalInstruments.SourceModel.Mapping{NationalInstruments.SourceModel.WireJoint}})">PreviewEndOnTerminal(WireRouteHint, WireableTerminal, DiagramPoint, List&lt;Mapping&lt;WireJoint&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Previews wiring end on the given terminal</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual WireJoint PreviewEndOnTerminal(WireRouteHint userHint, WireableTerminal terminal, DiagramPoint currentPoint, List&lt;Mapping&lt;WireJoint&gt;&gt; jointMappings)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireRouteHint.html">WireRouteHint</a></td>
+        <td><span class="parametername">userHint</span></td>
+        <td><p>Wire route hint</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireableTerminal.html">WireableTerminal</a></td>
+        <td><span class="parametername">terminal</span></td>
+        <td><p>The terminal</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.DiagramPoint.html">DiagramPoint</a></td>
+        <td><span class="parametername">currentPoint</span></td>
+        <td><p>The point in diagram </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Mapping-1.html">Mapping</a>&lt;<a class="xref" href="NationalInstruments.SourceModel.WireJoint.html">WireJoint</a>&gt;&gt;</td>
+        <td><span class="parametername">jointMappings</span></td>
+        <td><p>Wire joint mappings</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireJoint.html">WireJoint</a></td>
+        <td><p>New wire joint</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_PreviewEndWiring_" data-uid="NationalInstruments.Design.WiringToolViewModel.PreviewEndWiring*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_PreviewEndWiring_System_Boolean_NationalInstruments_Design_NearestWire_" data-uid="NationalInstruments.Design.WiringToolViewModel.PreviewEndWiring(System.Boolean,NationalInstruments.Design.NearestWire)">PreviewEndWiring(Boolean, NearestWire)</h4>
+  <div class="markdown level1 summary"><p>Previews the end wiring.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool PreviewEndWiring(bool handled, NearestWire nearestWire)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">handled</span></td>
+        <td><p>if set to <code>true</code> [handled].</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.NearestWire.html">NearestWire</a></td>
+        <td><span class="parametername">nearestWire</span></td>
+        <td><p>The nearest wire.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_PreviewEndWiringOnTerminal_" data-uid="NationalInstruments.Design.WiringToolViewModel.PreviewEndWiringOnTerminal*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_PreviewEndWiringOnTerminal_NationalInstruments_SourceModel_WireableTerminal_NationalInstruments_Core_UIPosition_" data-uid="NationalInstruments.Design.WiringToolViewModel.PreviewEndWiringOnTerminal(NationalInstruments.SourceModel.WireableTerminal,NationalInstruments.Core.UIPosition)">PreviewEndWiringOnTerminal(WireableTerminal, UIPosition)</h4>
+  <div class="markdown level1 summary"><p>Preview&apos;s the end of wiring on a terminal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;Mapping&lt;WireJoint&gt;&gt; PreviewEndWiringOnTerminal(WireableTerminal terminal, UIPosition position)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireableTerminal.html">WireableTerminal</a></td>
+        <td><span class="parametername">terminal</span></td>
+        <td><p>The terminal.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.UIPosition.html">UIPosition</a></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>The position.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Mapping-1.html">Mapping</a>&lt;<a class="xref" href="NationalInstruments.SourceModel.WireJoint.html">WireJoint</a>&gt;&gt;</td>
+        <td><p>The list of joint mappings.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_PreviewEndWiringOnTerminalCore_" data-uid="NationalInstruments.Design.WiringToolViewModel.PreviewEndWiringOnTerminalCore*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_PreviewEndWiringOnTerminalCore_NationalInstruments_SourceModel_WireableTerminal_System_Collections_Generic_List_NationalInstruments_SourceModel_Mapping_NationalInstruments_SourceModel_WireJoint___NationalInstruments_SourceModel_DiagramPoint_" data-uid="NationalInstruments.Design.WiringToolViewModel.PreviewEndWiringOnTerminalCore(NationalInstruments.SourceModel.WireableTerminal,System.Collections.Generic.List{NationalInstruments.SourceModel.Mapping{NationalInstruments.SourceModel.WireJoint}},NationalInstruments.SourceModel.DiagramPoint)">PreviewEndWiringOnTerminalCore(WireableTerminal, List&lt;Mapping&lt;WireJoint&gt;&gt;, DiagramPoint)</h4>
+  <div class="markdown level1 summary"><p>Preview end wiring on terminal core</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void PreviewEndWiringOnTerminalCore(WireableTerminal terminal, List&lt;Mapping&lt;WireJoint&gt;&gt; jointMapping, DiagramPoint currentPoint)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireableTerminal.html">WireableTerminal</a></td>
+        <td><span class="parametername">terminal</span></td>
+        <td><p>The Terminal</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Mapping-1.html">Mapping</a>&lt;<a class="xref" href="NationalInstruments.SourceModel.WireJoint.html">WireJoint</a>&gt;&gt;</td>
+        <td><span class="parametername">jointMapping</span></td>
+        <td><p>Joint Mappings</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.DiagramPoint.html">DiagramPoint</a></td>
+        <td><span class="parametername">currentPoint</span></td>
+        <td><p>The position</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_PreviewMouseMoveOnDiagram_" data-uid="NationalInstruments.Design.WiringToolViewModel.PreviewMouseMoveOnDiagram*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_PreviewMouseMoveOnDiagram_NationalInstruments_Design_DiagramCanvas_NationalInstruments_SourceModel_DiagramPoint_System_Collections_Generic_List_NationalInstruments_SourceModel_Mapping_NationalInstruments_SourceModel_WireJoint___" data-uid="NationalInstruments.Design.WiringToolViewModel.PreviewMouseMoveOnDiagram(NationalInstruments.Design.DiagramCanvas,NationalInstruments.SourceModel.DiagramPoint,System.Collections.Generic.List{NationalInstruments.SourceModel.Mapping{NationalInstruments.SourceModel.WireJoint}})">PreviewMouseMoveOnDiagram(DiagramCanvas, DiagramPoint, List&lt;Mapping&lt;WireJoint&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Previews the mouse move on diagram.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual WireJoint PreviewMouseMoveOnDiagram(DiagramCanvas diagramCanvas, DiagramPoint currentPoint, List&lt;Mapping&lt;WireJoint&gt;&gt; jointMapping)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.DiagramCanvas.html">DiagramCanvas</a></td>
+        <td><span class="parametername">diagramCanvas</span></td>
+        <td><p>The diagram canvas.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.DiagramPoint.html">DiagramPoint</a></td>
+        <td><span class="parametername">currentPoint</span></td>
+        <td><p>The current point.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Mapping-1.html">Mapping</a>&lt;<a class="xref" href="NationalInstruments.SourceModel.WireJoint.html">WireJoint</a>&gt;&gt;</td>
+        <td><span class="parametername">jointMapping</span></td>
+        <td><p>The joint mapping.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireJoint.html">WireJoint</a></td>
+        <td><p>The end joint.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_PreviewMouseMoveOnNode_" data-uid="NationalInstruments.Design.WiringToolViewModel.PreviewMouseMoveOnNode*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_PreviewMouseMoveOnNode_NationalInstruments_SourceModel_DiagramPoint_NationalInstruments_SourceModel_Node_" data-uid="NationalInstruments.Design.WiringToolViewModel.PreviewMouseMoveOnNode(NationalInstruments.SourceModel.DiagramPoint,NationalInstruments.SourceModel.Node)">PreviewMouseMoveOnNode(DiagramPoint, Node)</h4>
+  <div class="markdown level1 summary"><p>Previews the mouse move on node.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual WireableTerminal PreviewMouseMoveOnNode(DiagramPoint currentPoint, Node selectedNode)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.DiagramPoint.html">DiagramPoint</a></td>
+        <td><span class="parametername">currentPoint</span></td>
+        <td><p>The current point.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Node.html">Node</a></td>
+        <td><span class="parametername">selectedNode</span></td>
+        <td><p>The selected node.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireableTerminal.html">WireableTerminal</a></td>
+        <td><p>The nearest wireable terminal on the node, if any.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_PreviewMouseMoveOnStructure_" data-uid="NationalInstruments.Design.WiringToolViewModel.PreviewMouseMoveOnStructure*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_PreviewMouseMoveOnStructure_NationalInstruments_SourceModel_DiagramPoint_NationalInstruments_SourceModel_Structure_System_Collections_Generic_List_NationalInstruments_SourceModel_Mapping_NationalInstruments_SourceModel_WireJoint___" data-uid="NationalInstruments.Design.WiringToolViewModel.PreviewMouseMoveOnStructure(NationalInstruments.SourceModel.DiagramPoint,NationalInstruments.SourceModel.Structure,System.Collections.Generic.List{NationalInstruments.SourceModel.Mapping{NationalInstruments.SourceModel.WireJoint}})">PreviewMouseMoveOnStructure(DiagramPoint, Structure, List&lt;Mapping&lt;WireJoint&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Previews the mouse move on structure.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual WireJoint PreviewMouseMoveOnStructure(DiagramPoint currentPoint, Structure selectedStructure, List&lt;Mapping&lt;WireJoint&gt;&gt; jointMapping)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.DiagramPoint.html">DiagramPoint</a></td>
+        <td><span class="parametername">currentPoint</span></td>
+        <td><p>The current point.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Structure.html">Structure</a></td>
+        <td><span class="parametername">selectedStructure</span></td>
+        <td><p>The selected structure.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Mapping-1.html">Mapping</a>&lt;<a class="xref" href="NationalInstruments.SourceModel.WireJoint.html">WireJoint</a>&gt;&gt;</td>
+        <td><span class="parametername">jointMapping</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireJoint.html">WireJoint</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_PreviewMouseMoveOnWire_" data-uid="NationalInstruments.Design.WiringToolViewModel.PreviewMouseMoveOnWire*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_PreviewMouseMoveOnWire_NationalInstruments_SourceModel_WireJoint_NationalInstruments_Design_NearestWire_NationalInstruments_SourceModel_DiagramPoint_NationalInstruments_Design_DiagramCanvas_System_Collections_Generic_List_NationalInstruments_SourceModel_Mapping_NationalInstruments_SourceModel_WireJoint___" data-uid="NationalInstruments.Design.WiringToolViewModel.PreviewMouseMoveOnWire(NationalInstruments.SourceModel.WireJoint,NationalInstruments.Design.NearestWire,NationalInstruments.SourceModel.DiagramPoint,NationalInstruments.Design.DiagramCanvas,System.Collections.Generic.List{NationalInstruments.SourceModel.Mapping{NationalInstruments.SourceModel.WireJoint}})">PreviewMouseMoveOnWire(WireJoint, NearestWire, DiagramPoint, DiagramCanvas, List&lt;Mapping&lt;WireJoint&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Previews the mouse move on wire.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual WireJoint PreviewMouseMoveOnWire(WireJoint lastPreviewJoint, NearestWire nearestWire, DiagramPoint point, DiagramCanvas diagramCanvas, List&lt;Mapping&lt;WireJoint&gt;&gt; jointMapping)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireJoint.html">WireJoint</a></td>
+        <td><span class="parametername">lastPreviewJoint</span></td>
+        <td><p>The last preview joint.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.NearestWire.html">NearestWire</a></td>
+        <td><span class="parametername">nearestWire</span></td>
+        <td><p>The nearest wire.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.DiagramPoint.html">DiagramPoint</a></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The point.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.DiagramCanvas.html">DiagramCanvas</a></td>
+        <td><span class="parametername">diagramCanvas</span></td>
+        <td><p>The diagram canvas.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Mapping-1.html">Mapping</a>&lt;<a class="xref" href="NationalInstruments.SourceModel.WireJoint.html">WireJoint</a>&gt;&gt;</td>
+        <td><span class="parametername">jointMapping</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireJoint.html">WireJoint</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_PreviewStartWiringOnWireSegment_" data-uid="NationalInstruments.Design.WiringToolViewModel.PreviewStartWiringOnWireSegment*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_PreviewStartWiringOnWireSegment_NationalInstruments_Core_UIPosition_NationalInstruments_Core_PlatformVisual_NationalInstruments_Design_NearestWire_System_Boolean_" data-uid="NationalInstruments.Design.WiringToolViewModel.PreviewStartWiringOnWireSegment(NationalInstruments.Core.UIPosition,NationalInstruments.Core.PlatformVisual,NationalInstruments.Design.NearestWire,System.Boolean)">PreviewStartWiringOnWireSegment(UIPosition, PlatformVisual, NearestWire, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Previews the start wiring on wire segment.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool PreviewStartWiringOnWireSegment(UIPosition position, PlatformVisual selectableVisual, NearestWire nearestWire, bool handled)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.UIPosition.html">UIPosition</a></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>The position.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">selectableVisual</span></td>
+        <td><p>The selectable visual.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.NearestWire.html">NearestWire</a></td>
+        <td><span class="parametername">nearestWire</span></td>
+        <td><p>The nearest wire.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">handled</span></td>
+        <td><p>if set to <code>true</code> [handled].</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>true if a preview was initiated</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_ProcessMouseClickAction_" data-uid="NationalInstruments.Design.WiringToolViewModel.ProcessMouseClickAction*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_ProcessMouseClickAction_NationalInstruments_Core_UIPosition_" data-uid="NationalInstruments.Design.WiringToolViewModel.ProcessMouseClickAction(NationalInstruments.Core.UIPosition)">ProcessMouseClickAction(UIPosition)</h4>
+  <div class="markdown level1 summary"><p>Processes a mouse click action (button dowm or certain button up) events.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ProcessMouseClickAction(UIPosition position)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.UIPosition.html">UIPosition</a></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>Current mouse position</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>true if the event was processed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_ProcessPreviewLeftButtonDown_" data-uid="NationalInstruments.Design.WiringToolViewModel.ProcessPreviewLeftButtonDown*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_ProcessPreviewLeftButtonDown_NationalInstruments_Core_UIPosition_" data-uid="NationalInstruments.Design.WiringToolViewModel.ProcessPreviewLeftButtonDown(NationalInstruments.Core.UIPosition)">ProcessPreviewLeftButtonDown(UIPosition)</h4>
+  <div class="markdown level1 summary"><p>code for preview left button down event</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ProcessPreviewLeftButtonDown(UIPosition position)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.UIPosition.html">UIPosition</a></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>position</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>true if handled</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_ProcessPreviewLeftButtonUp_" data-uid="NationalInstruments.Design.WiringToolViewModel.ProcessPreviewLeftButtonUp*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_ProcessPreviewLeftButtonUp_NationalInstruments_Core_UIPosition_" data-uid="NationalInstruments.Design.WiringToolViewModel.ProcessPreviewLeftButtonUp(NationalInstruments.Core.UIPosition)">ProcessPreviewLeftButtonUp(UIPosition)</h4>
+  <div class="markdown level1 summary"><p>Called to process the mouse left button up preview event</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ProcessPreviewLeftButtonUp(UIPosition position)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.UIPosition.html">UIPosition</a></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>the current mouse position</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>true if the event was processed and further process should be stopped</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_ProcessPreviewMouseMove_" data-uid="NationalInstruments.Design.WiringToolViewModel.ProcessPreviewMouseMove*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_ProcessPreviewMouseMove_NationalInstruments_Core_UIPosition_" data-uid="NationalInstruments.Design.WiringToolViewModel.ProcessPreviewMouseMove(NationalInstruments.Core.UIPosition)">ProcessPreviewMouseMove(UIPosition)</h4>
+  <div class="markdown level1 summary"><p>Process Preview Mouse Move event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool ProcessPreviewMouseMove(UIPosition position)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.UIPosition.html">UIPosition</a></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>ui position</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if handled. false otherwise</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_RemoveBrokenWires_" data-uid="NationalInstruments.Design.WiringToolViewModel.RemoveBrokenWires*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_RemoveBrokenWires" data-uid="NationalInstruments.Design.WiringToolViewModel.RemoveBrokenWires">RemoveBrokenWires()</h4>
+  <div class="markdown level1 summary"><p>Remove all broken wires on the diagram.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveBrokenWires()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_RemoveBrokenWires_" data-uid="NationalInstruments.Design.WiringToolViewModel.RemoveBrokenWires*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_RemoveBrokenWires_System_Collections_Generic_IEnumerable_NationalInstruments_SourceModel_Wire__" data-uid="NationalInstruments.Design.WiringToolViewModel.RemoveBrokenWires(System.Collections.Generic.IEnumerable{NationalInstruments.SourceModel.Wire})">RemoveBrokenWires(IEnumerable&lt;Wire&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void RemoveBrokenWires(IEnumerable&lt;Wire&gt; wires)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Wire.html">Wire</a>&gt;</td>
+        <td><span class="parametername">wires</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_RemoveBrokenWiresFromSelection_" data-uid="NationalInstruments.Design.WiringToolViewModel.RemoveBrokenWiresFromSelection*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_RemoveBrokenWiresFromSelection" data-uid="NationalInstruments.Design.WiringToolViewModel.RemoveBrokenWiresFromSelection">RemoveBrokenWiresFromSelection()</h4>
+  <div class="markdown level1 summary"><p>Remove all broken wires on the diagram.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveBrokenWiresFromSelection()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_RemoveWiresFromSelection_" data-uid="NationalInstruments.Design.WiringToolViewModel.RemoveWiresFromSelection*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_RemoveWiresFromSelection" data-uid="NationalInstruments.Design.WiringToolViewModel.RemoveWiresFromSelection">RemoveWiresFromSelection()</h4>
+  <div class="markdown level1 summary"><p>Remove all wires from the current selection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveWiresFromSelection()</code></pre>
+  </div>
+  <h5 id="NationalInstruments_Design_WiringToolViewModel_RemoveWiresFromSelection_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>if any portion of a wire is part of the selection, this will delete the wire</p>
+</div>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_RollbackLastPreview_" data-uid="NationalInstruments.Design.WiringToolViewModel.RollbackLastPreview*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_RollbackLastPreview" data-uid="NationalInstruments.Design.WiringToolViewModel.RollbackLastPreview">RollbackLastPreview()</h4>
+  <div class="markdown level1 summary"><p>Rollback any transactions through the last _wireBuilder.ExtendWire call.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void RollbackLastPreview()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_SetClickStateForTests_" data-uid="NationalInstruments.Design.WiringToolViewModel.SetClickStateForTests*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_SetClickStateForTests_NationalInstruments_Design_ClickState_" data-uid="NationalInstruments.Design.WiringToolViewModel.SetClickStateForTests(NationalInstruments.Design.ClickState)">SetClickStateForTests(ClickState)</h4>
+  <div class="markdown level1 summary"><p>This function should be used for tests only as we can directly call
+<span class="xref">NationalInstruments.Design.WiringToolViewModel.ProcessMouseDoubleClick(NationalInstruments.Core.UIPosition)</span> in a test method after starting wiring from a terminal
+and will expect the wiring to end on diagram to create broken wires.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetClickStateForTests(ClickState value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.ClickState.html">ClickState</a></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>ClickState to be set</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_StartOrEndWiringFromJoint_" data-uid="NationalInstruments.Design.WiringToolViewModel.StartOrEndWiringFromJoint*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_StartOrEndWiringFromJoint_NationalInstruments_SourceModel_WireJoint_NationalInstruments_Core_PlatformVisual_System_Boolean_" data-uid="NationalInstruments.Design.WiringToolViewModel.StartOrEndWiringFromJoint(NationalInstruments.SourceModel.WireJoint,NationalInstruments.Core.PlatformVisual,System.Boolean)">StartOrEndWiringFromJoint(WireJoint, PlatformVisual, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Begin or end a wire from a wire joint that was clicked on</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StartOrEndWiringFromJoint(WireJoint joint, PlatformVisual child, bool rightClick)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireJoint.html">WireJoint</a></td>
+        <td><span class="parametername">joint</span></td>
+        <td><p>The beginning or ending wire joint</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">child</span></td>
+        <td><p>The visual that was clicked on which represented the wire joint</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">rightClick</span></td>
+        <td><p>True if the user right-clicked</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_StartOrEndWiringFromTerminal_" data-uid="NationalInstruments.Design.WiringToolViewModel.StartOrEndWiringFromTerminal*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_StartOrEndWiringFromTerminal_NationalInstruments_SourceModel_WireableTerminal_NationalInstruments_Core_PlatformVisual_System_Boolean_" data-uid="NationalInstruments.Design.WiringToolViewModel.StartOrEndWiringFromTerminal(NationalInstruments.SourceModel.WireableTerminal,NationalInstruments.Core.PlatformVisual,System.Boolean)">StartOrEndWiringFromTerminal(WireableTerminal, PlatformVisual, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Begin or end a wire from a terminal that was clicked on</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StartOrEndWiringFromTerminal(WireableTerminal terminal, PlatformVisual child, bool rightClick)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireableTerminal.html">WireableTerminal</a></td>
+        <td><span class="parametername">terminal</span></td>
+        <td><p>The beginning or ending terminal that the user clicked on</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">child</span></td>
+        <td><p>The parent element of the terminal</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">rightClick</span></td>
+        <td><p>True if the user right-clicked</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_StartWiring_" data-uid="NationalInstruments.Design.WiringToolViewModel.StartWiring*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_StartWiring_NationalInstruments_Core_PlatformVisual_NationalInstruments_SourceModel_IWiringStart_NationalInstruments_SourceModel_DiagramPoint_NationalInstruments_SourceModel_DiagramPoint_System_Boolean_" data-uid="NationalInstruments.Design.WiringToolViewModel.StartWiring(NationalInstruments.Core.PlatformVisual,NationalInstruments.SourceModel.IWiringStart,NationalInstruments.SourceModel.DiagramPoint,NationalInstruments.SourceModel.DiagramPoint,System.Boolean)">StartWiring(PlatformVisual, IWiringStart, DiagramPoint, DiagramPoint, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Begin a wiring from a start point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void StartWiring(PlatformVisual presentationElement, IWiringStart start, DiagramPoint point, DiagramPoint mousePoint, bool rightClick)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">presentationElement</span></td>
+        <td><p>The presentation element for the start of the wiring operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.IWiringStart.html">IWiringStart</a></td>
+        <td><span class="parametername">start</span></td>
+        <td><p>The start.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.DiagramPoint.html">DiagramPoint</a></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The point.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.DiagramPoint.html">DiagramPoint</a></td>
+        <td><span class="parametername">mousePoint</span></td>
+        <td><p>The mouse point.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">rightClick</span></td>
+        <td><p>True if the user right-clicked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_TackWire_" data-uid="NationalInstruments.Design.WiringToolViewModel.TackWire*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_TackWire_NationalInstruments_Core_UIPosition_" data-uid="NationalInstruments.Design.WiringToolViewModel.TackWire(NationalInstruments.Core.UIPosition)">TackWire(UIPosition)</h4>
+  <div class="markdown level1 summary"><p>Tacks the current wire at the position</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool TackWire(UIPosition position)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.UIPosition.html">UIPosition</a></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>position to tack</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if tacked</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_TryToggleAutoRoutingWire_" data-uid="NationalInstruments.Design.WiringToolViewModel.TryToggleAutoRoutingWire*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_TryToggleAutoRoutingWire" data-uid="NationalInstruments.Design.WiringToolViewModel.TryToggleAutoRoutingWire">TryToggleAutoRoutingWire()</h4>
+  <div class="markdown level1 summary"><p>Attempts to toggle the auto routing for the current wiring operation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryToggleAutoRoutingWire()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if the operation was sucessful. <code>false</code> if the operation could not be performed because there was no current wiring operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_WiringToolViewModel_UpdateEndWirePresentation_" data-uid="NationalInstruments.Design.WiringToolViewModel.UpdateEndWirePresentation*"></a>
+  <h4 id="NationalInstruments_Design_WiringToolViewModel_UpdateEndWirePresentation_NationalInstruments_Design_IWirePathPresentation_" data-uid="NationalInstruments.Design.WiringToolViewModel.UpdateEndWirePresentation(NationalInstruments.Design.IWirePathPresentation)">UpdateEndWirePresentation(IWirePathPresentation)</h4>
+  <div class="markdown level1 summary"><p>Updates the end wire presentation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void UpdateEndWirePresentation(IWirePathPresentation wirePathPresentation)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.IWirePathPresentation.html">IWirePathPresentation</a></td>
+        <td><span class="parametername">wirePathPresentation</span></td>
+        <td><p>The wire path presentation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.iweakeventlistener">System.Windows.IWeakEventListener</a>
+  </div>
+  <div>
+      <a class="xref" href="../core/NationalInstruments.Core.IServiceAggregator.html">IServiceAggregator</a>
+  </div>
+  <div>
+      <a class="xref" href="../core/NationalInstruments.Core.IColorResolver.html">IColorResolver</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.IDesignerToolViewModel.html">IDesignerToolViewModel</a>
+  </div>
+  <div>
+      <a class="xref" href="../core/NationalInstruments.Core.IViewModel.html">IViewModel</a>
+  </div>
+  <div>
+      <a class="xref" href="../core/NationalInstruments.Core.IQueryService.html">IQueryService</a>
+  </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">System.ComponentModel.INotifyPropertyChanged</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.IInteractiveTransactionOwner.html">IInteractiveTransactionOwner</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.ContextualHelp.HelpCommonHelpers.html#NationalInstruments_ContextualHelp_HelpCommonHelpers_InitializeContextHelpIfNecessary__1_NationalInstruments_Core_ViewModelBase_">HelpCommonHelpers.InitializeContextHelpIfNecessary&lt;T&gt;(ViewModelBase)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.PaletteContextHelpers.html#NationalInstruments_Design_PaletteContextHelpers_GetPaletteContextKeywords_NationalInstruments_Core_IQueryService_">PaletteContextHelpers.GetPaletteContextKeywords(IQueryService)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.ChildDataContextProviderHelpers.html#NationalInstruments_Design_ChildDataContextProviderHelpers_GetDataContextProvider_NationalInstruments_Core_IViewModel_">ChildDataContextProviderHelpers.GetDataContextProvider(IViewModel)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ElementLocalizationHelpers.html#NationalInstruments_SourceModel_ElementLocalizationHelpers_GetLocalizedValue_NationalInstruments_Core_IViewModel_NationalInstruments_DynamicProperties_PropertySymbol_System_Object_">ElementLocalizationHelpers.GetLocalizedValue(IViewModel, PropertySymbol, Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ElementLocalizationHelpers.html#NationalInstruments_SourceModel_ElementLocalizationHelpers_CreateLocalizedDisplayBinding_NationalInstruments_Core_IViewModel_System_String_NationalInstruments_DynamicProperties_PropertySymbol_">ElementLocalizationHelpers.CreateLocalizedDisplayBinding(IViewModel, String, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ElementLocalizationHelpers.html#NationalInstruments_SourceModel_ElementLocalizationHelpers_CreateLocalizedDisplayBinding_NationalInstruments_Core_IViewModel_System_String_NationalInstruments_DynamicProperties_PropertySymbol_NationalInstruments_Core_PlatformBindingMode_">ElementLocalizationHelpers.CreateLocalizedDisplayBinding(IViewModel, String, PropertySymbol, PlatformBindingMode)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

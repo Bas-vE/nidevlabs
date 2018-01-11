@@ -1,0 +1,575 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class VersionExtensions
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class VersionExtensions
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.DynamicProperties.VersionExtensions">
+  
+  
+  <h1 id="NationalInstruments_DynamicProperties_VersionExtensions" data-uid="NationalInstruments.DynamicProperties.VersionExtensions" class="text-break">Class VersionExtensions
+  </h1>
+  <div class="markdown level0 summary"><p>Extension methods designed to make it easier to convert between System.Version strings
+and AssemblyFileVersion strings.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">VersionExtensions</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.DynamicProperties.html">NationalInstruments.DynamicProperties</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.Core.dll</h6>
+  <h5 id="NationalInstruments_DynamicProperties_VersionExtensions_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class VersionExtensions</code></pre>
+  </div>
+  <h5 id="NationalInstruments_DynamicProperties_VersionExtensions_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>The version strings can either be specified as a System.Version string (e.g. 2.0.0.0) or 
+a version string that is used by our assembly file version (e.g. 2.0.0f0).  The assembly 
+file version string is composed of:</p>
+<p>{Major}.{Upgrade}.{Maintenance}{Phase}{Build} where:
+{Major} is an 8 bit integer that maps to System.Version.Major
+{Upgrade} is a 4 bit integer that maps to System.Version.Minor
+{Maintenance} is a 4 bit integer that maps to System.Version.Build 
+{Build} is a 14 bit integer
+{Phase} = &apos;d&apos;|&apos;a&apos;|&apos;b&apos;|&apos;f&apos; and stands for development, alpha, beta, and final respectively.
+The phase is encoded as a 2 bit integer where d=0, a=1, b=2, and f=3.  The Phase along
+with the Build number are combined to form a 16 bit integer where the phase constitutes
+the 15th and 16th bit.  This combined 16 bit integer then maps to System.Version.Revision.</p>
+</div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="NationalInstruments_DynamicProperties_VersionExtensions_DebianVersionRegex" data-uid="NationalInstruments.DynamicProperties.VersionExtensions.DebianVersionRegex">DebianVersionRegex</h4>
+  <div class="markdown level1 summary"><p>A precompiled regular expression that exactly matches a debian version string, consuming the entire string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Regex DebianVersionRegex</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.regex">Regex</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_DynamicProperties_VersionExtensions_DebianVersionRegexPattern" data-uid="NationalInstruments.DynamicProperties.VersionExtensions.DebianVersionRegexPattern">DebianVersionRegexPattern</h4>
+  <div class="markdown level1 summary"><p>Regex pattern string that matches debian version strings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly string DebianVersionRegexPattern</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_DynamicProperties_VersionExtensions_VersionRegex" data-uid="NationalInstruments.DynamicProperties.VersionExtensions.VersionRegex">VersionRegex</h4>
+  <div class="markdown level1 summary"><p>A precompiled regular expression that exactly matches an assembly file version string, consuming the entire string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Regex VersionRegex</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.regex">Regex</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_DynamicProperties_VersionExtensions_VersionRegexPattern" data-uid="NationalInstruments.DynamicProperties.VersionExtensions.VersionRegexPattern">VersionRegexPattern</h4>
+  <div class="markdown level1 summary"><p>Regex pattern string that matches assembly file version strings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly string VersionRegexPattern</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_VersionExtensions_Get_" data-uid="NationalInstruments.DynamicProperties.VersionExtensions.Get*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_VersionExtensions_Get_System_Int32_System_Int32_System_Int32_NationalInstruments_DynamicProperties_VersionPhase_System_Int32_" data-uid="NationalInstruments.DynamicProperties.VersionExtensions.Get(System.Int32,System.Int32,System.Int32,NationalInstruments.DynamicProperties.VersionPhase,System.Int32)">Get(Int32, Int32, Int32, VersionPhase, Int32)</h4>
+  <div class="markdown level1 summary"><p>Create a System.Version from the SS build numbers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Version Get(int major, int upgrade, int maintenance, VersionPhase phase, int build)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">major</span></td>
+        <td><p>The major version.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">upgrade</span></td>
+        <td><p>The upgrade version.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">maintenance</span></td>
+        <td><p>The maintenance version.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DynamicProperties.VersionPhase.html">VersionPhase</a></td>
+        <td><span class="parametername">phase</span></td>
+        <td><p>The phase.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">build</span></td>
+        <td><p>The build number.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.version">Version</a></td>
+        <td><p>The version.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_VersionExtensions_Parse_" data-uid="NationalInstruments.DynamicProperties.VersionExtensions.Parse*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_VersionExtensions_Parse_System_String_" data-uid="NationalInstruments.DynamicProperties.VersionExtensions.Parse(System.String)">Parse(String)</h4>
+  <div class="markdown level1 summary"><p>Converts an AssemblyFileVersion string into an equivalent version object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Version Parse(string version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">version</span></td>
+        <td><p>The version string to convert (e.g. 1.0.0f0)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.version">Version</a></td>
+        <td><p>An equivalent version object for the version string</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_VersionExtensions_ParseDebianVersion_" data-uid="NationalInstruments.DynamicProperties.VersionExtensions.ParseDebianVersion*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_VersionExtensions_ParseDebianVersion_System_String_" data-uid="NationalInstruments.DynamicProperties.VersionExtensions.ParseDebianVersion(System.String)">ParseDebianVersion(String)</h4>
+  <div class="markdown level1 summary"><p>parse a debian style version into a C# version class</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Version ParseDebianVersion(string version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">version</span></td>
+        <td><p>the debian style version string</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.version">Version</a></td>
+        <td><p>the parsed C# version object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_VersionExtensions_ToAssemblyFileVersionString_" data-uid="NationalInstruments.DynamicProperties.VersionExtensions.ToAssemblyFileVersionString*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_VersionExtensions_ToAssemblyFileVersionString_System_Version_" data-uid="NationalInstruments.DynamicProperties.VersionExtensions.ToAssemblyFileVersionString(System.Version)">ToAssemblyFileVersionString(Version)</h4>
+  <div class="markdown level1 summary"><p>Produces an equivalent AssemblyFileVersion string for the Version object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string ToAssemblyFileVersionString(this Version version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.version">Version</a></td>
+        <td><span class="parametername">version</span></td>
+        <td><p>Version object to generate a version string for</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The equivalent AssemblyFileVersion string represented by the Version object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_VersionExtensions_TryParse_" data-uid="NationalInstruments.DynamicProperties.VersionExtensions.TryParse*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_VersionExtensions_TryParse_System_String_System_Version__" data-uid="NationalInstruments.DynamicProperties.VersionExtensions.TryParse(System.String,System.Version@)">TryParse(String, out Version)</h4>
+  <div class="markdown level1 summary"><p>Converts an AssemblyFileVersion string into an equivalent version object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryParse(string input, out Version result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">input</span></td>
+        <td><p>The version string to convert (e.g. 1.0.0f0)</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.version">Version</a></td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The converted version</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if conversion succeeded and False otherwise</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_VersionExtensions_TryParseDebian_" data-uid="NationalInstruments.DynamicProperties.VersionExtensions.TryParseDebian*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_VersionExtensions_TryParseDebian_System_String_System_Version__" data-uid="NationalInstruments.DynamicProperties.VersionExtensions.TryParseDebian(System.String,System.Version@)">TryParseDebian(String, out Version)</h4>
+  <div class="markdown level1 summary"><p>try to parse a debian style version into a C# version class</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryParseDebian(string input, out Version result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">input</span></td>
+        <td><p>the debian style version string</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.version">Version</a></td>
+        <td><span class="parametername">result</span></td>
+        <td><p>the generated C# version</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>whether the parse was successful</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

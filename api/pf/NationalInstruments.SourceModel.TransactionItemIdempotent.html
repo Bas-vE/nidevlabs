@@ -1,0 +1,356 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class TransactionItemIdempotent
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class TransactionItemIdempotent
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.SourceModel.TransactionItemIdempotent">
+  
+  
+  <h1 id="NationalInstruments_SourceModel_TransactionItemIdempotent" data-uid="NationalInstruments.SourceModel.TransactionItemIdempotent" class="text-break">Class TransactionItemIdempotent
+  </h1>
+  <div class="markdown level0 summary"><p>A change to an object in the model that should only send notifications once per changing to commit or rollback.</p>
+<p>Events are queued only if EnqueueEvents was called on this object and it was not
+already called with the same type of NotificationOrder.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="NationalInstruments.SourceModel.TransactionItem.html">TransactionItem</a></div>
+    <div class="level2"><span class="xref">TransactionItemIdempotent</span></div>
+      <div class="level3"><a class="xref" href="NationalInstruments.SourceModel.GenericCollectionTransactionItem-1.html">GenericCollectionTransactionItem&lt;T&gt;</a></div>
+      <div class="level3"><a class="xref" href="NationalInstruments.SourceModel.ListTransactionItem-1.html">ListTransactionItem&lt;T&gt;</a></div>
+      <div class="level3"><a class="xref" href="NationalInstruments.SourceModel.NotifyPropertyChangedTransactionItem.html">NotifyPropertyChangedTransactionItem</a></div>
+      <div class="level3"><a class="xref" href="NationalInstruments.SourceModel.OwnerComponentTransactionItem.html">OwnerComponentTransactionItem</a></div>
+      <div class="level3"><a class="xref" href="NationalInstruments.SourceModel.PropertyTransactionItem.html">PropertyTransactionItem</a></div>
+      <div class="level3"><a class="xref" href="NationalInstruments.SourceModel.UIModelTransactionItem.html">UIModelTransactionItem</a></div>
+      <div class="level3"><a class="xref" href="NationalInstruments.SourceModel.ValueListTransaction.html">ValueListTransaction</a></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="NationalInstruments.SourceModel.ITransactionAction.html">ITransactionAction</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.TransactionItem.html#NationalInstruments_SourceModel_TransactionItem_Priority">TransactionItem.Priority</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.TransactionItem.html#NationalInstruments_SourceModel_TransactionItem_TargetElement">TransactionItem.TargetElement</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.TransactionItem.html#NationalInstruments_SourceModel_TransactionItem_Hints">TransactionItem.Hints</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.TransactionItem.html#NationalInstruments_SourceModel_TransactionItem_State">TransactionItem.State</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.TransactionItem.html#NationalInstruments_SourceModel_TransactionItem_InitiatingRule">TransactionItem.InitiatingRule</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.TransactionItem.html#NationalInstruments_SourceModel_TransactionItem_DelayNotification">TransactionItem.DelayNotification</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.TransactionItem.html#NationalInstruments_SourceModel_TransactionItem_ParentTransaction">TransactionItem.ParentTransaction</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.TransactionItem.html#NationalInstruments_SourceModel_TransactionItem_PropertyName">TransactionItem.PropertyName</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.TransactionItem.html#NationalInstruments_SourceModel_TransactionItem_IsNotificationOnly">TransactionItem.IsNotificationOnly</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.TransactionItem.html#NationalInstruments_SourceModel_TransactionItem_DebugDisplay">TransactionItem.DebugDisplay</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.TransactionItem.html#NationalInstruments_SourceModel_TransactionItem_Recommit_System_Boolean_NationalInstruments_SourceModel_TransactionItemCallbackReason_">TransactionItem.Recommit(Boolean, TransactionItemCallbackReason)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.TransactionItem.html#NationalInstruments_SourceModel_TransactionItem_Rollback_System_Boolean_NationalInstruments_SourceModel_TransactionItemCallbackReason_">TransactionItem.Rollback(Boolean, TransactionItemCallbackReason)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.TransactionItem.html#NationalInstruments_SourceModel_TransactionItem_ToString">TransactionItem.ToString()</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.SourceModel.html">NationalInstruments.SourceModel</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_SourceModel_TransactionItemIdempotent_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class TransactionItemIdempotent : TransactionItem, ITransactionAction</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionItemIdempotent__ctor_" data-uid="NationalInstruments.SourceModel.TransactionItemIdempotent.#ctor*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionItemIdempotent__ctor" data-uid="NationalInstruments.SourceModel.TransactionItemIdempotent.#ctor">TransactionItemIdempotent()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected TransactionItemIdempotent()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionItemIdempotent__ctor_" data-uid="NationalInstruments.SourceModel.TransactionItemIdempotent.#ctor*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionItemIdempotent__ctor_NationalInstruments_SourceModel_Element_System_String_" data-uid="NationalInstruments.SourceModel.TransactionItemIdempotent.#ctor(NationalInstruments.SourceModel.Element,System.String)">TransactionItemIdempotent(Element, String)</h4>
+  <div class="markdown level1 summary"><p>Construct an idempotent (does not send events if already sent) transaction item for a change to an element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected TransactionItemIdempotent(Element targetElement, string propertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td><span class="parametername">targetElement</span></td>
+        <td><p>The element being effected by the transaction.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>The name of the property this transactionItem relates to.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionItemIdempotent_EnqueueEvents_" data-uid="NationalInstruments.SourceModel.TransactionItemIdempotent.EnqueueEvents*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionItemIdempotent_EnqueueEvents_NationalInstruments_SourceModel_TransactedEventList_NationalInstruments_SourceModel_NotificationOrder_" data-uid="NationalInstruments.SourceModel.TransactionItemIdempotent.EnqueueEvents(NationalInstruments.SourceModel.TransactedEventList,NationalInstruments.SourceModel.NotificationOrder)">EnqueueEvents(TransactedEventList, NotificationOrder)</h4>
+  <div class="markdown level1 summary"><p>This transaction should notify of the changes made within it in the order requested</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override sealed void EnqueueEvents(TransactedEventList eventManager, NotificationOrder order)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TransactedEventList.html">TransactedEventList</a></td>
+        <td><span class="parametername">eventManager</span></td>
+        <td><p>the event manager to enqueue to</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.NotificationOrder.html">NotificationOrder</a></td>
+        <td><span class="parametername">order</span></td>
+        <td><p>the order in which the notifications should be sent</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.TransactionItem.html#NationalInstruments_SourceModel_TransactionItem_EnqueueEvents_NationalInstruments_SourceModel_TransactedEventList_NationalInstruments_SourceModel_NotificationOrder_">TransactionItem.EnqueueEvents(TransactedEventList, NotificationOrder)</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_TransactionItemIdempotent_EnqueueEventsDerived_" data-uid="NationalInstruments.SourceModel.TransactionItemIdempotent.EnqueueEventsDerived*"></a>
+  <h4 id="NationalInstruments_SourceModel_TransactionItemIdempotent_EnqueueEventsDerived_NationalInstruments_SourceModel_TransactedEventList_" data-uid="NationalInstruments.SourceModel.TransactionItemIdempotent.EnqueueEventsDerived(NationalInstruments.SourceModel.TransactedEventList)">EnqueueEventsDerived(TransactedEventList)</h4>
+  <div class="markdown level1 summary"><p>Report events to the master event list.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void EnqueueEventsDerived(TransactedEventList eventManager)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TransactedEventList.html">TransactedEventList</a></td>
+        <td><span class="parametername">eventManager</span></td>
+        <td><p>The event list</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.ITransactionAction.html">ITransactionAction</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.TransactionItemEnumerableExtensions.html#NationalInstruments_SourceModel_TransactionItemEnumerableExtensions_AsBoundsChange__1_NationalInstruments_SourceModel_TransactionItem_">TransactionItemEnumerableExtensions.AsBoundsChange&lt;T&gt;(TransactionItem)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.TransactionItemEnumerableExtensions.html#NationalInstruments_SourceModel_TransactionItemEnumerableExtensions_AsTerminalHotspotChange__1_NationalInstruments_SourceModel_TransactionItem_">TransactionItemEnumerableExtensions.AsTerminalHotspotChange&lt;T&gt;(TransactionItem)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.TransactionItemEnumerableExtensions.html#NationalInstruments_SourceModel_TransactionItemEnumerableExtensions_AsPropertyChange__2_NationalInstruments_SourceModel_TransactionItem_System_Linq_Expressions_Expression_System_Func___0___1___">TransactionItemEnumerableExtensions.AsPropertyChange&lt;T, TValue&gt;(TransactionItem, Expression&lt;Func&lt;T, TValue&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.TransactionItemEnumerableExtensions.html#NationalInstruments_SourceModel_TransactionItemEnumerableExtensions_AsPropertyChange__2_NationalInstruments_SourceModel_TransactionItem_System_String_">TransactionItemEnumerableExtensions.AsPropertyChange&lt;T, TValue&gt;(TransactionItem, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.TransactionItemEnumerableExtensions.html#NationalInstruments_SourceModel_TransactionItemEnumerableExtensions_AsOwnerChange__2_NationalInstruments_SourceModel_TransactionItem_">TransactionItemEnumerableExtensions.AsOwnerChange&lt;TComponent, TOwner&gt;(TransactionItem)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.TransactionItemEnumerableExtensions.html#NationalInstruments_SourceModel_TransactionItemEnumerableExtensions_AsComponentRemove__2_NationalInstruments_SourceModel_TransactionItem_">TransactionItemEnumerableExtensions.AsComponentRemove&lt;TComponent, TOwner&gt;(TransactionItem)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.TransactionItemEnumerableExtensions.html#NationalInstruments_SourceModel_TransactionItemEnumerableExtensions_AsComponentInsert__2_NationalInstruments_SourceModel_TransactionItem_">TransactionItemEnumerableExtensions.AsComponentInsert&lt;TComponent, TOwner&gt;(TransactionItem)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

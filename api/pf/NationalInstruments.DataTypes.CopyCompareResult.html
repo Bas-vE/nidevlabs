@@ -1,0 +1,260 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Enum CopyCompareResult
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Enum CopyCompareResult
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.DataTypes.CopyCompareResult">
+  
+  
+  <h1 id="NationalInstruments_DataTypes_CopyCompareResult" data-uid="NationalInstruments.DataTypes.CopyCompareResult" class="text-break">Enum CopyCompareResult
+  </h1>
+  <div class="markdown level0 summary"><p>Possible results of the CompareTypesForCopy().
+If you are changing this enum please make sure that you update the two helper static methods.
+Callers assume that this enum is in severity order. That means Identical must be first, then
+any coercions/conversions, then any conflicts. If you add to the enum, you must insert new 
+items in the correct location.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="../core/NationalInstruments.DataTypes.html">NationalInstruments.DataTypes</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_DataTypes_CopyCompareResult_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public enum CopyCompareResult</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    <thead>
+    <tbody>
+      <tr>
+        <td id="NationalInstruments_DataTypes_CopyCompareResult_ArraySizeCoercionRequired">ArraySizeCoercionRequired</td>
+        <td><p>Source array may have different allocation than destination array.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_DataTypes_CopyCompareResult_ClassConflict">ClassConflict</td>
+        <td><p>There is a class conflict in trying to copy/convert type 1 to type 2.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_DataTypes_CopyCompareResult_ClusterConflict">ClusterConflict</td>
+        <td><p>There is a conflict in the cluster elements in trying to copy/convert type 1 to type 2.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_DataTypes_CopyCompareResult_ConversionRequired">ConversionRequired</td>
+        <td><p>Input type can be coerced to the output type</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_DataTypes_CopyCompareResult_DimensionConflict">DimensionConflict</td>
+        <td><p>There is a Dimension conflict in these arrays when trying to copy/convert type 1 to type 2.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_DataTypes_CopyCompareResult_EnumerationConflict">EnumerationConflict</td>
+        <td><p>There is a Enumeration conflict in trying to copy/convert type 1 to type 2.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_DataTypes_CopyCompareResult_FixedSizeConflict">FixedSizeConflict</td>
+        <td><p>There is a size conflict involving sized arrays</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_DataTypes_CopyCompareResult_FunctionConflict">FunctionConflict</td>
+        <td><p>There is a Function conflict in trying to copy/convert type 1 to type 2.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_DataTypes_CopyCompareResult_Identical">Identical</td>
+        <td><p>Types compared are identical</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_DataTypes_CopyCompareResult_NameChangeRequired">NameChangeRequired</td>
+        <td><p>Input type is cluster that is structurally identical to output type except the field names are different.
+Treat this as similar to <a class="xref" href="NationalInstruments.DataTypes.CopyCompareResult.html#NationalInstruments_DataTypes_CopyCompareResult_TypedefChangeRequired">TypedefChangeRequired</a> in virtually all cases. The only value in
+a different return type is the warning message reported to the user.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_DataTypes_CopyCompareResult_NameConflict">NameConflict</td>
+        <td><p>There is a name conflict in trying to copy/convert type 1 to type 2.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_DataTypes_CopyCompareResult_ReferenceConflict">ReferenceConflict</td>
+        <td><p>There is a reference conflict in trying to copy/convert type 1 to type 2.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_DataTypes_CopyCompareResult_ReinterpretCastRequired">ReinterpretCastRequired</td>
+        <td><p>Input type can be reinterpret-cast as the output type</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_DataTypes_CopyCompareResult_ScalarToArrayConflict">ScalarToArrayConflict</td>
+        <td><p>There is a conflict where one of the types is an array and the other is not.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_DataTypes_CopyCompareResult_TypeConflict">TypeConflict</td>
+        <td><p>There is a type conflict in trying to copy/convert type 1 to type 2.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_DataTypes_CopyCompareResult_TypedefChangeRequired">TypedefChangeRequired</td>
+        <td><p>Input type differs in typedefness from output type</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_DataTypes_CopyCompareResult_UnitConflict">UnitConflict</td>
+        <td><p>There is a unit conflict in trying to copy/convert type 1 to type 2.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_DataTypes_CopyCompareResult_UpcastRequired">UpcastRequired</td>
+        <td><p>Input type can be upcasted to the output class or interface (with no information loss)</p>
+</td>
+      </tr>
+    </tbody>
+  </thead></thead></table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.CopyCompareResultExtensions.html#NationalInstruments_DataTypes_CopyCompareResultExtensions_IsError_NationalInstruments_DataTypes_CopyCompareResult_">CopyCompareResultExtensions.IsError()</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.CopyCompareResultExtensions.html#NationalInstruments_DataTypes_CopyCompareResultExtensions_IsWarning_NationalInstruments_DataTypes_CopyCompareResult_">CopyCompareResultExtensions.IsWarning()</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.CopyCompareResultExtensions.html#NationalInstruments_DataTypes_CopyCompareResultExtensions_IsCoercionRequired_NationalInstruments_DataTypes_CopyCompareResult_">CopyCompareResultExtensions.IsCoercionRequired()</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.CopyCompareResultExtensions.html#NationalInstruments_DataTypes_CopyCompareResultExtensions_IsTypeClassOrScalarToArrayConflict_NationalInstruments_DataTypes_CopyCompareResult_">CopyCompareResultExtensions.IsTypeClassOrScalarToArrayConflict()</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.CopyCompareResultExtensions.html#NationalInstruments_DataTypes_CopyCompareResultExtensions_SelectHighestSeverity_NationalInstruments_DataTypes_CopyCompareResult_NationalInstruments_DataTypes_CopyCompareResult_">CopyCompareResultExtensions.SelectHighestSeverity(CopyCompareResult)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType()</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump()</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

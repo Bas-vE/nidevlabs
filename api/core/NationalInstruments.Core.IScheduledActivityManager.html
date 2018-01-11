@@ -1,0 +1,1145 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IScheduledActivityManager
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IScheduledActivityManager
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.Core.IScheduledActivityManager">
+  
+  
+  <h1 id="NationalInstruments_Core_IScheduledActivityManager" data-uid="NationalInstruments.Core.IScheduledActivityManager" class="text-break">Interface IScheduledActivityManager
+  </h1>
+  <div class="markdown level0 summary"><p>The scheduled activity manager used to schedule and manage <a class="xref" href="NationalInstruments.Core.ScheduledActivity.html">ScheduledActivity</a>s.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="../pf/NationalInstruments.Core.html">NationalInstruments.Core</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.Core.dll</h6>
+  <h5 id="NationalInstruments_Core_IScheduledActivityManager_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IScheduledActivityManager</code></pre>
+  </div>
+  <h5 id="NationalInstruments_Core_IScheduledActivityManager_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>MEF is used to create an ScheduledActivityManager singleton.
+The singleton is accessed by way of Host.GetSharedExportedValue<a href="">IScheduledActivityManager</a>
+or Host.GetSharedExportedValue<a href="">ScheduledActivityManager</a></p>
+</div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_Core_IScheduledActivityManager_Activities_" data-uid="NationalInstruments.Core.IScheduledActivityManager.Activities*"></a>
+  <h4 id="NationalInstruments_Core_IScheduledActivityManager_Activities" data-uid="NationalInstruments.Core.IScheduledActivityManager.Activities">Activities</h4>
+  <div class="markdown level1 summary"><p>Get all activities that are running, have been scheduled to run, or are waiting to be canceled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;ScheduledActivity&gt; Activities { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.Core.ScheduledActivity.html">ScheduledActivity</a>&gt;</td>
+        <td><p>The activity list</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Core_IScheduledActivityManager_Activities_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The enumerable returned is a copy of the activities so that it is safe for the user to hold on to while the
+ScheduledActivityManager modify the actual activity list.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_Core_IScheduledActivityManager_Deferring_" data-uid="NationalInstruments.Core.IScheduledActivityManager.Deferring*"></a>
+  <h4 id="NationalInstruments_Core_IScheduledActivityManager_Deferring" data-uid="NationalInstruments.Core.IScheduledActivityManager.Deferring">Deferring</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this <a class="xref" href="NationalInstruments.Core.IScheduledActivityManager.html">IScheduledActivityManager</a> is deferring
+<a class="xref" href="NationalInstruments.Core.ScheduledActivity.html">ScheduledActivity</a> execution.  Currently, only UI activities are deferred.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool Deferring { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_IScheduledActivityManager_IsShuttingDown_" data-uid="NationalInstruments.Core.IScheduledActivityManager.IsShuttingDown*"></a>
+  <h4 id="NationalInstruments_Core_IScheduledActivityManager_IsShuttingDown" data-uid="NationalInstruments.Core.IScheduledActivityManager.IsShuttingDown">IsShuttingDown</h4>
+  <div class="markdown level1 summary"><p>Whether we are currently shutting down.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsShuttingDown { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_IScheduledActivityManager_IsUIThread_" data-uid="NationalInstruments.Core.IScheduledActivityManager.IsUIThread*"></a>
+  <h4 id="NationalInstruments_Core_IScheduledActivityManager_IsUIThread" data-uid="NationalInstruments.Core.IScheduledActivityManager.IsUIThread">IsUIThread</h4>
+  <div class="markdown level1 summary"><p>Whether we are in the UI thread or not.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsUIThread { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_Core_IScheduledActivityManager_Enqueue_" data-uid="NationalInstruments.Core.IScheduledActivityManager.Enqueue*"></a>
+  <h4 id="NationalInstruments_Core_IScheduledActivityManager_Enqueue_NationalInstruments_Core_ScheduledActivity_" data-uid="NationalInstruments.Core.IScheduledActivityManager.Enqueue(NationalInstruments.Core.ScheduledActivity)">Enqueue(ScheduledActivity)</h4>
+  <div class="markdown level1 summary"><p>Enqueue an activity to be run. The <a class="xref" href="NationalInstruments.Core.ScheduledActivity.html#NationalInstruments_Core_ScheduledActivity_ResourceAffinities">ResourceAffinities</a> will be used to determine
+if the activity should run in the UI thread or another thread.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool Enqueue(ScheduledActivity activity)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.ScheduledActivity.html">ScheduledActivity</a></td>
+        <td><span class="parametername">activity</span></td>
+        <td><p>The activity to run</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if the activity was successfully enqueued</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Core_IScheduledActivityManager_Enqueue_NationalInstruments_Core_ScheduledActivity__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>There are several implementations of <a class="xref" href="NationalInstruments.Core.ScheduledActivity.html">ScheduledActivity</a> that might be useful:</p>
+<ul>
+<li><a class="xref" href="NationalInstruments.Core.BasicActivity.html">BasicActivity</a> -- Concrete, simple activity that will call a user supplied action</li>
+<li><a class="xref" href="NationalInstruments.Core.ScheduledActivity.html">ScheduledActivity</a> -- Abstract implementation of ScheduledActivity that most activities should have as an ancestor</li>
+<li><a class="xref" href="NationalInstruments.Core.EnumerableActivity.html">EnumerableActivity</a> -- Abstract implementation of ScheduledActivity that provides a nice syntax for yield return style work</li>
+</ul>
+</div>
+  
+  
+  <a id="NationalInstruments_Core_IScheduledActivityManager_FlushActivities_" data-uid="NationalInstruments.Core.IScheduledActivityManager.FlushActivities*"></a>
+  <h4 id="NationalInstruments_Core_IScheduledActivityManager_FlushActivities" data-uid="NationalInstruments.Core.IScheduledActivityManager.FlushActivities">FlushActivities()</h4>
+  <div class="markdown level1 summary"><p>Flushes all pending activities.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void FlushActivities()</code></pre>
+  </div>
+  <h5 id="NationalInstruments_Core_IScheduledActivityManager_FlushActivities_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This must be called from the UI thread.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_Core_IScheduledActivityManager_FlushActivities_" data-uid="NationalInstruments.Core.IScheduledActivityManager.FlushActivities*"></a>
+  <h4 id="NationalInstruments_Core_IScheduledActivityManager_FlushActivities_System_Threading_CancellationToken_" data-uid="NationalInstruments.Core.IScheduledActivityManager.FlushActivities(System.Threading.CancellationToken)">FlushActivities(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Flushes all pending activities.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void FlushActivities(CancellationToken token)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">token</span></td>
+        <td><p>A cancellation token that, when cancelled, will cause the Flush operation to return.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Core_IScheduledActivityManager_FlushActivities_System_Threading_CancellationToken__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This must be called from the UI thread.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a></td>
+        <td><p>Thrown if the <code data-dev-comment-type="paramref" class="paramref">token</code> is cancelled before the flush completes.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_IScheduledActivityManager_ForkActivityAsync_" data-uid="NationalInstruments.Core.IScheduledActivityManager.ForkActivityAsync*"></a>
+  <h4 id="NationalInstruments_Core_IScheduledActivityManager_ForkActivityAsync_NationalInstruments_Core_ScheduledActivity_" data-uid="NationalInstruments.Core.IScheduledActivityManager.ForkActivityAsync(NationalInstruments.Core.ScheduledActivity)">ForkActivityAsync(ScheduledActivity)</h4>
+  <div class="markdown level1 summary"><p>Schedules an activity to be run using the scheduler of the given activity.
+The forked activity will always match the priority of the given activity
+and you cannot change the priorities independently.
+You must &quot;Join&quot; the forked activity by awaiting it to ensure we can shutdown
+properly</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task ForkActivityAsync(ScheduledActivity activity)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.ScheduledActivity.html">ScheduledActivity</a></td>
+        <td><span class="parametername">activity</span></td>
+        <td><p>the activity to be enqueued</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>the waitable task or null on failure to enqueue</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_IScheduledActivityManager_IncreaseActivityPriority_" data-uid="NationalInstruments.Core.IScheduledActivityManager.IncreaseActivityPriority*"></a>
+  <h4 id="NationalInstruments_Core_IScheduledActivityManager_IncreaseActivityPriority_NationalInstruments_Core_ScheduledActivity_NationalInstruments_Core_AsyncTaskPriority_" data-uid="NationalInstruments.Core.IScheduledActivityManager.IncreaseActivityPriority(NationalInstruments.Core.ScheduledActivity,NationalInstruments.Core.AsyncTaskPriority)">IncreaseActivityPriority(ScheduledActivity, AsyncTaskPriority)</h4>
+  <div class="markdown level1 summary"><p>Attempts to increases the priority of an already scheduled activity.
+The priority cannot be increased if the activity has already started.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IncreaseActivityPriority(ScheduledActivity activity, AsyncTaskPriority priority)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.ScheduledActivity.html">ScheduledActivity</a></td>
+        <td><span class="parametername">activity</span></td>
+        <td><p>The activity to increase the priority on</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.AsyncTaskPriority.html">AsyncTaskPriority</a></td>
+        <td><span class="parametername">priority</span></td>
+        <td><p>The new desired priority</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>true if the priority was likely increased</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_IScheduledActivityManager_RunActivityAsync_" data-uid="NationalInstruments.Core.IScheduledActivityManager.RunActivityAsync*"></a>
+  <h4 id="NationalInstruments_Core_IScheduledActivityManager_RunActivityAsync_NationalInstruments_Core_ScheduledActivity_" data-uid="NationalInstruments.Core.IScheduledActivityManager.RunActivityAsync(NationalInstruments.Core.ScheduledActivity)">RunActivityAsync(ScheduledActivity)</h4>
+  <div class="markdown level1 summary"><p>Runs the given activity honoring the priority and resource affinities of the <a class="xref" href="NationalInstruments.Core.ScheduledActivity.html">ScheduledActivity</a>.
+This method will eventually replace Enqueue.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task RunActivityAsync(ScheduledActivity activity)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.ScheduledActivity.html">ScheduledActivity</a></td>
+        <td><span class="parametername">activity</span></td>
+        <td><p>the activity to be run.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>the waitable task or null on failure to enqueue</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_IScheduledActivityManager_RunActivityAsync_" data-uid="NationalInstruments.Core.IScheduledActivityManager.RunActivityAsync*"></a>
+  <h4 id="NationalInstruments_Core_IScheduledActivityManager_RunActivityAsync__1_NationalInstruments_Core_ScheduledActivity___0__" data-uid="NationalInstruments.Core.IScheduledActivityManager.RunActivityAsync``1(NationalInstruments.Core.ScheduledActivity{``0})">RunActivityAsync&lt;TResult&gt;(ScheduledActivity&lt;TResult&gt;)</h4>
+  <div class="markdown level1 summary"><p>Runs the given activity honoring the priority and resource affinities of the <a class="xref" href="NationalInstruments.Core.ScheduledActivity.html">ScheduledActivity</a>.
+This method will eventually replace Enqueue.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;TResult&gt; RunActivityAsync&lt;TResult&gt;(ScheduledActivity&lt;TResult&gt; activity)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.ScheduledActivity-1.html">ScheduledActivity</a>&lt;TResult&gt;</td>
+        <td><span class="parametername">activity</span></td>
+        <td><p>the activity to be run.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;TResult&gt;</td>
+        <td><p>the waitable task or null on failure to enqueue</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td><p>The type of the result of the activity.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_IScheduledActivityManager_Shutdown_" data-uid="NationalInstruments.Core.IScheduledActivityManager.Shutdown*"></a>
+  <h4 id="NationalInstruments_Core_IScheduledActivityManager_Shutdown" data-uid="NationalInstruments.Core.IScheduledActivityManager.Shutdown">Shutdown()</h4>
+  <div class="markdown level1 summary"><p>Cancel all activities and notify the user when the shutdown is complete.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Shutdown()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Core_IScheduledActivityManager_YieldToUserInputAsync_" data-uid="NationalInstruments.Core.IScheduledActivityManager.YieldToUserInputAsync*"></a>
+  <h4 id="NationalInstruments_Core_IScheduledActivityManager_YieldToUserInputAsync_NationalInstruments_Core_AsyncTaskPriority_" data-uid="NationalInstruments.Core.IScheduledActivityManager.YieldToUserInputAsync(NationalInstruments.Core.AsyncTaskPriority)">YieldToUserInputAsync(AsyncTaskPriority)</h4>
+  <div class="markdown level1 summary"><p>Yields to any UI activity with a priority higher than the specified priority or
+any pending user input.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task YieldToUserInputAsync(AsyncTaskPriority priority)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.AsyncTaskPriority.html">AsyncTaskPriority</a></td>
+        <td><span class="parametername">priority</span></td>
+        <td><p>The priority of the currently executing code,
+any activity with higher priority will be executed before the returned Task
+is completed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>The task to wait on</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_IScheduledActivityManager_YieldWithPriorityAsync_" data-uid="NationalInstruments.Core.IScheduledActivityManager.YieldWithPriorityAsync*"></a>
+  <h4 id="NationalInstruments_Core_IScheduledActivityManager_YieldWithPriorityAsync_NationalInstruments_Core_AsyncTaskPriority_System_Boolean_" data-uid="NationalInstruments.Core.IScheduledActivityManager.YieldWithPriorityAsync(NationalInstruments.Core.AsyncTaskPriority,System.Boolean)">YieldWithPriorityAsync(AsyncTaskPriority, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Yields to any UI activity with a priority higher than the specified priority.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task YieldWithPriorityAsync(AsyncTaskPriority priority, bool alwaysYield)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.AsyncTaskPriority.html">AsyncTaskPriority</a></td>
+        <td><span class="parametername">priority</span></td>
+        <td><p>The priority of the currently executing code,
+any activity with higher priority will be executed before the returned Task
+is completed</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">alwaysYield</span></td>
+        <td><p>If true the Task will never be completed on return
+and the yield will always be async, false and the task will be completed on return
+if there are not activities with a higher than specified priority</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>The task to wait on</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="events">Events
+  </h3>
+  
+  
+  <h4 id="NationalInstruments_Core_IScheduledActivityManager_DeferringChanged" data-uid="NationalInstruments.Core.IScheduledActivityManager.DeferringChanged">DeferringChanged</h4>
+  <div class="markdown level1 summary"><p>An event that is raised whenever the <a class="xref" href="NationalInstruments.Core.IScheduledActivityManager.html#NationalInstruments_Core_IScheduledActivityManager_Deferring">Deferring</a> property changes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event EventHandler&lt;DeferringChangedEventArgs&gt; DeferringChanged</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="NationalInstruments.Core.DeferringChangedEventArgs.html">DeferringChangedEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_ToEnumerable__1___0_">EnumerableHelper.ToEnumerable&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_Repeat__1___0_System_Int32_">EnumerableHelper.Repeat&lt;T&gt;(T, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyNothing__1___0_">Verifier.VerifyNothing&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Func___0_System_Boolean__System_Action_System_String__System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Func___0_System_Boolean__System_Action_System_String_System_String__System_String_System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Boolean_System_Action_System_String__System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Boolean, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Boolean_System_Action_System_String_System_String__System_String_System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Boolean, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Func___0_System_Boolean__System_Action_System_String__System_String_">Verifier.Verify&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Func___0_System_Boolean__System_Action_System_String_System_String__System_String_System_String_">Verifier.Verify&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Boolean_System_Action_System_String__System_String_">Verifier.Verify&lt;T&gt;(T, Boolean, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Boolean_System_Action_System_String_System_String__System_String_System_String_">Verifier.Verify&lt;T&gt;(T, Boolean, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentIsNotNull__1___0_System_String_">Verifier.VerifyArgumentIsNotNull&lt;T&gt;(T, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyValueIsNotNull__1___0_System_String_">Verifier.VerifyValueIsNotNull&lt;T&gt;(T, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentNotReferenceEqualsTo_System_Object_System_Object_System_String_">Verifier.VerifyArgumentNotReferenceEqualsTo(Object, Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyValueNotReferenceEqualsTo_System_Object_System_Object_System_String_">Verifier.VerifyValueNotReferenceEqualsTo(Object, Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentIsOfType__1_System_Object_System_String_">Verifier.VerifyArgumentIsOfType&lt;T&gt;(Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyValueIsOfType__1_System_Object_System_String_">Verifier.VerifyValueIsOfType&lt;T&gt;(Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ActivityHelpers.html#NationalInstruments_Core_ActivityHelpers_YieldToBackground_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_">ActivityHelpers.YieldToBackground(IScheduledActivityManager, AsyncTaskPriorityToken, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityAsync_NationalInstruments_Core_IScheduledActivityManager_System_String_System_Action_">ScheduledActivityManagerExtensions.RunUIActivityAsync(IScheduledActivityManager, String, Action)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityAsync_NationalInstruments_Core_IScheduledActivityManager_System_String_System_Action_System_Threading_CancellationToken__">ScheduledActivityManagerExtensions.RunUIActivityAsync(IScheduledActivityManager, String, Action&lt;CancellationToken&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityAsync_NationalInstruments_Core_IScheduledActivityManager_System_String_System_Func_System_Threading_Tasks_Task__">ScheduledActivityManagerExtensions.RunUIActivityAsync(IScheduledActivityManager, String, Func&lt;Task&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityAsync_NationalInstruments_Core_IScheduledActivityManager_System_String_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task__">ScheduledActivityManagerExtensions.RunUIActivityAsync(IScheduledActivityManager, String, Func&lt;CancellationToken, Task&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityAsync_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task__">ScheduledActivityManagerExtensions.RunUIActivityAsync(IScheduledActivityManager, AsyncTaskPriorityToken, String, Func&lt;CancellationToken, Task&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityAsync_NationalInstruments_Core_IScheduledActivityManager_System_Threading_CancellationToken_System_String_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task__">ScheduledActivityManagerExtensions.RunUIActivityAsync(IScheduledActivityManager, CancellationToken, String, Func&lt;CancellationToken, Task&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityAsync__1_NationalInstruments_Core_IScheduledActivityManager_System_String_System_Func___0__">ScheduledActivityManagerExtensions.RunUIActivityAsync&lt;TResult&gt;(IScheduledActivityManager, String, Func&lt;TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityAsync__1_NationalInstruments_Core_IScheduledActivityManager_System_String_System_Func_System_Threading_CancellationToken___0__">ScheduledActivityManagerExtensions.RunUIActivityAsync&lt;TResult&gt;(IScheduledActivityManager, String, Func&lt;CancellationToken, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityAsync__1_NationalInstruments_Core_IScheduledActivityManager_System_String_System_Func_System_Threading_Tasks_Task___0___">ScheduledActivityManagerExtensions.RunUIActivityAsync&lt;TResult&gt;(IScheduledActivityManager, String, Func&lt;Task&lt;TResult&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityAsync__1_NationalInstruments_Core_IScheduledActivityManager_System_String_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task___0___">ScheduledActivityManagerExtensions.RunUIActivityAsync&lt;TResult&gt;(IScheduledActivityManager, String, Func&lt;CancellationToken, Task&lt;TResult&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityAsync__1_NationalInstruments_Core_IScheduledActivityManager_System_Threading_CancellationToken_System_String_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task___0___">ScheduledActivityManagerExtensions.RunUIActivityAsync&lt;TResult&gt;(IScheduledActivityManager, CancellationToken, String, Func&lt;CancellationToken, Task&lt;TResult&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityAsync_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Action_">ScheduledActivityManagerExtensions.RunUIActivityAsync(IScheduledActivityManager, AsyncTaskPriorityToken, String, Action)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityAsync_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Action_System_Threading_CancellationToken__">ScheduledActivityManagerExtensions.RunUIActivityAsync(IScheduledActivityManager, AsyncTaskPriorityToken, String, Action&lt;CancellationToken&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityAsync_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Threading_Tasks_Task__">ScheduledActivityManagerExtensions.RunUIActivityAsync(IScheduledActivityManager, AsyncTaskPriorityToken, String, Func&lt;Task&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityAsync_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_Threading_CancellationToken_System_String_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task__">ScheduledActivityManagerExtensions.RunUIActivityAsync(IScheduledActivityManager, AsyncTaskPriorityToken, CancellationToken, String, Func&lt;CancellationToken, Task&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityAsync__1_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func___0__">ScheduledActivityManagerExtensions.RunUIActivityAsync&lt;TResult&gt;(IScheduledActivityManager, AsyncTaskPriorityToken, String, Func&lt;TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityAsync__1_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Threading_CancellationToken___0__">ScheduledActivityManagerExtensions.RunUIActivityAsync&lt;TResult&gt;(IScheduledActivityManager, AsyncTaskPriorityToken, String, Func&lt;CancellationToken, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityAsync__1_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Threading_Tasks_Task___0___">ScheduledActivityManagerExtensions.RunUIActivityAsync&lt;TResult&gt;(IScheduledActivityManager, AsyncTaskPriorityToken, String, Func&lt;Task&lt;TResult&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityAsync__1_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task___0___">ScheduledActivityManagerExtensions.RunUIActivityAsync&lt;TResult&gt;(IScheduledActivityManager, AsyncTaskPriorityToken, String, Func&lt;CancellationToken, Task&lt;TResult&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityAsync__1_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_Threading_CancellationToken_System_String_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task___0___">ScheduledActivityManagerExtensions.RunUIActivityAsync&lt;TResult&gt;(IScheduledActivityManager, AsyncTaskPriorityToken, CancellationToken, String, Func&lt;CancellationToken, Task&lt;TResult&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityAsync_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Boolean__System_Func_System_Threading_Tasks_Task__">ScheduledActivityManagerExtensions.RunUIActivityAsync(IScheduledActivityManager, AsyncTaskPriorityToken, String, Func&lt;Boolean&gt;, Func&lt;Task&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityAsync_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Boolean__System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task__">ScheduledActivityManagerExtensions.RunUIActivityAsync(IScheduledActivityManager, AsyncTaskPriorityToken, String, Func&lt;Boolean&gt;, Func&lt;CancellationToken, Task&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityAsync_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Boolean__System_Action_">ScheduledActivityManagerExtensions.RunUIActivityAsync(IScheduledActivityManager, AsyncTaskPriorityToken, String, Func&lt;Boolean&gt;, Action)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityAsync_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Boolean__System_Action_System_Threading_CancellationToken__">ScheduledActivityManagerExtensions.RunUIActivityAsync(IScheduledActivityManager, AsyncTaskPriorityToken, String, Func&lt;Boolean&gt;, Action&lt;CancellationToken&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityAsync_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Boolean__System_Action_System_Boolean__">ScheduledActivityManagerExtensions.RunUIActivityAsync(IScheduledActivityManager, AsyncTaskPriorityToken, String, Func&lt;Boolean&gt;, Action&lt;Boolean&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityIfNecessaryAsync_NationalInstruments_Core_IScheduledActivityManager_System_String_System_Action_">ScheduledActivityManagerExtensions.RunUIActivityIfNecessaryAsync(IScheduledActivityManager, String, Action)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityIfNecessaryAsync_NationalInstruments_Core_IScheduledActivityManager_System_Threading_CancellationToken_System_String_System_Action_System_Threading_CancellationToken__">ScheduledActivityManagerExtensions.RunUIActivityIfNecessaryAsync(IScheduledActivityManager, CancellationToken, String, Action&lt;CancellationToken&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityIfNecessaryAsync_NationalInstruments_Core_IScheduledActivityManager_System_String_System_Action_System_Threading_CancellationToken__">ScheduledActivityManagerExtensions.RunUIActivityIfNecessaryAsync(IScheduledActivityManager, String, Action&lt;CancellationToken&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityIfNecessaryAsync_NationalInstruments_Core_IScheduledActivityManager_System_String_System_Func_System_Threading_Tasks_Task__">ScheduledActivityManagerExtensions.RunUIActivityIfNecessaryAsync(IScheduledActivityManager, String, Func&lt;Task&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityIfNecessaryAsync_NationalInstruments_Core_IScheduledActivityManager_System_String_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task__">ScheduledActivityManagerExtensions.RunUIActivityIfNecessaryAsync(IScheduledActivityManager, String, Func&lt;CancellationToken, Task&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityIfNecessaryAsync_NationalInstruments_Core_IScheduledActivityManager_System_Threading_CancellationToken_System_String_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task__">ScheduledActivityManagerExtensions.RunUIActivityIfNecessaryAsync(IScheduledActivityManager, CancellationToken, String, Func&lt;CancellationToken, Task&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityIfNecessaryAsync__1_NationalInstruments_Core_IScheduledActivityManager_System_String_System_Func___0__">ScheduledActivityManagerExtensions.RunUIActivityIfNecessaryAsync&lt;TResult&gt;(IScheduledActivityManager, String, Func&lt;TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityIfNecessaryAsync__1_NationalInstruments_Core_IScheduledActivityManager_System_String_System_Func_System_Threading_CancellationToken___0__">ScheduledActivityManagerExtensions.RunUIActivityIfNecessaryAsync&lt;TResult&gt;(IScheduledActivityManager, String, Func&lt;CancellationToken, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityIfNecessaryAsync__1_NationalInstruments_Core_IScheduledActivityManager_System_String_System_Func_System_Threading_Tasks_Task___0___">ScheduledActivityManagerExtensions.RunUIActivityIfNecessaryAsync&lt;TResult&gt;(IScheduledActivityManager, String, Func&lt;Task&lt;TResult&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityIfNecessaryAsync__1_NationalInstruments_Core_IScheduledActivityManager_System_String_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task___0___">ScheduledActivityManagerExtensions.RunUIActivityIfNecessaryAsync&lt;TResult&gt;(IScheduledActivityManager, String, Func&lt;CancellationToken, Task&lt;TResult&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityIfNecessaryAsync__1_NationalInstruments_Core_IScheduledActivityManager_System_Threading_CancellationToken_System_String_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task___0___">ScheduledActivityManagerExtensions.RunUIActivityIfNecessaryAsync&lt;TResult&gt;(IScheduledActivityManager, CancellationToken, String, Func&lt;CancellationToken, Task&lt;TResult&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityIfNecessaryAsync_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Action_">ScheduledActivityManagerExtensions.RunUIActivityIfNecessaryAsync(IScheduledActivityManager, AsyncTaskPriorityToken, String, Action)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityIfNecessaryAsync_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Action_System_Threading_CancellationToken__">ScheduledActivityManagerExtensions.RunUIActivityIfNecessaryAsync(IScheduledActivityManager, AsyncTaskPriorityToken, String, Action&lt;CancellationToken&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityIfNecessaryAsync_NationalInstruments_Core_IScheduledActivityManager_System_Threading_CancellationToken_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Action_System_Threading_CancellationToken__">ScheduledActivityManagerExtensions.RunUIActivityIfNecessaryAsync(IScheduledActivityManager, CancellationToken, AsyncTaskPriorityToken, String, Action&lt;CancellationToken&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityIfNecessaryAsync_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Threading_Tasks_Task__">ScheduledActivityManagerExtensions.RunUIActivityIfNecessaryAsync(IScheduledActivityManager, AsyncTaskPriorityToken, String, Func&lt;Task&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityIfNecessaryAsync_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task__">ScheduledActivityManagerExtensions.RunUIActivityIfNecessaryAsync(IScheduledActivityManager, AsyncTaskPriorityToken, String, Func&lt;CancellationToken, Task&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityIfNecessaryAsync_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_Threading_CancellationToken_System_String_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task__">ScheduledActivityManagerExtensions.RunUIActivityIfNecessaryAsync(IScheduledActivityManager, AsyncTaskPriorityToken, CancellationToken, String, Func&lt;CancellationToken, Task&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityIfNecessaryAsync__1_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func___0__">ScheduledActivityManagerExtensions.RunUIActivityIfNecessaryAsync&lt;TResult&gt;(IScheduledActivityManager, AsyncTaskPriorityToken, String, Func&lt;TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityIfNecessaryAsync__1_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Threading_CancellationToken___0__">ScheduledActivityManagerExtensions.RunUIActivityIfNecessaryAsync&lt;TResult&gt;(IScheduledActivityManager, AsyncTaskPriorityToken, String, Func&lt;CancellationToken, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityIfNecessaryAsync__1_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Threading_Tasks_Task___0___">ScheduledActivityManagerExtensions.RunUIActivityIfNecessaryAsync&lt;TResult&gt;(IScheduledActivityManager, AsyncTaskPriorityToken, String, Func&lt;Task&lt;TResult&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityIfNecessaryAsync__1_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task___0___">ScheduledActivityManagerExtensions.RunUIActivityIfNecessaryAsync&lt;TResult&gt;(IScheduledActivityManager, AsyncTaskPriorityToken, String, Func&lt;CancellationToken, Task&lt;TResult&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityIfNecessaryAsync__1_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_Threading_CancellationToken_System_String_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task___0___">ScheduledActivityManagerExtensions.RunUIActivityIfNecessaryAsync&lt;TResult&gt;(IScheduledActivityManager, AsyncTaskPriorityToken, CancellationToken, String, Func&lt;CancellationToken, Task&lt;TResult&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityIfNecessaryAsync_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Boolean__System_Func_System_Threading_Tasks_Task__">ScheduledActivityManagerExtensions.RunUIActivityIfNecessaryAsync(IScheduledActivityManager, AsyncTaskPriorityToken, String, Func&lt;Boolean&gt;, Func&lt;Task&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityIfNecessaryAsync_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Boolean__System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task__">ScheduledActivityManagerExtensions.RunUIActivityIfNecessaryAsync(IScheduledActivityManager, AsyncTaskPriorityToken, String, Func&lt;Boolean&gt;, Func&lt;CancellationToken, Task&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityIfNecessaryAsync_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Boolean__System_Action_">ScheduledActivityManagerExtensions.RunUIActivityIfNecessaryAsync(IScheduledActivityManager, AsyncTaskPriorityToken, String, Func&lt;Boolean&gt;, Action)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunUIActivityIfNecessaryAsync_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Boolean__System_Action_System_Threading_CancellationToken__">ScheduledActivityManagerExtensions.RunUIActivityIfNecessaryAsync(IScheduledActivityManager, AsyncTaskPriorityToken, String, Func&lt;Boolean&gt;, Action&lt;CancellationToken&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityAsync_NationalInstruments_Core_IScheduledActivityManager_System_String_System_Action_">ScheduledActivityManagerExtensions.RunBackgroundActivityAsync(IScheduledActivityManager, String, Action)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityAsync_NationalInstruments_Core_IScheduledActivityManager_System_String_System_Action_System_Threading_CancellationToken__">ScheduledActivityManagerExtensions.RunBackgroundActivityAsync(IScheduledActivityManager, String, Action&lt;CancellationToken&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityAsync_NationalInstruments_Core_IScheduledActivityManager_System_String_System_Func_System_Threading_Tasks_Task__">ScheduledActivityManagerExtensions.RunBackgroundActivityAsync(IScheduledActivityManager, String, Func&lt;Task&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityAsync_NationalInstruments_Core_IScheduledActivityManager_System_String_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task__">ScheduledActivityManagerExtensions.RunBackgroundActivityAsync(IScheduledActivityManager, String, Func&lt;CancellationToken, Task&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityAsync_NationalInstruments_Core_IScheduledActivityManager_System_Threading_CancellationToken_System_String_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task__">ScheduledActivityManagerExtensions.RunBackgroundActivityAsync(IScheduledActivityManager, CancellationToken, String, Func&lt;CancellationToken, Task&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityAsync__1_NationalInstruments_Core_IScheduledActivityManager_System_String_System_Func___0__">ScheduledActivityManagerExtensions.RunBackgroundActivityAsync&lt;TResult&gt;(IScheduledActivityManager, String, Func&lt;TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityAsync__1_NationalInstruments_Core_IScheduledActivityManager_System_String_System_Func_System_Threading_CancellationToken___0__">ScheduledActivityManagerExtensions.RunBackgroundActivityAsync&lt;TResult&gt;(IScheduledActivityManager, String, Func&lt;CancellationToken, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityAsync__1_NationalInstruments_Core_IScheduledActivityManager_System_String_System_Func_System_Threading_Tasks_Task___0___">ScheduledActivityManagerExtensions.RunBackgroundActivityAsync&lt;TResult&gt;(IScheduledActivityManager, String, Func&lt;Task&lt;TResult&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityAsync__1_NationalInstruments_Core_IScheduledActivityManager_System_String_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task___0___">ScheduledActivityManagerExtensions.RunBackgroundActivityAsync&lt;TResult&gt;(IScheduledActivityManager, String, Func&lt;CancellationToken, Task&lt;TResult&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityAsync__1_NationalInstruments_Core_IScheduledActivityManager_System_Threading_CancellationToken_System_String_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task___0___">ScheduledActivityManagerExtensions.RunBackgroundActivityAsync&lt;TResult&gt;(IScheduledActivityManager, CancellationToken, String, Func&lt;CancellationToken, Task&lt;TResult&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityAsync_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Action_">ScheduledActivityManagerExtensions.RunBackgroundActivityAsync(IScheduledActivityManager, AsyncTaskPriorityToken, String, Action)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityAsync_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Action_System_Threading_CancellationToken__">ScheduledActivityManagerExtensions.RunBackgroundActivityAsync(IScheduledActivityManager, AsyncTaskPriorityToken, String, Action&lt;CancellationToken&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityAsync_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Threading_Tasks_Task__">ScheduledActivityManagerExtensions.RunBackgroundActivityAsync(IScheduledActivityManager, AsyncTaskPriorityToken, String, Func&lt;Task&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityAsync_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task__">ScheduledActivityManagerExtensions.RunBackgroundActivityAsync(IScheduledActivityManager, AsyncTaskPriorityToken, String, Func&lt;CancellationToken, Task&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityAsync_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_Threading_CancellationToken_System_String_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task__">ScheduledActivityManagerExtensions.RunBackgroundActivityAsync(IScheduledActivityManager, AsyncTaskPriorityToken, CancellationToken, String, Func&lt;CancellationToken, Task&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityAsync__1_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func___0__">ScheduledActivityManagerExtensions.RunBackgroundActivityAsync&lt;TResult&gt;(IScheduledActivityManager, AsyncTaskPriorityToken, String, Func&lt;TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityAsync__1_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Threading_CancellationToken___0__">ScheduledActivityManagerExtensions.RunBackgroundActivityAsync&lt;TResult&gt;(IScheduledActivityManager, AsyncTaskPriorityToken, String, Func&lt;CancellationToken, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityAsync__1_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Threading_Tasks_Task___0___">ScheduledActivityManagerExtensions.RunBackgroundActivityAsync&lt;TResult&gt;(IScheduledActivityManager, AsyncTaskPriorityToken, String, Func&lt;Task&lt;TResult&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityAsync__1_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task___0___">ScheduledActivityManagerExtensions.RunBackgroundActivityAsync&lt;TResult&gt;(IScheduledActivityManager, AsyncTaskPriorityToken, String, Func&lt;CancellationToken, Task&lt;TResult&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityAsync__1_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_Threading_CancellationToken_System_String_System_Func_System_Threading_CancellationToken___0__">ScheduledActivityManagerExtensions.RunBackgroundActivityAsync&lt;TResult&gt;(IScheduledActivityManager, AsyncTaskPriorityToken, CancellationToken, String, Func&lt;CancellationToken, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityAsync__1_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_Threading_CancellationToken_System_String_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task___0___">ScheduledActivityManagerExtensions.RunBackgroundActivityAsync&lt;TResult&gt;(IScheduledActivityManager, AsyncTaskPriorityToken, CancellationToken, String, Func&lt;CancellationToken, Task&lt;TResult&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityAsync_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Boolean__System_Action_">ScheduledActivityManagerExtensions.RunBackgroundActivityAsync(IScheduledActivityManager, AsyncTaskPriorityToken, String, Func&lt;Boolean&gt;, Action)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityAsync_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Boolean__System_Action_System_Threading_CancellationToken__">ScheduledActivityManagerExtensions.RunBackgroundActivityAsync(IScheduledActivityManager, AsyncTaskPriorityToken, String, Func&lt;Boolean&gt;, Action&lt;CancellationToken&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityAsync_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Boolean__System_Func_System_Threading_Tasks_Task__">ScheduledActivityManagerExtensions.RunBackgroundActivityAsync(IScheduledActivityManager, AsyncTaskPriorityToken, String, Func&lt;Boolean&gt;, Func&lt;Task&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityAsync_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Boolean__System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task__">ScheduledActivityManagerExtensions.RunBackgroundActivityAsync(IScheduledActivityManager, AsyncTaskPriorityToken, String, Func&lt;Boolean&gt;, Func&lt;CancellationToken, Task&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityIfNecessaryAsync_NationalInstruments_Core_IScheduledActivityManager_System_String_System_Action_">ScheduledActivityManagerExtensions.RunBackgroundActivityIfNecessaryAsync(IScheduledActivityManager, String, Action)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityIfNecessaryAsync_NationalInstruments_Core_IScheduledActivityManager_System_String_System_Action_System_Threading_CancellationToken__">ScheduledActivityManagerExtensions.RunBackgroundActivityIfNecessaryAsync(IScheduledActivityManager, String, Action&lt;CancellationToken&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityIfNecessaryAsync_NationalInstruments_Core_IScheduledActivityManager_System_String_System_Func_System_Threading_Tasks_Task__">ScheduledActivityManagerExtensions.RunBackgroundActivityIfNecessaryAsync(IScheduledActivityManager, String, Func&lt;Task&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityIfNecessaryAsync_NationalInstruments_Core_IScheduledActivityManager_System_String_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task__">ScheduledActivityManagerExtensions.RunBackgroundActivityIfNecessaryAsync(IScheduledActivityManager, String, Func&lt;CancellationToken, Task&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityIfNecessaryAsync_NationalInstruments_Core_IScheduledActivityManager_System_Threading_CancellationToken_System_String_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task__">ScheduledActivityManagerExtensions.RunBackgroundActivityIfNecessaryAsync(IScheduledActivityManager, CancellationToken, String, Func&lt;CancellationToken, Task&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityIfNecessaryAsync__1_NationalInstruments_Core_IScheduledActivityManager_System_String_System_Func___0__">ScheduledActivityManagerExtensions.RunBackgroundActivityIfNecessaryAsync&lt;TResult&gt;(IScheduledActivityManager, String, Func&lt;TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityIfNecessaryAsync__1_NationalInstruments_Core_IScheduledActivityManager_System_String_System_Func_System_Threading_CancellationToken___0__">ScheduledActivityManagerExtensions.RunBackgroundActivityIfNecessaryAsync&lt;TResult&gt;(IScheduledActivityManager, String, Func&lt;CancellationToken, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityIfNecessaryAsync__1_NationalInstruments_Core_IScheduledActivityManager_System_String_System_Func_System_Threading_Tasks_Task___0___">ScheduledActivityManagerExtensions.RunBackgroundActivityIfNecessaryAsync&lt;TResult&gt;(IScheduledActivityManager, String, Func&lt;Task&lt;TResult&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityIfNecessaryAsync__1_NationalInstruments_Core_IScheduledActivityManager_System_String_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task___0___">ScheduledActivityManagerExtensions.RunBackgroundActivityIfNecessaryAsync&lt;TResult&gt;(IScheduledActivityManager, String, Func&lt;CancellationToken, Task&lt;TResult&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityIfNecessaryAsync__1_NationalInstruments_Core_IScheduledActivityManager_System_Threading_CancellationToken_System_String_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task___0___">ScheduledActivityManagerExtensions.RunBackgroundActivityIfNecessaryAsync&lt;TResult&gt;(IScheduledActivityManager, CancellationToken, String, Func&lt;CancellationToken, Task&lt;TResult&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityIfNecessaryAsync_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Action_">ScheduledActivityManagerExtensions.RunBackgroundActivityIfNecessaryAsync(IScheduledActivityManager, AsyncTaskPriorityToken, String, Action)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityIfNecessaryAsync_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Action_System_Threading_CancellationToken__">ScheduledActivityManagerExtensions.RunBackgroundActivityIfNecessaryAsync(IScheduledActivityManager, AsyncTaskPriorityToken, String, Action&lt;CancellationToken&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityIfNecessaryAsync_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Threading_Tasks_Task__">ScheduledActivityManagerExtensions.RunBackgroundActivityIfNecessaryAsync(IScheduledActivityManager, AsyncTaskPriorityToken, String, Func&lt;Task&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityIfNecessaryAsync_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task__">ScheduledActivityManagerExtensions.RunBackgroundActivityIfNecessaryAsync(IScheduledActivityManager, AsyncTaskPriorityToken, String, Func&lt;CancellationToken, Task&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityIfNecessaryAsync_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_Threading_CancellationToken_System_String_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task__">ScheduledActivityManagerExtensions.RunBackgroundActivityIfNecessaryAsync(IScheduledActivityManager, AsyncTaskPriorityToken, CancellationToken, String, Func&lt;CancellationToken, Task&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityIfNecessaryAsync__1_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func___0__">ScheduledActivityManagerExtensions.RunBackgroundActivityIfNecessaryAsync&lt;TResult&gt;(IScheduledActivityManager, AsyncTaskPriorityToken, String, Func&lt;TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityIfNecessaryAsync__1_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Threading_CancellationToken___0__">ScheduledActivityManagerExtensions.RunBackgroundActivityIfNecessaryAsync&lt;TResult&gt;(IScheduledActivityManager, AsyncTaskPriorityToken, String, Func&lt;CancellationToken, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityIfNecessaryAsync__1_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Threading_Tasks_Task___0___">ScheduledActivityManagerExtensions.RunBackgroundActivityIfNecessaryAsync&lt;TResult&gt;(IScheduledActivityManager, AsyncTaskPriorityToken, String, Func&lt;Task&lt;TResult&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityIfNecessaryAsync__1_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task___0___">ScheduledActivityManagerExtensions.RunBackgroundActivityIfNecessaryAsync&lt;TResult&gt;(IScheduledActivityManager, AsyncTaskPriorityToken, String, Func&lt;CancellationToken, Task&lt;TResult&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityIfNecessaryAsync__1_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_Threading_CancellationToken_System_String_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task___0___">ScheduledActivityManagerExtensions.RunBackgroundActivityIfNecessaryAsync&lt;TResult&gt;(IScheduledActivityManager, AsyncTaskPriorityToken, CancellationToken, String, Func&lt;CancellationToken, Task&lt;TResult&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityIfNecessaryAsync_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Boolean__System_Action_">ScheduledActivityManagerExtensions.RunBackgroundActivityIfNecessaryAsync(IScheduledActivityManager, AsyncTaskPriorityToken, String, Func&lt;Boolean&gt;, Action)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityIfNecessaryAsync_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Boolean__System_Action_System_Threading_CancellationToken__">ScheduledActivityManagerExtensions.RunBackgroundActivityIfNecessaryAsync(IScheduledActivityManager, AsyncTaskPriorityToken, String, Func&lt;Boolean&gt;, Action&lt;CancellationToken&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityIfNecessaryAsync_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Boolean__System_Func_System_Threading_Tasks_Task__">ScheduledActivityManagerExtensions.RunBackgroundActivityIfNecessaryAsync(IScheduledActivityManager, AsyncTaskPriorityToken, String, Func&lt;Boolean&gt;, Func&lt;Task&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunBackgroundActivityIfNecessaryAsync_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Boolean__System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task__">ScheduledActivityManagerExtensions.RunBackgroundActivityIfNecessaryAsync(IScheduledActivityManager, AsyncTaskPriorityToken, String, Func&lt;Boolean&gt;, Func&lt;CancellationToken, Task&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunActivityAsync_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_ActivityResourceAffinities_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Boolean__System_Action_">ScheduledActivityManagerExtensions.RunActivityAsync(IScheduledActivityManager, ActivityResourceAffinities, AsyncTaskPriorityToken, String, Func&lt;Boolean&gt;, Action)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunActivityAsync_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_ActivityResourceAffinities_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Boolean__System_Action_System_Threading_CancellationToken__">ScheduledActivityManagerExtensions.RunActivityAsync(IScheduledActivityManager, ActivityResourceAffinities, AsyncTaskPriorityToken, String, Func&lt;Boolean&gt;, Action&lt;CancellationToken&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunActivityAsync_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_ActivityResourceAffinities_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Boolean__System_Func_System_Threading_Tasks_Task__">ScheduledActivityManagerExtensions.RunActivityAsync(IScheduledActivityManager, ActivityResourceAffinities, AsyncTaskPriorityToken, String, Func&lt;Boolean&gt;, Func&lt;Task&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunActivityAsync_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_ActivityResourceAffinities_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task__">ScheduledActivityManagerExtensions.RunActivityAsync(IScheduledActivityManager, ActivityResourceAffinities, AsyncTaskPriorityToken, String, Func&lt;CancellationToken, Task&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunActivityAsync_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_ActivityResourceAffinities_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Threading_Tasks_Task__">ScheduledActivityManagerExtensions.RunActivityAsync(IScheduledActivityManager, ActivityResourceAffinities, AsyncTaskPriorityToken, String, Func&lt;Task&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunActivityAsync_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_ActivityResourceAffinities_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Boolean__System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task__">ScheduledActivityManagerExtensions.RunActivityAsync(IScheduledActivityManager, ActivityResourceAffinities, AsyncTaskPriorityToken, String, Func&lt;Boolean&gt;, Func&lt;CancellationToken, Task&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunActivityAsync_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_ActivityResourceAffinities_NationalInstruments_Core_AsyncTaskPriorityToken_System_Threading_CancellationToken_System_String_System_Func_System_Boolean__System_Action_System_Threading_CancellationToken__">ScheduledActivityManagerExtensions.RunActivityAsync(IScheduledActivityManager, ActivityResourceAffinities, AsyncTaskPriorityToken, CancellationToken, String, Func&lt;Boolean&gt;, Action&lt;CancellationToken&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunActivityAsync_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_ActivityResourceAffinities_NationalInstruments_Core_AsyncTaskPriorityToken_System_Threading_CancellationToken_System_String_System_Func_System_Boolean__System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task__">ScheduledActivityManagerExtensions.RunActivityAsync(IScheduledActivityManager, ActivityResourceAffinities, AsyncTaskPriorityToken, CancellationToken, String, Func&lt;Boolean&gt;, Func&lt;CancellationToken, Task&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunActivityAsync__1_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_ActivityResourceAffinities_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func___0__">ScheduledActivityManagerExtensions.RunActivityAsync&lt;TResult&gt;(IScheduledActivityManager, ActivityResourceAffinities, AsyncTaskPriorityToken, String, Func&lt;TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunActivityAsync__1_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_ActivityResourceAffinities_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Threading_CancellationToken___0__">ScheduledActivityManagerExtensions.RunActivityAsync&lt;TResult&gt;(IScheduledActivityManager, ActivityResourceAffinities, AsyncTaskPriorityToken, String, Func&lt;CancellationToken, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunActivityAsync__1_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_ActivityResourceAffinities_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Threading_Tasks_Task___0___">ScheduledActivityManagerExtensions.RunActivityAsync&lt;TResult&gt;(IScheduledActivityManager, ActivityResourceAffinities, AsyncTaskPriorityToken, String, Func&lt;Task&lt;TResult&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunActivityAsync__1_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_ActivityResourceAffinities_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task___0___">ScheduledActivityManagerExtensions.RunActivityAsync&lt;TResult&gt;(IScheduledActivityManager, ActivityResourceAffinities, AsyncTaskPriorityToken, String, Func&lt;CancellationToken, Task&lt;TResult&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunActivityAsync__1_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_ActivityResourceAffinities_NationalInstruments_Core_AsyncTaskPriorityToken_System_Threading_CancellationToken_System_String_System_Func_System_Threading_CancellationToken___0__">ScheduledActivityManagerExtensions.RunActivityAsync&lt;TResult&gt;(IScheduledActivityManager, ActivityResourceAffinities, AsyncTaskPriorityToken, CancellationToken, String, Func&lt;CancellationToken, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunActivityAsync__1_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_ActivityResourceAffinities_NationalInstruments_Core_AsyncTaskPriorityToken_System_Threading_CancellationToken_System_String_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task___0___">ScheduledActivityManagerExtensions.RunActivityAsync&lt;TResult&gt;(IScheduledActivityManager, ActivityResourceAffinities, AsyncTaskPriorityToken, CancellationToken, String, Func&lt;CancellationToken, Task&lt;TResult&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_RunActivityAsync_NationalInstruments_Core_IScheduledActivityManager_NationalInstruments_Core_ActivityResourceAffinities_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_System_Func_System_Boolean__System_Action_System_Boolean__">ScheduledActivityManagerExtensions.RunActivityAsync(IScheduledActivityManager, ActivityResourceAffinities, AsyncTaskPriorityToken, String, Func&lt;Boolean&gt;, Action&lt;Boolean&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.ScheduledActivityManagerExtensions.html#NationalInstruments_Core_ScheduledActivityManagerExtensions_ForkActivityAsync_NationalInstruments_Core_IScheduledActivityManager_System_String_System_Func_System_Threading_Tasks_Task__">ScheduledActivityManagerExtensions.ForkActivityAsync(IScheduledActivityManager, String, Func&lt;Task&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.QueryServiceExtensions.html#NationalInstruments_Core_QueryServiceExtensions_QueryService__1_System_Object_">QueryServiceExtensions.QueryService&lt;T&gt;(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_FindClosestMatchingContainerForResource_System_Object_System_Func_System_Object_System_Globalization_CultureInfo_System_Object__System_Globalization_CultureInfo_">LocalizationHelpers.FindClosestMatchingContainerForResource(Object, Func&lt;Object, CultureInfo, Object&gt;, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_FindClosestMatchingContainerForResource_System_Object_System_Func_System_Object_System_Globalization_CultureInfo_System_Object__System_Globalization_CultureInfo_System_Func_System_Object_System_Object__">LocalizationHelpers.FindClosestMatchingContainerForResource(Object, Func&lt;Object, CultureInfo, Object&gt;, CultureInfo, Func&lt;Object, Object&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedEnumString__1___0_">LocalizationHelpers.GetLocalizedEnumString&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedString_System_Object_System_String_System_Globalization_CultureInfo_">LocalizationHelpers.GetLocalizedString(Object, String, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedString_System_Object_System_String_System_Boolean_System_Globalization_CultureInfo_">LocalizationHelpers.GetLocalizedString(Object, String, Boolean, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_SetPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_System_Object_">DynamicPropertyExtensions.SetPropertyValue(Object, PropertySymbol, Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.GetPropertyValue(Object, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_ClearPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.ClearPropertyValue(Object, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_IsPropertySet_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.IsPropertySet(Object, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetAllSetProperties_System_Object_">DynamicPropertyExtensions.GetAllSetProperties(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetAllProperties_System_Object_">DynamicPropertyExtensions.GetAllProperties(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

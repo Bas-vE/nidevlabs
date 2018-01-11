@@ -1,0 +1,647 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class QualifiedNameEncoder
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class QualifiedNameEncoder
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.Core.QualifiedNameEncoder">
+  
+  
+  <h1 id="NationalInstruments_Core_QualifiedNameEncoder" data-uid="NationalInstruments.Core.QualifiedNameEncoder" class="text-break">Class QualifiedNameEncoder
+  </h1>
+  <div class="markdown level0 summary"><p>Class with utilitity functions for encoding/decoding <a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a>s.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">QualifiedNameEncoder</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="../pf/NationalInstruments.Core.html">NationalInstruments.Core</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.Core.dll</h6>
+  <h5 id="NationalInstruments_Core_QualifiedNameEncoder_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class QualifiedNameEncoder</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedNameEncoder_DoesCharacterNeedPFEscaping_" data-uid="NationalInstruments.Core.QualifiedNameEncoder.DoesCharacterNeedPFEscaping*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedNameEncoder_DoesCharacterNeedPFEscaping_System_Char_System_Boolean_" data-uid="NationalInstruments.Core.QualifiedNameEncoder.DoesCharacterNeedPFEscaping(System.Char,System.Boolean)">DoesCharacterNeedPFEscaping(Char, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Returns whether the character needs to be escaped in the PF-encoding of an identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool DoesCharacterNeedPFEscaping(char character, bool isFirstCharacter)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a></td>
+        <td><span class="parametername">character</span></td>
+        <td><p>The character to test.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">isFirstCharacter</span></td>
+        <td><p>Pass true it is the first character in an identifier.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>Whether the character needs to be escaped in the PF-encoding.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedNameEncoder_IsEscapableChar_" data-uid="NationalInstruments.Core.QualifiedNameEncoder.IsEscapableChar*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedNameEncoder_IsEscapableChar_System_Char_" data-uid="NationalInstruments.Core.QualifiedNameEncoder.IsEscapableChar(System.Char)">IsEscapableChar(Char)</h4>
+  <div class="markdown level1 summary"><p>Checks if a character needs to be escaped.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsEscapableChar(char character)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a></td>
+        <td><span class="parametername">character</span></td>
+        <td><p>The character to check.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if the character should be escaped.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedNameEncoder_IsEscapableChar_" data-uid="NationalInstruments.Core.QualifiedNameEncoder.IsEscapableChar*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedNameEncoder_IsEscapableChar_System_Int32_" data-uid="NationalInstruments.Core.QualifiedNameEncoder.IsEscapableChar(System.Int32)">IsEscapableChar(Int32)</h4>
+  <div class="markdown level1 summary"><p>Checks if a character needs to be escaped.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsEscapableChar(int character)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">character</span></td>
+        <td><p>The character to check.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if the character should be escaped.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedNameEncoder_PFDecodeToIdentifierList_" data-uid="NationalInstruments.Core.QualifiedNameEncoder.PFDecodeToIdentifierList*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedNameEncoder_PFDecodeToIdentifierList_System_String_" data-uid="NationalInstruments.Core.QualifiedNameEncoder.PFDecodeToIdentifierList(System.String)">PFDecodeToIdentifierList(String)</h4>
+  <div class="markdown level1 summary"><p>Parses a PF-encoded string into a sequence of identifier strings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;string&gt; PFDecodeToIdentifierList(string encodedValue)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">encodedValue</span></td>
+        <td><p>The PF-encoded string to be parsed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><p>The decoded sequence of identifier strings.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.InvalidQualifiedNameException.html">InvalidQualifiedNameException</a></td>
+        <td><p>This exception is thrown if <see cref="!:encodedValue"></see> is not a properly PF-encoded string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedNameEncoder_PFDecodeToQualifiedName_" data-uid="NationalInstruments.Core.QualifiedNameEncoder.PFDecodeToQualifiedName*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedNameEncoder_PFDecodeToQualifiedName_System_String_" data-uid="NationalInstruments.Core.QualifiedNameEncoder.PFDecodeToQualifiedName(System.String)">PFDecodeToQualifiedName(String)</h4>
+  <div class="markdown level1 summary"><p>Parses a PF-encoded string into a <a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static QualifiedName PFDecodeToQualifiedName(string encodedValue)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">encodedValue</span></td>
+        <td><p>The PF-encoded string to be parsed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td><p>The decoded <a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.InvalidQualifiedNameException.html">InvalidQualifiedNameException</a></td>
+        <td><p>This exception is thrown if <see cref="!:encodedValue"></see> is not a properly PF-encoded string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedNameEncoder_PFEncode_" data-uid="NationalInstruments.Core.QualifiedNameEncoder.PFEncode*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedNameEncoder_PFEncode_NationalInstruments_Core_QualifiedName_" data-uid="NationalInstruments.Core.QualifiedNameEncoder.PFEncode(NationalInstruments.Core.QualifiedName)">PFEncode(QualifiedName)</h4>
+  <div class="markdown level1 summary"><p>Encodes a sequence of identifiers with the PF-encoding.</p>
+<p>The PF-encoding is one that escapes any character that isn&apos;t a letter or digit and in addition escapes the first character if it is a digit.
+It also separates identifiers with a colon.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Pure]
+public static string PFEncode(QualifiedName qualifiedName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td><span class="parametername">qualifiedName</span></td>
+        <td><p>The sequence of identifiers to encode</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The encoded string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedNameEncoder_PFEncode_" data-uid="NationalInstruments.Core.QualifiedNameEncoder.PFEncode*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedNameEncoder_PFEncode_System_Collections_Generic_IEnumerable_System_String__" data-uid="NationalInstruments.Core.QualifiedNameEncoder.PFEncode(System.Collections.Generic.IEnumerable{System.String})">PFEncode(IEnumerable&lt;String&gt;)</h4>
+  <div class="markdown level1 summary"><p>Encodes a sequence of identifiers with the PF-encoding.</p>
+<p>The PF-encoding is one that escapes any character that isn&apos;t a letter or digit and in addition escapes the first character if it is a digit.
+It also separates identifiers with a colon.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Pure]
+public static string PFEncode(IEnumerable&lt;string&gt; identifiers)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="parametername">identifiers</span></td>
+        <td><p>The sequence of identifiers to encode</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The encoded string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedNameEncoder_PFEncodeIdentifier_" data-uid="NationalInstruments.Core.QualifiedNameEncoder.PFEncodeIdentifier*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedNameEncoder_PFEncodeIdentifier_System_String_" data-uid="NationalInstruments.Core.QualifiedNameEncoder.PFEncodeIdentifier(System.String)">PFEncodeIdentifier(String)</h4>
+  <div class="markdown level1 summary"><p>Encodes the identifier with the PF-encoding.</p>
+<p>The PF-encoding is one that escapes any character that isn&apos;t a letter or digit and in addition escapes the first character if it is a digit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string PFEncodeIdentifier(string identifier)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">identifier</span></td>
+        <td><p>The identifier to encode</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The encoded string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedNameEncoder_SimplyEncodeIdentifier_" data-uid="NationalInstruments.Core.QualifiedNameEncoder.SimplyEncodeIdentifier*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedNameEncoder_SimplyEncodeIdentifier_System_String_" data-uid="NationalInstruments.Core.QualifiedNameEncoder.SimplyEncodeIdentifier(System.String)">SimplyEncodeIdentifier(String)</h4>
+  <div class="markdown level1 summary"><p>Escapes any characters that have special meaning and should be escaped.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string SimplyEncodeIdentifier(string identifier)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">identifier</span></td>
+        <td><p>The string to escape.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The escaped string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedNameEncoder_SimplyEncodeIdentifiers_" data-uid="NationalInstruments.Core.QualifiedNameEncoder.SimplyEncodeIdentifiers*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedNameEncoder_SimplyEncodeIdentifiers_System_String___" data-uid="NationalInstruments.Core.QualifiedNameEncoder.SimplyEncodeIdentifiers(System.String[])">SimplyEncodeIdentifiers(String[])</h4>
+  <div class="markdown level1 summary"><p>Applies simple encoding by escaping characters that have special meaning and should be escaped, concatenating with &apos;:&apos; delimiters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string SimplyEncodeIdentifiers(params string[] identifiers)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td><span class="parametername">identifiers</span></td>
+        <td><p>An array of strings to encode.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The encoded string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

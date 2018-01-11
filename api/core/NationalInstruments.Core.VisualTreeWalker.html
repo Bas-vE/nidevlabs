@@ -1,0 +1,2727 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class VisualTreeWalker
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class VisualTreeWalker
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.Core.VisualTreeWalker">
+  
+  
+  <h1 id="NationalInstruments_Core_VisualTreeWalker" data-uid="NationalInstruments.Core.VisualTreeWalker" class="text-break">Class VisualTreeWalker
+  </h1>
+  <div class="markdown level0 summary"><p>Helper class which provides mechanisms to walk the visual tree in an efficient manner.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">VisualTreeWalker</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="../pf/NationalInstruments.Core.html">NationalInstruments.Core</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.Core.dll</h6>
+  <h5 id="NationalInstruments_Core_VisualTreeWalker_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class VisualTreeWalker</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="NationalInstruments_Core_VisualTreeWalker_HitTestOverlayProperty" data-uid="NationalInstruments.Core.VisualTreeWalker.HitTestOverlayProperty">HitTestOverlayProperty</h4>
+  <div class="markdown level1 summary"><p>Identifies visuals that are overlaid on top of their contents for hit testing/mouse move functionality, but generally shouldn&apos;t be considered
+themselves when trying to find out what the mouse is over.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly PlatformDependencyProperty HitTestOverlayProperty</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformDependencyProperty.html">PlatformDependencyProperty</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_Core_VisualTreeWalker_HitTestStopProperty" data-uid="NationalInstruments.Core.VisualTreeWalker.HitTestStopProperty">HitTestStopProperty</h4>
+  <div class="markdown level1 summary"><p>Setting this property on a visual will cause VisualTreeWalker hit testing methods to ignore all descendants of the visual.
+This does not affect the input event hit testing that WPF does when routing input events.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly PlatformDependencyProperty HitTestStopProperty</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformDependencyProperty.html">PlatformDependencyProperty</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_Core_VisualTreeWalker_FindAncestorOfType_" data-uid="NationalInstruments.Core.VisualTreeWalker.FindAncestorOfType*"></a>
+  <h4 id="NationalInstruments_Core_VisualTreeWalker_FindAncestorOfType__1_NationalInstruments_Core_PlatformVisual_" data-uid="NationalInstruments.Core.VisualTreeWalker.FindAncestorOfType``1(NationalInstruments.Core.PlatformVisual)">FindAncestorOfType&lt;T&gt;(PlatformVisual)</h4>
+  <div class="markdown level1 summary"><p>Given an object in the visual tree, find its visual ancestor of type T.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T FindAncestorOfType&lt;T&gt;(PlatformVisual visual)where T : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">visual</span></td>
+        <td><p>The object where the search should start.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><p>An ancestor of visual of type T, null if no ancestor of type T can be found.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of ancestor to find.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Core_VisualTreeWalker_FindAncestorOfType__1_NationalInstruments_Core_PlatformVisual__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This function only works when called from an OnLoaded() event handler or later. Also, visual must appear
+in some root visual on-screen for detection to work reliably in WPF.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown if visual is a null visual.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_VisualTreeWalker_FindAncestorOfType_" data-uid="NationalInstruments.Core.VisualTreeWalker.FindAncestorOfType*"></a>
+  <h4 id="NationalInstruments_Core_VisualTreeWalker_FindAncestorOfType__1_NationalInstruments_Core_PlatformVisual_System_Boolean_System_Func_NationalInstruments_Core_PlatformVisual_System_Boolean__System_Func_NationalInstruments_Core_PlatformVisual_System_Boolean__" data-uid="NationalInstruments.Core.VisualTreeWalker.FindAncestorOfType``1(NationalInstruments.Core.PlatformVisual,System.Boolean,System.Func{NationalInstruments.Core.PlatformVisual,System.Boolean},System.Func{NationalInstruments.Core.PlatformVisual,System.Boolean})">FindAncestorOfType&lt;T&gt;(PlatformVisual, Boolean, Func&lt;PlatformVisual, Boolean&gt;, Func&lt;PlatformVisual, Boolean&gt;)</h4>
+  <div class="markdown level1 summary"><p>Find an ancestor of type T, optionally including self, that passes the given test, stopping at given stop function.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T FindAncestorOfType&lt;T&gt;(PlatformVisual visual, bool checkSelf, Func&lt;PlatformVisual, bool&gt; test, Func&lt;PlatformVisual, bool&gt; stopFunc)where T : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">visual</span></td>
+        <td><p>The object where the search should start.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">checkSelf</span></td>
+        <td><p>If <code>true</code>, include self in the test.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">test</span></td>
+        <td><p>Test to pass to determine result element.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">stopFunc</span></td>
+        <td><p>An function to tell us to stop walking. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><p>An ancestor of type T that is the first object to pass the test, <code>null</code> if none found.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown if visual is null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_VisualTreeWalker_FindAncestorOfType_" data-uid="NationalInstruments.Core.VisualTreeWalker.FindAncestorOfType*"></a>
+  <h4 id="NationalInstruments_Core_VisualTreeWalker_FindAncestorOfType__1_NationalInstruments_Core_PlatformVisual_System_Func_NationalInstruments_Core_PlatformVisual_System_Boolean__" data-uid="NationalInstruments.Core.VisualTreeWalker.FindAncestorOfType``1(NationalInstruments.Core.PlatformVisual,System.Func{NationalInstruments.Core.PlatformVisual,System.Boolean})">FindAncestorOfType&lt;T&gt;(PlatformVisual, Func&lt;PlatformVisual, Boolean&gt;)</h4>
+  <div class="markdown level1 summary"><p>Given an object in the visual tree, find its visual ancestor of type T.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T FindAncestorOfType&lt;T&gt;(PlatformVisual visual, Func&lt;PlatformVisual, bool&gt; stopFunc)where T : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">visual</span></td>
+        <td><p>The object where the search should start.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">stopFunc</span></td>
+        <td><p>An function to tell us to stop walking. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><p>An ancestor of visual of type T, <code>null</code> if no ancestor of type T can be found.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of ancestor to find.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Core_VisualTreeWalker_FindAncestorOfType__1_NationalInstruments_Core_PlatformVisual_System_Func_NationalInstruments_Core_PlatformVisual_System_Boolean___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This function only works when called from an OnLoaded() event handler or later. Also, visual must appear
+in some root visual on-screen for detection to work reliably in WPF.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown if visual is null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_VisualTreeWalker_FindEldestAncestorOfType_" data-uid="NationalInstruments.Core.VisualTreeWalker.FindEldestAncestorOfType*"></a>
+  <h4 id="NationalInstruments_Core_VisualTreeWalker_FindEldestAncestorOfType__1_NationalInstruments_Core_PlatformVisual_" data-uid="NationalInstruments.Core.VisualTreeWalker.FindEldestAncestorOfType``1(NationalInstruments.Core.PlatformVisual)">FindEldestAncestorOfType&lt;T&gt;(PlatformVisual)</h4>
+  <div class="markdown level1 summary"><p>Continue climbing the visual tree to find the highest visual ancestor
+that is of the given type. For example, if you ask for eldest of type
+Element, you will get the root visual, even though lower elements are
+also of type Element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T FindEldestAncestorOfType&lt;T&gt;(PlatformVisual visual)where T : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">visual</span></td>
+        <td><p>The starting point of the search</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><p>The eldest ancestor of type T or null if none exists.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of ancestor you are seeking</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Core_VisualTreeWalker_FindEldestAncestorOfType__1_NationalInstruments_Core_PlatformVisual__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The original visual is checked for being of the type and will
+be returned if it is the sought type and no ancestors are also of the
+sought type.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_Core_VisualTreeWalker_FindSelfOrAncestorOfType_" data-uid="NationalInstruments.Core.VisualTreeWalker.FindSelfOrAncestorOfType*"></a>
+  <h4 id="NationalInstruments_Core_VisualTreeWalker_FindSelfOrAncestorOfType__1_NationalInstruments_Core_PlatformVisual_" data-uid="NationalInstruments.Core.VisualTreeWalker.FindSelfOrAncestorOfType``1(NationalInstruments.Core.PlatformVisual)">FindSelfOrAncestorOfType&lt;T&gt;(PlatformVisual)</h4>
+  <div class="markdown level1 summary"><p>Given an object in the visual tree, find its visual ancestor of type T. Include self.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T FindSelfOrAncestorOfType&lt;T&gt;(PlatformVisual visual)where T : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">visual</span></td>
+        <td><p>The object where the search should start.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><p>An ancestor of visual of type T, null if no ancestor of type T can be found.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of ancestor to find.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Core_VisualTreeWalker_FindSelfOrAncestorOfType__1_NationalInstruments_Core_PlatformVisual__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This function only works when called from an OnLoaded() event handler or later. Also, visual must appear
+in some root visual on-screen for detection to work reliably in WPF.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown if visual is a null visual.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_VisualTreeWalker_FindVisualChild_" data-uid="NationalInstruments.Core.VisualTreeWalker.FindVisualChild*"></a>
+  <h4 id="NationalInstruments_Core_VisualTreeWalker_FindVisualChild__1_NationalInstruments_Core_PlatformVisual_" data-uid="NationalInstruments.Core.VisualTreeWalker.FindVisualChild``1(NationalInstruments.Core.PlatformVisual)">FindVisualChild&lt;T&gt;(PlatformVisual)</h4>
+  <div class="markdown level1 summary"><p>Finds the first visual child (depth first) of the specified type which matches the specified type T.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T FindVisualChild&lt;T&gt;(PlatformVisual visual)where T : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">visual</span></td>
+        <td><p>The object where the search should start.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><p>The first child of type T, null if no child of type T can be found.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Type of visual child of interest.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Core_VisualTreeWalker_FindVisualChild__1_NationalInstruments_Core_PlatformVisual__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This function only works when called from an OnLoaded() event handler or later. Also, visual must appear
+in some root visual on-screen for detection to work reliably in WPF.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown if visual is null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_VisualTreeWalker_FindVisualChild_" data-uid="NationalInstruments.Core.VisualTreeWalker.FindVisualChild*"></a>
+  <h4 id="NationalInstruments_Core_VisualTreeWalker_FindVisualChild__1_NationalInstruments_Core_PlatformVisual_System_Func___0_System_Boolean__" data-uid="NationalInstruments.Core.VisualTreeWalker.FindVisualChild``1(NationalInstruments.Core.PlatformVisual,System.Func{``0,System.Boolean})">FindVisualChild&lt;T&gt;(PlatformVisual, Func&lt;T, Boolean&gt;)</h4>
+  <div class="markdown level1 summary"><p>Finds the first visual child (depth first) of the specified type which matches the specified type T and
+satisfies the conditions defined in the supplied filter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T FindVisualChild&lt;T&gt;(PlatformVisual visual, Func&lt;T, bool&gt; filter)where T : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">visual</span></td>
+        <td><p>The object where the search should start.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">filter</span></td>
+        <td><p>The filter to apply to visuals which match the specified type. The filter must return true for the child to be considered &apos;found&apos;.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><p>The first child of type T which satisfies the conditions of the provided filter, null if no child of type T can be found.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Type of visual child of interest.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Core_VisualTreeWalker_FindVisualChild__1_NationalInstruments_Core_PlatformVisual_System_Func___0_System_Boolean___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This function only works when called from an OnLoaded() event handler or later. Also, visual must appear
+in some root visual on-screen for detection to work reliably in WPF.</p>
+<p>If a null filter is provided, this function behaves identically to VisualTreeWalker.FindVisualChild(visual).&quot;/&gt;</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown if visual is null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_VisualTreeWalker_FindVisualChildren_" data-uid="NationalInstruments.Core.VisualTreeWalker.FindVisualChildren*"></a>
+  <h4 id="NationalInstruments_Core_VisualTreeWalker_FindVisualChildren__1_NationalInstruments_Core_PlatformVisual_" data-uid="NationalInstruments.Core.VisualTreeWalker.FindVisualChildren``1(NationalInstruments.Core.PlatformVisual)">FindVisualChildren&lt;T&gt;(PlatformVisual)</h4>
+  <div class="markdown level1 summary"><p>Gets an enumerable of all children of visual (depth first) matching the specified type T.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;T&gt; FindVisualChildren&lt;T&gt;(PlatformVisual visual)where T : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">visual</span></td>
+        <td><p>The object where the search should start.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td><p>An enumerable of the children of type T appearing beneath visual in its visual tree.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Type of visual child of interest.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Core_VisualTreeWalker_FindVisualChildren__1_NationalInstruments_Core_PlatformVisual__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This function only works when called from an OnLoaded() event handler or later. Also, visual must appear
+in some root visual on-screen for detection to work reliably in WPF.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown if visual is null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_VisualTreeWalker_FindVisualChildren_" data-uid="NationalInstruments.Core.VisualTreeWalker.FindVisualChildren*"></a>
+  <h4 id="NationalInstruments_Core_VisualTreeWalker_FindVisualChildren__1_NationalInstruments_Core_PlatformVisual_System_Func___0_System_Boolean__" data-uid="NationalInstruments.Core.VisualTreeWalker.FindVisualChildren``1(NationalInstruments.Core.PlatformVisual,System.Func{``0,System.Boolean})">FindVisualChildren&lt;T&gt;(PlatformVisual, Func&lt;T, Boolean&gt;)</h4>
+  <div class="markdown level1 summary"><p>Gets an enumerable of all children of visual (depth first) matching the specified type T and
+which satisfy the conditions defined in the supplied filter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;T&gt; FindVisualChildren&lt;T&gt;(PlatformVisual visual, Func&lt;T, bool&gt; filter)where T : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">visual</span></td>
+        <td><p>The object where the search should start.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">filter</span></td>
+        <td><p>The filter to apply to visuals which match the specified type. The filter must return true for the child to be considered &apos;found&apos;.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td><p>An enumerable of the children of type T appearing beneath visual in its visual tree that also satisfy
+the conditions defined in the supplied filter.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Type of visual child of interest.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Core_VisualTreeWalker_FindVisualChildren__1_NationalInstruments_Core_PlatformVisual_System_Func___0_System_Boolean___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This function only works when called from an OnLoaded() event handler or later. Also, visual must appear
+in some root visual on-screen for detection to work reliably in WPF.</p>
+<p>If a null filter is provided, this function behaves identically to VisualTreeWalker.FindVisualChildren(visual).&quot;/&gt;</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown if visual is null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_VisualTreeWalker_FindVisualChildren_" data-uid="NationalInstruments.Core.VisualTreeWalker.FindVisualChildren*"></a>
+  <h4 id="NationalInstruments_Core_VisualTreeWalker_FindVisualChildren__1_NationalInstruments_Core_PlatformVisual_System_Func___0_System_Boolean__System_Boolean_" data-uid="NationalInstruments.Core.VisualTreeWalker.FindVisualChildren``1(NationalInstruments.Core.PlatformVisual,System.Func{``0,System.Boolean},System.Boolean)">FindVisualChildren&lt;T&gt;(PlatformVisual, Func&lt;T, Boolean&gt;, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Finds the visual children.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;T&gt; FindVisualChildren&lt;T&gt;(PlatformVisual visual, Func&lt;T, bool&gt; filter, bool includeSelf)where T : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">visual</span></td>
+        <td><p>Visual.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">filter</span></td>
+        <td><p>Filter.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">includeSelf</span></td>
+        <td><p>If set to <code>true</code> include self.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td><p>The visual children.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The 1st type parameter.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown if visual is a null visual.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_VisualTreeWalker_FindVisualChildren_" data-uid="NationalInstruments.Core.VisualTreeWalker.FindVisualChildren*"></a>
+  <h4 id="NationalInstruments_Core_VisualTreeWalker_FindVisualChildren__1_NationalInstruments_Core_PlatformVisual_System_Func___0_System_Boolean__System_Boolean_System_Func_NationalInstruments_Core_PlatformVisual_System_Boolean__" data-uid="NationalInstruments.Core.VisualTreeWalker.FindVisualChildren``1(NationalInstruments.Core.PlatformVisual,System.Func{``0,System.Boolean},System.Boolean,System.Func{NationalInstruments.Core.PlatformVisual,System.Boolean})">FindVisualChildren&lt;T&gt;(PlatformVisual, Func&lt;T, Boolean&gt;, Boolean, Func&lt;PlatformVisual, Boolean&gt;)</h4>
+  <div class="markdown level1 summary"><p>Enumerates of all children of view, depth first, that match the specified type T and which
+satisfy the conditions defined in the supplied filter, with an option to stop recursing at a particular element.
+If includeSelf is true, view may be the first element returned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;T&gt; FindVisualChildren&lt;T&gt;(PlatformVisual visual, Func&lt;T, bool&gt; filter, bool includeSelf, Func&lt;PlatformVisual, bool&gt; recurse)where T : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">visual</span></td>
+        <td><p>The view whose children of type T are to be enumerated.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">filter</span></td>
+        <td><p>The filter to apply to views which match the specified type. The filter must return true for the child to be considered &apos;found&apos;.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">includeSelf</span></td>
+        <td><p>If true, and view meets the type and filter requirements, it will be the first value returned.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">recurse</span></td>
+        <td><p>A predicate to apply to enumerate a child&apos;s children recursively. Must be null or return true for us to recurse from the child.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td><p>The children.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of NSView of interest.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown if visual is a null visual.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_VisualTreeWalker_FindVisualChildrenBreadthFirst_" data-uid="NationalInstruments.Core.VisualTreeWalker.FindVisualChildrenBreadthFirst*"></a>
+  <h4 id="NationalInstruments_Core_VisualTreeWalker_FindVisualChildrenBreadthFirst__1_NationalInstruments_Core_PlatformVisual_System_Func___0_System_Boolean__System_Boolean_System_Func_NationalInstruments_Core_PlatformVisual_System_Boolean__" data-uid="NationalInstruments.Core.VisualTreeWalker.FindVisualChildrenBreadthFirst``1(NationalInstruments.Core.PlatformVisual,System.Func{``0,System.Boolean},System.Boolean,System.Func{NationalInstruments.Core.PlatformVisual,System.Boolean})">FindVisualChildrenBreadthFirst&lt;T&gt;(PlatformVisual, Func&lt;T, Boolean&gt;, Boolean, Func&lt;PlatformVisual, Boolean&gt;)</h4>
+  <div class="markdown level1 summary"><p>Enumerates of all children of view, depth first, that match the specified type T and which
+satisfy the conditions defined in the supplied filter, with an option to stop recursing at a particular element.
+If includeSelf is true, view may be the first element returned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;T&gt; FindVisualChildrenBreadthFirst&lt;T&gt;(PlatformVisual visual, Func&lt;T, bool&gt; filter, bool includeSelf, Func&lt;PlatformVisual, bool&gt; recurse)where T : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">visual</span></td>
+        <td><p>The view whose children of type T are to be enumerated.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">filter</span></td>
+        <td><p>The filter to apply to views which match the specified type. The filter must return true for the child to be considered &apos;found&apos;.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">includeSelf</span></td>
+        <td><p>If true, and view meets the type and filter requirements, it will be the first value returned.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">recurse</span></td>
+        <td><p>A predicate to apply to enumerate a child&apos;s children recursively. Must be null or return true for us to recurse from the child.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td><p>The children.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of NSView of interest.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown if visual is a null visual.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_VisualTreeWalker_GetChild_" data-uid="NationalInstruments.Core.VisualTreeWalker.GetChild*"></a>
+  <h4 id="NationalInstruments_Core_VisualTreeWalker_GetChild_NationalInstruments_Core_PlatformVisual_System_Int32_" data-uid="NationalInstruments.Core.VisualTreeWalker.GetChild(NationalInstruments.Core.PlatformVisual,System.Int32)">GetChild(PlatformVisual, Int32)</h4>
+  <div class="markdown level1 summary"><p>Get a specific child of a visual</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PlatformVisual GetChild(PlatformVisual visual, int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">visual</span></td>
+        <td><p>The visual to get children from..</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>The index of child to return </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><p>The child at the specified index, or null if no child is at that index.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Core_VisualTreeWalker_GetChild_NationalInstruments_Core_PlatformVisual_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This function only works when called from an OnLoaded() event handler or later. Also, visual must appear
+in some root visual on-screen for detection to work reliably in WPF.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown if visual is a null visual.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_VisualTreeWalker_GetChildren_" data-uid="NationalInstruments.Core.VisualTreeWalker.GetChildren*"></a>
+  <h4 id="NationalInstruments_Core_VisualTreeWalker_GetChildren_NationalInstruments_Core_PlatformVisual_" data-uid="NationalInstruments.Core.VisualTreeWalker.GetChildren(NationalInstruments.Core.PlatformVisual)">GetChildren(PlatformVisual)</h4>
+  <div class="markdown level1 summary"><p>Get children of a visual</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;PlatformVisual&gt; GetChildren(PlatformVisual visual)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">visual</span></td>
+        <td><p>The visual to get children from..</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a>&gt;</td>
+        <td><p>The children of the visual.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Core_VisualTreeWalker_GetChildren_NationalInstruments_Core_PlatformVisual__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This function only works when called from an OnLoaded() event handler or later. Also, visual must appear
+in some root visual on-screen for detection to work reliably in WPF.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown if visual is a null visual.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_VisualTreeWalker_GetCommonVisualAncestor_" data-uid="NationalInstruments.Core.VisualTreeWalker.GetCommonVisualAncestor*"></a>
+  <h4 id="NationalInstruments_Core_VisualTreeWalker_GetCommonVisualAncestor_System_Collections_Generic_IEnumerable_NationalInstruments_Core_PlatformVisual__" data-uid="NationalInstruments.Core.VisualTreeWalker.GetCommonVisualAncestor(System.Collections.Generic.IEnumerable{NationalInstruments.Core.PlatformVisual})">GetCommonVisualAncestor(IEnumerable&lt;PlatformVisual&gt;)</h4>
+  <div class="markdown level1 summary"><p>Returns the common ancestor of the specified visual objects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PlatformVisual GetCommonVisualAncestor(IEnumerable&lt;PlatformVisual&gt; visuals)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a>&gt;</td>
+        <td><span class="parametername">visuals</span></td>
+        <td><p>The specified visual objects.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><p>The common ancestor if one exists; otherwise, <a class="xref" href="NationalInstruments.Core.PlatformVisual.html#NationalInstruments_Core_PlatformVisual_NullVisual">NullVisual</a>. If there is only one element in the visuals, just returns this element.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown if the visuals is null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td><p>Thrown if the visuals does not contain any elements.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_VisualTreeWalker_GetElementsAtCoordinates_" data-uid="NationalInstruments.Core.VisualTreeWalker.GetElementsAtCoordinates*"></a>
+  <h4 id="NationalInstruments_Core_VisualTreeWalker_GetElementsAtCoordinates_NationalInstruments_Core_UIPosition_NationalInstruments_Core_PlatformVisual_" data-uid="NationalInstruments.Core.VisualTreeWalker.GetElementsAtCoordinates(NationalInstruments.Core.UIPosition,NationalInstruments.Core.PlatformVisual)">GetElementsAtCoordinates(UIPosition, PlatformVisual)</h4>
+  <div class="markdown level1 summary"><p>Gets an enumerable of all PlatformVisual elements that exist at a given point in space under a given parent.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;PlatformVisual&gt; GetElementsAtCoordinates(UIPosition position, PlatformVisual belowParent)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.UIPosition.html">UIPosition</a></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>The point to hit test.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">belowParent</span></td>
+        <td><p>Tree to hit test within.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a>&gt;</td>
+        <td><p>An enumerable of the PlatformVisual elements that exist at the supplied position.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown if belowParent is null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td><p>Thrown if position is UIPosition.InvalidPosition.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_VisualTreeWalker_GetElementsInRect_" data-uid="NationalInstruments.Core.VisualTreeWalker.GetElementsInRect*"></a>
+  <h4 id="NationalInstruments_Core_VisualTreeWalker_GetElementsInRect_NationalInstruments_Core_SMRect_NationalInstruments_Core_PlatformVisual_" data-uid="NationalInstruments.Core.VisualTreeWalker.GetElementsInRect(NationalInstruments.Core.SMRect,NationalInstruments.Core.PlatformVisual)">GetElementsInRect(SMRect, PlatformVisual)</h4>
+  <div class="markdown level1 summary"><p>Gets an enumerable of all visuals that exist within a given rectangle in space under a given parent.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;PlatformVisual&gt; GetElementsInRect(SMRect selectionRect, PlatformVisual belowParent)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMRect.html">SMRect</a></td>
+        <td><span class="parametername">selectionRect</span></td>
+        <td><p>The rectangle to hit test.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">belowParent</span></td>
+        <td><p>Tree to hit test within.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a>&gt;</td>
+        <td><p>An enumerable of the UIElements that exist at the supplied position.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown if belowParent is null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_VisualTreeWalker_GetHitTestOverlay_" data-uid="NationalInstruments.Core.VisualTreeWalker.GetHitTestOverlay*"></a>
+  <h4 id="NationalInstruments_Core_VisualTreeWalker_GetHitTestOverlay_NationalInstruments_Core_PlatformVisual_" data-uid="NationalInstruments.Core.VisualTreeWalker.GetHitTestOverlay(NationalInstruments.Core.PlatformVisual)">GetHitTestOverlay(PlatformVisual)</h4>
+  <div class="markdown level1 summary"><p>Gets the current value of the hit test overlay property for the given visual.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool GetHitTestOverlay(PlatformVisual target)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">target</span></td>
+        <td><p>The visual for which to get the value of the hit test overlay property.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>The current hit test overlay value, the default is <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_VisualTreeWalker_GetHitTestStop_" data-uid="NationalInstruments.Core.VisualTreeWalker.GetHitTestStop*"></a>
+  <h4 id="NationalInstruments_Core_VisualTreeWalker_GetHitTestStop_NationalInstruments_Core_PlatformVisual_" data-uid="NationalInstruments.Core.VisualTreeWalker.GetHitTestStop(NationalInstruments.Core.PlatformVisual)">GetHitTestStop(PlatformVisual)</h4>
+  <div class="markdown level1 summary"><p>Gets the current value of the hit test stop property for a visual.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool GetHitTestStop(PlatformVisual target)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">target</span></td>
+        <td><p>The visual of interest</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>The current hit test stop value, the default is false</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_VisualTreeWalker_GetParent_" data-uid="NationalInstruments.Core.VisualTreeWalker.GetParent*"></a>
+  <h4 id="NationalInstruments_Core_VisualTreeWalker_GetParent_NationalInstruments_Core_PlatformVisual_" data-uid="NationalInstruments.Core.VisualTreeWalker.GetParent(NationalInstruments.Core.PlatformVisual)">GetParent(PlatformVisual)</h4>
+  <div class="markdown level1 summary"><p>Gets the parent visual of the supplied visual.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PlatformVisual GetParent(PlatformVisual visual)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">visual</span></td>
+        <td><p>The visual for which to get a parent.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><p>The parent of visual or <code>null</code> if visual does not have a parent.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown if visual argument is NullVisual.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_VisualTreeWalker_GetRootVisual_" data-uid="NationalInstruments.Core.VisualTreeWalker.GetRootVisual*"></a>
+  <h4 id="NationalInstruments_Core_VisualTreeWalker_GetRootVisual_NationalInstruments_Core_PlatformVisual_" data-uid="NationalInstruments.Core.VisualTreeWalker.GetRootVisual(NationalInstruments.Core.PlatformVisual)">GetRootVisual(PlatformVisual)</h4>
+  <div class="markdown level1 summary"><p>Gets the root visual object of the given element</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PlatformVisual GetRootVisual(PlatformVisual visual)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">visual</span></td>
+        <td><p>The starting visual element.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><p>The root visual object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown if visual is NullVisual.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_VisualTreeWalker_GetVisualAncestors_" data-uid="NationalInstruments.Core.VisualTreeWalker.GetVisualAncestors*"></a>
+  <h4 id="NationalInstruments_Core_VisualTreeWalker_GetVisualAncestors_NationalInstruments_Core_PlatformVisual_" data-uid="NationalInstruments.Core.VisualTreeWalker.GetVisualAncestors(NationalInstruments.Core.PlatformVisual)">GetVisualAncestors(PlatformVisual)</h4>
+  <div class="markdown level1 summary"><p>Gets an enumerable which includes all ancestors of the passed in element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;PlatformVisual&gt; GetVisualAncestors(PlatformVisual visual)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">visual</span></td>
+        <td><p>The starting visual element.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a>&gt;</td>
+        <td><p>An enumerable for the ancestors.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown if visual is a null visual.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_VisualTreeWalker_GetVisualAncestorsAndSelf_" data-uid="NationalInstruments.Core.VisualTreeWalker.GetVisualAncestorsAndSelf*"></a>
+  <h4 id="NationalInstruments_Core_VisualTreeWalker_GetVisualAncestorsAndSelf_NationalInstruments_Core_PlatformVisual_" data-uid="NationalInstruments.Core.VisualTreeWalker.GetVisualAncestorsAndSelf(NationalInstruments.Core.PlatformVisual)">GetVisualAncestorsAndSelf(PlatformVisual)</h4>
+  <div class="markdown level1 summary"><p>Gets an enumerable which includes the passed in visual and of its ancestors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;PlatformVisual&gt; GetVisualAncestorsAndSelf(PlatformVisual visual)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">visual</span></td>
+        <td><p>The starting visual element.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a>&gt;</td>
+        <td><p>An enumerable for the element and its ancestors. The first element is visual.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown if visual is a null visual.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_VisualTreeWalker_GetVisualAncestorsOfType_" data-uid="NationalInstruments.Core.VisualTreeWalker.GetVisualAncestorsOfType*"></a>
+  <h4 id="NationalInstruments_Core_VisualTreeWalker_GetVisualAncestorsOfType__1_NationalInstruments_Core_PlatformVisual_" data-uid="NationalInstruments.Core.VisualTreeWalker.GetVisualAncestorsOfType``1(NationalInstruments.Core.PlatformVisual)">GetVisualAncestorsOfType&lt;T&gt;(PlatformVisual)</h4>
+  <div class="markdown level1 summary"><p>Gets an enumerable which includes ancestors of the requested type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;T&gt; GetVisualAncestorsOfType&lt;T&gt;(PlatformVisual visual)where T : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">visual</span></td>
+        <td><p>The visual whose ancestors are to be enumerated.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td><p>An enumerable of the given visual&apos;s ancestors of the desired type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of the visual ancestors to enumerate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown if visual is a null visual.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_VisualTreeWalker_GetVisualAncestorsOfType_" data-uid="NationalInstruments.Core.VisualTreeWalker.GetVisualAncestorsOfType*"></a>
+  <h4 id="NationalInstruments_Core_VisualTreeWalker_GetVisualAncestorsOfType__1_NationalInstruments_Core_PlatformVisual_System_Func___0_System_Boolean__" data-uid="NationalInstruments.Core.VisualTreeWalker.GetVisualAncestorsOfType``1(NationalInstruments.Core.PlatformVisual,System.Func{``0,System.Boolean})">GetVisualAncestorsOfType&lt;T&gt;(PlatformVisual, Func&lt;T, Boolean&gt;)</h4>
+  <div class="markdown level1 summary"><p>Gets an enumerable which includes ancestors of the requested type that also meet criteria specified by a filter function.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;T&gt; GetVisualAncestorsOfType&lt;T&gt;(PlatformVisual visual, Func&lt;T, bool&gt; filter)where T : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">visual</span></td>
+        <td><p>The visual whose ancestors are to be enumerated.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">filter</span></td>
+        <td><p>A filter function to further refine which ancestors are included in the enumeration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td><p>An enumerable of the given visual&apos;s ancestors of the desired type that meet the filter&apos;s requirements.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of the visual ancestors to enumerate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown if visual is a null visual.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_VisualTreeWalker_GetVisualAncestorsOfType_" data-uid="NationalInstruments.Core.VisualTreeWalker.GetVisualAncestorsOfType*"></a>
+  <h4 id="NationalInstruments_Core_VisualTreeWalker_GetVisualAncestorsOfType__1_NationalInstruments_Core_PlatformVisual_System_Func___0_System_Boolean__System_Boolean_" data-uid="NationalInstruments.Core.VisualTreeWalker.GetVisualAncestorsOfType``1(NationalInstruments.Core.PlatformVisual,System.Func{``0,System.Boolean},System.Boolean)">GetVisualAncestorsOfType&lt;T&gt;(PlatformVisual, Func&lt;T, Boolean&gt;, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Gets an enumerable which includes ancestors of the requested type that also meet criteria specified by a filter function, optionally including the visual itself.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;T&gt; GetVisualAncestorsOfType&lt;T&gt;(PlatformVisual visual, Func&lt;T, bool&gt; filter, bool includeSelf)where T : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">visual</span></td>
+        <td><p>The visual whose ancestors are to be enumerated.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">filter</span></td>
+        <td><p>A filter function to further refine which ancestors are included in the enumeration.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">includeSelf</span></td>
+        <td><p>If <code>true</code>, and visual meets the specified filter requirements, then visual is included in the enumeration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td><p>An enumerable of the given visual&apos;s ancestors of the desired type that meet the filter&apos;s requirements.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of the visual ancestors to enumerate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown if visual is a null visual.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_VisualTreeWalker_GetVisualAtPosition_" data-uid="NationalInstruments.Core.VisualTreeWalker.GetVisualAtPosition*"></a>
+  <h4 id="NationalInstruments_Core_VisualTreeWalker_GetVisualAtPosition_NationalInstruments_Core_PlatformVisual_NationalInstruments_Core_SMPoint_System_Windows_Media_HitTestFilterCallback_" data-uid="NationalInstruments.Core.VisualTreeWalker.GetVisualAtPosition(NationalInstruments.Core.PlatformVisual,NationalInstruments.Core.SMPoint,System.Windows.Media.HitTestFilterCallback)">GetVisualAtPosition(PlatformVisual, SMPoint, HitTestFilterCallback)</h4>
+  <div class="markdown level1 summary"><p>Attempts to find the PlatformVisual located at a particular position with respect to some other PlatformVisual.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PlatformVisual GetVisualAtPosition(PlatformVisual reference, SMPoint position, HitTestFilterCallback filter)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">reference</span></td>
+        <td><p>The PlatformVisual for which the particular position will be searched.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>The position to search on the PlatformVisual.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.media.hittestfiltercallback">HitTestFilterCallback</a></td>
+        <td><span class="parametername">filter</span></td>
+        <td><p>The filter to use for hit testing.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><p>The PlatformVisual found at the specified position, or null if none was found.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_VisualTreeWalker_GetVisualAtPosition_" data-uid="NationalInstruments.Core.VisualTreeWalker.GetVisualAtPosition*"></a>
+  <h4 id="NationalInstruments_Core_VisualTreeWalker_GetVisualAtPosition_NationalInstruments_Core_PlatformVisual_NationalInstruments_Core_UIPosition_System_Windows_Media_HitTestFilterCallback_" data-uid="NationalInstruments.Core.VisualTreeWalker.GetVisualAtPosition(NationalInstruments.Core.PlatformVisual,NationalInstruments.Core.UIPosition,System.Windows.Media.HitTestFilterCallback)">GetVisualAtPosition(PlatformVisual, UIPosition, HitTestFilterCallback)</h4>
+  <div class="markdown level1 summary"><p>Attempts to find the PlatformVisual located at a particular position with respect to some other PlatformVisual.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PlatformVisual GetVisualAtPosition(PlatformVisual reference, UIPosition position, HitTestFilterCallback filter)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">reference</span></td>
+        <td><p>The PlatformVisual for which the particular position will be searched.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.UIPosition.html">UIPosition</a></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>The position to search on the PlatformVisual.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.media.hittestfiltercallback">HitTestFilterCallback</a></td>
+        <td><span class="parametername">filter</span></td>
+        <td><p>The filter to use for hit testing.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><p>The PlatformVisual found at the specified position, or null if none was found.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_VisualTreeWalker_GetVisualNearPosition_" data-uid="NationalInstruments.Core.VisualTreeWalker.GetVisualNearPosition*"></a>
+  <h4 id="NationalInstruments_Core_VisualTreeWalker_GetVisualNearPosition_NationalInstruments_Core_IViewModel_NationalInstruments_Core_UIPosition_System_Windows_Media_HitTestFilterCallback_System_Double_" data-uid="NationalInstruments.Core.VisualTreeWalker.GetVisualNearPosition(NationalInstruments.Core.IViewModel,NationalInstruments.Core.UIPosition,System.Windows.Media.HitTestFilterCallback,System.Double)">GetVisualNearPosition(IViewModel, UIPosition, HitTestFilterCallback, Double)</h4>
+  <div class="markdown level1 summary"><p>Get visual within small threshold range of a given ui position.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PlatformVisual GetVisualNearPosition(IViewModel reference, UIPosition position, HitTestFilterCallback filter, double threshold)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.IViewModel.html">IViewModel</a></td>
+        <td><span class="parametername">reference</span></td>
+        <td><p>reference viewmodel</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.UIPosition.html">UIPosition</a></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>ui position to test</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.media.hittestfiltercallback">HitTestFilterCallback</a></td>
+        <td><span class="parametername">filter</span></td>
+        <td><p>filter callback for hit test</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td><span class="parametername">threshold</span></td>
+        <td><p>distance from position to checkin within</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><p>Topmost visual</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_VisualTreeWalker_GetVisualNearPosition_" data-uid="NationalInstruments.Core.VisualTreeWalker.GetVisualNearPosition*"></a>
+  <h4 id="NationalInstruments_Core_VisualTreeWalker_GetVisualNearPosition_NationalInstruments_Core_PlatformVisual_NationalInstruments_Core_UIPosition_System_Windows_Media_HitTestFilterCallback_System_Double_" data-uid="NationalInstruments.Core.VisualTreeWalker.GetVisualNearPosition(NationalInstruments.Core.PlatformVisual,NationalInstruments.Core.UIPosition,System.Windows.Media.HitTestFilterCallback,System.Double)">GetVisualNearPosition(PlatformVisual, UIPosition, HitTestFilterCallback, Double)</h4>
+  <div class="markdown level1 summary"><p>Gets the hit-test visibile PlatformVisual object nearest a UIPosition</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PlatformVisual GetVisualNearPosition(PlatformVisual reference, UIPosition position, HitTestFilterCallback filter, double threshold)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">reference</span></td>
+        <td><p>A UI visual provided to help get the top-most panel at the position</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.UIPosition.html">UIPosition</a></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>The UIPosition of interest</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.media.hittestfiltercallback">HitTestFilterCallback</a></td>
+        <td><span class="parametername">filter</span></td>
+        <td><p>Callback to specify parts of the visual tree to omit from hit tests</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td><span class="parametername">threshold</span></td>
+        <td><p>Threshold proximity radius</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><p>The hit-test visible PlatformVisual nearest the position</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_VisualTreeWalker_HitTest_" data-uid="NationalInstruments.Core.VisualTreeWalker.HitTest*"></a>
+  <h4 id="NationalInstruments_Core_VisualTreeWalker_HitTest_NationalInstruments_Core_PlatformVisual_System_Windows_Media_HitTestFilterCallback_System_Windows_Media_HitTestResultCallback_System_Windows_Media_HitTestParameters_" data-uid="NationalInstruments.Core.VisualTreeWalker.HitTest(NationalInstruments.Core.PlatformVisual,System.Windows.Media.HitTestFilterCallback,System.Windows.Media.HitTestResultCallback,System.Windows.Media.HitTestParameters)">HitTest(PlatformVisual, HitTestFilterCallback, HitTestResultCallback, HitTestParameters)</h4>
+  <div class="markdown level1 summary"><p>Initiates a hit test on the specified System.Windows.Media.Visual, with caller-defined
+System.Windows.Media.HitTestFilterCallback and System.Windows.Media.HitTestResultCallback
+methods. On windows just delegates to VisualTreeHelper.HitTest.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void HitTest(PlatformVisual reference, HitTestFilterCallback filterCallback, HitTestResultCallback resultCallback, HitTestParameters hitTestParameters)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">reference</span></td>
+        <td><p>The System.Windows.Media.Visual to hit test.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.media.hittestfiltercallback">HitTestFilterCallback</a></td>
+        <td><span class="parametername">filterCallback</span></td>
+        <td><p>The method that represents the hit test filter callback value.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.media.hittestresultcallback">HitTestResultCallback</a></td>
+        <td><span class="parametername">resultCallback</span></td>
+        <td><p>The method that represents the hit test result callback value.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.media.hittestparameters">HitTestParameters</a></td>
+        <td><span class="parametername">hitTestParameters</span></td>
+        <td><p>The parameter value to hit test against.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_VisualTreeWalker_HitTestVisual_" data-uid="NationalInstruments.Core.VisualTreeWalker.HitTestVisual*"></a>
+  <h4 id="NationalInstruments_Core_VisualTreeWalker_HitTestVisual_NationalInstruments_Core_PlatformVisual_NationalInstruments_Core_UIPosition_NationalInstruments_Core_UIPosition_System_Windows_Media_HitTestFilterCallback_" data-uid="NationalInstruments.Core.VisualTreeWalker.HitTestVisual(NationalInstruments.Core.PlatformVisual,NationalInstruments.Core.UIPosition,NationalInstruments.Core.UIPosition,System.Windows.Media.HitTestFilterCallback)">HitTestVisual(PlatformVisual, UIPosition, UIPosition, HitTestFilterCallback)</h4>
+  <div class="markdown level1 summary"><p>Determins if the specified visual is visually within the bounds of the rectangle that
+contains the specified points.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HitTestVisual(PlatformVisual visual, UIPosition topLeft, UIPosition bottomRight, HitTestFilterCallback filter)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">visual</span></td>
+        <td><p>The visual of interest</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.UIPosition.html">UIPosition</a></td>
+        <td><span class="parametername">topLeft</span></td>
+        <td><p>Top left of the desired bounding rect</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.UIPosition.html">UIPosition</a></td>
+        <td><span class="parametername">bottomRight</span></td>
+        <td><p>The bottom right of the desired bounding rect</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.media.hittestfiltercallback">HitTestFilterCallback</a></td>
+        <td><span class="parametername">filter</span></td>
+        <td><p>Option hit test filter, pass in null for standard filtering</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if the visual is hit, false otherwise</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_VisualTreeWalker_OfType_" data-uid="NationalInstruments.Core.VisualTreeWalker.OfType*"></a>
+  <h4 id="NationalInstruments_Core_VisualTreeWalker_OfType__1_System_Collections_Generic_IEnumerable_NationalInstruments_Core_PlatformVisual__" data-uid="NationalInstruments.Core.VisualTreeWalker.OfType``1(System.Collections.Generic.IEnumerable{NationalInstruments.Core.PlatformVisual})">OfType&lt;T&gt;(IEnumerable&lt;PlatformVisual&gt;)</h4>
+  <div class="markdown level1 summary"><p>Gets all visuals from the specified collection, of type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;T&gt; OfType&lt;T&gt;(this IEnumerable&lt;PlatformVisual&gt; visuals)where T : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a>&gt;</td>
+        <td><span class="parametername">visuals</span></td>
+        <td><p>The platform visuals.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td><p>All <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> visuals in <code data-dev-comment-type="paramref" class="paramref">visuals</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>A platform visual type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_VisualTreeWalker_SetHitTestOverlay_" data-uid="NationalInstruments.Core.VisualTreeWalker.SetHitTestOverlay*"></a>
+  <h4 id="NationalInstruments_Core_VisualTreeWalker_SetHitTestOverlay_NationalInstruments_Core_PlatformVisual_System_Boolean_" data-uid="NationalInstruments.Core.VisualTreeWalker.SetHitTestOverlay(NationalInstruments.Core.PlatformVisual,System.Boolean)">SetHitTestOverlay(PlatformVisual, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Sets the HitTestOverlay property on a visual.  Setting this property on a visual will cause the VisualTreeWalker hit testing methods to
+ignore the visual while hit testing, but the children of the visual will not be ignored.  This does not affect the input event hit testing
+that WPF does when routing input events.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetHitTestOverlay(PlatformVisual target, bool hitTestOverlay)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">target</span></td>
+        <td><p>The visual on which to set the HitTestOverlay property.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">hitTestOverlay</span></td>
+        <td><p><code>true</code> to ignore this visual when hit testing.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_VisualTreeWalker_SetHitTestStop_" data-uid="NationalInstruments.Core.VisualTreeWalker.SetHitTestStop*"></a>
+  <h4 id="NationalInstruments_Core_VisualTreeWalker_SetHitTestStop_NationalInstruments_Core_PlatformVisual_System_Boolean_" data-uid="NationalInstruments.Core.VisualTreeWalker.SetHitTestStop(NationalInstruments.Core.PlatformVisual,System.Boolean)">SetHitTestStop(PlatformVisual, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Sets the HitTestStop property on a visual.
+Setting this property on a visual will cause VisualTreeWalker hit testing methods to ignore all descendants of the visual.
+This does not affect the input event hit testing that WPF does when routing input events.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetHitTestStop(PlatformVisual target, bool hitTestStop)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">target</span></td>
+        <td><p>The visual to set the hit stop property on</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">hitTestStop</span></td>
+        <td><p>true to ignore descendants when hit testing, false otherwise</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_VisualTreeWalker_StandardHitTestFilterCallback_" data-uid="NationalInstruments.Core.VisualTreeWalker.StandardHitTestFilterCallback*"></a>
+  <h4 id="NationalInstruments_Core_VisualTreeWalker_StandardHitTestFilterCallback_System_Windows_DependencyObject_" data-uid="NationalInstruments.Core.VisualTreeWalker.StandardHitTestFilterCallback(System.Windows.DependencyObject)">StandardHitTestFilterCallback(DependencyObject)</h4>
+  <div class="markdown level1 summary"><p>WPF has a bug that returns HitTestVisible == false and !Visible items. This filter works around that bug. It also obeys rules of our standard HitTestStop and HitTestOverlays</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static HitTestFilterBehavior StandardHitTestFilterCallback(DependencyObject target)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.dependencyobject">DependencyObject</a></td>
+        <td><span class="parametername">target</span></td>
+        <td><p>The visual being targeted for a hit test.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.media.hittestfilterbehavior">HitTestFilterBehavior</a></td>
+        <td><p>HitTestFilterBehavior.ContinueSkipSelfAndChildren if target is a UIElement that is not hit test visible, or visible, else HitTestFilterBehavior.Continue.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_VisualTreeWalker_VisualTreeIsFrozen_" data-uid="NationalInstruments.Core.VisualTreeWalker.VisualTreeIsFrozen*"></a>
+  <h4 id="NationalInstruments_Core_VisualTreeWalker_VisualTreeIsFrozen" data-uid="NationalInstruments.Core.VisualTreeWalker.VisualTreeIsFrozen">VisualTreeIsFrozen()</h4>
+  <div class="markdown level1 summary"><p>Call when the visual tree is known to not be changing. This allows the VisualTreeWalker to cache
+visual tree results to optimize performance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IDisposable VisualTreeIsFrozen()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></td>
+        <td><p>IDisposable to call when the tree is no longer known to be invariant.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

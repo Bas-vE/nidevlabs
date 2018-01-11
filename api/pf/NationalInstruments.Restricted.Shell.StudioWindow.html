@@ -1,0 +1,3562 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class StudioWindow
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class StudioWindow
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.Restricted.Shell.StudioWindow">
+  
+  
+  <h1 id="NationalInstruments_Restricted_Shell_StudioWindow" data-uid="NationalInstruments.Restricted.Shell.StudioWindow" class="text-break">Class StudioWindow
+  </h1>
+  <div class="markdown level0 summary"><p>The StudioWindow is the main application window in both WPF and Silverlight.  It is responsible for managing
+application lifetime, the ribbon, and document display and management.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.threading.dispatcherobject">DispatcherObject</a></div>
+    <div class="level2"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.dependencyobject">DependencyObject</a></div>
+    <div class="level3"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.media.visual">Visual</a></div>
+    <div class="level4"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement">UIElement</a></div>
+    <div class="level5"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement">FrameworkElement</a></div>
+    <div class="level6"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.control">Control</a></div>
+    <div class="level7"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.contentcontrol">ContentControl</a></div>
+    <div class="level8"><span class="xref">StudioWindow</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.media.animation.ianimatable">IAnimatable</a></div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.iframeworkinputelement">IFrameworkInputElement</a></div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.iinputelement">IInputElement</a></div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.componentmodel.isupportinitialize">ISupportInitialize</a></div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.markup.iqueryambient">IQueryAmbient</a></div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.markup.iaddchild">IAddChild</a></div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.markup.icomponentconnector">IComponentConnector</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.contentcontrol.contentproperty">ContentControl.ContentProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.contentcontrol.hascontentproperty">ContentControl.HasContentProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.contentcontrol.contenttemplateproperty">ContentControl.ContentTemplateProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.contentcontrol.contenttemplateselectorproperty">ContentControl.ContentTemplateSelectorProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.contentcontrol.contentstringformatproperty">ContentControl.ContentStringFormatProperty</a>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.ContentControl.System.Windows.Markup.IAddChild.AddChild(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.ContentControl.AddChild(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.ContentControl.System.Windows.Markup.IAddChild.AddText(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.ContentControl.AddText(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.ContentControl.OnContentChanged(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.ContentControl.OnContentTemplateChanged(System.Windows.DataTemplate, System.Windows.DataTemplate)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.ContentControl.OnContentTemplateSelectorChanged(System.Windows.Controls.DataTemplateSelector, System.Windows.Controls.DataTemplateSelector)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.ContentControl.OnContentStringFormatChanged(System.String, System.String)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.contentcontrol.logicalchildren#System_Windows_Controls_ContentControl_LogicalChildren">ContentControl.LogicalChildren</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.contentcontrol.content#System_Windows_Controls_ContentControl_Content">ContentControl.Content</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.contentcontrol.hascontent#System_Windows_Controls_ContentControl_HasContent">ContentControl.HasContent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.contentcontrol.contenttemplate#System_Windows_Controls_ContentControl_ContentTemplate">ContentControl.ContentTemplate</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.contentcontrol.contenttemplateselector#System_Windows_Controls_ContentControl_ContentTemplateSelector">ContentControl.ContentTemplateSelector</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.contentcontrol.contentstringformat#System_Windows_Controls_ContentControl_ContentStringFormat">ContentControl.ContentStringFormat</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.control.borderbrushproperty">Control.BorderBrushProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.control.borderthicknessproperty">Control.BorderThicknessProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.control.backgroundproperty">Control.BackgroundProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.control.foregroundproperty">Control.ForegroundProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.control.fontfamilyproperty">Control.FontFamilyProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.control.fontsizeproperty">Control.FontSizeProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.control.fontstretchproperty">Control.FontStretchProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.control.fontstyleproperty">Control.FontStyleProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.control.fontweightproperty">Control.FontWeightProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.control.horizontalcontentalignmentproperty">Control.HorizontalContentAlignmentProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.control.verticalcontentalignmentproperty">Control.VerticalContentAlignmentProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.control.tabindexproperty">Control.TabIndexProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.control.istabstopproperty">Control.IsTabStopProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.control.paddingproperty">Control.PaddingProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.control.templateproperty">Control.TemplateProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.control.previewmousedoubleclickevent">Control.PreviewMouseDoubleClickEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.control.mousedoubleclickevent">Control.MouseDoubleClickEvent</a>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.Control.OnTemplateChanged(System.Windows.Controls.ControlTemplate, System.Windows.Controls.ControlTemplate)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.Control.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.Control.OnPreviewMouseDoubleClick(System.Windows.Input.MouseButtonEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.Control.OnMouseDoubleClick(System.Windows.Input.MouseButtonEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.Control.MeasureOverride(System.Windows.Size)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Controls.Control.ArrangeOverride(System.Windows.Size)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.control.borderbrush#System_Windows_Controls_Control_BorderBrush">Control.BorderBrush</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.control.borderthickness#System_Windows_Controls_Control_BorderThickness">Control.BorderThickness</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.control.background#System_Windows_Controls_Control_Background">Control.Background</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.control.foreground#System_Windows_Controls_Control_Foreground">Control.Foreground</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.control.fontfamily#System_Windows_Controls_Control_FontFamily">Control.FontFamily</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.control.fontsize#System_Windows_Controls_Control_FontSize">Control.FontSize</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.control.fontstretch#System_Windows_Controls_Control_FontStretch">Control.FontStretch</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.control.fontstyle#System_Windows_Controls_Control_FontStyle">Control.FontStyle</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.control.fontweight#System_Windows_Controls_Control_FontWeight">Control.FontWeight</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.control.horizontalcontentalignment#System_Windows_Controls_Control_HorizontalContentAlignment">Control.HorizontalContentAlignment</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.control.verticalcontentalignment#System_Windows_Controls_Control_VerticalContentAlignment">Control.VerticalContentAlignment</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.control.tabindex#System_Windows_Controls_Control_TabIndex">Control.TabIndex</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.control.istabstop#System_Windows_Controls_Control_IsTabStop">Control.IsTabStop</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.control.padding#System_Windows_Controls_Control_Padding">Control.Padding</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.control.template#System_Windows_Controls_Control_Template">Control.Template</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.control.handlesscrolling#System_Windows_Controls_Control_HandlesScrolling">Control.HandlesScrolling</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.control.previewmousedoubleclick">Control.PreviewMouseDoubleClick</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.control.mousedoubleclick">Control.MouseDoubleClick</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.styleproperty">FrameworkElement.StyleProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.overridesdefaultstyleproperty">FrameworkElement.OverridesDefaultStyleProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.uselayoutroundingproperty">FrameworkElement.UseLayoutRoundingProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.defaultstylekeyproperty">FrameworkElement.DefaultStyleKeyProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.datacontextproperty">FrameworkElement.DataContextProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.bindinggroupproperty">FrameworkElement.BindingGroupProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.languageproperty">FrameworkElement.LanguageProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.nameproperty">FrameworkElement.NameProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.tagproperty">FrameworkElement.TagProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.inputscopeproperty">FrameworkElement.InputScopeProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.requestbringintoviewevent">FrameworkElement.RequestBringIntoViewEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.sizechangedevent">FrameworkElement.SizeChangedEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.actualwidthproperty">FrameworkElement.ActualWidthProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.actualheightproperty">FrameworkElement.ActualHeightProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.layouttransformproperty">FrameworkElement.LayoutTransformProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.widthproperty">FrameworkElement.WidthProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.minwidthproperty">FrameworkElement.MinWidthProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.maxwidthproperty">FrameworkElement.MaxWidthProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.heightproperty">FrameworkElement.HeightProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.minheightproperty">FrameworkElement.MinHeightProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.maxheightproperty">FrameworkElement.MaxHeightProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.flowdirectionproperty">FrameworkElement.FlowDirectionProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.marginproperty">FrameworkElement.MarginProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.horizontalalignmentproperty">FrameworkElement.HorizontalAlignmentProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.verticalalignmentproperty">FrameworkElement.VerticalAlignmentProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.focusvisualstyleproperty">FrameworkElement.FocusVisualStyleProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.cursorproperty">FrameworkElement.CursorProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.forcecursorproperty">FrameworkElement.ForceCursorProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.loadedevent">FrameworkElement.LoadedEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.unloadedevent">FrameworkElement.UnloadedEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.tooltipproperty">FrameworkElement.ToolTipProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.contextmenuproperty">FrameworkElement.ContextMenuProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.tooltipopeningevent">FrameworkElement.ToolTipOpeningEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.tooltipclosingevent">FrameworkElement.ToolTipClosingEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.contextmenuopeningevent">FrameworkElement.ContextMenuOpeningEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.contextmenuclosingevent">FrameworkElement.ContextMenuClosingEvent</a>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.OnStyleChanged(System.Windows.Style, System.Windows.Style)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.ParentLayoutInvalidated(System.Windows.UIElement)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.ApplyTemplate()</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.BeginStoryboard(System.Windows.Media.Animation.Storyboard)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.BeginStoryboard(System.Windows.Media.Animation.Storyboard, System.Windows.Media.Animation.HandoffBehavior)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.BeginStoryboard(System.Windows.Media.Animation.Storyboard, System.Windows.Media.Animation.HandoffBehavior, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.GetVisualChild(System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.System.Windows.Markup.IQueryAmbient.IsAmbientPropertyAvailable(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.GetTemplateChild(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.FindResource(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.TryFindResource(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.SetResourceReference(System.Windows.DependencyProperty, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.OnVisualParentChanged(System.Windows.DependencyObject)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.GetBindingExpression(System.Windows.DependencyProperty)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.SetBinding(System.Windows.DependencyProperty, System.Windows.Data.BindingBase)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.SetBinding(System.Windows.DependencyProperty, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.GetUIParentCore()</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.BringIntoView()</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.BringIntoView(System.Windows.Rect)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.GetFlowDirection(System.Windows.DependencyObject)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.SetFlowDirection(System.Windows.DependencyObject, System.Windows.FlowDirection)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.MeasureCore(System.Windows.Size)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.ArrangeCore(System.Windows.Rect)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.OnRenderSizeChanged(System.Windows.SizeChangedInfo)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.GetLayoutClip(System.Windows.Size)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.MoveFocus(System.Windows.Input.TraversalRequest)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.PredictFocus(System.Windows.Input.FocusNavigationDirection)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.OnGotFocus(System.Windows.RoutedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.BeginInit()</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.EndInit()</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.OnInitialized(System.EventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.OnToolTipOpening(System.Windows.Controls.ToolTipEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.OnToolTipClosing(System.Windows.Controls.ToolTipEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.OnContextMenuOpening(System.Windows.Controls.ContextMenuEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.OnContextMenuClosing(System.Windows.Controls.ContextMenuEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.RegisterName(System.String, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.UnregisterName(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.FindName(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.UpdateDefaultStyle()</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.AddLogicalChild(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.FrameworkElement.RemoveLogicalChild(System.Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.style#System_Windows_FrameworkElement_Style">FrameworkElement.Style</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.overridesdefaultstyle#System_Windows_FrameworkElement_OverridesDefaultStyle">FrameworkElement.OverridesDefaultStyle</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.uselayoutrounding#System_Windows_FrameworkElement_UseLayoutRounding">FrameworkElement.UseLayoutRounding</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.defaultstylekey#System_Windows_FrameworkElement_DefaultStyleKey">FrameworkElement.DefaultStyleKey</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.triggers#System_Windows_FrameworkElement_Triggers">FrameworkElement.Triggers</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.templatedparent#System_Windows_FrameworkElement_TemplatedParent">FrameworkElement.TemplatedParent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.visualchildrencount#System_Windows_FrameworkElement_VisualChildrenCount">FrameworkElement.VisualChildrenCount</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.resources#System_Windows_FrameworkElement_Resources">FrameworkElement.Resources</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.inheritancebehavior#System_Windows_FrameworkElement_InheritanceBehavior">FrameworkElement.InheritanceBehavior</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.datacontext#System_Windows_FrameworkElement_DataContext">FrameworkElement.DataContext</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.bindinggroup#System_Windows_FrameworkElement_BindingGroup">FrameworkElement.BindingGroup</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.language#System_Windows_FrameworkElement_Language">FrameworkElement.Language</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.name#System_Windows_FrameworkElement_Name">FrameworkElement.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.tag#System_Windows_FrameworkElement_Tag">FrameworkElement.Tag</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.inputscope#System_Windows_FrameworkElement_InputScope">FrameworkElement.InputScope</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.actualwidth#System_Windows_FrameworkElement_ActualWidth">FrameworkElement.ActualWidth</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.actualheight#System_Windows_FrameworkElement_ActualHeight">FrameworkElement.ActualHeight</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.layouttransform#System_Windows_FrameworkElement_LayoutTransform">FrameworkElement.LayoutTransform</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.width#System_Windows_FrameworkElement_Width">FrameworkElement.Width</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.minwidth#System_Windows_FrameworkElement_MinWidth">FrameworkElement.MinWidth</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.maxwidth#System_Windows_FrameworkElement_MaxWidth">FrameworkElement.MaxWidth</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.height#System_Windows_FrameworkElement_Height">FrameworkElement.Height</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.minheight#System_Windows_FrameworkElement_MinHeight">FrameworkElement.MinHeight</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.maxheight#System_Windows_FrameworkElement_MaxHeight">FrameworkElement.MaxHeight</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.flowdirection#System_Windows_FrameworkElement_FlowDirection">FrameworkElement.FlowDirection</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.margin#System_Windows_FrameworkElement_Margin">FrameworkElement.Margin</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.horizontalalignment#System_Windows_FrameworkElement_HorizontalAlignment">FrameworkElement.HorizontalAlignment</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.verticalalignment#System_Windows_FrameworkElement_VerticalAlignment">FrameworkElement.VerticalAlignment</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.focusvisualstyle#System_Windows_FrameworkElement_FocusVisualStyle">FrameworkElement.FocusVisualStyle</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.cursor#System_Windows_FrameworkElement_Cursor">FrameworkElement.Cursor</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.forcecursor#System_Windows_FrameworkElement_ForceCursor">FrameworkElement.ForceCursor</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.isinitialized#System_Windows_FrameworkElement_IsInitialized">FrameworkElement.IsInitialized</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.isloaded#System_Windows_FrameworkElement_IsLoaded">FrameworkElement.IsLoaded</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.tooltip#System_Windows_FrameworkElement_ToolTip">FrameworkElement.ToolTip</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.contextmenu#System_Windows_FrameworkElement_ContextMenu">FrameworkElement.ContextMenu</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.parent#System_Windows_FrameworkElement_Parent">FrameworkElement.Parent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.targetupdated">FrameworkElement.TargetUpdated</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.sourceupdated">FrameworkElement.SourceUpdated</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.datacontextchanged">FrameworkElement.DataContextChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.requestbringintoview">FrameworkElement.RequestBringIntoView</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.sizechanged">FrameworkElement.SizeChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.initialized">FrameworkElement.Initialized</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.loaded">FrameworkElement.Loaded</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.unloaded">FrameworkElement.Unloaded</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.tooltipopening">FrameworkElement.ToolTipOpening</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.tooltipclosing">FrameworkElement.ToolTipClosing</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.contextmenuopening">FrameworkElement.ContextMenuOpening</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.contextmenuclosing">FrameworkElement.ContextMenuClosing</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewmousedownevent">UIElement.PreviewMouseDownEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.mousedownevent">UIElement.MouseDownEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewmouseupevent">UIElement.PreviewMouseUpEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.mouseupevent">UIElement.MouseUpEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewmouseleftbuttondownevent">UIElement.PreviewMouseLeftButtonDownEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.mouseleftbuttondownevent">UIElement.MouseLeftButtonDownEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewmouseleftbuttonupevent">UIElement.PreviewMouseLeftButtonUpEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.mouseleftbuttonupevent">UIElement.MouseLeftButtonUpEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewmouserightbuttondownevent">UIElement.PreviewMouseRightButtonDownEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.mouserightbuttondownevent">UIElement.MouseRightButtonDownEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewmouserightbuttonupevent">UIElement.PreviewMouseRightButtonUpEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.mouserightbuttonupevent">UIElement.MouseRightButtonUpEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewmousemoveevent">UIElement.PreviewMouseMoveEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.mousemoveevent">UIElement.MouseMoveEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewmousewheelevent">UIElement.PreviewMouseWheelEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.mousewheelevent">UIElement.MouseWheelEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.mouseenterevent">UIElement.MouseEnterEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.mouseleaveevent">UIElement.MouseLeaveEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.gotmousecaptureevent">UIElement.GotMouseCaptureEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.lostmousecaptureevent">UIElement.LostMouseCaptureEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.querycursorevent">UIElement.QueryCursorEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewstylusdownevent">UIElement.PreviewStylusDownEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.stylusdownevent">UIElement.StylusDownEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewstylusupevent">UIElement.PreviewStylusUpEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.stylusupevent">UIElement.StylusUpEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewstylusmoveevent">UIElement.PreviewStylusMoveEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.stylusmoveevent">UIElement.StylusMoveEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewstylusinairmoveevent">UIElement.PreviewStylusInAirMoveEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.stylusinairmoveevent">UIElement.StylusInAirMoveEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.stylusenterevent">UIElement.StylusEnterEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.stylusleaveevent">UIElement.StylusLeaveEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewstylusinrangeevent">UIElement.PreviewStylusInRangeEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.stylusinrangeevent">UIElement.StylusInRangeEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewstylusoutofrangeevent">UIElement.PreviewStylusOutOfRangeEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.stylusoutofrangeevent">UIElement.StylusOutOfRangeEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewstylussystemgestureevent">UIElement.PreviewStylusSystemGestureEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.stylussystemgestureevent">UIElement.StylusSystemGestureEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.gotstyluscaptureevent">UIElement.GotStylusCaptureEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.loststyluscaptureevent">UIElement.LostStylusCaptureEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.stylusbuttondownevent">UIElement.StylusButtonDownEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.stylusbuttonupevent">UIElement.StylusButtonUpEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewstylusbuttondownevent">UIElement.PreviewStylusButtonDownEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewstylusbuttonupevent">UIElement.PreviewStylusButtonUpEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewkeydownevent">UIElement.PreviewKeyDownEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.keydownevent">UIElement.KeyDownEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewkeyupevent">UIElement.PreviewKeyUpEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.keyupevent">UIElement.KeyUpEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewgotkeyboardfocusevent">UIElement.PreviewGotKeyboardFocusEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.gotkeyboardfocusevent">UIElement.GotKeyboardFocusEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewlostkeyboardfocusevent">UIElement.PreviewLostKeyboardFocusEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.lostkeyboardfocusevent">UIElement.LostKeyboardFocusEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewtextinputevent">UIElement.PreviewTextInputEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.textinputevent">UIElement.TextInputEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewquerycontinuedragevent">UIElement.PreviewQueryContinueDragEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.querycontinuedragevent">UIElement.QueryContinueDragEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewgivefeedbackevent">UIElement.PreviewGiveFeedbackEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.givefeedbackevent">UIElement.GiveFeedbackEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewdragenterevent">UIElement.PreviewDragEnterEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.dragenterevent">UIElement.DragEnterEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewdragoverevent">UIElement.PreviewDragOverEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.dragoverevent">UIElement.DragOverEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewdragleaveevent">UIElement.PreviewDragLeaveEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.dragleaveevent">UIElement.DragLeaveEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewdropevent">UIElement.PreviewDropEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.dropevent">UIElement.DropEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewtouchdownevent">UIElement.PreviewTouchDownEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.touchdownevent">UIElement.TouchDownEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewtouchmoveevent">UIElement.PreviewTouchMoveEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.touchmoveevent">UIElement.TouchMoveEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewtouchupevent">UIElement.PreviewTouchUpEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.touchupevent">UIElement.TouchUpEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.gottouchcaptureevent">UIElement.GotTouchCaptureEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.losttouchcaptureevent">UIElement.LostTouchCaptureEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.touchenterevent">UIElement.TouchEnterEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.touchleaveevent">UIElement.TouchLeaveEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.ismousedirectlyoverproperty">UIElement.IsMouseDirectlyOverProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.ismouseoverproperty">UIElement.IsMouseOverProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.isstylusoverproperty">UIElement.IsStylusOverProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.iskeyboardfocuswithinproperty">UIElement.IsKeyboardFocusWithinProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.ismousecapturedproperty">UIElement.IsMouseCapturedProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.ismousecapturewithinproperty">UIElement.IsMouseCaptureWithinProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.isstylusdirectlyoverproperty">UIElement.IsStylusDirectlyOverProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.isstyluscapturedproperty">UIElement.IsStylusCapturedProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.isstyluscapturewithinproperty">UIElement.IsStylusCaptureWithinProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.iskeyboardfocusedproperty">UIElement.IsKeyboardFocusedProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.areanytouchesdirectlyoverproperty">UIElement.AreAnyTouchesDirectlyOverProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.areanytouchesoverproperty">UIElement.AreAnyTouchesOverProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.areanytouchescapturedproperty">UIElement.AreAnyTouchesCapturedProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.areanytouchescapturedwithinproperty">UIElement.AreAnyTouchesCapturedWithinProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.allowdropproperty">UIElement.AllowDropProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.rendertransformproperty">UIElement.RenderTransformProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.rendertransformoriginproperty">UIElement.RenderTransformOriginProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.opacityproperty">UIElement.OpacityProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.opacitymaskproperty">UIElement.OpacityMaskProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.bitmapeffectproperty">UIElement.BitmapEffectProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.effectproperty">UIElement.EffectProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.bitmapeffectinputproperty">UIElement.BitmapEffectInputProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.cachemodeproperty">UIElement.CacheModeProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.uidproperty">UIElement.UidProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.visibilityproperty">UIElement.VisibilityProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.cliptoboundsproperty">UIElement.ClipToBoundsProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.clipproperty">UIElement.ClipProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.snapstodevicepixelsproperty">UIElement.SnapsToDevicePixelsProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.gotfocusevent">UIElement.GotFocusEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.lostfocusevent">UIElement.LostFocusEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.isfocusedproperty">UIElement.IsFocusedProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.isenabledproperty">UIElement.IsEnabledProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.ishittestvisibleproperty">UIElement.IsHitTestVisibleProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.isvisibleproperty">UIElement.IsVisibleProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.focusableproperty">UIElement.FocusableProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.ismanipulationenabledproperty">UIElement.IsManipulationEnabledProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.manipulationstartingevent">UIElement.ManipulationStartingEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.manipulationstartedevent">UIElement.ManipulationStartedEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.manipulationdeltaevent">UIElement.ManipulationDeltaEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.manipulationinertiastartingevent">UIElement.ManipulationInertiaStartingEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.manipulationboundaryfeedbackevent">UIElement.ManipulationBoundaryFeedbackEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.manipulationcompletedevent">UIElement.ManipulationCompletedEvent</a>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.ApplyAnimationClock(System.Windows.DependencyProperty, System.Windows.Media.Animation.AnimationClock)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.ApplyAnimationClock(System.Windows.DependencyProperty, System.Windows.Media.Animation.AnimationClock, System.Windows.Media.Animation.HandoffBehavior)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.BeginAnimation(System.Windows.DependencyProperty, System.Windows.Media.Animation.AnimationTimeline)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.BeginAnimation(System.Windows.DependencyProperty, System.Windows.Media.Animation.AnimationTimeline, System.Windows.Media.Animation.HandoffBehavior)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.GetAnimationBaseValue(System.Windows.DependencyProperty)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.RaiseEvent(System.Windows.RoutedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.AddHandler(System.Windows.RoutedEvent, System.Delegate)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.AddHandler(System.Windows.RoutedEvent, System.Delegate, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.RemoveHandler(System.Windows.RoutedEvent, System.Delegate)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.AddToEventRoute(System.Windows.EventRoute, System.Windows.RoutedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewMouseDown(System.Windows.Input.MouseButtonEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnMouseDown(System.Windows.Input.MouseButtonEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewMouseUp(System.Windows.Input.MouseButtonEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnMouseUp(System.Windows.Input.MouseButtonEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewMouseLeftButtonUp(System.Windows.Input.MouseButtonEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnMouseLeftButtonUp(System.Windows.Input.MouseButtonEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewMouseRightButtonDown(System.Windows.Input.MouseButtonEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnMouseRightButtonDown(System.Windows.Input.MouseButtonEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewMouseRightButtonUp(System.Windows.Input.MouseButtonEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnMouseRightButtonUp(System.Windows.Input.MouseButtonEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewMouseMove(System.Windows.Input.MouseEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnMouseMove(System.Windows.Input.MouseEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewMouseWheel(System.Windows.Input.MouseWheelEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnMouseWheel(System.Windows.Input.MouseWheelEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnMouseEnter(System.Windows.Input.MouseEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnMouseLeave(System.Windows.Input.MouseEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnGotMouseCapture(System.Windows.Input.MouseEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnLostMouseCapture(System.Windows.Input.MouseEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnQueryCursor(System.Windows.Input.QueryCursorEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewStylusDown(System.Windows.Input.StylusDownEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnStylusDown(System.Windows.Input.StylusDownEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewStylusUp(System.Windows.Input.StylusEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnStylusUp(System.Windows.Input.StylusEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewStylusMove(System.Windows.Input.StylusEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnStylusMove(System.Windows.Input.StylusEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewStylusInAirMove(System.Windows.Input.StylusEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnStylusInAirMove(System.Windows.Input.StylusEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnStylusEnter(System.Windows.Input.StylusEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnStylusLeave(System.Windows.Input.StylusEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewStylusInRange(System.Windows.Input.StylusEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnStylusInRange(System.Windows.Input.StylusEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewStylusOutOfRange(System.Windows.Input.StylusEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnStylusOutOfRange(System.Windows.Input.StylusEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewStylusSystemGesture(System.Windows.Input.StylusSystemGestureEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnStylusSystemGesture(System.Windows.Input.StylusSystemGestureEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnGotStylusCapture(System.Windows.Input.StylusEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnLostStylusCapture(System.Windows.Input.StylusEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnStylusButtonDown(System.Windows.Input.StylusButtonEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnStylusButtonUp(System.Windows.Input.StylusButtonEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewStylusButtonDown(System.Windows.Input.StylusButtonEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewStylusButtonUp(System.Windows.Input.StylusButtonEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewKeyDown(System.Windows.Input.KeyEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnKeyDown(System.Windows.Input.KeyEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewKeyUp(System.Windows.Input.KeyEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnKeyUp(System.Windows.Input.KeyEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewGotKeyboardFocus(System.Windows.Input.KeyboardFocusChangedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnGotKeyboardFocus(System.Windows.Input.KeyboardFocusChangedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewLostKeyboardFocus(System.Windows.Input.KeyboardFocusChangedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewTextInput(System.Windows.Input.TextCompositionEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnTextInput(System.Windows.Input.TextCompositionEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewQueryContinueDrag(System.Windows.QueryContinueDragEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnQueryContinueDrag(System.Windows.QueryContinueDragEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewGiveFeedback(System.Windows.GiveFeedbackEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnGiveFeedback(System.Windows.GiveFeedbackEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewDragEnter(System.Windows.DragEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnDragEnter(System.Windows.DragEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewDragOver(System.Windows.DragEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnDragOver(System.Windows.DragEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewDragLeave(System.Windows.DragEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnDragLeave(System.Windows.DragEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewDrop(System.Windows.DragEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnDrop(System.Windows.DragEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewTouchDown(System.Windows.Input.TouchEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnTouchDown(System.Windows.Input.TouchEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewTouchMove(System.Windows.Input.TouchEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnTouchMove(System.Windows.Input.TouchEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnPreviewTouchUp(System.Windows.Input.TouchEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnTouchUp(System.Windows.Input.TouchEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnGotTouchCapture(System.Windows.Input.TouchEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnLostTouchCapture(System.Windows.Input.TouchEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnTouchEnter(System.Windows.Input.TouchEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnTouchLeave(System.Windows.Input.TouchEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnIsMouseDirectlyOverChanged(System.Windows.DependencyPropertyChangedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnIsKeyboardFocusWithinChanged(System.Windows.DependencyPropertyChangedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnIsMouseCapturedChanged(System.Windows.DependencyPropertyChangedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnIsMouseCaptureWithinChanged(System.Windows.DependencyPropertyChangedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnIsStylusDirectlyOverChanged(System.Windows.DependencyPropertyChangedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnIsStylusCapturedChanged(System.Windows.DependencyPropertyChangedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnIsStylusCaptureWithinChanged(System.Windows.DependencyPropertyChangedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnIsKeyboardFocusedChanged(System.Windows.DependencyPropertyChangedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.InvalidateMeasure()</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.InvalidateArrange()</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.InvalidateVisual()</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnChildDesiredSizeChanged(System.Windows.UIElement)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.Measure(System.Windows.Size)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.Arrange(System.Windows.Rect)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnRender(System.Windows.Media.DrawingContext)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.UpdateLayout()</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.TranslatePoint(System.Windows.Point, System.Windows.UIElement)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.InputHitTest(System.Windows.Point)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.CaptureMouse()</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.ReleaseMouseCapture()</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.CaptureStylus()</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.ReleaseStylusCapture()</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.Focus()</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnAccessKey(System.Windows.Input.AccessKeyEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.HitTestCore(System.Windows.Media.PointHitTestParameters)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.HitTestCore(System.Windows.Media.GeometryHitTestParameters)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnLostFocus(System.Windows.RoutedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnCreateAutomationPeer()</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnManipulationStarting(System.Windows.Input.ManipulationStartingEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnManipulationStarted(System.Windows.Input.ManipulationStartedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnManipulationDelta(System.Windows.Input.ManipulationDeltaEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnManipulationInertiaStarting(System.Windows.Input.ManipulationInertiaStartingEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnManipulationBoundaryFeedback(System.Windows.Input.ManipulationBoundaryFeedbackEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.OnManipulationCompleted(System.Windows.Input.ManipulationCompletedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.CaptureTouch(System.Windows.Input.TouchDevice)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.ReleaseTouchCapture(System.Windows.Input.TouchDevice)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.UIElement.ReleaseAllTouchCaptures()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.hasanimatedproperties#System_Windows_UIElement_HasAnimatedProperties">UIElement.HasAnimatedProperties</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.inputbindings#System_Windows_UIElement_InputBindings">UIElement.InputBindings</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.commandbindings#System_Windows_UIElement_CommandBindings">UIElement.CommandBindings</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.allowdrop#System_Windows_UIElement_AllowDrop">UIElement.AllowDrop</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.stylusplugins#System_Windows_UIElement_StylusPlugIns">UIElement.StylusPlugIns</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.desiredsize#System_Windows_UIElement_DesiredSize">UIElement.DesiredSize</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.ismeasurevalid#System_Windows_UIElement_IsMeasureValid">UIElement.IsMeasureValid</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.isarrangevalid#System_Windows_UIElement_IsArrangeValid">UIElement.IsArrangeValid</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.rendersize#System_Windows_UIElement_RenderSize">UIElement.RenderSize</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.rendertransform#System_Windows_UIElement_RenderTransform">UIElement.RenderTransform</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.rendertransformorigin#System_Windows_UIElement_RenderTransformOrigin">UIElement.RenderTransformOrigin</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.ismousedirectlyover#System_Windows_UIElement_IsMouseDirectlyOver">UIElement.IsMouseDirectlyOver</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.ismouseover#System_Windows_UIElement_IsMouseOver">UIElement.IsMouseOver</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.isstylusover#System_Windows_UIElement_IsStylusOver">UIElement.IsStylusOver</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.iskeyboardfocuswithin#System_Windows_UIElement_IsKeyboardFocusWithin">UIElement.IsKeyboardFocusWithin</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.ismousecaptured#System_Windows_UIElement_IsMouseCaptured">UIElement.IsMouseCaptured</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.ismousecapturewithin#System_Windows_UIElement_IsMouseCaptureWithin">UIElement.IsMouseCaptureWithin</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.isstylusdirectlyover#System_Windows_UIElement_IsStylusDirectlyOver">UIElement.IsStylusDirectlyOver</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.isstyluscaptured#System_Windows_UIElement_IsStylusCaptured">UIElement.IsStylusCaptured</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.isstyluscapturewithin#System_Windows_UIElement_IsStylusCaptureWithin">UIElement.IsStylusCaptureWithin</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.iskeyboardfocused#System_Windows_UIElement_IsKeyboardFocused">UIElement.IsKeyboardFocused</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.isinputmethodenabled#System_Windows_UIElement_IsInputMethodEnabled">UIElement.IsInputMethodEnabled</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.opacity#System_Windows_UIElement_Opacity">UIElement.Opacity</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.opacitymask#System_Windows_UIElement_OpacityMask">UIElement.OpacityMask</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.bitmapeffect#System_Windows_UIElement_BitmapEffect">UIElement.BitmapEffect</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.effect#System_Windows_UIElement_Effect">UIElement.Effect</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.bitmapeffectinput#System_Windows_UIElement_BitmapEffectInput">UIElement.BitmapEffectInput</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.cachemode#System_Windows_UIElement_CacheMode">UIElement.CacheMode</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.uid#System_Windows_UIElement_Uid">UIElement.Uid</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.visibility#System_Windows_UIElement_Visibility">UIElement.Visibility</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.cliptobounds#System_Windows_UIElement_ClipToBounds">UIElement.ClipToBounds</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.clip#System_Windows_UIElement_Clip">UIElement.Clip</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.snapstodevicepixels#System_Windows_UIElement_SnapsToDevicePixels">UIElement.SnapsToDevicePixels</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.haseffectivekeyboardfocus#System_Windows_UIElement_HasEffectiveKeyboardFocus">UIElement.HasEffectiveKeyboardFocus</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.isfocused#System_Windows_UIElement_IsFocused">UIElement.IsFocused</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.isenabled#System_Windows_UIElement_IsEnabled">UIElement.IsEnabled</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.isenabledcore#System_Windows_UIElement_IsEnabledCore">UIElement.IsEnabledCore</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.ishittestvisible#System_Windows_UIElement_IsHitTestVisible">UIElement.IsHitTestVisible</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.isvisible#System_Windows_UIElement_IsVisible">UIElement.IsVisible</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.focusable#System_Windows_UIElement_Focusable">UIElement.Focusable</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.persistid#System_Windows_UIElement_PersistId">UIElement.PersistId</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.ismanipulationenabled#System_Windows_UIElement_IsManipulationEnabled">UIElement.IsManipulationEnabled</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.areanytouchesover#System_Windows_UIElement_AreAnyTouchesOver">UIElement.AreAnyTouchesOver</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.areanytouchesdirectlyover#System_Windows_UIElement_AreAnyTouchesDirectlyOver">UIElement.AreAnyTouchesDirectlyOver</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.areanytouchescapturedwithin#System_Windows_UIElement_AreAnyTouchesCapturedWithin">UIElement.AreAnyTouchesCapturedWithin</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.areanytouchescaptured#System_Windows_UIElement_AreAnyTouchesCaptured">UIElement.AreAnyTouchesCaptured</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.touchescaptured#System_Windows_UIElement_TouchesCaptured">UIElement.TouchesCaptured</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.touchescapturedwithin#System_Windows_UIElement_TouchesCapturedWithin">UIElement.TouchesCapturedWithin</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.touchesover#System_Windows_UIElement_TouchesOver">UIElement.TouchesOver</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.touchesdirectlyover#System_Windows_UIElement_TouchesDirectlyOver">UIElement.TouchesDirectlyOver</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewmousedown">UIElement.PreviewMouseDown</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.mousedown">UIElement.MouseDown</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewmouseup">UIElement.PreviewMouseUp</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.mouseup">UIElement.MouseUp</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewmouseleftbuttondown">UIElement.PreviewMouseLeftButtonDown</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.mouseleftbuttondown">UIElement.MouseLeftButtonDown</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewmouseleftbuttonup">UIElement.PreviewMouseLeftButtonUp</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.mouseleftbuttonup">UIElement.MouseLeftButtonUp</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewmouserightbuttondown">UIElement.PreviewMouseRightButtonDown</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.mouserightbuttondown">UIElement.MouseRightButtonDown</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewmouserightbuttonup">UIElement.PreviewMouseRightButtonUp</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.mouserightbuttonup">UIElement.MouseRightButtonUp</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewmousemove">UIElement.PreviewMouseMove</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.mousemove">UIElement.MouseMove</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewmousewheel">UIElement.PreviewMouseWheel</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.mousewheel">UIElement.MouseWheel</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.mouseenter">UIElement.MouseEnter</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.mouseleave">UIElement.MouseLeave</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.gotmousecapture">UIElement.GotMouseCapture</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.lostmousecapture">UIElement.LostMouseCapture</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.querycursor">UIElement.QueryCursor</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewstylusdown">UIElement.PreviewStylusDown</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.stylusdown">UIElement.StylusDown</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewstylusup">UIElement.PreviewStylusUp</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.stylusup">UIElement.StylusUp</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewstylusmove">UIElement.PreviewStylusMove</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.stylusmove">UIElement.StylusMove</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewstylusinairmove">UIElement.PreviewStylusInAirMove</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.stylusinairmove">UIElement.StylusInAirMove</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.stylusenter">UIElement.StylusEnter</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.stylusleave">UIElement.StylusLeave</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewstylusinrange">UIElement.PreviewStylusInRange</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.stylusinrange">UIElement.StylusInRange</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewstylusoutofrange">UIElement.PreviewStylusOutOfRange</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.stylusoutofrange">UIElement.StylusOutOfRange</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewstylussystemgesture">UIElement.PreviewStylusSystemGesture</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.stylussystemgesture">UIElement.StylusSystemGesture</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.gotstyluscapture">UIElement.GotStylusCapture</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.loststyluscapture">UIElement.LostStylusCapture</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.stylusbuttondown">UIElement.StylusButtonDown</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.stylusbuttonup">UIElement.StylusButtonUp</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewstylusbuttondown">UIElement.PreviewStylusButtonDown</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewstylusbuttonup">UIElement.PreviewStylusButtonUp</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewkeydown">UIElement.PreviewKeyDown</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.keydown">UIElement.KeyDown</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewkeyup">UIElement.PreviewKeyUp</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.keyup">UIElement.KeyUp</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewgotkeyboardfocus">UIElement.PreviewGotKeyboardFocus</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.gotkeyboardfocus">UIElement.GotKeyboardFocus</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewlostkeyboardfocus">UIElement.PreviewLostKeyboardFocus</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.lostkeyboardfocus">UIElement.LostKeyboardFocus</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewtextinput">UIElement.PreviewTextInput</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.textinput">UIElement.TextInput</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewquerycontinuedrag">UIElement.PreviewQueryContinueDrag</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.querycontinuedrag">UIElement.QueryContinueDrag</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewgivefeedback">UIElement.PreviewGiveFeedback</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.givefeedback">UIElement.GiveFeedback</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewdragenter">UIElement.PreviewDragEnter</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.dragenter">UIElement.DragEnter</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewdragover">UIElement.PreviewDragOver</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.dragover">UIElement.DragOver</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewdragleave">UIElement.PreviewDragLeave</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.dragleave">UIElement.DragLeave</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewdrop">UIElement.PreviewDrop</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.drop">UIElement.Drop</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewtouchdown">UIElement.PreviewTouchDown</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.touchdown">UIElement.TouchDown</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewtouchmove">UIElement.PreviewTouchMove</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.touchmove">UIElement.TouchMove</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.previewtouchup">UIElement.PreviewTouchUp</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.touchup">UIElement.TouchUp</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.gottouchcapture">UIElement.GotTouchCapture</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.losttouchcapture">UIElement.LostTouchCapture</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.touchenter">UIElement.TouchEnter</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.touchleave">UIElement.TouchLeave</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.ismousedirectlyoverchanged">UIElement.IsMouseDirectlyOverChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.iskeyboardfocuswithinchanged">UIElement.IsKeyboardFocusWithinChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.ismousecapturedchanged">UIElement.IsMouseCapturedChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.ismousecapturewithinchanged">UIElement.IsMouseCaptureWithinChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.isstylusdirectlyoverchanged">UIElement.IsStylusDirectlyOverChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.isstyluscapturedchanged">UIElement.IsStylusCapturedChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.isstyluscapturewithinchanged">UIElement.IsStylusCaptureWithinChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.iskeyboardfocusedchanged">UIElement.IsKeyboardFocusedChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.layoutupdated">UIElement.LayoutUpdated</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.gotfocus">UIElement.GotFocus</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.lostfocus">UIElement.LostFocus</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.isenabledchanged">UIElement.IsEnabledChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.ishittestvisiblechanged">UIElement.IsHitTestVisibleChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.isvisiblechanged">UIElement.IsVisibleChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.focusablechanged">UIElement.FocusableChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.manipulationstarting">UIElement.ManipulationStarting</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.manipulationstarted">UIElement.ManipulationStarted</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.manipulationdelta">UIElement.ManipulationDelta</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.manipulationinertiastarting">UIElement.ManipulationInertiaStarting</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.manipulationboundaryfeedback">UIElement.ManipulationBoundaryFeedback</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement.manipulationcompleted">UIElement.ManipulationCompleted</a>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Media.Visual.AddVisualChild(System.Windows.Media.Visual)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Media.Visual.RemoveVisualChild(System.Windows.Media.Visual)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Media.Visual.OnVisualChildrenChanged(System.Windows.DependencyObject, System.Windows.DependencyObject)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Media.Visual.OnDpiChanged(System.Windows.DpiScale, System.Windows.DpiScale)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Media.Visual.IsAncestorOf(System.Windows.DependencyObject)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Media.Visual.IsDescendantOf(System.Windows.DependencyObject)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Media.Visual.FindCommonVisualAncestor(System.Windows.DependencyObject)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Media.Visual.TransformToAncestor(System.Windows.Media.Visual)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Media.Visual.TransformToAncestor(System.Windows.Media.Media3D.Visual3D)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Media.Visual.TransformToDescendant(System.Windows.Media.Visual)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Media.Visual.TransformToVisual(System.Windows.Media.Visual)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Media.Visual.PointToScreen(System.Windows.Point)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Media.Visual.PointFromScreen(System.Windows.Point)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.media.visual.visualparent#System_Windows_Media_Visual_VisualParent">Visual.VisualParent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.media.visual.visualtransform#System_Windows_Media_Visual_VisualTransform">Visual.VisualTransform</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.media.visual.visualeffect#System_Windows_Media_Visual_VisualEffect">Visual.VisualEffect</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.media.visual.visualbitmapeffect#System_Windows_Media_Visual_VisualBitmapEffect">Visual.VisualBitmapEffect</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.media.visual.visualbitmapeffectinput#System_Windows_Media_Visual_VisualBitmapEffectInput">Visual.VisualBitmapEffectInput</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.media.visual.visualcachemode#System_Windows_Media_Visual_VisualCacheMode">Visual.VisualCacheMode</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.media.visual.visualscrollableareaclip#System_Windows_Media_Visual_VisualScrollableAreaClip">Visual.VisualScrollableAreaClip</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.media.visual.visualclip#System_Windows_Media_Visual_VisualClip">Visual.VisualClip</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.media.visual.visualoffset#System_Windows_Media_Visual_VisualOffset">Visual.VisualOffset</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.media.visual.visualopacity#System_Windows_Media_Visual_VisualOpacity">Visual.VisualOpacity</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.media.visual.visualedgemode#System_Windows_Media_Visual_VisualEdgeMode">Visual.VisualEdgeMode</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.media.visual.visualbitmapscalingmode#System_Windows_Media_Visual_VisualBitmapScalingMode">Visual.VisualBitmapScalingMode</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.media.visual.visualcleartypehint#System_Windows_Media_Visual_VisualClearTypeHint">Visual.VisualClearTypeHint</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.media.visual.visualtextrenderingmode#System_Windows_Media_Visual_VisualTextRenderingMode">Visual.VisualTextRenderingMode</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.media.visual.visualtexthintingmode#System_Windows_Media_Visual_VisualTextHintingMode">Visual.VisualTextHintingMode</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.media.visual.visualopacitymask#System_Windows_Media_Visual_VisualOpacityMask">Visual.VisualOpacityMask</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.media.visual.visualxsnappingguidelines#System_Windows_Media_Visual_VisualXSnappingGuidelines">Visual.VisualXSnappingGuidelines</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.media.visual.visualysnappingguidelines#System_Windows_Media_Visual_VisualYSnappingGuidelines">Visual.VisualYSnappingGuidelines</a>
+    </div>
+    <div>
+      <span class="xref">System.Windows.DependencyObject.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.DependencyObject.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.DependencyObject.GetValue(System.Windows.DependencyProperty)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.DependencyObject.SetValue(System.Windows.DependencyProperty, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.DependencyObject.SetCurrentValue(System.Windows.DependencyProperty, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.DependencyObject.SetValue(System.Windows.DependencyPropertyKey, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.DependencyObject.ClearValue(System.Windows.DependencyProperty)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.DependencyObject.ClearValue(System.Windows.DependencyPropertyKey)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.DependencyObject.CoerceValue(System.Windows.DependencyProperty)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.DependencyObject.InvalidateProperty(System.Windows.DependencyProperty)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.DependencyObject.ShouldSerializeProperty(System.Windows.DependencyProperty)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.DependencyObject.ReadLocalValue(System.Windows.DependencyProperty)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.DependencyObject.GetLocalValueEnumerator()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.dependencyobject.dependencyobjecttype#System_Windows_DependencyObject_DependencyObjectType">DependencyObject.DependencyObjectType</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.dependencyobject.issealed#System_Windows_DependencyObject_IsSealed">DependencyObject.IsSealed</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.Restricted.Shell.html">NationalInstruments.Restricted.Shell</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_Restricted_Shell_StudioWindow_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Export(typeof (StudioWindow))]
+[PartCreationPolicy(CreationPolicy.NonShared)]
+public class StudioWindow : ContentControl, DUCE.IResource, IAnimatable, IFrameworkInputElement, IInputElement, ISupportInitialize, IHaveResources, IQueryAmbient, IAddChild, INotifyPropertyChanged, IComponentConnector</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow__ctor_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.#ctor*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow__ctor" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.#ctor">StudioWindow()</h4>
+  <div class="markdown level1 summary"><p>Creates a new instance of the StudioWindow class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StudioWindow()</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_ActiveDocumentProperty" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.ActiveDocumentProperty">ActiveDocumentProperty</h4>
+  <div class="markdown level1 summary"><p>The ActiveDocument property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly PlatformDependencyProperty ActiveDocumentProperty</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformDependencyProperty.html">PlatformDependencyProperty</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_ActiveEditorProperty" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.ActiveEditorProperty">ActiveEditorProperty</h4>
+  <div class="markdown level1 summary"><p>The ActiveEditor property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly PlatformDependencyProperty ActiveEditorProperty</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformDependencyProperty.html">PlatformDependencyProperty</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_ADEScaleProperty" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.ADEScaleProperty">ADEScaleProperty</h4>
+  <div class="markdown level1 summary"><p>The ADEScale property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly PlatformDependencyProperty ADEScaleProperty</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformDependencyProperty.html">PlatformDependencyProperty</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_SelectedItemProperty" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.SelectedItemProperty">SelectedItemProperty</h4>
+  <div class="markdown level1 summary"><p>The selectedItemViewModel property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly PlatformDependencyProperty SelectedItemProperty</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformDependencyProperty.html">PlatformDependencyProperty</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_TitleProperty" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.TitleProperty">TitleProperty</h4>
+  <div class="markdown level1 summary"><p>Title property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly PlatformDependencyProperty TitleProperty</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformDependencyProperty.html">PlatformDependencyProperty</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_TriedDisableScrollViewerProperty" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.TriedDisableScrollViewerProperty">TriedDisableScrollViewerProperty</h4>
+  <div class="markdown level1 summary"><p>Boolean to make sure we don&apos;t try to take out scroll viewer more than once (as visual tree walk is expensive).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly DependencyProperty TriedDisableScrollViewerProperty</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.dependencyproperty">DependencyProperty</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_ActiveDocument_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.ActiveDocument*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_ActiveDocument" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.ActiveDocument">ActiveDocument</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the active document being edited in the window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Document ActiveDocument { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Shell.Document.html">Document</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_ADEScale_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.ADEScale*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_ADEScale" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.ADEScale">ADEScale</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the amount by which to scale documents in the window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double ADEScale { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_Container_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.Container*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_Container" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.Container">Container</h4>
+  <div class="markdown level1 summary"><p>The container for this <a class="xref" href="NationalInstruments.Restricted.Shell.StudioWindow.html">StudioWindow</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IStudioWindowContainer Container { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Restricted.Shell.IStudioWindowContainer.html">IStudioWindowContainer</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_ContextHelpWindowManager_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.ContextHelpWindowManager*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_ContextHelpWindowManager" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.ContextHelpWindowManager">ContextHelpWindowManager</h4>
+  <div class="markdown level1 summary"><p>Gets the Context Help window manager, used to change the window owner when this studio window
+is activated or closes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ContextHelpWindowManager ContextHelpWindowManager { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Restricted.ContextualHelp.ContextHelpWindowManager.html">ContextHelpWindowManager</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_DefaultInputBindings_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.DefaultInputBindings*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_DefaultInputBindings" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.DefaultInputBindings">DefaultInputBindings</h4>
+  <div class="markdown level1 summary"><p>Default input bindings of studio window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputBindingCollection DefaultInputBindings { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.input.inputbindingcollection">InputBindingCollection</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_DefaultScale_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.DefaultScale*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_DefaultScale" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.DefaultScale">DefaultScale</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating the default amount by which to scale the visuals of documents in the application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double DefaultScale { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_Dispatcher_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.Dispatcher*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_Dispatcher" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.Dispatcher">Dispatcher</h4>
+  <div class="markdown level1 summary"><p>Override so we don&apos;t accidentally use the non-wrapped IDispatcher</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PlatformDispatcher Dispatcher { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformDispatcher.html">PlatformDispatcher</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_DocumentManager_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.DocumentManager*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_DocumentManager" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.DocumentManager">DocumentManager</h4>
+  <div class="markdown level1 summary"><p>Gets the document manager implementation used by the application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDocumentManager DocumentManager { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Shell.IDocumentManager.html">IDocumentManager</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_DocumentSwitchMode_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.DocumentSwitchMode*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_DocumentSwitchMode" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.DocumentSwitchMode">DocumentSwitchMode</h4>
+  <div class="markdown level1 summary"><p>Gets or set the style of user interface to display when switching between documents in the window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static WindowSwitcherType DocumentSwitchMode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Controls.Dock.WindowSwitcherType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_DocumentSwitchToolWindows_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.DocumentSwitchToolWindows*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_DocumentSwitchToolWindows" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.DocumentSwitchToolWindows">DocumentSwitchToolWindows</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether or not to include tool windows in the document switching user interface.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool DocumentSwitchToolWindows { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_FeatureSet_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.FeatureSet*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_FeatureSet" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.FeatureSet">FeatureSet</h4>
+  <div class="markdown level1 summary"><p>Gets the feature set of the application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IApplicationFeatureSet FeatureSet { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.IApplicationFeatureSet.html">IApplicationFeatureSet</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_HasClosed_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.HasClosed*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_HasClosed" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.HasClosed">HasClosed</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating true if the studio window has closed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasClosed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_Host_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.Host*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_Host" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.Host">Host</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the host of the application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICompositionHost Host { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Composition.ICompositionHost.html">ICompositionHost</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_Initializers_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.Initializers*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_Initializers" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.Initializers">Initializers</h4>
+  <div class="markdown level1 summary"><p>Gets the shell window initialization providers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;Lazy&lt;IShellWindowInitializer&gt;&gt; Initializers { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Lazy</span>&lt;<a class="xref" href="NationalInstruments.Shell.IShellWindowInitializer.html">IShellWindowInitializer</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_IsBusy_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.IsBusy*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_IsBusy" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.IsBusy">IsBusy</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether or not the window considers itself to be busy. When busy, user input that could cause
+modifications to documents in the editor is disabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsBusy { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_IsLauncherFullScreen_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.IsLauncherFullScreen*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_IsLauncherFullScreen" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.IsLauncherFullScreen">IsLauncherFullScreen</h4>
+  <div class="markdown level1 summary"><p>Gets a value that indicates whether or not the Launcher is covering the entire
+client area.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsLauncherFullScreen { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_IsLauncherVisible_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.IsLauncherVisible*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_IsLauncherVisible" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.IsLauncherVisible">IsLauncherVisible</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether the application-specified Launcher is visible in the StudioWindow.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsLauncherVisible { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_IsSearchEnabled_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.IsSearchEnabled*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_IsSearchEnabled" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.IsSearchEnabled">IsSearchEnabled</h4>
+  <div class="markdown level1 summary"><p>TRUE if search functionality should be enabled for this <a class="xref" href="NationalInstruments.Restricted.Shell.StudioWindow.html">StudioWindow</a> instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSearchEnabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_Launcher_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.Launcher*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_Launcher" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.Launcher">Launcher</h4>
+  <div class="markdown level1 summary"><p>Gets the visual for the Launcher</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PlatformVisual Launcher { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_RecentProjectsManager_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.RecentProjectsManager*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_RecentProjectsManager" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.RecentProjectsManager">RecentProjectsManager</h4>
+  <div class="markdown level1 summary"><p>Gets the recent projects manager implementation for the application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IRecentProjectsManager RecentProjectsManager { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Shell.IRecentProjectsManager.html">IRecentProjectsManager</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_RootVisual_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.RootVisual*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_RootVisual" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.RootVisual">RootVisual</h4>
+  <div class="markdown level1 summary"><p>Gets the root of the visual tree for this window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PlatformVisual RootVisual { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_ScheduledActivityManager_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.ScheduledActivityManager*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_ScheduledActivityManager" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.ScheduledActivityManager">ScheduledActivityManager</h4>
+  <div class="markdown level1 summary"><p>Gets the scheduled activity manager used by the application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ScheduledActivityManager ScheduledActivityManager { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.ScheduledActivityManager.html">ScheduledActivityManager</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_SelectedItem_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.SelectedItem*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_SelectedItem" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.SelectedItem">SelectedItem</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the selected itemViewModel in the window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PlatformVisual SelectedItem { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_TabbedInterface_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.TabbedInterface*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_TabbedInterface" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.TabbedInterface">TabbedInterface</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether or not the application uses a tabbed interface to display documents.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TabbedInterface { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_Theme_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.Theme*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_Theme" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.Theme">Theme</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the identifier of the user interface theme to apply to the application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Guid Theme { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_Title_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.Title*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_Title" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.Title">Title</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the StudioWindow title.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Title { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_ToolWindowCommands_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.ToolWindowCommands*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_ToolWindowCommands" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.ToolWindowCommands">ToolWindowCommands</h4>
+  <div class="markdown level1 summary"><p>Gets the commands of all tool windows.
+The tool window&apos;s view model needs to implement IProvideCommandContent to participate in finding all its commands.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;ICommandEx&gt; ToolWindowCommands { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="../core/NationalInstruments.Core.ICommandEx.html">ICommandEx</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_ToolWindowTypes_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.ToolWindowTypes*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_ToolWindowTypes" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.ToolWindowTypes">ToolWindowTypes</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the supporting tool windows available to the application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;Lazy&lt;IToolWindowType, IToolWindowTypeInfo&gt;&gt; ToolWindowTypes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Lazy</span>&lt;<a class="xref" href="NationalInstruments.Shell.IToolWindowType.html">IToolWindowType</a>, <a class="xref" href="NationalInstruments.Shell.IToolWindowTypeInfo.html">IToolWindowTypeInfo</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Restricted_Shell_StudioWindow_ToolWindowTypes_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This value is initialized via MEF.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_UserInterface_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.UserInterface*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_UserInterface" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.UserInterface">UserInterface</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the user interface implementation used by the application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IUserInterface UserInterface { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Shell.IUserInterface.html">IUserInterface</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Restricted_Shell_StudioWindow_UserInterface_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This value is initialized via MEF.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_WarmUpInitializers_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.WarmUpInitializers*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_WarmUpInitializers" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.WarmUpInitializers">WarmUpInitializers</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the shell window initialization warm-up providers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;Lazy&lt;IApplicationWarmUp&gt;&gt; WarmUpInitializers { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Lazy</span>&lt;<a class="xref" href="NationalInstruments.Shell.IApplicationWarmUp.html">IApplicationWarmUp</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Restricted_Shell_StudioWindow_WarmUpInitializers_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Warm-up activities are run once when the application is created (unlike shell window initializers, which initilize child windows).</p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_Activate_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.Activate*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_Activate" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.Activate">Activate()</h4>
+  <div class="markdown level1 summary"><p>Activate our container.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Activate()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_AttachToRootVisual_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.AttachToRootVisual*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_AttachToRootVisual" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.AttachToRootVisual">AttachToRootVisual()</h4>
+  <div class="markdown level1 summary"><p>Make sure we attach to the root of our visual tree.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AttachToRootVisual()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_Close_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.Close*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_Close" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.Close">Close()</h4>
+  <div class="markdown level1 summary"><p>Close our container.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Close()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_FindCommandSourceInToolWindows_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.FindCommandSourceInToolWindows*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_FindCommandSourceInToolWindows_NationalInstruments_Core_ICommandEx_NationalInstruments_Shell_DocumentEditSite_System_Boolean_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.FindCommandSourceInToolWindows(NationalInstruments.Core.ICommandEx,NationalInstruments.Shell.DocumentEditSite,System.Boolean)">FindCommandSourceInToolWindows(ICommandEx, DocumentEditSite, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Finds a command source by searching all the tool windows</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICommandSourceEx FindCommandSourceInToolWindows(ICommandEx command, DocumentEditSite editSite, bool show)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.ICommandEx.html">ICommandEx</a></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>the command to find</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Shell.DocumentEditSite.html">DocumentEditSite</a></td>
+        <td><span class="parametername">editSite</span></td>
+        <td><p>edit site</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">show</span></td>
+        <td><p>true to show (expand/scroll into view)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.ICommandSourceEx.html">ICommandSourceEx</a></td>
+        <td><p>command source, if found, null otherwise</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_GetDockingLayout_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.GetDockingLayout*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_GetDockingLayout" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.GetDockingLayout">GetDockingLayout()</h4>
+  <div class="markdown level1 summary"><p>Returns the docking layout of the current window</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetDockingLayout()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The layout of the window, as a string</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_GetStudioWindows_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.GetStudioWindows*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_GetStudioWindows_NationalInstruments_Composition_ICompositionHost_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.GetStudioWindows(NationalInstruments.Composition.ICompositionHost)">GetStudioWindows(ICompositionHost)</h4>
+  <div class="markdown level1 summary"><p>Get the studio window from the composition host</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;StudioWindow&gt; GetStudioWindows(ICompositionHost host)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Composition.ICompositionHost.html">ICompositionHost</a></td>
+        <td><span class="parametername">host</span></td>
+        <td><p>composition</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.Restricted.Shell.StudioWindow.html">StudioWindow</a>&gt;</td>
+        <td><p>studio window</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_GetWindowGroup_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.GetWindowGroup*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_GetWindowGroup_System_Windows_Controls_Dock_System_Boolean_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.GetWindowGroup(System.Windows.Controls.Dock,System.Boolean)">GetWindowGroup(Dock, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Gets the primary window group for a split container on a specified side of the dock site.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WindowGroup GetWindowGroup(Dock dockLocation, bool createIfNotPresent)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.controls.dock">Dock</a></td>
+        <td><span class="parametername">dockLocation</span></td>
+        <td><p>Side to get the group for.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">createIfNotPresent</span></td>
+        <td><p>If true, a split container and window group will be created if one does not exist.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NationalInstruments.Controls.Dock.WindowGroup</span></td>
+        <td><p>Primary window group in the splitter docked in the specified location.  If createIfNotPresent is false, this
+may be null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_GuessStudioWindow_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.GuessStudioWindow*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_GuessStudioWindow_NationalInstruments_Composition_ICompositionHost_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.GuessStudioWindow(NationalInstruments.Composition.ICompositionHost)">GuessStudioWindow(ICompositionHost)</h4>
+  <div class="markdown level1 summary"><p>Get the studio window from the composition host</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static StudioWindow GuessStudioWindow(ICompositionHost host)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Composition.ICompositionHost.html">ICompositionHost</a></td>
+        <td><span class="parametername">host</span></td>
+        <td><p>composition</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Restricted.Shell.StudioWindow.html">StudioWindow</a></td>
+        <td><p>studio window</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_HandleClosing_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.HandleClosing*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_HandleClosing_System_Action_System_Boolean__" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.HandleClosing(System.Action{System.Boolean})">HandleClosing(Action&lt;Boolean&gt;)</h4>
+  <div class="markdown level1 summary"><p>Attempt to close this StudioWindow. Returns whether closing was successful (since we may have work to finish); if it was not successful, then finishedClosingCallback
+will be called later with a final success value.</p>
+<p>Note: once the StudioWindow is closed, it will no longer route commands.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HandleClosing(Action&lt;bool&gt; finishedClosingCallback)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">finishedClosingCallback</span></td>
+        <td><p>A callback to be called asynchronously if we were not able to close immediately.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>Whether closing was successful.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_HandleContainerClosed_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.HandleContainerClosed*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_HandleContainerClosed" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.HandleContainerClosed">HandleContainerClosed()</h4>
+  <div class="markdown level1 summary"><p>Called when this object&apos;s container has closed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void HandleContainerClosed()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_InitializeComponent_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.InitializeComponent*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_InitializeComponent" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.InitializeComponent">InitializeComponent()</h4>
+  <div class="markdown level1 summary"><p>InitializeComponent</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void InitializeComponent()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_OnApplyTemplate_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.OnApplyTemplate*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_OnApplyTemplate" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.OnApplyTemplate">OnApplyTemplate()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnApplyTemplate()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Windows.FrameworkElement.OnApplyTemplate()</span></div>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_OnImportsSatisfied_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.OnImportsSatisfied*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_OnImportsSatisfied" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.OnImportsSatisfied">OnImportsSatisfied()</h4>
+  <div class="markdown level1 summary"><p>This method is called when the composition system has determined that all of the Imports of this instance have been satisfied.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void OnImportsSatisfied()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_OnLostKeyboardFocus_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.OnLostKeyboardFocus*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_OnLostKeyboardFocus_System_Windows_Input_KeyboardFocusChangedEventArgs_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.OnLostKeyboardFocus(System.Windows.Input.KeyboardFocusChangedEventArgs)">OnLostKeyboardFocus(KeyboardFocusChangedEventArgs)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnLostKeyboardFocus(KeyboardFocusChangedEventArgs e)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.input.keyboardfocuschangedeventargs">KeyboardFocusChangedEventArgs</a></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Windows.UIElement.OnLostKeyboardFocus(System.Windows.Input.KeyboardFocusChangedEventArgs)</span></div>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_OnModalWindowClosed_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.OnModalWindowClosed*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_OnModalWindowClosed" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.OnModalWindowClosed">OnModalWindowClosed()</h4>
+  <div class="markdown level1 summary"><p>Invokes the ModalWindowClosed event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnModalWindowClosed()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_OnModalWindowOpened_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.OnModalWindowOpened*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_OnModalWindowOpened" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.OnModalWindowOpened">OnModalWindowOpened()</h4>
+  <div class="markdown level1 summary"><p>Invokes the ModalWindowOpened event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnModalWindowOpened()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_ResetWorkspace_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.ResetWorkspace*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_ResetWorkspace" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.ResetWorkspace">ResetWorkspace()</h4>
+  <div class="markdown level1 summary"><p>Reset the workspace.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResetWorkspace()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Restricted_Shell_StudioWindow_SetDockingLayoutFromProject_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.SetDockingLayoutFromProject*"></a>
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_SetDockingLayoutFromProject_NationalInstruments_SourceModel_Envoys_Project_System_Boolean_" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.SetDockingLayoutFromProject(NationalInstruments.SourceModel.Envoys.Project,System.Boolean)">SetDockingLayoutFromProject(Project, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Attempts to set the window&apos;s docking layout using the given project</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetDockingLayoutFromProject(Project project, bool hideFloatingWindows)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Project.html">Project</a></td>
+        <td><span class="parametername">project</span></td>
+        <td><p>A project</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">hideFloatingWindows</span></td>
+        <td><p>Whether the floating windows should be hidden</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="events">Events
+  </h3>
+  
+  
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_ModalWindowClosedEvent" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.ModalWindowClosedEvent">ModalWindowClosedEvent</h4>
+  <div class="markdown level1 summary"><p>Occurs when a modal window has been closed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler ModalWindowClosedEvent</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler">EventHandler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_ModalWindowOpenedEvent" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.ModalWindowOpenedEvent">ModalWindowOpenedEvent</h4>
+  <div class="markdown level1 summary"><p>Occurs when a modal window is about to be opened.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler ModalWindowOpenedEvent</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler">EventHandler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_Restricted_Shell_StudioWindow_PropertyChanged" data-uid="NationalInstruments.Restricted.Shell.StudioWindow.PropertyChanged">PropertyChanged</h4>
+  <div class="markdown level1 summary"><p>Occurs when a propty on the StudioWinow changes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event PropertyChangedEventHandler PropertyChanged</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.componentmodel.propertychangedeventhandler">PropertyChangedEventHandler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.media.animation.ianimatable">System.Windows.Media.Animation.IAnimatable</a>
+  </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.iframeworkinputelement">System.Windows.IFrameworkInputElement</a>
+  </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.iinputelement">System.Windows.IInputElement</a>
+  </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.componentmodel.isupportinitialize">System.ComponentModel.ISupportInitialize</a>
+  </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.markup.iqueryambient">System.Windows.Markup.IQueryAmbient</a>
+  </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.markup.iaddchild">System.Windows.Markup.IAddChild</a>
+  </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">System.ComponentModel.INotifyPropertyChanged</a>
+  </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.markup.icomponentconnector">System.Windows.Markup.IComponentConnector</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerExtensions.html#NationalInstruments_Design_DesignerExtensions_GetHost_System_Windows_DependencyObject_">DesignerExtensions.GetHost(DependencyObject)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerExtensions.html#NationalInstruments_Design_DesignerExtensions_GetEditSite_System_Windows_DependencyObject_">DesignerExtensions.GetEditSite(DependencyObject)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerExtensions.html#NationalInstruments_Design_DesignerExtensions_GetDocumentManager_System_Windows_DependencyObject_">DesignerExtensions.GetDocumentManager(DependencyObject)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerUIHelpers.html#NationalInstruments_Design_DesignerUIHelpers_PlatformRecordMouseEvent_System_Windows_FrameworkElement_System_Windows_Input_MouseEventArgs_">DesignerUIHelpers.PlatformRecordMouseEvent(FrameworkElement, MouseEventArgs)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerUIHelpers.html#NationalInstruments_Design_DesignerUIHelpers_PlatformFocus_System_Windows_UIElement_">DesignerUIHelpers.PlatformFocus(UIElement)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Design.DesignerUIHelpers.html#NationalInstruments_Design_DesignerUIHelpers_SetForceCursor_System_Windows_FrameworkElement_System_Boolean_">DesignerUIHelpers.SetForceCursor(FrameworkElement, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Shell.ShellDocumentCommandHelpers.html#NationalInstruments_Shell_ShellDocumentCommandHelpers_AddInputBinding_System_Windows_FrameworkElement_NationalInstruments_Core_ICommandEx_NationalInstruments_Composition_ICompositionHost_">ShellDocumentCommandHelpers.AddInputBinding(FrameworkElement, ICommandEx, ICompositionHost)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Shell.ShellDocumentCommandHelpers.html#NationalInstruments_Shell_ShellDocumentCommandHelpers_AddInputBinding_System_Windows_FrameworkElement_System_Windows_Input_InputBinding_NationalInstruments_Composition_ICompositionHost_">ShellDocumentCommandHelpers.AddInputBinding(FrameworkElement, InputBinding, ICompositionHost)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

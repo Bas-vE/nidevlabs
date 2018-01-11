@@ -1,0 +1,430 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ExceptionHelper
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ExceptionHelper
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.Core.ExceptionHelper">
+  
+  
+  <h1 id="NationalInstruments_Core_ExceptionHelper" data-uid="NationalInstruments.Core.ExceptionHelper" class="text-break">Class ExceptionHelper
+  </h1>
+  <div class="markdown level0 summary"><p>Helpers for dealing with exceptions.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">ExceptionHelper</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="../pf/NationalInstruments.Core.html">NationalInstruments.Core</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.Core.dll</h6>
+  <h5 id="NationalInstruments_Core_ExceptionHelper_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class ExceptionHelper</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_Core_ExceptionHelper_CatchGeneralExceptions_" data-uid="NationalInstruments.Core.ExceptionHelper.CatchGeneralExceptions*"></a>
+  <h4 id="NationalInstruments_Core_ExceptionHelper_CatchGeneralExceptions" data-uid="NationalInstruments.Core.ExceptionHelper.CatchGeneralExceptions">CatchGeneralExceptions</h4>
+  <div class="markdown level1 summary"><p>Do not use this property directly, use <a class="xref" href="NationalInstruments.Core.ExceptionHelper.html#NationalInstruments_Core_ExceptionHelper_ShouldExceptionBeCaught_System_Exception_">ShouldExceptionBeCaught(Exception)</a>.</p>
+<p>Determines if general exception handlers should be in the code paths of execution.  This is typically
+done for all products when not under a debugger. This lets us of inform users of internal errors in a more
+graceful manner while giving developers a good debug experience.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool CatchGeneralExceptions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_Core_ExceptionHelper_GetInnermostException_" data-uid="NationalInstruments.Core.ExceptionHelper.GetInnermostException*"></a>
+  <h4 id="NationalInstruments_Core_ExceptionHelper_GetInnermostException_System_Exception_" data-uid="NationalInstruments.Core.ExceptionHelper.GetInnermostException(System.Exception)">GetInnermostException(Exception)</h4>
+  <div class="markdown level1 summary"><p>Given an exception, attempt to find most relevant inner exception.
+Digs through CompositionExceptions/InnerExceptions to try and find source.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Exception GetInnermostException(Exception exception)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.exception">Exception</a></td>
+        <td><span class="parametername">exception</span></td>
+        <td><p>exception in</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.exception">Exception</a></td>
+        <td><p>exception out</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ExceptionHelper_IsProcessSharingAccessViolationExecption_" data-uid="NationalInstruments.Core.ExceptionHelper.IsProcessSharingAccessViolationExecption*"></a>
+  <h4 id="NationalInstruments_Core_ExceptionHelper_IsProcessSharingAccessViolationExecption_System_IO_IOException_" data-uid="NationalInstruments.Core.ExceptionHelper.IsProcessSharingAccessViolationExecption(System.IO.IOException)">IsProcessSharingAccessViolationExecption(IOException)</h4>
+  <div class="markdown level1 summary"><p>Checks whether the <code data-dev-comment-type="paramref" class="paramref">ioException</code> represents an access violation where this or another
+process holds a handle to the file being accessed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsProcessSharingAccessViolationExecption(IOException ioException)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.ioexception">IOException</a></td>
+        <td><span class="parametername">ioException</span></td>
+        <td><p>The <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.ioexception">IOException</a> caught from the file operation to check.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if the <code data-dev-comment-type="paramref" class="paramref">ioException</code> was an access violation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ExceptionHelper_RecordUnhandledThreadException_" data-uid="NationalInstruments.Core.ExceptionHelper.RecordUnhandledThreadException*"></a>
+  <h4 id="NationalInstruments_Core_ExceptionHelper_RecordUnhandledThreadException_System_Exception_" data-uid="NationalInstruments.Core.ExceptionHelper.RecordUnhandledThreadException(System.Exception)">RecordUnhandledThreadException(Exception)</h4>
+  <div class="markdown level1 summary"><p>Called by thread methods when an unhandled exception is caught</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RecordUnhandledThreadException(Exception unhandledException)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.exception">Exception</a></td>
+        <td><span class="parametername">unhandledException</span></td>
+        <td><p>The unhandled exception</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ExceptionHelper_RegisterFilterForUncatchableException_" data-uid="NationalInstruments.Core.ExceptionHelper.RegisterFilterForUncatchableException*"></a>
+  <h4 id="NationalInstruments_Core_ExceptionHelper_RegisterFilterForUncatchableException_System_Predicate_System_Exception__" data-uid="NationalInstruments.Core.ExceptionHelper.RegisterFilterForUncatchableException(System.Predicate{System.Exception})">RegisterFilterForUncatchableException(Predicate&lt;Exception&gt;)</h4>
+  <div class="markdown level1 summary"><p>Provide a plugin mechanism to register a filter to determine whether an exception type is catchable.
+Exception types that have to be registered may not be available to this code at compile time.
+But, production code may need to filter those type of exceptions.  Examples are testing assert fail exceptions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RegisterFilterForUncatchableException(Predicate&lt;Exception&gt; isExceptionTypeUncatchable)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Predicate</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.exception">Exception</a>&gt;</td>
+        <td><span class="parametername">isExceptionTypeUncatchable</span></td>
+        <td><p>return true if exception should be uncatchable</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ExceptionHelper_ShouldExceptionBeCaught_" data-uid="NationalInstruments.Core.ExceptionHelper.ShouldExceptionBeCaught*"></a>
+  <h4 id="NationalInstruments_Core_ExceptionHelper_ShouldExceptionBeCaught_System_Exception_" data-uid="NationalInstruments.Core.ExceptionHelper.ShouldExceptionBeCaught(System.Exception)">ShouldExceptionBeCaught(Exception)</h4>
+  <div class="markdown level1 summary"><p>Intended for use as the when predicate of a general-exception catch clause. Determines
+if the Exception should be caught, in particular, avoids catching exceptions which need special treatment
+like ThreadAbortException and exceptions that are dynamically registered, such as AssertFailedException.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ShouldExceptionBeCaught(Exception generalException)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.exception">Exception</a></td>
+        <td><span class="parametername">generalException</span></td>
+        <td><p>Exception to consider catching</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>true if the exception should be caught by the calling catch clause, false if not</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ExceptionHelper_ShouldUnhandledThreadExceptionBeCaught_" data-uid="NationalInstruments.Core.ExceptionHelper.ShouldUnhandledThreadExceptionBeCaught*"></a>
+  <h4 id="NationalInstruments_Core_ExceptionHelper_ShouldUnhandledThreadExceptionBeCaught_System_Exception_" data-uid="NationalInstruments.Core.ExceptionHelper.ShouldUnhandledThreadExceptionBeCaught(System.Exception)">ShouldUnhandledThreadExceptionBeCaught(Exception)</h4>
+  <div class="markdown level1 summary"><p>Intended for use as the when predicate of a general-exception catch clause that is part of the main thread
+method which is catching the exception as a last resort to prevent and unhanded thread exception from being
+raised. Determines if the Exception should be caught, in particular, avoids catching exceptions which need
+special treatment like ThreadAbortException.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ShouldUnhandledThreadExceptionBeCaught(Exception generalException)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.exception">Exception</a></td>
+        <td><span class="parametername">generalException</span></td>
+        <td><p>Exception to consider catching</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>true if the exception should be caught by the calling catch clause, false if not</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

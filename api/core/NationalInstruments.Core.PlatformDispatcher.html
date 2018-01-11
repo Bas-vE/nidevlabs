@@ -1,0 +1,1752 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class PlatformDispatcher
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class PlatformDispatcher
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.Core.PlatformDispatcher">
+  
+  
+  <h1 id="NationalInstruments_Core_PlatformDispatcher" data-uid="NationalInstruments.Core.PlatformDispatcher" class="text-break">Class PlatformDispatcher
+  </h1>
+  <div class="markdown level0 summary"><p>Top level abstraction for a thread dispatcher on the platform.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">PlatformDispatcher</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="../pf/NationalInstruments.Core.html">NationalInstruments.Core</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.Core.dll</h6>
+  <h5 id="NationalInstruments_Core_PlatformDispatcher_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class PlatformDispatcher</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="NationalInstruments_Core_PlatformDispatcher_EmptyDispatcher" data-uid="NationalInstruments.Core.PlatformDispatcher.EmptyDispatcher">EmptyDispatcher</h4>
+  <div class="markdown level1 summary"><p>The instance of the null dispatcher (only capable of synchronously invoking)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly PlatformDispatcher EmptyDispatcher</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformDispatcher.html">PlatformDispatcher</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_Core_PlatformDispatcher_Current_" data-uid="NationalInstruments.Core.PlatformDispatcher.Current*"></a>
+  <h4 id="NationalInstruments_Core_PlatformDispatcher_Current" data-uid="NationalInstruments.Core.PlatformDispatcher.Current">Current</h4>
+  <div class="markdown level1 summary"><p>Return the dispatcher for the thread in which this is called</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PlatformDispatcher Current { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformDispatcher.html">PlatformDispatcher</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PlatformDispatcher_Dispatcher_" data-uid="NationalInstruments.Core.PlatformDispatcher.Dispatcher*"></a>
+  <h4 id="NationalInstruments_Core_PlatformDispatcher_Dispatcher" data-uid="NationalInstruments.Core.PlatformDispatcher.Dispatcher">Dispatcher</h4>
+  <div class="markdown level1 summary"><p>Windows-only facility for explicitly getting the underlying dispatcher.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dispatcher Dispatcher { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.threading.dispatcher">Dispatcher</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PlatformDispatcher_IsEmptyDispatcher_" data-uid="NationalInstruments.Core.PlatformDispatcher.IsEmptyDispatcher*"></a>
+  <h4 id="NationalInstruments_Core_PlatformDispatcher_IsEmptyDispatcher" data-uid="NationalInstruments.Core.PlatformDispatcher.IsEmptyDispatcher">IsEmptyDispatcher</h4>
+  <div class="markdown level1 summary"><p>Return true if this instance is equal to <a class="xref" href="NationalInstruments.Core.PlatformDispatcher.html#NationalInstruments_Core_PlatformDispatcher_EmptyDispatcher">EmptyDispatcher</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsEmptyDispatcher { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PlatformDispatcher_ManagedThreadId_" data-uid="NationalInstruments.Core.PlatformDispatcher.ManagedThreadId*"></a>
+  <h4 id="NationalInstruments_Core_PlatformDispatcher_ManagedThreadId" data-uid="NationalInstruments.Core.PlatformDispatcher.ManagedThreadId">ManagedThreadId</h4>
+  <div class="markdown level1 summary"><p>Return the thread Id for thread that this dispatcher lives in</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract int ManagedThreadId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PlatformDispatcher_UIDispatcher_" data-uid="NationalInstruments.Core.PlatformDispatcher.UIDispatcher*"></a>
+  <h4 id="NationalInstruments_Core_PlatformDispatcher_UIDispatcher" data-uid="NationalInstruments.Core.PlatformDispatcher.UIDispatcher">UIDispatcher</h4>
+  <div class="markdown level1 summary"><p>Return the UI thread&apos;s dispatcher</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PlatformDispatcher UIDispatcher { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformDispatcher.html">PlatformDispatcher</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_Core_PlatformDispatcher_AsyncOperationAlwaysValid_" data-uid="NationalInstruments.Core.PlatformDispatcher.AsyncOperationAlwaysValid*"></a>
+  <h4 id="NationalInstruments_Core_PlatformDispatcher_AsyncOperationAlwaysValid" data-uid="NationalInstruments.Core.PlatformDispatcher.AsyncOperationAlwaysValid">AsyncOperationAlwaysValid()</h4>
+  <div class="markdown level1 summary"><p>A temporary method used to say a BeginInvoke is always valid. Any usages of this method should be temporary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool AsyncOperationAlwaysValid()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>Always returns true</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PlatformDispatcher_BeginInvoke_" data-uid="NationalInstruments.Core.PlatformDispatcher.BeginInvoke*"></a>
+  <h4 id="NationalInstruments_Core_PlatformDispatcher_BeginInvoke_NationalInstruments_Core_AsyncTaskPriority_NationalInstruments_Core_CheckAsyncOperationValid_System_Action_System_String_" data-uid="NationalInstruments.Core.PlatformDispatcher.BeginInvoke(NationalInstruments.Core.AsyncTaskPriority,NationalInstruments.Core.CheckAsyncOperationValid,System.Action,System.String)">BeginInvoke(AsyncTaskPriority, CheckAsyncOperationValid, Action, String)</h4>
+  <div class="markdown level1 summary"><p>Call action on main thread</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BeginInvoke(AsyncTaskPriority priority, CheckAsyncOperationValid isValid, Action action, string description = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.AsyncTaskPriority.html">AsyncTaskPriority</a></td>
+        <td><span class="parametername">priority</span></td>
+        <td><p>The priority of the invoke on the dispatcher thread.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.CheckAsyncOperationValid.html">CheckAsyncOperationValid</a></td>
+        <td><span class="parametername">isValid</span></td>
+        <td><p>Function called to determine if the actual action is still valid to be run.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td><span class="parametername">action</span></td>
+        <td><p>Action to call</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>A debugging description which explains the purpose of the BeginInvoke</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PlatformDispatcher_BeginInvoke_" data-uid="NationalInstruments.Core.PlatformDispatcher.BeginInvoke*"></a>
+  <h4 id="NationalInstruments_Core_PlatformDispatcher_BeginInvoke_NationalInstruments_Core_CheckAsyncOperationValid_System_Action_System_String_" data-uid="NationalInstruments.Core.PlatformDispatcher.BeginInvoke(NationalInstruments.Core.CheckAsyncOperationValid,System.Action,System.String)">BeginInvoke(CheckAsyncOperationValid, Action, String)</h4>
+  <div class="markdown level1 summary"><p>Call action on main thread</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BeginInvoke(CheckAsyncOperationValid isValid, Action action, string description = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.CheckAsyncOperationValid.html">CheckAsyncOperationValid</a></td>
+        <td><span class="parametername">isValid</span></td>
+        <td><p>Function called to determine if the actual action is still valid to be run.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td><span class="parametername">action</span></td>
+        <td><p>Action to call</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>A debugging description which explains the purpose of the BeginInvoke</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PlatformDispatcher_BeginInvoke_" data-uid="NationalInstruments.Core.PlatformDispatcher.BeginInvoke*"></a>
+  <h4 id="NationalInstruments_Core_PlatformDispatcher_BeginInvoke_NationalInstruments_Core_PlatformDispatcherPriority_NationalInstruments_Core_CheckAsyncOperationValid_System_Action_System_String_" data-uid="NationalInstruments.Core.PlatformDispatcher.BeginInvoke(NationalInstruments.Core.PlatformDispatcherPriority,NationalInstruments.Core.CheckAsyncOperationValid,System.Action,System.String)">BeginInvoke(PlatformDispatcherPriority, CheckAsyncOperationValid, Action, String)</h4>
+  <div class="markdown level1 summary"><p>Call action on main thread</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void BeginInvoke(PlatformDispatcherPriority priority, CheckAsyncOperationValid isValid, Action action, string description = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformDispatcherPriority.html">PlatformDispatcherPriority</a></td>
+        <td><span class="parametername">priority</span></td>
+        <td><p>The priority of the invoke on the dispatcher thread.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.CheckAsyncOperationValid.html">CheckAsyncOperationValid</a></td>
+        <td><span class="parametername">isValid</span></td>
+        <td><p>Function called to determine if the actual action is still valid to be run.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td><span class="parametername">action</span></td>
+        <td><p>Action to call</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>A debugging description which explains the purpose of the BeginInvoke</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PlatformDispatcher_BeginInvokeIfNecessary_" data-uid="NationalInstruments.Core.PlatformDispatcher.BeginInvokeIfNecessary*"></a>
+  <h4 id="NationalInstruments_Core_PlatformDispatcher_BeginInvokeIfNecessary_NationalInstruments_Core_AsyncTaskPriority_NationalInstruments_Core_CheckAsyncOperationValid_System_Action_System_String_" data-uid="NationalInstruments.Core.PlatformDispatcher.BeginInvokeIfNecessary(NationalInstruments.Core.AsyncTaskPriority,NationalInstruments.Core.CheckAsyncOperationValid,System.Action,System.String)">BeginInvokeIfNecessary(AsyncTaskPriority, CheckAsyncOperationValid, Action, String)</h4>
+  <div class="markdown level1 summary"><p>Call the method immediately if the dispatcher has access to the calling thread. Otherwise, BeginInvoke the action.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void BeginInvokeIfNecessary(AsyncTaskPriority priority, CheckAsyncOperationValid isValid, Action action, string description = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.AsyncTaskPriority.html">AsyncTaskPriority</a></td>
+        <td><span class="parametername">priority</span></td>
+        <td><p>The priority of the invoke on the dispatcher thread.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.CheckAsyncOperationValid.html">CheckAsyncOperationValid</a></td>
+        <td><span class="parametername">isValid</span></td>
+        <td><p>Function called to determine if the actual action is still valid to be run.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td><span class="parametername">action</span></td>
+        <td><p>Action to call</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>A debugging description which explains the purpose of the BeginInvoke</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PlatformDispatcher_BeginInvokeIfNecessary_" data-uid="NationalInstruments.Core.PlatformDispatcher.BeginInvokeIfNecessary*"></a>
+  <h4 id="NationalInstruments_Core_PlatformDispatcher_BeginInvokeIfNecessary_NationalInstruments_Core_CheckAsyncOperationValid_System_Action_System_String_" data-uid="NationalInstruments.Core.PlatformDispatcher.BeginInvokeIfNecessary(NationalInstruments.Core.CheckAsyncOperationValid,System.Action,System.String)">BeginInvokeIfNecessary(CheckAsyncOperationValid, Action, String)</h4>
+  <div class="markdown level1 summary"><p>Call the method immediately if the dispatcher has access to the calling thread. Otherwise, BeginInvoke the action.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void BeginInvokeIfNecessary(CheckAsyncOperationValid isValid, Action action, string description = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.CheckAsyncOperationValid.html">CheckAsyncOperationValid</a></td>
+        <td><span class="parametername">isValid</span></td>
+        <td><p>Function called to determine if the actual action is still valid to be run.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td><span class="parametername">action</span></td>
+        <td><p>Action to call</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>A debugging description which explains the purpose of the BeginInvoke</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PlatformDispatcher_BeginInvokeIfNecessary_" data-uid="NationalInstruments.Core.PlatformDispatcher.BeginInvokeIfNecessary*"></a>
+  <h4 id="NationalInstruments_Core_PlatformDispatcher_BeginInvokeIfNecessary_NationalInstruments_Core_PlatformDispatcherPriority_NationalInstruments_Core_CheckAsyncOperationValid_System_Action_System_String_" data-uid="NationalInstruments.Core.PlatformDispatcher.BeginInvokeIfNecessary(NationalInstruments.Core.PlatformDispatcherPriority,NationalInstruments.Core.CheckAsyncOperationValid,System.Action,System.String)">BeginInvokeIfNecessary(PlatformDispatcherPriority, CheckAsyncOperationValid, Action, String)</h4>
+  <div class="markdown level1 summary"><p>Call the method immediately if the dispatcher has access to the calling thread. Otherwise, BeginInvoke the action.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void BeginInvokeIfNecessary(PlatformDispatcherPriority priority, CheckAsyncOperationValid isValid, Action action, string description = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformDispatcherPriority.html">PlatformDispatcherPriority</a></td>
+        <td><span class="parametername">priority</span></td>
+        <td><p>The priority of the invoke on the dispatcher thread.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.CheckAsyncOperationValid.html">CheckAsyncOperationValid</a></td>
+        <td><span class="parametername">isValid</span></td>
+        <td><p>Function called to determine if the actual action is still valid to be run.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td><span class="parametername">action</span></td>
+        <td><p>Action to call</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>A debugging description which explains the purpose of the BeginInvoke</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PlatformDispatcher_CheckAccess_" data-uid="NationalInstruments.Core.PlatformDispatcher.CheckAccess*"></a>
+  <h4 id="NationalInstruments_Core_PlatformDispatcher_CheckAccess" data-uid="NationalInstruments.Core.PlatformDispatcher.CheckAccess">CheckAccess()</h4>
+  <div class="markdown level1 summary"><p>Return true if the current thread owns the dispatcher.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract bool CheckAccess()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if the calling thread is the thread associated with this dispatcher</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PlatformDispatcher_Create_" data-uid="NationalInstruments.Core.PlatformDispatcher.Create*"></a>
+  <h4 id="NationalInstruments_Core_PlatformDispatcher_Create_System_Windows_Threading_Dispatcher_" data-uid="NationalInstruments.Core.PlatformDispatcher.Create(System.Windows.Threading.Dispatcher)">Create(Dispatcher)</h4>
+  <div class="markdown level1 summary"><p>Factory method to create from a concrete <a class="xref" href="NationalInstruments.Core.PlatformDispatcher.html#NationalInstruments_Core_PlatformDispatcher_Dispatcher">Dispatcher</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PlatformDispatcher Create(Dispatcher dispatcher)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.threading.dispatcher">Dispatcher</a></td>
+        <td><span class="parametername">dispatcher</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformDispatcher.html">PlatformDispatcher</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PlatformDispatcher_Equals_" data-uid="NationalInstruments.Core.PlatformDispatcher.Equals*"></a>
+  <h4 id="NationalInstruments_Core_PlatformDispatcher_Equals_System_Object_" data-uid="NationalInstruments.Core.PlatformDispatcher.Equals(System.Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.Equals(System.Object)</span></div>
+  
+  
+  <a id="NationalInstruments_Core_PlatformDispatcher_GetHashCode_" data-uid="NationalInstruments.Core.PlatformDispatcher.GetHashCode*"></a>
+  <h4 id="NationalInstruments_Core_PlatformDispatcher_GetHashCode" data-uid="NationalInstruments.Core.PlatformDispatcher.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.GetHashCode()</span></div>
+  
+  
+  <a id="NationalInstruments_Core_PlatformDispatcher_Invoke_" data-uid="NationalInstruments.Core.PlatformDispatcher.Invoke*"></a>
+  <h4 id="NationalInstruments_Core_PlatformDispatcher_Invoke_NationalInstruments_Core_CheckAsyncOperationValid_System_Delegate_System_Object___" data-uid="NationalInstruments.Core.PlatformDispatcher.Invoke(NationalInstruments.Core.CheckAsyncOperationValid,System.Delegate,System.Object[])">Invoke(CheckAsyncOperationValid, Delegate, Object[])</h4>
+  <div class="markdown level1 summary"><p>Call action on main thread synchronously</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract object Invoke(CheckAsyncOperationValid isValid, Delegate method, params object[] args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.CheckAsyncOperationValid.html">CheckAsyncOperationValid</a></td>
+        <td><span class="parametername">isValid</span></td>
+        <td><p>Function called to determine if the actual action is still valid to be run.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.delegate">Delegate</a></td>
+        <td><span class="parametername">method</span></td>
+        <td><p>Method to invoke</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td><p>Arguments to pass to invoked method</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><p>Result of the call to method</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PlatformDispatcher_Invoke_" data-uid="NationalInstruments.Core.PlatformDispatcher.Invoke*"></a>
+  <h4 id="NationalInstruments_Core_PlatformDispatcher_Invoke_NationalInstruments_Core_PlatformDispatcherPriority_System_Action_System_String_" data-uid="NationalInstruments.Core.PlatformDispatcher.Invoke(NationalInstruments.Core.PlatformDispatcherPriority,System.Action,System.String)">Invoke(PlatformDispatcherPriority, Action, String)</h4>
+  <div class="markdown level1 summary"><p>Call action on main thread synchronously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void Invoke(PlatformDispatcherPriority priority, Action action, string description = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformDispatcherPriority.html">PlatformDispatcherPriority</a></td>
+        <td><span class="parametername">priority</span></td>
+        <td><p>The priority of the invoke on the dispatcher thread.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td><span class="parametername">action</span></td>
+        <td><p>Action to call</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>A debugging description which explains the purpose of the Invoke</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PlatformDispatcher_Invoke_" data-uid="NationalInstruments.Core.PlatformDispatcher.Invoke*"></a>
+  <h4 id="NationalInstruments_Core_PlatformDispatcher_Invoke_System_Action_System_String_" data-uid="NationalInstruments.Core.PlatformDispatcher.Invoke(System.Action,System.String)">Invoke(Action, String)</h4>
+  <div class="markdown level1 summary"><p>Call action on main thread synchronously. Returns null always due to cross platform issues.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void Invoke(Action action, string description = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td><span class="parametername">action</span></td>
+        <td><p>Action to call</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>A debugging description which explains the purpose of the Invoke</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PlatformDispatcher_Invoke_" data-uid="NationalInstruments.Core.PlatformDispatcher.Invoke*"></a>
+  <h4 id="NationalInstruments_Core_PlatformDispatcher_Invoke_System_Delegate_System_Object___" data-uid="NationalInstruments.Core.PlatformDispatcher.Invoke(System.Delegate,System.Object[])">Invoke(Delegate, Object[])</h4>
+  <div class="markdown level1 summary"><p>Call action on main thread synchronously</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Invoke(Delegate method, params object[] args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.delegate">Delegate</a></td>
+        <td><span class="parametername">method</span></td>
+        <td><p>Method to invoke</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td><p>Arguments to pass to invoked method</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PlatformDispatcher_InvokeAsync_" data-uid="NationalInstruments.Core.PlatformDispatcher.InvokeAsync*"></a>
+  <h4 id="NationalInstruments_Core_PlatformDispatcher_InvokeAsync_NationalInstruments_Core_AsyncTaskPriority_NationalInstruments_Core_CheckAsyncOperationValid_System_Action_System_Threading_CancellationToken_System_String_" data-uid="NationalInstruments.Core.PlatformDispatcher.InvokeAsync(NationalInstruments.Core.AsyncTaskPriority,NationalInstruments.Core.CheckAsyncOperationValid,System.Action,System.Threading.CancellationToken,System.String)">InvokeAsync(AsyncTaskPriority, CheckAsyncOperationValid, Action, CancellationToken, String)</h4>
+  <div class="markdown level1 summary"><p>Calls an action on this dispatcher&apos;s thread.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task InvokeAsync(AsyncTaskPriority priority, CheckAsyncOperationValid isValid, Action action, CancellationToken cancellationToken, string description = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.AsyncTaskPriority.html">AsyncTaskPriority</a></td>
+        <td><span class="parametername">priority</span></td>
+        <td><p>The priority of the invoke on the dispatcher thread.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.CheckAsyncOperationValid.html">CheckAsyncOperationValid</a></td>
+        <td><span class="parametername">isValid</span></td>
+        <td><p>Function called to determine if the actual action is still valid to be run.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td><span class="parametername">action</span></td>
+        <td><p>The <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action">Action</a> to be called on this dispatcher&apos;s thread.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a> that can be used to cancel the operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>A debugging description which explains the purpose of the BeginInvoke</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>A Task representing the work of invoking the action on this dispatcher&apos;s thread.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PlatformDispatcher_InvokeAsync_" data-uid="NationalInstruments.Core.PlatformDispatcher.InvokeAsync*"></a>
+  <h4 id="NationalInstruments_Core_PlatformDispatcher_InvokeAsync_NationalInstruments_Core_PlatformDispatcherPriority_NationalInstruments_Core_CheckAsyncOperationValid_System_Action_System_Threading_CancellationToken_System_String_" data-uid="NationalInstruments.Core.PlatformDispatcher.InvokeAsync(NationalInstruments.Core.PlatformDispatcherPriority,NationalInstruments.Core.CheckAsyncOperationValid,System.Action,System.Threading.CancellationToken,System.String)">InvokeAsync(PlatformDispatcherPriority, CheckAsyncOperationValid, Action, CancellationToken, String)</h4>
+  <div class="markdown level1 summary"><p>Calls an action on this dispatcher&apos;s thread.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract Task InvokeAsync(PlatformDispatcherPriority priority, CheckAsyncOperationValid isValid, Action action, CancellationToken cancellationToken, string description = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformDispatcherPriority.html">PlatformDispatcherPriority</a></td>
+        <td><span class="parametername">priority</span></td>
+        <td><p>The priority of the invoke on the dispatcher thread.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.CheckAsyncOperationValid.html">CheckAsyncOperationValid</a></td>
+        <td><span class="parametername">isValid</span></td>
+        <td><p>Function called to determine if the actual action is still valid to be run.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td><span class="parametername">action</span></td>
+        <td><p>The <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action">Action</a> to be called on this dispatcher&apos;s thread.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a> that can be used to cancel the operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>A debugging description which explains the purpose of the BeginInvoke</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>A Task representing the work of invoking the action on this dispatcher&apos;s thread.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PlatformDispatcher_InvokeAsync_" data-uid="NationalInstruments.Core.PlatformDispatcher.InvokeAsync*"></a>
+  <h4 id="NationalInstruments_Core_PlatformDispatcher_InvokeAsync__1_NationalInstruments_Core_AsyncTaskPriority_NationalInstruments_Core_CheckAsyncOperationValid_System_Func___0__System_Threading_CancellationToken_System_String_" data-uid="NationalInstruments.Core.PlatformDispatcher.InvokeAsync``1(NationalInstruments.Core.AsyncTaskPriority,NationalInstruments.Core.CheckAsyncOperationValid,System.Func{``0},System.Threading.CancellationToken,System.String)">InvokeAsync&lt;T&gt;(AsyncTaskPriority, CheckAsyncOperationValid, Func&lt;T&gt;, CancellationToken, String)</h4>
+  <div class="markdown level1 summary"><p>Calls a function on this dispatcher&apos;s thread.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;T&gt; InvokeAsync&lt;T&gt;(AsyncTaskPriority priority, CheckAsyncOperationValid isValid, Func&lt;T&gt; func, CancellationToken cancellationToken, string description = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.AsyncTaskPriority.html">AsyncTaskPriority</a></td>
+        <td><span class="parametername">priority</span></td>
+        <td><p>The priority of the invoke on the dispatcher thread.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.CheckAsyncOperationValid.html">CheckAsyncOperationValid</a></td>
+        <td><span class="parametername">isValid</span></td>
+        <td><p>Function called to determine if the actual action is still valid to be run.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T&gt;</td>
+        <td><span class="parametername">func</span></td>
+        <td><p>The <span class="xref">System.Func&lt;TResult&gt;</span> to be called on this dispatcher&apos;s thread.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a> that can be used to cancel the operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>A debugging description which explains the purpose of the BeginInvoke</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;T&gt;</td>
+        <td><p>A Task representing the work of invoking the function on this dispatcher&apos;s thread.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of the result of the invoked function.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PlatformDispatcher_InvokeAsync_" data-uid="NationalInstruments.Core.PlatformDispatcher.InvokeAsync*"></a>
+  <h4 id="NationalInstruments_Core_PlatformDispatcher_InvokeAsync__1_NationalInstruments_Core_PlatformDispatcherPriority_NationalInstruments_Core_CheckAsyncOperationValid_System_Func___0__System_Threading_CancellationToken_System_String_" data-uid="NationalInstruments.Core.PlatformDispatcher.InvokeAsync``1(NationalInstruments.Core.PlatformDispatcherPriority,NationalInstruments.Core.CheckAsyncOperationValid,System.Func{``0},System.Threading.CancellationToken,System.String)">InvokeAsync&lt;T&gt;(PlatformDispatcherPriority, CheckAsyncOperationValid, Func&lt;T&gt;, CancellationToken, String)</h4>
+  <div class="markdown level1 summary"><p>Calls a function on this dispatcher&apos;s thread.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract Task&lt;T&gt; InvokeAsync&lt;T&gt;(PlatformDispatcherPriority priority, CheckAsyncOperationValid isValid, Func&lt;T&gt; func, CancellationToken cancellationToken, string description = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformDispatcherPriority.html">PlatformDispatcherPriority</a></td>
+        <td><span class="parametername">priority</span></td>
+        <td><p>The priority of the invoke on the dispatcher thread.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.CheckAsyncOperationValid.html">CheckAsyncOperationValid</a></td>
+        <td><span class="parametername">isValid</span></td>
+        <td><p>Function called to determine if the actual action is still valid to be run.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T&gt;</td>
+        <td><span class="parametername">func</span></td>
+        <td><p>The <span class="xref">System.Func&lt;TResult&gt;</span> to be called on this dispatcher&apos;s thread.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a> that can be used to cancel the operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>A debugging description which explains the purpose of the BeginInvoke</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;T&gt;</td>
+        <td><p>A Task representing the work of invoking the function on this dispatcher&apos;s thread.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of the result of the invoked function.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PlatformDispatcher_InvokeIfNecessary_" data-uid="NationalInstruments.Core.PlatformDispatcher.InvokeIfNecessary*"></a>
+  <h4 id="NationalInstruments_Core_PlatformDispatcher_InvokeIfNecessary_NationalInstruments_Core_CheckAsyncOperationValid_System_Action_System_String_" data-uid="NationalInstruments.Core.PlatformDispatcher.InvokeIfNecessary(NationalInstruments.Core.CheckAsyncOperationValid,System.Action,System.String)">InvokeIfNecessary(CheckAsyncOperationValid, Action, String)</h4>
+  <div class="markdown level1 summary"><p>Call the method immediately if the dispatcher has access to the calling thread. Otherwise, Invoke the action.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void InvokeIfNecessary(CheckAsyncOperationValid isValid, Action action, string description = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.CheckAsyncOperationValid.html">CheckAsyncOperationValid</a></td>
+        <td><span class="parametername">isValid</span></td>
+        <td><p>Function called to determine if the actual action is still valid to be run.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td><span class="parametername">action</span></td>
+        <td><p>Action to invoke</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>A debugging description which explains the purpose of the Invoke</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PlatformDispatcher_InvokeIfNecessary_" data-uid="NationalInstruments.Core.PlatformDispatcher.InvokeIfNecessary*"></a>
+  <h4 id="NationalInstruments_Core_PlatformDispatcher_InvokeIfNecessary_NationalInstruments_Core_CheckAsyncOperationValid_System_Delegate_System_Object___" data-uid="NationalInstruments.Core.PlatformDispatcher.InvokeIfNecessary(NationalInstruments.Core.CheckAsyncOperationValid,System.Delegate,System.Object[])">InvokeIfNecessary(CheckAsyncOperationValid, Delegate, Object[])</h4>
+  <div class="markdown level1 summary"><p>Call the method immediately if the dispatcher has access to the calling thread. Otherwise, Invoke the action.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract object InvokeIfNecessary(CheckAsyncOperationValid isValid, Delegate method, params object[] args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.CheckAsyncOperationValid.html">CheckAsyncOperationValid</a></td>
+        <td><span class="parametername">isValid</span></td>
+        <td><p>Function called to determine if the actual action is still valid to be run.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.delegate">Delegate</a></td>
+        <td><span class="parametername">method</span></td>
+        <td><p>Method to invoke</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td><p>Arguments to pass to invoked method</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><p>Return value of given method</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PlatformDispatcher_InvokeIfNecessary_" data-uid="NationalInstruments.Core.PlatformDispatcher.InvokeIfNecessary*"></a>
+  <h4 id="NationalInstruments_Core_PlatformDispatcher_InvokeIfNecessary_NationalInstruments_Core_PlatformDispatcherPriority_System_Action_System_String_" data-uid="NationalInstruments.Core.PlatformDispatcher.InvokeIfNecessary(NationalInstruments.Core.PlatformDispatcherPriority,System.Action,System.String)">InvokeIfNecessary(PlatformDispatcherPriority, Action, String)</h4>
+  <div class="markdown level1 summary"><p>Call the method immediately if the dispatcher has access to the calling thread. Otherwise, Invoke the action.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void InvokeIfNecessary(PlatformDispatcherPriority priority, Action action, string description = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformDispatcherPriority.html">PlatformDispatcherPriority</a></td>
+        <td><span class="parametername">priority</span></td>
+        <td><p>The priority of the invoke on the dispatcher thread.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td><span class="parametername">action</span></td>
+        <td><p>Action to invoke</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>A debugging description which explains the purpose of the Invoke</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PlatformDispatcher_OnUnhandledException_" data-uid="NationalInstruments.Core.PlatformDispatcher.OnUnhandledException*"></a>
+  <h4 id="NationalInstruments_Core_PlatformDispatcher_OnUnhandledException_System_Object_NationalInstruments_Core_PlatformDispatcherUnhandledExceptionEventArgs_" data-uid="NationalInstruments.Core.PlatformDispatcher.OnUnhandledException(System.Object,NationalInstruments.Core.PlatformDispatcherUnhandledExceptionEventArgs)">OnUnhandledException(Object, PlatformDispatcherUnhandledExceptionEventArgs)</h4>
+  <div class="markdown level1 summary"><p>Raises the UnhandledException event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnUnhandledException(object sender, PlatformDispatcherUnhandledExceptionEventArgs args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">sender</span></td>
+        <td><p>Event sender</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformDispatcherUnhandledExceptionEventArgs.html">PlatformDispatcherUnhandledExceptionEventArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>Event args</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PlatformDispatcher_PushFrame_" data-uid="NationalInstruments.Core.PlatformDispatcher.PushFrame*"></a>
+  <h4 id="NationalInstruments_Core_PlatformDispatcher_PushFrame_System_Windows_Threading_DispatcherFrame_" data-uid="NationalInstruments.Core.PlatformDispatcher.PushFrame(System.Windows.Threading.DispatcherFrame)">PushFrame(DispatcherFrame)</h4>
+  <div class="markdown level1 summary"><p>Implement the Dispatcher.PushFrame method to process pending work items.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void PushFrame(DispatcherFrame frame)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.threading.dispatcherframe">DispatcherFrame</a></td>
+        <td><span class="parametername">frame</span></td>
+        <td><p>The frame</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="events">Events
+  </h3>
+  
+  
+  <h4 id="NationalInstruments_Core_PlatformDispatcher_UnhandledException" data-uid="NationalInstruments.Core.PlatformDispatcher.UnhandledException">UnhandledException</h4>
+  <div class="markdown level1 summary"><p>Raised when an unhandled exception occurs while doing an Invoke or BeginInvoke operation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;PlatformDispatcherUnhandledExceptionEventArgs&gt; UnhandledException</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="NationalInstruments.Core.PlatformDispatcherUnhandledExceptionEventArgs.html">PlatformDispatcherUnhandledExceptionEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="operators">Operators
+  </h3>
+  
+  
+  <a id="NationalInstruments_Core_PlatformDispatcher_op_Equality_" data-uid="NationalInstruments.Core.PlatformDispatcher.op_Equality*"></a>
+  <h4 id="NationalInstruments_Core_PlatformDispatcher_op_Equality_NationalInstruments_Core_PlatformDispatcher_NationalInstruments_Core_PlatformDispatcher_" data-uid="NationalInstruments.Core.PlatformDispatcher.op_Equality(NationalInstruments.Core.PlatformDispatcher,NationalInstruments.Core.PlatformDispatcher)">Equality(PlatformDispatcher, PlatformDispatcher)</h4>
+  <div class="markdown level1 summary"><p>Equals operator</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(PlatformDispatcher dispatcher, PlatformDispatcher dispatcher2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformDispatcher.html">PlatformDispatcher</a></td>
+        <td><span class="parametername">dispatcher</span></td>
+        <td><p>First dispatcher</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformDispatcher.html">PlatformDispatcher</a></td>
+        <td><span class="parametername">dispatcher2</span></td>
+        <td><p>Second dispatcher</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>Are Equal?</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PlatformDispatcher_op_Implicit_" data-uid="NationalInstruments.Core.PlatformDispatcher.op_Implicit*"></a>
+  <h4 id="NationalInstruments_Core_PlatformDispatcher_op_Implicit_NationalInstruments_Core_PlatformDispatcher__System_Windows_Threading_Dispatcher" data-uid="NationalInstruments.Core.PlatformDispatcher.op_Implicit(NationalInstruments.Core.PlatformDispatcher)~System.Windows.Threading.Dispatcher">Implicit(PlatformDispatcher to Dispatcher)</h4>
+  <div class="markdown level1 summary"><p>Implicit constructor PlatformDispatcher -&gt; Dispatcher</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator Dispatcher(PlatformDispatcher dispatcher)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformDispatcher.html">PlatformDispatcher</a></td>
+        <td><span class="parametername">dispatcher</span></td>
+        <td><p>PlatformDispatcher</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.threading.dispatcher">Dispatcher</a></td>
+        <td><p>Implicitly created Dispatcher</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PlatformDispatcher_op_Implicit_" data-uid="NationalInstruments.Core.PlatformDispatcher.op_Implicit*"></a>
+  <h4 id="NationalInstruments_Core_PlatformDispatcher_op_Implicit_System_Windows_Threading_Dispatcher__NationalInstruments_Core_PlatformDispatcher" data-uid="NationalInstruments.Core.PlatformDispatcher.op_Implicit(System.Windows.Threading.Dispatcher)~NationalInstruments.Core.PlatformDispatcher">Implicit(Dispatcher to PlatformDispatcher)</h4>
+  <div class="markdown level1 summary"><p>Implicit constructor Dispatcher -&gt; PlatformDispatcher</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator PlatformDispatcher(Dispatcher dispatcher)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.threading.dispatcher">Dispatcher</a></td>
+        <td><span class="parametername">dispatcher</span></td>
+        <td><p>Dispatcher</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformDispatcher.html">PlatformDispatcher</a></td>
+        <td><p>Implicitly created PlatformDispatcher</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PlatformDispatcher_op_Inequality_" data-uid="NationalInstruments.Core.PlatformDispatcher.op_Inequality*"></a>
+  <h4 id="NationalInstruments_Core_PlatformDispatcher_op_Inequality_NationalInstruments_Core_PlatformDispatcher_NationalInstruments_Core_PlatformDispatcher_" data-uid="NationalInstruments.Core.PlatformDispatcher.op_Inequality(NationalInstruments.Core.PlatformDispatcher,NationalInstruments.Core.PlatformDispatcher)">Inequality(PlatformDispatcher, PlatformDispatcher)</h4>
+  <div class="markdown level1 summary"><p>Not equals operator</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(PlatformDispatcher dispatcher, PlatformDispatcher dispatcher2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformDispatcher.html">PlatformDispatcher</a></td>
+        <td><span class="parametername">dispatcher</span></td>
+        <td><p>First dispatcher</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformDispatcher.html">PlatformDispatcher</a></td>
+        <td><span class="parametername">dispatcher2</span></td>
+        <td><p>Second dispatcher</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>Are not equal?</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_ToEnumerable__1___0_">EnumerableHelper.ToEnumerable&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_Repeat__1___0_System_Int32_">EnumerableHelper.Repeat&lt;T&gt;(T, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyNothing__1___0_">Verifier.VerifyNothing&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Func___0_System_Boolean__System_Action_System_String__System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Func___0_System_Boolean__System_Action_System_String_System_String__System_String_System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Boolean_System_Action_System_String__System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Boolean, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Boolean_System_Action_System_String_System_String__System_String_System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Boolean, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Func___0_System_Boolean__System_Action_System_String__System_String_">Verifier.Verify&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Func___0_System_Boolean__System_Action_System_String_System_String__System_String_System_String_">Verifier.Verify&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Boolean_System_Action_System_String__System_String_">Verifier.Verify&lt;T&gt;(T, Boolean, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Boolean_System_Action_System_String_System_String__System_String_System_String_">Verifier.Verify&lt;T&gt;(T, Boolean, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentIsNotNull__1___0_System_String_">Verifier.VerifyArgumentIsNotNull&lt;T&gt;(T, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyValueIsNotNull__1___0_System_String_">Verifier.VerifyValueIsNotNull&lt;T&gt;(T, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentNotReferenceEqualsTo_System_Object_System_Object_System_String_">Verifier.VerifyArgumentNotReferenceEqualsTo(Object, Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyValueNotReferenceEqualsTo_System_Object_System_Object_System_String_">Verifier.VerifyValueNotReferenceEqualsTo(Object, Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentIsOfType__1_System_Object_System_String_">Verifier.VerifyArgumentIsOfType&lt;T&gt;(Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyValueIsOfType__1_System_Object_System_String_">Verifier.VerifyValueIsOfType&lt;T&gt;(Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.AsyncHelpers.html#NationalInstruments_Core_AsyncHelpers_YieldWithPriority_NationalInstruments_Core_PlatformDispatcher_NationalInstruments_Core_PlatformDispatcherPriority_">AsyncHelpers.YieldWithPriority(PlatformDispatcher, PlatformDispatcherPriority)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.PlatformDispatcherHelpers.html#NationalInstruments_Core_PlatformDispatcherHelpers_PushFrameUntilComplete_NationalInstruments_Core_PlatformDispatcher_System_Threading_Tasks_Task_System_Threading_CancellationToken_">PlatformDispatcherHelpers.PushFrameUntilComplete(PlatformDispatcher, Task, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.PlatformDispatcherHelpers.html#NationalInstruments_Core_PlatformDispatcherHelpers_PushFrameUntilComplete_NationalInstruments_Core_PlatformDispatcher_System_Threading_Tasks_Task_System_Threading_CancellationToken_System_TimeSpan_">PlatformDispatcherHelpers.PushFrameUntilComplete(PlatformDispatcher, Task, CancellationToken, TimeSpan)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.PlatformDispatcherHelpers.html#NationalInstruments_Core_PlatformDispatcherHelpers_PushFrameUntilComplete_NationalInstruments_Core_PlatformDispatcher_System_Threading_Tasks_Task_System_Threading_CancellationToken_System_TimeSpan_System_TimeSpan_">PlatformDispatcherHelpers.PushFrameUntilComplete(PlatformDispatcher, Task, CancellationToken, TimeSpan, TimeSpan)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.PlatformDispatcherHelpers.html#NationalInstruments_Core_PlatformDispatcherHelpers_PushFrameUntilComplete__1_NationalInstruments_Core_PlatformDispatcher_System_Threading_Tasks_Task___0__System_Threading_CancellationToken___0__">PlatformDispatcherHelpers.PushFrameUntilComplete&lt;T&gt;(PlatformDispatcher, Task&lt;T&gt;, CancellationToken, out T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.PlatformDispatcherHelpers.html#NationalInstruments_Core_PlatformDispatcherHelpers_PushFrameUntilComplete__1_NationalInstruments_Core_PlatformDispatcher_System_Threading_Tasks_Task___0__System_Threading_CancellationToken_System_TimeSpan___0__">PlatformDispatcherHelpers.PushFrameUntilComplete&lt;T&gt;(PlatformDispatcher, Task&lt;T&gt;, CancellationToken, TimeSpan, out T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.PlatformDispatcherHelpers.html#NationalInstruments_Core_PlatformDispatcherHelpers_PushFrameUntilComplete__1_NationalInstruments_Core_PlatformDispatcher_System_Threading_Tasks_Task___0__System_Threading_CancellationToken_System_TimeSpan_System_TimeSpan_NationalInstruments_Core_PushFrameFlags___0__">PlatformDispatcherHelpers.PushFrameUntilComplete&lt;T&gt;(PlatformDispatcher, Task&lt;T&gt;, CancellationToken, TimeSpan, TimeSpan, PushFrameFlags, out T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.QueryServiceExtensions.html#NationalInstruments_Core_QueryServiceExtensions_QueryService__1_System_Object_">QueryServiceExtensions.QueryService&lt;T&gt;(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_FindClosestMatchingContainerForResource_System_Object_System_Func_System_Object_System_Globalization_CultureInfo_System_Object__System_Globalization_CultureInfo_">LocalizationHelpers.FindClosestMatchingContainerForResource(Object, Func&lt;Object, CultureInfo, Object&gt;, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_FindClosestMatchingContainerForResource_System_Object_System_Func_System_Object_System_Globalization_CultureInfo_System_Object__System_Globalization_CultureInfo_System_Func_System_Object_System_Object__">LocalizationHelpers.FindClosestMatchingContainerForResource(Object, Func&lt;Object, CultureInfo, Object&gt;, CultureInfo, Func&lt;Object, Object&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedEnumString__1___0_">LocalizationHelpers.GetLocalizedEnumString&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedString_System_Object_System_String_System_Globalization_CultureInfo_">LocalizationHelpers.GetLocalizedString(Object, String, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedString_System_Object_System_String_System_Boolean_System_Globalization_CultureInfo_">LocalizationHelpers.GetLocalizedString(Object, String, Boolean, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_SetPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_System_Object_">DynamicPropertyExtensions.SetPropertyValue(Object, PropertySymbol, Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.GetPropertyValue(Object, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_ClearPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.ClearPropertyValue(Object, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_IsPropertySet_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.IsPropertySet(Object, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetAllSetProperties_System_Object_">DynamicPropertyExtensions.GetAllSetProperties(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetAllProperties_System_Object_">DynamicPropertyExtensions.GetAllProperties(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

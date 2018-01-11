@@ -1,0 +1,2344 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class CompositionHost
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class CompositionHost
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.Composition.CompositionHost">
+  
+  
+  <h1 id="NationalInstruments_Composition_CompositionHost" data-uid="NationalInstruments.Composition.CompositionHost" class="text-break">Class CompositionHost
+  </h1>
+  <div class="markdown level0 summary"><p>Provides the standard implementation of the ICompositionHost interface for this next gen system.
+This implementation is suitable for use in your application as well as for unit tests.
+Refer to the documentation on the next-gen plug-in system for more information on the
+role of the composition host.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.threading.dispatcherobject">DispatcherObject</a></div>
+    <div class="level2"><span class="xref">CompositionHost</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="NationalInstruments.Composition.ICompositionHost.html">ICompositionHost</a></div>
+    <div><a class="xref" href="NationalInstruments.Composition.IDynamicCompositionHost.html">IDynamicCompositionHost</a></div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.threading.dispatcherobject.dispatcher#System_Windows_Threading_DispatcherObject_Dispatcher">DispatcherObject.Dispatcher</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.Composition.html">NationalInstruments.Composition</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.Core.dll</h6>
+  <h5 id="NationalInstruments_Composition_CompositionHost_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Export(typeof (ICompositionHost))]
+[Export(typeof (IDynamicCompositionHost))]
+public sealed class CompositionHost : DispatcherObject, ICompositionHost, IDynamicCompositionHost, IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost__ctor_" data-uid="NationalInstruments.Composition.CompositionHost.#ctor*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost__ctor" data-uid="NationalInstruments.Composition.CompositionHost.#ctor">CompositionHost()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the CompositionHost class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CompositionHost()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_AppComponentLocation_" data-uid="NationalInstruments.Composition.CompositionHost.AppComponentLocation*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_AppComponentLocation" data-uid="NationalInstruments.Composition.CompositionHost.AppComponentLocation">AppComponentLocation</h4>
+  <div class="markdown level1 summary"><p>Gets the component locations for the .exe directory.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;ComponentLocation&gt; AppComponentLocation { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.Composition.ComponentLocation.html">ComponentLocation</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_DebugId_" data-uid="NationalInstruments.Composition.CompositionHost.DebugId*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_DebugId" data-uid="NationalInstruments.Composition.CompositionHost.DebugId">DebugId</h4>
+  <div class="markdown level1 summary"><p>Provides unique Id that is useful for debug purposes</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int DebugId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_DefaultComponentLocations_" data-uid="NationalInstruments.Composition.CompositionHost.DefaultComponentLocations*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_DefaultComponentLocations" data-uid="NationalInstruments.Composition.CompositionHost.DefaultComponentLocations">DefaultComponentLocations</h4>
+  <div class="markdown level1 summary"><p>Gets the default component locations.  This is what is set by the first
+host initialization.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;ComponentLocation&gt; DefaultComponentLocations { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.Composition.ComponentLocation.html">ComponentLocation</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_AddDynamicCompositionCacheExport_" data-uid="NationalInstruments.Composition.CompositionHost.AddDynamicCompositionCacheExport*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_AddDynamicCompositionCacheExport_System_String_System_String_System_String_System_String_System_Collections_Generic_IDictionary_System_String_System_Object__" data-uid="NationalInstruments.Composition.CompositionHost.AddDynamicCompositionCacheExport(System.String,System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.Object})">AddDynamicCompositionCacheExport(String, String, String, String, IDictionary&lt;String, Object&gt;)</h4>
+  <div class="markdown level1 summary"><p>Creates a cached export with the information provided and adds it to the <see cref="!:DynamicCompositionCacheManager"></see>. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddDynamicCompositionCacheExport(string dynamicCompositionType, string filePath, string providerId, string exportType, IDictionary&lt;string, object&gt; metadata)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">dynamicCompositionType</span></td>
+        <td><p>The full name of the dynamic composition type.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">filePath</span></td>
+        <td><p>The file path where the metadata is stored.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">providerId</span></td>
+        <td><p>The provider id used to identify the type of export value we want.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">exportType</span></td>
+        <td><p>The export type used to register the metadata with the host.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>&gt;</td>
+        <td><span class="parametername">metadata</span></td>
+        <td><p>The metadata for the export.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_AddOrReplaceDynamicCompositionCacheExport_" data-uid="NationalInstruments.Composition.CompositionHost.AddOrReplaceDynamicCompositionCacheExport*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_AddOrReplaceDynamicCompositionCacheExport_System_String_System_String_System_String_System_String_System_Collections_Generic_IDictionary_System_String_System_Object__System_String_" data-uid="NationalInstruments.Composition.CompositionHost.AddOrReplaceDynamicCompositionCacheExport(System.String,System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.Object},System.String)">AddOrReplaceDynamicCompositionCacheExport(String, String, String, String, IDictionary&lt;String, Object&gt;, String)</h4>
+  <div class="markdown level1 summary"><p>Creates a cached export with the information provided and adds it to the <see cref="!:DynamicCompositionCacheManager"></see>. 
+If a cached export is found with the same value for the metadata identifier key, then the export is replaced.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddOrReplaceDynamicCompositionCacheExport(string dynamicCompositionType, string filePath, string providerId, string exportType, IDictionary&lt;string, object&gt; metadata, string metadataIdentifier)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">dynamicCompositionType</span></td>
+        <td><p>The full name of the dynamic composition type.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">filePath</span></td>
+        <td><p>The file path where the metadata is stored.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">providerId</span></td>
+        <td><p>The provider id used to identify the type of export value we want.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">exportType</span></td>
+        <td><p>The export type used to register the metadata with the host.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>&gt;</td>
+        <td><span class="parametername">metadata</span></td>
+        <td><p>The metadata for the export.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">metadataIdentifier</span></td>
+        <td><p>The metadata key that will be used to check previous cached exports for a unique identifier.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Composition_CompositionHost_AddOrReplaceDynamicCompositionCacheExport_System_String_System_String_System_String_System_String_System_Collections_Generic_IDictionary_System_String_System_Object__System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If your metadata has an attribute like &quot;UniqueID&quot;, this would be the metadata identifier.
+Then, we would use the value found for UniqueID and compare it to the previous cached exports.
+If a cached export with the same value for &quot;UniqueID&quot; is found, then that cached export would be replaced by this one.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_Dispose_" data-uid="NationalInstruments.Composition.CompositionHost.Dispose*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_Dispose" data-uid="NationalInstruments.Composition.CompositionHost.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"><p>Called to Dispose the composition host</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_Equals_" data-uid="NationalInstruments.Composition.CompositionHost.Equals*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_Equals_System_Object_" data-uid="NationalInstruments.Composition.CompositionHost.Equals(System.Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.Equals(System.Object)</span></div>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_GetHashCode_" data-uid="NationalInstruments.Composition.CompositionHost.GetHashCode*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_GetHashCode" data-uid="NationalInstruments.Composition.CompositionHost.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.GetHashCode()</span></div>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_InitializeEmpty_" data-uid="NationalInstruments.Composition.CompositionHost.InitializeEmpty*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_InitializeEmpty" data-uid="NationalInstruments.Composition.CompositionHost.InitializeEmpty">InitializeEmpty()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new empty composition host</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ICompositionHost InitializeEmpty()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Composition.ICompositionHost.html">ICompositionHost</a></td>
+        <td><p>The newly created composition host</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_InitializeFromAssemblies_" data-uid="NationalInstruments.Composition.CompositionHost.InitializeFromAssemblies*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_InitializeFromAssemblies_NationalInstruments_Composition_ICompositionFilter_" data-uid="NationalInstruments.Composition.CompositionHost.InitializeFromAssemblies(NationalInstruments.Composition.ICompositionFilter)">InitializeFromAssemblies(ICompositionFilter)</h4>
+  <div class="markdown level1 summary"><p>Initializes the new.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ICompositionHost InitializeFromAssemblies(ICompositionFilter filter)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Composition.ICompositionFilter.html">ICompositionFilter</a></td>
+        <td><span class="parametername">filter</span></td>
+        <td><p>Filter.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Composition.ICompositionHost.html">ICompositionHost</a></td>
+        <td><p>The new.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_InitializeNewHost_" data-uid="NationalInstruments.Composition.CompositionHost.InitializeNewHost*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_InitializeNewHost" data-uid="NationalInstruments.Composition.CompositionHost.InitializeNewHost">InitializeNewHost()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new composition host using the standard component directory</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ICompositionHost InitializeNewHost()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Composition.ICompositionHost.html">ICompositionHost</a></td>
+        <td><p>The newly created composition host</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_InitializeNewHost_" data-uid="NationalInstruments.Composition.CompositionHost.InitializeNewHost*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_InitializeNewHost_NationalInstruments_Composition_ComponentLocation_" data-uid="NationalInstruments.Composition.CompositionHost.InitializeNewHost(NationalInstruments.Composition.ComponentLocation)">InitializeNewHost(ComponentLocation)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new composition host loading the components from the provided component directory</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ICompositionHost InitializeNewHost(ComponentLocation componentPath)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Composition.ComponentLocation.html">ComponentLocation</a></td>
+        <td><span class="parametername">componentPath</span></td>
+        <td><p>The full path to the directory to look in for composition assemblies</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Composition.ICompositionHost.html">ICompositionHost</a></td>
+        <td><p>The newly created composition host</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_InitializeNewHost_" data-uid="NationalInstruments.Composition.CompositionHost.InitializeNewHost*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_InitializeNewHost_NationalInstruments_Composition_ICompositionFilter_" data-uid="NationalInstruments.Composition.CompositionHost.InitializeNewHost(NationalInstruments.Composition.ICompositionFilter)">InitializeNewHost(ICompositionFilter)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new composition host using the standard component directory</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ICompositionHost InitializeNewHost(ICompositionFilter filter)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Composition.ICompositionFilter.html">ICompositionFilter</a></td>
+        <td><span class="parametername">filter</span></td>
+        <td><p>Optional filter which is called to filter the catalog on a per part basis</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Composition.ICompositionHost.html">ICompositionHost</a></td>
+        <td><p>The newly created composition host</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_InitializeNewHost_" data-uid="NationalInstruments.Composition.CompositionHost.InitializeNewHost*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_InitializeNewHost_NationalInstruments_Composition_ICompositionFilter_NationalInstruments_Composition_ComponentLocation_" data-uid="NationalInstruments.Composition.CompositionHost.InitializeNewHost(NationalInstruments.Composition.ICompositionFilter,NationalInstruments.Composition.ComponentLocation)">InitializeNewHost(ICompositionFilter, ComponentLocation)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new composition host loading the components from the provided component directory</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ICompositionHost InitializeNewHost(ICompositionFilter filter, ComponentLocation componentPath)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Composition.ICompositionFilter.html">ICompositionFilter</a></td>
+        <td><span class="parametername">filter</span></td>
+        <td><p>Optional filter which is called to filter the catalog on a per part basis</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Composition.ComponentLocation.html">ComponentLocation</a></td>
+        <td><span class="parametername">componentPath</span></td>
+        <td><p>The full path to the directory to look in for composition assemblies</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Composition.ICompositionHost.html">ICompositionHost</a></td>
+        <td><p>The newly created composition host</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_InitializeNewHost_" data-uid="NationalInstruments.Composition.CompositionHost.InitializeNewHost*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_InitializeNewHost_NationalInstruments_Composition_ICompositionFilter_System_Collections_Generic_IEnumerable_NationalInstruments_Composition_ComponentLocation__" data-uid="NationalInstruments.Composition.CompositionHost.InitializeNewHost(NationalInstruments.Composition.ICompositionFilter,System.Collections.Generic.IEnumerable{NationalInstruments.Composition.ComponentLocation})">InitializeNewHost(ICompositionFilter, IEnumerable&lt;ComponentLocation&gt;)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new composition host loading the components from the provided component directory</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ICompositionHost InitializeNewHost(ICompositionFilter filter, IEnumerable&lt;ComponentLocation&gt; locations)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Composition.ICompositionFilter.html">ICompositionFilter</a></td>
+        <td><span class="parametername">filter</span></td>
+        <td><p>Optional filter which is called to filter the catalog on a per part basis</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.Composition.ComponentLocation.html">ComponentLocation</a>&gt;</td>
+        <td><span class="parametername">locations</span></td>
+        <td><p>The component locations to look in for composition assemblies</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Composition.ICompositionHost.html">ICompositionHost</a></td>
+        <td><p>The newly created composition host</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_InitializeNewHost_" data-uid="NationalInstruments.Composition.CompositionHost.InitializeNewHost*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_InitializeNewHost_System_String_" data-uid="NationalInstruments.Composition.CompositionHost.InitializeNewHost(System.String)">InitializeNewHost(String)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new composition host loading the components from the provided component directory</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ICompositionHost InitializeNewHost(string componentPath)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">componentPath</span></td>
+        <td><p>The full path to the directory to look in for composition assemblies</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Composition.ICompositionHost.html">ICompositionHost</a></td>
+        <td><p>The newly created composition host</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_InitializeWithCatalog_" data-uid="NationalInstruments.Composition.CompositionHost.InitializeWithCatalog*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_InitializeWithCatalog_System_ComponentModel_Composition_Primitives_ComposablePartCatalog_" data-uid="NationalInstruments.Composition.CompositionHost.InitializeWithCatalog(System.ComponentModel.Composition.Primitives.ComposablePartCatalog)">InitializeWithCatalog(ComposablePartCatalog)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new composition host with the components provided in the specified component catalog</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ICompositionHost InitializeWithCatalog(ComposablePartCatalog catalog)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.componentmodel.composition.primitives.composablepartcatalog">ComposablePartCatalog</a></td>
+        <td><span class="parametername">catalog</span></td>
+        <td><p>The catalog to use for composition</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Composition.ICompositionHost.html">ICompositionHost</a></td>
+        <td><p>The newly created composition host</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_InitializeWithCatalog_" data-uid="NationalInstruments.Composition.CompositionHost.InitializeWithCatalog*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_InitializeWithCatalog_System_ComponentModel_Composition_Primitives_ComposablePartCatalog_NationalInstruments_Composition_ICompositionFilter_" data-uid="NationalInstruments.Composition.CompositionHost.InitializeWithCatalog(System.ComponentModel.Composition.Primitives.ComposablePartCatalog,NationalInstruments.Composition.ICompositionFilter)">InitializeWithCatalog(ComposablePartCatalog, ICompositionFilter)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new composition host with the components provided in the specified component catalog</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ICompositionHost InitializeWithCatalog(ComposablePartCatalog catalog, ICompositionFilter filter)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.componentmodel.composition.primitives.composablepartcatalog">ComposablePartCatalog</a></td>
+        <td><span class="parametername">catalog</span></td>
+        <td><p>The catalog to use for composition</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Composition.ICompositionFilter.html">ICompositionFilter</a></td>
+        <td><span class="parametername">filter</span></td>
+        <td><p>Optional filter which is called to filter the catalog on a per part basis</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Composition.ICompositionHost.html">ICompositionHost</a></td>
+        <td><p>The newly created composition host</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_InitializeWithCatalog_" data-uid="NationalInstruments.Composition.CompositionHost.InitializeWithCatalog*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_InitializeWithCatalog_System_ComponentModel_Composition_Primitives_ComposablePartCatalog_NationalInstruments_Composition_ICompositionFilter_System_Collections_Generic_IEnumerable_NationalInstruments_Composition_ComponentLocation__" data-uid="NationalInstruments.Composition.CompositionHost.InitializeWithCatalog(System.ComponentModel.Composition.Primitives.ComposablePartCatalog,NationalInstruments.Composition.ICompositionFilter,System.Collections.Generic.IEnumerable{NationalInstruments.Composition.ComponentLocation})">InitializeWithCatalog(ComposablePartCatalog, ICompositionFilter, IEnumerable&lt;ComponentLocation&gt;)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new composition host with the components provided in the specified component catalog</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ICompositionHost InitializeWithCatalog(ComposablePartCatalog catalog, ICompositionFilter filter, IEnumerable&lt;ComponentLocation&gt; componentLocations)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.componentmodel.composition.primitives.composablepartcatalog">ComposablePartCatalog</a></td>
+        <td><span class="parametername">catalog</span></td>
+        <td><p>The catalog to use for composition of the root and leaf composition containers</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Composition.ICompositionFilter.html">ICompositionFilter</a></td>
+        <td><span class="parametername">filter</span></td>
+        <td><p>Filter for eliminating exports from the catalog</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.Composition.ComponentLocation.html">ComponentLocation</a>&gt;</td>
+        <td><span class="parametername">componentLocations</span></td>
+        <td><p>The directory to use as the root of composition</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Composition.ICompositionHost.html">ICompositionHost</a></td>
+        <td><p>The newly created composition host</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_InitializeWithCatalogs_" data-uid="NationalInstruments.Composition.CompositionHost.InitializeWithCatalogs*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_InitializeWithCatalogs_System_Collections_Generic_IEnumerable_System_ComponentModel_Composition_Primitives_ComposablePartCatalog__NationalInstruments_Composition_ICompositionFilter_" data-uid="NationalInstruments.Composition.CompositionHost.InitializeWithCatalogs(System.Collections.Generic.IEnumerable{System.ComponentModel.Composition.Primitives.ComposablePartCatalog},NationalInstruments.Composition.ICompositionFilter)">InitializeWithCatalogs(IEnumerable&lt;ComposablePartCatalog&gt;, ICompositionFilter)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new composition host with the components provided in the specified component catalogs</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ICompositionHost InitializeWithCatalogs(IEnumerable&lt;ComposablePartCatalog&gt; catalogs, ICompositionFilter filter)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.componentmodel.composition.primitives.composablepartcatalog">ComposablePartCatalog</a>&gt;</td>
+        <td><span class="parametername">catalogs</span></td>
+        <td><p>The catalogs to use for composition</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Composition.ICompositionFilter.html">ICompositionFilter</a></td>
+        <td><span class="parametername">filter</span></td>
+        <td><p>Optional filter which is called to filter the catalog on a per part basis</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Composition.ICompositionHost.html">ICompositionHost</a></td>
+        <td><p>The newly created composition host</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_PauseRecomposition_" data-uid="NationalInstruments.Composition.CompositionHost.PauseRecomposition*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_PauseRecomposition" data-uid="NationalInstruments.Composition.CompositionHost.PauseRecomposition">PauseRecomposition()</h4>
+  <div class="markdown level1 summary"><p>Pause the continuous recomposition until this is disposed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDisposable PauseRecomposition()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></td>
+        <td><p>An object that, when disposed, will unpause the continuous recomposition.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="events">Events
+  </h3>
+  
+  
+  <h4 id="NationalInstruments_Composition_CompositionHost_RecompositionFailed" data-uid="NationalInstruments.Composition.CompositionHost.RecompositionFailed">RecompositionFailed</h4>
+  <div class="markdown level1 summary"><p>An event that signals that recomposition failed for at least one.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler RecompositionFailed</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler">EventHandler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_AddPredisposeAction_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#AddPredisposeAction*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_AddPredisposeAction_System_Action_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#AddPredisposeAction(System.Action)">ICompositionHost.AddPredisposeAction(Action)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ICompositionHost.AddPredisposeAction(Action action)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td><span class="parametername">action</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_AddToComposition_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#AddToComposition*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_AddToComposition_System_ComponentModel_Composition_Primitives_ComposablePartCatalog_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#AddToComposition(System.ComponentModel.Composition.Primitives.ComposablePartCatalog)">ICompositionHost.AddToComposition(ComposablePartCatalog)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ICompositionHost.AddToComposition(ComposablePartCatalog composablePartCatalog)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.componentmodel.composition.primitives.composablepartcatalog">ComposablePartCatalog</a></td>
+        <td><span class="parametername">composablePartCatalog</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_AddToComposition_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#AddToComposition*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_AddToComposition_System_Reflection_Assembly_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#AddToComposition(System.Reflection.Assembly)">ICompositionHost.AddToComposition(Assembly)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ICompositionHost.AddToComposition(Assembly assembly)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.reflection.assembly">Assembly</a></td>
+        <td><span class="parametername">assembly</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_BeginInvoke_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#BeginInvoke*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_BeginInvoke_NationalInstruments_Core_AsyncTaskPriority_System_Action_System_String_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#BeginInvoke(NationalInstruments.Core.AsyncTaskPriority,System.Action,System.String)">ICompositionHost.BeginInvoke(AsyncTaskPriority, Action, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ICompositionHost.BeginInvoke(AsyncTaskPriority priority, Action action, string description)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.AsyncTaskPriority.html">AsyncTaskPriority</a></td>
+        <td><span class="parametername">priority</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td><span class="parametername">action</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">description</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_BeginInvoke_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#BeginInvoke*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_BeginInvoke_System_Action_System_String_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#BeginInvoke(System.Action,System.String)">ICompositionHost.BeginInvoke(Action, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ICompositionHost.BeginInvoke(Action action, string description)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td><span class="parametername">action</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">description</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_BeginInvokeIfNecessary_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#BeginInvokeIfNecessary*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_BeginInvokeIfNecessary_NationalInstruments_Core_AsyncTaskPriority_System_Action_System_String_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#BeginInvokeIfNecessary(NationalInstruments.Core.AsyncTaskPriority,System.Action,System.String)">ICompositionHost.BeginInvokeIfNecessary(AsyncTaskPriority, Action, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ICompositionHost.BeginInvokeIfNecessary(AsyncTaskPriority priority, Action action, string description)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.AsyncTaskPriority.html">AsyncTaskPriority</a></td>
+        <td><span class="parametername">priority</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td><span class="parametername">action</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">description</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_BeginInvokeIfNecessary_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#BeginInvokeIfNecessary*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_BeginInvokeIfNecessary_System_Action_System_String_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#BeginInvokeIfNecessary(System.Action,System.String)">ICompositionHost.BeginInvokeIfNecessary(Action, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ICompositionHost.BeginInvokeIfNecessary(Action action, string description)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td><span class="parametername">action</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">description</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_CheckAccess_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#CheckAccess*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_CheckAccess" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#CheckAccess">ICompositionHost.CheckAccess()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ICompositionHost.CheckAccess()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_ComponentDirectories_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#ComponentDirectories*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_ComponentDirectories" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#ComponentDirectories">ICompositionHost.ComponentDirectories</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;ComponentLocation&gt; ICompositionHost.ComponentDirectories { get; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.Composition.ComponentLocation.html">ComponentLocation</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_Compose_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#Compose*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_Compose_System_ComponentModel_Composition_Hosting_CompositionBatch_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#Compose(System.ComponentModel.Composition.Hosting.CompositionBatch)">ICompositionHost.Compose(CompositionBatch)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ICompositionHost.Compose(CompositionBatch batch)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.componentmodel.composition.hosting.compositionbatch">CompositionBatch</a></td>
+        <td><span class="parametername">batch</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_ComposeParts_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#ComposeParts*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_ComposeParts_System_Object___" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#ComposeParts(System.Object[])">ICompositionHost.ComposeParts(Object[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ICompositionHost.ComposeParts(params object[] attributedParts)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>[]</td>
+        <td><span class="parametername">attributedParts</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_CreateClone_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#CreateClone*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_CreateClone" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#CreateClone">ICompositionHost.CreateClone()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ICompositionHost ICompositionHost.CreateClone()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Composition.ICompositionHost.html">ICompositionHost</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_CreateInstance_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#CreateInstance*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_CreateInstance__1" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#CreateInstance``1">ICompositionHost.CreateInstance&lt;T&gt;()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">T ICompositionHost.CreateInstance&lt;T&gt;()where T : class, new ()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_Dispatcher_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#Dispatcher*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_Dispatcher" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#Dispatcher">ICompositionHost.Dispatcher</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">PlatformDispatcher ICompositionHost.Dispatcher { get; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformDispatcher.html">PlatformDispatcher</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_GetExportedFunctions_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#GetExportedFunctions*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_GetExportedFunctions__2_System_String_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#GetExportedFunctions``2(System.String)">ICompositionHost.GetExportedFunctions&lt;T, TMetadata&gt;(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;ExportedFunction&lt;T, TMetadata&gt;&gt; ICompositionHost.GetExportedFunctions&lt;T, TMetadata&gt;(string contractName)where T : class where TMetadata : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">contractName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.Composition.ExportedFunction-2.html">ExportedFunction</a>&lt;T, TMetadata&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TMetadata</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_GetExportedValue_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#GetExportedValue*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_GetExportedValue__1_System_String_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#GetExportedValue``1(System.String)">ICompositionHost.GetExportedValue&lt;T&gt;(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">T ICompositionHost.GetExportedValue&lt;T&gt;(string contractName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">contractName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_GetExports_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#GetExports*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_GetExports_System_ComponentModel_Composition_Primitives_ImportDefinition_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#GetExports(System.ComponentModel.Composition.Primitives.ImportDefinition)">ICompositionHost.GetExports(ImportDefinition)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;Export&gt; ICompositionHost.GetExports(ImportDefinition definition)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.componentmodel.composition.primitives.importdefinition">ImportDefinition</a></td>
+        <td><span class="parametername">definition</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.componentmodel.composition.primitives.export">Export</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_GetExports_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#GetExports*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_GetExports_System_Type_System_Type_System_String_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#GetExports(System.Type,System.Type,System.String)">ICompositionHost.GetExports(Type, Type, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;Lazy&lt;object, object&gt;&gt; ICompositionHost.GetExports(Type type, Type metadataViewType, string contractName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">metadataViewType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">contractName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Lazy</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_GetExports_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#GetExports*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_GetExports__1" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#GetExports``1">ICompositionHost.GetExports&lt;T&gt;()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;Lazy&lt;T&gt;&gt; ICompositionHost.GetExports&lt;T&gt;()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Lazy</span>&lt;T&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_GetExports_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#GetExports*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_GetExports__2" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#GetExports``2">ICompositionHost.GetExports&lt;T, TMetadata&gt;()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;Lazy&lt;T, TMetadata&gt;&gt; ICompositionHost.GetExports&lt;T, TMetadata&gt;()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Lazy</span>&lt;T, TMetadata&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TMetadata</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_GetExports_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#GetExports*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_GetExports__2_System_String_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#GetExports``2(System.String)">ICompositionHost.GetExports&lt;T, TMetadataView&gt;(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;Lazy&lt;T, TMetadataView&gt;&gt; ICompositionHost.GetExports&lt;T, TMetadataView&gt;(string contractName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">contractName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Lazy</span>&lt;T, TMetadataView&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TMetadataView</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_GetManifestsForDirectory_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#GetManifestsForDirectory*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_GetManifestsForDirectory_System_String_System_Boolean_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#GetManifestsForDirectory(System.String,System.Boolean)">ICompositionHost.GetManifestsForDirectory(String, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Get the manifests loaded during the creation of this host for a given directory</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;NIManifest&gt; ICompositionHost.GetManifestsForDirectory(string path, bool recursive)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>the directory to search</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">recursive</span></td>
+        <td><p>whether we should search the subdirectories or just the passed in directory</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.Composition.NIManifest.html">NIManifest</a>&gt;</td>
+        <td><p>list of manifests in this directory</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_GetNonSharedExportedValue_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#GetNonSharedExportedValue*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_GetNonSharedExportedValue__1" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#GetNonSharedExportedValue``1">ICompositionHost.GetNonSharedExportedValue&lt;T&gt;()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">T ICompositionHost.GetNonSharedExportedValue&lt;T&gt;()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_GetNonSharedExportedValueOrDefault_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#GetNonSharedExportedValueOrDefault*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_GetNonSharedExportedValueOrDefault__1" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#GetNonSharedExportedValueOrDefault``1">ICompositionHost.GetNonSharedExportedValueOrDefault&lt;T&gt;()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">T ICompositionHost.GetNonSharedExportedValueOrDefault&lt;T&gt;()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_GetNonSharedExportedValues_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#GetNonSharedExportedValues*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_GetNonSharedExportedValues__1" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#GetNonSharedExportedValues``1">ICompositionHost.GetNonSharedExportedValues&lt;T&gt;()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;T&gt; ICompositionHost.GetNonSharedExportedValues&lt;T&gt;()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_GetSharedExportedValue_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#GetSharedExportedValue*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_GetSharedExportedValue__1" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#GetSharedExportedValue``1">ICompositionHost.GetSharedExportedValue&lt;T&gt;()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">T ICompositionHost.GetSharedExportedValue&lt;T&gt;()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_GetSharedExportedValueOrDefault_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#GetSharedExportedValueOrDefault*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_GetSharedExportedValueOrDefault__1" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#GetSharedExportedValueOrDefault``1">ICompositionHost.GetSharedExportedValueOrDefault&lt;T&gt;()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">T ICompositionHost.GetSharedExportedValueOrDefault&lt;T&gt;()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_GetSharedExportedValues_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#GetSharedExportedValues*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_GetSharedExportedValues__1" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#GetSharedExportedValues``1">ICompositionHost.GetSharedExportedValues&lt;T&gt;()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;T&gt; ICompositionHost.GetSharedExportedValues&lt;T&gt;()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_Invoke_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#Invoke*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_Invoke_System_Action_System_String_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#Invoke(System.Action,System.String)">ICompositionHost.Invoke(Action, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ICompositionHost.Invoke(Action action, string description)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td><span class="parametername">action</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">description</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_InvokeIfNecessary_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#InvokeIfNecessary*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_InvokeIfNecessary_System_Action_System_String_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#InvokeIfNecessary(System.Action,System.String)">ICompositionHost.InvokeIfNecessary(Action, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ICompositionHost.InvokeIfNecessary(Action action, string description)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td><span class="parametername">action</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">description</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_IsDisposed_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#IsDisposed*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_IsDisposed" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#IsDisposed">ICompositionHost.IsDisposed</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ICompositionHost.IsDisposed { get; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_SatisfyImportsOnce_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#SatisfyImportsOnce*"></a>
+  <h4 id="NationalInstruments_Composition_CompositionHost_NationalInstruments_Composition_ICompositionHost_SatisfyImportsOnce_System_Object_" data-uid="NationalInstruments.Composition.CompositionHost.NationalInstruments#Composition#ICompositionHost#SatisfyImportsOnce(System.Object)">ICompositionHost.SatisfyImportsOnce(Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ComposablePart ICompositionHost.SatisfyImportsOnce(object attributedPart)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">attributedPart</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.componentmodel.composition.primitives.composablepart">ComposablePart</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.Composition.ICompositionHost.html">ICompositionHost</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Composition.IDynamicCompositionHost.html">IDynamicCompositionHost</a>
+  </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_ToEnumerable__1___0_">EnumerableHelper.ToEnumerable&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_Repeat__1___0_System_Int32_">EnumerableHelper.Repeat&lt;T&gt;(T, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyNothing__1___0_">Verifier.VerifyNothing&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Func___0_System_Boolean__System_Action_System_String__System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Func___0_System_Boolean__System_Action_System_String_System_String__System_String_System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Boolean_System_Action_System_String__System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Boolean, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Boolean_System_Action_System_String_System_String__System_String_System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Boolean, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Func___0_System_Boolean__System_Action_System_String__System_String_">Verifier.Verify&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Func___0_System_Boolean__System_Action_System_String_System_String__System_String_System_String_">Verifier.Verify&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Boolean_System_Action_System_String__System_String_">Verifier.Verify&lt;T&gt;(T, Boolean, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Boolean_System_Action_System_String_System_String__System_String_System_String_">Verifier.Verify&lt;T&gt;(T, Boolean, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentIsNotNull__1___0_System_String_">Verifier.VerifyArgumentIsNotNull&lt;T&gt;(T, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyValueIsNotNull__1___0_System_String_">Verifier.VerifyValueIsNotNull&lt;T&gt;(T, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentNotReferenceEqualsTo_System_Object_System_Object_System_String_">Verifier.VerifyArgumentNotReferenceEqualsTo(Object, Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyValueNotReferenceEqualsTo_System_Object_System_Object_System_String_">Verifier.VerifyValueNotReferenceEqualsTo(Object, Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentIsOfType__1_System_Object_System_String_">Verifier.VerifyArgumentIsOfType&lt;T&gt;(Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyValueIsOfType__1_System_Object_System_String_">Verifier.VerifyValueIsOfType&lt;T&gt;(Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.DisposableHelpers.html#NationalInstruments_Core_DisposableHelpers_DisposeIfNotNull_System_IDisposable_">DisposableHelpers.DisposeIfNotNull(IDisposable)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.QueryServiceExtensions.html#NationalInstruments_Core_QueryServiceExtensions_QueryService__1_System_Object_">QueryServiceExtensions.QueryService&lt;T&gt;(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_FindClosestMatchingContainerForResource_System_Object_System_Func_System_Object_System_Globalization_CultureInfo_System_Object__System_Globalization_CultureInfo_">LocalizationHelpers.FindClosestMatchingContainerForResource(Object, Func&lt;Object, CultureInfo, Object&gt;, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_FindClosestMatchingContainerForResource_System_Object_System_Func_System_Object_System_Globalization_CultureInfo_System_Object__System_Globalization_CultureInfo_System_Func_System_Object_System_Object__">LocalizationHelpers.FindClosestMatchingContainerForResource(Object, Func&lt;Object, CultureInfo, Object&gt;, CultureInfo, Func&lt;Object, Object&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedEnumString__1___0_">LocalizationHelpers.GetLocalizedEnumString&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedString_System_Object_System_String_System_Globalization_CultureInfo_">LocalizationHelpers.GetLocalizedString(Object, String, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedString_System_Object_System_String_System_Boolean_System_Globalization_CultureInfo_">LocalizationHelpers.GetLocalizedString(Object, String, Boolean, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_SetPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_System_Object_">DynamicPropertyExtensions.SetPropertyValue(Object, PropertySymbol, Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.GetPropertyValue(Object, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_ClearPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.ClearPropertyValue(Object, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_IsPropertySet_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.IsPropertySet(Object, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetAllSetProperties_System_Object_">DynamicPropertyExtensions.GetAllSetProperties(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetAllProperties_System_Object_">DynamicPropertyExtensions.GetAllProperties(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,2720 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class PropertySymbol
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class PropertySymbol
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.DynamicProperties.PropertySymbol">
+  
+  
+  <h1 id="NationalInstruments_DynamicProperties_PropertySymbol" data-uid="NationalInstruments.DynamicProperties.PropertySymbol" class="text-break">Class PropertySymbol
+  </h1>
+  <div class="markdown level0 summary"><p>This class represents the &quot;symbol&quot; concept in the dynamic property framework.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">PropertySymbol</span></div>
+      <div class="level2"><a class="xref" href="NationalInstruments.DynamicProperties.SerializablePropertySymbol.html">SerializablePropertySymbol</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.DynamicProperties.html">NationalInstruments.DynamicProperties</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.Core.dll</h6>
+  <h5 id="NationalInstruments_DynamicProperties_PropertySymbol_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PropertySymbol</code></pre>
+  </div>
+  <h5 id="NationalInstruments_DynamicProperties_PropertySymbol_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>Every property has a &quot;symbol&quot;, which is analogous to a name of a property as defined in a C# 
+class, or perhaps to a dependency property
+object you might create in WPF using System.Windows.DependencyProperty.Register
+A symbol encapsulates the unique identity of a property
+and any metadata about the property, including how to get and set it.</p>
+<p>Depending on the property system, a client will obtain these symbols in a variety of ways.  A truly static property
+might be obtained by an API on the object that defines it.  Attached properties will be created by a factory somewhere.</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol__ctor_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.#ctor*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol__ctor_System_Xml_Linq_XName_System_Object_System_Type_System_Type_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.#ctor(System.Xml.Linq.XName,System.Object,System.Type,System.Type)">PropertySymbol(XName, Object, Type, Type)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropertySymbol(XName name, object defaultValue, Type valueType, Type owningType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.xml.linq.xname">XName</a></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">defaultValue</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">valueType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">owningType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol__ctor_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.#ctor*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol__ctor_System_Xml_Linq_XName_System_Object_System_Type_System_Type_NationalInstruments_DynamicProperties_PropertySymbolAttributes_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.#ctor(System.Xml.Linq.XName,System.Object,System.Type,System.Type,NationalInstruments.DynamicProperties.PropertySymbolAttributes)">PropertySymbol(XName, Object, Type, Type, PropertySymbolAttributes)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropertySymbol(XName name, object defaultValue, Type valueType, Type owningType, PropertySymbolAttributes attributes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.xml.linq.xname">XName</a></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">defaultValue</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">valueType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">owningType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbolAttributes.html">PropertySymbolAttributes</a></td>
+        <td><span class="parametername">attributes</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol__ctor_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.#ctor*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol__ctor_System_Xml_Linq_XName_System_Object_System_Type_System_Type_NationalInstruments_DynamicProperties_PropertySymbolAttributes_NationalInstruments_DynamicProperties_PropertyChangedCallback_NationalInstruments_DynamicProperties_ValidateValueCallback_NationalInstruments_DynamicProperties_CoerceValueCallback_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.#ctor(System.Xml.Linq.XName,System.Object,System.Type,System.Type,NationalInstruments.DynamicProperties.PropertySymbolAttributes,NationalInstruments.DynamicProperties.PropertyChangedCallback,NationalInstruments.DynamicProperties.ValidateValueCallback,NationalInstruments.DynamicProperties.CoerceValueCallback)">PropertySymbol(XName, Object, Type, Type, PropertySymbolAttributes, PropertyChangedCallback, ValidateValueCallback, CoerceValueCallback)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropertySymbol(XName name, object defaultValue, Type valueType, Type owningType, PropertySymbolAttributes attributes, PropertyChangedCallback changedCallback, ValidateValueCallback validateValueCallback, CoerceValueCallback coerceValueCallback)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.xml.linq.xname">XName</a></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">defaultValue</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">valueType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">owningType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbolAttributes.html">PropertySymbolAttributes</a></td>
+        <td><span class="parametername">attributes</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DynamicProperties.PropertyChangedCallback.html">PropertyChangedCallback</a></td>
+        <td><span class="parametername">changedCallback</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DynamicProperties.ValidateValueCallback.html">ValidateValueCallback</a></td>
+        <td><span class="parametername">validateValueCallback</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DynamicProperties.CoerceValueCallback.html">CoerceValueCallback</a></td>
+        <td><span class="parametername">coerceValueCallback</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol__ctor_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.#ctor*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol__ctor_System_Xml_Linq_XName_System_Object_System_Type_System_Type_NationalInstruments_DynamicProperties_PropertySymbolAttributes_NationalInstruments_DynamicProperties_PropertyChangedCallback_NationalInstruments_DynamicProperties_ValidateValueCallback_NationalInstruments_DynamicProperties_CoerceValueCallback_System_String_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.#ctor(System.Xml.Linq.XName,System.Object,System.Type,System.Type,NationalInstruments.DynamicProperties.PropertySymbolAttributes,NationalInstruments.DynamicProperties.PropertyChangedCallback,NationalInstruments.DynamicProperties.ValidateValueCallback,NationalInstruments.DynamicProperties.CoerceValueCallback,System.String)">PropertySymbol(XName, Object, Type, Type, PropertySymbolAttributes, PropertyChangedCallback, ValidateValueCallback, CoerceValueCallback, String)</h4>
+  <div class="markdown level1 summary"><p>Constructs a new instance of the <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html">PropertySymbol</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropertySymbol(XName name, object defaultValue, Type valueType, Type owningType, PropertySymbolAttributes attributes, PropertyChangedCallback changedCallback, ValidateValueCallback validateValueCallback, CoerceValueCallback coerceValueCallback, string displayName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.xml.linq.xname">XName</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Name of the symbol.  This can include a namespace or not.  If the symbol is persistent and supports attachment, it must include a namespace.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">defaultValue</span></td>
+        <td><p>Default value of the property</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">valueType</span></td>
+        <td><p>Type of registered value.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">owningType</span></td>
+        <td><p>The <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a> that owns this property symbol.  Should be the type on which the symbol was declared.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbolAttributes.html">PropertySymbolAttributes</a></td>
+        <td><span class="parametername">attributes</span></td>
+        <td><p>Attributes of the symbol</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DynamicProperties.PropertyChangedCallback.html">PropertyChangedCallback</a></td>
+        <td><span class="parametername">changedCallback</span></td>
+        <td><p>delegate to call whenever the value changes, can be null</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DynamicProperties.ValidateValueCallback.html">ValidateValueCallback</a></td>
+        <td><span class="parametername">validateValueCallback</span></td>
+        <td><p>delegate to call to validate new values which are being set, can be null</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DynamicProperties.CoerceValueCallback.html">CoerceValueCallback</a></td>
+        <td><span class="parametername">coerceValueCallback</span></td>
+        <td><p>delegate to call to coerce new values being set, can be null</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">displayName</span></td>
+        <td><p>User friendly name of a property.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol__ctor_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.#ctor*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol__ctor_System_Xml_Linq_XName_System_Type_System_Type_System_String_NationalInstruments_DynamicProperties_PropertySymbolMetadata_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.#ctor(System.Xml.Linq.XName,System.Type,System.Type,System.String,NationalInstruments.DynamicProperties.PropertySymbolMetadata)">PropertySymbol(XName, Type, Type, String, PropertySymbolMetadata)</h4>
+  <div class="markdown level1 summary"><p>Constructs a new instance of the <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html">PropertySymbol</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropertySymbol(XName name, Type valueType, Type owningType, string displayName, PropertySymbolMetadata metadata)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.xml.linq.xname">XName</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Name of the symbol.  This can include a namespace or not.  If the symbol is persistent and supports attachment, it must include a namespace.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">valueType</span></td>
+        <td><p>Type of registered value.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">owningType</span></td>
+        <td><p>The <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a> that owns this property symbol.  Should be the type on which the symbol was declared.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">displayName</span></td>
+        <td><p>User friendly name of a property.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbolMetadata.html">PropertySymbolMetadata</a></td>
+        <td><span class="parametername">metadata</span></td>
+        <td><p>The <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbolMetadata.html">PropertySymbolMetadata</a> to be associated with this property symbol.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_NestedXmlElementIndexOfPropertyName" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.NestedXmlElementIndexOfPropertyName">NestedXmlElementIndexOfPropertyName</h4>
+  <div class="markdown level1 summary"><p>The index of the property name in the Xml tag when the property is persisted as a nested Xml element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly int NestedXmlElementIndexOfPropertyName</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_NestedXmlElementPrefix" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.NestedXmlElementPrefix">NestedXmlElementPrefix</h4>
+  <div class="markdown level1 summary"><p>The hardcoded prefix of the XmlTag when the property is persisted as a nested Xml element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly string NestedXmlElementPrefix</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_DefaultMetadata_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.DefaultMetadata*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_DefaultMetadata" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.DefaultMetadata">DefaultMetadata</h4>
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbolMetadata.html">PropertySymbolMetadata</a> associated with the type that declared this <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html">PropertySymbol</a>.
+This metadata may be overridden by derived types of <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html#NationalInstruments_DynamicProperties_PropertySymbol_OwningType">OwningType</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropertySymbolMetadata DefaultMetadata { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbolMetadata.html">PropertySymbolMetadata</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_DisplayName_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.DisplayName*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_DisplayName" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.DisplayName">DisplayName</h4>
+  <div class="markdown level1 summary"><p>A user friendly display name of dynamic property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string DisplayName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_FullyQualifiedName_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.FullyQualifiedName*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_FullyQualifiedName" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.FullyQualifiedName">FullyQualifiedName</h4>
+  <div class="markdown level1 summary"><p>Fully qualified name of the property, including an XML namespace that scopes it for serialization.
+A namespace is only needed for dynamic properties; you can use a simple local XML name for static properties.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public XName FullyQualifiedName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.xml.linq.xname">XName</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_Name_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.Name*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_Name" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Name of the property, which matches the local name of <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html#NationalInstruments_DynamicProperties_PropertySymbol_FullyQualifiedName">FullyQualifiedName</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_OwningType_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.OwningType*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_OwningType" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.OwningType">OwningType</h4>
+  <div class="markdown level1 summary"><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a> that owns this property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Type OwningType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_ValueType_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.ValueType*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_ValueType" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.ValueType">ValueType</h4>
+  <div class="markdown level1 summary"><p>Gets the type that the property symbol uses for its value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Type ValueType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_AsLocalizable_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.AsLocalizable*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_AsLocalizable_System_Type_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.AsLocalizable(System.Type)">AsLocalizable(Type)</h4>
+  <div class="markdown level1 summary"><p>Modifies the property symbol to be considered localizable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropertySymbol AsLocalizable(Type forType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">forType</span></td>
+        <td><p>The element type owning the metadata on which the service will be attached.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html">PropertySymbol</a></td>
+        <td><p>The same <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html">PropertySymbol</a> on which this method was called.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_AttachService_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.AttachService*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_AttachService_System_Object_System_Object_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.AttachService(System.Object,System.Object)">AttachService(Object, Object)</h4>
+  <div class="markdown level1 summary"><p>Attaches a service to the <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbolMetadata.html">PropertySymbolMetadata</a> for the given element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AttachService(object service, object forElement)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">service</span></td>
+        <td><p>The service to attach.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">forElement</span></td>
+        <td><p>The element owning the metadata on which the service will be attached.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_DynamicProperties_PropertySymbol_AttachService_System_Object_System_Object__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the given type has not overridden metadata on the property symbol, overridden metadata will be added.
+This means that no further overrides of metadata can be performed on the property symbol for that type, 
+so ensure you&apos;ve already called <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html#NationalInstruments_DynamicProperties_PropertySymbol_OverrideMetadata_NationalInstruments_DynamicProperties_PropertySymbolMetadata_System_Type_">OverrideMetadata(PropertySymbolMetadata, Type)</a> before calling this method
+if you need to override other property symbol metadata.  This method can be called multiple times to 
+attach multiple services to for the given type.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_AttachService_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.AttachService*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_AttachService_System_Object_System_Type_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.AttachService(System.Object,System.Type)">AttachService(Object, Type)</h4>
+  <div class="markdown level1 summary"><p>Attaches a service to the <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbolMetadata.html">PropertySymbolMetadata</a> for the given element type. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AttachService(object service, Type forType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">service</span></td>
+        <td><p>The service to attach.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">forType</span></td>
+        <td><p>The element type owning the metadata on which the service will be attached.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_DynamicProperties_PropertySymbol_AttachService_System_Object_System_Type__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the given type has not overridden metadata on the property symbol, overridden metadata will be added.
+This means that no further overrides of metadata can be performed on the property symbol for that type, 
+so ensure you&apos;ve already called <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html#NationalInstruments_DynamicProperties_PropertySymbol_OverrideMetadata_NationalInstruments_DynamicProperties_PropertySymbolMetadata_System_Type_">OverrideMetadata(PropertySymbolMetadata, Type)</a> before calling this method
+if you need to override other property symbol metadata.  This method can be called multiple times to 
+attach multiple services to for the given type.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_CreateDefaultMetadata_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.CreateDefaultMetadata*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_CreateDefaultMetadata" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.CreateDefaultMetadata">CreateDefaultMetadata()</h4>
+  <div class="markdown level1 summary"><p>Construct a default <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbolMetadata.html">PropertySymbolMetadata</a> instance to be attached to
+this <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html">PropertySymbol</a>.  The type of this metadata should match the type
+of the <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html#NationalInstruments_DynamicProperties_PropertySymbol_DefaultMetadata">DefaultMetadata</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual PropertySymbolMetadata CreateDefaultMetadata()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbolMetadata.html">PropertySymbolMetadata</a></td>
+        <td><p>The constructed <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbolMetadata.html">PropertySymbolMetadata</a> instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_GetAttributes_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetAttributes*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_GetAttributes_System_Object_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetAttributes(System.Object)">GetAttributes(Object)</h4>
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbolAttributes.html">PropertySymbolAttributes</a> of this <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html">PropertySymbol</a> for the given element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropertySymbolAttributes GetAttributes(object forElement)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">forElement</span></td>
+        <td><p>The element for which to get the <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbolAttributes.html">PropertySymbolAttributes</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbolAttributes.html">PropertySymbolAttributes</a></td>
+        <td><p>The <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbolAttributes.html">PropertySymbolAttributes</a> of this <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html">PropertySymbol</a> for the given element.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_GetAttributes_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetAttributes*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_GetAttributes_System_Type_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetAttributes(System.Type)">GetAttributes(Type)</h4>
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbolAttributes.html">PropertySymbolAttributes</a> of this <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html">PropertySymbol</a> for the given type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropertySymbolAttributes GetAttributes(Type forType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">forType</span></td>
+        <td><p>The type for which to get the <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbolAttributes.html">PropertySymbolAttributes</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbolAttributes.html">PropertySymbolAttributes</a></td>
+        <td><p>The <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbolAttributes.html">PropertySymbolAttributes</a> of this <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html">PropertySymbol</a> for the given type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_GetCoerceValueCallback_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetCoerceValueCallback*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_GetCoerceValueCallback_System_Object_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetCoerceValueCallback(System.Object)">GetCoerceValueCallback(Object)</h4>
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="NationalInstruments.DynamicProperties.CoerceValueCallback.html">CoerceValueCallback</a> of this <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html">PropertySymbol</a> for the given element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CoerceValueCallback GetCoerceValueCallback(object forElement)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">forElement</span></td>
+        <td><p>The element for which to get the <a class="xref" href="NationalInstruments.DynamicProperties.CoerceValueCallback.html">CoerceValueCallback</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DynamicProperties.CoerceValueCallback.html">CoerceValueCallback</a></td>
+        <td><p>The <a class="xref" href="NationalInstruments.DynamicProperties.CoerceValueCallback.html">CoerceValueCallback</a> of this <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html">PropertySymbol</a> for the given element.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_GetCoerceValueCallback_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetCoerceValueCallback*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_GetCoerceValueCallback_System_Type_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetCoerceValueCallback(System.Type)">GetCoerceValueCallback(Type)</h4>
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="NationalInstruments.DynamicProperties.CoerceValueCallback.html">CoerceValueCallback</a> of this <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html">PropertySymbol</a> for the given type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CoerceValueCallback GetCoerceValueCallback(Type forType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">forType</span></td>
+        <td><p>The type for which to get the <a class="xref" href="NationalInstruments.DynamicProperties.CoerceValueCallback.html">CoerceValueCallback</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DynamicProperties.CoerceValueCallback.html">CoerceValueCallback</a></td>
+        <td><p>The <a class="xref" href="NationalInstruments.DynamicProperties.CoerceValueCallback.html">CoerceValueCallback</a> of this <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html">PropertySymbol</a> for the given type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_GetCustomSubTree_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetCustomSubTree*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_GetCustomSubTree_System_Object_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetCustomSubTree(System.Object)">GetCustomSubTree(Object)</h4>
+  <div class="markdown level1 summary"><p><code>true</code> if this property is serialized as an XML sub-tree under the owning type,
+which is interpreted using custom logic in the IPropertySerializer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetCustomSubTree(object forElement)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">forElement</span></td>
+        <td><p>The element for which we are checking if this property symbol is to be serialized as an XML sub-tree of the owning type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if the property for the given element is to be serialized as an XML sub-tree of the owning type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_GetCustomSubTree_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetCustomSubTree*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_GetCustomSubTree_System_Type_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetCustomSubTree(System.Type)">GetCustomSubTree(Type)</h4>
+  <div class="markdown level1 summary"><p><code>true</code> if this property is serialized as an XML sub-tree under the owning type,
+which is interpreted using custom logic in the IPropertySerializer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetCustomSubTree(Type forType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">forType</span></td>
+        <td><p>The type for which we are checking if this property symbol is to be serialized as an XML sub-tree of the owning type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if the property for the given type is to be serialized as an XML sub-tree of the owning type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_GetDefaultValue_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetDefaultValue*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_GetDefaultValue_System_Object_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetDefaultValue(System.Object)">GetDefaultValue(Object)</h4>
+  <div class="markdown level1 summary"><p>Gets the default value of this <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html">PropertySymbol</a> for the given element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object GetDefaultValue(object forElement)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">forElement</span></td>
+        <td><p>The element for which to get the default value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><p>The default value of this <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html">PropertySymbol</a> for the given element.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_GetDefaultValue_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetDefaultValue*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_GetDefaultValue_System_Type_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetDefaultValue(System.Type)">GetDefaultValue(Type)</h4>
+  <div class="markdown level1 summary"><p>Gets the default value of this <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html">PropertySymbol</a> for the given type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object GetDefaultValue(Type forType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">forType</span></td>
+        <td><p>The type for which to get the default value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><p>The default value of this <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html">PropertySymbol</a> for the given type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_GetForMergeOnly_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetForMergeOnly*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_GetForMergeOnly_System_Object_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetForMergeOnly(System.Object)">GetForMergeOnly(Object)</h4>
+  <div class="markdown level1 summary"><p>Whether this property is to be generated into MergeScripts only.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetForMergeOnly(object forElement)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">forElement</span></td>
+        <td><p>The element for which we are checking if this property symbol is to be generated into merge scripts only.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if the property for the given element is to be generated into merge scripts only.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_GetForMergeOnly_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetForMergeOnly*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_GetForMergeOnly_System_Type_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetForMergeOnly(System.Type)">GetForMergeOnly(Type)</h4>
+  <div class="markdown level1 summary"><p>Whether this property is to be generated into MergeScripts only.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetForMergeOnly(Type forType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">forType</span></td>
+        <td><p>The type for which we are checking if this property symbol is to be generated into merge scripts only.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if the property for the given type is to be generated into merge scripts only.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_GetIsCopyable_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetIsCopyable*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_GetIsCopyable_System_Object_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetIsCopyable(System.Object)">GetIsCopyable(Object)</h4>
+  <div class="markdown level1 summary"><p><code>true</code> if this property should be copied when copying properties from one owner to another.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetIsCopyable(object forElement)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">forElement</span></td>
+        <td><p>The element for which we are checking if this property symbol should be copied when copying properties from one owner to another.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if the property for the given element should be copied when copying properties from one owner to another.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_GetIsCopyable_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetIsCopyable*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_GetIsCopyable_System_Type_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetIsCopyable(System.Type)">GetIsCopyable(Type)</h4>
+  <div class="markdown level1 summary"><p><code>true</code> if this property should be copied when copying properties from one owner to another.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetIsCopyable(Type forType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">forType</span></td>
+        <td><p>The type for which we are checking if this property symbol should be copied when copying properties from one owner to another.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if the property for the given type should be copied when copying properties from one owner to another.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_GetIsPersisted_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetIsPersisted*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_GetIsPersisted_System_Object_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetIsPersisted(System.Object)">GetIsPersisted(Object)</h4>
+  <div class="markdown level1 summary"><p><code>true</code> if this property should be persisted when the owner is saved.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetIsPersisted(object forElement)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">forElement</span></td>
+        <td><p>The element for which we are checking if this property symbol is to be persisted.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if the property for the given element is to be persisted.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_GetIsPersisted_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetIsPersisted*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_GetIsPersisted_System_Type_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetIsPersisted(System.Type)">GetIsPersisted(Type)</h4>
+  <div class="markdown level1 summary"><p><code>true</code> if this property should be persisted when the owner is saved.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetIsPersisted(Type forType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">forType</span></td>
+        <td><p>The type for which we are checking if this property symbol is to be persisted.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if the property for the given type is to be persisted.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_GetLocalizable_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetLocalizable*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_GetLocalizable_System_Object_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetLocalizable(System.Object)">GetLocalizable(Object)</h4>
+  <div class="markdown level1 summary"><p><code>true</code> if this property symbol is localizable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetLocalizable(object forElement)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">forElement</span></td>
+        <td><p>The element for which we are checking if this property symbol is localizable.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if the property for the given element is localizable.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_GetLocalizable_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetLocalizable*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_GetLocalizable_System_Type_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetLocalizable(System.Type)">GetLocalizable(Type)</h4>
+  <div class="markdown level1 summary"><p><code>true</code> if this property symbol is localizable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetLocalizable(Type forType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">forType</span></td>
+        <td><p>The type for which we are checking if this property symbol is localizable.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if the property for the given type is localizable.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_GetMetadata_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetMetadata*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_GetMetadata_System_Object_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetMetadata(System.Object)">GetMetadata(Object)</h4>
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbolMetadata.html">PropertySymbolMetadata</a> associated with the given element.  If the element
+(or one of it&apos;s base types) has overridden the <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html#NationalInstruments_DynamicProperties_PropertySymbol_DefaultMetadata">DefaultMetadata</a>, the overridden metadata
+will be returned. If the element is not in the type hierarchy of the <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html#NationalInstruments_DynamicProperties_PropertySymbol_OwningType">OwningType</a>,
+<a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html#NationalInstruments_DynamicProperties_PropertySymbol_DefaultMetadata">DefaultMetadata</a> will be returned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropertySymbolMetadata GetMetadata(object element)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">element</span></td>
+        <td><p>The element for which to get metadata.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbolMetadata.html">PropertySymbolMetadata</a></td>
+        <td><p>The <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbolMetadata.html">PropertySymbolMetadata</a> for the given element.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_DynamicProperties_PropertySymbol_GetMetadata_System_Object__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the given type has not overridden the metadata for this <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html">PropertySymbol</a>, this method will walk
+toward the root of the given types hierarchy.  The first overridden metadata that is found will be returned. 
+If no type has overridden the metadata, this will return <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html#NationalInstruments_DynamicProperties_PropertySymbol_DefaultMetadata">DefaultMetadata</a>.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_GetMetadata_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetMetadata*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_GetMetadata_System_Type_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetMetadata(System.Type)">GetMetadata(Type)</h4>
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbolMetadata.html">PropertySymbolMetadata</a> associated with the given <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a>.  If the 
+type (or one of its base types) has overridden the <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html#NationalInstruments_DynamicProperties_PropertySymbol_DefaultMetadata">DefaultMetadata</a>, the overridden
+metadata will be returned.  If the type is not in the type hierarchy of the <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html#NationalInstruments_DynamicProperties_PropertySymbol_OwningType">OwningType</a>,
+<a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html#NationalInstruments_DynamicProperties_PropertySymbol_DefaultMetadata">DefaultMetadata</a> will be returned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropertySymbolMetadata GetMetadata(Type type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a> for which to get metadata.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbolMetadata.html">PropertySymbolMetadata</a></td>
+        <td><p>The <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbolMetadata.html">PropertySymbolMetadata</a> for the given element.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_DynamicProperties_PropertySymbol_GetMetadata_System_Type__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the given type has not overridden the metadata for this <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html">PropertySymbol</a>, this method will walk
+toward the root of the given types hierarchy.  The first overridden metadata that is found will be returned. 
+If no type has overridden the metadata, this will return <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html#NationalInstruments_DynamicProperties_PropertySymbol_DefaultMetadata">DefaultMetadata</a>.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_GetPropertyChangedCallback_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetPropertyChangedCallback*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_GetPropertyChangedCallback_System_Object_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetPropertyChangedCallback(System.Object)">GetPropertyChangedCallback(Object)</h4>
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="NationalInstruments.DynamicProperties.PropertyChangedCallback.html">PropertyChangedCallback</a> of this <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html">PropertySymbol</a> for the given element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropertyChangedCallback GetPropertyChangedCallback(object forElement)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">forElement</span></td>
+        <td><p>The element for which to get the <a class="xref" href="NationalInstruments.DynamicProperties.PropertyChangedCallback.html">PropertyChangedCallback</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DynamicProperties.PropertyChangedCallback.html">PropertyChangedCallback</a></td>
+        <td><p>The <a class="xref" href="NationalInstruments.DynamicProperties.PropertyChangedCallback.html">PropertyChangedCallback</a> of this <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html">PropertySymbol</a> for the given element.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_GetPropertyChangedCallback_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetPropertyChangedCallback*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_GetPropertyChangedCallback_System_Type_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetPropertyChangedCallback(System.Type)">GetPropertyChangedCallback(Type)</h4>
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="NationalInstruments.DynamicProperties.PropertyChangedCallback.html">PropertyChangedCallback</a> of this <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html">PropertySymbol</a> for the given type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropertyChangedCallback GetPropertyChangedCallback(Type forType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">forType</span></td>
+        <td><p>The type for which to get the <a class="xref" href="NationalInstruments.DynamicProperties.PropertyChangedCallback.html">PropertyChangedCallback</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DynamicProperties.PropertyChangedCallback.html">PropertyChangedCallback</a></td>
+        <td><p>The <a class="xref" href="NationalInstruments.DynamicProperties.PropertyChangedCallback.html">PropertyChangedCallback</a> of this <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html">PropertySymbol</a> for the given type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_GetSupportsAttachment_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetSupportsAttachment*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_GetSupportsAttachment_System_Object_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetSupportsAttachment(System.Object)">GetSupportsAttachment(Object)</h4>
+  <div class="markdown level1 summary"><p>True if this property symbol can be externally attached.  If a symbol IsPersistent, it must have a fully-qualified
+XML name to support attachment (we need a full XML name to be able to properly persist an attached property).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetSupportsAttachment(object forElement)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">forElement</span></td>
+        <td><p>The element for which we are checking if this property symbol can be externally attached.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if the property for the given element can be externally attached.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_GetSupportsAttachment_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetSupportsAttachment*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_GetSupportsAttachment_System_Type_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetSupportsAttachment(System.Type)">GetSupportsAttachment(Type)</h4>
+  <div class="markdown level1 summary"><p>True if this property symbol can be externally attached.  If a symbol IsPersistent, it must have a fully-qualified
+XML name to support attachment (we need a full XML name to be able to properly persist an attached property).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetSupportsAttachment(Type forType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">forType</span></td>
+        <td><p>The type for which we are checking if this property symbol can be externally attached.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if the property for the given type can be externally attached.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_GetValidateValueCallback_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetValidateValueCallback*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_GetValidateValueCallback_System_Object_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetValidateValueCallback(System.Object)">GetValidateValueCallback(Object)</h4>
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="NationalInstruments.DynamicProperties.ValidateValueCallback.html">ValidateValueCallback</a> of this <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html">PropertySymbol</a> for the given element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValidateValueCallback GetValidateValueCallback(object forElement)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">forElement</span></td>
+        <td><p>The element for which to get the <a class="xref" href="NationalInstruments.DynamicProperties.ValidateValueCallback.html">ValidateValueCallback</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DynamicProperties.ValidateValueCallback.html">ValidateValueCallback</a></td>
+        <td><p>The <a class="xref" href="NationalInstruments.DynamicProperties.ValidateValueCallback.html">ValidateValueCallback</a> of this <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html">PropertySymbol</a> for the given element.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_GetValidateValueCallback_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetValidateValueCallback*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_GetValidateValueCallback_System_Type_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetValidateValueCallback(System.Type)">GetValidateValueCallback(Type)</h4>
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="NationalInstruments.DynamicProperties.ValidateValueCallback.html">ValidateValueCallback</a> of this <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html">PropertySymbol</a> for the given type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValidateValueCallback GetValidateValueCallback(Type forType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">forType</span></td>
+        <td><p>The type for which to get the <a class="xref" href="NationalInstruments.DynamicProperties.ValidateValueCallback.html">ValidateValueCallback</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DynamicProperties.ValidateValueCallback.html">ValidateValueCallback</a></td>
+        <td><p>The <a class="xref" href="NationalInstruments.DynamicProperties.ValidateValueCallback.html">ValidateValueCallback</a> of this <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html">PropertySymbol</a> for the given type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_GetValueAsXmlText_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetValueAsXmlText*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_GetValueAsXmlText_System_Object_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetValueAsXmlText(System.Object)">GetValueAsXmlText(Object)</h4>
+  <div class="markdown level1 summary"><p><code>true</code> if this property is serialized as an XML sub-element of the owning type. 
+Uses special &quot;p.PropertyName&quot; notation for the XML tag.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetValueAsXmlText(object forElement)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">forElement</span></td>
+        <td><p>The element for which we are checking if this property symbol is to be serialized as an XML sub-elment of the owning type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if the property for the given element is to be serialized as an XML sub-elment of the owning type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_GetValueAsXmlText_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetValueAsXmlText*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_GetValueAsXmlText_System_Type_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.GetValueAsXmlText(System.Type)">GetValueAsXmlText(Type)</h4>
+  <div class="markdown level1 summary"><p><code>true</code> if this property is serialized as an XML sub-element of the owning type. 
+Uses special &quot;p.PropertyName&quot; notation for the XML tag.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetValueAsXmlText(Type forType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">forType</span></td>
+        <td><p>The type for which we are checking if this property symbol is to be serialized as an XML sub-elment of the owning type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if the property for the given type is to be serialized as an XML sub-elment of the owning type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_OverrideMetadata_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.OverrideMetadata*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_OverrideMetadata_NationalInstruments_DynamicProperties_PropertySymbolMetadata_System_Type_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.OverrideMetadata(NationalInstruments.DynamicProperties.PropertySymbolMetadata,System.Type)">OverrideMetadata(PropertySymbolMetadata, Type)</h4>
+  <div class="markdown level1 summary"><p>Overrides the <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html#NationalInstruments_DynamicProperties_PropertySymbol_DefaultMetadata">DefaultMetadata</a> for the given type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OverrideMetadata(PropertySymbolMetadata metadata, Type forType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbolMetadata.html">PropertySymbolMetadata</a></td>
+        <td><span class="parametername">metadata</span></td>
+        <td><p>The <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbolMetadata.html">PropertySymbolMetadata</a> that should be used for the given type.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">forType</span></td>
+        <td><p>The type for which this <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html">PropertySymbol</a>s metadata should be overridden.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_OverrideMetadataAttributes_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.OverrideMetadataAttributes*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_OverrideMetadataAttributes_NationalInstruments_DynamicProperties_PropertySymbolAttributes_NationalInstruments_DynamicProperties_PropertySymbolAttributes_System_Type_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.OverrideMetadataAttributes(NationalInstruments.DynamicProperties.PropertySymbolAttributes,NationalInstruments.DynamicProperties.PropertySymbolAttributes,System.Type)">OverrideMetadataAttributes(PropertySymbolAttributes, PropertySymbolAttributes, Type)</h4>
+  <div class="markdown level1 summary"><p>Overrides the PropertySymbolAttributes of the <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html#NationalInstruments_DynamicProperties_PropertySymbol_DefaultMetadata">DefaultMetadata</a> for the given type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OverrideMetadataAttributes(PropertySymbolAttributes toAdd, PropertySymbolAttributes toRemove, Type forType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbolAttributes.html">PropertySymbolAttributes</a></td>
+        <td><span class="parametername">toAdd</span></td>
+        <td><p>The new <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbolAttributes.html">PropertySymbolAttributes</a> to add.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbolAttributes.html">PropertySymbolAttributes</a></td>
+        <td><span class="parametername">toRemove</span></td>
+        <td><p>The <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbolAttributes.html">PropertySymbolAttributes</a> to remove.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">forType</span></td>
+        <td><p>The type for which this <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html">PropertySymbol</a>s metadata should be overridden.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_QueryService_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.QueryService*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_QueryService__1_System_Object_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.QueryService``1(System.Object)">QueryService&lt;T&gt;(Object)</h4>
+  <div class="markdown level1 summary"><p>Queries for services of the given type on this property symbol for the given element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;T&gt; QueryService&lt;T&gt;(object forElement)where T : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">forElement</span></td>
+        <td><p>The element for which we are checking if this property symbol has services.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td><p>Services for the given element matching the given type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of the service desired.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_QueryService_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.QueryService*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_QueryService__1_System_Type_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.QueryService``1(System.Type)">QueryService&lt;T&gt;(Type)</h4>
+  <div class="markdown level1 summary"><p>Queries for services of the given type on this property symbol for the given element type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;T&gt; QueryService&lt;T&gt;(Type forType)where T : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">forType</span></td>
+        <td><p>The element type for which we are checking if this property symbol has services.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td><p>Services for the given element type matching the given type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of the service desired.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_RemoveAll_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.RemoveAll*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_RemoveAll_System_Predicate_System_Object__System_Object_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.RemoveAll(System.Predicate{System.Object},System.Object)">RemoveAll(Predicate&lt;Object&gt;, Object)</h4>
+  <div class="markdown level1 summary"><p>Removes all services from the <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbolMetadata.html">PropertySymbolMetadata</a> matching the given predicate for the given element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int RemoveAll(Predicate&lt;object&gt; match, object forElement)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Predicate</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>&gt;</td>
+        <td><span class="parametername">match</span></td>
+        <td><p>The predicate to be called to determine which services should be removed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">forElement</span></td>
+        <td><p>The element owning the metadata on which services will be removed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>The number of services removed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_RemoveAll_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.RemoveAll*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_RemoveAll_System_Predicate_System_Object__System_Type_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.RemoveAll(System.Predicate{System.Object},System.Type)">RemoveAll(Predicate&lt;Object&gt;, Type)</h4>
+  <div class="markdown level1 summary"><p>Removes all services from the <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbolMetadata.html">PropertySymbolMetadata</a> matching the given predicate for the given element type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int RemoveAll(Predicate&lt;object&gt; match, Type forType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Predicate</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>&gt;</td>
+        <td><span class="parametername">match</span></td>
+        <td><p>The predicate to be called to determine which services should be removed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">forType</span></td>
+        <td><p>The element type owning the metadata on which services will be removed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>The number of services removed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_RemoveService_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.RemoveService*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_RemoveService_System_Object_System_Object_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.RemoveService(System.Object,System.Object)">RemoveService(Object, Object)</h4>
+  <div class="markdown level1 summary"><p>Removes a service from the <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbolMetadata.html">PropertySymbolMetadata</a> for the given element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemoveService(object service, object forElement)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">service</span></td>
+        <td><p>The service to remove.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">forElement</span></td>
+        <td><p>The element owning the metadata from which the service will be removed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if the service was found and removed.  <code>false</code> if the service was not found.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_RemoveService_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.RemoveService*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_RemoveService_System_Object_System_Type_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.RemoveService(System.Object,System.Type)">RemoveService(Object, Type)</h4>
+  <div class="markdown level1 summary"><p>Removes a service from the <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbolMetadata.html">PropertySymbolMetadata</a> for the given element type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemoveService(object service, Type forType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">service</span></td>
+        <td><p>The service to remove.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">forType</span></td>
+        <td><p>The element type owning the metadata from which the service will be removed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if the service was found and removed.  <code>false</code> if the service was not found.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_SetService_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.SetService*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_SetService__1_System_Object_System_Object_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.SetService``1(System.Object,System.Object)">SetService&lt;T&gt;(Object, Object)</h4>
+  <div class="markdown level1 summary"><p>Sets a service on the <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbolMetadata.html">PropertySymbolMetadata</a> for the given element.  Removes all other service of type T.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetService&lt;T&gt;(object service, object forElement)where T : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">service</span></td>
+        <td><p>The service to set.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">forElement</span></td>
+        <td><p>The element owning the metadata on which the service will be set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of the service to set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_SetService_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.SetService*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_SetService__1_System_Object_System_Type_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.SetService``1(System.Object,System.Type)">SetService&lt;T&gt;(Object, Type)</h4>
+  <div class="markdown level1 summary"><p>Sets a service on the <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbolMetadata.html">PropertySymbolMetadata</a> for the given element type.  Removes all other service of type T.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetService&lt;T&gt;(object service, Type forType)where T : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">service</span></td>
+        <td><p>The service to set.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">forType</span></td>
+        <td><p>The element type owning the metadata on which the service will be set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of the service to set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_TryGetMetadataForType_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.TryGetMetadataForType*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_TryGetMetadataForType_System_Type_NationalInstruments_DynamicProperties_PropertySymbolMetadata__" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.TryGetMetadataForType(System.Type,NationalInstruments.DynamicProperties.PropertySymbolMetadata@)">TryGetMetadataForType(Type, out PropertySymbolMetadata)</h4>
+  <div class="markdown level1 summary"><p>Tries to get <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbolMetadata.html">PropertySymbolMetadata</a> for the given type.  If the type has not 
+overridden metadata on this symbol, this method will return <code>false</code>.  If the given type
+is the type that owns this symbol, <code>true</code> will be returned with the <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html#NationalInstruments_DynamicProperties_PropertySymbol_DefaultMetadata">DefaultMetadata</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetMetadataForType(Type forType, out PropertySymbolMetadata metadata)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">forType</span></td>
+        <td><p>The <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a> to check for overridden property metadata.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbolMetadata.html">PropertySymbolMetadata</a></td>
+        <td><span class="parametername">metadata</span></td>
+        <td><p>On return, either the metadata associated with the given type, or <code>null</code> if the given type has not 
+overridden metadata on this symbol.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if the given type has overridden property metadata.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DynamicProperties_PropertySymbol_WithService_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.WithService*"></a>
+  <h4 id="NationalInstruments_DynamicProperties_PropertySymbol_WithService_System_Object_System_Type_" data-uid="NationalInstruments.DynamicProperties.PropertySymbol.WithService(System.Object,System.Type)">WithService(Object, Type)</h4>
+  <div class="markdown level1 summary"><p>Attaches a service to the <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbolMetadata.html">PropertySymbolMetadata</a> for the given element type. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropertySymbol WithService(object service, Type forType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">service</span></td>
+        <td><p>The service to attach.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">forType</span></td>
+        <td><p>The element type owning the metadata on which the service will be attached.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html">PropertySymbol</a></td>
+        <td><p>The instance of <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html">PropertySymbol</a> on which this method was called.  This is useful for chaining service attachments.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_DynamicProperties_PropertySymbol_WithService_System_Object_System_Type__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This does the same work as <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html#NationalInstruments_DynamicProperties_PropertySymbol_AttachService_System_Object_System_Type_">AttachService(Object, Type)</a>, but returns the <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html">PropertySymbol</a>
+on which it was called.  This is useful for attaching services by chainging these calls when declaring a new 
+<a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html">PropertySymbol</a>.</p>
+<p>If the given type has not overridden metadata on the property symbol, overridden metadata will be added.
+This means that no further overrides of metadata can be performed on the property symbol for that type, 
+so ensure you&apos;ve already called <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbol.html#NationalInstruments_DynamicProperties_PropertySymbol_OverrideMetadata_NationalInstruments_DynamicProperties_PropertySymbolMetadata_System_Type_">OverrideMetadata(PropertySymbolMetadata, Type)</a> before calling this method
+if you need to override other property symbol metadata.  This method can be called multiple times to 
+attach multiple services to for the given type.</p>
+</div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_ToEnumerable__1___0_">EnumerableHelper.ToEnumerable&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_Repeat__1___0_System_Int32_">EnumerableHelper.Repeat&lt;T&gt;(T, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyNothing__1___0_">Verifier.VerifyNothing&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Func___0_System_Boolean__System_Action_System_String__System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Func___0_System_Boolean__System_Action_System_String_System_String__System_String_System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Boolean_System_Action_System_String__System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Boolean, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Boolean_System_Action_System_String_System_String__System_String_System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Boolean, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Func___0_System_Boolean__System_Action_System_String__System_String_">Verifier.Verify&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Func___0_System_Boolean__System_Action_System_String_System_String__System_String_System_String_">Verifier.Verify&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Boolean_System_Action_System_String__System_String_">Verifier.Verify&lt;T&gt;(T, Boolean, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Boolean_System_Action_System_String_System_String__System_String_System_String_">Verifier.Verify&lt;T&gt;(T, Boolean, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentIsNotNull__1___0_System_String_">Verifier.VerifyArgumentIsNotNull&lt;T&gt;(T, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyValueIsNotNull__1___0_System_String_">Verifier.VerifyValueIsNotNull&lt;T&gt;(T, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentNotReferenceEqualsTo_System_Object_System_Object_System_String_">Verifier.VerifyArgumentNotReferenceEqualsTo(Object, Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyValueNotReferenceEqualsTo_System_Object_System_Object_System_String_">Verifier.VerifyValueNotReferenceEqualsTo(Object, Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentIsOfType__1_System_Object_System_String_">Verifier.VerifyArgumentIsOfType&lt;T&gt;(Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyValueIsOfType__1_System_Object_System_String_">Verifier.VerifyValueIsOfType&lt;T&gt;(Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.QueryServiceExtensions.html#NationalInstruments_Core_QueryServiceExtensions_QueryService__1_System_Object_">QueryServiceExtensions.QueryService&lt;T&gt;(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_FindClosestMatchingContainerForResource_System_Object_System_Func_System_Object_System_Globalization_CultureInfo_System_Object__System_Globalization_CultureInfo_">LocalizationHelpers.FindClosestMatchingContainerForResource(Object, Func&lt;Object, CultureInfo, Object&gt;, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_FindClosestMatchingContainerForResource_System_Object_System_Func_System_Object_System_Globalization_CultureInfo_System_Object__System_Globalization_CultureInfo_System_Func_System_Object_System_Object__">LocalizationHelpers.FindClosestMatchingContainerForResource(Object, Func&lt;Object, CultureInfo, Object&gt;, CultureInfo, Func&lt;Object, Object&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedEnumString__1___0_">LocalizationHelpers.GetLocalizedEnumString&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedString_System_Object_System_String_System_Globalization_CultureInfo_">LocalizationHelpers.GetLocalizedString(Object, String, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedString_System_Object_System_String_System_Boolean_System_Globalization_CultureInfo_">LocalizationHelpers.GetLocalizedString(Object, String, Boolean, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbolServiceFactoryHelpers.html#NationalInstruments_DynamicProperties_PropertySymbolServiceFactoryHelpers_WithExportedService__2_NationalInstruments_DynamicProperties_PropertySymbol_NationalInstruments_DynamicProperties_PropertySymbolServiceFactory___0___1__">PropertySymbolServiceFactoryHelpers.WithExportedService&lt;TService, TFactory&gt;(PropertySymbol, PropertySymbolServiceFactory&lt;TService, TFactory&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.PropertySymbolServiceFactoryHelpers.html#NationalInstruments_DynamicProperties_PropertySymbolServiceFactoryHelpers_AttachExportedService__2_NationalInstruments_DynamicProperties_PropertySymbol_NationalInstruments_DynamicProperties_PropertySymbolServiceFactory___0___1__System_Type_">PropertySymbolServiceFactoryHelpers.AttachExportedService&lt;TService, TFactory&gt;(PropertySymbol, PropertySymbolServiceFactory&lt;TService, TFactory&gt;, Type)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_SetPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_System_Object_">DynamicPropertyExtensions.SetPropertyValue(Object, PropertySymbol, Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.GetPropertyValue(Object, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_ClearPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.ClearPropertyValue(Object, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_IsPropertySet_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.IsPropertySet(Object, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetAllSetProperties_System_Object_">DynamicPropertyExtensions.GetAllSetProperties(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetAllProperties_System_Object_">DynamicPropertyExtensions.GetAllProperties(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

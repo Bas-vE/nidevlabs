@@ -1,0 +1,1851 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class RecursiveTypeSafeWalker
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class RecursiveTypeSafeWalker
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker">
+  
+  
+  <h1 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker" class="text-break">Class RecursiveTypeSafeWalker
+  </h1>
+  <div class="markdown level0 summary"><p>A type walker that will safely walk a type that contains recursive references</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html">BaseNITypeWalker</a></div>
+    <div class="level2"><span class="xref">RecursiveTypeSafeWalker</span></div>
+      <div class="level3"><a class="xref" href="../pf/NationalInstruments.DataTypes.FindEventTypeWalker.html">FindEventTypeWalker</a></div>
+      <div class="level3"><a class="xref" href="NationalInstruments.DataTypes.NITypeXmlGeneratorWalker.html">NITypeXmlGeneratorWalker</a></div>
+      <div class="level3"><a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.html">RecursiveTypeBuilderWalker</a></div>
+      <div class="level3"><a class="xref" href="../pf/NationalInstruments.DataTypes.ReplaceEventTypeWalker.html">ReplaceEventTypeWalker</a></div>
+      <div class="level3"><a class="xref" href="NationalInstruments.DataTypes.TypeHasNonPersistedAttributes.html">TypeHasNonPersistedAttributes</a></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="NationalInstruments.DataTypes.INITypeVisitor.html">INITypeVisitor</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitAttributedTypeProperty_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitAttributedTypeProperty(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitBaseTypeProperty_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitBaseTypeProperty(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitConstraintsProperty_System_Collections_Generic_IReadOnlyCollection_NationalInstruments_DataTypes_NIType__">BaseNITypeWalker.VisitConstraintsProperty(IReadOnlyCollection&lt;NIType&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitDataTypeProperty_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitDataTypeProperty(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitDeclaringTypeProperty_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitDeclaringTypeProperty(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitDereferenceTypeProperty_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitDereferenceTypeProperty(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitGenericParametersProperty_System_Collections_Generic_IReadOnlyCollection_NationalInstruments_DataTypes_NIType__System_Boolean_">BaseNITypeWalker.VisitGenericParametersProperty(IReadOnlyCollection&lt;NIType&gt;, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitGenericTypeDefinitionProperty_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitGenericTypeDefinitionProperty(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitInterfacesProperty_System_Collections_Generic_IReadOnlyCollection_NationalInstruments_DataTypes_NIType__">BaseNITypeWalker.VisitInterfacesProperty(IReadOnlyCollection&lt;NIType&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitMembersProperty_System_Collections_Generic_IReadOnlyCollection_NationalInstruments_DataTypes_NIType__">BaseNITypeWalker.VisitMembersProperty(IReadOnlyCollection&lt;NIType&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitParametersProperty_System_Collections_Generic_IReadOnlyCollection_NationalInstruments_DataTypes_NIType__">BaseNITypeWalker.VisitParametersProperty(IReadOnlyCollection&lt;NIType&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitReturnTypeProperty_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitReturnTypeProperty(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitUnderlyingTypeProperty_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitUnderlyingTypeProperty(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitKindWithNoTypeProperties_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitKindWithNoTypeProperties(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_DispatchToType_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.DispatchToType(VisitedNIType)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_ShouldStopIteratingOverPropertyItems">BaseNITypeWalker.ShouldStopIteratingOverPropertyItems</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitPropertyItems_System_Collections_Generic_IReadOnlyCollection_NationalInstruments_DataTypes_NIType__">BaseNITypeWalker.VisitPropertyItems(IReadOnlyCollection&lt;NIType&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitAttributeValuesProperty_System_Collections_Generic_IEnumerable_NationalInstruments_DataTypes_AttributeValue__">BaseNITypeWalker.VisitAttributeValuesProperty(IEnumerable&lt;AttributeValue&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.DataTypes.html">NationalInstruments.DataTypes</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.Core.dll</h6>
+  <h5 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class RecursiveTypeSafeWalker : BaseNITypeWalker, INITypeVisitor</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_IsRecursiveBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.IsRecursiveBuilder*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_IsRecursiveBuilder_NationalInstruments_DataTypes_NITypeBuilder_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.IsRecursiveBuilder(NationalInstruments.DataTypes.NITypeBuilder)">IsRecursiveBuilder(NITypeBuilder)</h4>
+  <div class="markdown level1 summary"><p>Determine whether the type has already been visited.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool IsRecursiveBuilder(NITypeBuilder builder)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.NITypeBuilder.html">NITypeBuilder</a></td>
+        <td><span class="parametername">builder</span></td>
+        <td><p>The typebuilder to check</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if the type has already been visited at any point, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_IsRecursiveType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.IsRecursiveType*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_IsRecursiveType_NationalInstruments_DataTypes_NIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.IsRecursiveType(NationalInstruments.DataTypes.NIType)">IsRecursiveType(NIType)</h4>
+  <div class="markdown level1 summary"><p>Determine whether the type has already been visited.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool IsRecursiveType(NIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.NIType.html">NIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The type to check</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if the type has already been visited at any point, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_PostWalk_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.PostWalk*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_PostWalk_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.PostWalk(NationalInstruments.DataTypes.VisitedNIType)">PostWalk(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>Called after visiting a type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void PostWalk(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The type that was visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_PreWalk_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.PreWalk*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_PreWalk_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.PreWalk(NationalInstruments.DataTypes.VisitedNIType)">PreWalk(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>Called before visiting the type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void PreWalk(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The type that will be visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitAttributed_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitAttributed*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitAttributed_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitAttributed(NationalInstruments.DataTypes.VisitedNIType)">VisitAttributed(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a type of the Attributed kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitAttributed(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the type being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitAttributed_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitAttributed(VisitedNIType)</a></div>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitBigComplexFixedPoint_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitBigComplexFixedPoint*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitBigComplexFixedPoint_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitBigComplexFixedPoint(NationalInstruments.DataTypes.VisitedNIType)">VisitBigComplexFixedPoint(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a type of the BigComplexFixedPoint kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitBigComplexFixedPoint(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the type being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitBigComplexFixedPoint_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitBigComplexFixedPoint(VisitedNIType)</a></div>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitBigFixedPoint_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitBigFixedPoint*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitBigFixedPoint_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitBigFixedPoint(NationalInstruments.DataTypes.VisitedNIType)">VisitBigFixedPoint(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a type of the BigFixedPoint kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitBigFixedPoint(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the type being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitBigFixedPoint_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitBigFixedPoint(VisitedNIType)</a></div>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitBigInt_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitBigInt*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitBigInt_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitBigInt(NationalInstruments.DataTypes.VisitedNIType)">VisitBigInt(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a type of the BigInt kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitBigInt(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the type being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitBigInt_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitBigInt(VisitedNIType)</a></div>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitBit_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitBit*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitBit_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitBit(NationalInstruments.DataTypes.VisitedNIType)">VisitBit(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a type of the Bit kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitBit(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the type being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitBit_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitBit(VisitedNIType)</a></div>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitBoolean_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitBoolean*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitBoolean_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitBoolean(NationalInstruments.DataTypes.VisitedNIType)">VisitBoolean(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a type of the Boolean kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitBoolean(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the type being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitBoolean_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitBoolean(VisitedNIType)</a></div>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitComplexDouble_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitComplexDouble*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitComplexDouble_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitComplexDouble(NationalInstruments.DataTypes.VisitedNIType)">VisitComplexDouble(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a type of the ComplexDouble kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitComplexDouble(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the type being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitComplexDouble_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitComplexDouble(VisitedNIType)</a></div>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitComplexExtended_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitComplexExtended*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitComplexExtended_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitComplexExtended(NationalInstruments.DataTypes.VisitedNIType)">VisitComplexExtended(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a type of the ComplexExtended kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitComplexExtended(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the type being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitComplexExtended_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitComplexExtended(VisitedNIType)</a></div>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitComplexSingle_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitComplexSingle*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitComplexSingle_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitComplexSingle(NationalInstruments.DataTypes.VisitedNIType)">VisitComplexSingle(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a type of the ComplexSingle kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitComplexSingle(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the type being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitComplexSingle_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitComplexSingle(VisitedNIType)</a></div>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitComposite_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitComposite*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitComposite_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitComposite(NationalInstruments.DataTypes.VisitedNIType)">VisitComposite(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a type of the Composite kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitComposite(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the type being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitComposite_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitComposite(VisitedNIType)</a></div>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitDouble_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitDouble*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitDouble_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitDouble(NationalInstruments.DataTypes.VisitedNIType)">VisitDouble(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a type of the Double kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitDouble(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the type being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitDouble_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitDouble(VisitedNIType)</a></div>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitEnumeration_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitEnumeration*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitEnumeration_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitEnumeration(NationalInstruments.DataTypes.VisitedNIType)">VisitEnumeration(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a type of the Enumeration kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitEnumeration(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the type being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitEnumeration_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitEnumeration(VisitedNIType)</a></div>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitEnumerationMember_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitEnumerationMember*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitEnumerationMember_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitEnumerationMember(NationalInstruments.DataTypes.VisitedNIType)">VisitEnumerationMember(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a type of the EnumerationMember kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitEnumerationMember(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the type being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitEnumerationMember_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitEnumerationMember(VisitedNIType)</a></div>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitEvent_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitEvent*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitEvent_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitEvent(NationalInstruments.DataTypes.VisitedNIType)">VisitEvent(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a type of the Event kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitEvent(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the type being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitEvent_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitEvent(VisitedNIType)</a></div>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitExtended_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitExtended*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitExtended_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitExtended(NationalInstruments.DataTypes.VisitedNIType)">VisitExtended(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a type of the Extended kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitExtended(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the type being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitExtended_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitExtended(VisitedNIType)</a></div>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitField_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitField*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitField_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitField(NationalInstruments.DataTypes.VisitedNIType)">VisitField(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a type of the Field kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitField(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the type being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitField_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitField(VisitedNIType)</a></div>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitFunction_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitFunction*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitFunction_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitFunction(NationalInstruments.DataTypes.VisitedNIType)">VisitFunction(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a type of the Function kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitFunction(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the type being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitFunction_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitFunction(VisitedNIType)</a></div>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitGeneric_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitGeneric*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitGeneric_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitGeneric(NationalInstruments.DataTypes.VisitedNIType)">VisitGeneric(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a type of the Generic kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitGeneric(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the type being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitGeneric_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitGeneric(VisitedNIType)</a></div>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitIncorrect_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitIncorrect*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitIncorrect_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitIncorrect(NationalInstruments.DataTypes.VisitedNIType)">VisitIncorrect(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a type of the Incorrect kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitIncorrect(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the type being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitIncorrect_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitIncorrect(VisitedNIType)</a></div>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitInt16_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitInt16*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitInt16_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitInt16(NationalInstruments.DataTypes.VisitedNIType)">VisitInt16(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a type of the Int16 kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitInt16(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the type being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitInt16_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitInt16(VisitedNIType)</a></div>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitInt32_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitInt32*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitInt32_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitInt32(NationalInstruments.DataTypes.VisitedNIType)">VisitInt32(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a type of the Int32 kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitInt32(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the type being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitInt32_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitInt32(VisitedNIType)</a></div>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitInt64_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitInt64*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitInt64_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitInt64(NationalInstruments.DataTypes.VisitedNIType)">VisitInt64(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a type of the Int64 kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitInt64(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the type being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitInt64_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitInt64(VisitedNIType)</a></div>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitInt8_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitInt8*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitInt8_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitInt8(NationalInstruments.DataTypes.VisitedNIType)">VisitInt8(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a type of the Int8 kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitInt8(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the type being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitInt8_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitInt8(VisitedNIType)</a></div>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitParameter_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitParameter*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitParameter_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitParameter(NationalInstruments.DataTypes.VisitedNIType)">VisitParameter(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a type of the Parameter kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitParameter(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the type being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitParameter_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitParameter(VisitedNIType)</a></div>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitPointer_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitPointer*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitPointer_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitPointer(NationalInstruments.DataTypes.VisitedNIType)">VisitPointer(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a type of the Pointer kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitPointer(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the type being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitPointer_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitPointer(VisitedNIType)</a></div>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitProperty_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitProperty*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitProperty_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitProperty(NationalInstruments.DataTypes.VisitedNIType)">VisitProperty(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a type of the Property kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitProperty(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the type being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitProperty_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitProperty(VisitedNIType)</a></div>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitSignedComplexFixedPoint_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitSignedComplexFixedPoint*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitSignedComplexFixedPoint_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitSignedComplexFixedPoint(NationalInstruments.DataTypes.VisitedNIType)">VisitSignedComplexFixedPoint(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a type of the SignedComplexFixedPoint kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitSignedComplexFixedPoint(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the type being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitSignedComplexFixedPoint_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitSignedComplexFixedPoint(VisitedNIType)</a></div>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitSignedFixedPoint_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitSignedFixedPoint*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitSignedFixedPoint_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitSignedFixedPoint(NationalInstruments.DataTypes.VisitedNIType)">VisitSignedFixedPoint(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a type of the SignedFixedPoint kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitSignedFixedPoint(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the type being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitSignedFixedPoint_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitSignedFixedPoint(VisitedNIType)</a></div>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitSingle_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitSingle*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitSingle_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitSingle(NationalInstruments.DataTypes.VisitedNIType)">VisitSingle(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a type of the Single kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitSingle(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the type being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitSingle_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitSingle(VisitedNIType)</a></div>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitSizedArray_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitSizedArray*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitSizedArray_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitSizedArray(NationalInstruments.DataTypes.VisitedNIType)">VisitSizedArray(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a type of the SizedArray kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitSizedArray(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the type being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitSizedArray_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitSizedArray(VisitedNIType)</a></div>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitSizedInt_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitSizedInt*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitSizedInt_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitSizedInt(NationalInstruments.DataTypes.VisitedNIType)">VisitSizedInt(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a type of the SizedInt kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitSizedInt(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the type being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitSizedInt_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitSizedInt(VisitedNIType)</a></div>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitSizedUInt_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitSizedUInt*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitSizedUInt_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitSizedUInt(NationalInstruments.DataTypes.VisitedNIType)">VisitSizedUInt(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a type of the SizedUInt kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitSizedUInt(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the type being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitSizedUInt_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitSizedUInt(VisitedNIType)</a></div>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitString_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitString*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitString_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitString(NationalInstruments.DataTypes.VisitedNIType)">VisitString(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a type of the String kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitString(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the type being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitString_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitString(VisitedNIType)</a></div>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitTypedef_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitTypedef*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitTypedef_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitTypedef(NationalInstruments.DataTypes.VisitedNIType)">VisitTypedef(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a type of the Typedef kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitTypedef(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the type being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitTypedef_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitTypedef(VisitedNIType)</a></div>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitUInt16_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitUInt16*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitUInt16_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitUInt16(NationalInstruments.DataTypes.VisitedNIType)">VisitUInt16(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a type of the UInt16 kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitUInt16(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the type being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitUInt16_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitUInt16(VisitedNIType)</a></div>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitUInt32_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitUInt32*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitUInt32_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitUInt32(NationalInstruments.DataTypes.VisitedNIType)">VisitUInt32(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a type of the UInt32 kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitUInt32(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the type being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitUInt32_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitUInt32(VisitedNIType)</a></div>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitUInt64_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitUInt64*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitUInt64_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitUInt64(NationalInstruments.DataTypes.VisitedNIType)">VisitUInt64(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a type of the UInt64 kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitUInt64(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the type being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitUInt64_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitUInt64(VisitedNIType)</a></div>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitUInt8_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitUInt8*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitUInt8_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitUInt8(NationalInstruments.DataTypes.VisitedNIType)">VisitUInt8(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a type of the UInt8 kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitUInt8(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the type being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitUInt8_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitUInt8(VisitedNIType)</a></div>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitUnicodeChar_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitUnicodeChar*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitUnicodeChar_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitUnicodeChar(NationalInstruments.DataTypes.VisitedNIType)">VisitUnicodeChar(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a type of the UnicodeChar kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitUnicodeChar(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the type being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitUnicodeChar_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitUnicodeChar(VisitedNIType)</a></div>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitUnion_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitUnion*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitUnion_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitUnion(NationalInstruments.DataTypes.VisitedNIType)">VisitUnion(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a type of the Union kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitUnion(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the type being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitUnion_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitUnion(VisitedNIType)</a></div>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitUnknown_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitUnknown*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitUnknown_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitUnknown(NationalInstruments.DataTypes.VisitedNIType)">VisitUnknown(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a type of the Unknown kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitUnknown(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the type being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitUnknown_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitUnknown(VisitedNIType)</a></div>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitUnsignedComplexFixedPoint_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitUnsignedComplexFixedPoint*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitUnsignedComplexFixedPoint_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitUnsignedComplexFixedPoint(NationalInstruments.DataTypes.VisitedNIType)">VisitUnsignedComplexFixedPoint(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a type of the UnsignedComplexFixedPoint kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitUnsignedComplexFixedPoint(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the type being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitUnsignedComplexFixedPoint_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitUnsignedComplexFixedPoint(VisitedNIType)</a></div>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitUnsignedFixedPoint_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitUnsignedFixedPoint*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitUnsignedFixedPoint_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitUnsignedFixedPoint(NationalInstruments.DataTypes.VisitedNIType)">VisitUnsignedFixedPoint(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a type of the UnsignedFixedPoint kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitUnsignedFixedPoint(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the type being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitUnsignedFixedPoint_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitUnsignedFixedPoint(VisitedNIType)</a></div>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitVariableArray_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitVariableArray*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitVariableArray_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitVariableArray(NationalInstruments.DataTypes.VisitedNIType)">VisitVariableArray(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a type of the VariableArray kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitVariableArray(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the type being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitVariableArray_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitVariableArray(VisitedNIType)</a></div>
+  
+  
+  <a id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitVoid_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitVoid*"></a>
+  <h4 id="NationalInstruments_DataTypes_RecursiveTypeSafeWalker_VisitVoid_NationalInstruments_DataTypes_VisitedNIType_" data-uid="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.VisitVoid(NationalInstruments.DataTypes.VisitedNIType)">VisitVoid(VisitedNIType)</h4>
+  <div class="markdown level1 summary"><p>The function to visit a type of the Void kind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VisitVoid(VisitedNIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the type being visited</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html#NationalInstruments_DataTypes_BaseNITypeWalker_VisitVoid_NationalInstruments_DataTypes_VisitedNIType_">BaseNITypeWalker.VisitVoid(VisitedNIType)</a></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.INITypeVisitor.html">INITypeVisitor</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_ToEnumerable__1___0_">EnumerableHelper.ToEnumerable&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_Repeat__1___0_System_Int32_">EnumerableHelper.Repeat&lt;T&gt;(T, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyNothing__1___0_">Verifier.VerifyNothing&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Func___0_System_Boolean__System_Action_System_String__System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Func___0_System_Boolean__System_Action_System_String_System_String__System_String_System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Boolean_System_Action_System_String__System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Boolean, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Boolean_System_Action_System_String_System_String__System_String_System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Boolean, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Func___0_System_Boolean__System_Action_System_String__System_String_">Verifier.Verify&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Func___0_System_Boolean__System_Action_System_String_System_String__System_String_System_String_">Verifier.Verify&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Boolean_System_Action_System_String__System_String_">Verifier.Verify&lt;T&gt;(T, Boolean, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Boolean_System_Action_System_String_System_String__System_String_System_String_">Verifier.Verify&lt;T&gt;(T, Boolean, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentIsNotNull__1___0_System_String_">Verifier.VerifyArgumentIsNotNull&lt;T&gt;(T, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyValueIsNotNull__1___0_System_String_">Verifier.VerifyValueIsNotNull&lt;T&gt;(T, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentNotReferenceEqualsTo_System_Object_System_Object_System_String_">Verifier.VerifyArgumentNotReferenceEqualsTo(Object, Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyValueNotReferenceEqualsTo_System_Object_System_Object_System_String_">Verifier.VerifyValueNotReferenceEqualsTo(Object, Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentIsOfType__1_System_Object_System_String_">Verifier.VerifyArgumentIsOfType&lt;T&gt;(Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyValueIsOfType__1_System_Object_System_String_">Verifier.VerifyValueIsOfType&lt;T&gt;(Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.QueryServiceExtensions.html#NationalInstruments_Core_QueryServiceExtensions_QueryService__1_System_Object_">QueryServiceExtensions.QueryService&lt;T&gt;(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_FindClosestMatchingContainerForResource_System_Object_System_Func_System_Object_System_Globalization_CultureInfo_System_Object__System_Globalization_CultureInfo_">LocalizationHelpers.FindClosestMatchingContainerForResource(Object, Func&lt;Object, CultureInfo, Object&gt;, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_FindClosestMatchingContainerForResource_System_Object_System_Func_System_Object_System_Globalization_CultureInfo_System_Object__System_Globalization_CultureInfo_System_Func_System_Object_System_Object__">LocalizationHelpers.FindClosestMatchingContainerForResource(Object, Func&lt;Object, CultureInfo, Object&gt;, CultureInfo, Func&lt;Object, Object&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedEnumString__1___0_">LocalizationHelpers.GetLocalizedEnumString&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedString_System_Object_System_String_System_Globalization_CultureInfo_">LocalizationHelpers.GetLocalizedString(Object, String, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedString_System_Object_System_String_System_Boolean_System_Globalization_CultureInfo_">LocalizationHelpers.GetLocalizedString(Object, String, Boolean, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_SetPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_System_Object_">DynamicPropertyExtensions.SetPropertyValue(Object, PropertySymbol, Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.GetPropertyValue(Object, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_ClearPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.ClearPropertyValue(Object, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_IsPropertySet_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.IsPropertySet(Object, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetAllSetProperties_System_Object_">DynamicPropertyExtensions.GetAllSetProperties(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetAllProperties_System_Object_">DynamicPropertyExtensions.GetAllProperties(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

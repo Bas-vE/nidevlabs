@@ -1,0 +1,825 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DependencyTargetExportService
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DependencyTargetExportService
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.SourceModel.DependencyTargetExportService">
+  
+  
+  <h1 id="NationalInstruments_SourceModel_DependencyTargetExportService" data-uid="NationalInstruments.SourceModel.DependencyTargetExportService" class="text-break">Class DependencyTargetExportService
+  </h1>
+  <div class="markdown level0 summary"><p>Base envoy service for services that wants to implement IDependencyTargetExport</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html">EnvoyService</a></div>
+    <div class="level2"><span class="xref">DependencyTargetExportService</span></div>
+      <div class="level3"><a class="xref" href="NationalInstruments.SourceModel.MethodCallTargetService.html">MethodCallTargetService</a></div>
+      <div class="level3"><a class="xref" href="NationalInstruments.SourceModel.SimpleDependencyExportService.html">SimpleDependencyExportService</a></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="NationalInstruments.SourceModel.IDependencyTargetExport.html">IDependencyTargetExport</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_ProvidesInterface_System_Collections_Generic_IDictionary_System_String_System_Object__System_Type_">EnvoyService.ProvidesInterface(IDictionary&lt;String, Object&gt;, Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_AssociatedEnvoy">EnvoyService.AssociatedEnvoy</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_Project">EnvoyService.Project</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_Host">EnvoyService.Host</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_Detaching_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.Detaching(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_Detach_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.Detach(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_ProjectSaveAsync_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.ProjectSaveAsync(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_ProjectClose_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.ProjectClose(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_ModelLoaded_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.ModelLoaded(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_ModelClosing_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.ModelClosing(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_ModelClosed_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.ModelClosed(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_ModelSavedAsync_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.ModelSavedAsync(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_ModelSavingAsync_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.ModelSavingAsync(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_OnDetaching_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.OnDetaching(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_OnProjectSaveAsync_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.OnProjectSaveAsync(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_OnProjectClose_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.OnProjectClose(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_OnModelClosed_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.OnModelClosed(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_OnModelSavingAsync_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.OnModelSavingAsync(Envoy)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_OnModelSavedAsync_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.OnModelSavedAsync(Envoy)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.SourceModel.html">NationalInstruments.SourceModel</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_SourceModel_DependencyTargetExportService_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class DependencyTargetExportService : EnvoyService, IDependencyTargetExport</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="NationalInstruments_SourceModel_DependencyTargetExportService_ExportsPropertyName" data-uid="NationalInstruments.SourceModel.DependencyTargetExportService.ExportsPropertyName">ExportsPropertyName</h4>
+  <div class="markdown level1 summary"><p>const string that should be used to notify exports changes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly string ExportsPropertyName</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_DependencyTargetExportService_Initialized_" data-uid="NationalInstruments.SourceModel.DependencyTargetExportService.Initialized*"></a>
+  <h4 id="NationalInstruments_SourceModel_DependencyTargetExportService_Initialized" data-uid="NationalInstruments.SourceModel.DependencyTargetExportService.Initialized">Initialized</h4>
+  <div class="markdown level1 summary"><p>Gets the state of the initialization.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract bool Initialized { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_DependencyTargetExportService_Target_" data-uid="NationalInstruments.SourceModel.DependencyTargetExportService.Target*"></a>
+  <h4 id="NationalInstruments_SourceModel_DependencyTargetExportService_Target" data-uid="NationalInstruments.SourceModel.DependencyTargetExportService.Target">Target</h4>
+  <div class="markdown level1 summary"><p>The target envoy. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Envoy Target { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_DependencyTargetExportService_TargetElement_" data-uid="NationalInstruments.SourceModel.DependencyTargetExportService.TargetElement*"></a>
+  <h4 id="NationalInstruments_SourceModel_DependencyTargetExportService_TargetElement" data-uid="NationalInstruments.SourceModel.DependencyTargetExportService.TargetElement">TargetElement</h4>
+  <div class="markdown level1 summary"><p>The associated target element</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract Element TargetElement { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_DependencyTargetExportService_AddObserver_" data-uid="NationalInstruments.SourceModel.DependencyTargetExportService.AddObserver*"></a>
+  <h4 id="NationalInstruments_SourceModel_DependencyTargetExportService_AddObserver_NationalInstruments_SourceModel_IDependencyTargetExportChanged_System_Collections_Generic_IEnumerable_System_String__" data-uid="NationalInstruments.SourceModel.DependencyTargetExportService.AddObserver(NationalInstruments.SourceModel.IDependencyTargetExportChanged,System.Collections.Generic.IEnumerable{System.String})">AddObserver(IDependencyTargetExportChanged, IEnumerable&lt;String&gt;)</h4>
+  <div class="markdown level1 summary"><p>Start observing change in exports</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void AddObserver(IDependencyTargetExportChanged observer, IEnumerable&lt;string&gt; propertyNames)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.IDependencyTargetExportChanged.html">IDependencyTargetExportChanged</a></td>
+        <td><span class="parametername">observer</span></td>
+        <td><p>Observer seeking to get notifications when exports are changed</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="parametername">propertyNames</span></td>
+        <td><p>Names of the items/properties within exports to observe. Can be null</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_DependencyTargetExportService_GetExportChangesFromTransaction_" data-uid="NationalInstruments.SourceModel.DependencyTargetExportService.GetExportChangesFromTransaction*"></a>
+  <h4 id="NationalInstruments_SourceModel_DependencyTargetExportService_GetExportChangesFromTransaction_NationalInstruments_SourceModel_TransactionEventArgs_" data-uid="NationalInstruments.SourceModel.DependencyTargetExportService.GetExportChangesFromTransaction(NationalInstruments.SourceModel.TransactionEventArgs)">GetExportChangesFromTransaction(TransactionEventArgs)</h4>
+  <div class="markdown level1 summary"><p>Override this method in order to examine any transactions that have occurred in order to see if any exports of this service have changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IEnumerable&lt;string&gt; GetExportChangesFromTransaction(TransactionEventArgs e)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TransactionEventArgs.html">TransactionEventArgs</a></td>
+        <td><span class="parametername">e</span></td>
+        <td><p>TransactionEventArgs that describe the changes made to the model</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><p>Enumeration of the exported properties from this service that changed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_DependencyTargetExportService_GetObserversToNotifyOnStateChange_" data-uid="NationalInstruments.SourceModel.DependencyTargetExportService.GetObserversToNotifyOnStateChange*"></a>
+  <h4 id="NationalInstruments_SourceModel_DependencyTargetExportService_GetObserversToNotifyOnStateChange_System_Collections_Generic_IEnumerable_System_String__" data-uid="NationalInstruments.SourceModel.DependencyTargetExportService.GetObserversToNotifyOnStateChange(System.Collections.Generic.IEnumerable{System.String})">GetObserversToNotifyOnStateChange(IEnumerable&lt;String&gt;)</h4>
+  <div class="markdown level1 summary"><p>Gets the set of <a class="xref" href="NationalInstruments.SourceModel.IDependencyTargetExportChanged.html">IDependencyTargetExportChanged</a> this service should notify for the given <code data-dev-comment-type="paramref" class="paramref">propertyNames</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IEnumerable&lt;IDependencyTargetExportChanged&gt; GetObserversToNotifyOnStateChange(IEnumerable&lt;string&gt; propertyNames)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="parametername">propertyNames</span></td>
+        <td><p>The properties that changed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.IDependencyTargetExportChanged.html">IDependencyTargetExportChanged</a>&gt;</td>
+        <td><p>The set of <a class="xref" href="NationalInstruments.SourceModel.IDependencyTargetExportChanged.html">IDependencyTargetExportChanged</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_DependencyTargetExportService_InitializeAsync_" data-uid="NationalInstruments.SourceModel.DependencyTargetExportService.InitializeAsync*"></a>
+  <h4 id="NationalInstruments_SourceModel_DependencyTargetExportService_InitializeAsync_NationalInstruments_Core_InitializationToken_" data-uid="NationalInstruments.SourceModel.DependencyTargetExportService.InitializeAsync(NationalInstruments.Core.InitializationToken)">InitializeAsync(InitializationToken)</h4>
+  <div class="markdown level1 summary"><p>Initialize this object. It is necessary before using this object</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract Task InitializeAsync(InitializationToken progressToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.InitializationToken.html">InitializationToken</a></td>
+        <td><span class="parametername">progressToken</span></td>
+        <td><p>A token passed to the initialization process to maintain state through a set of dependent initialization calls.
+The presence of this token indicates that the Initialize method is being called for some kind of validation process.
+Unless you&apos;ve been explicitly given a token to pass to this method, it is ok to pass <code>null</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>A task representing the asynchronous process of initializing the export.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_SourceModel_DependencyTargetExportService_InitializeAsync_NationalInstruments_Core_InitializationToken__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If you do not need to handle <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyLoadException.html">EnvoyLoadException</a>, you can consider using the <a class="xref" href="NationalInstruments.SourceModel.DependencyTargetExportHelpers.html#NationalInstruments_SourceModel_DependencyTargetExportHelpers_TryInitializeAsync_NationalInstruments_SourceModel_IDependencyTargetExport_NationalInstruments_Core_InitializationToken_">TryInitializeAsync(IDependencyTargetExport, InitializationToken)</a> API instead.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyLoadException.html">EnvoyLoadException</a></td>
+        <td><p>if initialization failed because the associated envoy failed to load.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_DependencyTargetExportService_OnAttached_" data-uid="NationalInstruments.SourceModel.DependencyTargetExportService.OnAttached*"></a>
+  <h4 id="NationalInstruments_SourceModel_DependencyTargetExportService_OnAttached_NationalInstruments_SourceModel_Envoys_Envoy_" data-uid="NationalInstruments.SourceModel.DependencyTargetExportService.OnAttached(NationalInstruments.SourceModel.Envoys.Envoy)">OnAttached(Envoy)</h4>
+  <div class="markdown level1 summary"><p>Called after construction to associated this envoy service with its Envoy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnAttached(Envoy associatedEnvoy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">associatedEnvoy</span></td>
+        <td><p>The Envoy that this service should be associated with.  This method will be called once
+for each <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a> the service is associated with.  If a new service is created
+for each Envoy, this method will only be called once, and this Envoy will match <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_AssociatedEnvoy">AssociatedEnvoy</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_OnAttached_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.OnAttached(Envoy)</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_DependencyTargetExportService_OnDetach_" data-uid="NationalInstruments.SourceModel.DependencyTargetExportService.OnDetach*"></a>
+  <h4 id="NationalInstruments_SourceModel_DependencyTargetExportService_OnDetach_NationalInstruments_SourceModel_Envoys_Envoy_" data-uid="NationalInstruments.SourceModel.DependencyTargetExportService.OnDetach(NationalInstruments.SourceModel.Envoys.Envoy)">OnDetach(Envoy)</h4>
+  <div class="markdown level1 summary"><p>Called to detach this envoy service from its <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_AssociatedEnvoy">AssociatedEnvoy</a>.  This method can be called
+when the associated envoy is being removed from the project, or when the associated envoy changes in such
+a way that this service no longer binds to the associated envoy.</p>
+<p>If the associated envoy is being removed from the project, it is possible that other envoy services bound
+to this associated envoy will have already been  detached.  Therefore, it is not safe to query for other services
+within this callback.  Instead, this callback should only be used to clean up state that is local to and
+understood by this service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnDetach(Envoy associatedEnvoy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">associatedEnvoy</span></td>
+        <td><p>The <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a> that is detaching from this service.  This is the same envoy that is passed to 
+<span class="xref">NationalInstruments.SourceModel.Envoys.EnvoyService.NotifyAttach(NationalInstruments.SourceModel.Envoys.Envoy)</span> for envoy services which are instanced per envoy.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_OnDetach_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.OnDetach(Envoy)</a></div>
+  <h5 id="NationalInstruments_SourceModel_DependencyTargetExportService_OnDetach_NationalInstruments_SourceModel_Envoys_Envoy__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>After this method returns, the <a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_AssociatedEnvoy">AssociatedEnvoy</a> property will be set to <code>null</code>.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_SourceModel_DependencyTargetExportService_OnModelClosing_" data-uid="NationalInstruments.SourceModel.DependencyTargetExportService.OnModelClosing*"></a>
+  <h4 id="NationalInstruments_SourceModel_DependencyTargetExportService_OnModelClosing_NationalInstruments_SourceModel_Envoys_Envoy_" data-uid="NationalInstruments.SourceModel.DependencyTargetExportService.OnModelClosing(NationalInstruments.SourceModel.Envoys.Envoy)">OnModelClosing(Envoy)</h4>
+  <div class="markdown level1 summary"><p>Called when the model owned by this <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a> is closing.  When this method is
+called, the model obtained through <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html#NationalInstruments_SourceModel_Envoys_Envoy_ReferenceElement">ReferenceElement</a> is valid.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnModelClosing(Envoy associatedEnvoy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">associatedEnvoy</span></td>
+        <td><p>The <see cref="!:associatedEnvoy"></see> whose model is closing.  This is the same envoy that is passed to 
+<span class="xref">NationalInstruments.SourceModel.Envoys.EnvoyService.NotifyAttach(NationalInstruments.SourceModel.Envoys.Envoy)</span> for envoy services which are instanced per envoy.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_OnModelClosing_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.OnModelClosing(Envoy)</a></div>
+  <h5 id="NationalInstruments_SourceModel_DependencyTargetExportService_OnModelClosing_NationalInstruments_SourceModel_Envoys_Envoy__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method is only called when the model referenced by the <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a> is closed while
+the envoy is still attached.  This usually only happens when the last reference to the referenced
+model is released.  When the last reference is released, the model is unloaded and can be loaded 
+again later by calling <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html#NationalInstruments_SourceModel_Envoys_Envoy_LoadAsync">LoadAsync()</a>.  If the envoy itself is removed from the 
+project, this method will not be called. When the envoy itself is removed, <see cref="!:OnDetaching()"></see> 
+and <see cref="!:OnDetach()"></see> are the only methods that will be called.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_SourceModel_DependencyTargetExportService_OnModelLoaded_" data-uid="NationalInstruments.SourceModel.DependencyTargetExportService.OnModelLoaded*"></a>
+  <h4 id="NationalInstruments_SourceModel_DependencyTargetExportService_OnModelLoaded_NationalInstruments_SourceModel_Envoys_Envoy_" data-uid="NationalInstruments.SourceModel.DependencyTargetExportService.OnModelLoaded(NationalInstruments.SourceModel.Envoys.Envoy)">OnModelLoaded(Envoy)</h4>
+  <div class="markdown level1 summary"><p>Called when the model owned by the envoy is loaded.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnModelLoaded(Envoy associatedEnvoy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">associatedEnvoy</span></td>
+        <td><p>The <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a> which is being closed.  This is the same envoy that is passed to 
+<span class="xref">NationalInstruments.SourceModel.Envoys.EnvoyService.NotifyAttach(NationalInstruments.SourceModel.Envoys.Envoy)</span> for envoy services which are instanced per envoy.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.SourceModel.Envoys.EnvoyService.html#NationalInstruments_SourceModel_Envoys_EnvoyService_OnModelLoaded_NationalInstruments_SourceModel_Envoys_Envoy_">EnvoyService.OnModelLoaded(Envoy)</a></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_DependencyTargetExportService_RegisterFixupForFailedInitialization_" data-uid="NationalInstruments.SourceModel.DependencyTargetExportService.RegisterFixupForFailedInitialization*"></a>
+  <h4 id="NationalInstruments_SourceModel_DependencyTargetExportService_RegisterFixupForFailedInitialization_System_Object_System_Predicate_NationalInstruments_SourceModel_IDependencyTargetExport__System_Action_NationalInstruments_SourceModel_IDependencyTargetExport__" data-uid="NationalInstruments.SourceModel.DependencyTargetExportService.RegisterFixupForFailedInitialization(System.Object,System.Predicate{NationalInstruments.SourceModel.IDependencyTargetExport},System.Action{NationalInstruments.SourceModel.IDependencyTargetExport})">RegisterFixupForFailedInitialization(Object, Predicate&lt;IDependencyTargetExport&gt;, Action&lt;IDependencyTargetExport&gt;)</h4>
+  <div class="markdown level1 summary"><p>This method can be called when a call to <a class="xref" href="NationalInstruments.SourceModel.IDependencyTargetExport.html#NationalInstruments_SourceModel_IDependencyTargetExport_InitializeAsync_NationalInstruments_Core_InitializationToken_">InitializeAsync(InitializationToken)</a> has indicated an error occurred during initialization of 
+the export.  This method registers a delegate to be called back when the export has later successfully initialized. Callers
+of this method do not need to unregister interest - a strong reference to the registrant is not to be maintained.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void RegisterFixupForFailedInitialization(object fixupRegistrant, Predicate&lt;IDependencyTargetExport&gt; canExecuteFixup, Action&lt;IDependencyTargetExport&gt; executeFixup)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">fixupRegistrant</span></td>
+        <td><p>The object that desires to know when the export&apos;s initialization error has been resolved.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Predicate</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.IDependencyTargetExport.html">IDependencyTargetExport</a>&gt;</td>
+        <td><span class="parametername">canExecuteFixup</span></td>
+        <td><p>A delegate that is called when the export&apos;s initialzation error has been resolved in order to determine whether the 
+registrant is in a valid state.  If <code>false</code> is returned from this delegate, the fixup will not be called.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.IDependencyTargetExport.html">IDependencyTargetExport</a>&gt;</td>
+        <td><span class="parametername">executeFixup</span></td>
+        <td><p>A delegate that is called when the export&apos;s initialization error has been resolved.  This method will only be called if the
+canExecuteFixup parameter returns <code>true</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_SourceModel_DependencyTargetExportService_RegisterFixupForFailedInitialization_System_Object_System_Predicate_NationalInstruments_SourceModel_IDependencyTargetExport__System_Action_NationalInstruments_SourceModel_IDependencyTargetExport___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>A given fixup registrant can only register one fixup.  If more than one is registered, only the latest resolution handler will be run.</p>
+<p>Once the export is initialized successfully, it will call all registered fixups.  Once all fixups have been called those fixups 
+will be removed and never called again.  This is true even if the canExecuteFixup predicate returned <code>false</code>.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_SourceModel_DependencyTargetExportService_RemoveObserver_" data-uid="NationalInstruments.SourceModel.DependencyTargetExportService.RemoveObserver*"></a>
+  <h4 id="NationalInstruments_SourceModel_DependencyTargetExportService_RemoveObserver_NationalInstruments_SourceModel_IDependencyTargetExportChanged_" data-uid="NationalInstruments.SourceModel.DependencyTargetExportService.RemoveObserver(NationalInstruments.SourceModel.IDependencyTargetExportChanged)">RemoveObserver(IDependencyTargetExportChanged)</h4>
+  <div class="markdown level1 summary"><p>Stop observing change in exports</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void RemoveObserver(IDependencyTargetExportChanged observer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.IDependencyTargetExportChanged.html">IDependencyTargetExportChanged</a></td>
+        <td><span class="parametername">observer</span></td>
+        <td><p>observer seeking to stop getting notification</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_DependencyTargetExportService_SignalStateChanged_" data-uid="NationalInstruments.SourceModel.DependencyTargetExportService.SignalStateChanged*"></a>
+  <h4 id="NationalInstruments_SourceModel_DependencyTargetExportService_SignalStateChanged_System_Collections_Generic_IEnumerable_System_String__" data-uid="NationalInstruments.SourceModel.DependencyTargetExportService.SignalStateChanged(System.Collections.Generic.IEnumerable{System.String})">SignalStateChanged(IEnumerable&lt;String&gt;)</h4>
+  <div class="markdown level1 summary"><p>Signal observers that the following properties changed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void SignalStateChanged(IEnumerable&lt;string&gt; propertyNames)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="parametername">propertyNames</span></td>
+        <td><p>The properties that changed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_DependencyTargetExportService_UnregisterFixupForFailedInitialization_" data-uid="NationalInstruments.SourceModel.DependencyTargetExportService.UnregisterFixupForFailedInitialization*"></a>
+  <h4 id="NationalInstruments_SourceModel_DependencyTargetExportService_UnregisterFixupForFailedInitialization_System_Object_" data-uid="NationalInstruments.SourceModel.DependencyTargetExportService.UnregisterFixupForFailedInitialization(System.Object)">UnregisterFixupForFailedInitialization(Object)</h4>
+  <div class="markdown level1 summary"><p>Unregisters a previously registered initialization failed fixup, if any have been registered for the given registrant.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void UnregisterFixupForFailedInitialization(object fixupRegistrant)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">fixupRegistrant</span></td>
+        <td><p>The object that has previously registered an initialization failed fixup for this target export.  This method is safe to call even
+if the registrant has never registered a fixup for this export.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.IDependencyTargetExport.html">IDependencyTargetExport</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.DependencyTargetExportHelpers.html#NationalInstruments_SourceModel_DependencyTargetExportHelpers_TryInitializeAsync_NationalInstruments_SourceModel_IDependencyTargetExport_NationalInstruments_Core_InitializationToken_">DependencyTargetExportHelpers.TryInitializeAsync(IDependencyTargetExport, InitializationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.SourceModel.DependencyTargetExportHelpers.html#NationalInstruments_SourceModel_DependencyTargetExportHelpers_Initialize_NationalInstruments_SourceModel_IDependencyTargetExport_NationalInstruments_Core_InitializationToken_System_Action_NationalInstruments_SourceModel_IDependencyTargetExport_System_Exception__">DependencyTargetExportHelpers.Initialize(IDependencyTargetExport, InitializationToken, Action&lt;IDependencyTargetExport, Exception&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

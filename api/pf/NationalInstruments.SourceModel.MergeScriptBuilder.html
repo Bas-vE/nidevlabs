@@ -1,0 +1,934 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class MergeScriptBuilder
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class MergeScriptBuilder
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder">
+  
+  
+  <h1 id="NationalInstruments_SourceModel_MergeScriptBuilder" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder" class="text-break">Class MergeScriptBuilder
+  </h1>
+  <div class="markdown level0 summary"><p>Builds merge scripts that can be used by MergeScriptParser to merge Elements into a model hierarchy.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">MergeScriptBuilder</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.SourceModel.html">NationalInstruments.SourceModel</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_SourceModel_MergeScriptBuilder_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class MergeScriptBuilder</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_MergeScriptBuilder__ctor_" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.#ctor*"></a>
+  <h4 id="NationalInstruments_SourceModel_MergeScriptBuilder__ctor_NationalInstruments_Composition_ICompositionHost_" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.#ctor(NationalInstruments.Composition.ICompositionHost)">MergeScriptBuilder(ICompositionHost)</h4>
+  <div class="markdown level1 summary"><p>Creates a MergeScriptBuilder</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MergeScriptBuilder(ICompositionHost host)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Composition.ICompositionHost.html">ICompositionHost</a></td>
+        <td><span class="parametername">host</span></td>
+        <td><p>The CompositionHost we belong to</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_MergeScriptBuilder__ctor_" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.#ctor*"></a>
+  <h4 id="NationalInstruments_SourceModel_MergeScriptBuilder__ctor_NationalInstruments_Composition_ICompositionHost_NationalInstruments_SourceModel_MergeScriptType_" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.#ctor(NationalInstruments.Composition.ICompositionHost,NationalInstruments.SourceModel.MergeScriptType)">MergeScriptBuilder(ICompositionHost, MergeScriptType)</h4>
+  <div class="markdown level1 summary"><p>Creates a MergeScriptBuilder</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MergeScriptBuilder(ICompositionHost host, MergeScriptType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Composition.ICompositionHost.html">ICompositionHost</a></td>
+        <td><span class="parametername">host</span></td>
+        <td><p>The CompositionHost we belong to</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.MergeScriptType.html">MergeScriptType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The type of script to create</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_MergeScriptBuilder__ctor_" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.#ctor*"></a>
+  <h4 id="NationalInstruments_SourceModel_MergeScriptBuilder__ctor_NationalInstruments_Composition_ICompositionHost_NationalInstruments_SourceModel_MergeScriptType_System_Boolean_" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.#ctor(NationalInstruments.Composition.ICompositionHost,NationalInstruments.SourceModel.MergeScriptType,System.Boolean)">MergeScriptBuilder(ICompositionHost, MergeScriptType, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Creates a MergeScriptBuilder</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MergeScriptBuilder(ICompositionHost host, MergeScriptType type, bool prohibitCookies)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Composition.ICompositionHost.html">ICompositionHost</a></td>
+        <td><span class="parametername">host</span></td>
+        <td><p>The CompositionHost we belong to</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.MergeScriptType.html">MergeScriptType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The type of script to create</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">prohibitCookies</span></td>
+        <td><p>True to disallow cookies in the script,
+false to allow them.  If cookies are used then the script will not be
+useable outside of the process.
+If the type of the script of InMemoryOnly then prohibiting cookies does not
+make sense.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_MergeScriptBuilder__ctor_" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.#ctor*"></a>
+  <h4 id="NationalInstruments_SourceModel_MergeScriptBuilder__ctor_NationalInstruments_Composition_ICompositionHost_System_Boolean_" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.#ctor(NationalInstruments.Composition.ICompositionHost,System.Boolean)">MergeScriptBuilder(ICompositionHost, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Creates a MergeScriptBuilder</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MergeScriptBuilder(ICompositionHost host, bool prohibitCookies)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Composition.ICompositionHost.html">ICompositionHost</a></td>
+        <td><span class="parametername">host</span></td>
+        <td><p>The CompositionHost we belong to</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">prohibitCookies</span></td>
+        <td><p>True to disallow cookies in the script,
+false to allow them.  If cookies are used then the script will not be
+useable outside of the process</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_MergeScriptBuilder_Cookies_" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.Cookies*"></a>
+  <h4 id="NationalInstruments_SourceModel_MergeScriptBuilder_Cookies" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.Cookies">Cookies</h4>
+  <div class="markdown level1 summary"><p>The last used list of data value reference cookies from an <a class="xref" href="NationalInstruments.SourceModel.ElementSelection.html">ElementSelection</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;object&gt; Cookies { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_MergeScriptBuilder_Elements_" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.Elements*"></a>
+  <h4 id="NationalInstruments_SourceModel_MergeScriptBuilder_Elements" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.Elements">Elements</h4>
+  <div class="markdown level1 summary"><p>The elements that have been added to the builder up to this point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyCollection&lt;Element&gt; Elements { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyCollection</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_MergeScriptBuilder_MergeScriptType_" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.MergeScriptType*"></a>
+  <h4 id="NationalInstruments_SourceModel_MergeScriptBuilder_MergeScriptType" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.MergeScriptType">MergeScriptType</h4>
+  <div class="markdown level1 summary"><p>Gets the type of the merge script</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MergeScriptType MergeScriptType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.MergeScriptType.html">MergeScriptType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_MergeScriptBuilder_Options_" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.Options*"></a>
+  <h4 id="NationalInstruments_SourceModel_MergeScriptBuilder_Options" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.Options">Options</h4>
+  <div class="markdown level1 summary"><p>The model generation options to use when generation the merge script</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ElementGenerationOptions Options { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Persistence.ElementGenerationOptions.html">ElementGenerationOptions</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_MergeScriptBuilder_ProhibitCookies_" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.ProhibitCookies*"></a>
+  <h4 id="NationalInstruments_SourceModel_MergeScriptBuilder_ProhibitCookies" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.ProhibitCookies">ProhibitCookies</h4>
+  <div class="markdown level1 summary"><p>Whether or not cookies are prohibited in creation of this MergeScript</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ProhibitCookies { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_MergeScriptBuilder_PropertyContext_" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.PropertyContext*"></a>
+  <h4 id="NationalInstruments_SourceModel_MergeScriptBuilder_PropertyContext" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.PropertyContext">PropertyContext</h4>
+  <div class="markdown level1 summary"><p>The PropertyContext to use while performing replacements in the merge script.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropertyContext PropertyContext { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.PropertyContext.html">PropertyContext</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_MergeScriptBuilder_SerializationReason_" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.SerializationReason*"></a>
+  <h4 id="NationalInstruments_SourceModel_MergeScriptBuilder_SerializationReason" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.SerializationReason">SerializationReason</h4>
+  <div class="markdown level1 summary"><p>Gets the reason for why the merge script is being built</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SerializationReason SerializationReason { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Design.SerializationReason.html">SerializationReason</a></td>
+        <td><p>SerializationReason indicating the purpose of the merge script</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_MergeScriptBuilder_SourceModelFeatureSet_" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.SourceModelFeatureSet*"></a>
+  <h4 id="NationalInstruments_SourceModel_MergeScriptBuilder_SourceModelFeatureSet" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.SourceModelFeatureSet">SourceModelFeatureSet</h4>
+  <div class="markdown level1 summary"><p>The source model feature set describing required features to parse/generate the merge script</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SourceModelFeatureSet SourceModelFeatureSet { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.SourceModelFeatureSet.html">SourceModelFeatureSet</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_MergeScriptBuilder_AddCookieReference_" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.AddCookieReference*"></a>
+  <h4 id="NationalInstruments_SourceModel_MergeScriptBuilder_AddCookieReference_System_Object_" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.AddCookieReference(System.Object)">AddCookieReference(Object)</h4>
+  <div class="markdown level1 summary"><p>Adds a cookie reference to the builder.  </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddCookieReference(object cookie)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">cookie</span></td>
+        <td><p>The cookie reference to add</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_SourceModel_MergeScriptBuilder_AddCookieReference_System_Object__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>When adding elements to the builder, cookie references will automatically get added as needed.  This fuction should
+only be called if you add merge data or merge items that contain cookie references.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_SourceModel_MergeScriptBuilder_AddData_" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.AddData*"></a>
+  <h4 id="NationalInstruments_SourceModel_MergeScriptBuilder_AddData_System_String_System_String_" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.AddData(System.String,System.String)">AddData(String, String)</h4>
+  <div class="markdown level1 summary"><p>Adds merge data to the merge script consisting of a key/value pair</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddData(string key, string value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The key or name of the data parameter to add</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value of the data parameter</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_MergeScriptBuilder_AddElement_" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.AddElement*"></a>
+  <h4 id="NationalInstruments_SourceModel_MergeScriptBuilder_AddElement_NationalInstruments_SourceModel_Element_" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.AddElement(NationalInstruments.SourceModel.Element)">AddElement(Element)</h4>
+  <div class="markdown level1 summary"><p>Adds a single Element to the merge script</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddElement(Element element)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a></td>
+        <td><span class="parametername">element</span></td>
+        <td><p>The element to add</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_MergeScriptBuilder_AddElement_" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.AddElement*"></a>
+  <h4 id="NationalInstruments_SourceModel_MergeScriptBuilder_AddElement_NationalInstruments_SourceModel_MergeElementInfo_" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.AddElement(NationalInstruments.SourceModel.MergeElementInfo)">AddElement(MergeElementInfo)</h4>
+  <div class="markdown level1 summary"><p>Adds a single element to the merge script. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddElement(MergeElementInfo info)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.MergeElementInfo.html">MergeElementInfo</a></td>
+        <td><span class="parametername">info</span></td>
+        <td><p>The info representing the element to add to the merge script</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_MergeScriptBuilder_AddElements_" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.AddElements*"></a>
+  <h4 id="NationalInstruments_SourceModel_MergeScriptBuilder_AddElements_System_Collections_Generic_IEnumerable_NationalInstruments_SourceModel_Element__" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.AddElements(System.Collections.Generic.IEnumerable{NationalInstruments.SourceModel.Element})">AddElements(IEnumerable&lt;Element&gt;)</h4>
+  <div class="markdown level1 summary"><p>Adds multiple elements to the merge script.  </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddElements(IEnumerable&lt;Element&gt; elements)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a>&gt;</td>
+        <td><span class="parametername">elements</span></td>
+        <td><p>The elements to add to the merge script</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_MergeScriptBuilder_AddElements_" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.AddElements*"></a>
+  <h4 id="NationalInstruments_SourceModel_MergeScriptBuilder_AddElements_System_Collections_Generic_IEnumerable_NationalInstruments_SourceModel_MergeElementInfo__" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.AddElements(System.Collections.Generic.IEnumerable{NationalInstruments.SourceModel.MergeElementInfo})">AddElements(IEnumerable&lt;MergeElementInfo&gt;)</h4>
+  <div class="markdown level1 summary"><p>Adds multiple elements to the merge script.  </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddElements(IEnumerable&lt;MergeElementInfo&gt; elementInfo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.MergeElementInfo.html">MergeElementInfo</a>&gt;</td>
+        <td><span class="parametername">elementInfo</span></td>
+        <td><p>The MergeElementInfo items representing the Elements to add to the merge script</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_MergeScriptBuilder_AddItem_" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.AddItem*"></a>
+  <h4 id="NationalInstruments_SourceModel_MergeScriptBuilder_AddItem_NationalInstruments_SourceModel_MergeItemInfo_" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.AddItem(NationalInstruments.SourceModel.MergeItemInfo)">AddItem(MergeItemInfo)</h4>
+  <div class="markdown level1 summary"><p>Adds a single MergeItemInfo to the merge script. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddItem(MergeItemInfo info)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.MergeItemInfo.html">MergeItemInfo</a></td>
+        <td><span class="parametername">info</span></td>
+        <td><p>The info representing the merge item to add to the merge script</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_MergeScriptBuilder_Create_" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.Create*"></a>
+  <h4 id="NationalInstruments_SourceModel_MergeScriptBuilder_Create_System_Collections_Generic_IEnumerable_NationalInstruments_SourceModel_Element__NationalInstruments_Composition_ICompositionHost_" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.Create(System.Collections.Generic.IEnumerable{NationalInstruments.SourceModel.Element},NationalInstruments.Composition.ICompositionHost)">Create(IEnumerable&lt;Element&gt;, ICompositionHost)</h4>
+  <div class="markdown level1 summary"><p>Create a builder from a set of elements.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MergeScriptBuilder Create(IEnumerable&lt;Element&gt; elements, ICompositionHost host)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Element.html">Element</a>&gt;</td>
+        <td><span class="parametername">elements</span></td>
+        <td><p>The top level elements the merge script should contain</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Composition.ICompositionHost.html">ICompositionHost</a></td>
+        <td><span class="parametername">host</span></td>
+        <td><p>The CompositionHost we belong to</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.MergeScriptBuilder.html">MergeScriptBuilder</a></td>
+        <td><p>A MergeScriptBuilder that can be used to created a serialized merge script containing the Elements specified.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_MergeScriptBuilder_CreateResult_" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.CreateResult*"></a>
+  <h4 id="NationalInstruments_SourceModel_MergeScriptBuilder_CreateResult_System_Boolean_" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.CreateResult(System.Boolean)">CreateResult(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Create the result (text) of the merge script
+Called to get the result after all elements have been added.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MergeScriptBuildResult CreateResult(bool writeMetadata)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">writeMetadata</span></td>
+        <td><p>True if the source model feature set and merge data should be generated as part of the merge 
+script and False if it should be omitted.  </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.MergeScriptBuildResult.html">MergeScriptBuildResult</a></td>
+        <td><p>The merge script result.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_MergeScriptBuilder_ToString_" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.ToString*"></a>
+  <h4 id="NationalInstruments_SourceModel_MergeScriptBuilder_ToString" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.ToString">ToString()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.ToString()</span></div>
+  
+  
+  <a id="NationalInstruments_SourceModel_MergeScriptBuilder_WriteToStream_" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.WriteToStream*"></a>
+  <h4 id="NationalInstruments_SourceModel_MergeScriptBuilder_WriteToStream_System_Xml_XmlWriter_" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.WriteToStream(System.Xml.XmlWriter)">WriteToStream(XmlWriter)</h4>
+  <div class="markdown level1 summary"><p>Writes the current merge script contents to the specified writer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteToStream(XmlWriter writer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.xml.xmlwriter">XmlWriter</a></td>
+        <td><span class="parametername">writer</span></td>
+        <td><p>The XML writer to use for writing the merge script</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_MergeScriptBuilder_WriteToStream_" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.WriteToStream*"></a>
+  <h4 id="NationalInstruments_SourceModel_MergeScriptBuilder_WriteToStream_System_Xml_XmlWriter_System_Boolean_" data-uid="NationalInstruments.SourceModel.MergeScriptBuilder.WriteToStream(System.Xml.XmlWriter,System.Boolean)">WriteToStream(XmlWriter, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Writes the current merge script contents to the specified writer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteToStream(XmlWriter writer, bool writeMetadata)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.xml.xmlwriter">XmlWriter</a></td>
+        <td><span class="parametername">writer</span></td>
+        <td><p>The XML writer to use for writing the merge script</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">writeMetadata</span></td>
+        <td><p>True if the source model feature set and merge data should be generated as part of the merge 
+script and False if it should be omitted.  You will generally only pass False if the merge script 
+is going to be persisted as part of a larger file that already has a source model feature set and 
+doesn&apos;t need any other meta data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_SourceModel_MergeScriptBuilder_WriteToStream_System_Xml_XmlWriter_System_Boolean__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Upon building the merge script, all Elements added and any of their descendants that implement the IMergeSource 
+interface will be queried for additional elements to add to the merge script.  This process is repeated until 
+no new elements are added and is done such that the same element isn&apos;t added twice.</p>
+</div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

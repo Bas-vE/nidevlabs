@@ -1,0 +1,992 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class OpenFileName
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class OpenFileName
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.Core.OpenFileName">
+  
+  
+  <h1 id="NationalInstruments_Core_OpenFileName" data-uid="NationalInstruments.Core.OpenFileName" class="text-break">Class OpenFileName
+  </h1>
+  <div class="markdown level0 summary"><p>Contains information that the GetOpenFileName and GetSaveFileName functions use to initialize an Open or Save As dialog box. After the user closes the
+dialog box, the system returns information about the user&apos;s selection in this structure.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">OpenFileName</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="../pf/NationalInstruments.Core.html">NationalInstruments.Core</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.Core.dll</h6>
+  <h5 id="NationalInstruments_Core_OpenFileName_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class OpenFileName : IDisposable</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_Core_OpenFileName_CustData_" data-uid="NationalInstruments.Core.OpenFileName.CustData*"></a>
+  <h4 id="NationalInstruments_Core_OpenFileName_CustData" data-uid="NationalInstruments.Core.OpenFileName.CustData">CustData</h4>
+  <div class="markdown level1 summary"><p>Application-defined data that the system passes to the hook procedure identified by the lpfnHook member. When the system sends the WM_INITDIALOG message 
+to the hook procedure, the message&apos;s lParam parameter is a pointer to the OPENFILENAME structure specified when the dialog box was created. The hook 
+procedure can use this pointer to get the lCustData value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IntPtr CustData { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_OpenFileName_CustomFilter_" data-uid="NationalInstruments.Core.OpenFileName.CustomFilter*"></a>
+  <h4 id="NationalInstruments_Core_OpenFileName_CustomFilter" data-uid="NationalInstruments.Core.OpenFileName.CustomFilter">CustomFilter</h4>
+  <div class="markdown level1 summary"><p>A static buffer that contains a pair of null-terminated filter strings for preserving the filter pattern chosen by the user. 
+The first string is your display string that describes the custom filter, and the second string is the filter pattern selected by the user. 
+The first time your application creates the dialog box, you specify the first string, which can be any nonempty string. When the user selects a file,
+the dialog box copies the current filter pattern to the second string. The preserved filter pattern can be one of the patterns specified in the 
+lpstrFilter buffer, or it can be a filter pattern typed by the user. The system uses the strings to initialize the user-defined file filter the next 
+time the dialog box is created. If the nFilterIndex member is zero, the dialog box uses the custom filter.
+If this member is NULL, the dialog box does not preserve user-defined filter patterns.
+If this member is not NULL, the value of the nMaxCustFilter member must specify the size, in characters, of the lpstrCustomFilter buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IntPtr CustomFilter { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_OpenFileName_DefExt_" data-uid="NationalInstruments.Core.OpenFileName.DefExt*"></a>
+  <h4 id="NationalInstruments_Core_OpenFileName_DefExt" data-uid="NationalInstruments.Core.OpenFileName.DefExt">DefExt</h4>
+  <div class="markdown level1 summary"><p>The default extension. GetOpenFileName and GetSaveFileName append this extension to the file name if the user fails to type an extension. This string can
+be any length, but only the first three characters are appended. The string should not contain a period (.). If this member is NULL and the user fails to 
+type an extension, no extension is appended.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string DefExt { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_OpenFileName_File_" data-uid="NationalInstruments.Core.OpenFileName.File*"></a>
+  <h4 id="NationalInstruments_Core_OpenFileName_File" data-uid="NationalInstruments.Core.OpenFileName.File">File</h4>
+  <div class="markdown level1 summary"><p>The file name used to initialize the File Name edit control. The first character of this buffer must be NULL if initialization is not necessary. 
+When the GetOpenFileName or GetSaveFileName function returns successfully, this buffer contains the drive designator, path, file name, and 
+extension of the selected file.
+If the OFN_ALLOWMULTISELECT flag is set and the user selects multiple files, the buffer contains the current directory followed by the file 
+names of the selected files.For Explorer-style dialog boxes, the directory and file name strings are NULL separated, with an extra NULL character 
+after the last file name.For old-style dialog boxes, the strings are space separated and the function uses short file names for file names 
+with spaces. You can use the FindFirstFile function to convert between long and short file names.If the user selects only one file, the 
+lpstrFile string does not have a separator between the path and file name.
+If the buffer is too small, the function returns FALSE and the CommDlgExtendedError function returns FileNameErrBUFFERTOOSMALL. In this case, 
+the first two bytes of the lpstrFile buffer contain the required size, in bytes or characters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string File { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_OpenFileName_FileExtension_" data-uid="NationalInstruments.Core.OpenFileName.FileExtension*"></a>
+  <h4 id="NationalInstruments_Core_OpenFileName_FileExtension" data-uid="NationalInstruments.Core.OpenFileName.FileExtension">FileExtension</h4>
+  <div class="markdown level1 summary"><p>The zero-based offset, in characters, from the beginning of the path to the file name extension in the string pointed to by lpstrFile. For the ANSI 
+version, this is the number of bytes; for the Unicode version, this is the number of characters. Usually the file name extension is the substring which 
+follows the last occurrence of the dot (&quot;.&quot;) character. For example, txt is the extension of the filename readme.txt, html the extension of readme.txt.html.
+Therefore, if lpstrFile points to the string &quot;c:\dir1\dir2\readme.txt&quot;, this member contains the value 20. If lpstrFile points to the string 
+&quot;c:\dir1\dir2\readme.txt.html&quot;, this member contains the value 24. If lpstrFile points to the string &quot;c:\dir1\dir2\readme.txt.html.&quot;, this member contains 
+the value 29. If lpstrFile points to a string that does not contain any &quot;.&quot; character such as &quot;c:\dir1\dir2\readme&quot;, this member contains zero.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public short FileExtension { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int16">Int16</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_OpenFileName_FileOffset_" data-uid="NationalInstruments.Core.OpenFileName.FileOffset*"></a>
+  <h4 id="NationalInstruments_Core_OpenFileName_FileOffset" data-uid="NationalInstruments.Core.OpenFileName.FileOffset">FileOffset</h4>
+  <div class="markdown level1 summary"><p>The zero-based offset, in characters, from the beginning of the path to the file name in the string pointed to by lpstrFile. For the ANSI version,
+this is the number of bytes; for the Unicode version, this is the number of characters. For example, if lpstrFile points to the following string, 
+&quot;c:\dir1\dir2\file.ext&quot;, this member contains the value 13 to indicate the offset of the &quot;file.ext&quot; string. If the user selects more than one file, 
+nFileOffset is the offset to the first file name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public short FileOffset { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int16">Int16</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_OpenFileName_FileTitle_" data-uid="NationalInstruments.Core.OpenFileName.FileTitle*"></a>
+  <h4 id="NationalInstruments_Core_OpenFileName_FileTitle" data-uid="NationalInstruments.Core.OpenFileName.FileTitle">FileTitle</h4>
+  <div class="markdown level1 summary"><p>The file name and extension (without path information) of the selected file. This member can be NULL.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IntPtr FileTitle { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_OpenFileName_Filter_" data-uid="NationalInstruments.Core.OpenFileName.Filter*"></a>
+  <h4 id="NationalInstruments_Core_OpenFileName_Filter" data-uid="NationalInstruments.Core.OpenFileName.Filter">Filter</h4>
+  <div class="markdown level1 summary"><p>A buffer containing pairs of null-terminated filter strings. The last string in the buffer must be terminated by two NULL characters.
+The first string in each pair is a display string that describes the filter(for example, &quot;Text Files&quot;), and the second string specifies the filter 
+pattern(for example, &quot;<em>.TXT&quot;). To specify multiple filter patterns for a single display string, use a semicolon to separate the patterns 
+(for example, &quot;</em>.TXT;<em>.DOC;</em>.BAK&quot;). A pattern string can be a combination of valid file name characters and the asterisk(<em>) wildcard character.
+Do not include spaces in the pattern string.
+The system does not change the order of the filters. It displays them in the File Types combo box in the order specified in lpstrFilter.
+If lpstrFilter is NULL, the dialog box does not display any filters.
+In the case of a shortcut, if no filter is set, GetOpenFileName and GetSaveFileName retrieve the name of the .lnk file, not its target.
+This behavior is the same as setting the OFN_NODEREFERENCELINKS flag in the Flags member.To retrieve a shortcut&apos;s target without filtering, 
+use the string &quot;All Files\0</em>.*\0\0&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Filter { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_OpenFileName_FilterIndex_" data-uid="NationalInstruments.Core.OpenFileName.FilterIndex*"></a>
+  <h4 id="NationalInstruments_Core_OpenFileName_FilterIndex" data-uid="NationalInstruments.Core.OpenFileName.FilterIndex">FilterIndex</h4>
+  <div class="markdown level1 summary"><p>The index of the currently selected filter in the File Types control. The buffer pointed to by lpstrFilter contains pairs of strings that 
+define the filters. The first pair of strings has an index value of 1, the second pair 2, and so on. An index of zero indicates the custom 
+filter specified by lpstrCustomFilter. You can specify an index on input to indicate the initial filter description and filter pattern for 
+the dialog box. When the user selects a file, nFilterIndex returns the index of the currently displayed filter. If nFilterIndex is zero and 
+lpstrCustomFilter is NULL, the system uses the first filter in the lpstrFilter buffer. If all three members are zero or NULL, the system does 
+not use any filters and does not show any files in the file list control of the dialog box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int FilterIndex { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_OpenFileName_Flags_" data-uid="NationalInstruments.Core.OpenFileName.Flags*"></a>
+  <h4 id="NationalInstruments_Core_OpenFileName_Flags" data-uid="NationalInstruments.Core.OpenFileName.Flags">Flags</h4>
+  <div class="markdown level1 summary"><p>A set of bit flags you can use to initialize the dialog box. When the dialog box returns, it sets these flags to indicate the user&apos;s input.
+This member can be a combination of <a class="xref" href="NationalInstruments.Core.OpenFileNameFlags.html">OpenFileNameFlags</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Flags { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_OpenFileName_FlagsExtended_" data-uid="NationalInstruments.Core.OpenFileName.FlagsExtended*"></a>
+  <h4 id="NationalInstruments_Core_OpenFileName_FlagsExtended" data-uid="NationalInstruments.Core.OpenFileName.FlagsExtended">FlagsExtended</h4>
+  <div class="markdown level1 summary"><p>A set of bit flags you can use to initialize the dialog box. Currently, this member can be zero or the following flag.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int FlagsExtended { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_OpenFileName_Hook_" data-uid="NationalInstruments.Core.OpenFileName.Hook*"></a>
+  <h4 id="NationalInstruments_Core_OpenFileName_Hook" data-uid="NationalInstruments.Core.OpenFileName.Hook">Hook</h4>
+  <div class="markdown level1 summary"><p>A pointer to a hook procedure. This member is ignored unless the Flags member includes the OFN_ENABLEHOOK flag.
+If the OFN_EXPLORER flag is not set in the Flags member, lpfnHook is a pointer to an OFNHookProcOldStyle hook procedure that receives messages intended 
+for the dialog box.The hook procedure returns FALSE to pass a message to the default dialog box procedure or TRUE to discard the message.
+If OFN_EXPLORER is set, lpfnHook is a pointer to an OFNHookProc hook procedure.The hook procedure receives notification messages sent from the dialog box.
+The hook procedure also receives messages for any additional controls that you defined by specifying a child dialog template.The hook procedure does not 
+receive messages intended for the standard controls of the default dialog box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WndProc Hook { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.WndProc.html">WndProc</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_OpenFileName_InitialDir_" data-uid="NationalInstruments.Core.OpenFileName.InitialDir*"></a>
+  <h4 id="NationalInstruments_Core_OpenFileName_InitialDir" data-uid="NationalInstruments.Core.OpenFileName.InitialDir">InitialDir</h4>
+  <div class="markdown level1 summary"><p>The initial directory. The algorithm for selecting the initial directory varies on different platforms.
+Windows 7:</p>
+<ol>
+<li>If lpstrInitialDir has the same value as was passed the first time the application used an Open or Save As dialog box, the path most recently 
+selected by the user is used as the initial directory.</li>
+<li>Otherwise, if lpstrFile contains a path, that path is the initial directory.</li>
+<li>Otherwise, if lpstrInitialDir is not NULL, it specifies the initial directory.</li>
+<li>If lpstrInitialDir is NULL and the current directory contains any files of the specified filter types, the initial directory is the current directory.</li>
+<li>Otherwise, the initial directory is the personal files directory of the current user.</li>
+<li>Otherwise, the initial directory is the Desktop folder.
+Windows 2000/XP/Vista:</li>
+<li>If lpstrFile contains a path, that path is the initial directory.</li>
+<li>Otherwise, lpstrInitialDir specifies the initial directory.</li>
+<li>Otherwise, if the application has used an Open or Save As dialog box in the past, the path most recently used is selected as the initial directory.
+However, if an application is not run for a long time, its saved selected path is discarded.</li>
+<li>If lpstrInitialDir is NULL and the current directory contains any files of the specified filter types, the initial directory is the current directory.</li>
+<li>Otherwise, the initial directory is the personal files directory of the current user.</li>
+<li>Otherwise, the initial directory is the Desktop folder.</li>
+</ol>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string InitialDir { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_OpenFileName_Instance_" data-uid="NationalInstruments.Core.OpenFileName.Instance*"></a>
+  <h4 id="NationalInstruments_Core_OpenFileName_Instance" data-uid="NationalInstruments.Core.OpenFileName.Instance">Instance</h4>
+  <div class="markdown level1 summary"><p>If the OFN_ENABLETEMPLATEHANDLE flag is set in the Flags member, hInstance is a handle to a memory object containing a dialog box template. 
+If the OFN_ENABLETEMPLATE flag is set, hInstance is a handle to a module that contains a dialog box template named by the lpTemplateName member.
+If neither flag is set, this member is ignored. If the OFN_EXPLORER flag is set, the system uses the specified template to create a dialog box 
+that is a child of the default Explorer-style dialog box. If the OFN_EXPLORER flag is not set, the system uses the template to create an old-style 
+dialog box that replaces the default dialog box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IntPtr Instance { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_OpenFileName_MaxCustFilter_" data-uid="NationalInstruments.Core.OpenFileName.MaxCustFilter*"></a>
+  <h4 id="NationalInstruments_Core_OpenFileName_MaxCustFilter" data-uid="NationalInstruments.Core.OpenFileName.MaxCustFilter">MaxCustFilter</h4>
+  <div class="markdown level1 summary"><p>The size, in characters, of the buffer identified by lpstrCustomFilter. This buffer should be at least 40 characters long. This member is
+ignored if lpstrCustomFilter is NULL or points to a NULL string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MaxCustFilter { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_OpenFileName_MaxFile_" data-uid="NationalInstruments.Core.OpenFileName.MaxFile*"></a>
+  <h4 id="NationalInstruments_Core_OpenFileName_MaxFile" data-uid="NationalInstruments.Core.OpenFileName.MaxFile">MaxFile</h4>
+  <div class="markdown level1 summary"><p>The size, in characters, of the buffer pointed to by lpstrFile. The buffer must be large enough to store the path and file name string or strings, 
+including the terminating NULL character. The GetOpenFileName and GetSaveFileName functions return FALSE if the buffer is too small to contain the 
+file information. The buffer should be at least 256 characters long.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MaxFile { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_OpenFileName_MaxFileTitle_" data-uid="NationalInstruments.Core.OpenFileName.MaxFileTitle*"></a>
+  <h4 id="NationalInstruments_Core_OpenFileName_MaxFileTitle" data-uid="NationalInstruments.Core.OpenFileName.MaxFileTitle">MaxFileTitle</h4>
+  <div class="markdown level1 summary"><p>The size, in characters, of the buffer pointed to by lpstrFileTitle. This member is ignored if lpstrFileTitle is NULL.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MaxFileTitle { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_OpenFileName_Owner_" data-uid="NationalInstruments.Core.OpenFileName.Owner*"></a>
+  <h4 id="NationalInstruments_Core_OpenFileName_Owner" data-uid="NationalInstruments.Core.OpenFileName.Owner">Owner</h4>
+  <div class="markdown level1 summary"><p>A handle to the window that owns the dialog box. This member can be any valid window handle, or it can be NULL if the dialog box has no owner.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IntPtr Owner { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_OpenFileName_ReservedHandle_" data-uid="NationalInstruments.Core.OpenFileName.ReservedHandle*"></a>
+  <h4 id="NationalInstruments_Core_OpenFileName_ReservedHandle" data-uid="NationalInstruments.Core.OpenFileName.ReservedHandle">ReservedHandle</h4>
+  <div class="markdown level1 summary"><p>Reserved.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IntPtr ReservedHandle { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_OpenFileName_ReservedInt_" data-uid="NationalInstruments.Core.OpenFileName.ReservedInt*"></a>
+  <h4 id="NationalInstruments_Core_OpenFileName_ReservedInt" data-uid="NationalInstruments.Core.OpenFileName.ReservedInt">ReservedInt</h4>
+  <div class="markdown level1 summary"><p>Reserved.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int ReservedInt { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_OpenFileName_StructSize_" data-uid="NationalInstruments.Core.OpenFileName.StructSize*"></a>
+  <h4 id="NationalInstruments_Core_OpenFileName_StructSize" data-uid="NationalInstruments.Core.OpenFileName.StructSize">StructSize</h4>
+  <div class="markdown level1 summary"><p>The length, in bytes, of the structure (class here).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int StructSize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_OpenFileName_TemplateName_" data-uid="NationalInstruments.Core.OpenFileName.TemplateName*"></a>
+  <h4 id="NationalInstruments_Core_OpenFileName_TemplateName" data-uid="NationalInstruments.Core.OpenFileName.TemplateName">TemplateName</h4>
+  <div class="markdown level1 summary"><p>The name of the dialog template resource in the module identified by the hInstance member. For numbered dialog box resources, this can be a value returned
+by the MAKEINTRESOURCE macro. This member is ignored unless the OFN_ENABLETEMPLATE flag is set in the Flags member. If the OFN_EXPLORER flag is set, the 
+system uses the specified template to create a dialog box that is a child of the default Explorer-style dialog box. If the OFN_EXPLORER flag is not set, 
+the system uses the template to create an old-style dialog box that replaces the default dialog box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string TemplateName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_OpenFileName_Title_" data-uid="NationalInstruments.Core.OpenFileName.Title*"></a>
+  <h4 id="NationalInstruments_Core_OpenFileName_Title" data-uid="NationalInstruments.Core.OpenFileName.Title">Title</h4>
+  <div class="markdown level1 summary"><p>A string to be placed in the title bar of the dialog box. If this member is NULL, the system uses the default title (that is, Save As or Open).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Title { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_Core_OpenFileName_Dispose_" data-uid="NationalInstruments.Core.OpenFileName.Dispose*"></a>
+  <h4 id="NationalInstruments_Core_OpenFileName_Dispose" data-uid="NationalInstruments.Core.OpenFileName.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Core_OpenFileName_GetFileNames_" data-uid="NationalInstruments.Core.OpenFileName.GetFileNames*"></a>
+  <h4 id="NationalInstruments_Core_OpenFileName_GetFileNames" data-uid="NationalInstruments.Core.OpenFileName.GetFileNames">GetFileNames()</h4>
+  <div class="markdown level1 summary"><p>Extracts the filenames from the buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;string&gt; GetFileNames()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><p>List of the filenames selected.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_OpenFileName_GetFilterExtension_" data-uid="NationalInstruments.Core.OpenFileName.GetFilterExtension*"></a>
+  <h4 id="NationalInstruments_Core_OpenFileName_GetFilterExtension" data-uid="NationalInstruments.Core.OpenFileName.GetFilterExtension">GetFilterExtension()</h4>
+  <div class="markdown level1 summary"><p>Gets the file extension currently specified by the filter and filter index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetFilterExtension()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The currently selected file extension.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_ToEnumerable__1___0_">EnumerableHelper.ToEnumerable&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_Repeat__1___0_System_Int32_">EnumerableHelper.Repeat&lt;T&gt;(T, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyNothing__1___0_">Verifier.VerifyNothing&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Func___0_System_Boolean__System_Action_System_String__System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Func___0_System_Boolean__System_Action_System_String_System_String__System_String_System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Boolean_System_Action_System_String__System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Boolean, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Boolean_System_Action_System_String_System_String__System_String_System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Boolean, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Func___0_System_Boolean__System_Action_System_String__System_String_">Verifier.Verify&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Func___0_System_Boolean__System_Action_System_String_System_String__System_String_System_String_">Verifier.Verify&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Boolean_System_Action_System_String__System_String_">Verifier.Verify&lt;T&gt;(T, Boolean, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Boolean_System_Action_System_String_System_String__System_String_System_String_">Verifier.Verify&lt;T&gt;(T, Boolean, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentIsNotNull__1___0_System_String_">Verifier.VerifyArgumentIsNotNull&lt;T&gt;(T, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyValueIsNotNull__1___0_System_String_">Verifier.VerifyValueIsNotNull&lt;T&gt;(T, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentNotReferenceEqualsTo_System_Object_System_Object_System_String_">Verifier.VerifyArgumentNotReferenceEqualsTo(Object, Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyValueNotReferenceEqualsTo_System_Object_System_Object_System_String_">Verifier.VerifyValueNotReferenceEqualsTo(Object, Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentIsOfType__1_System_Object_System_String_">Verifier.VerifyArgumentIsOfType&lt;T&gt;(Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyValueIsOfType__1_System_Object_System_String_">Verifier.VerifyValueIsOfType&lt;T&gt;(Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.DisposableHelpers.html#NationalInstruments_Core_DisposableHelpers_DisposeIfNotNull_System_IDisposable_">DisposableHelpers.DisposeIfNotNull(IDisposable)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.QueryServiceExtensions.html#NationalInstruments_Core_QueryServiceExtensions_QueryService__1_System_Object_">QueryServiceExtensions.QueryService&lt;T&gt;(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_FindClosestMatchingContainerForResource_System_Object_System_Func_System_Object_System_Globalization_CultureInfo_System_Object__System_Globalization_CultureInfo_">LocalizationHelpers.FindClosestMatchingContainerForResource(Object, Func&lt;Object, CultureInfo, Object&gt;, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_FindClosestMatchingContainerForResource_System_Object_System_Func_System_Object_System_Globalization_CultureInfo_System_Object__System_Globalization_CultureInfo_System_Func_System_Object_System_Object__">LocalizationHelpers.FindClosestMatchingContainerForResource(Object, Func&lt;Object, CultureInfo, Object&gt;, CultureInfo, Func&lt;Object, Object&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedEnumString__1___0_">LocalizationHelpers.GetLocalizedEnumString&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedString_System_Object_System_String_System_Globalization_CultureInfo_">LocalizationHelpers.GetLocalizedString(Object, String, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedString_System_Object_System_String_System_Boolean_System_Globalization_CultureInfo_">LocalizationHelpers.GetLocalizedString(Object, String, Boolean, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_SetPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_System_Object_">DynamicPropertyExtensions.SetPropertyValue(Object, PropertySymbol, Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.GetPropertyValue(Object, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_ClearPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.ClearPropertyValue(Object, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_IsPropertySet_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.IsPropertySet(Object, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetAllSetProperties_System_Object_">DynamicPropertyExtensions.GetAllSetProperties(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetAllProperties_System_Object_">DynamicPropertyExtensions.GetAllProperties(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

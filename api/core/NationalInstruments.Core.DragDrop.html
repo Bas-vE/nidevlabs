@@ -1,0 +1,1573 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DragDrop
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DragDrop
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.Core.DragDrop">
+  
+  
+  <h1 id="NationalInstruments_Core_DragDrop" data-uid="NationalInstruments.Core.DragDrop" class="text-break">Class DragDrop
+  </h1>
+  <div class="markdown level0 summary"><p>Static helpers for performing cross platform drag/drop.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">DragDrop</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="../pf/NationalInstruments.Core.html">NationalInstruments.Core</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.Core.dll</h6>
+  <h5 id="NationalInstruments_Core_DragDrop_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class DragDrop</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="NationalInstruments_Core_DragDrop_AllowDropProperty" data-uid="NationalInstruments.Core.DragDrop.AllowDropProperty">AllowDropProperty</h4>
+  <div class="markdown level1 summary"><p>Identifies the AllowDrop attached property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly PlatformDependencyProperty AllowDropProperty</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformDependencyProperty.html">PlatformDependencyProperty</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_Core_DragDrop_DragDropEvent" data-uid="NationalInstruments.Core.DragDrop.DragDropEvent">DragDropEvent</h4>
+  <div class="markdown level1 summary"><p>A routed event used for all instances of our DragEventArgs.
+We don&apos;t care about this routed event right now but WPF needs one - so we always use the same drag event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly RoutedEvent DragDropEvent</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.routedevent">RoutedEvent</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_Core_DragDrop_DragDropOverlayProperty" data-uid="NationalInstruments.Core.DragDrop.DragDropOverlayProperty">DragDropOverlayProperty</h4>
+  <div class="markdown level1 summary"><p>We register ourselves on the root window so that we can be found.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly PlatformDependencyProperty DragDropOverlayProperty</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformDependencyProperty.html">PlatformDependencyProperty</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_Core_DragDrop_NIDataFormatPrefix" data-uid="NationalInstruments.Core.DragDrop.NIDataFormatPrefix">NIDataFormatPrefix</h4>
+  <div class="markdown level1 summary"><p>The prefix to use for a data format when placing an item in the clipboard or when dragging the item</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly string NIDataFormatPrefix</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_Core_DragDrop_NIDataObjectFormat" data-uid="NationalInstruments.Core.DragDrop.NIDataObjectFormat">NIDataObjectFormat</h4>
+  <div class="markdown level1 summary"><p>The data format used when using the native&apos;s platform drag and drop implementation</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly string NIDataObjectFormat</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_Core_DragDrop_ClickPlacement_" data-uid="NationalInstruments.Core.DragDrop.ClickPlacement*"></a>
+  <h4 id="NationalInstruments_Core_DragDrop_ClickPlacement" data-uid="NationalInstruments.Core.DragDrop.ClickPlacement">ClickPlacement</h4>
+  <div class="markdown level1 summary"><p>Gets or sets if the current drag/drop operation should be treated as a click placement operation.
+Setting this property in the middle of a drag/drop operation is a no-op.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ClickPlacement { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_DragDrop_CopyCursor_" data-uid="NationalInstruments.Core.DragDrop.CopyCursor*"></a>
+  <h4 id="NationalInstruments_Core_DragDrop_CopyCursor" data-uid="NationalInstruments.Core.DragDrop.CopyCursor">CopyCursor</h4>
+  <div class="markdown level1 summary"><p>Cursor for when dragging an item while pressing the Ctrl key (doing a drag copy). </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Cursor CopyCursor { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.input.cursor">Cursor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_DragDrop_DragCapture_" data-uid="NationalInstruments.Core.DragDrop.DragCapture*"></a>
+  <h4 id="NationalInstruments_Core_DragDrop_DragCapture" data-uid="NationalInstruments.Core.DragDrop.DragCapture">DragCapture</h4>
+  <div class="markdown level1 summary"><p>Gets the element that currently has captured the drag over events</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PlatformVisual DragCapture { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_DragDrop_DragDropVisual_" data-uid="NationalInstruments.Core.DragDrop.DragDropVisual*"></a>
+  <h4 id="NationalInstruments_Core_DragDrop_DragDropVisual" data-uid="NationalInstruments.Core.DragDrop.DragDropVisual">DragDropVisual</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a visual to be shown while dragging.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PlatformVisual DragDropVisual { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_DragDrop_DragSource_" data-uid="NationalInstruments.Core.DragDrop.DragSource*"></a>
+  <h4 id="NationalInstruments_Core_DragDrop_DragSource" data-uid="NationalInstruments.Core.DragDrop.DragSource">DragSource</h4>
+  <div class="markdown level1 summary"><p>Gets the visual which started the current drag drop</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PlatformVisual DragSource { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_DragDrop_InDragDrop_" data-uid="NationalInstruments.Core.DragDrop.InDragDrop*"></a>
+  <h4 id="NationalInstruments_Core_DragDrop_InDragDrop" data-uid="NationalInstruments.Core.DragDrop.InDragDrop">InDragDrop</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether we&apos;re int he middle of a drag drop operation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool InDragDrop { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_DragDrop_KeyStates_" data-uid="NationalInstruments.Core.DragDrop.KeyStates*"></a>
+  <h4 id="NationalInstruments_Core_DragDrop_KeyStates" data-uid="NationalInstruments.Core.DragDrop.KeyStates">KeyStates</h4>
+  <div class="markdown level1 summary"><p>The state of the keys Control, Shift, and Alt</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DragDropKeyStates KeyStates { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.DragDropKeyStates.html">DragDropKeyStates</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_DragDrop_MoveCursor_" data-uid="NationalInstruments.Core.DragDrop.MoveCursor*"></a>
+  <h4 id="NationalInstruments_Core_DragDrop_MoveCursor" data-uid="NationalInstruments.Core.DragDrop.MoveCursor">MoveCursor</h4>
+  <div class="markdown level1 summary"><p>Cursor for when we are over a node and clicking will select/allow drag.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Cursor MoveCursor { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.input.cursor">Cursor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_DragDrop_NoDropCursor_" data-uid="NationalInstruments.Core.DragDrop.NoDropCursor*"></a>
+  <h4 id="NationalInstruments_Core_DragDrop_NoDropCursor" data-uid="NationalInstruments.Core.DragDrop.NoDropCursor">NoDropCursor</h4>
+  <div class="markdown level1 summary"><p>Cursor for when the drag target is not valid</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Cursor NoDropCursor { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.input.cursor">Cursor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_DragDrop_UseCustomDragAndDrop_" data-uid="NationalInstruments.Core.DragDrop.UseCustomDragAndDrop*"></a>
+  <h4 id="NationalInstruments_Core_DragDrop_UseCustomDragAndDrop" data-uid="NationalInstruments.Core.DragDrop.UseCustomDragAndDrop">UseCustomDragAndDrop</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether we should use our custom drag and drop implementation.<br>Our custom drag and drop implementation does not handle floating windows.  This property was 
+added facilitate writing unit tests.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool UseCustomDragAndDrop { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_Core_DragDrop_AddDragEnterHandler_" data-uid="NationalInstruments.Core.DragDrop.AddDragEnterHandler*"></a>
+  <h4 id="NationalInstruments_Core_DragDrop_AddDragEnterHandler_NationalInstruments_Core_PlatformVisual_System_EventHandler_NationalInstruments_Core_DragEventArgs__" data-uid="NationalInstruments.Core.DragDrop.AddDragEnterHandler(NationalInstruments.Core.PlatformVisual,System.EventHandler{NationalInstruments.Core.DragEventArgs})">AddDragEnterHandler(PlatformVisual, EventHandler&lt;DragEventArgs&gt;)</h4>
+  <div class="markdown level1 summary"><p>Adds an event handler for the DragEnter event to the given element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddDragEnterHandler(PlatformVisual element, EventHandler&lt;DragEventArgs&gt; handler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">element</span></td>
+        <td><p>The element to which the handler should be added.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="NationalInstruments.Core.DragEventArgs.html">DragEventArgs</a>&gt;</td>
+        <td><span class="parametername">handler</span></td>
+        <td><p>The handler that should be called for the DragEnter event.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_DragDrop_AddDragLeaveHandler_" data-uid="NationalInstruments.Core.DragDrop.AddDragLeaveHandler*"></a>
+  <h4 id="NationalInstruments_Core_DragDrop_AddDragLeaveHandler_NationalInstruments_Core_PlatformVisual_System_EventHandler_NationalInstruments_Core_DragEventArgs__" data-uid="NationalInstruments.Core.DragDrop.AddDragLeaveHandler(NationalInstruments.Core.PlatformVisual,System.EventHandler{NationalInstruments.Core.DragEventArgs})">AddDragLeaveHandler(PlatformVisual, EventHandler&lt;DragEventArgs&gt;)</h4>
+  <div class="markdown level1 summary"><p>Adds an event handler for the DragLeave event to the given element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddDragLeaveHandler(PlatformVisual element, EventHandler&lt;DragEventArgs&gt; handler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">element</span></td>
+        <td><p>The element to which the handler should be added.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="NationalInstruments.Core.DragEventArgs.html">DragEventArgs</a>&gt;</td>
+        <td><span class="parametername">handler</span></td>
+        <td><p>The handler that should be called for the DragLeave event.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_DragDrop_AddDragOverHandler_" data-uid="NationalInstruments.Core.DragDrop.AddDragOverHandler*"></a>
+  <h4 id="NationalInstruments_Core_DragDrop_AddDragOverHandler_NationalInstruments_Core_PlatformVisual_System_EventHandler_NationalInstruments_Core_DragEventArgs__" data-uid="NationalInstruments.Core.DragDrop.AddDragOverHandler(NationalInstruments.Core.PlatformVisual,System.EventHandler{NationalInstruments.Core.DragEventArgs})">AddDragOverHandler(PlatformVisual, EventHandler&lt;DragEventArgs&gt;)</h4>
+  <div class="markdown level1 summary"><p>Adds an event handler for the DragOver event to the given element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddDragOverHandler(PlatformVisual element, EventHandler&lt;DragEventArgs&gt; handler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">element</span></td>
+        <td><p>The element to which the handler should be added.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="NationalInstruments.Core.DragEventArgs.html">DragEventArgs</a>&gt;</td>
+        <td><span class="parametername">handler</span></td>
+        <td><p>The handler that should be called for the DragOver event.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_DragDrop_AddDropHandler_" data-uid="NationalInstruments.Core.DragDrop.AddDropHandler*"></a>
+  <h4 id="NationalInstruments_Core_DragDrop_AddDropHandler_NationalInstruments_Core_PlatformVisual_System_EventHandler_NationalInstruments_Core_DragEventArgs__" data-uid="NationalInstruments.Core.DragDrop.AddDropHandler(NationalInstruments.Core.PlatformVisual,System.EventHandler{NationalInstruments.Core.DragEventArgs})">AddDropHandler(PlatformVisual, EventHandler&lt;DragEventArgs&gt;)</h4>
+  <div class="markdown level1 summary"><p>Adds an event handler for the Drop event to the given element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddDropHandler(PlatformVisual element, EventHandler&lt;DragEventArgs&gt; handler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">element</span></td>
+        <td><p>The element to which the handler should be added.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="NationalInstruments.Core.DragEventArgs.html">DragEventArgs</a>&gt;</td>
+        <td><span class="parametername">handler</span></td>
+        <td><p>The handler that should be called for the Drop event.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_DragDrop_AddKeyboardStateChangeHandler_" data-uid="NationalInstruments.Core.DragDrop.AddKeyboardStateChangeHandler*"></a>
+  <h4 id="NationalInstruments_Core_DragDrop_AddKeyboardStateChangeHandler_NationalInstruments_Core_PlatformVisual_System_EventHandler_NationalInstruments_Core_DragEventArgs__" data-uid="NationalInstruments.Core.DragDrop.AddKeyboardStateChangeHandler(NationalInstruments.Core.PlatformVisual,System.EventHandler{NationalInstruments.Core.DragEventArgs})">AddKeyboardStateChangeHandler(PlatformVisual, EventHandler&lt;DragEventArgs&gt;)</h4>
+  <div class="markdown level1 summary"><p>Adds an event handler for the KeyboardStateChange event to the given element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddKeyboardStateChangeHandler(PlatformVisual element, EventHandler&lt;DragEventArgs&gt; handler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">element</span></td>
+        <td><p>The element to which the handler should be added.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="NationalInstruments.Core.DragEventArgs.html">DragEventArgs</a>&gt;</td>
+        <td><span class="parametername">handler</span></td>
+        <td><p>The handler that should be called for the KeyboardStateChange event.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_DragDrop_AddPreviewDragEnterHandler_" data-uid="NationalInstruments.Core.DragDrop.AddPreviewDragEnterHandler*"></a>
+  <h4 id="NationalInstruments_Core_DragDrop_AddPreviewDragEnterHandler_NationalInstruments_Core_PlatformVisual_System_EventHandler_NationalInstruments_Core_DragEventArgs__" data-uid="NationalInstruments.Core.DragDrop.AddPreviewDragEnterHandler(NationalInstruments.Core.PlatformVisual,System.EventHandler{NationalInstruments.Core.DragEventArgs})">AddPreviewDragEnterHandler(PlatformVisual, EventHandler&lt;DragEventArgs&gt;)</h4>
+  <div class="markdown level1 summary"><p>Adds an event handler for the PreviewDragEnter event to the given element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddPreviewDragEnterHandler(PlatformVisual element, EventHandler&lt;DragEventArgs&gt; handler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">element</span></td>
+        <td><p>The element to which the handler should be added.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="NationalInstruments.Core.DragEventArgs.html">DragEventArgs</a>&gt;</td>
+        <td><span class="parametername">handler</span></td>
+        <td><p>The handler that should be called for the PreviewDragEnter event.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_DragDrop_AddPreviewDragLeaveHandler_" data-uid="NationalInstruments.Core.DragDrop.AddPreviewDragLeaveHandler*"></a>
+  <h4 id="NationalInstruments_Core_DragDrop_AddPreviewDragLeaveHandler_NationalInstruments_Core_PlatformVisual_System_EventHandler_NationalInstruments_Core_DragEventArgs__" data-uid="NationalInstruments.Core.DragDrop.AddPreviewDragLeaveHandler(NationalInstruments.Core.PlatformVisual,System.EventHandler{NationalInstruments.Core.DragEventArgs})">AddPreviewDragLeaveHandler(PlatformVisual, EventHandler&lt;DragEventArgs&gt;)</h4>
+  <div class="markdown level1 summary"><p>Adds an event handler for the PreviewDragLeave event to the given element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddPreviewDragLeaveHandler(PlatformVisual element, EventHandler&lt;DragEventArgs&gt; handler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">element</span></td>
+        <td><p>The element to which the handler should be added.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="NationalInstruments.Core.DragEventArgs.html">DragEventArgs</a>&gt;</td>
+        <td><span class="parametername">handler</span></td>
+        <td><p>The handler that should be called for the PreviewDragLeave event.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_DragDrop_AddPreviewDragOverHandler_" data-uid="NationalInstruments.Core.DragDrop.AddPreviewDragOverHandler*"></a>
+  <h4 id="NationalInstruments_Core_DragDrop_AddPreviewDragOverHandler_NationalInstruments_Core_PlatformVisual_System_EventHandler_NationalInstruments_Core_DragEventArgs__" data-uid="NationalInstruments.Core.DragDrop.AddPreviewDragOverHandler(NationalInstruments.Core.PlatformVisual,System.EventHandler{NationalInstruments.Core.DragEventArgs})">AddPreviewDragOverHandler(PlatformVisual, EventHandler&lt;DragEventArgs&gt;)</h4>
+  <div class="markdown level1 summary"><p>Adds an event handler for the PreviewDragOver event to the given element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddPreviewDragOverHandler(PlatformVisual element, EventHandler&lt;DragEventArgs&gt; handler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">element</span></td>
+        <td><p>The element to which the handler should be added.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="NationalInstruments.Core.DragEventArgs.html">DragEventArgs</a>&gt;</td>
+        <td><span class="parametername">handler</span></td>
+        <td><p>The handler that should be called for the PreviewDragOver event.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_DragDrop_AddPreviewDropHandler_" data-uid="NationalInstruments.Core.DragDrop.AddPreviewDropHandler*"></a>
+  <h4 id="NationalInstruments_Core_DragDrop_AddPreviewDropHandler_NationalInstruments_Core_PlatformVisual_System_EventHandler_NationalInstruments_Core_DragEventArgs__" data-uid="NationalInstruments.Core.DragDrop.AddPreviewDropHandler(NationalInstruments.Core.PlatformVisual,System.EventHandler{NationalInstruments.Core.DragEventArgs})">AddPreviewDropHandler(PlatformVisual, EventHandler&lt;DragEventArgs&gt;)</h4>
+  <div class="markdown level1 summary"><p>Adds an event handler for the PreviewDrop event to the given element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddPreviewDropHandler(PlatformVisual element, EventHandler&lt;DragEventArgs&gt; handler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">element</span></td>
+        <td><p>The element to which the handler should be added.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="NationalInstruments.Core.DragEventArgs.html">DragEventArgs</a>&gt;</td>
+        <td><span class="parametername">handler</span></td>
+        <td><p>The handler that should be called for the PreviewDrop event.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_DragDrop_AddPreviewKeyboardStateChangeHandler_" data-uid="NationalInstruments.Core.DragDrop.AddPreviewKeyboardStateChangeHandler*"></a>
+  <h4 id="NationalInstruments_Core_DragDrop_AddPreviewKeyboardStateChangeHandler_NationalInstruments_Core_PlatformVisual_System_EventHandler_NationalInstruments_Core_DragEventArgs__" data-uid="NationalInstruments.Core.DragDrop.AddPreviewKeyboardStateChangeHandler(NationalInstruments.Core.PlatformVisual,System.EventHandler{NationalInstruments.Core.DragEventArgs})">AddPreviewKeyboardStateChangeHandler(PlatformVisual, EventHandler&lt;DragEventArgs&gt;)</h4>
+  <div class="markdown level1 summary"><p>Adds an event handler for the PreviewKeyboardStateChange event to the given element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddPreviewKeyboardStateChangeHandler(PlatformVisual element, EventHandler&lt;DragEventArgs&gt; handler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">element</span></td>
+        <td><p>The element to which the handler should be added.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="NationalInstruments.Core.DragEventArgs.html">DragEventArgs</a>&gt;</td>
+        <td><span class="parametername">handler</span></td>
+        <td><p>The handler that should be called for the PreviewKeyboardStateChange event.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_DragDrop_CaptureDrag_" data-uid="NationalInstruments.Core.DragDrop.CaptureDrag*"></a>
+  <h4 id="NationalInstruments_Core_DragDrop_CaptureDrag_NationalInstruments_Core_PlatformVisual_" data-uid="NationalInstruments.Core.DragDrop.CaptureDrag(NationalInstruments.Core.PlatformVisual)">CaptureDrag(PlatformVisual)</h4>
+  <div class="markdown level1 summary"><p>Captures drag over events in order to avoid calling the handlers on elements that will never handle them</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CaptureDrag(this PlatformVisual element)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">element</span></td>
+        <td><p>Element that should receive the drag over events</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_DragDrop_CaptureDrag_" data-uid="NationalInstruments.Core.DragDrop.CaptureDrag*"></a>
+  <h4 id="NationalInstruments_Core_DragDrop_CaptureDrag_System_Windows_UIElement_" data-uid="NationalInstruments.Core.DragDrop.CaptureDrag(System.Windows.UIElement)">CaptureDrag(UIElement)</h4>
+  <div class="markdown level1 summary"><p>Captures drag over events in order to avoid calling the handlers on elements that will never handle them</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CaptureDrag(this UIElement element)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement">UIElement</a></td>
+        <td><span class="parametername">element</span></td>
+        <td><p>Element that should receive the drag over events</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_DragDrop_FinishDragDrop_" data-uid="NationalInstruments.Core.DragDrop.FinishDragDrop*"></a>
+  <h4 id="NationalInstruments_Core_DragDrop_FinishDragDrop_System_Boolean_" data-uid="NationalInstruments.Core.DragDrop.FinishDragDrop(System.Boolean)">FinishDragDrop(Boolean)</h4>
+  <div class="markdown level1 summary"><p>End a DragDropOperation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void FinishDragDrop(bool canceled)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">canceled</span></td>
+        <td><p>Pass true if drag/drop operation was canceled.  False otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_DragDrop_GetAllowDrop_" data-uid="NationalInstruments.Core.DragDrop.GetAllowDrop*"></a>
+  <h4 id="NationalInstruments_Core_DragDrop_GetAllowDrop_NationalInstruments_Core_PlatformVisual_" data-uid="NationalInstruments.Core.DragDrop.GetAllowDrop(NationalInstruments.Core.PlatformVisual)">GetAllowDrop(PlatformVisual)</h4>
+  <div class="markdown level1 summary"><p>Get whether the given element supports DragDrop.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool GetAllowDrop(PlatformVisual element)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">element</span></td>
+        <td><p>the element</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>true if supported</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_DragDrop_GetDragDropOverlay_" data-uid="NationalInstruments.Core.DragDrop.GetDragDropOverlay*"></a>
+  <h4 id="NationalInstruments_Core_DragDrop_GetDragDropOverlay_NationalInstruments_Core_PlatformVisual_" data-uid="NationalInstruments.Core.DragDrop.GetDragDropOverlay(NationalInstruments.Core.PlatformVisual)">GetDragDropOverlay(PlatformVisual)</h4>
+  <div class="markdown level1 summary"><p>Get the dragdropoverlay from some element in the tree.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IDragDropOverlay GetDragDropOverlay(PlatformVisual visual)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">visual</span></td>
+        <td><p>The visual requesting the <a class="xref" href="NationalInstruments.Core.IDragDropOverlay.html">IDragDropOverlay</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.IDragDropOverlay.html">IDragDropOverlay</a></td>
+        <td><p>The found <a class="xref" href="NationalInstruments.Core.IDragDropOverlay.html">IDragDropOverlay</a>, or <code>null</code> if the overlay could not be found in the visual tree of the visual.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_DragDrop_PlatformDoDragDrop_" data-uid="NationalInstruments.Core.DragDrop.PlatformDoDragDrop*"></a>
+  <h4 id="NationalInstruments_Core_DragDrop_PlatformDoDragDrop_NationalInstruments_Core_PlatformVisual_System_Object_NationalInstruments_Core_DragDropEffects_System_Action_NationalInstruments_Core_DragDropEffects__" data-uid="NationalInstruments.Core.DragDrop.PlatformDoDragDrop(NationalInstruments.Core.PlatformVisual,System.Object,NationalInstruments.Core.DragDropEffects,System.Action{NationalInstruments.Core.DragDropEffects})">PlatformDoDragDrop(PlatformVisual, Object, DragDropEffects, Action&lt;DragDropEffects&gt;)</h4>
+  <div class="markdown level1 summary"><p>Start a drag drop operation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void PlatformDoDragDrop(PlatformVisual dragSource, object data, DragDropEffects allowedEffects, Action&lt;DragDropEffects&gt; dragComplete)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">dragSource</span></td>
+        <td><p>The visual that started the drag operation</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">data</span></td>
+        <td><p>The data to be dragged</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.DragDropEffects.html">DragDropEffects</a></td>
+        <td><span class="parametername">allowedEffects</span></td>
+        <td><p>Specifies the possible effects of the drag and drop operation</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="NationalInstruments.Core.DragDropEffects.html">DragDropEffects</a>&gt;</td>
+        <td><span class="parametername">dragComplete</span></td>
+        <td><p>The callback function to run after completing the drag and drop operation</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_DragDrop_ReleaseDragCapture_" data-uid="NationalInstruments.Core.DragDrop.ReleaseDragCapture*"></a>
+  <h4 id="NationalInstruments_Core_DragDrop_ReleaseDragCapture_NationalInstruments_Core_PlatformVisual_NationalInstruments_Core_UIPosition_" data-uid="NationalInstruments.Core.DragDrop.ReleaseDragCapture(NationalInstruments.Core.PlatformVisual,NationalInstruments.Core.UIPosition)">ReleaseDragCapture(PlatformVisual, UIPosition)</h4>
+  <div class="markdown level1 summary"><p>Stop capturing drag over events.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ReleaseDragCapture(this PlatformVisual element, UIPosition mousePosition)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">element</span></td>
+        <td><p>Element that was capturing the drag over events</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.UIPosition.html">UIPosition</a></td>
+        <td><span class="parametername">mousePosition</span></td>
+        <td><p>The current mouse position</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_DragDrop_ReleaseDragCapture_" data-uid="NationalInstruments.Core.DragDrop.ReleaseDragCapture*"></a>
+  <h4 id="NationalInstruments_Core_DragDrop_ReleaseDragCapture_System_Windows_UIElement_NationalInstruments_Core_UIPosition_" data-uid="NationalInstruments.Core.DragDrop.ReleaseDragCapture(System.Windows.UIElement,NationalInstruments.Core.UIPosition)">ReleaseDragCapture(UIElement, UIPosition)</h4>
+  <div class="markdown level1 summary"><p>Stop capturing drag over events.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ReleaseDragCapture(this UIElement element, UIPosition mousePosition)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.uielement">UIElement</a></td>
+        <td><span class="parametername">element</span></td>
+        <td><p>Element that was capturing the drag over events</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.UIPosition.html">UIPosition</a></td>
+        <td><span class="parametername">mousePosition</span></td>
+        <td><p>The current mouse position</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_DragDrop_RemoveDragEnterHandler_" data-uid="NationalInstruments.Core.DragDrop.RemoveDragEnterHandler*"></a>
+  <h4 id="NationalInstruments_Core_DragDrop_RemoveDragEnterHandler_NationalInstruments_Core_PlatformVisual_System_EventHandler_NationalInstruments_Core_DragEventArgs__" data-uid="NationalInstruments.Core.DragDrop.RemoveDragEnterHandler(NationalInstruments.Core.PlatformVisual,System.EventHandler{NationalInstruments.Core.DragEventArgs})">RemoveDragEnterHandler(PlatformVisual, EventHandler&lt;DragEventArgs&gt;)</h4>
+  <div class="markdown level1 summary"><p>Removes a handler for the DragEnter event from the given element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RemoveDragEnterHandler(PlatformVisual element, EventHandler&lt;DragEventArgs&gt; handler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">element</span></td>
+        <td><p>The element from which the handler should be removed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="NationalInstruments.Core.DragEventArgs.html">DragEventArgs</a>&gt;</td>
+        <td><span class="parametername">handler</span></td>
+        <td><p>The handler for the DragEnter event that should be removed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_DragDrop_RemoveDragLeaveHandler_" data-uid="NationalInstruments.Core.DragDrop.RemoveDragLeaveHandler*"></a>
+  <h4 id="NationalInstruments_Core_DragDrop_RemoveDragLeaveHandler_NationalInstruments_Core_PlatformVisual_System_EventHandler_NationalInstruments_Core_DragEventArgs__" data-uid="NationalInstruments.Core.DragDrop.RemoveDragLeaveHandler(NationalInstruments.Core.PlatformVisual,System.EventHandler{NationalInstruments.Core.DragEventArgs})">RemoveDragLeaveHandler(PlatformVisual, EventHandler&lt;DragEventArgs&gt;)</h4>
+  <div class="markdown level1 summary"><p>Removes a handler for the DragLeave event from the given element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RemoveDragLeaveHandler(PlatformVisual element, EventHandler&lt;DragEventArgs&gt; handler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">element</span></td>
+        <td><p>The element from which the handler should be removed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="NationalInstruments.Core.DragEventArgs.html">DragEventArgs</a>&gt;</td>
+        <td><span class="parametername">handler</span></td>
+        <td><p>The handler for the DragLeave event that should be removed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_DragDrop_RemoveDragOverHandler_" data-uid="NationalInstruments.Core.DragDrop.RemoveDragOverHandler*"></a>
+  <h4 id="NationalInstruments_Core_DragDrop_RemoveDragOverHandler_NationalInstruments_Core_PlatformVisual_System_EventHandler_NationalInstruments_Core_DragEventArgs__" data-uid="NationalInstruments.Core.DragDrop.RemoveDragOverHandler(NationalInstruments.Core.PlatformVisual,System.EventHandler{NationalInstruments.Core.DragEventArgs})">RemoveDragOverHandler(PlatformVisual, EventHandler&lt;DragEventArgs&gt;)</h4>
+  <div class="markdown level1 summary"><p>Removes a handler for the DragOver event from the given element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RemoveDragOverHandler(PlatformVisual element, EventHandler&lt;DragEventArgs&gt; handler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">element</span></td>
+        <td><p>The element from which the handler should be removed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="NationalInstruments.Core.DragEventArgs.html">DragEventArgs</a>&gt;</td>
+        <td><span class="parametername">handler</span></td>
+        <td><p>The handler for the DragOver event that should be removed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_DragDrop_RemoveDropHandler_" data-uid="NationalInstruments.Core.DragDrop.RemoveDropHandler*"></a>
+  <h4 id="NationalInstruments_Core_DragDrop_RemoveDropHandler_NationalInstruments_Core_PlatformVisual_System_EventHandler_NationalInstruments_Core_DragEventArgs__" data-uid="NationalInstruments.Core.DragDrop.RemoveDropHandler(NationalInstruments.Core.PlatformVisual,System.EventHandler{NationalInstruments.Core.DragEventArgs})">RemoveDropHandler(PlatformVisual, EventHandler&lt;DragEventArgs&gt;)</h4>
+  <div class="markdown level1 summary"><p>Removes a handler for the Drop event from the given element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RemoveDropHandler(PlatformVisual element, EventHandler&lt;DragEventArgs&gt; handler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">element</span></td>
+        <td><p>The element from which the handler should be removed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="NationalInstruments.Core.DragEventArgs.html">DragEventArgs</a>&gt;</td>
+        <td><span class="parametername">handler</span></td>
+        <td><p>The handler for the Drop event that should be removed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_DragDrop_RemoveKeyboardStateChangeHandler_" data-uid="NationalInstruments.Core.DragDrop.RemoveKeyboardStateChangeHandler*"></a>
+  <h4 id="NationalInstruments_Core_DragDrop_RemoveKeyboardStateChangeHandler_NationalInstruments_Core_PlatformVisual_System_EventHandler_NationalInstruments_Core_DragEventArgs__" data-uid="NationalInstruments.Core.DragDrop.RemoveKeyboardStateChangeHandler(NationalInstruments.Core.PlatformVisual,System.EventHandler{NationalInstruments.Core.DragEventArgs})">RemoveKeyboardStateChangeHandler(PlatformVisual, EventHandler&lt;DragEventArgs&gt;)</h4>
+  <div class="markdown level1 summary"><p>Removes a handler for the KeyboardStateChange event from the given element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RemoveKeyboardStateChangeHandler(PlatformVisual element, EventHandler&lt;DragEventArgs&gt; handler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">element</span></td>
+        <td><p>The element from which the handler should be removed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="NationalInstruments.Core.DragEventArgs.html">DragEventArgs</a>&gt;</td>
+        <td><span class="parametername">handler</span></td>
+        <td><p>The handler for the KeyboardStateChange event that should be removed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_DragDrop_RemovePreviewDragEnterHandler_" data-uid="NationalInstruments.Core.DragDrop.RemovePreviewDragEnterHandler*"></a>
+  <h4 id="NationalInstruments_Core_DragDrop_RemovePreviewDragEnterHandler_NationalInstruments_Core_PlatformVisual_System_EventHandler_NationalInstruments_Core_DragEventArgs__" data-uid="NationalInstruments.Core.DragDrop.RemovePreviewDragEnterHandler(NationalInstruments.Core.PlatformVisual,System.EventHandler{NationalInstruments.Core.DragEventArgs})">RemovePreviewDragEnterHandler(PlatformVisual, EventHandler&lt;DragEventArgs&gt;)</h4>
+  <div class="markdown level1 summary"><p>Removes a handler for the PreviewDragEnter event from the given element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RemovePreviewDragEnterHandler(PlatformVisual element, EventHandler&lt;DragEventArgs&gt; handler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">element</span></td>
+        <td><p>The element from which the handler should be removed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="NationalInstruments.Core.DragEventArgs.html">DragEventArgs</a>&gt;</td>
+        <td><span class="parametername">handler</span></td>
+        <td><p>The handler for the PreviewDragEnter event that should be removed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_DragDrop_RemovePreviewDragLeaveHandler_" data-uid="NationalInstruments.Core.DragDrop.RemovePreviewDragLeaveHandler*"></a>
+  <h4 id="NationalInstruments_Core_DragDrop_RemovePreviewDragLeaveHandler_NationalInstruments_Core_PlatformVisual_System_EventHandler_NationalInstruments_Core_DragEventArgs__" data-uid="NationalInstruments.Core.DragDrop.RemovePreviewDragLeaveHandler(NationalInstruments.Core.PlatformVisual,System.EventHandler{NationalInstruments.Core.DragEventArgs})">RemovePreviewDragLeaveHandler(PlatformVisual, EventHandler&lt;DragEventArgs&gt;)</h4>
+  <div class="markdown level1 summary"><p>Removes a handler for the PreviewDragLeave event from the given element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RemovePreviewDragLeaveHandler(PlatformVisual element, EventHandler&lt;DragEventArgs&gt; handler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">element</span></td>
+        <td><p>The element from which the handler should be removed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="NationalInstruments.Core.DragEventArgs.html">DragEventArgs</a>&gt;</td>
+        <td><span class="parametername">handler</span></td>
+        <td><p>The handler for the PreviewDragLeave event that should be removed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_DragDrop_RemovePreviewDragOverHandler_" data-uid="NationalInstruments.Core.DragDrop.RemovePreviewDragOverHandler*"></a>
+  <h4 id="NationalInstruments_Core_DragDrop_RemovePreviewDragOverHandler_NationalInstruments_Core_PlatformVisual_System_EventHandler_NationalInstruments_Core_DragEventArgs__" data-uid="NationalInstruments.Core.DragDrop.RemovePreviewDragOverHandler(NationalInstruments.Core.PlatformVisual,System.EventHandler{NationalInstruments.Core.DragEventArgs})">RemovePreviewDragOverHandler(PlatformVisual, EventHandler&lt;DragEventArgs&gt;)</h4>
+  <div class="markdown level1 summary"><p>Removes a handler for the PreviewDragOver event from the given element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RemovePreviewDragOverHandler(PlatformVisual element, EventHandler&lt;DragEventArgs&gt; handler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">element</span></td>
+        <td><p>The element from which the handler should be removed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="NationalInstruments.Core.DragEventArgs.html">DragEventArgs</a>&gt;</td>
+        <td><span class="parametername">handler</span></td>
+        <td><p>The handler for the PreviewDragOver event that should be removed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_DragDrop_RemovePreviewDropHandler_" data-uid="NationalInstruments.Core.DragDrop.RemovePreviewDropHandler*"></a>
+  <h4 id="NationalInstruments_Core_DragDrop_RemovePreviewDropHandler_NationalInstruments_Core_PlatformVisual_System_EventHandler_NationalInstruments_Core_DragEventArgs__" data-uid="NationalInstruments.Core.DragDrop.RemovePreviewDropHandler(NationalInstruments.Core.PlatformVisual,System.EventHandler{NationalInstruments.Core.DragEventArgs})">RemovePreviewDropHandler(PlatformVisual, EventHandler&lt;DragEventArgs&gt;)</h4>
+  <div class="markdown level1 summary"><p>Removes a handler for the PreviewDrop event from the given element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RemovePreviewDropHandler(PlatformVisual element, EventHandler&lt;DragEventArgs&gt; handler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">element</span></td>
+        <td><p>The element from which the handler should be removed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="NationalInstruments.Core.DragEventArgs.html">DragEventArgs</a>&gt;</td>
+        <td><span class="parametername">handler</span></td>
+        <td><p>The handler for the PreviewDrop event that should be removed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_DragDrop_RemovePreviewKeyboardStateChangeHandler_" data-uid="NationalInstruments.Core.DragDrop.RemovePreviewKeyboardStateChangeHandler*"></a>
+  <h4 id="NationalInstruments_Core_DragDrop_RemovePreviewKeyboardStateChangeHandler_NationalInstruments_Core_PlatformVisual_System_EventHandler_NationalInstruments_Core_DragEventArgs__" data-uid="NationalInstruments.Core.DragDrop.RemovePreviewKeyboardStateChangeHandler(NationalInstruments.Core.PlatformVisual,System.EventHandler{NationalInstruments.Core.DragEventArgs})">RemovePreviewKeyboardStateChangeHandler(PlatformVisual, EventHandler&lt;DragEventArgs&gt;)</h4>
+  <div class="markdown level1 summary"><p>Removes a handler for the PreviewKeyboardStateChange event from the given element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RemovePreviewKeyboardStateChangeHandler(PlatformVisual element, EventHandler&lt;DragEventArgs&gt; handler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">element</span></td>
+        <td><p>The element from which the handler should be removed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="NationalInstruments.Core.DragEventArgs.html">DragEventArgs</a>&gt;</td>
+        <td><span class="parametername">handler</span></td>
+        <td><p>The handler for the PreviewKeyboardStateChange event that should be removed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_DragDrop_SetAllowDrop_" data-uid="NationalInstruments.Core.DragDrop.SetAllowDrop*"></a>
+  <h4 id="NationalInstruments_Core_DragDrop_SetAllowDrop_NationalInstruments_Core_PlatformVisual_System_Boolean_" data-uid="NationalInstruments.Core.DragDrop.SetAllowDrop(NationalInstruments.Core.PlatformVisual,System.Boolean)">SetAllowDrop(PlatformVisual, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Set whether the given element supports DragDrop.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetAllowDrop(PlatformVisual element, bool value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">element</span></td>
+        <td><p>the element</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>the new value</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,406 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Enum OpenFileNameFlags
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Enum OpenFileNameFlags
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.Core.OpenFileNameFlags">
+  
+  
+  <h1 id="NationalInstruments_Core_OpenFileNameFlags" data-uid="NationalInstruments.Core.OpenFileNameFlags" class="text-break">Enum OpenFileNameFlags
+  </h1>
+  <div class="markdown level0 summary"><p>Dialog options for <a class="xref" href="NationalInstruments.Core.OpenFileName.html">OpenFileName</a> class.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="../pf/NationalInstruments.Core.html">NationalInstruments.Core</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.Core.dll</h6>
+  <h5 id="NationalInstruments_Core_OpenFileNameFlags_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Flags]
+public enum OpenFileNameFlags</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    <thead>
+    <tbody>
+      <tr>
+        <td id="NationalInstruments_Core_OpenFileNameFlags_AllowMultiselect">AllowMultiselect</td>
+        <td><p>The File Name list box allows multiple selections. If you also set the EXPLORER flag, the dialog box uses the Explorer-style user interface; 
+otherwise, it uses the old-style user interface.
+If the user selects more than one file, the lpstrFile buffer returns the path to the current directory followed by the file names of the selected 
+files.The nFileOffset member is the offset, in bytes or characters, to the first file name, and the nFileExtension member is not used. For 
+Explorer-style dialog boxes, the directory and file name strings are NULL separated, with an extra NULL character after the last file name. 
+This format enables the Explorer-style dialog boxes to return long file names that include spaces. For old-style dialog boxes, the directory and
+file name strings are separated by spaces and the function uses short file names for file names with spaces. You can use the FindFirstFile function 
+to convert between long and short file names.
+If you specify a custom template for an old-style dialog box, the definition of the File Name list box must contain the LBS_EXTENDEDSEL value.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_Core_OpenFileNameFlags_CreatePrompt">CreatePrompt</td>
+        <td><p>If the user specifies a file that does not exist, this flag causes the dialog box to prompt the user for permission to create the file.
+If the user chooses to create the file, the dialog box closes and the function returns the specified name; otherwise, the dialog box remains open.
+If you use this flag with the ALLOWMULTISELECT flag, the dialog box allows the user to specify only one nonexistent file.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_Core_OpenFileNameFlags_DontAddToRecent">DontAddToRecent</td>
+        <td><p>Prevents the system from adding a link to the selected file in the file system directory that contains the user&apos;s most recently used documents. 
+To retrieve the location of this directory, call the SHGetSpecialFolderLocation function with the CSIDL_RECENT flag.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_Core_OpenFileNameFlags_EnableHook">EnableHook</td>
+        <td><p>Enables the hook function specified in the lpfnHook member.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_Core_OpenFileNameFlags_EnableIncludeNotify">EnableIncludeNotify</td>
+        <td><p>Causes the dialog box to send CDN_INCLUDEITEM notification messages to your OFNHookProc hook procedure when the user opens a folder. The dialog 
+box sends a notification for each item in the newly opened folder. These messages enable you to control which items the dialog box displays 
+in the folder&apos;s item list.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_Core_OpenFileNameFlags_EnableSizing">EnableSizing</td>
+        <td><p>Enables the Explorer-style dialog box to be resized using either the mouse or the keyboard.By default, the Explorer-style Open and Save As dialog 
+boxes allow the dialog box to be resized regardless of whether this flag is set.This flag is necessary only if you provide a hook procedure or custom 
+template. The old-style dialog box does not permit resizing.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_Core_OpenFileNameFlags_EnableTemplate">EnableTemplate</td>
+        <td><p>The lpTemplateName member is a pointer to the name of a dialog template resource in the module identified by the hInstance member.If the EXPLORER
+flag is set, the system uses the specified template to create a dialog box that is a child of the default Explorer-style dialog box.If the EXPLORER
+flag is not set, the system uses the template to create an old-style dialog box that replaces the default dialog box.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_Core_OpenFileNameFlags_EnableTemplateHandle">EnableTemplateHandle</td>
+        <td><p>The hInstance member identifies a data block that contains a preloaded dialog box template. The system ignores lpTemplateName if this flag is 
+specified.If the EXPLORER flag is set, the system uses the specified template to create a dialog box that is a child of the default Explorer-style
+dialog box.If the EXPLORER flag is not set, the system uses the template to create an old-style dialog box that replaces the default dialog box.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_Core_OpenFileNameFlags_Explorer">Explorer</td>
+        <td><p>Indicates that any customizations made to the Open or Save As dialog box use the Explorer-style customization methods.For more information, 
+see Explorer-Style Hook Procedures and Explorer-Style Custom Templates.By default, the Open and Save As dialog boxes use the Explorer-style 
+user interface regardless of whether this flag is set.This flag is necessary only if you provide a hook procedure or custom template, or set 
+the ALLOWMULTISELECT flag.If you want the old-style user interface, omit the EXPLORER flag and provide a replacement old-style 
+template or hook procedure.If you want the old style but do not need a custom template or hook procedure, simply provide a hook procedure 
+that always returns FALSE.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_Core_OpenFileNameFlags_ExtensionDifferent">ExtensionDifferent</td>
+        <td><p>The user typed a file name extension that differs from the extension specified by lpstrDefExt.The function does not use this flag if lpstrDefExt is NULL.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_Core_OpenFileNameFlags_FileMustExist">FileMustExist</td>
+        <td><p>The user can type only names of existing files in the File Name entry field.If this flag is specified and the user enters an invalid name, the
+dialog box procedure displays a warning in a message box.If this flag is specified, the PATHMUSTEXIST flag is also used. This flag can be 
+used in an Open dialog box. It cannot be used with a Save As dialog box.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_Core_OpenFileNameFlags_ForceShowHidden">ForceShowHidden</td>
+        <td><p>Forces the showing of system and hidden files, thus overriding the user setting to show or not show hidden files. However, a file that is marked 
+both system and hidden is not shown.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_Core_OpenFileNameFlags_HideReadOnly">HideReadOnly</td>
+        <td><p>Hides the Read Only check box.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_Core_OpenFileNameFlags_LongNames">LongNames</td>
+        <td><p>For old-style dialog boxes, this flag causes the dialog box to use long file names.If this flag is not specified, or if the ALLOWMULTISELECT 
+flag is also set, old-style dialog boxes use short file names (8.3 format) for file names with spaces.Explorer-style dialog boxes ignore this 
+flag and always display long file names.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_Core_OpenFileNameFlags_NoChangeDir">NoChangeDir</td>
+        <td><p>Restores the current directory to its original value if the user changed the directory while searching for files.This flag is ineffective for GetOpenFileName.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_Core_OpenFileNameFlags_NoDereferenceLinks">NoDereferenceLinks</td>
+        <td><p>Directs the dialog box to return the path and file name of the selected shortcut (.LNK) file.If this value is not specified, the dialog box returns 
+the path and file name of the file referenced by the shortcut.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_Core_OpenFileNameFlags_NoLongNames">NoLongNames</td>
+        <td><p>For old-style dialog boxes, this flag causes the dialog box to use short file names (8.3 format). Explorer-style dialog boxes ignore this flag and 
+always display long file names.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_Core_OpenFileNameFlags_NoNetworkButton">NoNetworkButton</td>
+        <td><p>Hides and disables the Network button.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_Core_OpenFileNameFlags_NoReadOnlyReturn">NoReadOnlyReturn</td>
+        <td><p>The returned file does not have the Read Only check box selected and is not in a write-protected directory.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_Core_OpenFileNameFlags_NoTestFileCreate">NoTestFileCreate</td>
+        <td><p>The file is not created before the dialog box is closed.This flag should be specified if the application saves the file on a create-nonmodify 
+network share.When an application specifies this flag, the library does not check for write protection, a full disk, an open drive door, or network
+protection.Applications using this flag must perform file operations carefully, because a file cannot be reopened once it is closed.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_Core_OpenFileNameFlags_NoValidate">NoValidate</td>
+        <td><p>The common dialog boxes allow invalid characters in the returned file name. Typically, the calling application uses a hook procedure that checks
+the file name by using the FILEOKSTRING message.If the text box in the edit control is empty or contains nothing but spaces, the lists of files 
+and directories are updated. If the text box in the edit control contains anything else, nFileOffset and nFileExtension are set to values generated
+by parsing the text. No default extension is added to the text, nor is text copied to the buffer specified by lpstrFileTitle. If the value specified
+by nFileOffset is less than zero, the file name is invalid.Otherwise, the file name is valid, and nFileExtension and nFileOffset can be used as 
+if the NOVALIDATE flag had not been specified.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_Core_OpenFileNameFlags_OverwritePrompt">OverwritePrompt</td>
+        <td><p>Causes the Save As dialog box to generate a message box if the selected file already exists.The user must confirm whether to overwrite the file.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_Core_OpenFileNameFlags_PathMustExist">PathMustExist</td>
+        <td><p>The user can type only valid paths and file names. If this flag is used and the user types an invalid path and file name in the File Name entry 
+field, the dialog box function displays a warning in a message box.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_Core_OpenFileNameFlags_ReadOnly">ReadOnly</td>
+        <td><p>Causes the Read Only check box to be selected initially when the dialog box is created.This flag indicates the state of the Read Only check box 
+when the dialog box is closed.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_Core_OpenFileNameFlags_ShareAware">ShareAware</td>
+        <td><p>Specifies that if a call to the OpenFile function fails because of a network sharing violation, the error is ignored and the dialog box returns the 
+selected file name. If this flag is not set, the dialog box notifies your hook procedure when a network sharing violation occurs for the file name 
+specified by the user.If you set the EXPLORER flag, the dialog box sends the CDN_SHAREVIOLATION message to the hook procedure.If you do not set 
+EXPLORER, the dialog box sends the SHAREVISTRING registered message to the hook procedure.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="NationalInstruments_Core_OpenFileNameFlags_ShowHelp">ShowHelp</td>
+        <td><p>Causes the dialog box to display the Help button. The hwndOwner member must specify the window to receive the HELPMSGSTRING registered messages that 
+the dialog box sends when the user clicks the Help button. An Explorer-style dialog box sends a CDN_HELP notification message to your hook procedure 
+when the user clicks the Help button.</p>
+</td>
+      </tr>
+    </tbody>
+  </thead></thead></table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_ToEnumerable__1___0_">EnumerableHelper.ToEnumerable&lt;OpenFileNameFlags&gt;()</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_Repeat__1___0_System_Int32_">EnumerableHelper.Repeat&lt;OpenFileNameFlags&gt;(Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyNothing__1___0_">Verifier.VerifyNothing&lt;OpenFileNameFlags&gt;()</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Func___0_System_Boolean__System_Action_System_String__System_String_">Verifier.VerifyDebugOnly&lt;OpenFileNameFlags&gt;(Func&lt;OpenFileNameFlags, Boolean&gt;, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Func___0_System_Boolean__System_Action_System_String_System_String__System_String_System_String_">Verifier.VerifyDebugOnly&lt;OpenFileNameFlags&gt;(Func&lt;OpenFileNameFlags, Boolean&gt;, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Boolean_System_Action_System_String__System_String_">Verifier.VerifyDebugOnly&lt;OpenFileNameFlags&gt;(Boolean, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Boolean_System_Action_System_String_System_String__System_String_System_String_">Verifier.VerifyDebugOnly&lt;OpenFileNameFlags&gt;(Boolean, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Func___0_System_Boolean__System_Action_System_String__System_String_">Verifier.Verify&lt;OpenFileNameFlags&gt;(Func&lt;OpenFileNameFlags, Boolean&gt;, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Func___0_System_Boolean__System_Action_System_String_System_String__System_String_System_String_">Verifier.Verify&lt;OpenFileNameFlags&gt;(Func&lt;OpenFileNameFlags, Boolean&gt;, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Boolean_System_Action_System_String__System_String_">Verifier.Verify&lt;OpenFileNameFlags&gt;(Boolean, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Boolean_System_Action_System_String_System_String__System_String_System_String_">Verifier.Verify&lt;OpenFileNameFlags&gt;(Boolean, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentNotReferenceEqualsTo_System_Object_System_Object_System_String_">Verifier.VerifyArgumentNotReferenceEqualsTo(Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyValueNotReferenceEqualsTo_System_Object_System_Object_System_String_">Verifier.VerifyValueNotReferenceEqualsTo(Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentIsValidEnumValue_System_Enum_System_String_">Verifier.VerifyArgumentIsValidEnumValue(String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyValueIsValidEnumValue_System_Enum_System_String_">Verifier.VerifyValueIsValidEnumValue(String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentIsOfType__1_System_Object_System_String_">Verifier.VerifyArgumentIsOfType&lt;T&gt;(String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyValueIsOfType__1_System_Object_System_String_">Verifier.VerifyValueIsOfType&lt;T&gt;(String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.CodeReadinessAttributeHelpers.html#NationalInstruments_Core_CodeReadinessAttributeHelpers_HasAllowedReadiness_System_Enum_">CodeReadinessAttributeHelpers.HasAllowedReadiness()</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.EnumExtensions.html#NationalInstruments_Core_EnumExtensions_GetFlagValues_System_Enum_">EnumExtensions.GetFlagValues()</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.EnumExtensions.html#NationalInstruments_Core_EnumExtensions_GetAttribute__1_System_Enum_">EnumExtensions.GetAttribute&lt;T&gt;()</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.QueryServiceExtensions.html#NationalInstruments_Core_QueryServiceExtensions_QueryService__1_System_Object_">QueryServiceExtensions.QueryService&lt;T&gt;()</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_FindClosestMatchingContainerForResource_System_Object_System_Func_System_Object_System_Globalization_CultureInfo_System_Object__System_Globalization_CultureInfo_">LocalizationHelpers.FindClosestMatchingContainerForResource(Func&lt;Object, CultureInfo, Object&gt;, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_FindClosestMatchingContainerForResource_System_Object_System_Func_System_Object_System_Globalization_CultureInfo_System_Object__System_Globalization_CultureInfo_System_Func_System_Object_System_Object__">LocalizationHelpers.FindClosestMatchingContainerForResource(Func&lt;Object, CultureInfo, Object&gt;, CultureInfo, Func&lt;Object, Object&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedEnumString__1___0_">LocalizationHelpers.GetLocalizedEnumString&lt;OpenFileNameFlags&gt;()</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedString_System_Object_System_String_System_Globalization_CultureInfo_">LocalizationHelpers.GetLocalizedString(String, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedString_System_Object_System_String_System_Boolean_System_Globalization_CultureInfo_">LocalizationHelpers.GetLocalizedString(String, Boolean, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_SetPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_System_Object_">DynamicPropertyExtensions.SetPropertyValue(PropertySymbol, Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.GetPropertyValue(PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_ClearPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.ClearPropertyValue(PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_IsPropertySet_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.IsPropertySet(PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetAllSetProperties_System_Object_">DynamicPropertyExtensions.GetAllSetProperties()</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetAllProperties_System_Object_">DynamicPropertyExtensions.GetAllProperties()</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

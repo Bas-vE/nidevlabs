@@ -1,0 +1,366 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace NationalInstruments.DataTypes
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace NationalInstruments.DataTypes
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.DataTypes">
+  
+  <h1 id="NationalInstruments_DataTypes" data-uid="NationalInstruments.DataTypes" class="text-break">Namespace NationalInstruments.DataTypes
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.AttributeStorage-1.html">AttributeStorage&lt;T&gt;</a></h4>
+      <section><p>An associative attribute store where the key is a type and the value is 
+an attribute value of type T corresponding to that type. 
+Use this attribute storage for transient (non-persisted) values that
+are not part of the type signature. In other words, changes to the 
+attribute value do not change the type. </p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.AttributeValueNotFoundException.html">AttributeValueNotFoundException</a></h4>
+      <section><p>The exception that is thrown when a type attribute matching the requested criteria is not found.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.BaseNITypeWalker.html">BaseNITypeWalker</a></h4>
+      <section><p>Provides the functionality to walk an NIType. The walk involves visiting the NIType and
+all of its properties that have a data type that is NIType or a sequence of NIType. </p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.CheckNITypeEqualityBase.html">CheckNITypeEqualityBase</a></h4>
+      <section><p>Derive from this class if your type walker is going to be comparing NITypes.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.CustomDiagramTypeIdAttribute.html">CustomDiagramTypeIdAttribute</a></h4>
+      <section><p>Used to tag properties on control proxies such that the reported NIType on the diagram will be determined by 
+an auxiliary class that implements IDiagramTypeIdResolver.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.ExportDiagramTypeIdResolverAttribute.html">ExportDiagramTypeIdResolverAttribute</a></h4>
+      <section><p>Export attribute used to export an IDiagramTypeIdResolver. </p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.FieldDisplayNameAttribute.html">FieldDisplayNameAttribute</a></h4>
+      <section><p>Display name of one field</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.FieldDisplayNameExtension.html">FieldDisplayNameExtension</a></h4>
+      <section><p>Extension to get display name of one field</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.HasLocalizableResourcesAttribute.html">HasLocalizableResourcesAttribute</a></h4>
+      <section><p>This attribute is meant to be applied to types to signal that they have discoverable localizable resources, which will
+be expected to be found in the same assembly as the class that has this attribute applied to it. The primary reason this
+was created was to mark control proxy types (for the control reference use case) that they have resources that can be
+located by a type asset provider. The kinds of resources we expect to be localized are the proxy class name itself, which,
+by convention has a key in the resources of the form &apos;ProxyName_{YourProxyClassName}&apos; (The &apos;YourProxyClassName&apos; part is
+identical to the string passed into this attribute), and properties that by convention the keys should have the form of
+&apos;{YourProxyClassName}_{DotNetPropertyName}&apos;. If the resource keys do not follow this convention they will not be discovered by
+the type asset provider for control references.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.IgnoreSystemTypeMembersAttribute.html">IgnoreSystemTypeMembersAttribute</a></h4>
+      <section><p>Assign to a root member of a dot net class hierarchy such that its conversion to an NIType form will
+ignore members that return anything of System.Type (like GetType()). This is important for performance reasons.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.IsOrContainsTypeWalker.html">IsOrContainsTypeWalker</a></h4>
+      <section><p>TypeWalker that allows us to walk the type searching for a given condition.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.KindBasedDualNITypeWalker.html">KindBasedDualNITypeWalker</a></h4>
+      <section><p>Implements a walker that walks simultaneously over two NIType instances.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.LazyXmlWriter.html">LazyXmlWriter</a></h4>
+      <section><p>An XMLWriter the lazily writes Elements such that it will not write
+and element if it has not contents and no attributes.
+It can also conditionally write data as either and Attribute or an Element
+depending on the complexity of the value</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.NIAccessScopeExtensions.html">NIAccessScopeExtensions</a></h4>
+      <section><p>Helper methods for <a class="xref" href="NationalInstruments.DataTypes.NIAccessScope.html">NIAccessScope</a></p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.NIArrayBuilder.html">NIArrayBuilder</a></h4>
+      <section><p>Base class for building variable or fixed size arrays.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.NIAttributedBaseBuilder.html">NIAttributedBaseBuilder</a></h4>
+      <section><p>Used to add attributes to a builder.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.NIAttributedBuilder.html">NIAttributedBuilder</a></h4>
+      <section><p>Used to add attributes to a builder.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.NIClassBuilder.html">NIClassBuilder</a></h4>
+      <section><p>Represents a builder for defining a class type.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.NIClusterBuilder.html">NIClusterBuilder</a></h4>
+      <section><p>Use this class to build a cluster.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.NIEnumerationBuilder.html">NIEnumerationBuilder</a></h4>
+      <section><p>Use this to build an enumeration.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.NIEnumerationMemberBuilder.html">NIEnumerationMemberBuilder</a></h4>
+      <section><p>Use this to build an enumeration member.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.NIEventBuilder.html">NIEventBuilder</a></h4>
+      <section><p>Use to define a event.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.NIFieldAccessPoliciesExtensions.html">NIFieldAccessPoliciesExtensions</a></h4>
+      <section><p>Extension methods for <a class="xref" href="NationalInstruments.DataTypes.NIFieldAccessPolicies.html">NIFieldAccessPolicies</a>.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.NIFieldBuilder.html">NIFieldBuilder</a></h4>
+      <section><p>Use this to build a field.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.NIFieldContainerBuilder.html">NIFieldContainerBuilder</a></h4>
+      <section><p>Base class for NIClusterBuilder and NIClassBuilder because both can contain fields</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.NIFunctionBuilder.html">NIFunctionBuilder</a></h4>
+      <section><p>Use to define a function.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.NIFunctionOrEventBuilderBase.html">NIFunctionOrEventBuilderBase</a></h4>
+      <section><p>Base class for NIFunctionBuilder and NIEventBuilder.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.NIGenericTypeBuilder.html">NIGenericTypeBuilder</a></h4>
+      <section><p>GenericType Builder </p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.NIParameterBuilder.html">NIParameterBuilder</a></h4>
+      <section><p>Use this to define a parameter.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.NIPointerBuilder.html">NIPointerBuilder</a></h4>
+      <section><p>Builder for defining a pointer to another type.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.NIPointerOrCollectionBuilder.html">NIPointerOrCollectionBuilder</a></h4>
+      <section><p>Base class for pointer or collection NIType builders.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.NIPropertyBuilder.html">NIPropertyBuilder</a></h4>
+      <section><p>Use this to build a Property.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.NISizedArrayBuilder.html">NISizedArrayBuilder</a></h4>
+      <section><p>Builds sized arrays.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.NITypeBuilder.html">NITypeBuilder</a></h4>
+      <section><p>Abstract base class for all type builders. A type builder allows us to create instances of
+a particular type but also control whether the type gets added to the type system.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.NITypeConflictingTypeIdException.html">NITypeConflictingTypeIdException</a></h4>
+      <section><p>Exception thrown when a conflict is detected where two NITypes are using the same type ID</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.NITypedefBuilder.html">NITypedefBuilder</a></h4>
+      <section><p>Use to build a typedef that needs to be forward referenced.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.NITypeExtensions.html">NITypeExtensions</a></h4>
+      <section><p>Implements extension methods for NIType.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.NITypeFactory.html">NITypeFactory</a></h4>
+      <section><p>Represents a collection of types that will be consolidated into a single dictionary.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.NITypeNameBuilder.html">NITypeNameBuilder</a></h4>
+      <section><p>The base class for builders of named types.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.NITypeNamePairBuilder.html">NITypeNamePairBuilder</a></h4>
+      <section><p>Builds a name type pair.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.NITypeParserContext.html">NITypeParserContext</a></h4>
+      <section><p>NITypeXmlParser context for each DataTypeReferenceTableParser.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.NITypeXmlGeneratorWalker.html">NITypeXmlGeneratorWalker</a></h4>
+      <section><p>NIType walker used to write a type to XML</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.NITypeXmlParserBase.html">NITypeXmlParserBase</a></h4>
+      <section><p>Parse an NIType from its serialized Xml form.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.NIUnionBuilder.html">NIUnionBuilder</a></h4>
+      <section><p>Use this class to build a Union.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.NIVariableArrayBuilder.html">NIVariableArrayBuilder</a></h4>
+      <section><p>Builds variable sized arrays.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.NumericExtensions.html">NumericExtensions</a></h4>
+      <section><p>Extension methods for the fixed-point and complex fixed-point data types</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.ParsedNITypeCache.html">ParsedNITypeCache</a></h4>
+      <section><p>ParsedNITypeCache which keeps map of typeId to NIType and NIType to typeID.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeBuilderWalker.html">RecursiveTypeBuilderWalker</a></h4>
+      <section><p>Provides the functionality to walk an NITypeBuilder. The walk involves visiting the NITypeBuilder and
+all of its properties that have a data type builder that is NITypeBuilder or a sequence of NITypeBuilder. </p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.RecursiveTypeSafeWalker.html">RecursiveTypeSafeWalker</a></h4>
+      <section><p>A type walker that will safely walk a type that contains recursive references</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.RemoveNonPersistedAttributeFromNITypeExtensions.html">RemoveNonPersistedAttributeFromNITypeExtensions</a></h4>
+      <section><p>Public extension methods for the <span class="xref">NationalInstruments.DataTypes.RemoveNonPersistedAttributeFromNIType</span></p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.ReplaceTypeDefinitionTypeWalkerExtensions.html">ReplaceTypeDefinitionTypeWalkerExtensions</a></h4>
+      <section><p>Public extension methods for the <span class="xref">NationalInstruments.DataTypes.ReplaceTypeDefinitionTypeWalker</span></p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.ReplaceTypeWithTypeWalkerExtensions.html">ReplaceTypeWithTypeWalkerExtensions</a></h4>
+      <section><p>Public extension methods for NIType to traverse an NIType and replace itself or a type nested inside itself
+with another type, as defined by a delegate method of your choosing.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.TypeHasNonPersistedAttributes.html">TypeHasNonPersistedAttributes</a></h4>
+      <section><p>TypeHasNonPersistedAttributes that walks a type to check if a type has any non-persisted attribute.</p>
+</section>
+    <h3 id="structs">Structs
+  </h3>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.AttributeValue.html">AttributeValue</a></h4>
+      <section><p>Provides the name, value, and persisted state of the attribute on an attributed type.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.NIType.html">NIType</a></h4>
+      <section><p>A type in the type system.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.VisitedNIType.html">VisitedNIType</a></h4>
+      <section><p>Parameter to <a class="xref" href="NationalInstruments.DataTypes.INITypeVisitor.html">INITypeVisitor</a> implementations. Contains the type being visited as well as that type with
+all attributes still applied.</p>
+</section>
+    <h3 id="interfaces">Interfaces
+  </h3>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.IDiagramTypeIdResolver.html">IDiagramTypeIdResolver</a></h4>
+      <section><p>This interface is meant to be used small auxiliary classes related to control proxies for type moderation of properties and 
+method parameters. The purpose of implementations of this interface is to report a particular NIType for a given type idenetifier string.
+These classes should be exported using the ExportDiagramTypeIdResolverAttribute attribute below. The expecation is that there will be one
+class per property type that requires resolving.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.IDiagramTypeIdResolverMetadata.html">IDiagramTypeIdResolverMetadata</a></h4>
+      <section><p>The metadata required to import all discoverable IDiagramTypeIdResolvers</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.IGetNIType.html">IGetNIType</a></h4>
+      <section><p>analagous to IData
+cluster is something that will implement this interface
+Data that can describe its datatype (as NIType) will implement this interface.
+One caller is the extension method GetNIType;</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.INITypeBuilderVisitor.html">INITypeBuilderVisitor</a></h4>
+      <section><p>An interface for a type Builder visitor</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.INITypeVisitor.html">INITypeVisitor</a></h4>
+      <section><p>An interface for a type visitor</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.ITargetTypeSerializer.html">ITargetTypeSerializer</a></h4>
+      <section><p>Interface which provides type serialization from NIType to a string version
+of the type which can be used during runtime for operations like data marshaling</p>
+</section>
+    <h3 id="enums">Enums
+  </h3>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.NIAccessScope.html">NIAccessScope</a></h4>
+      <section><p>Access scope for members.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.NIFieldAccessPolicies.html">NIFieldAccessPolicies</a></h4>
+      <section><p>Access policy for fields.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.NIParameterPassingRule.html">NIParameterPassingRule</a></h4>
+      <section><p>Rules for input and output parameters.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.NITypeKind.html">NITypeKind</a></h4>
+      <section><p>The enum of kinds.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.NumericOverflow.html">NumericOverflow</a></h4>
+      <section><p>Defines the options for handling numeric overflow.</p>
+</section>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.RoundMode.html">RoundMode</a></h4>
+      <section><p>Defines the method of rounding (quantization) to use with a numeric computation. For consistency and brevity, 
+&quot;Up&quot; refers to the direction of positive infinity, and &quot;Down&quot; refers to the direction of negative infinity.
+&quot;Truncate&quot; is not used since it has different meanings for different numeric formats.</p>
+<p>Unless otherwise noted, these modes must be implemented correctly. &quot;Correct rounding&quot; refers to the
+IEEE-754 definition, where the rounded value of an operation is guaranteed to be identical to that which would
+be obtained by computing the operation to infinite precision and rounding.</p>
+<p>The modes Up, Down, ToZero, and AwayFromZero are known as directed rounding modes and are useful when computing
+bounds, as in interval analysis (range propagation).</p>
+</section>
+    <h3 id="delegates">Delegates
+  </h3>
+      <h4><a class="xref" href="NationalInstruments.DataTypes.ReplaceType.html">ReplaceType</a></h4>
+      <section><p>Delegate to replace one NIType with another.</p>
+</section>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,634 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class FileImporter
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class FileImporter
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.SourceModel.FileImporter">
+  
+  
+  <h1 id="NationalInstruments_SourceModel_FileImporter" data-uid="NationalInstruments.SourceModel.FileImporter" class="text-break">Class FileImporter
+  </h1>
+  <div class="markdown level0 summary"><p>Class to handle importing files from disk to a <a class="xref" href="NationalInstruments.SourceModel.Definition.html">Definition</a>. Files are specified by <a class="xref" href="NationalInstruments.SourceModel.Envoys.FileStreamInfo.html">FileStreamInfo</a> and are then copied to the
+appropriate folder on disk corresponding to the imported file&apos;s given parent envoy.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">FileImporter</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.SourceModel.html">NationalInstruments.SourceModel</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_SourceModel_FileImporter_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class FileImporter</code></pre>
+  </div>
+  <h5 id="NationalInstruments_SourceModel_FileImporter_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>This class does not utilize FileStream property in FileStreamInfo class. If the caller chooses to
+open FileStream, the caller is responsible for closing it. </p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_FileImporter__ctor_" data-uid="NationalInstruments.SourceModel.FileImporter.#ctor*"></a>
+  <h4 id="NationalInstruments_SourceModel_FileImporter__ctor_NationalInstruments_SourceModel_Envoys_Envoy_System_Collections_Generic_IEnumerable_NationalInstruments_SourceModel_Envoys_FileStreamInfo__" data-uid="NationalInstruments.SourceModel.FileImporter.#ctor(NationalInstruments.SourceModel.Envoys.Envoy,System.Collections.Generic.IEnumerable{NationalInstruments.SourceModel.Envoys.FileStreamInfo})">FileImporter(Envoy, IEnumerable&lt;FileStreamInfo&gt;)</h4>
+  <div class="markdown level1 summary"><p>Constructor for creating a <a class="xref" href="NationalInstruments.SourceModel.FileImporter.html">FileImporter</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FileImporter(Envoy parentEnvoy, IEnumerable&lt;FileStreamInfo&gt; fileInfos)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">parentEnvoy</span></td>
+        <td><p>The <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a> to parent the newly imported files under.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.FileStreamInfo.html">FileStreamInfo</a>&gt;</td>
+        <td><span class="parametername">fileInfos</span></td>
+        <td><p>The set of <a class="xref" href="NationalInstruments.SourceModel.Envoys.FileStreamInfo.html">FileStreamInfo</a>s that contain the source file information describing the files to import.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_FileImporter_FileInfos_" data-uid="NationalInstruments.SourceModel.FileImporter.FileInfos*"></a>
+  <h4 id="NationalInstruments_SourceModel_FileImporter_FileInfos" data-uid="NationalInstruments.SourceModel.FileImporter.FileInfos">FileInfos</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="NationalInstruments.SourceModel.Envoys.FileStreamInfo.html">FileStreamInfo</a>s that this importer is trying to import.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;FileStreamInfo&gt; FileInfos { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.FileStreamInfo.html">FileStreamInfo</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_FileImporter_FilesActuallyCopied_" data-uid="NationalInstruments.SourceModel.FileImporter.FilesActuallyCopied*"></a>
+  <h4 id="NationalInstruments_SourceModel_FileImporter_FilesActuallyCopied" data-uid="NationalInstruments.SourceModel.FileImporter.FilesActuallyCopied">FilesActuallyCopied</h4>
+  <div class="markdown level1 summary"><p>All the files that were copied to the new location</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;FileStreamInfo&gt; FilesActuallyCopied { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.FileStreamInfo.html">FileStreamInfo</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_FileImporter_ImportedEnvoys_" data-uid="NationalInstruments.SourceModel.FileImporter.ImportedEnvoys*"></a>
+  <h4 id="NationalInstruments_SourceModel_FileImporter_ImportedEnvoys" data-uid="NationalInstruments.SourceModel.FileImporter.ImportedEnvoys">ImportedEnvoys</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a>s that have been successfully imported into the definition.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;Envoy&gt; ImportedEnvoys { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_FileImporter_ImportFailures_" data-uid="NationalInstruments.SourceModel.FileImporter.ImportFailures*"></a>
+  <h4 id="NationalInstruments_SourceModel_FileImporter_ImportFailures" data-uid="NationalInstruments.SourceModel.FileImporter.ImportFailures">ImportFailures</h4>
+  <div class="markdown level1 summary"><p>The set of <a class="xref" href="NationalInstruments.SourceModel.FileImportFailureRecord.html">FileImportFailureRecord</a>s of files that failed to successfully import.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;FileImportFailureRecord&gt; ImportFailures { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.FileImportFailureRecord.html">FileImportFailureRecord</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_FileImporter_ImportSucceeded_" data-uid="NationalInstruments.SourceModel.FileImporter.ImportSucceeded*"></a>
+  <h4 id="NationalInstruments_SourceModel_FileImporter_ImportSucceeded" data-uid="NationalInstruments.SourceModel.FileImporter.ImportSucceeded">ImportSucceeded</h4>
+  <div class="markdown level1 summary"><p>Whether the import operation was fully successful. False if any file failed to successfully import.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ImportSucceeded { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_FileImporter_OnRollbackDeleteAction_" data-uid="NationalInstruments.SourceModel.FileImporter.OnRollbackDeleteAction*"></a>
+  <h4 id="NationalInstruments_SourceModel_FileImporter_OnRollbackDeleteAction" data-uid="NationalInstruments.SourceModel.FileImporter.OnRollbackDeleteAction">OnRollbackDeleteAction</h4>
+  <div class="markdown level1 summary"><p>Action to be called if the import is rolled back, after the imported files have been deleted. The action&apos;s parameter is the set of imported files that failed to delete.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Action&lt;IEnumerable&lt;FileImportFailureRecord&gt;&gt; OnRollbackDeleteAction { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.FileImportFailureRecord.html">FileImportFailureRecord</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_FileImporter_ParentEnvoy_" data-uid="NationalInstruments.SourceModel.FileImporter.ParentEnvoy*"></a>
+  <h4 id="NationalInstruments_SourceModel_FileImporter_ParentEnvoy" data-uid="NationalInstruments.SourceModel.FileImporter.ParentEnvoy">ParentEnvoy</h4>
+  <div class="markdown level1 summary"><p>Gets the parent envoy for the files to import</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Envoy ParentEnvoy { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_FileImporter_AddExistingFile_" data-uid="NationalInstruments.SourceModel.FileImporter.AddExistingFile*"></a>
+  <h4 id="NationalInstruments_SourceModel_FileImporter_AddExistingFile_NationalInstruments_SourceModel_Envoys_Envoy_System_String_" data-uid="NationalInstruments.SourceModel.FileImporter.AddExistingFile(NationalInstruments.SourceModel.Envoys.Envoy,System.String)">AddExistingFile(Envoy, String)</h4>
+  <div class="markdown level1 summary"><p>Given the path to a file on disk, add that file to the given <code data-dev-comment-type="paramref" class="paramref">parentEnvoy</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual Envoy AddExistingFile(Envoy parentEnvoy, string filePath)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">parentEnvoy</span></td>
+        <td><p>The <a class="xref" href="NationalInstruments.SourceModel.Definition.html">Definition</a> to add the item into.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">filePath</span></td>
+        <td><p>Path to the file on disk.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><p>The new <a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a> for the added file.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_FileImporter_AddImportFailure_" data-uid="NationalInstruments.SourceModel.FileImporter.AddImportFailure*"></a>
+  <h4 id="NationalInstruments_SourceModel_FileImporter_AddImportFailure_NationalInstruments_SourceModel_FileImportFailureRecord_" data-uid="NationalInstruments.SourceModel.FileImporter.AddImportFailure(NationalInstruments.SourceModel.FileImportFailureRecord)">AddImportFailure(FileImportFailureRecord)</h4>
+  <div class="markdown level1 summary"><p>Add an import failure record</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void AddImportFailure(FileImportFailureRecord failureRecord)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.FileImportFailureRecord.html">FileImportFailureRecord</a></td>
+        <td><span class="parametername">failureRecord</span></td>
+        <td><p>The failure record to add</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_FileImporter_CalculateParentEnvoyRelativeStoragePath_" data-uid="NationalInstruments.SourceModel.FileImporter.CalculateParentEnvoyRelativeStoragePath*"></a>
+  <h4 id="NationalInstruments_SourceModel_FileImporter_CalculateParentEnvoyRelativeStoragePath_NationalInstruments_SourceModel_Envoys_Envoy_" data-uid="NationalInstruments.SourceModel.FileImporter.CalculateParentEnvoyRelativeStoragePath(NationalInstruments.SourceModel.Envoys.Envoy)">CalculateParentEnvoyRelativeStoragePath(Envoy)</h4>
+  <div class="markdown level1 summary"><p>Calculates the relative storage path to the project for the given parent envoy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual string CalculateParentEnvoyRelativeStoragePath(Envoy parentEnvoy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">parentEnvoy</span></td>
+        <td><p>The parent envoy</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The relative storage path</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_FileImporter_CanAddAsExistingFile_" data-uid="NationalInstruments.SourceModel.FileImporter.CanAddAsExistingFile*"></a>
+  <h4 id="NationalInstruments_SourceModel_FileImporter_CanAddAsExistingFile_System_String_" data-uid="NationalInstruments.SourceModel.FileImporter.CanAddAsExistingFile(System.String)">CanAddAsExistingFile(String)</h4>
+  <div class="markdown level1 summary"><p>Determines whether a file with the specified file extension can be added to this <a class="xref" href="NationalInstruments.SourceModel.Definition.html">Definition</a> as an existing file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool CanAddAsExistingFile(string fileExtension)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">fileExtension</span></td>
+        <td><p>The file extension to check (including the leading dot).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if a file with the specified file extension can be added to this <a class="xref" href="NationalInstruments.SourceModel.Definition.html">Definition</a> as an existing file, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_FileImporter_DoesImportRequireFileCopies_" data-uid="NationalInstruments.SourceModel.FileImporter.DoesImportRequireFileCopies*"></a>
+  <h4 id="NationalInstruments_SourceModel_FileImporter_DoesImportRequireFileCopies" data-uid="NationalInstruments.SourceModel.FileImporter.DoesImportRequireFileCopies">DoesImportRequireFileCopies()</h4>
+  <div class="markdown level1 summary"><p>Determines whether the import process will require any files to be copied into a folder.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DoesImportRequireFileCopies()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if the import process will require any file copies, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_FileImporter_Import_" data-uid="NationalInstruments.SourceModel.FileImporter.Import*"></a>
+  <h4 id="NationalInstruments_SourceModel_FileImporter_Import" data-uid="NationalInstruments.SourceModel.FileImporter.Import">Import()</h4>
+  <div class="markdown level1 summary"><p>Imports the provided files into the definition.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool Import()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>Whether the import fully succeeded.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></td>
+        <td><p>If this <a class="xref" href="NationalInstruments.SourceModel.FileImporter.html">FileImporter</a> has already been used to import files.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

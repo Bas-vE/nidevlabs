@@ -1,0 +1,1087 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class PrioritizedTaskSchedulerManager
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class PrioritizedTaskSchedulerManager
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.Core.PrioritizedTaskSchedulerManager">
+  
+  
+  <h1 id="NationalInstruments_Core_PrioritizedTaskSchedulerManager" data-uid="NationalInstruments.Core.PrioritizedTaskSchedulerManager" class="text-break">Class PrioritizedTaskSchedulerManager
+  </h1>
+  <div class="markdown level0 summary"><p>Provides a TaskScheduler that provides control over priorities, fairness, and the underlying threads utilized.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="NationalInstruments.Core.Disposable.html">Disposable</a></div>
+    <div class="level2"><span class="xref">PrioritizedTaskSchedulerManager</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="NationalInstruments.Core.Disposable.html#NationalInstruments_Core_Disposable_IsDisposed">Disposable.IsDisposed</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Core.Disposable.html#NationalInstruments_Core_Disposable_Dispose">Disposable.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Core.Disposable.html#NationalInstruments_Core_Disposable_ThrowIfDisposed">Disposable.ThrowIfDisposed()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Core.Disposable.html#NationalInstruments_Core_Disposable_DisposeUnmanagedResources">Disposable.DisposeUnmanagedResources()</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="../pf/NationalInstruments.Core.html">NationalInstruments.Core</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.Core.dll</h6>
+  <h5 id="NationalInstruments_Core_PrioritizedTaskSchedulerManager_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class PrioritizedTaskSchedulerManager : Disposable, IDisposable</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_Core_PrioritizedTaskSchedulerManager_ActiveManager_" data-uid="NationalInstruments.Core.PrioritizedTaskSchedulerManager.ActiveManager*"></a>
+  <h4 id="NationalInstruments_Core_PrioritizedTaskSchedulerManager_ActiveManager" data-uid="NationalInstruments.Core.PrioritizedTaskSchedulerManager.ActiveManager">ActiveManager</h4>
+  <div class="markdown level1 summary"><p>Gets the active manager.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PrioritizedTaskSchedulerManager ActiveManager { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PrioritizedTaskSchedulerManager.html">PrioritizedTaskSchedulerManager</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></td>
+        <td><p>The application must setup a manager before it can be statically accessible</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PrioritizedTaskSchedulerManager_CurrentBackgroundThreadAsyncPriority_" data-uid="NationalInstruments.Core.PrioritizedTaskSchedulerManager.CurrentBackgroundThreadAsyncPriority*"></a>
+  <h4 id="NationalInstruments_Core_PrioritizedTaskSchedulerManager_CurrentBackgroundThreadAsyncPriority" data-uid="NationalInstruments.Core.PrioritizedTaskSchedulerManager.CurrentBackgroundThreadAsyncPriority">CurrentBackgroundThreadAsyncPriority</h4>
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="NationalInstruments.Core.AsyncTaskPriority.html">AsyncTaskPriority</a> for the calling thread.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AsyncTaskPriorityToken CurrentBackgroundThreadAsyncPriority { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.AsyncTaskPriorityToken.html">AsyncTaskPriorityToken</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PrioritizedTaskSchedulerManager_CurrentThreadAsyncPriority_" data-uid="NationalInstruments.Core.PrioritizedTaskSchedulerManager.CurrentThreadAsyncPriority*"></a>
+  <h4 id="NationalInstruments_Core_PrioritizedTaskSchedulerManager_CurrentThreadAsyncPriority" data-uid="NationalInstruments.Core.PrioritizedTaskSchedulerManager.CurrentThreadAsyncPriority">CurrentThreadAsyncPriority</h4>
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="NationalInstruments.Core.AsyncTaskPriority.html">AsyncTaskPriority</a> for the calling thread.
+This will return either</p>
+<ol>
+<li>the true priority of the current task scheduler if the tread is running
+code for a scheduled task, or UI thread servicing a UI task if the task
+has a priority</li>
+<li>WorkerHigh if the thread is not a worker thread.  This is assuming
+that the code is in the UI thread and is in response to some user
+action.</li>
+</ol>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AsyncTaskPriorityToken CurrentThreadAsyncPriority { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.AsyncTaskPriorityToken.html">AsyncTaskPriorityToken</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PrioritizedTaskSchedulerManager_CurrentThreadTaskSource_" data-uid="NationalInstruments.Core.PrioritizedTaskSchedulerManager.CurrentThreadTaskSource*"></a>
+  <h4 id="NationalInstruments_Core_PrioritizedTaskSchedulerManager_CurrentThreadTaskSource" data-uid="NationalInstruments.Core.PrioritizedTaskSchedulerManager.CurrentThreadTaskSource">CurrentThreadTaskSource</h4>
+  <div class="markdown level1 summary"><p>Gets the &quot;source&quot; of the task that is running on the current thread.  The source is set by the original Task from BeginNew
+If you using the ScheduledActivityManager the TaskSource will be the ScheduledActivity that is the root of the executing tasks.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object CurrentThreadTaskSource { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PrioritizedTaskSchedulerManager_IsCurrentThreadAWorkerThread_" data-uid="NationalInstruments.Core.PrioritizedTaskSchedulerManager.IsCurrentThreadAWorkerThread*"></a>
+  <h4 id="NationalInstruments_Core_PrioritizedTaskSchedulerManager_IsCurrentThreadAWorkerThread" data-uid="NationalInstruments.Core.PrioritizedTaskSchedulerManager.IsCurrentThreadAWorkerThread">IsCurrentThreadAWorkerThread</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether the calling thread is a worker thread.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsCurrentThreadAWorkerThread { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PrioritizedTaskSchedulerManager_MaximumStarvationPriority_" data-uid="NationalInstruments.Core.PrioritizedTaskSchedulerManager.MaximumStarvationPriority*"></a>
+  <h4 id="NationalInstruments_Core_PrioritizedTaskSchedulerManager_MaximumStarvationPriority" data-uid="NationalInstruments.Core.PrioritizedTaskSchedulerManager.MaximumStarvationPriority">MaximumStarvationPriority</h4>
+  <div class="markdown level1 summary"><p>Gets the maximum priority of a task scheduler that can be starved.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AsyncTaskPriority MaximumStarvationPriority { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.AsyncTaskPriority.html">AsyncTaskPriority</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_Core_PrioritizedTaskSchedulerManager_DiagnosticSchedulerBlockedOnResource_" data-uid="NationalInstruments.Core.PrioritizedTaskSchedulerManager.DiagnosticSchedulerBlockedOnResource*"></a>
+  <h4 id="NationalInstruments_Core_PrioritizedTaskSchedulerManager_DiagnosticSchedulerBlockedOnResource_NationalInstruments_Core_PrioritizedTaskScheduler_System_Object_" data-uid="NationalInstruments.Core.PrioritizedTaskSchedulerManager.DiagnosticSchedulerBlockedOnResource(NationalInstruments.Core.PrioritizedTaskScheduler,System.Object)">DiagnosticSchedulerBlockedOnResource(PrioritizedTaskScheduler, Object)</h4>
+  <div class="markdown level1 summary"><p>Debug helper that schedule aware access restricted resources call to register resources that
+a scheduler is blocked on</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void DiagnosticSchedulerBlockedOnResource(PrioritizedTaskScheduler scheduler, object resource)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PrioritizedTaskScheduler.html">PrioritizedTaskScheduler</a></td>
+        <td><span class="parametername">scheduler</span></td>
+        <td><p>The scheduler that is about to be blocked</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">resource</span></td>
+        <td><p>The resource that the scheduler is trying to acquire</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PrioritizedTaskSchedulerManager_DiagnosticSchedulerUnblockedOnResource_" data-uid="NationalInstruments.Core.PrioritizedTaskSchedulerManager.DiagnosticSchedulerUnblockedOnResource*"></a>
+  <h4 id="NationalInstruments_Core_PrioritizedTaskSchedulerManager_DiagnosticSchedulerUnblockedOnResource_NationalInstruments_Core_PrioritizedTaskScheduler_System_Object_" data-uid="NationalInstruments.Core.PrioritizedTaskSchedulerManager.DiagnosticSchedulerUnblockedOnResource(NationalInstruments.Core.PrioritizedTaskScheduler,System.Object)">DiagnosticSchedulerUnblockedOnResource(PrioritizedTaskScheduler, Object)</h4>
+  <div class="markdown level1 summary"><p>Debug helper that schedule aware access restricted resources call to register resources that
+a scheduler is blocked on</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void DiagnosticSchedulerUnblockedOnResource(PrioritizedTaskScheduler scheduler, object resource)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PrioritizedTaskScheduler.html">PrioritizedTaskScheduler</a></td>
+        <td><span class="parametername">scheduler</span></td>
+        <td><p>The scheduler that is now unblocked</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">resource</span></td>
+        <td><p>The resource that the scheduler was trying to acquire</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PrioritizedTaskSchedulerManager_DisposeManagedResources_" data-uid="NationalInstruments.Core.PrioritizedTaskSchedulerManager.DisposeManagedResources*"></a>
+  <h4 id="NationalInstruments_Core_PrioritizedTaskSchedulerManager_DisposeManagedResources" data-uid="NationalInstruments.Core.PrioritizedTaskSchedulerManager.DisposeManagedResources">DisposeManagedResources()</h4>
+  <div class="markdown level1 summary"><p>Override this to dispose managed resources your class owns.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void DisposeManagedResources()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.Core.Disposable.html#NationalInstruments_Core_Disposable_DisposeManagedResources">Disposable.DisposeManagedResources()</a></div>
+  
+  
+  <a id="NationalInstruments_Core_PrioritizedTaskSchedulerManager_GetTaskScheduler_" data-uid="NationalInstruments.Core.PrioritizedTaskSchedulerManager.GetTaskScheduler*"></a>
+  <h4 id="NationalInstruments_Core_PrioritizedTaskSchedulerManager_GetTaskScheduler_NationalInstruments_Core_AsyncTaskPriorityToken_System_Boolean_System_Object_System_String_" data-uid="NationalInstruments.Core.PrioritizedTaskSchedulerManager.GetTaskScheduler(NationalInstruments.Core.AsyncTaskPriorityToken,System.Boolean,System.Object,System.String)">GetTaskScheduler(AsyncTaskPriorityToken, Boolean, Object, String)</h4>
+  <div class="markdown level1 summary"><p>Gets a <a class="xref" href="NationalInstruments.Core.PrioritizedTaskScheduler.html">PrioritizedTaskScheduler</a> capable of running tasks at the given <a class="xref" href="NationalInstruments.Core.AsyncTaskPriority.html">AsyncTaskPriority</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PrioritizedTaskScheduler GetTaskScheduler(AsyncTaskPriorityToken priority, bool threadConsuming, object taskSource, string description = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.AsyncTaskPriorityToken.html">AsyncTaskPriorityToken</a></td>
+        <td><span class="parametername">priority</span></td>
+        <td><p>The <a class="xref" href="NationalInstruments.Core.AsyncTaskPriority.html">AsyncTaskPriority</a> to be used by the new scheduler.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">threadConsuming</span></td>
+        <td><p>True if the scheduler will be used for thread consuming tasks, i.e. the tasks use non awaitable blocking APIs</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">taskSource</span></td>
+        <td><p>The source of the task that will be run with the new scheduler. Can be <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>A debug description of the task which owns this scheduler.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PrioritizedTaskScheduler.html">PrioritizedTaskScheduler</a></td>
+        <td><p>The newly created and activated scheduler using the specified priority.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PrioritizedTaskSchedulerManager_GetTaskScheduler_" data-uid="NationalInstruments.Core.PrioritizedTaskSchedulerManager.GetTaskScheduler*"></a>
+  <h4 id="NationalInstruments_Core_PrioritizedTaskSchedulerManager_GetTaskScheduler_NationalInstruments_Core_AsyncTaskPriorityToken_System_Object_System_String_" data-uid="NationalInstruments.Core.PrioritizedTaskSchedulerManager.GetTaskScheduler(NationalInstruments.Core.AsyncTaskPriorityToken,System.Object,System.String)">GetTaskScheduler(AsyncTaskPriorityToken, Object, String)</h4>
+  <div class="markdown level1 summary"><p>Gets a <a class="xref" href="NationalInstruments.Core.PrioritizedTaskScheduler.html">PrioritizedTaskScheduler</a> capable of running tasks at the given <a class="xref" href="NationalInstruments.Core.AsyncTaskPriority.html">AsyncTaskPriority</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PrioritizedTaskScheduler GetTaskScheduler(AsyncTaskPriorityToken priority, object taskSource, string description = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.AsyncTaskPriorityToken.html">AsyncTaskPriorityToken</a></td>
+        <td><span class="parametername">priority</span></td>
+        <td><p>The <a class="xref" href="NationalInstruments.Core.AsyncTaskPriority.html">AsyncTaskPriority</a> to be used by the new scheduler.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">taskSource</span></td>
+        <td><p>The source of the task that will be run with the new scheduler. Can be <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>A debug description of the task which owns this scheduler.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PrioritizedTaskScheduler.html">PrioritizedTaskScheduler</a></td>
+        <td><p>The newly created and activated scheduler using the specified priority.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PrioritizedTaskSchedulerManager_GetTaskScheduler_" data-uid="NationalInstruments.Core.PrioritizedTaskSchedulerManager.GetTaskScheduler*"></a>
+  <h4 id="NationalInstruments_Core_PrioritizedTaskSchedulerManager_GetTaskScheduler_NationalInstruments_Core_AsyncTaskPriorityToken_System_String_" data-uid="NationalInstruments.Core.PrioritizedTaskSchedulerManager.GetTaskScheduler(NationalInstruments.Core.AsyncTaskPriorityToken,System.String)">GetTaskScheduler(AsyncTaskPriorityToken, String)</h4>
+  <div class="markdown level1 summary"><p>Gets a <a class="xref" href="NationalInstruments.Core.PrioritizedTaskScheduler.html">PrioritizedTaskScheduler</a> capable of running tasks at the given <a class="xref" href="NationalInstruments.Core.AsyncTaskPriority.html">AsyncTaskPriority</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PrioritizedTaskScheduler GetTaskScheduler(AsyncTaskPriorityToken priority, string description = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.AsyncTaskPriorityToken.html">AsyncTaskPriorityToken</a></td>
+        <td><span class="parametername">priority</span></td>
+        <td><p>The <a class="xref" href="NationalInstruments.Core.AsyncTaskPriority.html">AsyncTaskPriority</a> to be used by the new scheduler.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>A debug description of the task which owns this scheduler.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PrioritizedTaskScheduler.html">PrioritizedTaskScheduler</a></td>
+        <td><p>The newly created and activated scheduler using the specified priority.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PrioritizedTaskSchedulerManager_InitManager_" data-uid="NationalInstruments.Core.PrioritizedTaskSchedulerManager.InitManager*"></a>
+  <h4 id="NationalInstruments_Core_PrioritizedTaskSchedulerManager_InitManager" data-uid="NationalInstruments.Core.PrioritizedTaskSchedulerManager.InitManager">InitManager()</h4>
+  <div class="markdown level1 summary"><p>Initializes the global manager.  When the manager is no longer needed it must be released
+by calling ReleaseMaanger otherwise the thread pool will not be cleaned up.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PrioritizedTaskSchedulerManager InitManager()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PrioritizedTaskSchedulerManager.html">PrioritizedTaskSchedulerManager</a></td>
+        <td><p>The initialized manager</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PrioritizedTaskSchedulerManager_ReleaseManager_" data-uid="NationalInstruments.Core.PrioritizedTaskSchedulerManager.ReleaseManager*"></a>
+  <h4 id="NationalInstruments_Core_PrioritizedTaskSchedulerManager_ReleaseManager" data-uid="NationalInstruments.Core.PrioritizedTaskSchedulerManager.ReleaseManager">ReleaseManager()</h4>
+  <div class="markdown level1 summary"><p>Releases the manager previously acquired by calling InitManager</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ReleaseManager()</code></pre>
+  </div>
+  
+  
+  <a id="NationalInstruments_Core_PrioritizedTaskSchedulerManager_ReleaseTaskScheduler_" data-uid="NationalInstruments.Core.PrioritizedTaskSchedulerManager.ReleaseTaskScheduler*"></a>
+  <h4 id="NationalInstruments_Core_PrioritizedTaskSchedulerManager_ReleaseTaskScheduler_NationalInstruments_Core_PrioritizedTaskScheduler_" data-uid="NationalInstruments.Core.PrioritizedTaskSchedulerManager.ReleaseTaskScheduler(NationalInstruments.Core.PrioritizedTaskScheduler)">ReleaseTaskScheduler(PrioritizedTaskScheduler)</h4>
+  <div class="markdown level1 summary"><p>Releases the given <a class="xref" href="NationalInstruments.Core.PrioritizedTaskScheduler.html">PrioritizedTaskScheduler</a> to the internal pool of task schedulers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ReleaseTaskScheduler(PrioritizedTaskScheduler queue)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PrioritizedTaskScheduler.html">PrioritizedTaskScheduler</a></td>
+        <td><span class="parametername">queue</span></td>
+        <td><p>The <a class="xref" href="NationalInstruments.Core.PrioritizedTaskScheduler.html">PrioritizedTaskScheduler</a> to be returned to the pool.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PrioritizedTaskSchedulerManager_SetThreadIsProcessingATask_" data-uid="NationalInstruments.Core.PrioritizedTaskSchedulerManager.SetThreadIsProcessingATask*"></a>
+  <h4 id="NationalInstruments_Core_PrioritizedTaskSchedulerManager_SetThreadIsProcessingATask_System_Boolean_" data-uid="NationalInstruments.Core.PrioritizedTaskSchedulerManager.SetThreadIsProcessingATask(System.Boolean)">SetThreadIsProcessingATask(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Called when a thread is processing a task and it want to be seen as a background
+worker task.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetThreadIsProcessingATask(bool isProcessing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">isProcessing</span></td>
+        <td><p>true if the thread is currently processing a task, false when the thread is no longer
+processing a a task.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PrioritizedTaskSchedulerManager_SetThreadIsProcessingATask_" data-uid="NationalInstruments.Core.PrioritizedTaskSchedulerManager.SetThreadIsProcessingATask*"></a>
+  <h4 id="NationalInstruments_Core_PrioritizedTaskSchedulerManager_SetThreadIsProcessingATask_System_Boolean_NationalInstruments_Core_AsyncTaskPriority_" data-uid="NationalInstruments.Core.PrioritizedTaskSchedulerManager.SetThreadIsProcessingATask(System.Boolean,NationalInstruments.Core.AsyncTaskPriority)">SetThreadIsProcessingATask(Boolean, AsyncTaskPriority)</h4>
+  <div class="markdown level1 summary"><p>Called when a thread is processing a task and it want to be seen as a background
+worker task.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetThreadIsProcessingATask(bool isProcessing, AsyncTaskPriority priority)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">isProcessing</span></td>
+        <td><p>true if the thread is currently processing a task, false when the thread is no longer
+processing a a task.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.AsyncTaskPriority.html">AsyncTaskPriority</a></td>
+        <td><span class="parametername">priority</span></td>
+        <td><p>When true the priority of the tasks the thread is executing.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PrioritizedTaskSchedulerManager_StarveLowPriority_" data-uid="NationalInstruments.Core.PrioritizedTaskSchedulerManager.StarveLowPriority*"></a>
+  <h4 id="NationalInstruments_Core_PrioritizedTaskSchedulerManager_StarveLowPriority" data-uid="NationalInstruments.Core.PrioritizedTaskSchedulerManager.StarveLowPriority">StarveLowPriority()</h4>
+  <div class="markdown level1 summary"><p>Starves the low priority tasks that opt into starvation</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IDisposable StarveLowPriority()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></td>
+        <td><p>Disposable to dispose when the schedulers should be no longer be starved</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PrioritizedTaskSchedulerManager_StarveWhileActiveHighPriorityAsync_" data-uid="NationalInstruments.Core.PrioritizedTaskSchedulerManager.StarveWhileActiveHighPriorityAsync*"></a>
+  <h4 id="NationalInstruments_Core_PrioritizedTaskSchedulerManager_StarveWhileActiveHighPriorityAsync" data-uid="NationalInstruments.Core.PrioritizedTaskSchedulerManager.StarveWhileActiveHighPriorityAsync">StarveWhileActiveHighPriorityAsync()</h4>
+  <div class="markdown level1 summary"><p>Starves the current scheduler if it is not a high priority scheduler if there are currently
+high priority schedulers doing work.  This will completely starve the current scheduler.
+By calling this you must ensure that this scheduler / task does not own any resources that
+are required by high priority schedulers to complete.  This does not include own resources
+which can change the priority of this scheduler such as a PriorityCriticalSection.  Bumping
+the priority of this scheduler to a priority above normal will cause this starvation to end.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task StarveWhileActiveHighPriorityAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>Task to wait on</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PrioritizedTaskSchedulerManager_StarveWhileActiveHighPriorityAsync_" data-uid="NationalInstruments.Core.PrioritizedTaskSchedulerManager.StarveWhileActiveHighPriorityAsync*"></a>
+  <h4 id="NationalInstruments_Core_PrioritizedTaskSchedulerManager_StarveWhileActiveHighPriorityAsync_System_Int32_" data-uid="NationalInstruments.Core.PrioritizedTaskSchedulerManager.StarveWhileActiveHighPriorityAsync(System.Int32)">StarveWhileActiveHighPriorityAsync(Int32)</h4>
+  <div class="markdown level1 summary"><p>Starves the current scheduler if it is not a high priority scheduler if there are currently
+high priority schedulers doing work.  This will completely starve the current scheduler.
+By calling this you must ensure that this scheduler / task does not own any resources that
+are required by high priority schedulers to complete.  This does not include own resources
+which can change the priority of this scheduler such as a PriorityCriticalSection.  Bumping
+the priority of this scheduler to a priority above normal will cause this starvation to end.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;bool&gt; StarveWhileActiveHighPriorityAsync(int timeout)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>The timeout, or -1 for infinite.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><p>Task to wait on which returns true if the starve completed, false if the timeout occurred</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PrioritizedTaskSchedulerManager_StarveWhileActiveHighPriorityAsync_" data-uid="NationalInstruments.Core.PrioritizedTaskSchedulerManager.StarveWhileActiveHighPriorityAsync*"></a>
+  <h4 id="NationalInstruments_Core_PrioritizedTaskSchedulerManager_StarveWhileActiveHighPriorityAsync_System_Threading_CancellationToken_" data-uid="NationalInstruments.Core.PrioritizedTaskSchedulerManager.StarveWhileActiveHighPriorityAsync(System.Threading.CancellationToken)">StarveWhileActiveHighPriorityAsync(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Starves the current scheduler if it is not a high priority scheduler if there are currently
+high priority schedulers doing work.  This will completely starve the current scheduler.
+By calling this you must ensure that this scheduler / task does not own any resources that
+are required by high priority schedulers to complete.  This does not include own resources
+which can change the priority of this scheduler such as a PriorityCriticalSection.  Bumping
+the priority of this scheduler to a priority above normal will cause this starvation to end.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task StarveWhileActiveHighPriorityAsync(CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>Task to wait on</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a></td>
+        <td><p>Cancellation token was canceled</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PrioritizedTaskSchedulerManager_StarveWhileActiveHighPriorityAsync_" data-uid="NationalInstruments.Core.PrioritizedTaskSchedulerManager.StarveWhileActiveHighPriorityAsync*"></a>
+  <h4 id="NationalInstruments_Core_PrioritizedTaskSchedulerManager_StarveWhileActiveHighPriorityAsync_System_Threading_CancellationToken_System_Int32_" data-uid="NationalInstruments.Core.PrioritizedTaskSchedulerManager.StarveWhileActiveHighPriorityAsync(System.Threading.CancellationToken,System.Int32)">StarveWhileActiveHighPriorityAsync(CancellationToken, Int32)</h4>
+  <div class="markdown level1 summary"><p>Starves the current scheduler if it is not a high priority scheduler if there are currently
+high priority schedulers doing work.  This will completely starve the current scheduler.
+By calling this you must ensure that this scheduler / task does not own any resources that
+are required by high priority schedulers to complete.  This does not include own resources
+which can change the priority of this scheduler such as a PriorityCriticalSection.  Bumping
+the priority of this scheduler to a priority above normal will cause this starvation to end.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;bool&gt; StarveWhileActiveHighPriorityAsync(CancellationToken cancellationToken, int timeout)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>The timeout, or -1 for infinite.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><p>Task to wait on which returns true if the starve completed, false if the timeout occurred</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a></td>
+        <td><p>Cancellation token was canceled</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_ToEnumerable__1___0_">EnumerableHelper.ToEnumerable&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_Repeat__1___0_System_Int32_">EnumerableHelper.Repeat&lt;T&gt;(T, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyNothing__1___0_">Verifier.VerifyNothing&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Func___0_System_Boolean__System_Action_System_String__System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Func___0_System_Boolean__System_Action_System_String_System_String__System_String_System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Boolean_System_Action_System_String__System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Boolean, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Boolean_System_Action_System_String_System_String__System_String_System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Boolean, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Func___0_System_Boolean__System_Action_System_String__System_String_">Verifier.Verify&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Func___0_System_Boolean__System_Action_System_String_System_String__System_String_System_String_">Verifier.Verify&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Boolean_System_Action_System_String__System_String_">Verifier.Verify&lt;T&gt;(T, Boolean, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Boolean_System_Action_System_String_System_String__System_String_System_String_">Verifier.Verify&lt;T&gt;(T, Boolean, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentIsNotNull__1___0_System_String_">Verifier.VerifyArgumentIsNotNull&lt;T&gt;(T, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyValueIsNotNull__1___0_System_String_">Verifier.VerifyValueIsNotNull&lt;T&gt;(T, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentNotReferenceEqualsTo_System_Object_System_Object_System_String_">Verifier.VerifyArgumentNotReferenceEqualsTo(Object, Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyValueNotReferenceEqualsTo_System_Object_System_Object_System_String_">Verifier.VerifyValueNotReferenceEqualsTo(Object, Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentIsOfType__1_System_Object_System_String_">Verifier.VerifyArgumentIsOfType&lt;T&gt;(Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyValueIsOfType__1_System_Object_System_String_">Verifier.VerifyValueIsOfType&lt;T&gt;(Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.DisposableHelpers.html#NationalInstruments_Core_DisposableHelpers_DisposeIfNotNull_System_IDisposable_">DisposableHelpers.DisposeIfNotNull(IDisposable)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.QueryServiceExtensions.html#NationalInstruments_Core_QueryServiceExtensions_QueryService__1_System_Object_">QueryServiceExtensions.QueryService&lt;T&gt;(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_FindClosestMatchingContainerForResource_System_Object_System_Func_System_Object_System_Globalization_CultureInfo_System_Object__System_Globalization_CultureInfo_">LocalizationHelpers.FindClosestMatchingContainerForResource(Object, Func&lt;Object, CultureInfo, Object&gt;, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_FindClosestMatchingContainerForResource_System_Object_System_Func_System_Object_System_Globalization_CultureInfo_System_Object__System_Globalization_CultureInfo_System_Func_System_Object_System_Object__">LocalizationHelpers.FindClosestMatchingContainerForResource(Object, Func&lt;Object, CultureInfo, Object&gt;, CultureInfo, Func&lt;Object, Object&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedEnumString__1___0_">LocalizationHelpers.GetLocalizedEnumString&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedString_System_Object_System_String_System_Globalization_CultureInfo_">LocalizationHelpers.GetLocalizedString(Object, String, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedString_System_Object_System_String_System_Boolean_System_Globalization_CultureInfo_">LocalizationHelpers.GetLocalizedString(Object, String, Boolean, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_SetPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_System_Object_">DynamicPropertyExtensions.SetPropertyValue(Object, PropertySymbol, Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.GetPropertyValue(Object, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_ClearPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.ClearPropertyValue(Object, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_IsPropertySet_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.IsPropertySet(Object, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetAllSetProperties_System_Object_">DynamicPropertyExtensions.GetAllSetProperties(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetAllProperties_System_Object_">DynamicPropertyExtensions.GetAllProperties(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

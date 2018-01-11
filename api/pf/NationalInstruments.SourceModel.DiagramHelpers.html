@@ -1,0 +1,371 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DiagramHelpers
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DiagramHelpers
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.SourceModel.DiagramHelpers">
+  
+  
+  <h1 id="NationalInstruments_SourceModel_DiagramHelpers" data-uid="NationalInstruments.SourceModel.DiagramHelpers" class="text-break">Class DiagramHelpers
+  </h1>
+  <div class="markdown level0 summary"><p>Extension methods on Diagram</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">DiagramHelpers</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.SourceModel.html">NationalInstruments.SourceModel</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_SourceModel_DiagramHelpers_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class DiagramHelpers</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_DiagramHelpers_FindOpenSpace_" data-uid="NationalInstruments.SourceModel.DiagramHelpers.FindOpenSpace*"></a>
+  <h4 id="NationalInstruments_SourceModel_DiagramHelpers_FindOpenSpace_NationalInstruments_SourceModel_Diagram_NationalInstruments_SourceModel_IViewElement_NationalInstruments_SourceModel_RelativeLocation_" data-uid="NationalInstruments.SourceModel.DiagramHelpers.FindOpenSpace(NationalInstruments.SourceModel.Diagram,NationalInstruments.SourceModel.IViewElement,NationalInstruments.SourceModel.RelativeLocation)">FindOpenSpace(Diagram, IViewElement, RelativeLocation)</h4>
+  <div class="markdown level1 summary"><p>Find available space (point) for the given element, starting at it&apos;s location and moving in directions specified by toLook.
+Uses a spiral algorithm to find closest spot without checking same spots repetitively with recursion, or using avoid rect</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SMPoint FindOpenSpace(this Diagram diagram, IViewElement element, RelativeLocation toLook)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Diagram.html">Diagram</a></td>
+        <td><span class="parametername">diagram</span></td>
+        <td><p>the diagram we are finding space on</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.IViewElement.html">IViewElement</a></td>
+        <td><span class="parametername">element</span></td>
+        <td><p>the element we want to place</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.RelativeLocation.html">RelativeLocation</a></td>
+        <td><span class="parametername">toLook</span></td>
+        <td><p>the directions we want to look in relative to the element&apos;s current location</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><p>Suggested location of element&apos;s top left corner</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_DiagramHelpers_FindOpenSpace_" data-uid="NationalInstruments.SourceModel.DiagramHelpers.FindOpenSpace*"></a>
+  <h4 id="NationalInstruments_SourceModel_DiagramHelpers_FindOpenSpace_NationalInstruments_SourceModel_Diagram_System_Collections_Generic_IEnumerable_NationalInstruments_SourceModel_IViewElement__NationalInstruments_SourceModel_RelativeLocation_" data-uid="NationalInstruments.SourceModel.DiagramHelpers.FindOpenSpace(NationalInstruments.SourceModel.Diagram,System.Collections.Generic.IEnumerable{NationalInstruments.SourceModel.IViewElement},NationalInstruments.SourceModel.RelativeLocation)">FindOpenSpace(Diagram, IEnumerable&lt;IViewElement&gt;, RelativeLocation)</h4>
+  <div class="markdown level1 summary"><p>Find available space (point) for the given elements, starting at it&apos;s location and moving in directions specified by toLook.
+Uses a spiral algorithm to find closest spot without checking same spots repetitively with recursion, or using avoid rect</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SMPoint FindOpenSpace(this Diagram diagram, IEnumerable&lt;IViewElement&gt; elements, RelativeLocation toLook)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Diagram.html">Diagram</a></td>
+        <td><span class="parametername">diagram</span></td>
+        <td><p>the diagram we are finding space on</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.IViewElement.html">IViewElement</a>&gt;</td>
+        <td><span class="parametername">elements</span></td>
+        <td><p>the elements we want to place</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.RelativeLocation.html">RelativeLocation</a></td>
+        <td><span class="parametername">toLook</span></td>
+        <td><p>the directions we want to look in relative to the element&apos;s current location</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><p>Suggested location of element&apos;s top left corner</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_DiagramHelpers_GetSuitablePositionForNode_" data-uid="NationalInstruments.SourceModel.DiagramHelpers.GetSuitablePositionForNode*"></a>
+  <h4 id="NationalInstruments_SourceModel_DiagramHelpers_GetSuitablePositionForNode_NationalInstruments_SourceModel_WireableTerminal_NationalInstruments_SourceModel_WireableTerminal_" data-uid="NationalInstruments.SourceModel.DiagramHelpers.GetSuitablePositionForNode(NationalInstruments.SourceModel.WireableTerminal,NationalInstruments.SourceModel.WireableTerminal)">GetSuitablePositionForNode(WireableTerminal, WireableTerminal)</h4>
+  <div class="markdown level1 summary"><p>Get a node position that aligns the source/destination terminal (or reasonable location for wiring)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SMRect GetSuitablePositionForNode(WireableTerminal sourceTerminal, WireableTerminal destinationTerminal)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireableTerminal.html">WireableTerminal</a></td>
+        <td><span class="parametername">sourceTerminal</span></td>
+        <td><p>The terminal we are trying to align to</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireableTerminal.html">WireableTerminal</a></td>
+        <td><span class="parametername">destinationTerminal</span></td>
+        <td><p>The terminal being aligned.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.SMRect.html">SMRect</a></td>
+        <td><p>The Rect that the destinationTerminal.Owner should use.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_DiagramHelpers_WireBetweenAndAlign_" data-uid="NationalInstruments.SourceModel.DiagramHelpers.WireBetweenAndAlign*"></a>
+  <h4 id="NationalInstruments_SourceModel_DiagramHelpers_WireBetweenAndAlign_NationalInstruments_SourceModel_Diagram_NationalInstruments_SourceModel_WireableTerminal_NationalInstruments_SourceModel_WireableTerminal_NationalInstruments_SourceModel_RelativeLocation_" data-uid="NationalInstruments.SourceModel.DiagramHelpers.WireBetweenAndAlign(NationalInstruments.SourceModel.Diagram,NationalInstruments.SourceModel.WireableTerminal,NationalInstruments.SourceModel.WireableTerminal,NationalInstruments.SourceModel.RelativeLocation)">WireBetweenAndAlign(Diagram, WireableTerminal, WireableTerminal, RelativeLocation)</h4>
+  <div class="markdown level1 summary"><p>finding open space in a given direction relative to a specific terminal, and wire them up if they are not 
+already wired.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void WireBetweenAndAlign(this Diagram diagram, WireableTerminal sourceTerminal, WireableTerminal destinationTerminal, RelativeLocation toLook)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Diagram.html">Diagram</a></td>
+        <td><span class="parametername">diagram</span></td>
+        <td><p>The owning diagram of both terminals</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireableTerminal.html">WireableTerminal</a></td>
+        <td><span class="parametername">sourceTerminal</span></td>
+        <td><p>The terminal we are trying to align to</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireableTerminal.html">WireableTerminal</a></td>
+        <td><span class="parametername">destinationTerminal</span></td>
+        <td><p>The terminal being aligned.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.RelativeLocation.html">RelativeLocation</a></td>
+        <td><span class="parametername">toLook</span></td>
+        <td><p>direction relative to sourceTerminal to look for open space.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_SourceModel_DiagramHelpers_WireBetweenAndAlign_NationalInstruments_SourceModel_Diagram_NationalInstruments_SourceModel_WireableTerminal_NationalInstruments_SourceModel_WireableTerminal_NationalInstruments_SourceModel_RelativeLocation__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Before calling this method, make sure the visuals for the nodes connected to the terminals have already been created.
+Otherwise, the nodes might be placed on top of other visuals or at unexpected locations.</p>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

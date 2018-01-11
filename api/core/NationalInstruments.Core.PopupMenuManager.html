@@ -1,0 +1,746 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class PopupMenuManager
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class PopupMenuManager
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.Core.PopupMenuManager">
+  
+  
+  <h1 id="NationalInstruments_Core_PopupMenuManager" data-uid="NationalInstruments.Core.PopupMenuManager" class="text-break">Class PopupMenuManager
+  </h1>
+  <div class="markdown level0 summary"><p>Manages a popup context menu on the platforms</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="NationalInstruments.Core.HierarchicalCommandManager.html">HierarchicalCommandManager</a></div>
+    <div class="level2"><a class="xref" href="NationalInstruments.Core.MenuManager.html">MenuManager</a></div>
+    <div class="level3"><span class="xref">PopupMenuManager</span></div>
+      <div class="level4"><a class="xref" href="../pf/NationalInstruments.Shell.SelectionPopupMenuManager.html">SelectionPopupMenuManager</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="NationalInstruments.Core.MenuManager.html#NationalInstruments_Core_MenuManager_VisualFactoriesForCommand">MenuManager.VisualFactoriesForCommand</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Core.MenuManager.html#NationalInstruments_Core_MenuManager_AddMenuCommands_NationalInstruments_Core_PlatformVisual_">MenuManager.AddMenuCommands(PlatformVisual)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Core.MenuManager.html#NationalInstruments_Core_MenuManager_BeginUpdate">MenuManager.BeginUpdate()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Core.MenuManager.html#NationalInstruments_Core_MenuManager_FinishUpdate">MenuManager.FinishUpdate()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Core.MenuManager.html#NationalInstruments_Core_MenuManager_InUpdate">MenuManager.InUpdate</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Core.MenuManager.html#NationalInstruments_Core_MenuManager_AddMenuCommands_System_Collections_Generic_IEnumerable_NationalInstruments_Core_ICommandEx__">MenuManager.AddMenuCommands(IEnumerable&lt;ICommandEx&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Core.MenuManager.html#NationalInstruments_Core_MenuManager_RemoveMenuCommands_NationalInstruments_Core_PlatformVisual_">MenuManager.RemoveMenuCommands(PlatformVisual)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Core.MenuManager.html#NationalInstruments_Core_MenuManager_RemoveMenuCommands_System_Collections_Generic_IEnumerable_NationalInstruments_Core_ICommandEx__">MenuManager.RemoveMenuCommands(IEnumerable&lt;ICommandEx&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Core.MenuManager.html#NationalInstruments_Core_MenuManager_RemoveConsecutiveSeparators_NationalInstruments_Controls_ApplicationMenuItem_">MenuManager.RemoveConsecutiveSeparators(ApplicationMenuItem)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Core.MenuManager.html#NationalInstruments_Core_MenuManager_CheckIfAllSeparators">MenuManager.CheckIfAllSeparators()</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Core.HierarchicalCommandManager.html#NationalInstruments_Core_HierarchicalCommandManager_CommandContext">HierarchicalCommandManager.CommandContext</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Core.HierarchicalCommandManager.html#NationalInstruments_Core_HierarchicalCommandManager_Root">HierarchicalCommandManager.Root</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Core.HierarchicalCommandManager.html#NationalInstruments_Core_HierarchicalCommandManager_AddedCommands">HierarchicalCommandManager.AddedCommands</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Core.HierarchicalCommandManager.html#NationalInstruments_Core_HierarchicalCommandManager_CommandSources">HierarchicalCommandManager.CommandSources</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Core.HierarchicalCommandManager.html#NationalInstruments_Core_HierarchicalCommandManager_AddCommands_System_Collections_Generic_IEnumerable_NationalInstruments_Core_ICommandEx__">HierarchicalCommandManager.AddCommands(IEnumerable&lt;ICommandEx&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Core.HierarchicalCommandManager.html#NationalInstruments_Core_HierarchicalCommandManager_RemoveCommands_System_Collections_Generic_IEnumerable_NationalInstruments_Core_ICommandEx__">HierarchicalCommandManager.RemoveCommands(IEnumerable&lt;ICommandEx&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Core.HierarchicalCommandManager.html#NationalInstruments_Core_HierarchicalCommandManager_AddToHierarchy_NationalInstruments_Core_ICommandEx_">HierarchicalCommandManager.AddToHierarchy(ICommandEx)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Core.HierarchicalCommandManager.html#NationalInstruments_Core_HierarchicalCommandManager_RemoveFromHierarchy_NationalInstruments_Core_ICommandEx_">HierarchicalCommandManager.RemoveFromHierarchy(ICommandEx)</a>
+    </div>
+    <div>
+      <a class="xref" href="NationalInstruments.Core.HierarchicalCommandManager.html#NationalInstruments_Core_HierarchicalCommandManager_GetItemWeight_NationalInstruments_Core_ICommandSourceEx_">HierarchicalCommandManager.GetItemWeight(ICommandSourceEx)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="../pf/NationalInstruments.Core.html">NationalInstruments.Core</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.Core.dll</h6>
+  <h5 id="NationalInstruments_Core_PopupMenuManager_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PopupMenuManager : MenuManager</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="NationalInstruments_Core_PopupMenuManager__ctor_" data-uid="NationalInstruments.Core.PopupMenuManager.#ctor*"></a>
+  <h4 id="NationalInstruments_Core_PopupMenuManager__ctor_NationalInstruments_Core_ICommandSourceParent_NationalInstruments_Core_PlatformVisual_System_Collections_Generic_IEnumerable_NationalInstruments_Core_IViewModel__" data-uid="NationalInstruments.Core.PopupMenuManager.#ctor(NationalInstruments.Core.ICommandSourceParent,NationalInstruments.Core.PlatformVisual,System.Collections.Generic.IEnumerable{NationalInstruments.Core.IViewModel})">PopupMenuManager(ICommandSourceParent, PlatformVisual, IEnumerable&lt;IViewModel&gt;)</h4>
+  <div class="markdown level1 summary"><p>Constructs a new instance</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PopupMenuManager(ICommandSourceParent commandParent, PlatformVisual source, IEnumerable&lt;IViewModel&gt; selection)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.ICommandSourceParent.html">ICommandSourceParent</a></td>
+        <td><span class="parametername">commandParent</span></td>
+        <td><p>command parent</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>leaf visual that was clicked on</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.Core.IViewModel.html">IViewModel</a>&gt;</td>
+        <td><span class="parametername">selection</span></td>
+        <td><p>view models in the selection</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PopupMenuManager__ctor_" data-uid="NationalInstruments.Core.PopupMenuManager.#ctor*"></a>
+  <h4 id="NationalInstruments_Core_PopupMenuManager__ctor_NationalInstruments_Core_PlatformVisual_System_Collections_Generic_IEnumerable_NationalInstruments_Core_IViewModel__" data-uid="NationalInstruments.Core.PopupMenuManager.#ctor(NationalInstruments.Core.PlatformVisual,System.Collections.Generic.IEnumerable{NationalInstruments.Core.IViewModel})">PopupMenuManager(PlatformVisual, IEnumerable&lt;IViewModel&gt;)</h4>
+  <div class="markdown level1 summary"><p>Constructs a new instance</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PopupMenuManager(PlatformVisual source, IEnumerable&lt;IViewModel&gt; selection)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>leaf visual that was clicked on</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.Core.IViewModel.html">IViewModel</a>&gt;</td>
+        <td><span class="parametername">selection</span></td>
+        <td><p>view models in the selection</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_Core_PopupMenuManager_ContextMenu_" data-uid="NationalInstruments.Core.PopupMenuManager.ContextMenu*"></a>
+  <h4 id="NationalInstruments_Core_PopupMenuManager_ContextMenu" data-uid="NationalInstruments.Core.PopupMenuManager.ContextMenu">ContextMenu</h4>
+  <div class="markdown level1 summary"><p>Our menu</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ShellContextMenu ContextMenu { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Controls.ShellContextMenu.html">ShellContextMenu</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_Core_PopupMenuManager_AddContextMenuCommands_" data-uid="NationalInstruments.Core.PopupMenuManager.AddContextMenuCommands*"></a>
+  <h4 id="NationalInstruments_Core_PopupMenuManager_AddContextMenuCommands_System_Collections_Generic_IEnumerable_System_Tuple_NationalInstruments_Core_ICommandEx_NationalInstruments_Core_ICommandVisualFactory___" data-uid="NationalInstruments.Core.PopupMenuManager.AddContextMenuCommands(System.Collections.Generic.IEnumerable{System.Tuple{NationalInstruments.Core.ICommandEx,NationalInstruments.Core.ICommandVisualFactory}})">AddContextMenuCommands(IEnumerable&lt;Tuple&lt;ICommandEx, ICommandVisualFactory&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Add commands and associated visual factories to the PopupMenu</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddContextMenuCommands(IEnumerable&lt;Tuple&lt;ICommandEx, ICommandVisualFactory&gt;&gt; commandVisualPairs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Tuple</span>&lt;<a class="xref" href="NationalInstruments.Core.ICommandEx.html">ICommandEx</a>, <a class="xref" href="NationalInstruments.Core.ICommandVisualFactory.html">ICommandVisualFactory</a>&gt;&gt;</td>
+        <td><span class="parametername">commandVisualPairs</span></td>
+        <td><p>Items to add. each item is a command paired with an ICommandVisualFactory</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PopupMenuManager_AttachCommand_" data-uid="NationalInstruments.Core.PopupMenuManager.AttachCommand*"></a>
+  <h4 id="NationalInstruments_Core_PopupMenuManager_AttachCommand_NationalInstruments_Core_ICommandSourceEx_NationalInstruments_Core_ICommandEx_" data-uid="NationalInstruments.Core.PopupMenuManager.AttachCommand(NationalInstruments.Core.ICommandSourceEx,NationalInstruments.Core.ICommandEx)">AttachCommand(ICommandSourceEx, ICommandEx)</h4>
+  <div class="markdown level1 summary"><p>Attach commands</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void AttachCommand(ICommandSourceEx newMenu, ICommandEx command)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.ICommandSourceEx.html">ICommandSourceEx</a></td>
+        <td><span class="parametername">newMenu</span></td>
+        <td><p>ICommandSourceEx</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.ICommandEx.html">ICommandEx</a></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>command to be attached</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PopupMenuManager_CreateLeafCommandVisual_" data-uid="NationalInstruments.Core.PopupMenuManager.CreateLeafCommandVisual*"></a>
+  <h4 id="NationalInstruments_Core_PopupMenuManager_CreateLeafCommandVisual_NationalInstruments_Core_ICommandEx_" data-uid="NationalInstruments.Core.PopupMenuManager.CreateLeafCommandVisual(NationalInstruments.Core.ICommandEx)">CreateLeafCommandVisual(ICommandEx)</h4>
+  <div class="markdown level1 summary"><p>Creates a visualiation of a leaf command</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override ICommandSourceEx CreateLeafCommandVisual(ICommandEx command)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.ICommandEx.html">ICommandEx</a></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>The command to create a visualization for</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.ICommandSourceEx.html">ICommandSourceEx</a></td>
+        <td><p>the newly created visualization of a leaf element</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.Core.HierarchicalCommandManager.html#NationalInstruments_Core_HierarchicalCommandManager_CreateLeafCommandVisual_NationalInstruments_Core_ICommandEx_">HierarchicalCommandManager.CreateLeafCommandVisual(ICommandEx)</a></div>
+  
+  
+  <a id="NationalInstruments_Core_PopupMenuManager_CreateParentCommandVisual_" data-uid="NationalInstruments.Core.PopupMenuManager.CreateParentCommandVisual*"></a>
+  <h4 id="NationalInstruments_Core_PopupMenuManager_CreateParentCommandVisual_NationalInstruments_Core_ICommandEx_" data-uid="NationalInstruments.Core.PopupMenuManager.CreateParentCommandVisual(NationalInstruments.Core.ICommandEx)">CreateParentCommandVisual(ICommandEx)</h4>
+  <div class="markdown level1 summary"><p>Creates a visualization of a command that will accept children</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override ICommandSourceParent CreateParentCommandVisual(ICommandEx command)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.ICommandEx.html">ICommandEx</a></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>the command to create a visualiation for</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.ICommandSourceParent.html">ICommandSourceParent</a></td>
+        <td><p>the command visual</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.Core.HierarchicalCommandManager.html#NationalInstruments_Core_HierarchicalCommandManager_CreateParentCommandVisual_NationalInstruments_Core_ICommandEx_">HierarchicalCommandManager.CreateParentCommandVisual(ICommandEx)</a></div>
+  
+  
+  <a id="NationalInstruments_Core_PopupMenuManager_DetachCommand_" data-uid="NationalInstruments.Core.PopupMenuManager.DetachCommand*"></a>
+  <h4 id="NationalInstruments_Core_PopupMenuManager_DetachCommand_NationalInstruments_Core_ICommandSourceEx_" data-uid="NationalInstruments.Core.PopupMenuManager.DetachCommand(NationalInstruments.Core.ICommandSourceEx)">DetachCommand(ICommandSourceEx)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void DetachCommand(ICommandSourceEx source)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.ICommandSourceEx.html">ICommandSourceEx</a></td>
+        <td><span class="parametername">source</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PopupMenuManager_DisplayPopup_" data-uid="NationalInstruments.Core.PopupMenuManager.DisplayPopup*"></a>
+  <h4 id="NationalInstruments_Core_PopupMenuManager_DisplayPopup_NationalInstruments_Core_PlatformVisual_NationalInstruments_Core_CreateContextMenuRoutedEventArgs_" data-uid="NationalInstruments.Core.PopupMenuManager.DisplayPopup(NationalInstruments.Core.PlatformVisual,NationalInstruments.Core.CreateContextMenuRoutedEventArgs)">DisplayPopup(PlatformVisual, CreateContextMenuRoutedEventArgs)</h4>
+  <div class="markdown level1 summary"><p>Displays the popup menu</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DisplayPopup(PlatformVisual source, CreateContextMenuRoutedEventArgs args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>leaf visual that was clicked on</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.CreateContextMenuRoutedEventArgs.html">CreateContextMenuRoutedEventArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>Event args for context menu event</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>true if the context menu was displayed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_PopupMenuManager_GetPath_" data-uid="NationalInstruments.Core.PopupMenuManager.GetPath*"></a>
+  <h4 id="NationalInstruments_Core_PopupMenuManager_GetPath_NationalInstruments_Core_ICommandEx_" data-uid="NationalInstruments.Core.PopupMenuManager.GetPath(NationalInstruments.Core.ICommandEx)">GetPath(ICommandEx)</h4>
+  <div class="markdown level1 summary"><p>Gets a parent item for a command to add to the hierarchy</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override ICommandEx GetPath(ICommandEx command)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.ICommandEx.html">ICommandEx</a></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>the command of interest</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.ICommandEx.html">ICommandEx</a></td>
+        <td><p>the parent command or null of the command should not be in the hierarchy</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.Core.MenuManager.html#NationalInstruments_Core_MenuManager_GetPath_NationalInstruments_Core_ICommandEx_">MenuManager.GetPath(ICommandEx)</a></div>
+  
+  
+  <a id="NationalInstruments_Core_PopupMenuManager_IsSeparator_" data-uid="NationalInstruments.Core.PopupMenuManager.IsSeparator*"></a>
+  <h4 id="NationalInstruments_Core_PopupMenuManager_IsSeparator_NationalInstruments_Core_ICommandSourceEx_" data-uid="NationalInstruments.Core.PopupMenuManager.IsSeparator(NationalInstruments.Core.ICommandSourceEx)">IsSeparator(ICommandSourceEx)</h4>
+  <div class="markdown level1 summary"><p>Determines of a command visualization is a &quot;seperator&quot; item</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override bool IsSeparator(ICommandSourceEx item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.ICommandSourceEx.html">ICommandSourceEx</a></td>
+        <td><span class="parametername">item</span></td>
+        <td><p>The item of interest</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>true of the item is a separator</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NationalInstruments.Core.HierarchicalCommandManager.html#NationalInstruments_Core_HierarchicalCommandManager_IsSeparator_NationalInstruments_Core_ICommandSourceEx_">HierarchicalCommandManager.IsSeparator(ICommandSourceEx)</a></div>
+  
+  
+  <a id="NationalInstruments_Core_PopupMenuManager_PlatformInit_" data-uid="NationalInstruments.Core.PopupMenuManager.PlatformInit*"></a>
+  <h4 id="NationalInstruments_Core_PopupMenuManager_PlatformInit" data-uid="NationalInstruments.Core.PopupMenuManager.PlatformInit">PlatformInit()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void PlatformInit()</code></pre>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_ToEnumerable__1___0_">EnumerableHelper.ToEnumerable&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_Repeat__1___0_System_Int32_">EnumerableHelper.Repeat&lt;T&gt;(T, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyNothing__1___0_">Verifier.VerifyNothing&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Func___0_System_Boolean__System_Action_System_String__System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Func___0_System_Boolean__System_Action_System_String_System_String__System_String_System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Boolean_System_Action_System_String__System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Boolean, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Boolean_System_Action_System_String_System_String__System_String_System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Boolean, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Func___0_System_Boolean__System_Action_System_String__System_String_">Verifier.Verify&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Func___0_System_Boolean__System_Action_System_String_System_String__System_String_System_String_">Verifier.Verify&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Boolean_System_Action_System_String__System_String_">Verifier.Verify&lt;T&gt;(T, Boolean, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Boolean_System_Action_System_String_System_String__System_String_System_String_">Verifier.Verify&lt;T&gt;(T, Boolean, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentIsNotNull__1___0_System_String_">Verifier.VerifyArgumentIsNotNull&lt;T&gt;(T, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyValueIsNotNull__1___0_System_String_">Verifier.VerifyValueIsNotNull&lt;T&gt;(T, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentNotReferenceEqualsTo_System_Object_System_Object_System_String_">Verifier.VerifyArgumentNotReferenceEqualsTo(Object, Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyValueNotReferenceEqualsTo_System_Object_System_Object_System_String_">Verifier.VerifyValueNotReferenceEqualsTo(Object, Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentIsOfType__1_System_Object_System_String_">Verifier.VerifyArgumentIsOfType&lt;T&gt;(Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyValueIsOfType__1_System_Object_System_String_">Verifier.VerifyValueIsOfType&lt;T&gt;(Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.QueryServiceExtensions.html#NationalInstruments_Core_QueryServiceExtensions_QueryService__1_System_Object_">QueryServiceExtensions.QueryService&lt;T&gt;(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_FindClosestMatchingContainerForResource_System_Object_System_Func_System_Object_System_Globalization_CultureInfo_System_Object__System_Globalization_CultureInfo_">LocalizationHelpers.FindClosestMatchingContainerForResource(Object, Func&lt;Object, CultureInfo, Object&gt;, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_FindClosestMatchingContainerForResource_System_Object_System_Func_System_Object_System_Globalization_CultureInfo_System_Object__System_Globalization_CultureInfo_System_Func_System_Object_System_Object__">LocalizationHelpers.FindClosestMatchingContainerForResource(Object, Func&lt;Object, CultureInfo, Object&gt;, CultureInfo, Func&lt;Object, Object&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedEnumString__1___0_">LocalizationHelpers.GetLocalizedEnumString&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedString_System_Object_System_String_System_Globalization_CultureInfo_">LocalizationHelpers.GetLocalizedString(Object, String, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedString_System_Object_System_String_System_Boolean_System_Globalization_CultureInfo_">LocalizationHelpers.GetLocalizedString(Object, String, Boolean, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_SetPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_System_Object_">DynamicPropertyExtensions.SetPropertyValue(Object, PropertySymbol, Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.GetPropertyValue(Object, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_ClearPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.ClearPropertyValue(Object, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_IsPropertySet_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.IsPropertySet(Object, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetAllSetProperties_System_Object_">DynamicPropertyExtensions.GetAllSetProperties(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetAllProperties_System_Object_">DynamicPropertyExtensions.GetAllProperties(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

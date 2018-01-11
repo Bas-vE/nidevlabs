@@ -1,0 +1,719 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ProjectItemFileHelpers
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ProjectItemFileHelpers
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.ProjectExplorer.ProjectItemFileHelpers">
+  
+  
+  <h1 id="NationalInstruments_ProjectExplorer_ProjectItemFileHelpers" data-uid="NationalInstruments.ProjectExplorer.ProjectItemFileHelpers" class="text-break">Class ProjectItemFileHelpers
+  </h1>
+  <div class="markdown level0 summary"><p>Class of helper functions used to create/move/delete files on disk for project items.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">ProjectItemFileHelpers</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.ProjectExplorer.html">NationalInstruments.ProjectExplorer</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_ProjectExplorer_ProjectItemFileHelpers_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class ProjectItemFileHelpers</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_ProjectExplorer_ProjectItemFileHelpers_CalculateStoragePathForRename_" data-uid="NationalInstruments.ProjectExplorer.ProjectItemFileHelpers.CalculateStoragePathForRename*"></a>
+  <h4 id="NationalInstruments_ProjectExplorer_ProjectItemFileHelpers_CalculateStoragePathForRename_NationalInstruments_SourceModel_Envoys_Envoy_System_String_System_Boolean__" data-uid="NationalInstruments.ProjectExplorer.ProjectItemFileHelpers.CalculateStoragePathForRename(NationalInstruments.SourceModel.Envoys.Envoy,System.String,System.Boolean@)">CalculateStoragePathForRename(Envoy, String, out Boolean)</h4>
+  <div class="markdown level1 summary"><p>Calculate the new storage path of <code data-dev-comment-type="paramref" class="paramref">envoy</code> if it is renamed to <code data-dev-comment-type="paramref" class="paramref">newName</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string CalculateStoragePathForRename(Envoy envoy, string newName, out bool handledError)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">envoy</span></td>
+        <td><p>The envoy being renamed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">newName</span></td>
+        <td><p>The new name.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">handledError</span></td>
+        <td><p>True if an exception was thrown. A dialog is thrown to notify the user of the issue.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The new storage path.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_ProjectExplorer_ProjectItemFileHelpers_CreateFolderOnDisk_" data-uid="NationalInstruments.ProjectExplorer.ProjectItemFileHelpers.CreateFolderOnDisk*"></a>
+  <h4 id="NationalInstruments_ProjectExplorer_ProjectItemFileHelpers_CreateFolderOnDisk_System_String_NationalInstruments_SourceModel_Envoys_IStorageManager_" data-uid="NationalInstruments.ProjectExplorer.ProjectItemFileHelpers.CreateFolderOnDisk(System.String,NationalInstruments.SourceModel.Envoys.IStorageManager)">CreateFolderOnDisk(String, IStorageManager)</h4>
+  <div class="markdown level1 summary"><p>Create a folder at the given path</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CreateFolderOnDisk(string folderPath, IStorageManager storageManager)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">folderPath</span></td>
+        <td><p>The full path to where the folder will be created</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.IStorageManager.html">IStorageManager</a></td>
+        <td><span class="parametername">storageManager</span></td>
+        <td><p>The storage manager</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_ProjectExplorer_ProjectItemFileHelpers_CreateFolderOnDiskWithUndoRedo_" data-uid="NationalInstruments.ProjectExplorer.ProjectItemFileHelpers.CreateFolderOnDiskWithUndoRedo*"></a>
+  <h4 id="NationalInstruments_ProjectExplorer_ProjectItemFileHelpers_CreateFolderOnDiskWithUndoRedo_System_String_NationalInstruments_SourceModel_Envoys_IStorageManager_NationalInstruments_SourceModel_ITransactionRecruiter_" data-uid="NationalInstruments.ProjectExplorer.ProjectItemFileHelpers.CreateFolderOnDiskWithUndoRedo(System.String,NationalInstruments.SourceModel.Envoys.IStorageManager,NationalInstruments.SourceModel.ITransactionRecruiter)">CreateFolderOnDiskWithUndoRedo(String, IStorageManager, ITransactionRecruiter)</h4>
+  <div class="markdown level1 summary"><p>Create a folder at the given path and adds undo/redo support for adding the folder.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CreateFolderOnDiskWithUndoRedo(string folderPath, IStorageManager storageManager, ITransactionRecruiter transactionRecruiter)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">folderPath</span></td>
+        <td><p>The full path to where the folder will be created</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.IStorageManager.html">IStorageManager</a></td>
+        <td><span class="parametername">storageManager</span></td>
+        <td><p>The storage manager</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ITransactionRecruiter.html">ITransactionRecruiter</a></td>
+        <td><span class="parametername">transactionRecruiter</span></td>
+        <td><p>The transaction recruiter to use for undo/redo support</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_ProjectExplorer_ProjectItemFileHelpers_DeleteAsync_" data-uid="NationalInstruments.ProjectExplorer.ProjectItemFileHelpers.DeleteAsync*"></a>
+  <h4 id="NationalInstruments_ProjectExplorer_ProjectItemFileHelpers_DeleteAsync_System_Collections_Generic_IEnumerable_NationalInstruments_SourceModel_Envoys_Envoy__System_Collections_Generic_IEnumerable_System_String__NationalInstruments_ProjectExplorer_Design_ProjectExplorerViewModel_" data-uid="NationalInstruments.ProjectExplorer.ProjectItemFileHelpers.DeleteAsync(System.Collections.Generic.IEnumerable{NationalInstruments.SourceModel.Envoys.Envoy},System.Collections.Generic.IEnumerable{System.String},NationalInstruments.ProjectExplorer.Design.ProjectExplorerViewModel)">DeleteAsync(IEnumerable&lt;Envoy&gt;, IEnumerable&lt;String&gt;, ProjectExplorerViewModel)</h4>
+  <div class="markdown level1 summary"><p>NOTE: Pass in the edit site instead of the project explorer whenever possible so the UI will be blocked during the async work.
+Deletes <code data-dev-comment-type="paramref" class="paramref">envoys</code> and their files on disk, and deletes the files on disk at <code data-dev-comment-type="paramref" class="paramref">paths</code>. 
+Creates a transaction and adds undo/redo support. Also makes sure that the project items for the files/folders 
+being deleted are removed. This function does no prompting.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task DeleteAsync(IEnumerable&lt;Envoy&gt; envoys, IEnumerable&lt;string&gt; paths, ProjectExplorerViewModel projectExplorer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a>&gt;</td>
+        <td><span class="parametername">envoys</span></td>
+        <td><p>Collection of envoys to be deleted, along with any corresponding file/folder on disk.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="parametername">paths</span></td>
+        <td><p>Collection of paths to be deleted, primarily used to delete folders, which don&apos;t have envoys.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.ProjectExplorer.Design.ProjectExplorerViewModel.html">ProjectExplorerViewModel</a></td>
+        <td><span class="parametername">projectExplorer</span></td>
+        <td><p>The project explorer.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>A task that can be awaited.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_ProjectExplorer_ProjectItemFileHelpers_DeleteAsync_System_Collections_Generic_IEnumerable_NationalInstruments_SourceModel_Envoys_Envoy__System_Collections_Generic_IEnumerable_System_String__NationalInstruments_ProjectExplorer_Design_ProjectExplorerViewModel__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This overload is needed for model tests that don&apos;t have a valid edit site.
+Expect <code data-dev-comment-type="paramref" class="paramref">envoys</code> and <code data-dev-comment-type="paramref" class="paramref">paths</code> to have been processed so that any
+value that is a descendant of another value has been removed. 
+If any envoy in envoys represents a folder, pass in the path, not the envoy.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_ProjectExplorer_ProjectItemFileHelpers_DeleteAsync_" data-uid="NationalInstruments.ProjectExplorer.ProjectItemFileHelpers.DeleteAsync*"></a>
+  <h4 id="NationalInstruments_ProjectExplorer_ProjectItemFileHelpers_DeleteAsync_System_Collections_Generic_IEnumerable_NationalInstruments_SourceModel_Envoys_Envoy__System_Collections_Generic_IEnumerable_System_String__NationalInstruments_Shell_DocumentEditSite_" data-uid="NationalInstruments.ProjectExplorer.ProjectItemFileHelpers.DeleteAsync(System.Collections.Generic.IEnumerable{NationalInstruments.SourceModel.Envoys.Envoy},System.Collections.Generic.IEnumerable{System.String},NationalInstruments.Shell.DocumentEditSite)">DeleteAsync(IEnumerable&lt;Envoy&gt;, IEnumerable&lt;String&gt;, DocumentEditSite)</h4>
+  <div class="markdown level1 summary"><p>Deletes <code data-dev-comment-type="paramref" class="paramref">envoys</code> and their files on disk, and deletes the files on disk at <code data-dev-comment-type="paramref" class="paramref">paths</code>. 
+Creates a transaction and adds undo/redo support. Also makes sure that the project items for the files/folders 
+being deleted are removed. This function does no prompting.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task DeleteAsync(IEnumerable&lt;Envoy&gt; envoys, IEnumerable&lt;string&gt; paths, DocumentEditSite editSite)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a>&gt;</td>
+        <td><span class="parametername">envoys</span></td>
+        <td><p>Collection of envoys to be deleted, along with any corresponding file/folder on disk.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="parametername">paths</span></td>
+        <td><p>Collection of paths to be deleted, primarily used to delete folders, which don&apos;t have envoys.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Shell.DocumentEditSite.html">DocumentEditSite</a></td>
+        <td><span class="parametername">editSite</span></td>
+        <td><p>The document edit site.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>A task that can be awaited.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_ProjectExplorer_ProjectItemFileHelpers_DeleteAsync_System_Collections_Generic_IEnumerable_NationalInstruments_SourceModel_Envoys_Envoy__System_Collections_Generic_IEnumerable_System_String__NationalInstruments_Shell_DocumentEditSite__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Expect <code data-dev-comment-type="paramref" class="paramref">envoys</code> and <code data-dev-comment-type="paramref" class="paramref">paths</code> to have been processed so that any
+value that is a descendant of another value has been removed. 
+If any envoy in envoys represents a folder, pass in the path, not the envoy.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_ProjectExplorer_ProjectItemFileHelpers_IsItemFolderContentDirectory_" data-uid="NationalInstruments.ProjectExplorer.ProjectItemFileHelpers.IsItemFolderContentDirectory*"></a>
+  <h4 id="NationalInstruments_ProjectExplorer_ProjectItemFileHelpers_IsItemFolderContentDirectory_NationalInstruments_Composition_ICompositionHost_System_String_" data-uid="NationalInstruments.ProjectExplorer.ProjectItemFileHelpers.IsItemFolderContentDirectory(NationalInstruments.Composition.ICompositionHost,System.String)">IsItemFolderContentDirectory(ICompositionHost, String)</h4>
+  <div class="markdown level1 summary"><p>If the given folder name uses the format for a containing folder on disk for an item folder. 
+This containing folder should not be shown to the user.
+TODO: gstoll: Rally TA230912 - this method should become internal when the gtype ItemFolders hack is gone</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsItemFolderContentDirectory(this ICompositionHost host, string folderName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Composition.ICompositionHost.html">ICompositionHost</a></td>
+        <td><span class="parametername">host</span></td>
+        <td><p>the composition host</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">folderName</span></td>
+        <td><p>the name of the folder we wish to check</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>true if the folder is a content directory for an item folder, false if not or if item folders are not supported</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_ProjectExplorer_ProjectItemFileHelpers_RenameAsync_" data-uid="NationalInstruments.ProjectExplorer.ProjectItemFileHelpers.RenameAsync*"></a>
+  <h4 id="NationalInstruments_ProjectExplorer_ProjectItemFileHelpers_RenameAsync_NationalInstruments_SourceModel_Envoys_Envoy_System_String_" data-uid="NationalInstruments.ProjectExplorer.ProjectItemFileHelpers.RenameAsync(NationalInstruments.SourceModel.Envoys.Envoy,System.String)">RenameAsync(Envoy, String)</h4>
+  <div class="markdown level1 summary"><p>Renames <code data-dev-comment-type="paramref" class="paramref">envoy</code> to <code data-dev-comment-type="paramref" class="paramref">newName</code>. 
+Renames the file on disk, if any, and updates dependencies, if applicable. 
+Shows any error messages to the user. 
+NOTE: To rename an envoy, you should call <a class="xref" href="NationalInstruments.ProjectExplorer.IProjectItemInfo.html#NationalInstruments_ProjectExplorer_IProjectItemInfo_OnRename_System_String_System_Action_">OnRename(String, Action)</a> 
+on the appropriate envoy service, which will likely end up calling this function.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;bool&gt; RenameAsync(Envoy envoy, string newName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">envoy</span></td>
+        <td><p>The envoy being renamed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">newName</span></td>
+        <td><p>The new name.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><p>True if the rename succeeded.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_ProjectExplorer_ProjectItemFileHelpers_RenameAsync_NationalInstruments_SourceModel_Envoys_Envoy_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Updating dependencies is the only asynchronous work. </p>
+</div>
+  
+  
+  <a id="NationalInstruments_ProjectExplorer_ProjectItemFileHelpers_RenameAsync_" data-uid="NationalInstruments.ProjectExplorer.ProjectItemFileHelpers.RenameAsync*"></a>
+  <h4 id="NationalInstruments_ProjectExplorer_ProjectItemFileHelpers_RenameAsync_NationalInstruments_SourceModel_Envoys_Envoy_System_String_System_Boolean_NationalInstruments_Shell_DocumentEditSite_" data-uid="NationalInstruments.ProjectExplorer.ProjectItemFileHelpers.RenameAsync(NationalInstruments.SourceModel.Envoys.Envoy,System.String,System.Boolean,NationalInstruments.Shell.DocumentEditSite)">RenameAsync(Envoy, String, Boolean, DocumentEditSite)</h4>
+  <div class="markdown level1 summary"><p>Renames <code data-dev-comment-type="paramref" class="paramref">envoy</code> to <code data-dev-comment-type="paramref" class="paramref">newName</code>. 
+Renames a file on disk, if any, and updates dependencies, if applicable. 
+Shows any error messages to the user.
+NOTE: To rename an envoy, you should call <a class="xref" href="NationalInstruments.ProjectExplorer.IProjectItemInfo.html#NationalInstruments_ProjectExplorer_IProjectItemInfo_OnRename_System_String_System_Action_">OnRename(String, Action)</a> 
+on the appropriate envoy service, which will likely end up calling this function.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;bool&gt; RenameAsync(Envoy envoy, string newName, bool showRefactorDialog, DocumentEditSite editSite)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">envoy</span></td>
+        <td><p>The envoy being renamed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">newName</span></td>
+        <td><p>The new name.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">showRefactorDialog</span></td>
+        <td><p>True if a </p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Shell.DocumentEditSite.html">DocumentEditSite</a></td>
+        <td><span class="parametername">editSite</span></td>
+        <td><p>Edit site used to block the UI </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><p>True if the rename succeeded.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_ProjectExplorer_ProjectItemFileHelpers_RenameAsync_NationalInstruments_SourceModel_Envoys_Envoy_System_String_System_Boolean_NationalInstruments_Shell_DocumentEditSite__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Updating dependencies is the only asynchronous work. </p>
+</div>
+  
+  
+  <a id="NationalInstruments_ProjectExplorer_ProjectItemFileHelpers_RenameFolderOnDisk_" data-uid="NationalInstruments.ProjectExplorer.ProjectItemFileHelpers.RenameFolderOnDisk*"></a>
+  <h4 id="NationalInstruments_ProjectExplorer_ProjectItemFileHelpers_RenameFolderOnDisk_System_String_System_String_NationalInstruments_SourceModel_Envoys_Project_NationalInstruments_SourceModel_Envoys_IStorageManager_" data-uid="NationalInstruments.ProjectExplorer.ProjectItemFileHelpers.RenameFolderOnDisk(System.String,System.String,NationalInstruments.SourceModel.Envoys.Project,NationalInstruments.SourceModel.Envoys.IStorageManager)">RenameFolderOnDisk(String, String, Project, IStorageManager)</h4>
+  <div class="markdown level1 summary"><p>Rename a folder on disk. Does not update storage paths of the envoys for any files that are inside the folder.  </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool RenameFolderOnDisk(string oldPath, string newPath, Project project, IStorageManager storageManager)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">oldPath</span></td>
+        <td><p>The full path the folder is currently at</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">newPath</span></td>
+        <td><p>The full path of the folder with the new name</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Project.html">Project</a></td>
+        <td><span class="parametername">project</span></td>
+        <td><p>The project the folder is logically in</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.IStorageManager.html">IStorageManager</a></td>
+        <td><span class="parametername">storageManager</span></td>
+        <td><p>The storage manager</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if there was an error renaming the folder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_ProjectExplorer_ProjectItemFileHelpers_RenameFolderOnDisk_System_String_System_String_NationalInstruments_SourceModel_Envoys_Project_NationalInstruments_SourceModel_Envoys_IStorageManager__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>There is no undo/redo support for renaming.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_ProjectExplorer_ProjectItemFileHelpers_ValidateRename_" data-uid="NationalInstruments.ProjectExplorer.ProjectItemFileHelpers.ValidateRename*"></a>
+  <h4 id="NationalInstruments_ProjectExplorer_ProjectItemFileHelpers_ValidateRename_NationalInstruments_SourceModel_Envoys_Envoy_System_String__" data-uid="NationalInstruments.ProjectExplorer.ProjectItemFileHelpers.ValidateRename(NationalInstruments.SourceModel.Envoys.Envoy,System.String@)">ValidateRename(Envoy, ref String)</h4>
+  <div class="markdown level1 summary"><p>Performs all the necessary validation to ensure <code data-dev-comment-type="paramref" class="paramref">envoy</code> can 
+be renamed to <code data-dev-comment-type="paramref" class="paramref">newName</code> and shows message boxes for any errors found. </p>
+<ul>
+<li>Trims whitespace off <code data-dev-comment-type="paramref" class="paramref">newName</code>. </li>
+<li>Checks that <code data-dev-comment-type="paramref" class="paramref">envoy</code> can be renamed. </li>
+<li>Validates <code data-dev-comment-type="paramref" class="paramref">newName</code> and the new path.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ValidateRename(Envoy envoy, ref string newName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.Envoys.Envoy.html">Envoy</a></td>
+        <td><span class="parametername">envoy</span></td>
+        <td><p>The envoy being renamed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">newName</span></td>
+        <td><p>The new name.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if <code data-dev-comment-type="paramref" class="paramref">envoy</code> can be renamed to <code data-dev-comment-type="paramref" class="paramref">newName</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

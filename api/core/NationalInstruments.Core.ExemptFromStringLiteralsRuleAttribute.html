@@ -1,0 +1,691 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ExemptFromStringLiteralsRuleAttribute
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ExemptFromStringLiteralsRuleAttribute
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.Core.ExemptFromStringLiteralsRuleAttribute">
+  
+  
+  <h1 id="NationalInstruments_Core_ExemptFromStringLiteralsRuleAttribute" data-uid="NationalInstruments.Core.ExemptFromStringLiteralsRuleAttribute" class="text-break">Class ExemptFromStringLiteralsRuleAttribute
+  </h1>
+  <div class="markdown level0 summary"><p>This attribute provides a mechanism to grant exemptions to FxCop rule NI1004, which forbids the use of string literals in code. The various &apos;Scope&apos;
+strings describe ways to define exemptions that apply to classes, methods, et. al. outside our code base, but within a specific assembly&apos;s build.
+The Scope value can also be used to grant an exemption for implementation vs. usage, et. al.
+NOTE: One can also &quot;permanently&quot; disable this rule by adding an AssemblyMetaData attribute of the following format to a specific assembly&apos;s AssemblyInfo.cs:
+[assembly: System.Reflection.AssemblyMetadata(&quot;Localize.Disabled&quot;, &quot;true&quot;)]
+This should only be used specifically when there is no intention to ever localize an assembly.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.attribute">Attribute</a></div>
+    <div class="level2"><span class="xref">ExemptFromStringLiteralsRuleAttribute</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.runtime.interopservices._attribute">_Attribute</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.MemberInfo, System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.MemberInfo, System.Type, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.MemberInfo)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.MemberInfo, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.IsDefined(System.Reflection.MemberInfo, System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.IsDefined(System.Reflection.MemberInfo, System.Type, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttribute(System.Reflection.MemberInfo, System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttribute(System.Reflection.MemberInfo, System.Type, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.ParameterInfo)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.ParameterInfo, System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.ParameterInfo, System.Type, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.ParameterInfo, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.IsDefined(System.Reflection.ParameterInfo, System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.IsDefined(System.Reflection.ParameterInfo, System.Type, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttribute(System.Reflection.ParameterInfo, System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttribute(System.Reflection.ParameterInfo, System.Type, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.Module, System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.Module)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.Module, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.Module, System.Type, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.IsDefined(System.Reflection.Module, System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.IsDefined(System.Reflection.Module, System.Type, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttribute(System.Reflection.Module, System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttribute(System.Reflection.Module, System.Type, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.Assembly, System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.Assembly, System.Type, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.Assembly)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.Assembly, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.IsDefined(System.Reflection.Assembly, System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.IsDefined(System.Reflection.Assembly, System.Type, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttribute(System.Reflection.Assembly, System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttribute(System.Reflection.Assembly, System.Type, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.Match(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.IsDefaultAttribute()</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.System.Runtime.InteropServices._Attribute.GetTypeInfoCount(System.UInt32)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.System.Runtime.InteropServices._Attribute.GetTypeInfo(System.UInt32, System.UInt32, System.IntPtr)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.System.Runtime.InteropServices._Attribute.GetIDsOfNames(System.Guid, System.IntPtr, System.UInt32, System.UInt32, System.IntPtr)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.System.Runtime.InteropServices._Attribute.Invoke(System.UInt32, System.Guid, System.UInt32, System.Int16, System.IntPtr, System.IntPtr, System.IntPtr, System.IntPtr)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.attribute.typeid#System_Attribute_TypeId">Attribute.TypeId</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="../pf/NationalInstruments.Core.html">NationalInstruments.Core</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.Core.dll</h6>
+  <h5 id="NationalInstruments_Core_ExemptFromStringLiteralsRuleAttribute_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[AttributeUsage(AttributeTargets.Assembly | AttributeTargets.Module | AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Enum | AttributeTargets.Constructor | AttributeTargets.Method | AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Event | AttributeTargets.Interface | AttributeTargets.Parameter | AttributeTargets.Delegate | AttributeTargets.ReturnValue | AttributeTargets.GenericParameter | AttributeTargets.All, AllowMultiple = true)]
+[Conditional(&quot;CODE_ANALYSIS&quot;)]
+public sealed class ExemptFromStringLiteralsRuleAttribute : Attribute, _Attribute</code></pre>
+  </div>
+  <h5 id="NationalInstruments_Core_ExemptFromStringLiteralsRuleAttribute_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>This class is exempt from code coverage since it&apos;s only used for controlling an FxCop rule.</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="NationalInstruments_Core_ExemptFromStringLiteralsRuleAttribute__ctor_" data-uid="NationalInstruments.Core.ExemptFromStringLiteralsRuleAttribute.#ctor*"></a>
+  <h4 id="NationalInstruments_Core_ExemptFromStringLiteralsRuleAttribute__ctor" data-uid="NationalInstruments.Core.ExemptFromStringLiteralsRuleAttribute.#ctor">ExemptFromStringLiteralsRuleAttribute()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of ExemptFromStringLiteralsRuleAttribute.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ExemptFromStringLiteralsRuleAttribute()</code></pre>
+  </div>
+  <h5 id="NationalInstruments_Core_ExemptFromStringLiteralsRuleAttribute__ctor_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>When attached to a target without specifying any named parameters, this attribute allows a method,
+field, or all methods / fields on a class / struct to receive string literals as arguments or be assigned
+a string literal value.</p>
+<p>If no named parameters are assigned when used at the assembly / module level, it has no effect. See the
+documentation of the string constants above for a list of allowed values for Scope, and the meaning
+of the &apos;Target&apos; property for specific values of Scope.</p>
+</div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="NationalInstruments_Core_ExemptFromStringLiteralsRuleAttribute_BaseClass" data-uid="NationalInstruments.Core.ExemptFromStringLiteralsRuleAttribute.BaseClass">BaseClass</h4>
+  <div class="markdown level1 summary"><p>Disables FxCop rule NI1004 for string literals passed to any method on the class and any specializations of the class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string BaseClass = &quot;BaseClass&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Core_ExemptFromStringLiteralsRuleAttribute_BaseClass_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>NOTE: This Scope is only meaningful when attaching this attribute to a class or interface.
+NOTE: Nested types within the target type also gain the exemption granted by this attribute.</p>
+<p>When attached to a class or interface, the suspension of the FxCop rule also applies to overridden methods on derived / implementing classes.</p>
+<p>To grant exemptions to all methods on a class that is not available to attach the attribute to directly (e.g. items in System),
+declare an instance of this attribute at assembly scope and specify the class via the Target. For example, to disable this rule
+for System.Exception:</p>
+<pre><code>[assembly: NationalInstruments.Core.Restricted.ExemptFromStringLiteralsRule(ExemptFromStringLiteralsRuleAttribute.BaseClass, &quot;System.Exception&quot;, Justification = &quot;All methods on this class are exempt&quot;)]</code></pre>
+
+<p>If you specify Target, it must be the full name of the class including its namespace.</p>
+<p>To grant an exemption to a class in our code base, attach this attribute directly to the class. Specifying a value
+for Target is not necessary.</p>
+<p>NOTE: New methods introduced by derived classes are not exempted! The exception to this rule is that derived class constructors
+are also allowed to accept string literals as arguments.</p>
+</div>
+  
+  
+  <h4 id="NationalInstruments_Core_ExemptFromStringLiteralsRuleAttribute_Class" data-uid="NationalInstruments.Core.ExemptFromStringLiteralsRuleAttribute.Class">Class</h4>
+  <div class="markdown level1 summary"><p>Disables FxCop rule NI1004 for string literals passed to any method on the specified class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string Class = &quot;Class&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Core_ExemptFromStringLiteralsRuleAttribute_Class_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>NOTE: This Scope is only meaningful when attaching this attribute to a class or struct.
+NOTE: Nested types within the target type also gain the exemption granted by this attribute.</p>
+<p>To grant exemptions to all methods on a class that is not available to attach the attribute to directly (e.g. items in System),
+declare an instance of this attribute at assembly scope and specify the class via the Target. For example, to disable this rule
+for System.ArgumentException:</p>
+<pre><code>[assembly: NationalInstruments.Core.Restricted.ExemptFromStringLiteralsRule(ExemptFromStringLiteralsRuleAttribute.Class, &quot;System.ArgumentException&quot;, Justification = &quot;All methods on this class are exempt&quot;)]</code></pre>
+
+<p>NOTE: If you specify Target, it must be the full name of the class including its namespace.</p>
+<p>To grant an exemption to a class in our code base, attach this attribute directly to the class. Specifying a value
+for Target is not necessary.</p>
+</div>
+  
+  
+  <h4 id="NationalInstruments_Core_ExemptFromStringLiteralsRuleAttribute_Constant" data-uid="NationalInstruments.Core.ExemptFromStringLiteralsRuleAttribute.Constant">Constant</h4>
+  <div class="markdown level1 summary"><p>Disables FxCop rule NI1004 for string literals for a specific value of a string literal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string Constant = &quot;Constant&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Core_ExemptFromStringLiteralsRuleAttribute_Constant_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Use this to allow the use of a specific string literal value within the code. Define the value of the literal
+using the Target parameter.</p>
+<p>Behaviors for specific targets to which the attribute is attached of the attribute are as follows:
+<p><strong>Attribute Target-Resulting Behavior</strong></p><ul><li>assembly, moduleUse WITH EXTREME CAUTION! Allows all implementation code in the assembly
+to use the string literal specified in Target.</li><li>The string specified by Target may be used throughout the class / struct implementation.</li><li>Enum, event, Property, Parameter, delegate, ReturnValue, GenericParameterNot implemented.</li><li>Constructor, Method, FieldThe string specified by Target may be used in the implementation or assigned
+to the field</li></ul></p>
+<p>Do not lightly grant this exemption at assembly scope, as it allows the string to be used throughout the
+code in an entire assembly. Do so only if you are certain that not only all current instances of the
+string, but any future instances of that string, will not be displayed to users.</p>
+<p>NOTE: When applied to a type, any nested types also gain the exemption.</p>
+</div>
+  
+  
+  <h4 id="NationalInstruments_Core_ExemptFromStringLiteralsRuleAttribute_Disabled" data-uid="NationalInstruments.Core.ExemptFromStringLiteralsRuleAttribute.Disabled">Disabled</h4>
+  <div class="markdown level1 summary"><p>Disables FxCop rule NI1004 enforcement on an implementation, depending on what the attribute is attached to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string Disabled = &quot;Disabled&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Core_ExemptFromStringLiteralsRuleAttribute_Disabled_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Behaviors for specific targets of the attribute are as follows:
+<p><strong>Attribute Target-Resulting Behavior</strong></p><ul><li>assembly, moduleDisables the rule for the entire assembly.</li><li>interfaceDisables the rule for anything implementing the interface.</li><li>No code in the class or struct is analyzed.</li><li>enum, event, Property, Parameter, delegate, ReturnValue, GenericParameterNot implemented.</li><li>Constructor, Method, FieldThe code or default values may contain / be initialized using string literals.</li></ul></p>
+<p>For this &quot;Scope&quot;, the value of Target is not relevant. It applies to whatever it&apos;s attached to.
+NOTE: When inspecting a member (method, field, etc.), both containing and base types are searched for this attribute.
+NOTE: When applied to a type, nested types are also exempt from the rule.</p>
+</div>
+  
+  
+  <h4 id="NationalInstruments_Core_ExemptFromStringLiteralsRuleAttribute_File" data-uid="NationalInstruments.Core.ExemptFromStringLiteralsRuleAttribute.File">File</h4>
+  <div class="markdown level1 summary"><p>Disables FxCop rule NI1004 for string literals in a file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string File = &quot;File&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Core_ExemptFromStringLiteralsRuleAttribute_File_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The Target for this scope is the name of a source file in the assembly being analyzed. Typically, this is used
+for internal code or code we&apos;ve obtained from an external source and have no intent of ensuring is localized.</p>
+</div>
+  
+  
+  <h4 id="NationalInstruments_Core_ExemptFromStringLiteralsRuleAttribute_Method" data-uid="NationalInstruments.Core.ExemptFromStringLiteralsRuleAttribute.Method">Method</h4>
+  <div class="markdown level1 summary"><p>Disables FxCop rule NI1004 for string literals passed to a specific method on a specific class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string Method = &quot;Method&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Core_ExemptFromStringLiteralsRuleAttribute_Method_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Use this to grant exemptions to calls to a method that must be exempted, but whose implementation is not available.
+The method&apos;s full name must be specified as Target, e.g. &quot;Full.Namespace.To.The.Class.Method&quot;.</p>
+<p>Behaviors for specific targets of the attribute are as follows:
+<p><strong>Attribute Target-Resulting Behavior</strong></p><ul><li>assembly, moduleAllows any call to the specified method in the entire assembly to accept string literal arguments.</li><li>Allows any call made to the specified method from within the class / struct implementation to accept string literal arguments.</li><li>Enum, event, Property, Field, Parameter, delegate, ReturnValue, GenericParameterNot implemented.</li><li>Constructor, MethodAllows calls to the specified method from within the function to accept string literal arguments.</li></ul></p>
+<p>NOTE: The exemption applies to all overloads of the method.
+NOTE: When applied to a type, any nested types also gain the exemption.</p>
+</div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_Core_ExemptFromStringLiteralsRuleAttribute_Justification_" data-uid="NationalInstruments.Core.ExemptFromStringLiteralsRuleAttribute.Justification*"></a>
+  <h4 id="NationalInstruments_Core_ExemptFromStringLiteralsRuleAttribute_Justification" data-uid="NationalInstruments.Core.ExemptFromStringLiteralsRuleAttribute.Justification">Justification</h4>
+  <div class="markdown level1 summary"><p>Explains why the exemption is being applied.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Justification { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ExemptFromStringLiteralsRuleAttribute_Scope_" data-uid="NationalInstruments.Core.ExemptFromStringLiteralsRuleAttribute.Scope*"></a>
+  <h4 id="NationalInstruments_Core_ExemptFromStringLiteralsRuleAttribute_Scope" data-uid="NationalInstruments.Core.ExemptFromStringLiteralsRuleAttribute.Scope">Scope</h4>
+  <div class="markdown level1 summary"><p>Specifies the scope of an exemption to the &apos;No string literals&apos; rule (NI1004).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Scope { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Core_ExemptFromStringLiteralsRuleAttribute_Scope_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>When this attribute is declared on an assembly, the scope can be used to define assembly-wide
+exemptions for types, methods, interfaces, string literal values, etc. that cannot have the attribute directly applied to them.
+When one of the pre-defined scope values is used when the attribute is applied to a type, method, etc. an exemption of a special
+type can be applied to that specific scope. See the documentation for the string constants above.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_Core_ExemptFromStringLiteralsRuleAttribute_Target_" data-uid="NationalInstruments.Core.ExemptFromStringLiteralsRuleAttribute.Target*"></a>
+  <h4 id="NationalInstruments_Core_ExemptFromStringLiteralsRuleAttribute_Target" data-uid="NationalInstruments.Core.ExemptFromStringLiteralsRuleAttribute.Target">Target</h4>
+  <div class="markdown level1 summary"><p>Identifies the entity to which a specific scope applies. The exact meaning depends on the value of Scope.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Target { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.runtime.interopservices._attribute">System.Runtime.InteropServices._Attribute</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_ToEnumerable__1___0_">EnumerableHelper.ToEnumerable&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_Repeat__1___0_System_Int32_">EnumerableHelper.Repeat&lt;T&gt;(T, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyNothing__1___0_">Verifier.VerifyNothing&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Func___0_System_Boolean__System_Action_System_String__System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Func___0_System_Boolean__System_Action_System_String_System_String__System_String_System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Boolean_System_Action_System_String__System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Boolean, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Boolean_System_Action_System_String_System_String__System_String_System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Boolean, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Func___0_System_Boolean__System_Action_System_String__System_String_">Verifier.Verify&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Func___0_System_Boolean__System_Action_System_String_System_String__System_String_System_String_">Verifier.Verify&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Boolean_System_Action_System_String__System_String_">Verifier.Verify&lt;T&gt;(T, Boolean, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Boolean_System_Action_System_String_System_String__System_String_System_String_">Verifier.Verify&lt;T&gt;(T, Boolean, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentIsNotNull__1___0_System_String_">Verifier.VerifyArgumentIsNotNull&lt;T&gt;(T, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyValueIsNotNull__1___0_System_String_">Verifier.VerifyValueIsNotNull&lt;T&gt;(T, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentNotReferenceEqualsTo_System_Object_System_Object_System_String_">Verifier.VerifyArgumentNotReferenceEqualsTo(Object, Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyValueNotReferenceEqualsTo_System_Object_System_Object_System_String_">Verifier.VerifyValueNotReferenceEqualsTo(Object, Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentIsOfType__1_System_Object_System_String_">Verifier.VerifyArgumentIsOfType&lt;T&gt;(Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyValueIsOfType__1_System_Object_System_String_">Verifier.VerifyValueIsOfType&lt;T&gt;(Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.QueryServiceExtensions.html#NationalInstruments_Core_QueryServiceExtensions_QueryService__1_System_Object_">QueryServiceExtensions.QueryService&lt;T&gt;(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_FindClosestMatchingContainerForResource_System_Object_System_Func_System_Object_System_Globalization_CultureInfo_System_Object__System_Globalization_CultureInfo_">LocalizationHelpers.FindClosestMatchingContainerForResource(Object, Func&lt;Object, CultureInfo, Object&gt;, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_FindClosestMatchingContainerForResource_System_Object_System_Func_System_Object_System_Globalization_CultureInfo_System_Object__System_Globalization_CultureInfo_System_Func_System_Object_System_Object__">LocalizationHelpers.FindClosestMatchingContainerForResource(Object, Func&lt;Object, CultureInfo, Object&gt;, CultureInfo, Func&lt;Object, Object&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedEnumString__1___0_">LocalizationHelpers.GetLocalizedEnumString&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedString_System_Object_System_String_System_Globalization_CultureInfo_">LocalizationHelpers.GetLocalizedString(Object, String, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedString_System_Object_System_String_System_Boolean_System_Globalization_CultureInfo_">LocalizationHelpers.GetLocalizedString(Object, String, Boolean, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_SetPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_System_Object_">DynamicPropertyExtensions.SetPropertyValue(Object, PropertySymbol, Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.GetPropertyValue(Object, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_ClearPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.ClearPropertyValue(Object, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_IsPropertySet_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.IsPropertySet(Object, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetAllSetProperties_System_Object_">DynamicPropertyExtensions.GetAllSetProperties(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetAllProperties_System_Object_">DynamicPropertyExtensions.GetAllProperties(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

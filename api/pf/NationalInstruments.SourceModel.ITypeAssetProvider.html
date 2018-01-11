@@ -1,0 +1,1308 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface ITypeAssetProvider
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface ITypeAssetProvider
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider">
+  
+  
+  <h1 id="NationalInstruments_SourceModel_ITypeAssetProvider" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider" class="text-break">Interface ITypeAssetProvider
+  </h1>
+  <div class="markdown level0 summary"><p>Provides information about a type used by the editor for type visualization.
+Type Asset Providers are added in the provider resource dictionary plug-ins.
+They are keyed off of a specific <a class="xref" href="../core/NationalInstruments.DataTypes.NIType.html">NIType</a>
+or Type Kind or various type aliases.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NationalInstruments.SourceModel.html">NationalInstruments.SourceModel</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_SourceModel_ITypeAssetProvider_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface ITypeAssetProvider</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_ITypeAssetProvider_BaseResourceName_" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.BaseResourceName*"></a>
+  <h4 id="NationalInstruments_SourceModel_ITypeAssetProvider_BaseResourceName" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.BaseResourceName">BaseResourceName</h4>
+  <div class="markdown level1 summary"><p>Base Resource Name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string BaseResourceName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ITypeAssetProvider_DomainName_" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.DomainName*"></a>
+  <h4 id="NationalInstruments_SourceModel_ITypeAssetProvider_DomainName" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.DomainName">DomainName</h4>
+  <div class="markdown level1 summary"><p>Gets a domain name string for the type. This should be the C# namespace that defines the NIType.
+This represents the assembly, logical grouping, or component that the Help ID belongs to. In general,
+types should return the xml namespace of the assembly that defines them, in the format
+CompanyShortName + &quot;.&quot; + ModelingNamespace e.g. NationalInstruments.LabVIEW.DataComms</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string DomainName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ITypeAssetProvider_HelpId_" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.HelpId*"></a>
+  <h4 id="NationalInstruments_SourceModel_ITypeAssetProvider_HelpId" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.HelpId">HelpId</h4>
+  <div class="markdown level1 summary"><p>Get a help ID string for the type.
+Most implementers should be returning string.Empty. You should only provide more implementation if you
+have help topics that you want to be displayed when the user hovers on elements linked to the type this 
+asset provider supports. If so, use this code:
+        string memberId = [some string built from fieldPath and other private data, often the type&apos;s name];
+        return ContextualHelp.HelpCommonHelpers.CreateFullHelpId(DomainName, memberId, string.Empty);
+See <a class="xref" href="NationalInstruments.ContextualHelp.HelpCommonHelpers.html#NationalInstruments_ContextualHelp_HelpCommonHelpers_CreateFullHelpId_System_String_System_String_System_String_">CreateFullHelpId(String, String, String)</a> for details.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string HelpId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>A help id string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ITypeAssetProvider_ResourceTypeKey_" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.ResourceTypeKey*"></a>
+  <h4 id="NationalInstruments_SourceModel_ITypeAssetProvider_ResourceTypeKey" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.ResourceTypeKey">ResourceTypeKey</h4>
+  <div class="markdown level1 summary"><p>Resource Type Key</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Type ResourceTypeKey { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ITypeAssetProvider_SecondaryColor_" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.SecondaryColor*"></a>
+  <h4 id="NationalInstruments_SourceModel_ITypeAssetProvider_SecondaryColor" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.SecondaryColor">SecondaryColor</h4>
+  <div class="markdown level1 summary"><p>Gets a brush of a single color which represents the type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">PlatformBrush SecondaryColor { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformBrush.html">PlatformBrush</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ITypeAssetProvider_SecondaryColorAsColor_" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.SecondaryColorAsColor*"></a>
+  <h4 id="NationalInstruments_SourceModel_ITypeAssetProvider_SecondaryColorAsColor" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.SecondaryColorAsColor">SecondaryColorAsColor</h4>
+  <div class="markdown level1 summary"><p>Gets a color which is the secondary color to use when rendering this type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">PlatformColor SecondaryColorAsColor { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformColor.html">PlatformColor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ITypeAssetProvider_SolidColor_" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.SolidColor*"></a>
+  <h4 id="NationalInstruments_SourceModel_ITypeAssetProvider_SolidColor" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.SolidColor">SolidColor</h4>
+  <div class="markdown level1 summary"><p>Gets a brush of a single color which represents the type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">PlatformBrush SolidColor { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformBrush.html">PlatformBrush</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ITypeAssetProvider_SolidColorAsColor_" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.SolidColorAsColor*"></a>
+  <h4 id="NationalInstruments_SourceModel_ITypeAssetProvider_SolidColorAsColor" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.SolidColorAsColor">SolidColorAsColor</h4>
+  <div class="markdown level1 summary"><p>Gets a color which is the primary color to use when rendering this type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">PlatformColor SolidColorAsColor { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformColor.html">PlatformColor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_SourceModel_ITypeAssetProvider_DescribeType_" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.DescribeType*"></a>
+  <h4 id="NationalInstruments_SourceModel_ITypeAssetProvider_DescribeType_NationalInstruments_DataTypes_NIType_" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.DescribeType(NationalInstruments.DataTypes.NIType)">DescribeType(NIType)</h4>
+  <div class="markdown level1 summary"><p>Gets a brief description of the given <a class="xref" href="../core/NationalInstruments.DataTypes.NIType.html">NIType</a> instance.  The given type 
+should match the type for which this provider is providing assets. This text will be seen, for example,
+in the tip strip when hovering over the wire. It should describe the primary wire type and any details
+about nested types that are important for a quick view of the type. It can be multiline.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string DescribeType(NIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.DataTypes.NIType.html">NIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>An <a class="xref" href="../core/NationalInstruments.DataTypes.NIType.html">NIType</a> instance that should be described.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The brief description of the given <a class="xref" href="../core/NationalInstruments.DataTypes.NIType.html">NIType</a> instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ITypeAssetProvider_GetAdaptedImage_" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.GetAdaptedImage*"></a>
+  <h4 id="NationalInstruments_SourceModel_ITypeAssetProvider_GetAdaptedImage" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.GetAdaptedImage">GetAdaptedImage()</h4>
+  <div class="markdown level1 summary"><p>NO LONGER USED. Gets an image which represents the adapted type (half a gear).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">PlatformImage GetAdaptedImage()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformImage.html">PlatformImage</a></td>
+        <td><p>The image.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ITypeAssetProvider_GetDiagramGlyph_" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.GetDiagramGlyph*"></a>
+  <h4 id="NationalInstruments_SourceModel_ITypeAssetProvider_GetDiagramGlyph_System_Int32_System_Double_" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.GetDiagramGlyph(System.Int32,System.Double)">GetDiagramGlyph(Int32, Double)</h4>
+  <div class="markdown level1 summary"><p>Text size glyph which represents the type on the block diagram. For example, in a LabVIEW Virtual Instrument,
+this is the glyph that draws on the data accessor terminal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">NineGridData GetDiagramGlyph(int dimensionality, double zoomLevel)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">dimensionality</span></td>
+        <td><p>Desired dimension of the wire, 0 is non arrayed, up to 4 dimensional</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td><span class="parametername">zoomLevel</span></td>
+        <td><p>zoom level</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.NineGridData.html">NineGridData</a></td>
+        <td><p>The diagram glyph</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ITypeAssetProvider_GetDialogGlyph_" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.GetDialogGlyph*"></a>
+  <h4 id="NationalInstruments_SourceModel_ITypeAssetProvider_GetDialogGlyph_NationalInstruments_DataTypes_NIType_" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.GetDialogGlyph(NationalInstruments.DataTypes.NIType)">GetDialogGlyph(NIType)</h4>
+  <div class="markdown level1 summary"><p>28 px wide x 16 px tall glyph which represents the type used in menus, context help, etc.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">NineGridData GetDialogGlyph(NIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.DataTypes.NIType.html">NIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>An <a class="xref" href="../core/NationalInstruments.DataTypes.NIType.html">NIType</a> instance that should be described. This is important when
+a single ITypeAssetProvider is used for several specific types.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.NineGridData.html">NineGridData</a></td>
+        <td><p>The dialog glyph</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ITypeAssetProvider_GetFieldDocumentation_" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.GetFieldDocumentation*"></a>
+  <h4 id="NationalInstruments_SourceModel_ITypeAssetProvider_GetFieldDocumentation_System_Collections_Generic_IEnumerable_System_String__NationalInstruments_SourceModel_FieldNameFormat_" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.GetFieldDocumentation(System.Collections.Generic.IEnumerable{System.String},NationalInstruments.SourceModel.FieldNameFormat)">GetFieldDocumentation(IEnumerable&lt;String&gt;, FieldNameFormat)</h4>
+  <div class="markdown level1 summary"><p>Gets documentation for a field in the type.
+Implementers must return a value even if they do not support properties. See remarks.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">FieldDocumentation GetFieldDocumentation(IEnumerable&lt;string&gt; fieldPath, FieldNameFormat fieldNameFormat)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="parametername">fieldPath</span></td>
+        <td><p>Enumerable of strings that represent the path of field names from the top level type to the field to provide documentation for.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.FieldNameFormat.html">FieldNameFormat</a></td>
+        <td><span class="parametername">fieldNameFormat</span></td>
+        <td><p>How to format the name of the field.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.FieldDocumentation.html">FieldDocumentation</a></td>
+        <td><p>Documentation for the requested field</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_SourceModel_ITypeAssetProvider_GetFieldDocumentation_System_Collections_Generic_IEnumerable_System_String__NationalInstruments_SourceModel_FieldNameFormat__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Your implementation if you do not support properties will probably be this:
+string field = fieldPath.Last();
+var documentation = new Documentation()
+{
+        Name = field
+};
+return new FieldDocumentation(documentation, field.ToEnumerable(), false);</p>
+</div>
+  
+  
+  <a id="NationalInstruments_SourceModel_ITypeAssetProvider_GetImage_" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.GetImage*"></a>
+  <h4 id="NationalInstruments_SourceModel_ITypeAssetProvider_GetImage_System_Int32_NationalInstruments_SourceModel_TypeImageSize_" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.GetImage(System.Int32,NationalInstruments.SourceModel.TypeImageSize)">GetImage(Int32, TypeImageSize)</h4>
+  <div class="markdown level1 summary"><p>NO LONGER USED. Gets an image which represents the type used for the type picker. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">PlatformImage GetImage(int dimensionality, TypeImageSize imageSize)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">dimensionality</span></td>
+        <td><p>Desired dimension of the image, 0 is non arrayed, up to 4 dimensional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.TypeImageSize.html">TypeImageSize</a></td>
+        <td><span class="parametername">imageSize</span></td>
+        <td><p>Desired image size.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformImage.html">PlatformImage</a></td>
+        <td><p>The image.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ITypeAssetProvider_GetLongName_" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.GetLongName*"></a>
+  <h4 id="NationalInstruments_SourceModel_ITypeAssetProvider_GetLongName_NationalInstruments_DataTypes_NIType_" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.GetLongName(NationalInstruments.DataTypes.NIType)">GetLongName(NIType)</h4>
+  <div class="markdown level1 summary"><p>Gets the long formal user visible name of the type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GetLongName(NIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.DataTypes.NIType.html">NIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The specific data type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>the long formal user visible name of the type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ITypeAssetProvider_GetMergeScriptForEventParameter_" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.GetMergeScriptForEventParameter*"></a>
+  <h4 id="NationalInstruments_SourceModel_ITypeAssetProvider_GetMergeScriptForEventParameter_System_String_System_String_System_String_" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.GetMergeScriptForEventParameter(System.String,System.String,System.String)">GetMergeScriptForEventParameter(String, String, String)</h4>
+  <div class="markdown level1 summary"><p>Gets a palette element to use when creating a constant or control from an event parameter within the type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GetMergeScriptForEventParameter(string eventIdentifier, string eventParameterIdentifier, string paletteIdentifier)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">eventIdentifier</span></td>
+        <td><p>Event identifier</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">eventParameterIdentifier</span></td>
+        <td><p>Event parameter identifier</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">paletteIdentifier</span></td>
+        <td><p>The name of base palette the returned leaf should come from. Indicates diagram versus panel.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>A merge script to drop as a constant or control for the field.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ITypeAssetProvider_GetMergeScriptForField_" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.GetMergeScriptForField*"></a>
+  <h4 id="NationalInstruments_SourceModel_ITypeAssetProvider_GetMergeScriptForField_System_Collections_Generic_IEnumerable_System_String__System_String_" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.GetMergeScriptForField(System.Collections.Generic.IEnumerable{System.String},System.String)">GetMergeScriptForField(IEnumerable&lt;String&gt;, String)</h4>
+  <div class="markdown level1 summary"><p>Gets a palette element to use when creating a constant or control from a field within the type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GetMergeScriptForField(IEnumerable&lt;string&gt; fieldPath, string paletteIdentifier)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="parametername">fieldPath</span></td>
+        <td><p>Enumerable of strings that represent the path of field names from the top level type to the field.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">paletteIdentifier</span></td>
+        <td><p>The name of base palette the returned leaf should come from. Indicates diagram versus panel.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>A merge script to drop as a constant or control for the field.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ITypeAssetProvider_GetMergeScriptForFilterSubItem_" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.GetMergeScriptForFilterSubItem*"></a>
+  <h4 id="NationalInstruments_SourceModel_ITypeAssetProvider_GetMergeScriptForFilterSubItem_System_String_System_String_System_String_" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.GetMergeScriptForFilterSubItem(System.String,System.String,System.String)">GetMergeScriptForFilterSubItem(String, String, String)</h4>
+  <div class="markdown level1 summary"><p>Gets a palette element to use when creating a constant or control from a filter subItem parameter within the type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GetMergeScriptForFilterSubItem(string filterIdentifier, string subItemIdentifier, string paletteIdentifier)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">filterIdentifier</span></td>
+        <td><p>Filter identifier</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">subItemIdentifier</span></td>
+        <td><p>Sub item identifier</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">paletteIdentifier</span></td>
+        <td><p>The name of base palette the returned leaf should come from. Indicates diagram versus panel.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>A merge script to drop as a constant or control for the field.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ITypeAssetProvider_GetPatternedBrush_" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.GetPatternedBrush*"></a>
+  <h4 id="NationalInstruments_SourceModel_ITypeAssetProvider_GetPatternedBrush_System_Int32_NationalInstruments_SourceModel_StrokeOrientation_" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.GetPatternedBrush(System.Int32,NationalInstruments.SourceModel.StrokeOrientation)">GetPatternedBrush(Int32, StrokeOrientation)</h4>
+  <div class="markdown level1 summary"><p>Gets a patterned brush used to draw wires of the corresponding type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">PlatformBrush GetPatternedBrush(int dimensionality, StrokeOrientation orientation)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">dimensionality</span></td>
+        <td><p>Desired dimension of the wire, 0 is non arrayed, up to 4 dimensional</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.StrokeOrientation.html">StrokeOrientation</a></td>
+        <td><span class="parametername">orientation</span></td>
+        <td><p>Wire segment orientation that will be drawn</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformBrush.html">PlatformBrush</a></td>
+        <td><p>The patterned brush to use</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ITypeAssetProvider_GetPropertiesImage_" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.GetPropertiesImage*"></a>
+  <h4 id="NationalInstruments_SourceModel_ITypeAssetProvider_GetPropertiesImage_System_Double_" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.GetPropertiesImage(System.Double)">GetPropertiesImage(Double)</h4>
+  <div class="markdown level1 summary"><p>Gets an image that can be used to represent the properties of the type; e.g. a property node.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">NineGridData GetPropertiesImage(double zoomLevel)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td><span class="parametername">zoomLevel</span></td>
+        <td><p>zoom level</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.NineGridData.html">NineGridData</a></td>
+        <td><p>The image.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ITypeAssetProvider_GetPropertyNodeName_" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.GetPropertyNodeName*"></a>
+  <h4 id="NationalInstruments_SourceModel_ITypeAssetProvider_GetPropertyNodeName_NationalInstruments_DataTypes_NIType_" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.GetPropertyNodeName(NationalInstruments.DataTypes.NIType)">GetPropertyNodeName(NIType)</h4>
+  <div class="markdown level1 summary"><p>Gets the property node&apos;s user visible name for the type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GetPropertyNodeName(NIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.DataTypes.NIType.html">NIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The specific data type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ITypeAssetProvider_GetPropertyNodeTerminalInName_" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.GetPropertyNodeTerminalInName*"></a>
+  <h4 id="NationalInstruments_SourceModel_ITypeAssetProvider_GetPropertyNodeTerminalInName_NationalInstruments_DataTypes_NIType_" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.GetPropertyNodeTerminalInName(NationalInstruments.DataTypes.NIType)">GetPropertyNodeTerminalInName(NIType)</h4>
+  <div class="markdown level1 summary"><p>Gets the property node&apos;s user visible name for the input terminal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GetPropertyNodeTerminalInName(NIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.DataTypes.NIType.html">NIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The specific data type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ITypeAssetProvider_GetPropertyNodeTerminalOutName_" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.GetPropertyNodeTerminalOutName*"></a>
+  <h4 id="NationalInstruments_SourceModel_ITypeAssetProvider_GetPropertyNodeTerminalOutName_NationalInstruments_DataTypes_NIType_" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.GetPropertyNodeTerminalOutName(NationalInstruments.DataTypes.NIType)">GetPropertyNodeTerminalOutName(NIType)</h4>
+  <div class="markdown level1 summary"><p>Gets the property node&apos;s user visible name for the output terminal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GetPropertyNodeTerminalOutName(NIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.DataTypes.NIType.html">NIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The specific data type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ITypeAssetProvider_GetShortName_" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.GetShortName*"></a>
+  <h4 id="NationalInstruments_SourceModel_ITypeAssetProvider_GetShortName_NationalInstruments_DataTypes_NIType_" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.GetShortName(NationalInstruments.DataTypes.NIType)">GetShortName(NIType)</h4>
+  <div class="markdown level1 summary"><p>Gets the short user visible name of the type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GetShortName(NIType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.DataTypes.NIType.html">NIType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The specific data type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The short user visible name of the type. Typically, this should be lowercased.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ITypeAssetProvider_GetTerminalGlyph_" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.GetTerminalGlyph*"></a>
+  <h4 id="NationalInstruments_SourceModel_ITypeAssetProvider_GetTerminalGlyph_NationalInstruments_SourceModel_WireTerminal_" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.GetTerminalGlyph(NationalInstruments.SourceModel.WireTerminal)">GetTerminalGlyph(WireTerminal)</h4>
+  <div class="markdown level1 summary"><p>Gets a NineGridData describing any glyphs that should be drawn at the end of 
+the wire where it connects to the terminal. This may be arrowheads, UML annotations,
+etc. May return null to indicate no glyph should be drawn. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">NineGridData GetTerminalGlyph(WireTerminal terminal)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireTerminal.html">WireTerminal</a></td>
+        <td><span class="parametername">terminal</span></td>
+        <td><p>The terminal to annotate. Use this parameter to evaluate the
+direction of the wire entering the node.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.NineGridData.html">NineGridData</a></td>
+        <td><p>A glyph to put on the end of the wire. Caller is responsible for positioning the glyph with
+respect to the terminal.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ITypeAssetProvider_GetTypeImage_" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.GetTypeImage*"></a>
+  <h4 id="NationalInstruments_SourceModel_ITypeAssetProvider_GetTypeImage" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.GetTypeImage">GetTypeImage()</h4>
+  <div class="markdown level1 summary"><p>NO LONGER USED. Gets an image which represents the type (four boxes). (Was part of the type picker.)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">PlatformImage GetTypeImage()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformImage.html">PlatformImage</a></td>
+        <td><p>The image.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ITypeAssetProvider_GetWireRenderInfo_" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.GetWireRenderInfo*"></a>
+  <h4 id="NationalInstruments_SourceModel_ITypeAssetProvider_GetWireRenderInfo_System_Int32_" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.GetWireRenderInfo(System.Int32)">GetWireRenderInfo(Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets a patterned brush used to stroke wires of the corresponding type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">WireRenderInfoEnumerable GetWireRenderInfo(int dimensionality)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">dimensionality</span></td>
+        <td><p>Desired dimension of the wire, 0 is non arrayed, up to 4 dimensional</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.WireRenderInfoEnumerable.html">WireRenderInfoEnumerable</a></td>
+        <td><p>The patterned pen to use</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_SourceModel_ITypeAssetProvider_TryGetDefaultValueText_" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.TryGetDefaultValueText*"></a>
+  <h4 id="NationalInstruments_SourceModel_ITypeAssetProvider_TryGetDefaultValueText_System_Int32_System_Object_System_String__" data-uid="NationalInstruments.SourceModel.ITypeAssetProvider.TryGetDefaultValueText(System.Int32,System.Object,System.String@)">TryGetDefaultValueText(Int32, Object, out String)</h4>
+  <div class="markdown level1 summary"><p>Get a customized default value text</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool TryGetDefaultValueText(int dimensionality, object defaultValue, out string defaultValueText)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">dimensionality</span></td>
+        <td><p>Desired dimension of the wire, 0 is non arrayed, up to 4 dimensional</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">defaultValue</span></td>
+        <td><p>The default value to print</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">defaultValueText</span></td>
+        <td><p>The default value  text to return</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True: Processed. False: not processed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

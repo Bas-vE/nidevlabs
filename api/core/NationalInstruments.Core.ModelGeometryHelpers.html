@@ -1,0 +1,2850 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ModelGeometryHelpers
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ModelGeometryHelpers
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.Core.ModelGeometryHelpers">
+  
+  
+  <h1 id="NationalInstruments_Core_ModelGeometryHelpers" data-uid="NationalInstruments.Core.ModelGeometryHelpers" class="text-break">Class ModelGeometryHelpers
+  </h1>
+  <div class="markdown level0 summary"><p>Static collection of helper methods for geometric calculations of SM visuals</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">ModelGeometryHelpers</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="../pf/NationalInstruments.Core.html">NationalInstruments.Core</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.Core.dll</h6>
+  <h5 id="NationalInstruments_Core_ModelGeometryHelpers_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class ModelGeometryHelpers</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_AddPointToPath_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.AddPointToPath*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_AddPointToPath_NationalInstruments_Controls_SMPathGeometry_NationalInstruments_Core_SMPoint_System_Int32_System_Int32_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.AddPointToPath(NationalInstruments.Controls.SMPathGeometry,NationalInstruments.Core.SMPoint,System.Int32,System.Int32)">AddPointToPath(SMPathGeometry, SMPoint, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Adds a user-defined point to a path, either to the end as a new path segment, or splitting an existing segment into two segments</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddPointToPath(SMPathGeometry pathGeometry, SMPoint pointClicked, int figureIndex, int segmentIndex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Controls.SMPathGeometry.html">SMPathGeometry</a></td>
+        <td><span class="parametername">pathGeometry</span></td>
+        <td><p>The path geometry the point is being added to</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><span class="parametername">pointClicked</span></td>
+        <td><p>The user-defined point to add to the geometry</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">figureIndex</span></td>
+        <td><p>Which figure in the geometry we&apos;re adding to</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">segmentIndex</span></td>
+        <td><p>Which segment in the figure the point is being added to. If value is equal to the number of segments already present, we add the point as a new segment.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_ApplyTransform_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.ApplyTransform*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_ApplyTransform_NationalInstruments_Controls_SMPathFigure_System_Func_NationalInstruments_Core_SMPoint_NationalInstruments_Core_SMPoint__" data-uid="NationalInstruments.Core.ModelGeometryHelpers.ApplyTransform(NationalInstruments.Controls.SMPathFigure,System.Func{NationalInstruments.Core.SMPoint,NationalInstruments.Core.SMPoint})">ApplyTransform(SMPathFigure, Func&lt;SMPoint, SMPoint&gt;)</h4>
+  <div class="markdown level1 summary"><p>Apply a transform to a single path figure</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ApplyTransform(this SMPathFigure figure, Func&lt;SMPoint, SMPoint&gt; transform)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Controls.SMPathFigure.html">SMPathFigure</a></td>
+        <td><span class="parametername">figure</span></td>
+        <td><p>The figure to transform.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a>, <a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a>&gt;</td>
+        <td><span class="parametername">transform</span></td>
+        <td><p>The transform to apply to all points in the geometry.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_ApplyTransform_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.ApplyTransform*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_ApplyTransform_NationalInstruments_Controls_SMPathGeometry_NationalInstruments_Core_PlatformTransform_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.ApplyTransform(NationalInstruments.Controls.SMPathGeometry,NationalInstruments.Core.PlatformTransform)">ApplyTransform(SMPathGeometry, PlatformTransform)</h4>
+  <div class="markdown level1 summary"><p>Apply a transform to all points in the geometry</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ApplyTransform(this SMPathGeometry geometry, PlatformTransform transform)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Controls.SMPathGeometry.html">SMPathGeometry</a></td>
+        <td><span class="parametername">geometry</span></td>
+        <td><p>The geometry to transform.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.PlatformTransform.html">PlatformTransform</a></td>
+        <td><span class="parametername">transform</span></td>
+        <td><p>The transform to apply to all points in the geometry.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_ApplyTransform_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.ApplyTransform*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_ApplyTransform_NationalInstruments_Controls_SMPathGeometry_System_Func_NationalInstruments_Core_SMPoint_NationalInstruments_Core_SMPoint__" data-uid="NationalInstruments.Core.ModelGeometryHelpers.ApplyTransform(NationalInstruments.Controls.SMPathGeometry,System.Func{NationalInstruments.Core.SMPoint,NationalInstruments.Core.SMPoint})">ApplyTransform(SMPathGeometry, Func&lt;SMPoint, SMPoint&gt;)</h4>
+  <div class="markdown level1 summary"><p>Apply a transform to all points in the geometry</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ApplyTransform(this SMPathGeometry geometry, Func&lt;SMPoint, SMPoint&gt; transform)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Controls.SMPathGeometry.html">SMPathGeometry</a></td>
+        <td><span class="parametername">geometry</span></td>
+        <td><p>The geometry to transform.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a>, <a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a>&gt;</td>
+        <td><span class="parametername">transform</span></td>
+        <td><p>The transform to apply to all points in the geometry.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_CartesianToPolar_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.CartesianToPolar*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_CartesianToPolar_NationalInstruments_Core_SMPoint_NationalInstruments_Core_SMPoint_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.CartesianToPolar(NationalInstruments.Core.SMPoint,NationalInstruments.Core.SMPoint)">CartesianToPolar(SMPoint, SMPoint)</h4>
+  <div class="markdown level1 summary"><p>Transforms a point in Cartesian coordinates to its polar representation</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SMPoint CartesianToPolar(SMPoint point, SMPoint newOrigin)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The Cartesian point to transform</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><span class="parametername">newOrigin</span></td>
+        <td><p>The origin of the new transformed point</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><p>A polar coordinate transform of the point in (angle, radian) point coordinates</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_CloneFigure_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.CloneFigure*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_CloneFigure_NationalInstruments_Controls_SMPathFigure_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.CloneFigure(NationalInstruments.Controls.SMPathFigure)">CloneFigure(SMPathFigure)</h4>
+  <div class="markdown level1 summary"><p>Create a deep-equals copy of a path figure.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SMPathFigure CloneFigure(this SMPathFigure figure)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Controls.SMPathFigure.html">SMPathFigure</a></td>
+        <td><span class="parametername">figure</span></td>
+        <td><p>The path figure to copy</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Controls.SMPathFigure.html">SMPathFigure</a></td>
+        <td><p>The new copied path figure</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_CloneFigure_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.CloneFigure*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_CloneFigure_NationalInstruments_Controls_SMPathFigure_NationalInstruments_Core_SMPoint_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.CloneFigure(NationalInstruments.Controls.SMPathFigure,NationalInstruments.Core.SMPoint)">CloneFigure(SMPathFigure, SMPoint)</h4>
+  <div class="markdown level1 summary"><p>Create a deep-equals copy of a path figure.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SMPathFigure CloneFigure(this SMPathFigure figure, SMPoint offset)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Controls.SMPathFigure.html">SMPathFigure</a></td>
+        <td><span class="parametername">figure</span></td>
+        <td><p>The path figure to copy</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><span class="parametername">offset</span></td>
+        <td><p>The translation offset of the new figure</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Controls.SMPathFigure.html">SMPathFigure</a></td>
+        <td><p>The new copied and translated path figure</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_CloneGeometry_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.CloneGeometry*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_CloneGeometry_NationalInstruments_Controls_SMPathGeometry_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.CloneGeometry(NationalInstruments.Controls.SMPathGeometry)">CloneGeometry(SMPathGeometry)</h4>
+  <div class="markdown level1 summary"><p>Create a deep-equals copy of a path geometry.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SMPathGeometry CloneGeometry(this SMPathGeometry geometry)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Controls.SMPathGeometry.html">SMPathGeometry</a></td>
+        <td><span class="parametername">geometry</span></td>
+        <td><p>The geometry to copy</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Controls.SMPathGeometry.html">SMPathGeometry</a></td>
+        <td><p>The new copied geometry</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_CloneGeometry_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.CloneGeometry*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_CloneGeometry_NationalInstruments_Controls_SMPathGeometry_NationalInstruments_Core_SMPoint_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.CloneGeometry(NationalInstruments.Controls.SMPathGeometry,NationalInstruments.Core.SMPoint)">CloneGeometry(SMPathGeometry, SMPoint)</h4>
+  <div class="markdown level1 summary"><p>Create a deep-equals copy of a path geometry.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SMPathGeometry CloneGeometry(this SMPathGeometry geometry, SMPoint offset)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Controls.SMPathGeometry.html">SMPathGeometry</a></td>
+        <td><span class="parametername">geometry</span></td>
+        <td><p>The geometry to copy</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><span class="parametername">offset</span></td>
+        <td><p>The translation offset of the new geometry</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Controls.SMPathGeometry.html">SMPathGeometry</a></td>
+        <td><p>The new copied and translated geometry</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_ClonePathSegment_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.ClonePathSegment*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_ClonePathSegment_NationalInstruments_Controls_SMPathSegment_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.ClonePathSegment(NationalInstruments.Controls.SMPathSegment)">ClonePathSegment(SMPathSegment)</h4>
+  <div class="markdown level1 summary"><p>Deep clone a path segment with no offset</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SMPathSegment ClonePathSegment(this SMPathSegment segment)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Controls.SMPathSegment.html">SMPathSegment</a></td>
+        <td><span class="parametername">segment</span></td>
+        <td><p>Segment to clone</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Controls.SMPathSegment.html">SMPathSegment</a></td>
+        <td><p>New copy of original segment</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_ContainsPoint_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.ContainsPoint*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_ContainsPoint_NationalInstruments_Controls_SMPathSegment_NationalInstruments_Core_SMPoint_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.ContainsPoint(NationalInstruments.Controls.SMPathSegment,NationalInstruments.Core.SMPoint)">ContainsPoint(SMPathSegment, SMPoint)</h4>
+  <div class="markdown level1 summary"><p>Determines if the segment contains the point as a control or termination point</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ContainsPoint(this SMPathSegment segment, SMPoint point)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Controls.SMPathSegment.html">SMPathSegment</a></td>
+        <td><span class="parametername">segment</span></td>
+        <td><p>The segment possibly containing the point</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The point to find in the segment</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>The index of the point in the segment, or -1 if point is not in the segment. End points are regarded as final points, and control points are indexed in order from start to finish.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_ContainsPoint_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.ContainsPoint*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_ContainsPoint_NationalInstruments_Core_FlattenedSMGeometry_NationalInstruments_Core_SMPoint_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.ContainsPoint(NationalInstruments.Core.FlattenedSMGeometry,NationalInstruments.Core.SMPoint)">ContainsPoint(FlattenedSMGeometry, SMPoint)</h4>
+  <div class="markdown level1 summary"><p>Determines if a point is in a path geometry</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ContainsPoint(this FlattenedSMGeometry geometry, SMPoint point)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.FlattenedSMGeometry.html">FlattenedSMGeometry</a></td>
+        <td><span class="parametername">geometry</span></td>
+        <td><p>The geometry to check for point inclusion</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The point to check if is inside the geometry</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if the geometry contains the point based on the even-odd fill rule, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Core_ModelGeometryHelpers_ContainsPoint_NationalInstruments_Core_FlattenedSMGeometry_NationalInstruments_Core_SMPoint__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This uses an even odd rule: a point is only in the geometry if it is in an ODD number of PathFigures of that geometry</p>
+</div>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_ConvertArcSegmentToBeziers_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.ConvertArcSegmentToBeziers*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_ConvertArcSegmentToBeziers_NationalInstruments_Controls_SMEllipticalArcSegment_NationalInstruments_Core_SMPoint_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.ConvertArcSegmentToBeziers(NationalInstruments.Controls.SMEllipticalArcSegment,NationalInstruments.Core.SMPoint)">ConvertArcSegmentToBeziers(SMEllipticalArcSegment, SMPoint)</h4>
+  <div class="markdown level1 summary"><p>Converts an arc segment to a contiguous series of between one and four bezier segments</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SMPathFigure ConvertArcSegmentToBeziers(SMEllipticalArcSegment arc, SMPoint arcStart)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Controls.SMEllipticalArcSegment.html">SMEllipticalArcSegment</a></td>
+        <td><span class="parametername">arc</span></td>
+        <td><p>The arc segment to convert</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><span class="parametername">arcStart</span></td>
+        <td><p>The starting point of the arc segment</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Controls.SMPathFigure.html">SMPathFigure</a></td>
+        <td><p>A figure containing one to four bezier segments representative of the original shape</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_ConvertEllipseToBeziers_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.ConvertEllipseToBeziers*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_ConvertEllipseToBeziers_System_Single_System_Single_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.ConvertEllipseToBeziers(System.Single,System.Single)">ConvertEllipseToBeziers(Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Convert an ellipse to a contiguous series of four bezier segments, representative of the original shape and traveling clockwise from (0, 0). Return value does not maintain spatial location of original shape.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SMPathFigure ConvertEllipseToBeziers(float ellipseWidth, float ellipseHeight)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">ellipseWidth</span></td>
+        <td><p>The width of the ellipse</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">ellipseHeight</span></td>
+        <td><p>The height of the ellipse</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Controls.SMPathFigure.html">SMPathFigure</a></td>
+        <td><p>A figure containing four bezier segments representative of the original shape</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_ConvertPathToBeziersAndLines_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.ConvertPathToBeziersAndLines*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_ConvertPathToBeziersAndLines_NationalInstruments_Controls_SMPathGeometry_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.ConvertPathToBeziersAndLines(NationalInstruments.Controls.SMPathGeometry)">ConvertPathToBeziersAndLines(SMPathGeometry)</h4>
+  <div class="markdown level1 summary"><p>Reconstructs a path geometry in place with nearly identical shape using only BezierSegments and LineSegments.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ConvertPathToBeziersAndLines(SMPathGeometry geometry)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Controls.SMPathGeometry.html">SMPathGeometry</a></td>
+        <td><span class="parametername">geometry</span></td>
+        <td><p>Path geometry to reconstruct</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if the geometry was modified. False otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_ConvertRectangleToFigure_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.ConvertRectangleToFigure*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_ConvertRectangleToFigure_NationalInstruments_Core_SMRect_System_Single_System_Single_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.ConvertRectangleToFigure(NationalInstruments.Core.SMRect,System.Single,System.Single)">ConvertRectangleToFigure(SMRect, Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Creates a series of segments representative of a rounded rectangle</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SMPathFigure ConvertRectangleToFigure(SMRect rectangle, float radiusX, float radiusY)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMRect.html">SMRect</a></td>
+        <td><span class="parametername">rectangle</span></td>
+        <td><p>The rectangle to create the segments out of</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">radiusX</span></td>
+        <td><p>The X radius of the rectangle&apos;s rounded corners</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">radiusY</span></td>
+        <td><p>The Y radius of the rectangle&apos;s rounded corners</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Controls.SMPathFigure.html">SMPathFigure</a></td>
+        <td><p>A figure containing a series of segments representative of the original rectangle</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_Displacement_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.Displacement*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_Displacement_NationalInstruments_Core_SMPoint_NationalInstruments_Core_SMPoint_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.Displacement(NationalInstruments.Core.SMPoint,NationalInstruments.Core.SMPoint)">Displacement(SMPoint, SMPoint)</h4>
+  <div class="markdown level1 summary"><p>Returns displacement vector between two points as an SMPoint object</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SMPoint Displacement(this SMPoint firstPoint, SMPoint secondPoint)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><span class="parametername">firstPoint</span></td>
+        <td><p>First point in displacement vector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><span class="parametername">secondPoint</span></td>
+        <td><p>First point in displacement vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><p>SMPoint object representing displacement between two points.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_Distance_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.Distance*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_Distance_NationalInstruments_Core_SMPoint_NationalInstruments_Core_SMPoint_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.Distance(NationalInstruments.Core.SMPoint,NationalInstruments.Core.SMPoint)">Distance(SMPoint, SMPoint)</h4>
+  <div class="markdown level1 summary"><p>Calculates the Euclidean distance between two SMPoints</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float Distance(this SMPoint firstPoint, SMPoint secondPoint)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><span class="parametername">firstPoint</span></td>
+        <td><p>First point</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><span class="parametername">secondPoint</span></td>
+        <td><p>Second point</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><p>Distance between points as a float</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_FlattenBezier_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.FlattenBezier*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_FlattenBezier_NationalInstruments_Controls_SMCubicBezierSegment_NationalInstruments_Core_SMPoint_System_Single_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.FlattenBezier(NationalInstruments.Controls.SMCubicBezierSegment,NationalInstruments.Core.SMPoint,System.Single)">FlattenBezier(SMCubicBezierSegment, SMPoint, Single)</h4>
+  <div class="markdown level1 summary"><p>Decomposes a bezier path segment into a series of contiguous line segments of which approximate the original up to a given accuracy parameter</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SMPoint[] FlattenBezier(this SMCubicBezierSegment bezier, SMPoint start, float approximateSegmentLength)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Controls.SMCubicBezierSegment.html">SMCubicBezierSegment</a></td>
+        <td><span class="parametername">bezier</span></td>
+        <td><p>The original bezier path segment to flatten</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><span class="parametername">start</span></td>
+        <td><p>The start point of the original bezier path segment</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">approximateSegmentLength</span></td>
+        <td><p>The accuracy parameter determining the length of the new approximating line segments</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a>[]</td>
+        <td><p>A collection of points which connect to make an approximate line chain of the original bezier path.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_FlattenBezier_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.FlattenBezier*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_FlattenBezier_NationalInstruments_Controls_SMQuadraticBezierSegment_NationalInstruments_Core_SMPoint_System_Single_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.FlattenBezier(NationalInstruments.Controls.SMQuadraticBezierSegment,NationalInstruments.Core.SMPoint,System.Single)">FlattenBezier(SMQuadraticBezierSegment, SMPoint, Single)</h4>
+  <div class="markdown level1 summary"><p>Decomposes a bezier path segment into a series of contiguous line segments of which approximate the original up to a given accuracy parameter</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SMPoint[] FlattenBezier(this SMQuadraticBezierSegment bezier, SMPoint start, float approximateSegmentLength)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Controls.SMQuadraticBezierSegment.html">SMQuadraticBezierSegment</a></td>
+        <td><span class="parametername">bezier</span></td>
+        <td><p>The original bezier path segment to flatten</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><span class="parametername">start</span></td>
+        <td><p>The start point of the original bezier path segment</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">approximateSegmentLength</span></td>
+        <td><p>The accuracy parameter determining the length of the new approximating line segments</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a>[]</td>
+        <td><p>A collection of points which connect to make an approximate line chain of the original bezier path.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_FlattenBezier_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.FlattenBezier*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_FlattenBezier_NationalInstruments_Core_SMPoint___System_Single_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.FlattenBezier(NationalInstruments.Core.SMPoint[],System.Single)">FlattenBezier(SMPoint[], Single)</h4>
+  <div class="markdown level1 summary"><p>Decomposes a bezier path segment into a series of contiguous line segments of which approximate the original up to a given accuracy parameter</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SMPoint[] FlattenBezier(SMPoint[] points, float approximateSegmentLength)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a>[]</td>
+        <td><span class="parametername">points</span></td>
+        <td><p>A point array (determined by &apos;points&apos;, which are the start, control, and end points, in that order) representing the control and boundary points of the bezier curve to flatten.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">approximateSegmentLength</span></td>
+        <td><p>The accuracy parameter determining the length of the new approximating line segments</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a>[]</td>
+        <td><p>A collection of points which connect to make an approximate line chain of the original bezier path.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Core_ModelGeometryHelpers_FlattenBezier_NationalInstruments_Core_SMPoint___System_Single__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If multiple lines form (essentially) one line, they are merged into a single segment, so segments may be much greater than approximateSegmentLength</p>
+</div>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_FlipAllSegmentsOfFigure_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.FlipAllSegmentsOfFigure*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_FlipAllSegmentsOfFigure_NationalInstruments_Controls_SMPathFigure_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.FlipAllSegmentsOfFigure(NationalInstruments.Controls.SMPathFigure)">FlipAllSegmentsOfFigure(SMPathFigure)</h4>
+  <div class="markdown level1 summary"><p>Modify each segment in a figure so that the figure is now travelling the opposite direction with the same shape</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void FlipAllSegmentsOfFigure(SMPathFigure figure)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Controls.SMPathFigure.html">SMPathFigure</a></td>
+        <td><span class="parametername">figure</span></td>
+        <td><p>The figure containing the segments to flip</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_GetBounds_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.GetBounds*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_GetBounds_NationalInstruments_Controls_SMPathGeometry_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.GetBounds(NationalInstruments.Controls.SMPathGeometry)">GetBounds(SMPathGeometry)</h4>
+  <div class="markdown level1 summary"><p>Find the minimal bounding box for a path geometry</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SMRect GetBounds(this SMPathGeometry geometry)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Controls.SMPathGeometry.html">SMPathGeometry</a></td>
+        <td><span class="parametername">geometry</span></td>
+        <td><p>The path geometry to find the bounding box for</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMRect.html">SMRect</a></td>
+        <td><p>The bounding box for the path geometry</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_GetBoundsOfPoints_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.GetBoundsOfPoints*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_GetBoundsOfPoints_NationalInstruments_Core_SMPoint___System_Int32_System_Int32_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.GetBoundsOfPoints(NationalInstruments.Core.SMPoint[],System.Int32,System.Int32)">GetBoundsOfPoints(SMPoint[], Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Get the minimal bounding rectangle containing a subset of a point array</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SMRect GetBoundsOfPoints(SMPoint[] pointBuffer, int startIndex, int endIndex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a>[]</td>
+        <td><span class="parametername">pointBuffer</span></td>
+        <td><p>The full collection of points</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">startIndex</span></td>
+        <td><p>The start index of the subarray to consider</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">endIndex</span></td>
+        <td><p>The end index of the subarray to consider</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMRect.html">SMRect</a></td>
+        <td><p>A minimal bounding rectangle containing the point subarray</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_GetClosestPointOnFigure_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.GetClosestPointOnFigure*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_GetClosestPointOnFigure_NationalInstruments_Controls_SMPathFigure_NationalInstruments_Core_SMPoint_System_Int32__" data-uid="NationalInstruments.Core.ModelGeometryHelpers.GetClosestPointOnFigure(NationalInstruments.Controls.SMPathFigure,NationalInstruments.Core.SMPoint,System.Int32@)">GetClosestPointOnFigure(SMPathFigure, SMPoint, out Int32)</h4>
+  <div class="markdown level1 summary"><p>Finds the closest segment control point on a figure to a given point</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SMPoint GetClosestPointOnFigure(SMPathFigure figure, SMPoint nearbyPoint, out int segmentIndex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Controls.SMPathFigure.html">SMPathFigure</a></td>
+        <td><span class="parametername">figure</span></td>
+        <td><p>The figure containing the collection of segments and control points.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><span class="parametername">nearbyPoint</span></td>
+        <td><p>The point to approximate to a segment&apos;s control point</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">segmentIndex</span></td>
+        <td><p>The index of the segment that contains the nearest control point</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><p>The control point within the figure that&apos;s closest to the given point</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_GetClosestTValueToPoint_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.GetClosestTValueToPoint*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_GetClosestTValueToPoint_NationalInstruments_Core_SMPoint___NationalInstruments_Core_SMPoint_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.GetClosestTValueToPoint(NationalInstruments.Core.SMPoint[],NationalInstruments.Core.SMPoint)">GetClosestTValueToPoint(SMPoint[], SMPoint)</h4>
+  <div class="markdown level1 summary"><p>For a curve parameterized on a (0, 1) range, determine the parametric value of the point on the curve.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float GetClosestTValueToPoint(SMPoint[] bezierControls, SMPoint point)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a>[]</td>
+        <td><span class="parametername">bezierControls</span></td>
+        <td><p>The control and boundary points of the parametrized curve</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The point to locate on the curve</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><p>A parametric value between 0 and 1 representing the position of the point on the curve</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Core_ModelGeometryHelpers_GetClosestTValueToPoint_NationalInstruments_Core_SMPoint___NationalInstruments_Core_SMPoint__examples">Examples</h5>
+  <p>A point at the start point would be 0, at the end would be 1, and in the middle would be 0.5</p>
+
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_GetEndOfSegment_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.GetEndOfSegment*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_GetEndOfSegment_NationalInstruments_Controls_SMPathSegment_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.GetEndOfSegment(NationalInstruments.Controls.SMPathSegment)">GetEndOfSegment(SMPathSegment)</h4>
+  <div class="markdown level1 summary"><p>Get the end point of a path segment</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SMPoint GetEndOfSegment(this SMPathSegment segment)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Controls.SMPathSegment.html">SMPathSegment</a></td>
+        <td><span class="parametername">segment</span></td>
+        <td><p>The segment with the end point</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><p>The end point of the segment</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_GetPointCount_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.GetPointCount*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_GetPointCount_NationalInstruments_Controls_SMPathSegment_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.GetPointCount(NationalInstruments.Controls.SMPathSegment)">GetPointCount(SMPathSegment)</h4>
+  <div class="markdown level1 summary"><p>Gets the number of points required to completely describe the shape of a segment</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int GetPointCount(this SMPathSegment segment)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Controls.SMPathSegment.html">SMPathSegment</a></td>
+        <td><span class="parametername">segment</span></td>
+        <td><p>The segment containing the points</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>The number of points required to completely describe the shape of a segment</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_GetPointOnBezier_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.GetPointOnBezier*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_GetPointOnBezier_NationalInstruments_Core_SMPoint___System_Single_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.GetPointOnBezier(NationalInstruments.Core.SMPoint[],System.Single)">GetPointOnBezier(SMPoint[], Single)</h4>
+  <div class="markdown level1 summary"><p>For a curve parametrized along a (0, 1) range, find the coordinate value of the point at a certain parametrized distance on the curve</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SMPoint GetPointOnBezier(SMPoint[] points, float parameter)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a>[]</td>
+        <td><span class="parametername">points</span></td>
+        <td><p>A point array representing the parametrized curve</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">parameter</span></td>
+        <td><p>The parametric value between 0 and 1 to locate the point at on the curve</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><p>The point located at the given parametric distance from the start of the curve</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_GetPointOnLine_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.GetPointOnLine*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_GetPointOnLine_NationalInstruments_Core_SMPoint_NationalInstruments_Core_SMPoint_System_Single_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.GetPointOnLine(NationalInstruments.Core.SMPoint,NationalInstruments.Core.SMPoint,System.Single)">GetPointOnLine(SMPoint, SMPoint, Single)</h4>
+  <div class="markdown level1 summary"><p>For a line segment defined by two given points and a (0, 1)-range length parameter, find the point that is located at a given parametric distance alone the segment</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SMPoint GetPointOnLine(SMPoint firstPoint, SMPoint secondPoint, float parameter)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><span class="parametername">firstPoint</span></td>
+        <td><p>The first point defining the segment</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><span class="parametername">secondPoint</span></td>
+        <td><p>The second point defining the segment</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">parameter</span></td>
+        <td><p>The parametric value between 0 and 1 to locate our point at</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><p>The point that is located a given parametric distance from start to finish along the segment</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_GetStartOfSegment_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.GetStartOfSegment*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_GetStartOfSegment_NationalInstruments_Controls_SMPathFigure_System_Int32_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.GetStartOfSegment(NationalInstruments.Controls.SMPathFigure,System.Int32)">GetStartOfSegment(SMPathFigure, Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets the starting point of the segment at a given position in the figure</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SMPoint GetStartOfSegment(this SMPathFigure figure, int segmentIndex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Controls.SMPathFigure.html">SMPathFigure</a></td>
+        <td><span class="parametername">figure</span></td>
+        <td><p>The figure containing the segment</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">segmentIndex</span></td>
+        <td><p>The index in the figure this segment is at</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><p>The starting point of the desired segment</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_Inflated_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.Inflated*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_Inflated_NationalInstruments_Core_SMRect_System_Double_System_Double_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.Inflated(NationalInstruments.Core.SMRect,System.Double,System.Double)">Inflated(SMRect, Double, Double)</h4>
+  <div class="markdown level1 summary"><p>Inflate the SMRect by a horizontal and vertical scale factor, such that the new SMRect gains <code data-dev-comment-type="paramref" class="paramref">horizontal</code> in width and <code data-dev-comment-type="paramref" class="paramref">vertical</code> in height, and the rectangle is translated to keep the center in place</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SMRect Inflated(this SMRect rectangle, double horizontal, double vertical)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMRect.html">SMRect</a></td>
+        <td><span class="parametername">rectangle</span></td>
+        <td><p>The original rectangle to inflate</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td><span class="parametername">horizontal</span></td>
+        <td><p>The horizontal inflation scale factor</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td><span class="parametername">vertical</span></td>
+        <td><p>The vertical inflation scale factor</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMRect.html">SMRect</a></td>
+        <td><p>A new inflated SMRect such that the coordinates are linearly translated to preserve the center, and the size in increased by 2x and 2y.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_Intersection_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.Intersection*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_Intersection_System_Collections_ObjectModel_Collection_NationalInstruments_Core_FlattenedSMGeometry__" data-uid="NationalInstruments.Core.ModelGeometryHelpers.Intersection(System.Collections.ObjectModel.Collection{NationalInstruments.Core.FlattenedSMGeometry})">Intersection(Collection&lt;FlattenedSMGeometry&gt;)</h4>
+  <div class="markdown level1 summary"><p>Creates a new geometry representing the shapewise intersection of the given collection of geometries.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Collection&lt;SMPathFigure&gt; Intersection(Collection&lt;FlattenedSMGeometry&gt; geometries)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.ObjectModel.Collection</span>&lt;<a class="xref" href="NationalInstruments.Core.FlattenedSMGeometry.html">FlattenedSMGeometry</a>&gt;</td>
+        <td><span class="parametername">geometries</span></td>
+        <td><p>The collection of geometries to intersect.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.ObjectModel.Collection</span>&lt;<a class="xref" href="NationalInstruments.Controls.SMPathFigure.html">SMPathFigure</a>&gt;</td>
+        <td><p>A new collection of path figures representing the shapewise intersection of the given geometries</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_Intersects_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.Intersects*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_Intersects_NationalInstruments_Core_SMPoint_NationalInstruments_Core_SMPoint_NationalInstruments_Core_SMPoint_NationalInstruments_Core_SMPoint_NationalInstruments_Core_SMPoint__" data-uid="NationalInstruments.Core.ModelGeometryHelpers.Intersects(NationalInstruments.Core.SMPoint,NationalInstruments.Core.SMPoint,NationalInstruments.Core.SMPoint,NationalInstruments.Core.SMPoint,NationalInstruments.Core.SMPoint@)">Intersects(SMPoint, SMPoint, SMPoint, SMPoint, ref SMPoint)</h4>
+  <div class="markdown level1 summary"><p>Finds the intersection of two path segments</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool Intersects(SMPoint line1Point1, SMPoint line1Point2, SMPoint line2Point1, SMPoint line2Point2, ref SMPoint intersection)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><span class="parametername">line1Point1</span></td>
+        <td><p>The starting point of the first line segment</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><span class="parametername">line1Point2</span></td>
+        <td><p>The end point of the first line segment</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><span class="parametername">line2Point1</span></td>
+        <td><p>The starting point of the second line segment</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><span class="parametername">line2Point2</span></td>
+        <td><p>The end point of the second line segment</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><span class="parametername">intersection</span></td>
+        <td><p>The point of intersection between the two line segments</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if the segments intersect, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_IsPointWithinManhattanDistance_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.IsPointWithinManhattanDistance*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_IsPointWithinManhattanDistance_NationalInstruments_Core_SMPoint_NationalInstruments_Core_SMPoint_System_Single_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.IsPointWithinManhattanDistance(NationalInstruments.Core.SMPoint,NationalInstruments.Core.SMPoint,System.Single)">IsPointWithinManhattanDistance(SMPoint, SMPoint, Single)</h4>
+  <div class="markdown level1 summary"><p>Calculate if two points are within a given Manhattan distance of eachother</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsPointWithinManhattanDistance(SMPoint firstPoint, SMPoint secondPoint, float distance)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><span class="parametername">firstPoint</span></td>
+        <td><p>The first point</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><span class="parametername">secondPoint</span></td>
+        <td><p>The second point</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">distance</span></td>
+        <td><p>The acceptable maximum Manhattan distance between the points</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if the points are within the given distance with regards to Manhattan distance</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Core_ModelGeometryHelpers_IsPointWithinManhattanDistance_NationalInstruments_Core_SMPoint_NationalInstruments_Core_SMPoint_System_Single__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The Manhattan distance between two points on the Cartesian plane is the sum of the horizontal and vertical displacement between the point.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_JoinFigures_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.JoinFigures*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_JoinFigures_NationalInstruments_Controls_SMPathFigure_NationalInstruments_Controls_SMPathFigure_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.JoinFigures(NationalInstruments.Controls.SMPathFigure,NationalInstruments.Controls.SMPathFigure)">JoinFigures(SMPathFigure, SMPathFigure)</h4>
+  <div class="markdown level1 summary"><p>Adds the segments of B to the end of A</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SMPathFigure JoinFigures(SMPathFigure figureA, SMPathFigure figureB)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Controls.SMPathFigure.html">SMPathFigure</a></td>
+        <td><span class="parametername">figureA</span></td>
+        <td><p>The first segments</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Controls.SMPathFigure.html">SMPathFigure</a></td>
+        <td><span class="parametername">figureB</span></td>
+        <td><p>The last segments</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Controls.SMPathFigure.html">SMPathFigure</a></td>
+        <td><p>A new figure</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_JoinFigures_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.JoinFigures*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_JoinFigures_System_Collections_ObjectModel_Collection_NationalInstruments_Controls_SMPathFigure__" data-uid="NationalInstruments.Core.ModelGeometryHelpers.JoinFigures(System.Collections.ObjectModel.Collection{NationalInstruments.Controls.SMPathFigure})">JoinFigures(Collection&lt;SMPathFigure&gt;)</h4>
+  <div class="markdown level1 summary"><p>If a figure isn&apos;t closed (aka, its start point is not equal to its end point, nothing to do with the is closed property) then find
+the closest figure to join it to. Repeat this process until all figures are closed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void JoinFigures(Collection&lt;SMPathFigure&gt; figures)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.ObjectModel.Collection</span>&lt;<a class="xref" href="NationalInstruments.Controls.SMPathFigure.html">SMPathFigure</a>&gt;</td>
+        <td><span class="parametername">figures</span></td>
+        <td><p>The list of figures to close</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_Mirror_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.Mirror*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_Mirror_NationalInstruments_Core_SMPoint_System_Boolean_System_Boolean_NationalInstruments_Core_SMPoint_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.Mirror(NationalInstruments.Core.SMPoint,System.Boolean,System.Boolean,NationalInstruments.Core.SMPoint)">Mirror(SMPoint, Boolean, Boolean, SMPoint)</h4>
+  <div class="markdown level1 summary"><p>Perform a mirror (horizontal, vertical, or both) about the specified point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SMPoint Mirror(this SMPoint point, bool horizontalMirror, bool verticalMirror, SMPoint origin)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The point to mirror.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">horizontalMirror</span></td>
+        <td><p>If true, do a horizonal mirror.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">verticalMirror</span></td>
+        <td><p>If true, do a vertical mirror.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><span class="parametername">origin</span></td>
+        <td><p>The point to flip about.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><p>The mirrored point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_Offseted_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.Offseted*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_Offseted_NationalInstruments_Core_SMPoint_System_Single_System_Single_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.Offseted(NationalInstruments.Core.SMPoint,System.Single,System.Single)">Offseted(SMPoint, Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Offset the point by the specified distances in the X and Y directions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SMPoint Offseted(this SMPoint point, float deltaX, float deltaY)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The point to offset.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">deltaX</span></td>
+        <td><p>The distance in the X direction to offset.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">deltaY</span></td>
+        <td><p>The distance in the Y direction to offset.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><p>The offset point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_PolarToCartesian_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.PolarToCartesian*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_PolarToCartesian_System_Single_System_Single_NationalInstruments_Core_SMPoint_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.PolarToCartesian(System.Single,System.Single,NationalInstruments.Core.SMPoint)">PolarToCartesian(Single, Single, SMPoint)</h4>
+  <div class="markdown level1 summary"><p>Converts a polar coordinate point to its Cartesian representation</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SMPoint PolarToCartesian(float angle, float radius, SMPoint newOrigin)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">angle</span></td>
+        <td><p>The angular coordinate of the point</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">radius</span></td>
+        <td><p>The radial coordinate of the point</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><span class="parametername">newOrigin</span></td>
+        <td><p>The origin of the new Cartesian point</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><p>A transformed Cartesian point in (x, y) coordinates</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_PossiblyJoinFigures_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.PossiblyJoinFigures*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_PossiblyJoinFigures_NationalInstruments_Controls_SMPathFigure_NationalInstruments_Controls_SMPathFigure_System_Func_NationalInstruments_Core_SMPoint_NationalInstruments_Core_SMPoint__System_Func_NationalInstruments_Core_SMPoint_NationalInstruments_Core_SMPoint__System_Double_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.PossiblyJoinFigures(NationalInstruments.Controls.SMPathFigure,NationalInstruments.Controls.SMPathFigure,System.Func{NationalInstruments.Core.SMPoint,NationalInstruments.Core.SMPoint},System.Func{NationalInstruments.Core.SMPoint,NationalInstruments.Core.SMPoint},System.Double)">PossiblyJoinFigures(SMPathFigure, SMPathFigure, Func&lt;SMPoint, SMPoint&gt;, Func&lt;SMPoint, SMPoint&gt;, Double)</h4>
+  <div class="markdown level1 summary"><p>Attempts to add the segments of B to A by applying given transforms</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SMPathFigure PossiblyJoinFigures(SMPathFigure figureA, SMPathFigure figureB, Func&lt;SMPoint, SMPoint&gt; transformA, Func&lt;SMPoint, SMPoint&gt; transformB, double endpointDistance)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Controls.SMPathFigure.html">SMPathFigure</a></td>
+        <td><span class="parametername">figureA</span></td>
+        <td><p>The first segments</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Controls.SMPathFigure.html">SMPathFigure</a></td>
+        <td><span class="parametername">figureB</span></td>
+        <td><p>The last segments</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a>, <a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a>&gt;</td>
+        <td><span class="parametername">transformA</span></td>
+        <td><p>The transform to perform on figureA</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a>, <a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a>&gt;</td>
+        <td><span class="parametername">transformB</span></td>
+        <td><p>the transform to perform on figureB</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td><span class="parametername">endpointDistance</span></td>
+        <td><p>Distance between segment endpoints</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Controls.SMPathFigure.html">SMPathFigure</a></td>
+        <td><p>Joined segments, or null if unsuccessful.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_Rotate_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.Rotate*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_Rotate_NationalInstruments_Core_SMPoint_System_Single_NationalInstruments_Core_SMPoint_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.Rotate(NationalInstruments.Core.SMPoint,System.Single,NationalInstruments.Core.SMPoint)">Rotate(SMPoint, Single, SMPoint)</h4>
+  <div class="markdown level1 summary"><p>Rotate the point about the origin by the specified angle.</p>
+<p>For example, if point = (2, 0), angleRadians = pi/2, origin = (1,0), then
+the rotated point is (1, 1).</p>
+<p>The angle increases in the counter-clockwise direction. Note this is different from what
+many source model geometries which have positive y pointing downward.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SMPoint Rotate(this SMPoint point, float angleRadians, SMPoint origin)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The point to rotate.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">angleRadians</span></td>
+        <td><p>Angle in radians</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><span class="parametername">origin</span></td>
+        <td><p>The point to rotate about.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><p>The rotated point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_RotatedAngle_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.RotatedAngle*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_RotatedAngle_NationalInstruments_Core_SMPoint_NationalInstruments_Core_SMPoint_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.RotatedAngle(NationalInstruments.Core.SMPoint,NationalInstruments.Core.SMPoint)">RotatedAngle(SMPoint, SMPoint)</h4>
+  <div class="markdown level1 summary"><p>Gets the rotated angle for the point about the origin, in radians.</p>
+<p>For example, if point = (1, 1), and origin = (1, 0), then the rotated angle is pi/2.</p>
+<p>The angle increases in the counter-clockwise direction. Note this is different from what
+many source model geometries which have positive y pointing downward.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float RotatedAngle(this SMPoint point, SMPoint origin)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The rotated point.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><span class="parametername">origin</span></td>
+        <td><p>The origin is it rotated about.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><p>The angle for the point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_SetEndOfSegment_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.SetEndOfSegment*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_SetEndOfSegment_NationalInstruments_Controls_SMPathSegment_NationalInstruments_Core_SMPoint_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.SetEndOfSegment(NationalInstruments.Controls.SMPathSegment,NationalInstruments.Core.SMPoint)">SetEndOfSegment(SMPathSegment, SMPoint)</h4>
+  <div class="markdown level1 summary"><p>Set the terminating point of a path segment</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetEndOfSegment(SMPathSegment segment, SMPoint point)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Controls.SMPathSegment.html">SMPathSegment</a></td>
+        <td><span class="parametername">segment</span></td>
+        <td><p>The path segment to set the end point for</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The point that the segment should terminate at</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_ShiftPoint_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.ShiftPoint*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_ShiftPoint_NationalInstruments_Core_SMPoint_System_Single_System_Single_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.ShiftPoint(NationalInstruments.Core.SMPoint,System.Single,System.Single)">ShiftPoint(SMPoint, Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Shift a SMPoint by a given (x,y) interval</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SMPoint ShiftPoint(this SMPoint point, float x, float y)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The original SMPoint point</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">x</span></td>
+        <td><p>The horizontal shift interval</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">y</span></td>
+        <td><p>The vertical shift interval</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><p>The original point shifted by an (x,y) interval</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_ShiftSegment_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.ShiftSegment*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_ShiftSegment_NationalInstruments_Controls_SMPathSegment_System_Single_System_Single_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.ShiftSegment(NationalInstruments.Controls.SMPathSegment,System.Single,System.Single)">ShiftSegment(SMPathSegment, Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Shift a segment by a given (x,y) interval</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ShiftSegment(this SMPathSegment segment, float x, float y)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Controls.SMPathSegment.html">SMPathSegment</a></td>
+        <td><span class="parametername">segment</span></td>
+        <td><p>The original SMPathSegment path segment</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">x</span></td>
+        <td><p>The horizontal shift interval</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">y</span></td>
+        <td><p>The vertical shift interval</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_Size_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.Size*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_Size_NationalInstruments_Core_SMRect_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.Size(NationalInstruments.Core.SMRect)">Size(SMRect)</h4>
+  <div class="markdown level1 summary"><p>Reduce the SMRect to an SMSize, preserving only the width and height parameters</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SMSize Size(this SMRect rectangle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMRect.html">SMRect</a></td>
+        <td><span class="parametername">rectangle</span></td>
+        <td><p>The SMRect to create an SMSize out of</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMSize.html">SMSize</a></td>
+        <td><p>An SMSize with width and height equal to the SMRect</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_Slope_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.Slope*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_Slope_NationalInstruments_Core_SMPoint_NationalInstruments_Core_SMPoint_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.Slope(NationalInstruments.Core.SMPoint,NationalInstruments.Core.SMPoint)">Slope(SMPoint, SMPoint)</h4>
+  <div class="markdown level1 summary"><p>Calculates the slope of a line connecting two points</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float Slope(SMPoint firstPoint, SMPoint secondPoint)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><span class="parametername">firstPoint</span></td>
+        <td><p>First point</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><span class="parametername">secondPoint</span></td>
+        <td><p>Second point</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><p>Slope of line connecting the points</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_SmoothBeziers_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.SmoothBeziers*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_SmoothBeziers_NationalInstruments_Core_SMPoint_NationalInstruments_Controls_SMCubicBezierSegment_NationalInstruments_Controls_SMCubicBezierSegment_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.SmoothBeziers(NationalInstruments.Core.SMPoint,NationalInstruments.Controls.SMCubicBezierSegment,NationalInstruments.Controls.SMCubicBezierSegment)">SmoothBeziers(SMPoint, SMCubicBezierSegment, SMCubicBezierSegment)</h4>
+  <div class="markdown level1 summary"><p>Smoothly connect 2 bezier segments by changing the 2 control points around their common point</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SmoothBeziers(SMPoint startPoint, SMCubicBezierSegment firstSegment, SMCubicBezierSegment secondSegment)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><span class="parametername">startPoint</span></td>
+        <td><p>The starting point of firstSegment</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Controls.SMCubicBezierSegment.html">SMCubicBezierSegment</a></td>
+        <td><span class="parametername">firstSegment</span></td>
+        <td><p>The first bezier segment to join to</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Controls.SMCubicBezierSegment.html">SMCubicBezierSegment</a></td>
+        <td><span class="parametername">secondSegment</span></td>
+        <td><p>The second bezier segment to join to</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_SmoothBeziers_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.SmoothBeziers*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_SmoothBeziers_NationalInstruments_Core_SMPoint_NationalInstruments_Controls_SMQuadraticBezierSegment_NationalInstruments_Controls_SMQuadraticBezierSegment_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.SmoothBeziers(NationalInstruments.Core.SMPoint,NationalInstruments.Controls.SMQuadraticBezierSegment,NationalInstruments.Controls.SMQuadraticBezierSegment)">SmoothBeziers(SMPoint, SMQuadraticBezierSegment, SMQuadraticBezierSegment)</h4>
+  <div class="markdown level1 summary"><p>Smoothly connect 2 bezier segments by changing the 2 control points around their common point</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SmoothBeziers(SMPoint startPoint, SMQuadraticBezierSegment firstSegment, SMQuadraticBezierSegment secondSegment)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><span class="parametername">startPoint</span></td>
+        <td><p>The starting point of firstSegment</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Controls.SMQuadraticBezierSegment.html">SMQuadraticBezierSegment</a></td>
+        <td><span class="parametername">firstSegment</span></td>
+        <td><p>The first bezier segment to join to</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Controls.SMQuadraticBezierSegment.html">SMQuadraticBezierSegment</a></td>
+        <td><span class="parametername">secondSegment</span></td>
+        <td><p>The second bezier segment to join to</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_Split_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.Split*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_Split_NationalInstruments_Controls_SMPathSegment_NationalInstruments_Core_SMPoint_NationalInstruments_Core_SMPoint_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.Split(NationalInstruments.Controls.SMPathSegment,NationalInstruments.Core.SMPoint,NationalInstruments.Core.SMPoint)">Split(SMPathSegment, SMPoint, SMPoint)</h4>
+  <div class="markdown level1 summary"><p>Split a path segment at a point into two segments which sum identically to the original</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SMPathSegment[] Split(SMPathSegment segment, SMPoint segmentStart, SMPoint splitLocation)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Controls.SMPathSegment.html">SMPathSegment</a></td>
+        <td><span class="parametername">segment</span></td>
+        <td><p>The original segment to split</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><span class="parametername">segmentStart</span></td>
+        <td><p>The start point of the original segment</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a></td>
+        <td><span class="parametername">splitLocation</span></td>
+        <td><p>The point on the original segment to split at</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Controls.SMPathSegment.html">SMPathSegment</a>[]</td>
+        <td><p>An array containing two new contiguous path segments which sum identically to the original</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_SplitBezierAtTValue_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.SplitBezierAtTValue*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_SplitBezierAtTValue_NationalInstruments_Core_SMPoint___System_Single_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.SplitBezierAtTValue(NationalInstruments.Core.SMPoint[],System.Single)">SplitBezierAtTValue(SMPoint[], Single)</h4>
+  <div class="markdown level1 summary"><p>Decompose a single bezier curve into two halves, which sum to the original</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SMPoint[] SplitBezierAtTValue(SMPoint[] bezierControls, float value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a>[]</td>
+        <td><span class="parametername">bezierControls</span></td>
+        <td><p>The control point array representing the original curve</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The (0, 1)-range parametric value of the splitting point on the curve</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.SMPoint.html">SMPoint</a>[]</td>
+        <td><p>A new point array, double the size of the original, representing two contiguous bezier segments which sum identically to the original</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_Subtraction_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.Subtraction*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_Subtraction_NationalInstruments_Core_FlattenedSMGeometry_System_Collections_ObjectModel_Collection_NationalInstruments_Core_FlattenedSMGeometry__" data-uid="NationalInstruments.Core.ModelGeometryHelpers.Subtraction(NationalInstruments.Core.FlattenedSMGeometry,System.Collections.ObjectModel.Collection{NationalInstruments.Core.FlattenedSMGeometry})">Subtraction(FlattenedSMGeometry, Collection&lt;FlattenedSMGeometry&gt;)</h4>
+  <div class="markdown level1 summary"><p>Subtract a collection of geometries from a primary geometry.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Collection&lt;SMPathFigure&gt; Subtraction(FlattenedSMGeometry geometry, Collection&lt;FlattenedSMGeometry&gt; otherGeometries)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.FlattenedSMGeometry.html">FlattenedSMGeometry</a></td>
+        <td><span class="parametername">geometry</span></td>
+        <td><p>The primary geometry to remain after subtraction.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.ObjectModel.Collection</span>&lt;<a class="xref" href="NationalInstruments.Core.FlattenedSMGeometry.html">FlattenedSMGeometry</a>&gt;</td>
+        <td><span class="parametername">otherGeometries</span></td>
+        <td><p>The other geometries to remove from the primary geometry.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.ObjectModel.Collection</span>&lt;<a class="xref" href="NationalInstruments.Controls.SMPathFigure.html">SMPathFigure</a>&gt;</td>
+        <td><p>A collection of path figures representing the result of subtracting the other geometries from the primary geometry.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_ModelGeometryHelpers_Union_" data-uid="NationalInstruments.Core.ModelGeometryHelpers.Union*"></a>
+  <h4 id="NationalInstruments_Core_ModelGeometryHelpers_Union_System_Collections_ObjectModel_Collection_NationalInstruments_Core_FlattenedSMGeometry__" data-uid="NationalInstruments.Core.ModelGeometryHelpers.Union(System.Collections.ObjectModel.Collection{NationalInstruments.Core.FlattenedSMGeometry})">Union(Collection&lt;FlattenedSMGeometry&gt;)</h4>
+  <div class="markdown level1 summary"><p>Creates a new geometry representing the shapewise union of the given collection of geometries.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Collection&lt;SMPathFigure&gt; Union(Collection&lt;FlattenedSMGeometry&gt; geometries)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.ObjectModel.Collection</span>&lt;<a class="xref" href="NationalInstruments.Core.FlattenedSMGeometry.html">FlattenedSMGeometry</a>&gt;</td>
+        <td><span class="parametername">geometries</span></td>
+        <td><p>The geometries to add together.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.ObjectModel.Collection</span>&lt;<a class="xref" href="NationalInstruments.Controls.SMPathFigure.html">SMPathFigure</a>&gt;</td>
+        <td><p>A collection of figures representing the shapewise sum of all the geometries.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

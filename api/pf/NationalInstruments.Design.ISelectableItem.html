@@ -1,0 +1,434 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface ISelectableItem
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface ISelectableItem
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.Design.ISelectableItem">
+  
+  
+  <h1 id="NationalInstruments_Design_ISelectableItem" data-uid="NationalInstruments.Design.ISelectableItem" class="text-break">Interface ISelectableItem
+  </h1>
+  <div class="markdown level0 summary"><p>Interface implemented by view models which are selectable in the designer</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="../core/NationalInstruments.Design.html">NationalInstruments.Design</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.PlatformFramework.dll</h6>
+  <h5 id="NationalInstruments_Design_ISelectableItem_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface ISelectableItem</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_Design_ISelectableItem_FavorChildSelection_" data-uid="NationalInstruments.Design.ISelectableItem.FavorChildSelection*"></a>
+  <h4 id="NationalInstruments_Design_ISelectableItem_FavorChildSelection" data-uid="NationalInstruments.Design.ISelectableItem.FavorChildSelection">FavorChildSelection</h4>
+  <div class="markdown level1 summary"><p>Gets whether child selection should be favored over node selection.  This is general
+true for things like diagrams which clicking on the diagram does not select the containing
+node and instead allows drag selection of children.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool FavorChildSelection { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ISelectableItem_ShowStandardSelectionAdorner_" data-uid="NationalInstruments.Design.ISelectableItem.ShowStandardSelectionAdorner*"></a>
+  <h4 id="NationalInstruments_Design_ISelectableItem_ShowStandardSelectionAdorner" data-uid="NationalInstruments.Design.ISelectableItem.ShowStandardSelectionAdorner">ShowStandardSelectionAdorner</h4>
+  <div class="markdown level1 summary"><p>This property should return true if you want you item to show the selection adorner (thin 
+box outline) when selected.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ShowStandardSelectionAdorner { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_Design_ISelectableItem_Deselect_" data-uid="NationalInstruments.Design.ISelectableItem.Deselect*"></a>
+  <h4 id="NationalInstruments_Design_ISelectableItem_Deselect_System_Boolean_System_Boolean_" data-uid="NationalInstruments.Design.ISelectableItem.Deselect(System.Boolean,System.Boolean)">Deselect(Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Called when the item is deselected so the item can perform any necessary cleanup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Deselect(bool wasHardSelected, bool deselectSoftSelectionOnly)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">wasHardSelected</span></td>
+        <td><p>true if the item was hard selected, false if it was soft selected</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">deselectSoftSelectionOnly</span></td>
+        <td><p>true to deselected the soft selected state only and remain hard selected</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ISelectableItem_GetHardSelectAdorners_" data-uid="NationalInstruments.Design.ISelectableItem.GetHardSelectAdorners*"></a>
+  <h4 id="NationalInstruments_Design_ISelectableItem_GetHardSelectAdorners" data-uid="NationalInstruments.Design.ISelectableItem.GetHardSelectAdorners">GetHardSelectAdorners()</h4>
+  <div class="markdown level1 summary"><p>Gets the additional adorners that should be displayed when the item is hard selected.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;Adorner&gt; GetHardSelectAdorners()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.documents.adorner">Adorner</a>&gt;</td>
+        <td><p>The additional adorners to be displayed when the item is hard selected.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Design_ISelectableItem_GetHardSelectAdorners_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method should only return the additional adorners that are not already included in
+the collection returned by GetSoftSelectAdorners(). When an item is hard selected all of
+the soft select adorners will transition to their hard selected appearance.</p>
+<p>Resize adorners are added via IResizableItem before GetHardSelectAdorners is called.
+Users must add any other default adorners that they want displayed to this list before returning. 
+Returning null or an empty collection means that no adorners will be displayed (excluding resize).</p>
+</div>
+  
+  
+  <a id="NationalInstruments_Design_ISelectableItem_GetSelectionVisual_" data-uid="NationalInstruments.Design.ISelectableItem.GetSelectionVisual*"></a>
+  <h4 id="NationalInstruments_Design_ISelectableItem_GetSelectionVisual" data-uid="NationalInstruments.Design.ISelectableItem.GetSelectionVisual">GetSelectionVisual()</h4>
+  <div class="markdown level1 summary"><p>Gets a custom visual to use when showing selection.  This is used instead of the standard
+selection rectangle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">PlatformVisual GetSelectionVisual()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><p>A custom selection visual, or null to show no visual (if ShowStandardSelectionAdorner is false)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ISelectableItem_GetSoftSelectAdorners_" data-uid="NationalInstruments.Design.ISelectableItem.GetSoftSelectAdorners*"></a>
+  <h4 id="NationalInstruments_Design_ISelectableItem_GetSoftSelectAdorners" data-uid="NationalInstruments.Design.ISelectableItem.GetSoftSelectAdorners">GetSoftSelectAdorners()</h4>
+  <div class="markdown level1 summary"><p>Gets the adorners that should be displayed when the item is soft selected.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;Adorner&gt; GetSoftSelectAdorners()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.windows.documents.adorner">Adorner</a>&gt;</td>
+        <td><p>A collection of adorners to be displayed when the item is soft selected.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Design_ISelectableItem_GetSoftSelectAdorners_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Resize adorners are added via IResizableItem before GetSoftSelectAdorners is called.
+Users must add any other default adorners that they want displayed to this list before returning. 
+Returning null or an empty collection means that no adorners will be displayed (excluding resize).</p>
+</div>
+  
+  
+  <a id="NationalInstruments_Design_ISelectableItem_IsSelectable_" data-uid="NationalInstruments.Design.ISelectableItem.IsSelectable*"></a>
+  <h4 id="NationalInstruments_Design_ISelectableItem_IsSelectable_NationalInstruments_Core_PlatformVisual_" data-uid="NationalInstruments.Design.ISelectableItem.IsSelectable(NationalInstruments.Core.PlatformVisual)">IsSelectable(PlatformVisual)</h4>
+  <div class="markdown level1 summary"><p>Whether we are selectable</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsSelectable(PlatformVisual source)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>Visual source of the selection interaction</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>true if the item can be selected from the specified source</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Design_ISelectableItem_Select_" data-uid="NationalInstruments.Design.ISelectableItem.Select*"></a>
+  <h4 id="NationalInstruments_Design_ISelectableItem_Select_NationalInstruments_Shell_DesignerSelectionMode_NationalInstruments_Core_PlatformVisual_NationalInstruments_SourceModel_ElementSelection_NationalInstruments_Core_UIPosition_" data-uid="NationalInstruments.Design.ISelectableItem.Select(NationalInstruments.Shell.DesignerSelectionMode,NationalInstruments.Core.PlatformVisual,NationalInstruments.SourceModel.ElementSelection,NationalInstruments.Core.UIPosition)">Select(DesignerSelectionMode, PlatformVisual, ElementSelection, UIPosition)</h4>
+  <div class="markdown level1 summary"><p>Called when the item is selected, either by itself or as part of a group of selected items.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool Select(DesignerSelectionMode mode, PlatformVisual source, ElementSelection elementSelection, UIPosition position)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Shell.DesignerSelectionMode.html">DesignerSelectionMode</a></td>
+        <td><span class="parametername">mode</span></td>
+        <td><p>Selection flags: Hard/Soft, Normal/Alternate (Right Click)</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.PlatformVisual.html">PlatformVisual</a></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>The element (or sub-element) that was selected.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.SourceModel.ElementSelection.html">ElementSelection</a></td>
+        <td><span class="parametername">elementSelection</span></td>
+        <td><p>The element selection.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../core/NationalInstruments.Core.UIPosition.html">UIPosition</a></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>The position.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>Whether the Element was selected</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_IsValueForNITypeForEditTime_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.IsValueForNITypeForEditTime(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataServices.html#NationalInstruments_DataTypes_DataServices_VerifyValueForNIType_System_Object_NationalInstruments_DataTypes_NIType_">DataServices.VerifyValueForNIType(Object, NIType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DataTypes.DataExtensions.html#NationalInstruments_DataTypes_DataExtensions_GetNIType_System_Object_">DataExtensions.GetNIType(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.ProjectExplorer.Design.Dumper.html#NationalInstruments_ProjectExplorer_Design_Dumper_Dump_System_Object_">Dumper.Dump(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

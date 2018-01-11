@@ -1,0 +1,2605 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Struct QualifiedName
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Struct QualifiedName
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NationalInstruments.Core.QualifiedName">
+  
+  
+  <h1 id="NationalInstruments_Core_QualifiedName" data-uid="NationalInstruments.Core.QualifiedName" class="text-break">Struct QualifiedName
+  </h1>
+  <div class="markdown level0 summary"><p>QualifiedName is a sealed class that represents the editor name for an
+Envoy or a path to an Envoy through IQualifiedScope.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a>&gt;</div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="../pf/NationalInstruments.Core.html">NationalInstruments.Core</a></h6>
+  <h6><strong>Assembly</strong>: NationalInstruments.Core.dll</h6>
+  <h5 id="NationalInstruments_Core_QualifiedName_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Serializable]
+public struct QualifiedName : IEquatable&lt;QualifiedName&gt;, IEquatable&lt;string&gt;</code></pre>
+  </div>
+  <h5 id="NationalInstruments_Core_QualifiedName_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>A QualifiedName is an ordered sequence of identifiers. An 
+identifier is a string. The first identifier of the sequence is the 
+head and the remaining parts are the tail. When a QualifiedName is used
+as a name for an object it generally has a single identifier. When a 
+QualifiedName is used as a path it can be relative or absolute. An 
+absolutely QualifiedName starts with an empty identifier.</p>
+<p>Two QualifiedNames can be compared for equality or for a partial
+match. The equality comparison is a straightforward equality comparison 
+between the sequence of identifiers in each name. A partial match 
+occurs when one QualifiedName contains a subset of the ordered 
+identifiers of another QualifiedName starting at the head of both 
+QualifiedNames.</p>
+<p>A QualifiedName can be converted back and forth between a string
+representation. The follow grammar describes the syntax of a 
+QualifiedName.
+</p>
+<p>.</p>
+<pre><code>QualifiedName := RootIdentifier? Identifiers
+RootIdentifier := Separator
+Identifiers := Identifier | QualifiedName Separator Identifier
+Identifier := ([a-zA-Z_]|\\[^a-zA-Z_])([a-zA-Z0-9_]|\\[^a-zA-Z0-9_])+
+Separator := &apos;:&apos; </code></pre>
+<p>The QualifiedName supports multiple identifiers since some named 
+objects can have multiple identifier names. An example is a Namespace. 
+A namespace is an object within a single name that has multiple 
+identifiers. In general most objects are given a QualifiedName with a 
+single identifier. The multiple identifiers of the QualifiedName come
+in handy when getting a relative or absolute path to an object based 
+on the objects name and the name of the relative scopes.</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName__ctor_" data-uid="NationalInstruments.Core.QualifiedName.#ctor*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName__ctor_System_Collections_Generic_IEnumerable_System_String__" data-uid="NationalInstruments.Core.QualifiedName.#ctor(System.Collections.Generic.IEnumerable{System.String})">QualifiedName(IEnumerable&lt;String&gt;)</h4>
+  <div class="markdown level1 summary"><p>Construct a qualified name from a enumeration of identifiers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public QualifiedName(IEnumerable&lt;string&gt; identifiers)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="parametername">identifiers</span></td>
+        <td><p>The array of identifiers that make up the qualified name.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName__ctor_" data-uid="NationalInstruments.Core.QualifiedName.#ctor*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName__ctor_System_Collections_Generic_IReadOnlyList_System_String__" data-uid="NationalInstruments.Core.QualifiedName.#ctor(System.Collections.Generic.IReadOnlyList{System.String})">QualifiedName(IReadOnlyList&lt;String&gt;)</h4>
+  <div class="markdown level1 summary"><p>Construct a qualified name from an IReadOnlyList</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public QualifiedName(IReadOnlyList&lt;string&gt; identifiers)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="parametername">identifiers</span></td>
+        <td><p>The array of identifiers that make up the qualified name.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName__ctor_" data-uid="NationalInstruments.Core.QualifiedName.#ctor*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName__ctor_System_String_" data-uid="NationalInstruments.Core.QualifiedName.#ctor(System.String)">QualifiedName(String)</h4>
+  <div class="markdown level1 summary"><p>Construct a qualified name with a single identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public QualifiedName(string identifier)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">identifier</span></td>
+        <td><p>The single identifier of the name.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName__ctor_" data-uid="NationalInstruments.Core.QualifiedName.#ctor*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName__ctor_System_String___" data-uid="NationalInstruments.Core.QualifiedName.#ctor(System.String[])">QualifiedName(String[])</h4>
+  <div class="markdown level1 summary"><p>Construct a qualified name from a params of identifiers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public QualifiedName(params string[] identifiers)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td><span class="parametername">identifiers</span></td>
+        <td><p>The array of identifiers that make up the qualified name.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="NationalInstruments_Core_QualifiedName_Empty" data-uid="NationalInstruments.Core.QualifiedName.Empty">Empty</h4>
+  <div class="markdown level1 summary"><p>Empty QualifiedName</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly QualifiedName Empty</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NationalInstruments_Core_QualifiedName_Root" data-uid="NationalInstruments.Core.QualifiedName.Root">Root</h4>
+  <div class="markdown level1 summary"><p>Root QualifiedName</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly QualifiedName Root</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_AutomaticallyResolveUp_" data-uid="NationalInstruments.Core.QualifiedName.AutomaticallyResolveUp*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_AutomaticallyResolveUp" data-uid="NationalInstruments.Core.QualifiedName.AutomaticallyResolveUp">AutomaticallyResolveUp</h4>
+  <div class="markdown level1 summary"><p>True if the linker should automatically resolve up the scope hierarchy when resolving this name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AutomaticallyResolveUp { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_BeginningSegment_" data-uid="NationalInstruments.Core.QualifiedName.BeginningSegment*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_BeginningSegment" data-uid="NationalInstruments.Core.QualifiedName.BeginningSegment">BeginningSegment</h4>
+  <div class="markdown level1 summary"><p>Gets the qualified name up until but not including the last identifier. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public QualifiedName BeginningSegment { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Core_QualifiedName_BeginningSegment_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the QualifiedName does not have at least two identifiers then the empty QualifiedName is returned.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_CanBeTrimmed_" data-uid="NationalInstruments.Core.QualifiedName.CanBeTrimmed*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_CanBeTrimmed" data-uid="NationalInstruments.Core.QualifiedName.CanBeTrimmed">CanBeTrimmed</h4>
+  <div class="markdown level1 summary"><p>Gets a boolean indicating if it can be trimmed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CanBeTrimmed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_EndingSegment_" data-uid="NationalInstruments.Core.QualifiedName.EndingSegment*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_EndingSegment" data-uid="NationalInstruments.Core.QualifiedName.EndingSegment">EndingSegment</h4>
+  <div class="markdown level1 summary"><p>Gets the remaining identifiers in the name as a QualifiedName.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public QualifiedName EndingSegment { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_First_" data-uid="NationalInstruments.Core.QualifiedName.First*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_First" data-uid="NationalInstruments.Core.QualifiedName.First">First</h4>
+  <div class="markdown level1 summary"><p>Gets the first identifier in the name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string First { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_FunctionNameEncoding_" data-uid="NationalInstruments.Core.QualifiedName.FunctionNameEncoding*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_FunctionNameEncoding" data-uid="NationalInstruments.Core.QualifiedName.FunctionNameEncoding">FunctionNameEncoding</h4>
+  <div class="markdown level1 summary"><p>Converts the <a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a> into a string for use as a function NIType.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string FunctionNameEncoding { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_Identifiers_" data-uid="NationalInstruments.Core.QualifiedName.Identifiers*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_Identifiers" data-uid="NationalInstruments.Core.QualifiedName.Identifiers">Identifiers</h4>
+  <div class="markdown level1 summary"><p>Gets an enumerable of the string parts of a qualified name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;string&gt; Identifiers { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_IsAbsolute_" data-uid="NationalInstruments.Core.QualifiedName.IsAbsolute*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_IsAbsolute" data-uid="NationalInstruments.Core.QualifiedName.IsAbsolute">IsAbsolute</h4>
+  <div class="markdown level1 summary"><p>Gets a boolean if the first part is the empty string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsAbsolute { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_IsAnonymous_" data-uid="NationalInstruments.Core.QualifiedName.IsAnonymous*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_IsAnonymous" data-uid="NationalInstruments.Core.QualifiedName.IsAnonymous">IsAnonymous</h4>
+  <div class="markdown level1 summary"><p>Return true if there is not a <a class="xref" href="NationalInstruments.Core.QualifiedName.html#NationalInstruments_Core_QualifiedName_Last">Last</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsAnonymous { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_IsEmpty_" data-uid="NationalInstruments.Core.QualifiedName.IsEmpty*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_IsEmpty" data-uid="NationalInstruments.Core.QualifiedName.IsEmpty">IsEmpty</h4>
+  <div class="markdown level1 summary"><p>Return true if there is not a <a class="xref" href="NationalInstruments.Core.QualifiedName.html#NationalInstruments_Core_QualifiedName_First">First</a> and not a <a class="xref" href="NationalInstruments.Core.QualifiedName.html#NationalInstruments_Core_QualifiedName_Last">Last</a> identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsEmpty { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_IsRoot_" data-uid="NationalInstruments.Core.QualifiedName.IsRoot*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_IsRoot" data-uid="NationalInstruments.Core.QualifiedName.IsRoot">IsRoot</h4>
+  <div class="markdown level1 summary"><p>Return true if this name is the Root QualifiedName</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsRoot { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_IsSingle_" data-uid="NationalInstruments.Core.QualifiedName.IsSingle*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_IsSingle" data-uid="NationalInstruments.Core.QualifiedName.IsSingle">IsSingle</h4>
+  <div class="markdown level1 summary"><p>Gets a boolean indicating that there is a single identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSingle { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_Last_" data-uid="NationalInstruments.Core.QualifiedName.Last*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_Last" data-uid="NationalInstruments.Core.QualifiedName.Last">Last</h4>
+  <div class="markdown level1 summary"><p>Returns the last identifier string</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Last { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_NumberOfIdentifiers_" data-uid="NationalInstruments.Core.QualifiedName.NumberOfIdentifiers*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_NumberOfIdentifiers" data-uid="NationalInstruments.Core.QualifiedName.NumberOfIdentifiers">NumberOfIdentifiers</h4>
+  <div class="markdown level1 summary"><p>The number of identifiers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int NumberOfIdentifiers { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_Separator_" data-uid="NationalInstruments.Core.QualifiedName.Separator*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_Separator" data-uid="NationalInstruments.Core.QualifiedName.Separator">Separator</h4>
+  <div class="markdown level1 summary"><p>The default separator character used to delimit segments of a QualifiedName when converted to a string</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static char Separator { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_UserVisibleSeparator_" data-uid="NationalInstruments.Core.QualifiedName.UserVisibleSeparator*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_UserVisibleSeparator" data-uid="NationalInstruments.Core.QualifiedName.UserVisibleSeparator">UserVisibleSeparator</h4>
+  <div class="markdown level1 summary"><p>The default separator character used to delimit segments of a QualifiedName when creating a user-visible QualifiedName string</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static char UserVisibleSeparator { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_Add_" data-uid="NationalInstruments.Core.QualifiedName.Add*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_Add_System_String_" data-uid="NationalInstruments.Core.QualifiedName.Add(System.String)">Add(String)</h4>
+  <div class="markdown level1 summary"><p>Combine a QualifiedName and a string to produce a new QualifiedName.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public QualifiedName Add(string last)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">last</span></td>
+        <td><p>The identifier to be appended to the end of the qualified name.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td><p>The new QualifiedName with a new last identifier.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_BeginsWith_" data-uid="NationalInstruments.Core.QualifiedName.BeginsWith*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_BeginsWith_NationalInstruments_Core_QualifiedName_" data-uid="NationalInstruments.Core.QualifiedName.BeginsWith(NationalInstruments.Core.QualifiedName)">BeginsWith(QualifiedName)</h4>
+  <div class="markdown level1 summary"><p>Returns true if &quot;this&quot; name begins with &quot;that&quot; name. 
+If &quot;this&quot; name only contains a <a class="xref" href="NationalInstruments.Core.QualifiedName.html#NationalInstruments_Core_QualifiedName_First">First</a>, then this function will return false
+even if the <a class="xref" href="NationalInstruments.Core.QualifiedName.html#NationalInstruments_Core_QualifiedName_First">First</a> matched the &quot;that&quot; name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool BeginsWith(QualifiedName that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td><span class="parametername">that</span></td>
+        <td><p>The qualified name to search for in &quot;this&quot; name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if there is a match</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_CreateAutomaticallyResolveUpQualifiedName_" data-uid="NationalInstruments.Core.QualifiedName.CreateAutomaticallyResolveUpQualifiedName*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_CreateAutomaticallyResolveUpQualifiedName_NationalInstruments_Core_QualifiedName_" data-uid="NationalInstruments.Core.QualifiedName.CreateAutomaticallyResolveUpQualifiedName(NationalInstruments.Core.QualifiedName)">CreateAutomaticallyResolveUpQualifiedName(QualifiedName)</h4>
+  <div class="markdown level1 summary"><p>Used to create a name that has <a class="xref" href="NationalInstruments.Core.QualifiedName.html#NationalInstruments_Core_QualifiedName_AutomaticallyResolveUp">AutomaticallyResolveUp</a> set to true.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static QualifiedName CreateAutomaticallyResolveUpQualifiedName(QualifiedName originalName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td><span class="parametername">originalName</span></td>
+        <td><p>The original name to copy</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td><p>The new name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_EncodeIdentifier_" data-uid="NationalInstruments.Core.QualifiedName.EncodeIdentifier*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_EncodeIdentifier_System_String_" data-uid="NationalInstruments.Core.QualifiedName.EncodeIdentifier(System.String)">EncodeIdentifier(String)</h4>
+  <div class="markdown level1 summary"><p>Escape special characters in qualified name parts</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string EncodeIdentifier(string identifier)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">identifier</span></td>
+        <td><p>The identifier</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The encoded identifier</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_EndsWith_" data-uid="NationalInstruments.Core.QualifiedName.EndsWith*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_EndsWith_NationalInstruments_Core_QualifiedName_" data-uid="NationalInstruments.Core.QualifiedName.EndsWith(NationalInstruments.Core.QualifiedName)">EndsWith(QualifiedName)</h4>
+  <div class="markdown level1 summary"><p>Returns true if &quot;this&quot; name ends with &quot;that&quot; name. 
+If &quot;this&quot; name only contains a <a class="xref" href="NationalInstruments.Core.QualifiedName.html#NationalInstruments_Core_QualifiedName_Last">Last</a>, then this function will return false
+even if the <a class="xref" href="NationalInstruments.Core.QualifiedName.html#NationalInstruments_Core_QualifiedName_Last">Last</a> matched the &quot;that&quot; name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EndsWith(QualifiedName that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td><span class="parametername">that</span></td>
+        <td><p>The qualified name to search for in &quot;this&quot; name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if there is a match</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_Equals_" data-uid="NationalInstruments.Core.QualifiedName.Equals*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_Equals_NationalInstruments_Core_QualifiedName_" data-uid="NationalInstruments.Core.QualifiedName.Equals(NationalInstruments.Core.QualifiedName)">Equals(QualifiedName)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(QualifiedName other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_Equals_" data-uid="NationalInstruments.Core.QualifiedName.Equals*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_Equals_System_Object_" data-uid="NationalInstruments.Core.QualifiedName.Equals(System.Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.ValueType.Equals(System.Object)</span></div>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_Equals_" data-uid="NationalInstruments.Core.QualifiedName.Equals*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_Equals_System_String_" data-uid="NationalInstruments.Core.QualifiedName.Equals(System.String)">Equals(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(string other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_EqualsIgnoreResolveUp_" data-uid="NationalInstruments.Core.QualifiedName.EqualsIgnoreResolveUp*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_EqualsIgnoreResolveUp_NationalInstruments_Core_QualifiedName_" data-uid="NationalInstruments.Core.QualifiedName.EqualsIgnoreResolveUp(NationalInstruments.Core.QualifiedName)">EqualsIgnoreResolveUp(QualifiedName)</h4>
+  <div class="markdown level1 summary"><p>Returns true if &quot;this&quot; name is equal to &quot;that&quot; if ignoring either name&apos;s AutomaticallyResolveUp property</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EqualsIgnoreResolveUp(QualifiedName that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td><span class="parametername">that</span></td>
+        <td><p>The name to test against</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True is the names are equal</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_GetCommonBeginningSegment_" data-uid="NationalInstruments.Core.QualifiedName.GetCommonBeginningSegment*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_GetCommonBeginningSegment_NationalInstruments_Core_QualifiedName_" data-uid="NationalInstruments.Core.QualifiedName.GetCommonBeginningSegment(NationalInstruments.Core.QualifiedName)">GetCommonBeginningSegment(QualifiedName)</h4>
+  <div class="markdown level1 summary"><p>Computes the beginning segments in common between &quot;this&quot; name and &quot;that&quot; name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public QualifiedName GetCommonBeginningSegment(QualifiedName that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td><span class="parametername">that</span></td>
+        <td><p>The name to compare</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td><p>The initial segments in common between the two names</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Core_QualifiedName_GetCommonBeginningSegment_NationalInstruments_Core_QualifiedName__examples">Examples</h5>
+  <p>Example: Given a &quot;this&quot; name of &quot;a<span class="emoji" shortcode="b">🅱️</span>c:d&quot; and &quot;that&quot; name of &quot;a<span class="emoji" shortcode="b">🅱️</span>e&quot;, the trimmed name will be &quot;a:b&quot;</p>
+
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_GetHashCode_" data-uid="NationalInstruments.Core.QualifiedName.GetHashCode*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_GetHashCode" data-uid="NationalInstruments.Core.QualifiedName.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"><p>Gets the hash code of the QualifiedName.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>The hash code.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.ValueType.GetHashCode()</span></div>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_IsEscapableChar_" data-uid="NationalInstruments.Core.QualifiedName.IsEscapableChar*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_IsEscapableChar_System_Int32_System_Boolean_" data-uid="NationalInstruments.Core.QualifiedName.IsEscapableChar(System.Int32,System.Boolean)">IsEscapableChar(Int32, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Checks if the character must be escaped.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsEscapableChar(int c, bool first)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">c</span></td>
+        <td><p>The char</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">first</span></td>
+        <td><p>Indicates whether the character is the first character in the identifier.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if the char is escapable</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_IsIdentifierChar_" data-uid="NationalInstruments.Core.QualifiedName.IsIdentifierChar*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_IsIdentifierChar_System_Int32_System_Boolean_" data-uid="NationalInstruments.Core.QualifiedName.IsIdentifierChar(System.Int32,System.Boolean)">IsIdentifierChar(Int32, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Checks if the character is a character for an identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsIdentifierChar(int c, bool first)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">c</span></td>
+        <td><p>A character to be used in an identifier.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">first</span></td>
+        <td><p>Indicates whether the character is the first character in the identifier.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if the character is a identifier character that doesn&apos;t need to be escaped and false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_IsNonFirstIdentifierChar_" data-uid="NationalInstruments.Core.QualifiedName.IsNonFirstIdentifierChar*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_IsNonFirstIdentifierChar_System_Int32_" data-uid="NationalInstruments.Core.QualifiedName.IsNonFirstIdentifierChar(System.Int32)">IsNonFirstIdentifierChar(Int32)</h4>
+  <div class="markdown level1 summary"><p>Checks if the character is a character for a non-first identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsNonFirstIdentifierChar(int c)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">c</span></td>
+        <td><p>A character to be used in an identifier.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if the character is a identifier character that doesn&apos;t need to be escaped and false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_Join_" data-uid="NationalInstruments.Core.QualifiedName.Join*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_Join_NationalInstruments_Core_QualifiedName___" data-uid="NationalInstruments.Core.QualifiedName.Join(NationalInstruments.Core.QualifiedName[])">Join(QualifiedName[])</h4>
+  <div class="markdown level1 summary"><p>Joins multiple QualifiedNames into a single QualifiedName.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static QualifiedName Join(params QualifiedName[] names)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a>[]</td>
+        <td><span class="parametername">names</span></td>
+        <td><p>The names to be joined</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td><p>A single qualified name.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Core_QualifiedName_Join_NationalInstruments_Core_QualifiedName____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Empty qualified names will be ignored when creating the new name.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_JoinWhileRemoving_" data-uid="NationalInstruments.Core.QualifiedName.JoinWhileRemoving*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_JoinWhileRemoving_NationalInstruments_Core_QualifiedName_NationalInstruments_Core_QualifiedName_" data-uid="NationalInstruments.Core.QualifiedName.JoinWhileRemoving(NationalInstruments.Core.QualifiedName,NationalInstruments.Core.QualifiedName)">JoinWhileRemoving(QualifiedName, QualifiedName)</h4>
+  <div class="markdown level1 summary"><p>Joins two qualified names while removing the first identifier from the second name.
+Does the equivalent of QualifiedName.<a class="xref" href="NationalInstruments.Core.QualifiedName.html#NationalInstruments_Core_QualifiedName_Join_NationalInstruments_Core_QualifiedName___">Join(QualifiedName[])</a>(new QualifiedName[2] { first, second.RemoveIdentifiers(0, 1) });
+Contains some duplicated code from <a class="xref" href="NationalInstruments.Core.QualifiedName.html#NationalInstruments_Core_QualifiedName_Join_NationalInstruments_Core_QualifiedName___">Join(QualifiedName[])</a>, but this method exists for speed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static QualifiedName JoinWhileRemoving(QualifiedName first, QualifiedName second)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td><span class="parametername">first</span></td>
+        <td><p>The first name to be joined</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td><span class="parametername">second</span></td>
+        <td><p>The second name to be joined, which will have its first identifier removed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td><p>A single qualified name.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_MakeRelativeQualifiedName_" data-uid="NationalInstruments.Core.QualifiedName.MakeRelativeQualifiedName*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_MakeRelativeQualifiedName_NationalInstruments_Core_QualifiedName_NationalInstruments_Core_QualifiedName_" data-uid="NationalInstruments.Core.QualifiedName.MakeRelativeQualifiedName(NationalInstruments.Core.QualifiedName,NationalInstruments.Core.QualifiedName)">MakeRelativeQualifiedName(QualifiedName, QualifiedName)</h4>
+  <div class="markdown level1 summary"><p>Make a relative QualifiedName to the targetName from the beginningName.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static QualifiedName MakeRelativeQualifiedName(QualifiedName beginningName, QualifiedName targetName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td><span class="parametername">beginningName</span></td>
+        <td><p>The target name should be made relative to this name</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td><span class="parametername">targetName</span></td>
+        <td><p>The name for which the relative QualifiedName is being requested.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td><p>The relative QualifiedName.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_MakeTypeName_" data-uid="NationalInstruments.Core.QualifiedName.MakeTypeName*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_MakeTypeName_NationalInstruments_Core_QualifiedName_" data-uid="NationalInstruments.Core.QualifiedName.MakeTypeName(NationalInstruments.Core.QualifiedName)">MakeTypeName(QualifiedName)</h4>
+  <div class="markdown level1 summary"><p>A static method to convert a QualifiedName to a string formatted as a System.Type.FullName
+The QualifiedName will be of one of the forms: 
+&quot;elem1:elem2:elem3&quot;
+&quot;:elem1:elem2:elem3&quot;
+The equivalent type name will be:
+&quot;elem1.elem2.elem3&quot;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string MakeTypeName(QualifiedName name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>QualifiedName to convert</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>A string formatted as a system.Type.FullName, or null upon failure</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_MatchesAllOrBeginningSegmentOf_" data-uid="NationalInstruments.Core.QualifiedName.MatchesAllOrBeginningSegmentOf*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_MatchesAllOrBeginningSegmentOf_NationalInstruments_Core_QualifiedName_" data-uid="NationalInstruments.Core.QualifiedName.MatchesAllOrBeginningSegmentOf(NationalInstruments.Core.QualifiedName)">MatchesAllOrBeginningSegmentOf(QualifiedName)</h4>
+  <div class="markdown level1 summary"><p>Returns true if &quot;this&quot; name begins with or is equal to &quot;that&quot; name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool MatchesAllOrBeginningSegmentOf(QualifiedName that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td><span class="parametername">that</span></td>
+        <td><p>The qualified name to search for in &quot;this&quot; name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if there is a match</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Core_QualifiedName_MatchesAllOrBeginningSegmentOf_NationalInstruments_Core_QualifiedName__examples">Examples</h5>
+  <p>Example: Returns true for a &quot;this&quot; name &quot;a<span class="emoji" shortcode="b">🅱️</span>c&quot; when the &quot;that&quot; name is &quot;a&quot;, &quot;a:b&quot;, or &quot;a<span class="emoji" shortcode="b">🅱️</span>c&quot;</p>
+
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_MatchesAllOrEndingSegmentOf_" data-uid="NationalInstruments.Core.QualifiedName.MatchesAllOrEndingSegmentOf*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_MatchesAllOrEndingSegmentOf_NationalInstruments_Core_QualifiedName_" data-uid="NationalInstruments.Core.QualifiedName.MatchesAllOrEndingSegmentOf(NationalInstruments.Core.QualifiedName)">MatchesAllOrEndingSegmentOf(QualifiedName)</h4>
+  <div class="markdown level1 summary"><p>Returns true if &quot;that&quot; name ends with or is equal to &quot;this&quot; name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool MatchesAllOrEndingSegmentOf(QualifiedName that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td><span class="parametername">that</span></td>
+        <td><p>The qualified name to search for &quot;this&quot; name.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if there is a match</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Core_QualifiedName_MatchesAllOrEndingSegmentOf_NationalInstruments_Core_QualifiedName__examples">Examples</h5>
+  <p>Example: Returns true for a &quot;that&quot; name &quot;a<span class="emoji" shortcode="b">🅱️</span>c&quot; when &quot;this&quot; name is &quot;c&quot;, &quot;b:c&quot;, or &quot;a<span class="emoji" shortcode="b">🅱️</span>c&quot;</p>
+
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_MatchFromFirst_" data-uid="NationalInstruments.Core.QualifiedName.MatchFromFirst*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_MatchFromFirst_NationalInstruments_Core_QualifiedName_" data-uid="NationalInstruments.Core.QualifiedName.MatchFromFirst(NationalInstruments.Core.QualifiedName)">MatchFromFirst(QualifiedName)</h4>
+  <div class="markdown level1 summary"><p>Get the number of identifiers that match starting from the first identifier. Empty identifiers never match.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MatchFromFirst(QualifiedName that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td><span class="parametername">that</span></td>
+        <td><p>The other qualified name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>The number of matching identifiers</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_MatchFromIndex_" data-uid="NationalInstruments.Core.QualifiedName.MatchFromIndex*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_MatchFromIndex_System_Int32_NationalInstruments_Core_QualifiedName_" data-uid="NationalInstruments.Core.QualifiedName.MatchFromIndex(System.Int32,NationalInstruments.Core.QualifiedName)">MatchFromIndex(Int32, QualifiedName)</h4>
+  <div class="markdown level1 summary"><p>Get the number of identifiers that match another name
+starting from the identifier at the specified index of this name 
+and starting from the first identifier of the other name,
+traversing in the direction of first to last.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MatchFromIndex(int index, QualifiedName that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>An index into this name where matching will begin</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td><span class="parametername">that</span></td>
+        <td><p>The other qualified name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>The number of matching identifiers</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Core_QualifiedName_MatchFromIndex_System_Int32_NationalInstruments_Core_QualifiedName__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Empty identifiers never match.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_MatchFromLast_" data-uid="NationalInstruments.Core.QualifiedName.MatchFromLast*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_MatchFromLast_NationalInstruments_Core_QualifiedName_" data-uid="NationalInstruments.Core.QualifiedName.MatchFromLast(NationalInstruments.Core.QualifiedName)">MatchFromLast(QualifiedName)</h4>
+  <div class="markdown level1 summary"><p>Returns the number of identifiers that match starting from the last identifier. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MatchFromLast(QualifiedName that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td><span class="parametername">that</span></td>
+        <td><p>The qualified name to search for in &quot;this&quot; name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>The number of matching identifiers</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Core_QualifiedName_MatchFromLast_NationalInstruments_Core_QualifiedName__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Empty identifiers never match.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_Parse_" data-uid="NationalInstruments.Core.QualifiedName.Parse*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_Parse_System_String_" data-uid="NationalInstruments.Core.QualifiedName.Parse(System.String)">Parse(String)</h4>
+  <div class="markdown level1 summary"><p>Parse a string into a QualifiedName.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static QualifiedName Parse(string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">text</span></td>
+        <td><p>The text to be parsed into a QualifiedName.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td><p>The QualifiedName for the text.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.InvalidQualifiedNameException.html">InvalidQualifiedNameException</a></td>
+        <td><p>This exception
+is thrown if an escape sequence is anything other than &quot;\&quot;, 
+&quot;.&quot; or &quot;:&quot;.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_RemoveIdentifiers_" data-uid="NationalInstruments.Core.QualifiedName.RemoveIdentifiers*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_RemoveIdentifiers_System_Int32_System_Int32_" data-uid="NationalInstruments.Core.QualifiedName.RemoveIdentifiers(System.Int32,System.Int32)">RemoveIdentifiers(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Removes identifiers from the QualifiedName at the specified index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public QualifiedName RemoveIdentifiers(int startIndex, int count)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">startIndex</span></td>
+        <td><p>The starting index from which identifiers should be removed</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">count</span></td>
+        <td><p>The number of identifiers to remove from the name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td><p>A new QualifiedName with the specified identifiers removed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_ReplaceIdentifier_" data-uid="NationalInstruments.Core.QualifiedName.ReplaceIdentifier*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_ReplaceIdentifier_System_String_System_Int32_" data-uid="NationalInstruments.Core.QualifiedName.ReplaceIdentifier(System.String,System.Int32)">ReplaceIdentifier(String, Int32)</h4>
+  <div class="markdown level1 summary"><p>Replaces the identifier at the specified index with the new identifier name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public QualifiedName ReplaceIdentifier(string newIdentifierName, int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">newIdentifierName</span></td>
+        <td><p>The new name to use for the identifier at the specified index</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>The index of the identifier to update</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td><p>A new QualifiedName with the updated identifier name.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_Split_" data-uid="NationalInstruments.Core.QualifiedName.Split*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_Split" data-uid="NationalInstruments.Core.QualifiedName.Split">Split()</h4>
+  <div class="markdown level1 summary"><p>Split a Qualified name into a sequence of qualified names each having a single identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;QualifiedName&gt; Split()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a>&gt;</td>
+        <td><p>An enumerable of QualifiedNames.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_TestEquality_" data-uid="NationalInstruments.Core.QualifiedName.TestEquality*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_TestEquality_NationalInstruments_Core_QualifiedName_System_StringComparison_" data-uid="NationalInstruments.Core.QualifiedName.TestEquality(NationalInstruments.Core.QualifiedName,System.StringComparison)">TestEquality(QualifiedName, StringComparison)</h4>
+  <div class="markdown level1 summary"><p>Tests this qualified name for equality with the specified name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TestEquality(QualifiedName other, StringComparison comparison)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td><span class="parametername">other</span></td>
+        <td><p>The name to test against</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.stringcomparison">StringComparison</a></td>
+        <td><span class="parametername">comparison</span></td>
+        <td><p>String comparison mode.  Usually qualified names use StringComparison.Ordinal</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>true if the names are equal</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_ToEncodedString_" data-uid="NationalInstruments.Core.QualifiedName.ToEncodedString*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_ToEncodedString" data-uid="NationalInstruments.Core.QualifiedName.ToEncodedString">ToEncodedString()</h4>
+  <div class="markdown level1 summary"><p>Converts the QualifiedName to an encoded strings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Pure]
+public string ToEncodedString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The encoded string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_ToString_" data-uid="NationalInstruments.Core.QualifiedName.ToString*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_ToString" data-uid="NationalInstruments.Core.QualifiedName.ToString">ToString()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.ValueType.ToString()</span></div>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_ToString_" data-uid="NationalInstruments.Core.QualifiedName.ToString*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_ToString_System_Char_" data-uid="NationalInstruments.Core.QualifiedName.ToString(System.Char)">ToString(Char)</h4>
+  <div class="markdown level1 summary"><p>Generate a delimited string that represents the QualifiedName.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ToString(char separator)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a></td>
+        <td><span class="parametername">separator</span></td>
+        <td><p>The character that should be used to separate identifiers in the name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The delimited string for the QualifiedName.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Core_QualifiedName_ToString_System_Char__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Use <a class="xref" href="NationalInstruments.Core.QualifiedName.html#NationalInstruments_Core_QualifiedName_ToEncodedString">ToEncodedString()</a> instead if you plan to serialize the name and parse via <a class="xref" href="NationalInstruments.Core.QualifiedName.html#NationalInstruments_Core_QualifiedName_Parse_System_String_">Parse(String)</a>.</p>
+</div>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_ToUserVisibleString_" data-uid="NationalInstruments.Core.QualifiedName.ToUserVisibleString*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_ToUserVisibleString" data-uid="NationalInstruments.Core.QualifiedName.ToUserVisibleString">ToUserVisibleString()</h4>
+  <div class="markdown level1 summary"><p>Generate a user-facing delimited string that represents the QualifiedName.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ToUserVisibleString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The user-facing delimited string for the QualifiedName.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_TrimBeginningSegment_" data-uid="NationalInstruments.Core.QualifiedName.TrimBeginningSegment*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_TrimBeginningSegment_NationalInstruments_Core_QualifiedName_" data-uid="NationalInstruments.Core.QualifiedName.TrimBeginningSegment(NationalInstruments.Core.QualifiedName)">TrimBeginningSegment(QualifiedName)</h4>
+  <div class="markdown level1 summary"><p>Trim the beginning off of this qualified name using another name. If the
+beginning cannot be trimmed by the name then an exception is thrown.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public QualifiedName TrimBeginningSegment(QualifiedName name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name to trim from the beginning of this qualified
+name.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td><p>A trimmed qualified name.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td><p>The <code data-dev-comment-type="paramref" class="paramref">name</code> 
+could not be trimmed from the front.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_TrimCommonBeginningSegment_" data-uid="NationalInstruments.Core.QualifiedName.TrimCommonBeginningSegment*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_TrimCommonBeginningSegment_NationalInstruments_Core_QualifiedName_" data-uid="NationalInstruments.Core.QualifiedName.TrimCommonBeginningSegment(NationalInstruments.Core.QualifiedName)">TrimCommonBeginningSegment(QualifiedName)</h4>
+  <div class="markdown level1 summary"><p>Trim &quot;that&quot; name from the beginning of &quot;this&quot; name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public QualifiedName TrimCommonBeginningSegment(QualifiedName that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td><span class="parametername">that</span></td>
+        <td><p>The name to trim</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td><p>The trimmed name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="NationalInstruments_Core_QualifiedName_TrimCommonBeginningSegment_NationalInstruments_Core_QualifiedName__examples">Examples</h5>
+  <p>Example: Given a &quot;this&quot; name of &quot;a<span class="emoji" shortcode="b">🅱️</span>c:d&quot; and &quot;that&quot; name of &quot;a:b&quot;, the trimmed name will be &quot;c:d&quot;</p>
+
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_TryTrimBeginningSegment_" data-uid="NationalInstruments.Core.QualifiedName.TryTrimBeginningSegment*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_TryTrimBeginningSegment_NationalInstruments_Core_QualifiedName_NationalInstruments_Core_QualifiedName__" data-uid="NationalInstruments.Core.QualifiedName.TryTrimBeginningSegment(NationalInstruments.Core.QualifiedName,NationalInstruments.Core.QualifiedName@)">TryTrimBeginningSegment(QualifiedName, out QualifiedName)</h4>
+  <div class="markdown level1 summary"><p>Tries to trim a matching QualifiedName from beginning of this 
+QualifiedName and returns the remaining part of this QualifiedName.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryTrimBeginningSegment(QualifiedName name, out QualifiedName ending)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The QualifiedName that possibly matches the start of this 
+QualifiedName.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td><span class="parametername">ending</span></td>
+        <td><p>The ending of the QualifiedName not matched
+by <code data-dev-comment-type="paramref" class="paramref">name</code></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if the name was trimmed and false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_ValidateNameForJoin_" data-uid="NationalInstruments.Core.QualifiedName.ValidateNameForJoin*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_ValidateNameForJoin_NationalInstruments_Core_QualifiedName_System_Boolean_" data-uid="NationalInstruments.Core.QualifiedName.ValidateNameForJoin(NationalInstruments.Core.QualifiedName,System.Boolean)">ValidateNameForJoin(QualifiedName, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Verify that <code data-dev-comment-type="paramref" class="paramref">name</code> is valid for joining to another <a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ValidateNameForJoin(QualifiedName name, bool allowRoot)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name to validate.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">allowRoot</span></td>
+        <td><p>Whether <code data-dev-comment-type="paramref" class="paramref">name</code> can be root. This should be false if <code data-dev-comment-type="paramref" class="paramref">name</code> will be joined with a name that is already root.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="operators">Operators
+  </h3>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_op_Equality_" data-uid="NationalInstruments.Core.QualifiedName.op_Equality*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_op_Equality_NationalInstruments_Core_QualifiedName_NationalInstruments_Core_QualifiedName_" data-uid="NationalInstruments.Core.QualifiedName.op_Equality(NationalInstruments.Core.QualifiedName,NationalInstruments.Core.QualifiedName)">Equality(QualifiedName, QualifiedName)</h4>
+  <div class="markdown level1 summary"><p>Equality operator.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(QualifiedName left, QualifiedName right)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td><span class="parametername">left</span></td>
+        <td><p>The left operand.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td><span class="parametername">right</span></td>
+        <td><p>The right operand.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if they are equal.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NationalInstruments_Core_QualifiedName_op_Inequality_" data-uid="NationalInstruments.Core.QualifiedName.op_Inequality*"></a>
+  <h4 id="NationalInstruments_Core_QualifiedName_op_Inequality_NationalInstruments_Core_QualifiedName_NationalInstruments_Core_QualifiedName_" data-uid="NationalInstruments.Core.QualifiedName.op_Inequality(NationalInstruments.Core.QualifiedName,NationalInstruments.Core.QualifiedName)">Inequality(QualifiedName, QualifiedName)</h4>
+  <div class="markdown level1 summary"><p>Not equals operator.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(QualifiedName left, QualifiedName right)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td><span class="parametername">left</span></td>
+        <td><p>The left operand.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NationalInstruments.Core.QualifiedName.html">QualifiedName</a></td>
+        <td><span class="parametername">right</span></td>
+        <td><p>The right operand.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if they are not equal.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_ToEnumerable__1___0_">EnumerableHelper.ToEnumerable&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.EnumerableHelper.html#NationalInstruments_EnumerableHelper_Repeat__1___0_System_Int32_">EnumerableHelper.Repeat&lt;T&gt;(T, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyNothing__1___0_">Verifier.VerifyNothing&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Func___0_System_Boolean__System_Action_System_String__System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Func___0_System_Boolean__System_Action_System_String_System_String__System_String_System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Boolean_System_Action_System_String__System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Boolean, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyDebugOnly__1___0_System_Boolean_System_Action_System_String_System_String__System_String_System_String_">Verifier.VerifyDebugOnly&lt;T&gt;(T, Boolean, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Func___0_System_Boolean__System_Action_System_String__System_String_">Verifier.Verify&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Func___0_System_Boolean__System_Action_System_String_System_String__System_String_System_String_">Verifier.Verify&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Boolean_System_Action_System_String__System_String_">Verifier.Verify&lt;T&gt;(T, Boolean, Action&lt;String&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_Verify__1___0_System_Boolean_System_Action_System_String_System_String__System_String_System_String_">Verifier.Verify&lt;T&gt;(T, Boolean, Action&lt;String, String&gt;, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentNotReferenceEqualsTo_System_Object_System_Object_System_String_">Verifier.VerifyArgumentNotReferenceEqualsTo(Object, Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyValueNotReferenceEqualsTo_System_Object_System_Object_System_String_">Verifier.VerifyValueNotReferenceEqualsTo(Object, Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyArgumentIsOfType__1_System_Object_System_String_">Verifier.VerifyArgumentIsOfType&lt;T&gt;(Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Verifier.html#NationalInstruments_Verifier_VerifyValueIsOfType__1_System_Object_System_String_">Verifier.VerifyValueIsOfType&lt;T&gt;(Object, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.QueryServiceExtensions.html#NationalInstruments_Core_QueryServiceExtensions_QueryService__1_System_Object_">QueryServiceExtensions.QueryService&lt;T&gt;(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_FindClosestMatchingContainerForResource_System_Object_System_Func_System_Object_System_Globalization_CultureInfo_System_Object__System_Globalization_CultureInfo_">LocalizationHelpers.FindClosestMatchingContainerForResource(Object, Func&lt;Object, CultureInfo, Object&gt;, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_FindClosestMatchingContainerForResource_System_Object_System_Func_System_Object_System_Globalization_CultureInfo_System_Object__System_Globalization_CultureInfo_System_Func_System_Object_System_Object__">LocalizationHelpers.FindClosestMatchingContainerForResource(Object, Func&lt;Object, CultureInfo, Object&gt;, CultureInfo, Func&lt;Object, Object&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedEnumString__1___0_">LocalizationHelpers.GetLocalizedEnumString&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedString_System_Object_System_String_System_Globalization_CultureInfo_">LocalizationHelpers.GetLocalizedString(Object, String, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.Core.LocalizationHelpers.html#NationalInstruments_Core_LocalizationHelpers_GetLocalizedString_System_Object_System_String_System_Boolean_System_Globalization_CultureInfo_">LocalizationHelpers.GetLocalizedString(Object, String, Boolean, CultureInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_SetPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_System_Object_">DynamicPropertyExtensions.SetPropertyValue(Object, PropertySymbol, Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.GetPropertyValue(Object, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_ClearPropertyValue_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.ClearPropertyValue(Object, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_IsPropertySet_System_Object_NationalInstruments_DynamicProperties_PropertySymbol_">DynamicPropertyExtensions.IsPropertySet(Object, PropertySymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetAllSetProperties_System_Object_">DynamicPropertyExtensions.GetAllSetProperties(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="NationalInstruments.DynamicProperties.DynamicPropertyExtensions.html#NationalInstruments_DynamicProperties_DynamicPropertyExtensions_GetAllProperties_System_Object_">DynamicPropertyExtensions.GetAllProperties(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><div>Copyright © 2018 National Instruments<br>Generated by <strong>DocFX</strong></div><div><strong>THIS IS A BETA SITE. READ <a href="/index.html">THE DISCLAIMER</a>!</strong></div></span>
+      	  
+      	</div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
